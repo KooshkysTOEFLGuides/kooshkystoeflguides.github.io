@@ -20,6 +20,14 @@ window.KOOSHKY_SECTIONS = [
 
 window.KOOSHKY_CONTENT = [
   {
+    title: "Ranked TOEFL Vocabulary Megalist",
+    href: "Vocabulary/TOEFL_Vocabulary_Megalist.html",
+    section: "vocabulary",
+    summary: "Thousands of words from major TOEFL and academic vocabulary resources, combined and ranked by study priority.",
+    date: "2026-06-26",
+    featured: true
+  },
+  {
     title: "Kooshky's Transitions, Part I: The Most Useful Transition Words and Phrases",
     href: "Grammar/Transitions/KooshkysGuideToTransitions.html ",
     section: "grammar",
@@ -154,6 +162,22 @@ window.KOOSHKY_CONTENT = [
     summary: "Numerous different ways to describe problems with gym equipment. Very helpful for relevant Email problems.",
     date: "2026-07-12",
     featured: true
+  },
+  {
+    title: "Sample Email Prompts",
+    href: "WritingSampleQuestions/emails.html",
+    section: "writing",
+    summary: "Tens of sample email tasks for extra practice.",
+    date: "2026-06-17",
+    featured: false
+  },
+  {
+    title: "Sample Academic Discussion Prompts",
+    href: "WritingSampleQuestions/KooshkysAcademicDiscussions.html",
+    section: "writing",
+    summary: "Tens of sample academic discussion tasks for extra practice.",
+    date: "2026-06-18",
+    featured: false
   }
   /*
   Copy this sample, remove the surrounding comment marks, and edit it:

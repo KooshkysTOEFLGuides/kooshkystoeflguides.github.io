@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#F4F0E8">
+  <meta
+    name="description"
+    content="A ranked TOEFL vocabulary megalist compiled from major academic and TOEFL vocabulary resources."
+  >
+
+  <link
+    rel="icon"
+    href="../images/kooshky-favicon-light.png"
+    type="image/png"
+    data-favicon
+    data-light-href="../images/kooshky-favicon-light.png"
+    data-dark-href="../images/kooshky-favicon-dark.png"
+  >
+  <link rel="icon" href="../images/favicon.ico" sizes="any">
+  <link rel="stylesheet" href="../styles.css?v=6">
+
+  <script>
+    (() => {
+      try {
+        const saved = localStorage.getItem("kooshky-guides:theme:v1");
+        const preferred = matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light";
+        const theme = saved || preferred;
+        document.documentElement.dataset.theme = theme;
+        document.documentElement.style.colorScheme = theme;
+      } catch (_) {
+        document.documentElement.dataset.theme = "light";
+      }
+    })();
+  </script>
+
+  <script src="../site.js?v=6" defer></script>
+
+  <style>
+    .megalist-page {
+      padding-bottom: clamp(3rem, 7vw, 6rem);
+    }
+
+    .megalist-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(18rem, .8fr);
+      gap: clamp(1.5rem, 5vw, 4rem);
+      align-items: start;
+    }
+
+    .megalist-copy {
+      max-width: 70ch;
+    }
+
+    .megalist-copy > p {
+      color: var(--muted);
+    }
+
+    .method-list {
+      display: grid;
+      gap: .8rem;
+      margin: 1.5rem 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .method-list li {
+      padding: 1rem 1.1rem;
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--teal);
+      background: var(--surface);
+    }
+
+    .method-list strong {
+      display: block;
+      margin-bottom: .2rem;
+      color: var(--text);
+    }
+
+    .sheet-panel {
+      padding: clamp(1.2rem, 3vw, 1.7rem);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--accent);
+      border-radius: var(--radius);
+      background: var(--surface);
+    }
+
+    .sheet-panel h2 {
+      margin-bottom: .55rem;
+      font-size: 1.5rem;
+    }
+
+    .sheet-panel > p {
+      margin-top: 0;
+      color: var(--muted);
+    }
+
+    .sheet-panel .button {
+      width: 100%;
+      margin: .7rem 0 1.3rem;
+    }
+
+    .reading-key {
+      margin: 0;
+    }
+
+    .reading-key div {
+      padding: .85rem 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .reading-key dt {
+      font-weight: 800;
+      color: var(--text);
+    }
+
+    .reading-key dd {
+      margin: .2rem 0 0;
+      color: var(--muted);
+    }
+
+    .small-note {
+      margin-top: 1.3rem;
+      padding: .9rem 1rem;
+      border-left: 3px solid var(--accent);
+      background: var(--accent-soft);
+    }
+
+    .small-note p {
+      margin: 0;
+    }
+
+    @media (max-width: 760px) {
+      .megalist-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+  <title>Ranked TOEFL Vocabulary Megalist — Kooshky's TOEFL Guides</title>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="../index.html">
+        <span class="brand-logo" aria-hidden="true"></span>
+        <span>
+          <small>Kooshky's</small>
+          <strong>TOEFL Guides</strong>
+        </span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="../index.html">Home</a>
+        <a href="../contents.html">All contents</a>
+        <a href="../word-of-the-day.html">Word of the day</a>
+        <a href="../about.html">About me</a>
+      </nav>
+
+      <div class="header-actions">
+        <button
+          class="plain-button"
+          type="button"
+          data-theme-toggle
+          aria-label="Use dark theme"
+          aria-pressed="false"
+        >
+          ◐ <span data-theme-label>Dark</span>
+        </button>
+
+        <button
+          class="plain-button menu-button"
+          type="button"
+          data-menu-toggle
+          aria-controls="mobile-nav"
+          aria-expanded="false"
+          aria-label="Open menu"
+        >
+          Menu
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="nav-backdrop" data-nav-backdrop hidden></div>
+
+  <nav
+    class="mobile-nav"
+    id="mobile-nav"
+    data-mobile-nav
+    aria-label="Mobile navigation"
+    hidden
+  >
+    <a href="../index.html">Home</a>
+    <a href="../contents.html">All contents</a>
+    <a href="../word-of-the-day.html">Word of the day</a>
+    <a href="../about.html">About me</a>
+  </nav>
+
+  <main id="main" class="megalist-page">
+    <section class="page-intro">
+      <div class="container">
+        <p class="eyebrow">Vocabulary · Ranked study list</p>
+        <h1>TOEFL Vocabulary Megalist</h1>
+        <p>
+          Thousands of words from well-known TOEFL and academic vocabulary resources,
+          merged into one ranked Google Sheet.
+        </p>
+      </div>
+    </section>
+
+    <section class="container megalist-grid">
+      <article class="megalist-copy">
+        <h2>What this is</h2>
+
+        <p>
+          TOEFL vocabulary resources overlap heavily, and it is not always obvious
+          where to start. I collected the words from several major lists and books,
+          cleaned them, merged duplicates, and ranked the result from higher priority
+          to lower priority.
+        </p>
+
+        <p>
+          The current sheet contains roughly 3,000–4,000 words, including useful
+          members of the same word families.
+        </p>
+
+        <h2>How words are ranked</h2>
+
+        <ul class="method-list">
+          <li>
+            <strong>Source credibility</strong>
+            More established academic and TOEFL-focused sources receive more weight.
+          </li>
+          <li>
+            <strong>Agreement between sources</strong>
+            A word appearing in several different lists receives a small boost.
+          </li>
+          <li>
+            <strong>Position inside tiered lists</strong>
+            Earlier AWL sublists and easier or more essential tiers count more.
+          </li>
+          <li>
+            <strong>General English frequency</strong>
+            More common words receive a frequency boost using a Zipf score.
+          </li>
+        </ul>
+
+        <aside class="small-note">
+          <p>
+            The ranking is a study aid, not a claim that one exact score can measure
+            the value of a word perfectly. Use it to decide what to study first.
+          </p>
+        </aside>
+      </article>
+
+      <aside class="sheet-panel" aria-labelledby="sheet-title">
+        <p class="eyebrow">Google Sheet</p>
+        <h2 id="sheet-title">Open the ranked list</h2>
+        <p>Start near the top and work downward at a pace you can maintain.</p>
+
+        <a
+          class="button button-primary"
+          href="https://docs.google.com/spreadsheets/d/1w3I0J5dDfUmHAzInCr3jx4naQUNrC2uQMcwh7KgPt_Q/edit?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Open the vocabulary megalist
+        </a>
+
+        <h3>How to read the columns</h3>
+
+        <dl class="reading-key">
+          <div>
+            <dt>Score</dt>
+            <dd>The main priority score. Higher generally means study earlier.</dd>
+          </div>
+
+          <div>
+            <dt>Zipf</dt>
+            <dd>A logarithmic estimate of how common the word is in English.</dd>
+          </div>
+
+          <div>
+            <dt>Source columns</dt>
+            <dd>
+              <strong>0</strong> means absent. Tier numbers show where the word
+              appeared inside that source.
+            </dd>
+          </div>
+
+          <div>
+            <dt>AWL 1–10</dt>
+            <dd>
+              Sublist 1 contains more common academic words; Sublist 10 is less common.
+            </dd>
+          </div>
+
+          <div>
+            <dt>Family rows</dt>
+            <dd>
+              Related derivational forms are placed after their main word where useful.
+            </dd>
+          </div>
+        </dl>
+
+        <div class="help-links">
+          <a
+            href="https://telegram.me/KooshkyToefl_pv"
+            target="_blank"
+            <!-- rel="noopener noreferrer" -->
+          >
+            Suggest a missing source
+          </a>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>Amir Kooshky</span>
+
+      <div class="footer-links">
+        <a
+          href="https://t.me/KooshkyTOEFL"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Telegram</a>
+
+        <a
+          href="https://instagram.com/kooshkytoefl"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Instagram</a>
+
+        <a
+          href="https://t.me/kooshkyTOEFL_pv"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Direct message</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

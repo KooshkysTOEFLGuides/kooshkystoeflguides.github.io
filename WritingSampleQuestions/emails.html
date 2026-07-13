@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOEFL Writing</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            background: #f0f2f5;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        /* ── TOP BAR ── */
+        #topbar {
+            display: flex;
+            align-items: center;
+            background: #fff;
+            border-bottom: 1px solid #d0d5dd;
+            padding: 0 16px;
+            height: 44px;
+            gap: 10px;
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        #section-label {
+            font-size: 18px;
+            color: #333;
+            font-weight: 500;
+        }
+
+        #topbar .divider {
+            color: #bbb;
+            font-size: 16px;
+        }
+
+        .nav-btn {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            border: none;
+            background: #0d9488;
+            color: #fff;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            transition: background 0.15s;
+        }
+
+        .nav-btn:hover {
+            background: #0f766e;
+        }
+
+        .nav-btn:disabled {
+            background: #ccc;
+            cursor: default;
+        }
+
+        /* timer */
+        #timer-wrap {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        #timer-display {
+            font-size: 15px;
+            font-weight: 600;
+            color: #333;
+            min-width: 58px;
+            text-align: right;
+            font-variant-numeric: tabular-nums;
+        }
+
+        #timer-display.overtime {
+            color: #dc2626;
+        }
+
+        #timer-display.warning {
+            color: #d97706;
+        }
+
+        .icon-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #555;
+            padding: 4px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+        }
+
+        .icon-btn:hover {
+            background: #f0f0f0;
+        }
+
+        /* pause bars */
+        #pause-icon {
+            display: flex;
+            gap: 3px;
+            align-items: center;
+            height: 18px;
+        }
+
+        #pause-icon span {
+            display: block;
+            width: 3px;
+            height: 13px;
+            background: #555;
+            border-radius: 1px;
+        }
+
+        /* eye icon */
+        .eye-svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        /* ── PROMPT SIDEBAR OVERLAY ── */
+        #sidebar-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.25);
+            z-index: 100;
+        }
+
+        #sidebar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 260px;
+            height: 100%;
+            background: #fff;
+            box-shadow: 2px 0 12px rgba(0, 0, 0, 0.15);
+            display: flex;
+            flex-direction: column;
+        }
+
+        #sidebar-header {
+            padding: 14px 16px;
+            border-bottom: 1px solid #e5e7eb;
+            font-weight: 600;
+            font-size: 14px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #sidebar-close {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            color: #666;
+            line-height: 1;
+        }
+
+        #sidebar-list {
+            overflow-y: auto;
+            flex: 1;
+            padding: 8px 0;
+        }
+
+        .sidebar-item {
+            padding: 10px 16px;
+            cursor: pointer;
+            font-size: 13px;
+            color: #374151;
+            border-left: 3px solid transparent;
+            transition: background 0.1s;
+        }
+
+        .sidebar-item:hover {
+            background: #f3f4f6;
+        }
+
+        .sidebar-item.active {
+            background: #f0fdfa;
+            border-left-color: #0d9488;
+            color: #0d9488;
+            font-weight: 600;
+        }
+
+        /* ── MAIN CONTENT ── */
+        #main {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+            padding: 16px;
+            gap: 16px;
+            min-height: 0;
+            /* ← this is the key line */
+        }
+
+
+        /* left prompt panel */
+        #prompt-panel {
+            background: #fff;
+            border-radius: 8px;
+            padding: 28px 30px;
+            flex: 1;
+            overflow-y: auto;
+            font-size: 18px;
+            line-height: 1.7;
+            color: #222;
+        }
+
+        #prompt-scenario {
+            margin-bottom: 16px;
+        }
+
+        #prompt-instruction {
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        #prompt-bullets {
+            list-style: disc;
+            padding-left: 22px;
+            margin-bottom: 16px;
+        }
+
+        #prompt-bullets li {
+            margin-bottom: 4px;
+        }
+
+        #prompt-footer {
+            color: #222;
+        }
+
+        /* right response panel */
+        #response-panel {
+            background: #fff;
+            border-radius: 8px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            max-height: 50vh;
+        }
+
+        #response-header {
+            padding: 20px 24px 0;
+        }
+
+        #response-header h2 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #111;
+        }
+
+        #meta-to,
+        #meta-subject {
+            font-size: 18px;
+            font-weight: 700;
+            color: #111;
+            margin-bottom: 6px;
+        }
+
+        #meta-to span,
+        #meta-subject span {
+            font-weight: 400;
+        }
+
+
+        /* toolbar */
+        #toolbar {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 16px;
+            background: #f8f9fa;
+            border-top: 1px solid #e5e7eb;
+            border-bottom: 1px solid #e5e7eb;
+            margin-top: 12px;
+        }
+
+        .tool-btn {
+            padding: 6px 16px;
+            background: #0d9488;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 17px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background 0.15s;
+        }
+
+        .tool-btn:hover {
+            background: #0f766e;
+        }
+
+        #word-count-area {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 17px;
+            color: #555;
+        }
+
+        #toggle-wc {
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            color: #0d9488;
+            font-size: 17px;
+            padding: 2px 4px;
+        }
+
+        #toggle-wc:hover {
+            text-decoration: underline;
+        }
+
+        #wc-number {
+            font-weight: 600;
+            color: #111;
+            min-width: 24px;
+            text-align: right;
+        }
+
+        #wc-number.hidden-wc {
+            filter: blur(4px);
+            user-select: none;
+        }
+
+        /* textarea */
+        #response-panel textarea {
+            flex: 1;
+            border: none;
+            outline: none;
+            padding: 14px 20px;
+            font-size: 18px;
+            font-family: Arial, sans-serif;
+            resize: none;
+            line-height: 1.7;
+            color: #222;
+        }
+
+        /* ── TIME'S UP BANNER ── */
+        #times-up-banner {
+            display: none;
+            position: fixed;
+            top: 44px;
+            left: 0;
+            right: 0;
+            background: #fef2f2;
+            border-bottom: 2px solid #dc2626;
+            padding: 10px 20px;
+            display: none;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            z-index: 50;
+        }
+
+        #times-up-banner .banner-msg {
+            font-size: 14px;
+            font-weight: 600;
+            color: #dc2626;
+        }
+
+        #times-up-banner .banner-sub {
+            font-size: 12px;
+            color: #7f1d1d;
+            margin-top: 2px;
+        }
+
+        .banner-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .banner-btn {
+            padding: 5px 12px;
+            border-radius: 5px;
+            border: none;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .banner-btn.continue {
+            background: #fee2e2;
+            color: #dc2626;
+            border: 1px solid #fca5a5;
+        }
+
+        .banner-btn.reset {
+            background: #0d9488;
+            color: #fff;
+        }
+
+        .banner-btn:hover {
+            opacity: 0.85;
+        }
+
+        /* flash overlay */
+        #flash-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(220, 38, 38, 0.18);
+            z-index: 200;
+            pointer-events: none;
+            animation: flashPulse 0.6s ease-out forwards;
+        }
+
+        @keyframes flashPulse {
+            0% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- FLASH -->
+    <div id="flash-overlay"></div>
+
+    <!-- SIDEBAR OVERLAY -->
+    <div id="sidebar-overlay">
+        <div id="sidebar">
+            <div id="sidebar-header">
+                All Prompts
+                <button id="sidebar-close">&#x2715;</button>
+            </div>
+            <div id="sidebar-list" id="sidebar-list"></div>
+        </div>
+    </div>
+
+    <!-- TOP BAR -->
+    <div id="topbar">
+        <!-- hamburger for sidebar -->
+        <button class="icon-btn" id="menu-btn" title="All prompts">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <line x1="3" y1="12" x2="21" y2="12" />
+                <line x1="3" y1="18" x2="21" y2="18" />
+            </svg>
+        </button>
+
+        <span id="section-label">Writing</span>
+        <span class="divider">|</span>
+
+        <!-- back/forward -->
+        <button class="nav-btn" id="btn-prev" title="Previous prompt">&#8249;</button>
+        <button class="nav-btn" id="btn-next" title="Next prompt">&#8250;</button>
+
+        <!-- timer -->
+        <div id="timer-wrap">
+            <div id="timer-display">07:00</div>
+            <!-- pause -->
+            <button class="icon-btn" id="pause-btn" title="Pause / Resume">
+                <div id="pause-icon"><span></span><span></span></div>
+            </button>
+            <!-- reset -->
+            <button class="icon-btn" id="reset-btn" title="Reset timer">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+                    <path d="M3 3v5h5" />
+                </svg>
+            </button>
+            <!-- eye -->
+            <button class="icon-btn" id="hide-timer-btn" title="Hide/show timer">
+                <svg class="eye-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                    <circle cx="12" cy="12" r="3" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- TIMES UP BANNER -->
+    <div id="times-up-banner">
+        <div>
+            <div class="banner-msg">Time's up!</div>
+            <div class="banner-sub">You may continue writing — the timer will show how long you've taken.</div>
+        </div>
+        <div class="banner-actions">
+            <button class="banner-btn continue" id="banner-continue">Continue Writing</button>
+            <button class="banner-btn reset" id="banner-reset">Reset Timer</button>
+        </div>
+    </div>
+
+    <!-- MAIN -->
+    <div id="main">
+        <!-- LEFT: Prompt -->
+        <div id="prompt-panel">
+            <p id="prompt-scenario"></p>
+            <p id="prompt-instruction"></p>
+            <ul id="prompt-bullets"></ul>
+            <p id="prompt-footer">Write as much as you can and in complete sentences.</p>
+        </div>
+
+        <!-- RIGHT: Response -->
+        <div id="response-panel">
+            <div id="response-header">
+                <h2>Your Response:</h2>
+                <div id="meta-to"><span id="to-value"></span></div>
+                <div id="meta-subject"><span id="subject-value"></span></div>
+            </div>
+
+            <div id="toolbar">
+                <button class="tool-btn" id="btn-cut">Cut</button>
+                <button class="tool-btn" id="btn-copy">Copy</button>
+                <button class="tool-btn" id="btn-paste">Paste</button>
+                <button class="tool-btn" id="btn-undo">Undo</button>
+                <button class="tool-btn" id="btn-redo">Redo</button>
+
+                <div id="word-count-area">
+                    <button id="toggle-wc">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                            <circle cx="12" cy="12" r="3" />
+                        </svg>
+                        <span id="toggle-wc-label">Hide Word Count</span>
+                    </button>
+                    <span id="wc-number">0</span>
+                </div>
+            </div>
+
+            <textarea id="editor" placeholder="Start writing your email here..."></textarea>
+        </div>
+    </div>
+
+    <script>
+        // ─────────────────────────────────────────────
+        // PROMPTS — add/edit your prompts here
+        // ─────────────────────────────────────────────
+        const PROMPTS = [
+            {
+                recipient: "Daniel Park",
+                subject: "Apology for Missing the First Meeting and Request to Catch Up",
+                scenario: "You recently joined a university photography club, but you missed the first meeting because of a schedule conflict. The club leader, Daniel Park, sent an email saying the group has already chosen a project theme and assigned roles.",
+                bullets: [
+                    "Apologize for missing the meeting and briefly explain why you were absent.",
+                    "Ask what project theme was chosen and what role, if any, was assigned to you.",
+                    "Suggest a time to meet with Daniel to catch up and get any materials you may need."
+                ]
+            },
+            {
+                recipient: "Alex",
+                subject: "Suggestion for our weekend trip transportation",
+                scenario: "You and your friend Alex are planning a weekend trip to a nearby city. Alex suggested taking the bus, but you think renting a car would be better. You need to email Alex to discuss the transportation plans.",
+                bullets: [
+                    "Explain why renting a car is better than taking the bus.",
+                    "Explain what kind of car you should rent and why.",
+                    "Ask Alex for their opinion on this new plan."
+                ]
+            },
+            {
+                recipient: "Mrs. Karen Ellis",
+                subject: "Ongoing Leak from Recently Repaired Kitchen Faucet",
+                scenario: "You are a university student renting an apartment. Last week, your landlord, Mrs. Karen Ellis, replaced the kitchen faucet, but it has been leaking since the repair. You need to contact her about the issue.",
+                bullets: [
+                    "Describe the problem with the faucet and when you first noticed the leak.",
+                    "Explain how the leak is affecting your daily routine at home.",
+                    "Request that she arrange a time for someone to come and fix it."
+                ]
+            },
+            {
+                recipient: "Mr. James Okafor",
+                subject: "Thank You for the Food Drive and Interest in Future Volunteering",
+                scenario: "You volunteered at a local food drive organized by a community center last weekend. The coordinator, Mr. James Okafor, led the event. You want to follow up after the experience and express your thoughts.",
+                bullets: [
+                    "Thank him for organizing the event and mention one thing you found meaningful about it.",
+                    "Share a suggestion for how a future food drive could be improved or expanded.",
+                    "Ask whether there are upcoming volunteer opportunities you could participate in."
+                ]
+            },
+            {
+                recipient: "Noah Bennett",
+                subject: "Issues with the Bicycle I Recently Purchased from You",
+                scenario: "You recently bought a second-hand bicycle from a classmate, Noah Bennett, who said it was in good condition. After riding it for two days, you found the brakes are unreliable and the rear tire loses air quickly.",
+                bullets: [
+                    "Describe the two problems you discovered and when each one became noticeable.",
+                    "Express how you feel about the situation without accusing him of dishonesty.",
+                    "Propose a fair solution, such as a partial refund or his help covering the repair cost."
+                ]
+            },
+            {
+                recipient: "Dr. Linda Marsh",
+                subject: "Schedule Conflict with Revised Final Exam Date",
+                scenario: "Your university professor, Dr. Linda Marsh, announced that the final exam date has been moved earlier than originally scheduled. You have a conflict on that date and need to communicate with her about it.",
+                bullets: [
+                    "Explain what conflict you have on the new exam date and why you cannot attend.",
+                    "Ask whether an alternative arrangement, such as a makeup exam, is possible.",
+                    "Express that you are keeping up with coursework and take the exam seriously."
+                ]
+            },
+            {
+                recipient: "Mr. Sam Torres",
+                subject: "Equipment Rental Inquiry for a Weekend Hiking Trip",
+                scenario: "You are planning a weekend hiking trip with a small group. You want to rent equipment from a local outdoor gear shop. You saw the shop’s listing online and want to contact the owner, Mr. Sam Torres, before visiting.",
+                bullets: [
+                    "Specify what equipment you need and how many people will be using it.",
+                    "Ask about rental availability for the dates you have in mind and the total cost.",
+                    "Inquire whether the shop offers any guidance for beginners on the hiking trail nearby."
+                ]
+            },
+            {
+                recipient: "Ms. Carla Neves",
+                subject: "Scheduling Conflict Regarding Pottery Class Session",
+                scenario: "You signed up for a pottery class at your local community center. After attending the first session, you realized the class meets at the same time as your new part-time job. You need to find a solution before the next session.",
+                bullets: [
+                    "Explain why you cannot continue attending the class at its current time.",
+                    "Ask whether an alternative session or make-up option is available.",
+                    "Describe your level of interest and commitment to completing the course."
+                ]
+            },
+            {
+                recipient: "Jamie",
+                subject: "Missing yesterday's biology lecture",
+                scenario: "You missed yesterday's biology lecture because you were not feeling well. Your friend Jamie was in class and usually takes excellent notes. You need to email Jamie to ask for help catching up on the missed material.",
+                bullets: [
+                    "Explain why you missed the biology lecture yesterday.",
+                    "Request to borrow Jamie's notes from the class.",
+                    "Offer to buy Jamie coffee in exchange for the help."
+                ]
+            },
+            {
+                recipient: "Mr. Dani Sousa",
+                subject: "Thank You and Questions About a Future Visit",
+                scenario: "You recently stayed at a small guesthouse while traveling. The owner, who was also a local guide, recommended several attractions, and his advice made your trip exceptional. You want to express your gratitude and ask for further help.",
+                bullets: [
+                    "Thank him for the specific recommendations that improved your experience.",
+                    "Ask for his advice on planning a return visit during a different season.",
+                    "Let him know you have written a positive review and explain why you did so."
+                ]
+            },
+            {
+                recipient: "James Okoro",
+                subject: "Exhibition Fundraiser Results and Next Steps for the Club Budget",
+                scenario: "You are the treasurer of a student photography club. The club recently held a fundraising exhibition, but attendance was much lower than expected, and the event did not raise enough money to cover planned equipment purchases.",
+                bullets: [
+                    "Summarize the financial outcome of the exhibition and why it fell short of the goal.",
+                    "Suggest one or two alternative fundraising strategies the club could pursue.",
+                    "Propose a time to meet and discuss how to adjust the club’s budget plan."
+                ]
+            },
+            {
+                recipient: "Professor Diana Marsh",
+                subject: "Concerns About Class Level in Pottery Elective",
+                scenario: "You signed up for a pottery elective at your university, but after attending two sessions, you feel the class level is too advanced for beginners. You want to speak with the instructor before deciding whether to continue.",
+                bullets: [
+                    "Explain why you are finding the current class level difficult to follow.",
+                    "Ask whether a beginner-level section or alternative arrangement is available.",
+                    "Describe what kind of support or adjustment would help you stay in the course."
+                ]
+            },
+            {
+                recipient: "Sam",
+                subject: "Urgent: Change of plans for Taylor's surprise party",
+                scenario: "You and your friend Sam are organizing a surprise birthday party for a mutual friend, Taylor. The venue you originally booked just canceled your reservation. You need to email Sam to figure out a backup plan.",
+                bullets: [
+                    "Inform Sam that the original party venue canceled the reservation.",
+                    "Suggest an alternative location for the surprise party.",
+                    "Ask Sam to contact Taylor's roommates to coordinate the new plan."
+                ]
+            },
+            {
+                recipient: "Mr. Kevin Aldred",
+                subject: "Lost Bag Left Behind After Recent Stay",
+                scenario: "You recently stayed at a campus guest house while visiting a friend's university. When you returned home, you realized you left a bag containing important personal items in your room. You need to contact the guest house manager immediately.",
+                bullets: [
+                    "Describe the bag and its contents so it can be identified.",
+                    "Explain when you checked out and which room you stayed in.",
+                    "Request a specific arrangement for retrieving or shipping the bag to you."
+                ]
+            },
+            {
+                recipient: "Clara Nguyen",
+                subject: "Suggestion for Changing Our Book Club Meeting Venue",
+                scenario: "You joined a neighborhood book club three months ago. The group has been meeting at the same café, but the venue has become too noisy and cramped. As an active member, you want to suggest a change to the club organizer.",
+                bullets: [
+                    "Describe the problems the current venue is causing for the group's discussions.",
+                    "Suggest a specific alternative location and explain why it would work better.",
+                    "Propose a way to get other members' input before making a final decision."
+                ]
+            },
+            {
+                recipient: "Sandra Osei",
+                subject: "Feedback on This Year's Cultural Fair",
+                scenario: "You are a member of your university's international students' association. The association recently held its annual cultural fair, and you attended as both a volunteer and a visitor. You want to share your experience with the event coordinator.",
+                bullets: [
+                    "Give specific feedback on what worked well and what could be improved at the fair.",
+                    "Suggest one change that would make the event more engaging for attendees.",
+                    "Express your interest in taking on a larger organizing role next year."
+                ]
+            },
+            {
+                recipient: "Ms. Rachel Ford",
+                subject: "Damaged Item Received – Order #[Order Number]",
+                scenario: "You ordered a laptop bag from an online store two weeks ago for use during an upcoming semester. The item arrived damaged, and customer service has not responded to your previous inquiry. You are now contacting the store manager directly.",
+                bullets: [
+                    "Describe the situation and explain why you are contacting her directly instead of customer service.",
+                    "Describe the damage and explain how it affects the bag's usability.",
+                    "State what resolution you expect, such as a replacement or refund."
+                ]
+            },
+            {
+                recipient: "Jordan",
+                subject: "Keeping our shared kitchen clean",
+                scenario: "You share an apartment with your friend Jordan. Recently, Jordan has been leaving dirty dishes in the sink for days, which is attracting insects and causing other problems. You need to email Jordan to address this issue before it gets worse.",
+                bullets: [
+                    "Explain how the dirty dishes are causing a problem in the apartment.",
+                    "Remind Jordan of your previous agreement regarding chores.",
+                    "Suggest a specific compromise to keep the kitchen clean moving forward."
+                ]
+            },
+            {
+                recipient: "Dr. Marcus Bell",
+                subject: "Recommendation Letter Request for Graduate School Application",
+                scenario: "Your university's writing center helped you significantly during your first year. You are now applying for a relevant graduate program and want to thank the advisor who supported you while also asking for a letter of recommendation.",
+                bullets: [
+                    "Express your gratitude and briefly explain how his guidance made a difference.",
+                    "Provide details about the graduate program and why the letter is important.",
+                    "Mention the submission deadline and ask if he is able to write the letter."
+                ]
+            },
+            {
+                recipient: "Daniel Park",
+                subject: "Undisclosed Problem with the Coffee Maker I Purchased",
+                scenario: "You recently bought a second-hand coffee maker from a private seller you found through a local community board. After using it for a few days, you discovered a problem that significantly affects its function and was not mentioned in the listing.",
+                bullets: [
+                    "Describe the problem you found and when you first noticed it during use.",
+                    "Explain why this issue should have been disclosed before the sale was made.",
+                    "Propose a fair solution, such as a partial refund or help covering the repair cost."
+                ]
+            },
+            {
+                recipient: "Mr. Joel Hartman",
+                subject: "Ongoing Noise Disturbance in My Residence Hall",
+                scenario: "You are a student living in university housing. Your upstairs neighbor plays music loudly late at night, affecting your sleep and study schedule. You have tried resolving the issue yourself without success, so you are contacting your residence hall coordinator.",
+                bullets: [
+                    "Describe the noise problem and explain how it is affecting your daily life.",
+                    "Summarize the steps you have already taken to resolve it on your own.",
+                    "Request specific action from the coordinator to help solve the problem."
+                ]
+            },
+            {
+                recipient: "Ms. Patricia Lowe",
+                subject: "Suggestions for Improving the Adoption Application Process",
+                scenario: "You have been volunteering at a local animal shelter on weekends for two months. You recently noticed that the shelter's adoption application process is slow and confusing, which may be discouraging potential adopters. You want to share your observations with the shelter director.",
+                bullets: [
+                    "Explain what specific issues you have observed with the current adoption process.",
+                    "Suggest a practical improvement that could make the process easier for applicants.",
+                    "Offer your help in implementing the change given your experience at the shelter."
+                ]
+            },
+            {
+                recipient: "Ms. Irene Cho",
+                subject: "Follow-Up on Photography Club Grant Application",
+                scenario: "You are the president of your university’s photography club. Your club recently applied for a student activities grant to purchase new equipment. The application was submitted several weeks ago, and the club needs to make purchasing decisions before the semester ends. You want to contact the grants coordinator for an update.",
+                bullets: [
+                    "Explain why the club applied for the grant and how the equipment would be used.",
+                    "Describe why receiving a decision before the semester ends is important.",
+                    "Ask whether there is an estimated timeline for the grant decision."
+                ]
+            },
+            {
+                recipient: "Ms. Olivia Grant",
+                subject: "Question About Missing a Workshop Session",
+                scenario: "You recently registered for a weekend first-aid training workshop offered by your university. After registering, you learned that one of the workshop sessions conflicts with an important family event. You want to contact the workshop coordinator before the program begins.",
+                bullets: [
+                    "Explain why you will be unable to attend one of the workshop sessions.",
+                    "Ask whether there is a way to make up the missed material.",
+                    "Describe why completing the training is important to you."
+                ]
+            },
+            {
+                recipient: "Mr. Ethan Brooks",
+                subject: "Suggestion for Upcoming Guest Speaker Event",
+                scenario: "You are a member of your university's debate club. The club plans to invite a guest speaker next month, and members have been asked to suggest potential topics. You have an idea you would like the club president to consider.",
+                bullets: [
+                    "Describe the topic you would like the guest speaker to discuss.",
+                    "Explain why you think club members would find this topic valuable.",
+                    "Offer to help organize the event if your suggestion is selected."
+                ]
+            },
+            {
+                recipient: "Ms. Sofia Mendes",
+                subject: "Idea for Increasing Participation in the Language Exchange Group",
+                scenario: "You attend a weekly language-exchange group at a local community center. Recently, attendance has declined, and conversations often end early because too few participants are present. You want to share an idea with the organizer.",
+                bullets: [
+                    "Describe the changes you have noticed in the group's attendance.",
+                    "Suggest one way to attract more participants to the meetings.",
+                    "Explain how your suggestion could improve the experience for current members."
+                ]
+            },
+            {
+                recipient: "Mr. Nathan Reed",
+                subject: "Request to Extend an Interlibrary Loan",
+                scenario: "You borrowed a reference book from your university library through an interlibrary loan program. The due date is approaching, but you still need the book for a major assignment. You want to contact the librarian responsible for the program.",
+                bullets: [
+                    "Explain why you need the book for a longer period.",
+                    "Ask whether it is possible to extend the loan.",
+                    "Describe how the book is helping you complete your assignment."
+                ]
+            },
+            {
+                recipient: "Ms. Hannah Clarke",
+                subject: "Suggestion for Supporting New Volunteers",
+                scenario: "You recently joined a community gardening project. The group plans to build several new planting beds next month, but many volunteers have little gardening experience. You have an idea that could help the project run more smoothly.",
+                bullets: [
+                    "Describe your idea for helping new volunteers participate effectively.",
+                    "Explain why you think this approach would benefit the project.",
+                    "Offer to assist with organizing or carrying out the plan."
+                ]
+            },
+            {
+                recipient: "Ms. Laura Bennett",
+                subject: "Request to Switch Volunteer Assignments at the Festival",
+                scenario: "You signed up to volunteer at your city's annual cultural festival. Yesterday, the volunteer coordinator, Ms. Laura Bennett, sent out the assignment schedule. You were assigned to a position that does not match the skills and experience you listed on your application.",
+                bullets: [
+                    "Explain why your current assignment may not be the best fit for you.",
+                    "Describe the role you would prefer and why you are suited for it.",
+                    "Ask whether it is possible to change your assignment before the festival."
+                ]
+            },
+            {
+                recipient: "Mr. Adrian Cole",
+                subject: "Suggestion for Improving the Campus Bicycle Parking Area",
+                scenario: "You regularly ride your bicycle to campus. Recently, several students have had difficulty finding secure places to park their bicycles near the main academic buildings. You want to share your concerns with the university facilities manager, Mr. Adrian Cole.",
+                bullets: [
+                    "Describe the problems students are experiencing with bicycle parking.",
+                    "Suggest a specific improvement that the university could make.",
+                    "Explain how your suggestion would benefit students and the campus."
+                ]
+            },
+            {
+                recipient: "Ms. Priya Raman",
+                subject: "Question About Joining the Research Project",
+                scenario: "A professor in your department recently announced an undergraduate research project that matches your interests. The project coordinator, Ms. Priya Raman, invited students to contact her if they would like more information before applying.",
+                bullets: [
+                    "Explain why you are interested in the research project.",
+                    "Ask for more information about the responsibilities involved.",
+                    "Describe any relevant skills or experience you could contribute."
+                ]
+            },
+            {
+                recipient: "Mr. Victor Alvarez",
+                subject: "Feedback on the Community Movie Night",
+                scenario: "Last weekend, you attended an outdoor movie night organized by your local community association. While you enjoyed the event overall, there were a few issues that affected the experience. You would like to share your feedback with the organizer, Mr. Victor Alvarez.",
+                bullets: [
+                    "Describe what you enjoyed about the event.",
+                    "Explain one or two problems that occurred during the evening.",
+                    "Suggest how future movie nights could be improved."
+                ]
+            },
+            {
+                recipient: "Ms. Emily Foster",
+                subject: "Request for Information About Hosting a Club Booth",
+                scenario: "Your university environmental club, which you are a member of, is considering participating in the student activities fair next month. Before making a decision, you want to contact the fair coordinator, Ms. Emily Foster, to learn more about the requirements.",
+                bullets: [
+                    "Explain why your club is interested in participating in the fair.",
+                    "Ask about the requirements for hosting a booth.",
+                    "Inquire about any deadlines or important preparation steps."
+                ]
+            },
+            {
+                recipient: "Mr. Davis",
+                subject: "Reporting a water leak in the bedroom window",
+                scenario: "You recently moved into an off-campus apartment. After the first heavy rain, you noticed a significant water leak near the bedroom window. You need to contact your landlord, Mr. Davis, to report the issue and arrange a repair.",
+                bullets: [
+                    "Describe exactly where the water leak is occurring.",
+                    "Explain how the leak is affecting your use of the bedroom.",
+                    "Suggest two possible times you are available for a repair visit."
+                ]
+            },
+            {
+                recipient: "Professor Miller",
+                subject: "Absence during midterm exam due to family emergency",
+                scenario: "You are enrolled in a history course, but you have a sudden family emergency that requires you to travel out of town during the midterm exam next week. You need to email Professor Miller to request an alternative testing arrangement.",
+                bullets: [
+                    "Explain the nature of your sudden family emergency.",
+                    "Request permission to take the midterm exam on a different date.",
+                    "Propose a specific day next week when you can take the makeup exam."
+                ]
+            },
+            {
+                recipient: "Ms. Jenkins",
+                subject: "Positive feedback regarding excellent customer service",
+                scenario: "You recently purchased a laptop from a local electronics store. The salesperson provided excellent and patient assistance, helping you choose the perfect model. You want to write to the store manager, Ms. Jenkins, to praise the employee's service.",
+                bullets: [
+                    "Identify the employee who assisted you with the laptop purchase.",
+                    "Describe specific actions the employee took that were especially helpful.",
+                    "Explain how this positive experience affects your view of the store."
+                ]
+            },
+            {
+                recipient: "Sarah Lin",
+                subject: "Change in my availability for volunteer shifts",
+                scenario: "You volunteer every Saturday at a local animal shelter. Due to a change in your work schedule, you can no longer volunteer on weekends, but you still want to help. You need to contact the volunteer coordinator, Sarah Lin.",
+                bullets: [
+                    "Explain the recent change in your work schedule.",
+                    "Express your continued desire to volunteer at the animal shelter.",
+                    "Ask if there are any volunteer shifts available on weekday evenings."
+                ]
+            },
+            {
+                recipient: "David Chen",
+                subject: "Finalizing details for your upcoming guest speaker presentation",
+                scenario: "You are the president of the university business club. You invited a local entrepreneur, David Chen, to speak at your next meeting. You need to email him to finalize the event details and confirm his presentation topic.",
+                bullets: [
+                    "Confirm the time and location of the upcoming club meeting.",
+                    "Ask him to finalize the specific topic of his presentation.",
+                    "Inquire if he needs any special audio or visual equipment."
+                ]
+            }
+        ];
+
+        // ─────────────────────────────────────────────
+        // STATE
+        // ─────────────────────────────────────────────
+        const TOTAL_SECONDS = 7 * 60; // 7 minutes
+
+        let currentIndex = 0;
+        let timerSeconds = TOTAL_SECONDS;
+        let timerRunning = false;
+        let isOvertime = false;
+        let timerHidden = false;
+        let wcHidden = false;
+        let intervalId = null;
+        let timesUpShown = false;
+
+        // ─────────────────────────────────────────────
+        // DOM REFS
+        // ─────────────────────────────────────────────
+        const timerDisplay = document.getElementById('timer-display');
+        const pauseBtn = document.getElementById('pause-btn');
+        const resetBtn = document.getElementById('reset-btn');
+        const hideTimerBtn = document.getElementById('hide-timer-btn');
+        const editor = document.getElementById('editor');
+        const wcNumber = document.getElementById('wc-number');
+        const toggleWC = document.getElementById('toggle-wc');
+        const toggleWCLabel = document.getElementById('toggle-wc-label');
+        const timesUpBanner = document.getElementById('times-up-banner');
+        const flashOverlay = document.getElementById('flash-overlay');
+        const btnPrev = document.getElementById('btn-prev');
+        const btnNext = document.getElementById('btn-next');
+        const sidebarOverlay = document.getElementById('sidebar-overlay');
+        const sidebarList = document.getElementById('sidebar-list');
+        const menuBtn = document.getElementById('menu-btn');
+        const sidebarClose = document.getElementById('sidebar-close');
+
+        // ─────────────────────────────────────────────
+        // TIMER
+        // ─────────────────────────────────────────────
+        function formatTime(secs) {
+            const sign = secs < 0 ? '-' : '';
+            const abs = Math.abs(secs);
+            const m = Math.floor(abs / 60);
+            const s = abs % 60;
+            return sign + String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
+        }
+
+        function updateTimerDisplay() {
+            if (timerHidden) {
+                timerDisplay.textContent = '--:--';
+                timerDisplay.className = '';
+                return;
+            }
+            timerDisplay.textContent = formatTime(isOvertime ? TOTAL_SECONDS + (timerSeconds) : timerSeconds);
+
+            if (isOvertime) {
+                timerDisplay.className = 'overtime';
+            } else if (timerSeconds <= 60) {
+                timerDisplay.className = 'warning';
+            } else {
+                timerDisplay.className = '';
+            }
+        }
+
+        function tick() {
+            if (!timerRunning) return;
+
+            if (!isOvertime) {
+                timerSeconds--;
+                if (timerSeconds <= 0) {
+                    timerSeconds = 0;
+                    updateTimerDisplay();
+                    triggerTimesUp();
+                    return; // don't decrement further; overtime counts from 0 upward
+                }
+            } else {
+                timerSeconds++; // counting up in overtime
+            }
+            updateTimerDisplay();
+        }
+
+        function startTimer() {
+            if (intervalId) return;
+            timerRunning = true;
+            intervalId = setInterval(tick, 1000);
+            updatePauseIcon();
+        }
+
+        function pauseTimer() {
+            timerRunning = false;
+            clearInterval(intervalId);
+            intervalId = null;
+            updatePauseIcon();
+        }
+
+        function resetTimer() {
+            pauseTimer();
+            timerSeconds = TOTAL_SECONDS;
+            isOvertime = false;
+            timesUpShown = false;
+            timesUpBanner.style.display = 'none';
+            updateTimerDisplay();
+            startTimer();
+        }
+
+        function triggerTimesUp() {
+            if (timesUpShown) return;
+            timesUpShown = true;
+            isOvertime = true;
+            timerSeconds = 0;
+
+            // flash red
+            flashOverlay.style.display = 'block';
+            flashOverlay.style.animation = 'none';
+            flashOverlay.offsetHeight; // reflow
+            flashOverlay.style.animation = 'flashPulse 0.8s ease-out forwards';
+            setTimeout(() => { flashOverlay.style.display = 'none'; }, 900);
+
+            // show banner
+            timesUpBanner.style.display = 'flex';
+
+            updateTimerDisplay();
+            // keep ticking (overtime)
+            if (!intervalId) {
+                timerRunning = true;
+                intervalId = setInterval(tick, 1000);
+                updatePauseIcon();
+            }
+        }
+
+        function updatePauseIcon() {
+            const icon = document.getElementById('pause-icon');
+            if (timerRunning) {
+                icon.innerHTML = '<span></span><span></span>';
+                pauseBtn.title = 'Pause timer';
+            } else {
+                // show play triangle
+                icon.innerHTML = `<svg width="13" height="13" viewBox="0 0 24 24" fill="#555"><polygon points="5,3 19,12 5,21"/></svg>`;
+                pauseBtn.title = 'Resume timer';
+            }
+        }
+
+        // ─────────────────────────────────────────────
+        // WORD COUNT
+        // ─────────────────────────────────────────────
+        function countWords(text) {
+            return text.trim() === '' ? 0 : text.trim().split(/\s+/).length;
+        }
+
+        function updateWordCount() {
+            wcNumber.textContent = countWords(editor.value);
+        }
+
+        // ─────────────────────────────────────────────
+        // RENDER PROMPT
+        // ─────────────────────────────────────────────
+        function renderPrompt(idx) {
+            const p = PROMPTS[idx];
+
+            document.getElementById('prompt-scenario').textContent = p.scenario;
+            document.getElementById('prompt-instruction').innerHTML =
+                `<strong>Write an email to ${p.recipient}. In your email, do the following:</strong>`;
+
+            const ul = document.getElementById('prompt-bullets');
+            ul.innerHTML = '';
+            p.bullets.forEach(b => {
+                const li = document.createElement('li');
+                li.textContent = b;
+                ul.appendChild(li);
+            });
+
+            document.getElementById('to-value').innerHTML = `<strong>To:</strong> ${p.recipient}`;
+            document.getElementById('subject-value').innerHTML = `<strong>Subject:</strong> ${p.subject}`;
+        }
+
+        // ─────────────────────────────────────────────
+        // NAVIGATION
+        // ─────────────────────────────────────────────
+        function goTo(idx) {
+            if (idx < 0 || idx >= PROMPTS.length) return;
+
+            // save draft to localStorage
+            const saveKey = `toefl_writing_v1_draft_prompt_${currentIndex}`;
+            localStorage.setItem(saveKey, editor.value);
+
+            currentIndex = idx;
+            renderPrompt(idx);
+
+            // restore draft from localStorage
+            const loadKey = `toefl_writing_v1_draft_prompt_${idx}`;
+            editor.value = localStorage.getItem(loadKey) || '';
+            updateWordCount();
+
+            // reset timer on navigation
+            resetTimer();
+
+            // update nav buttons
+            btnPrev.disabled = idx === 0;
+            btnNext.disabled = idx === PROMPTS.length - 1;
+
+            // update sidebar active
+            document.querySelectorAll('.sidebar-item').forEach((el, i) => {
+                el.classList.toggle('active', i === idx);
+            });
+        }
+
+
+        function buildSidebar() {
+            sidebarList.innerHTML = '';
+            PROMPTS.forEach((p, i) => {
+                const div = document.createElement('div');
+                div.className = 'sidebar-item' + (i === 0 ? ' active' : '');
+                div.textContent = `Prompt ${i + 1} — ${p.subject}`;
+                div.addEventListener('click', () => {
+                    goTo(i);
+                    sidebarOverlay.style.display = 'none';
+                });
+                sidebarList.appendChild(div);
+            });
+        }
+
+        // ─────────────────────────────────────────────
+        // TOOLBAR ACTIONS
+        // ─────────────────────────────────────────────
+        document.getElementById('btn-cut').addEventListener('click', () => {
+            const start = editor.selectionStart;
+            const end = editor.selectionEnd;
+            if (start === end) return;
+            const selected = editor.value.substring(start, end);
+            navigator.clipboard.writeText(selected).catch(() => { });
+            editor.setRangeText('', start, end, 'end');
+            updateWordCount();
+        });
+
+        document.getElementById('btn-copy').addEventListener('click', () => {
+            const start = editor.selectionStart;
+            const end = editor.selectionEnd;
+            if (start === end) return;
+            navigator.clipboard.writeText(editor.value.substring(start, end)).catch(() => { });
+        });
+
+        document.getElementById('btn-paste').addEventListener('click', async () => {
+            try {
+                const text = await navigator.clipboard.readText();
+                const start = editor.selectionStart;
+                const end = editor.selectionEnd;
+                editor.setRangeText(text, start, end, 'end');
+                updateWordCount();
+            } catch (e) {
+                // clipboard permission denied — silently fail
+            }
+        });
+
+        document.getElementById('btn-undo').addEventListener('click', () => {
+            editor.focus();
+            document.execCommand('undo');
+            updateWordCount();
+        });
+
+        document.getElementById('btn-redo').addEventListener('click', () => {
+            editor.focus();
+            document.execCommand('redo');
+            updateWordCount();
+        });
+
+        // ─────────────────────────────────────────────
+        // EVENTS
+        // ─────────────────────────────────────────────
+        editor.addEventListener('input', () => {
+            updateWordCount();
+            if (!timerRunning && !timesUpShown) startTimer();
+
+            localStorage.setItem(`toefl_writing_v1_draft_prompt_${currentIndex}`, editor.value);
+        });
+
+        pauseBtn.addEventListener('click', () => {
+            if (timerRunning) pauseTimer(); else startTimer();
+        });
+
+        resetBtn.addEventListener('click', resetTimer);
+
+        hideTimerBtn.addEventListener('click', () => {
+            timerHidden = !timerHidden;
+            updateTimerDisplay();
+            // swap eye icon
+            hideTimerBtn.innerHTML = timerHidden
+                ? `<svg class="eye-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94"/>
+    <path d="M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19"/>
+    <line x1="1" y1="1" x2="23" y2="23"/>
+    </svg>`
+                : `<svg class="eye-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+    <circle cx="12" cy="12" r="3"/>
+    </svg>`;
+        });
+
+        toggleWC.addEventListener('click', () => {
+            wcHidden = !wcHidden;
+            wcNumber.classList.toggle('hidden-wc', wcHidden);
+            toggleWCLabel.textContent = wcHidden ? 'Show Word Count' : 'Hide Word Count';
+        });
+
+        btnPrev.addEventListener('click', () => goTo(currentIndex - 1));
+        btnNext.addEventListener('click', () => goTo(currentIndex + 1));
+
+        menuBtn.addEventListener('click', () => { sidebarOverlay.style.display = 'block'; });
+        sidebarOverlay.addEventListener('click', e => {
+            if (e.target === sidebarOverlay) sidebarOverlay.style.display = 'none';
+        });
+        sidebarClose.addEventListener('click', () => { sidebarOverlay.style.display = 'none'; });
+
+        document.getElementById('banner-continue').addEventListener('click', () => {
+            timesUpBanner.style.display = 'none';
+        });
+        document.getElementById('banner-reset').addEventListener('click', resetTimer);
+
+        // ─────────────────────────────────────────────
+        // INIT
+        // ─────────────────────────────────────────────
+        buildSidebar();
+        renderPrompt(0);
+        // In the INIT section, after renderPrompt(0):
+        editor.value = localStorage.getItem('toefl_writing_v1_draft_prompt_0') || '';
+        updateWordCount();
+        updateTimerDisplay();
+        btnPrev.disabled = true;
+        btnNext.disabled = PROMPTS.length <= 1;
+        startTimer();
+    </script>
+</body>
+
+</html>

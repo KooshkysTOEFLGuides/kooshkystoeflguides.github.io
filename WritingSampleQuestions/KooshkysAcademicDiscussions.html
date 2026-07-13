@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOEFL Academic Discussion</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .header {
+            background-color: #e8e8e8;
+            padding: 12px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #d0d0d0;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .header-title {
+            color: #555;
+            font-size: 14px;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 5px;
+        }
+
+        .nav-btn {
+            background-color: #17a2b8;
+            color: white;
+            border: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-btn:hover {
+            background-color: #138496;
+        }
+
+        .nav-btn:disabled {
+            background-color: #95d5dc;
+            cursor: not-allowed;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .timer {
+            color: #17a2b8;
+            font-size: 16px;
+            font-weight: 500;
+            min-width: 70px;
+            text-align: right;
+        }
+
+        .timer.overtime {
+            color: #dc3545;
+        }
+
+        .icon-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            color: #666;
+            padding: 5px;
+        }
+
+        .icon-btn:hover {
+            color: #333;
+        }
+
+        .main-container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            height: calc(100vh - 55px);
+        }
+
+        .left-panel {
+            flex: 1;
+            background-color: white;
+            padding: 30px;
+            overflow-y: auto;
+            border-right: 1px solid #e0e0e0;
+            font-size: 1.15em;
+        }
+
+        .right-panel {
+            flex: 1;
+            background-color: #fafafa;
+            padding: 30px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .instruction {
+            margin-bottom: 20px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .instruction ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .instruction li {
+            margin: 5px 0;
+        }
+
+        .requirement {
+            margin-top: 20px;
+            color: #555;
+        }
+
+        .avatar-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 30px 0;
+        }
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .avatar-name {
+            color: #555;
+            font-weight: 500;
+            font-size: 16px;
+        }
+
+        .dialogue {
+            text-align: justify;
+            line-height: 1.7;
+            color: #333;
+        }
+
+        .student-response {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: white;
+            border-radius: 8px;
+        }
+
+        .student-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .student-avatar.student2 {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+
+        .student-content {
+            flex: 1;
+        }
+
+        .student-name {
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .student-text {
+            line-height: 1.6;
+            color: #555;
+            text-align: justify;
+            font-size: 1.15em;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .action-btn {
+            background-color: #17a2b8;
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .action-btn:hover {
+            background-color: #138496;
+        }
+
+        .word-count-container {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .hide-word-count {
+            background: none;
+            border: none;
+            color: #17a2b8;
+            cursor: pointer;
+            font-size: 14px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            min-height: 2em;
+        }
+
+        .hide-word-count:hover {
+            text-decoration: underline;
+        }
+
+        .word-count {
+            color: #666;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .text-editor {
+            width: 100%;
+            min-height: 300px;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            padding: 15px;
+            font-size: 1.15em;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            resize: vertical;
+            flex: 1;
+        }
+
+        .text-editor:focus {
+            outline: none;
+            border-color: #17a2b8;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .modal-content h2 {
+            color: #dc3545;
+            margin-bottom: 15px;
+        }
+
+        .modal-content p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .modal-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+        }
+
+        .modal-btn {
+            padding: 10px 25px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .modal-btn-primary {
+            background-color: #17a2b8;
+            color: white;
+        }
+
+        .modal-btn-secondary {
+            background-color: #6c757d;
+            color: white;
+        }
+
+        .question-list-modal .modal-content {
+            max-width: 600px;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .question-item {
+            padding: 15px;
+            border-bottom: 1px solid #e0e0e0;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .question-item:hover {
+            background-color: #f0f0f0;
+        }
+
+        .question-item.active {
+            background-color: #e7f6f8;
+        }
+
+        .question-item-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .question-item-professor {
+            font-size: 13px;
+            color: #666;
+        }
+
+        .timer-controls {
+            position: relative;
+        }
+
+        .timer-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 5px;
+            z-index: 100;
+        }
+
+        .timer-menu.active {
+            display: block;
+        }
+
+        .timer-menu button {
+            display: block;
+            width: 100%;
+            padding: 10px 20px;
+            border: none;
+            background: none;
+            text-align: left;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .timer-menu button:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-left">
+            <span class="header-title">Writing | Academic Discussion</span>
+            <div class="nav-buttons">
+                <button class="nav-btn" id="prevBtn" onclick="navigateQuestion(-1)">‹</button>
+                <button class="nav-btn" id="nextBtn" onclick="navigateQuestion(1)">›</button>
+            </div>
+        </div>
+        <div class="header-right">
+            <div class="timer" id="timer">10:00</div>
+            <div class="timer-controls">
+                <button class="icon-btn" id="timerMenuBtn" onclick="toggleTimerMenu()">⏸</button>
+                <div class="timer-menu" id="timerMenu">
+                    <button onclick="pauseTimer()">Pause</button>
+                    <button onclick="resumeTimer()">Resume</button>
+                    <button onclick="resetTimer()">Reset</button>
+                </div>
+            </div>
+            <button class="icon-btn" onclick="showQuestionList()">≡</button>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="left-panel">
+            <div class="instruction">
+                <p>Your professor is teaching a class on <span id="subjectText"></span>. Write a post responding to the
+                    professor's question</p>
+            </div>
+            <div class="instruction">
+                <p>In your response, you should do the following.</p>
+                <ul>
+                    <li>Express and support your opinion</li>
+                    <li>Make a contribution to the discussion in your own words.</li>
+                </ul>
+            </div>
+            <div class="requirement">
+                <p>An effective response will contain at least 100 words</p>
+            </div>
+
+            <div class="avatar-container">
+                <div class="avatar" id="professorAvatar"></div>
+                <div class="avatar-name" id="professorName"></div>
+            </div>
+
+            <div class="dialogue" id="professorDialogue"></div>
+        </div>
+
+        <div class="right-panel">
+            <div id="studentResponses"></div>
+
+            <div class="action-buttons">
+                <button class="action-btn" onclick="cutText()">Cut</button>
+                <button class="action-btn" onclick="pasteText()">Paste</button>
+                <button class="action-btn" onclick="undoText()">Undo</button>
+                <button class="action-btn" onclick="redoText()">Redo</button>
+            </div>
+
+            <div class="word-count-container">
+                <button class="hide-word-count" onclick="toggleWordCount()">
+                    <span id="hideWordCountIcon">🔗</span>
+                    <span id="hideWordCountText">Hide Word Count</span>
+                </button>
+                <span class="word-count" id="wordCount">0</span>
+            </div>
+
+            <textarea class="text-editor" id="textEditor" placeholder="Type your response here..."></textarea>
+        </div>
+    </div>
+
+    <div class="modal" id="timeUpModal">
+        <div class="modal-content">
+            <h2>Time's Up!</h2>
+            <p>The 10-minute timer has expired. Would you like to continue editing?</p>
+            <div class="modal-buttons">
+                <button class="modal-btn modal-btn-secondary" onclick="closeTimeUpModal()">Stop</button>
+                <button class="modal-btn modal-btn-primary" onclick="continueAfterTime()">Continue</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal question-list-modal" id="questionListModal">
+        <div class="modal-content">
+            <h2>Select a Question</h2>
+            <div id="questionListContent"></div>
+            <div class="modal-buttons" style="margin-top: 20px;">
+                <button class="modal-btn modal-btn-secondary" onclick="closeQuestionList()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const STORAGE_KEY = 'toefl_academic_discussion_v1_responses_2026';
+
+        let questions =
+            [
+                {
+                    subject: "political philosophy",
+                    professor: "Professor Blackwell",
+                    student1: "Natasha",
+                    student2: "Kevin",
+                    professorDialogue: "Today we're discussing the concept of freedom in political thought. Philosophers debate whether true freedom means being free from external constraints like laws and restrictions, or whether it means having the actual capability and resources to pursue your goals. Negative freedom advocates emphasize removing barriers and government interference. Positive freedom supporters argue that freedom requires empowerment through education, healthcare, and opportunity. Which understanding of freedom do you find more compelling?",
+                    student1Dialogue: "I think negative freedom makes more sense because the government shouldn't control what people can do. Real freedom means being left alone to make your own choices without interference.",
+                    student2Dialogue: "I believe positive freedom is more meaningful because just removing laws doesn't help if you're too poor or uneducated to actually do anything. Freedom needs resources to be real."
+                },
+                {
+                    subject: "technology and society",
+                    professor: "Professor Kim",
+                    student1: "Rachel",
+                    student2: "Miguel",
+                    professorDialogue: "We're examining social media's role in public discourse. Analysts debate whether online platforms improve democratic participation or damage the quality of public conversation. Digital optimists argue that social media gives everyone a voice and increases civic engagement. Critics contend that these platforms spread misinformation and create echo chambers that polarize society. Do you think social media strengthens or weakens democratic discussion overall?",
+                    student1Dialogue: "I think social media strengthens democracy because people who never had a platform before can now share their views and organize movements. It makes public discussion more inclusive.",
+                    student2Dialogue: "I believe it weakens discussion because everyone just follows accounts that agree with them. People become more extreme and stop listening to different perspectives entirely."
+                },
+                {
+                    subject: "public health",
+                    professor: "Professor Martinez",
+                    student1: "Aisha",
+                    student2: "Connor",
+                    professorDialogue: "Our topic today is health intervention strategies. Public health officials debate whether to focus resources on treating existing diseases or preventing illness before it occurs. Treatment-focused approaches argue that helping sick people now is a moral imperative and shows immediate results. Prevention advocates contend that stopping disease before it starts saves more lives and reduces long-term healthcare costs. Which strategy do you think public health systems should prioritize?",
+                    student1Dialogue: "I think treatment should come first because people who are sick right now need help immediately. It seems wrong to ignore suffering people while focusing on future possibilities.",
+                    student2Dialogue: "I'd prioritize prevention because stopping diseases before they happen helps way more people overall. Treating illness after the fact is much more expensive and less effective."
+                },
+                {
+                    subject: "urban planning",
+                    professor: "Professor Davis",
+                    student1: "Priya",
+                    student2: "Austin",
+                    professorDialogue: "We're analyzing transportation priorities in city design. Urban planners debate whether cities should invest primarily in expanding public transit systems or improving road infrastructure for private vehicles. Public transit supporters argue that buses and trains reduce congestion, pollution, and provide mobility for all income levels. Road infrastructure advocates contend that most people prefer personal vehicles and better roads benefit everyone including emergency services. Which transportation investment better serves urban populations?",
+                    student1Dialogue: "I support public transit because not everyone can afford cars, and traffic gets terrible when everyone drives. Good bus and subway systems move more people efficiently.",
+                    student2Dialogue: "I think road improvements are better because most families rely on personal vehicles for flexibility. Public transit doesn't reach everywhere people need to go anyway."
+                },
+                {
+                    subject: "organizational behavior",
+                    professor: "Professor Stevens",
+                    student1: "Jordan",
+                    student2: "Leah",
+                    professorDialogue: "Today we're discussing workplace feedback culture. Management experts debate whether organizations should encourage constant informal feedback among colleagues or rely on structured formal performance reviews. Continuous feedback advocates argue that immediate input helps employees improve in real-time and builds open communication. Formal review supporters contend that structured evaluations prevent bias and ensure fair, documented assessments. Which feedback approach do you think creates more effective workplaces?",
+                    student1Dialogue: "I prefer continuous feedback because waiting for annual reviews means problems go unaddressed for months. Getting immediate input helps you fix issues before they become serious.",
+                    student2Dialogue: "I think formal reviews work better because constant feedback can feel like criticism and create anxiety. Scheduled reviews give time to prepare and discuss progress properly."
+                },
+                {
+                    subject: "media studies",
+                    professor: "Professor Nguyen",
+                    student1: "Caleb",
+                    student2: "Zara",
+                    professorDialogue: "We're examining news consumption patterns. Media researchers debate whether audiences should seek news from multiple diverse sources or develop trust in one or two reliable outlets. Diverse source advocates argue that exposure to different perspectives prevents bias and provides fuller understanding. Trusted outlet supporters contend that following too many sources creates confusion and that depth from fewer quality sources is more valuable. Which news consumption strategy do you think leads to better-informed citizens?",
+                    student1Dialogue: "I think reading multiple sources is important because every outlet has some bias. Comparing different perspectives helps you figure out what's actually true and what's just opinion.",
+                    student2Dialogue: "I prefer sticking with one trusted source because following too many outlets is overwhelming and confusing. It's better to deeply understand reporting from a quality newspaper."
+                },
+                {
+                    subject: "criminology",
+                    professor: "Professor Williams",
+                    student1: "Isaiah",
+                    student2: "Mei",
+                    professorDialogue: "Our discussion focuses on criminal justice priorities. Criminologists debate whether the justice system should emphasize punishment to deter crime or rehabilitation to reduce reoffending. Punishment-focused advocates argue that consequences must be severe to discourage criminal behavior and provide justice for victims. Rehabilitation supporters contend that helping offenders change through education and treatment reduces long-term crime rates more effectively. Which approach do you believe reduces crime better?",
+                    student1Dialogue: "I think punishment is more effective because people need to know there are serious consequences for breaking laws. Without strong penalties, criminals won't be deterred from committing crimes.",
+                    student2Dialogue: "I believe rehabilitation works better because most criminals eventually leave prison. If they don't get help changing, they'll just commit more crimes when they're released."
+                },
+                {
+                    subject: "family studies",
+                    professor: "Professor Anderson",
+                    student1: "Simone",
+                    student2: "Ryan",
+                    professorDialogue: "Today we're analyzing parenting approaches to building independence. Child development specialists debate whether parents should allow children to make their own decisions and learn from mistakes, or provide clear guidance and structure to prevent poor choices. Autonomy advocates argue that making mistakes builds problem-solving skills and confidence. Guidance supporters contend that children need direction to avoid serious errors and develop good judgment. Which parenting style do you think prepares children better for adulthood?",
+                    student1Dialogue: "I think letting kids make decisions is better because they need to learn from their own mistakes. If parents always tell them what to do, they won't develop independence.",
+                    student2Dialogue: "I believe guidance is more important because children don't have enough experience to make good choices yet. Parents should prevent them from making mistakes that could have lasting consequences."
+                },
+                {
+                    subject: "consumer behavior",
+                    professor: "Professor Martinez",
+                    student1: "Sophie",
+                    student2: "James",
+                    professorDialogue: "Today we're discussing influencer marketing and its effectiveness. Companies increasingly partner with social media influencers to promote products. Some marketers believe influencers create authentic connections that traditional advertising cannot achieve. Others argue that as influencer marketing becomes more common, audiences grow skeptical and tune out these promotions just like conventional ads. Which perspective do you find more convincing for today's market?",
+                    student1Dialogue: "I think influencers are still effective because they feel like recommendations from a friend. When I see someone I follow using a product in their daily life, it seems more trustworthy than a commercial.",
+                    student2Dialogue: "I disagree because most people now realize influencers are getting paid. Once you know it's an ad, it loses that personal touch and becomes just another sales pitch."
+                },
+                {
+                    subject: "educational psychology",
+                    professor: "Professor Anderson",
+                    student1: "Rachel",
+                    student2: "Tom",
+                    professorDialogue: "We've been exploring different approaches to student assessment. There's an ongoing debate about whether students benefit more from frequent low-stakes quizzes or fewer high-stakes exams. Supporters of frequent quizzes argue they reduce anxiety and provide regular feedback. Advocates for major exams contend they better prepare students for real-world pressure and encourage deeper synthesis of material. What approach do you think promotes better learning outcomes?",
+                    student1Dialogue: "I prefer frequent quizzes because they keep me studying consistently throughout the semester. With only big exams, I'd probably procrastinate and cram everything at the last minute.",
+                    student2Dialogue: "I think major exams are better because they force you to see how everything connects. Small quizzes just test memorization of isolated facts without the bigger picture."
+                },
+                {
+                    subject: "organizational behavior",
+                    professor: "Professor Williams",
+                    student1: "Elena",
+                    student2: "Kevin",
+                    professorDialogue: "Our discussion today centers on remote work policies. Many organizations are deciding whether to require employees to return to offices or maintain flexible remote options. Some leaders believe in-person collaboration fosters innovation and company culture. Others argue that remote flexibility improves work-life balance and actually increases productivity by reducing commute stress and office distractions. What policy do you think benefits organizations most in the long run?",
+                    student1Dialogue: "I think in-person work is better for innovation because spontaneous conversations in the office often lead to creative ideas. You just don't get those random brainstorming moments on video calls.",
+                    student2Dialogue: "I'd say remote work is more beneficial because people can focus better without office interruptions. Plus, happy employees who have flexibility are probably more loyal and motivated overall."
+                },
+                {
+                    subject: "environmental studies",
+                    professor: "Professor Kim",
+                    student1: "Marcus",
+                    student2: "Lily",
+                    professorDialogue: "We're examining strategies for promoting sustainable behavior. One debate involves whether environmental campaigns should emphasize individual actions like recycling and reducing personal consumption, or focus on pressuring corporations and governments to make systemic changes. Individual-action advocates say personal responsibility creates cultural shifts. Systemic-change proponents argue that individual efforts are insignificant without structural reform. Which approach do you think creates more meaningful environmental impact?",
+                    student1Dialogue: "I think individual actions matter because if millions of people change their habits, it adds up to real impact. Plus, it shows companies there's demand for sustainable options.",
+                    student2Dialogue: "I believe systemic change is more important because a few corporations cause way more pollution than all individual consumers combined. Personal recycling barely makes a dent compared to industrial emissions."
+                },
+                {
+                    subject: "media studies",
+                    professor: "Professor Thompson",
+                    student1: "Aisha",
+                    student2: "Daniel",
+                    professorDialogue: "Today's topic is news consumption in the digital age. We're considering whether people should primarily get news from multiple diverse sources to gain different perspectives, or focus on a few trusted sources to avoid misinformation. Diversity advocates emphasize the importance of hearing various viewpoints. Trusted-source supporters argue that too many sources create confusion and make it harder to distinguish credible information from unreliable content. What strategy do you think leads to better-informed citizens?",
+                    student1Dialogue: "I think using diverse sources is important because every outlet has some bias. By reading different perspectives, you can form your own opinion instead of just accepting one narrative.",
+                    student2Dialogue: "I prefer sticking with trusted sources because there's so much fake news online. If you read everything, you might accidentally believe something false without realizing it's from an unreliable site."
+                },
+                {
+                    subject: "human development",
+                    professor: "Professor Garcia",
+                    student1: "Nathan",
+                    student2: "Priya",
+                    professorDialogue: "We're discussing parenting philosophies and childhood independence. Some experts recommend giving children significant freedom to make their own choices and learn from mistakes, while others advocate for more structured guidance and protection during formative years. Freedom supporters believe autonomy builds confidence and problem-solving skills. Structure advocates argue that children need clear boundaries and direction to develop properly. Which approach do you think better prepares children for adulthood?",
+                    student1Dialogue: "I think freedom is better because kids need to learn how to make decisions on their own. If parents control everything, children won't know how to handle challenges when they're older.",
+                    student2Dialogue: "I believe structure is more important because children don't have enough experience to make good choices yet. They need guidance to avoid mistakes that could have serious consequences."
+                },
+                {
+                    subject: "urban planning",
+                    professor: "Professor Lee",
+                    student1: "Carlos",
+                    student2: "Emma",
+                    professorDialogue: "Our focus today is on community development strategies. Cities face choices about whether to invest in revitalizing older neighborhoods or developing new areas on the outskirts. Revitalization supporters argue it preserves community character and uses existing infrastructure efficiently. New development advocates contend it offers modern amenities and avoids displacing current residents. Which investment strategy do you think creates healthier, more sustainable cities?",
+                    student1Dialogue: "I support revitalizing old neighborhoods because it makes use of buildings and roads that already exist. It also keeps the city's history and culture alive instead of abandoning it.",
+                    student2Dialogue: "I think new development is better because old neighborhoods might require expensive repairs that cost more than building from scratch. Plus, you can design everything with modern needs in mind."
+                },
+                {
+                    subject: "technology and society",
+                    professor: "Professor Patel",
+                    student1: "Jordan",
+                    student2: "Isabel",
+                    professorDialogue: "We're exploring artificial intelligence in education. Schools are debating whether to embrace AI tools like writing assistants and tutoring programs, or restrict their use to preserve traditional learning methods. Proponents believe AI can personalize education and make learning more accessible. Critics worry it may reduce critical thinking skills and create over-dependence on technology. What position do you think serves students' best interests?",
+                    student1Dialogue: "I think AI tools are helpful because they can explain concepts in different ways until you understand. It's like having a tutor available anytime you need extra help.",
+                    student2Dialogue: "I'm worried that relying on AI will make students lazy. If a program solves everything for you, you never actually learn how to think through problems independently."
+                },
+                {
+                    subject: "public health",
+                    professor: "Professor Robinson",
+                    student1: "Olivia",
+                    student2: "Ryan",
+                    professorDialogue: "Today we're examining health promotion strategies. Public health officials debate whether campaigns should focus on educating people about health risks and benefits, or on changing environments to make healthy choices easier. Education advocates believe informed individuals can make better decisions. Environment-change supporters argue that even informed people struggle against unhealthy surroundings, so structural changes like healthier cafeteria options are more effective. Which approach do you think improves public health more successfully?",
+                    student1Dialogue: "I believe education is key because people need to understand why certain choices matter. Once you know the consequences, you're more motivated to make better decisions about your health.",
+                    student2Dialogue: "I think changing environments works better because even when people know what's healthy, they'll usually pick the easiest option available. If healthy food is convenient, they'll choose it naturally."
+                },
+                {
+                    subject: "business ethics",
+                    professor: "Professor Davis",
+                    student1: "Zoe",
+                    student2: "Michael",
+                    professorDialogue: "We're discussing corporate social responsibility today. Companies increasingly face pressure to take public stances on social issues beyond their core business. Some argue that corporations should actively engage with social causes because they have significant influence and resources. Others believe companies should remain neutral and focus solely on their products and services. What role do you think businesses should play in addressing social issues?",
+                    student1Dialogue: "I think companies should speak up on social issues because they have platforms that reach millions of people. Their involvement can actually make a real difference in raising awareness.",
+                    student2Dialogue: "I believe businesses should stay neutral because not all customers agree on every issue. Taking sides might alienate people and ultimately hurt the company and its employees."
+                },
+                {
+                    subject: "sociology",
+                    professor: "Professor Hayes",
+                    student1: "Nina",
+                    student2: "Lucas",
+                    professorDialogue: "We're examining social mobility in modern societies. Researchers debate whether education or social networks are more critical for upward mobility. Some scholars argue that formal education provides skills and credentials necessary for career advancement. Others contend that personal connections and networking opportunities open doors that education alone cannot. Which factor do you believe plays a larger role in determining someone's economic success?",
+                    student1Dialogue: "I think education is more important because it gives you actual skills employers need. Without a degree or training, you won't even get considered for most good jobs.",
+                    student2Dialogue: "I'd say connections matter more because lots of jobs aren't even advertised publicly. If you know the right people, they can recommend you or tell you about opportunities before anyone else."
+                },
+                {
+                    subject: "marketing",
+                    professor: "Professor Sullivan",
+                    student1: "Mia",
+                    student2: "Ethan",
+                    professorDialogue: "Today we're analyzing brand loyalty strategies. Companies must choose between offering consistent pricing to all customers or using personalized discounts and promotions based on purchase history. Consistent pricing supporters believe fairness builds long-term trust with customers. Personalized pricing advocates argue that targeted offers increase engagement and reward loyal customers. Which pricing strategy do you think creates stronger customer loyalty?",
+                    student1Dialogue: "I prefer consistent pricing because finding out other people got better deals makes me feel cheated. If everyone pays the same price, it seems more honest and fair.",
+                    student2Dialogue: "I think personalized discounts work better because getting a special offer makes you feel valued. It's nice when a company rewards you for being a regular customer."
+                },
+                {
+                    subject: "psychology",
+                    professor: "Professor Monroe",
+                    student1: "Jasmine",
+                    student2: "Tyler",
+                    professorDialogue: "We're discussing motivation in goal-setting. Psychologists debate whether people achieve more by setting ambitious, challenging goals or by setting smaller, easily achievable milestones. Ambitious goal supporters argue that high targets push people beyond their perceived limits. Incremental goal advocates believe that frequent small successes build confidence and maintain momentum. Which goal-setting approach do you think leads to better long-term achievement?",
+                    student1Dialogue: "I think big challenging goals are better because they force you to really push yourself. If the goal is too easy, you won't grow or discover what you're actually capable of.",
+                    student2Dialogue: "I prefer smaller milestones because completing them gives you motivation to keep going. With huge goals, you might get discouraged and give up before seeing any progress."
+                },
+                {
+                    subject: "economics",
+                    professor: "Professor Chang",
+                    student1: "Andre",
+                    student2: "Sophia",
+                    professorDialogue: "Our topic today is minimum wage policies. Economists have differing views on whether raising minimum wages benefits workers overall. Some economists argue that higher wages improve workers' quality of life and reduce poverty. Others contend that wage increases lead businesses to reduce hiring or cut hours, ultimately harming employment opportunities. What effect do you think minimum wage increases have on worker welfare?",
+                    student1Dialogue: "I think raising minimum wage helps workers because people need to afford basic living expenses. If wages are too low, even full-time workers struggle to pay rent and buy food.",
+                    student2Dialogue: "I'm concerned that higher wages could backfire because small businesses might not be able to afford as many employees. Some workers could lose their jobs entirely."
+                },
+                {
+                    subject: "education",
+                    professor: "Professor Bennett",
+                    student1: "Claire",
+                    student2: "Marcus",
+                    professorDialogue: "We're exploring technology integration in classrooms. Schools debate whether to adopt one-to-one device programs where each student has a personal laptop or tablet, or maintain shared computer labs. Personal device advocates believe individual access increases engagement and allows personalized learning. Shared lab supporters argue that supervised computer time reduces distractions and ensures appropriate technology use. Which model do you think enhances student learning more effectively?",
+                    student1Dialogue: "I support giving each student their own device because you can work at your own pace and access materials anytime. Waiting for lab time wastes learning opportunities.",
+                    student2Dialogue: "I think computer labs are better because students get distracted by games and social media on personal devices. In a lab, teachers can monitor what everyone's doing."
+                },
+                {
+                    subject: "anthropology",
+                    professor: "Professor Ortiz",
+                    student1: "Liam",
+                    student2: "Hannah",
+                    professorDialogue: "Today we're examining cultural preservation in globalized societies. Communities face decisions about whether to actively maintain traditional practices or naturally adopt modern conveniences and customs. Preservation advocates argue that cultural traditions provide identity and should be protected. Modernization supporters contend that cultures naturally evolve and forcing preservation can hold communities back from beneficial progress. What approach do you think serves communities best?",
+                    student1Dialogue: "I believe preserving traditions is important because once they're lost, you can't get them back. Cultural practices connect people to their history and give communities unique identities.",
+                    student2Dialogue: "I think natural evolution is better because forcing people to follow old customs might prevent them from improving their lives. Cultures have always changed over time anyway."
+                },
+                {
+                    subject: "political science",
+                    professor: "Professor Foster",
+                    student1: "Amara",
+                    student2: "Jacob",
+                    professorDialogue: "We're analyzing voter turnout strategies. Election officials debate whether making voting mandatory with penalties for non-participation or keeping it voluntary increases democratic legitimacy. Mandatory voting supporters argue it ensures all voices are heard and reduces inequality in representation. Voluntary voting advocates believe that forcing participation undermines the principle of free choice. Which system do you think strengthens democracy more effectively?",
+                    student1Dialogue: "I support mandatory voting because it makes sure everyone participates equally. Otherwise, only the most motivated people vote and their preferences dominate while others get ignored.",
+                    student2Dialogue: "I prefer voluntary voting because democracy should include the freedom not to vote. Forcing people who don't care might just lead to random uninformed choices."
+                },
+                {
+                    subject: "history",
+                    professor: "Professor Walker",
+                    student1: "Diego",
+                    student2: "Ella",
+                    professorDialogue: "Our discussion focuses on how history should be taught. Educators debate whether to organize history courses chronologically from past to present, or thematically around topics like economics, culture, and politics across different time periods. Chronological advocates argue that understanding sequence and cause-effect requires following events in order. Thematic supporters believe that comparing similar topics across eras deepens comprehension of patterns. Which organizational approach do you think helps students learn history better?",
+                    student1Dialogue: "I think chronological order works better because you can see how one event led to another. If you jump around between time periods, it's confusing to understand what caused what.",
+                    student2Dialogue: "I prefer thematic organization because it lets you compare how different societies handled similar challenges. Studying only one time period at a time makes everything seem disconnected."
+                },
+                {
+                    subject: "philosophy",
+                    professor: "Professor Reid",
+                    student1: "Victoria",
+                    student2: "Owen",
+                    professorDialogue: "Today we're exploring ethical frameworks for decision-making. Philosophers debate whether actions should be judged by their consequences or by adherence to moral principles regardless of outcomes. Consequentialist thinkers argue that the best choice is whatever produces the most overall good. Principle-based ethicists contend that some actions are inherently right or wrong independent of results. Which framework do you find more convincing for making ethical decisions?",
+                    student1Dialogue: "I think consequences matter most because an action that helps more people is obviously better. Focusing on rules without considering outcomes could lead to worse situations for everyone.",
+                    student2Dialogue: "I believe principles are more important because some things are just wrong even if they produce good results. Otherwise, you could justify terrible actions by pointing to benefits."
+                },
+                {
+                    subject: "communication studies",
+                    professor: "Professor Quinn",
+                    student1: "Kayla",
+                    student2: "Brandon",
+                    professorDialogue: "We're examining conflict resolution styles today. Communication experts debate whether directly confronting disagreements or giving time and space before addressing issues leads to better outcomes. Direct confrontation advocates argue that immediate discussion prevents misunderstandings from escalating. Cooling-off period supporters believe that emotional distance allows people to think clearly and approach problems more rationally. Which conflict approach do you think resolves disputes more effectively?",
+                    student1Dialogue: "I think addressing conflicts immediately is better because waiting lets resentment build up. If you talk about problems right away, you can clear up misunderstandings before they get worse.",
+                    student2Dialogue: "I prefer taking a break first because people say things they don't mean when they're upset. Waiting until everyone calms down leads to more productive conversations."
+                }
+            ];
+
+        let currentQuestionIndex = 0;
+        let timerInterval = null;
+        let timerSeconds = 600; // 10 minutes
+        let timerRunning = true;
+        let timeExpired = false;
+        let wordCountVisible = true;
+        let undoStack = [];
+        let redoStack = [];
+        let clipboardText = '';
+
+        function loadQuestion(index) {
+            const question = questions[index];
+            currentQuestionIndex = index;
+
+            document.getElementById('subjectText').textContent = question.subject;
+            document.getElementById('professorName').textContent = question.professor;
+            document.getElementById('professorAvatar').textContent = question.professor.charAt(question.professor.indexOf(' ') + 1);
+            document.getElementById('professorDialogue').textContent = question.professorDialogue;
+
+            const studentResponsesHtml = `
+                <div class="student-response">
+                    <div class="student-avatar">${question.student1.charAt(0)}</div>
+                    <div class="student-content">
+                        <div class="student-name">${question.student1}</div>
+                        <div class="student-text">${question.student1Dialogue}</div>
+                    </div>
+                </div>
+                <div class="student-response">
+                    <div class="student-avatar student2">${question.student2.charAt(0)}</div>
+                    <div class="student-content">
+                        <div class="student-name">${question.student2}</div>
+                        <div class="student-text">${question.student2Dialogue}</div>
+                    </div>
+                </div>
+            `;
+            document.getElementById('studentResponses').innerHTML = studentResponsesHtml;
+
+            loadSavedResponse();
+            updateNavigationButtons();
+            resetTimer();
+        }
+
+        function updateNavigationButtons() {
+            document.getElementById('prevBtn').disabled = currentQuestionIndex === 0;
+            document.getElementById('nextBtn').disabled = currentQuestionIndex === questions.length - 1;
+        }
+
+        function navigateQuestion(direction) {
+            const newIndex = currentQuestionIndex + direction;
+            if (newIndex >= 0 && newIndex < questions.length) {
+                loadQuestion(newIndex);
+            }
+        }
+
+        function showQuestionList() {
+            const listHtml = questions.map((q, index) => `
+                <div class="question-item ${index === currentQuestionIndex ? 'active' : ''}" onclick="selectQuestion(${index})">
+                    <div class="question-item-title">Question ${index + 1}: ${q.subject}</div>
+                    <div class="question-item-professor">${q.professor}</div>
+                </div>
+            `).join('');
+
+            document.getElementById('questionListContent').innerHTML = listHtml;
+            document.getElementById('questionListModal').classList.add('active');
+        }
+
+        function closeQuestionList() {
+            document.getElementById('questionListModal').classList.remove('active');
+        }
+
+        function selectQuestion(index) {
+            loadQuestion(index);
+            closeQuestionList();
+        }
+
+        function startTimer() {
+            if (timerInterval) clearInterval(timerInterval);
+
+            timerInterval = setInterval(() => {
+                if (!timerRunning) return;
+
+                if (!timeExpired) {
+                    timerSeconds--;
+                    if (timerSeconds <= 0) {
+                        timerSeconds = 0;
+                        timeExpired = true;
+                        document.getElementById('timeUpModal').classList.add('active');
+                        pauseTimer();
+                    }
+                } else {
+                    timerSeconds++;
+                }
+
+                updateTimerDisplay();
+            }, 1000);
+        }
+
+        function updateTimerDisplay() {
+            const minutes = Math.floor(Math.abs(timerSeconds) / 60);
+            const seconds = Math.abs(timerSeconds) % 60;
+            const timeString = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+
+            const timerElement = document.getElementById('timer');
+            timerElement.textContent = timeString;
+
+            if (timeExpired) {
+                timerElement.classList.add('overtime');
+            } else {
+                timerElement.classList.remove('overtime');
+            }
+        }
+
+        function pauseTimer() {
+            timerRunning = false;
+        }
+
+        function resumeTimer() {
+            timerRunning = true;
+            document.getElementById('timerMenu').classList.remove('active');
+        }
+
+        function resetTimer() {
+            timerSeconds = 600;
+            timeExpired = false;
+            timerRunning = true;
+            updateTimerDisplay();
+            if (!timerInterval) startTimer();
+        }
+
+        function toggleTimerMenu() {
+            document.getElementById('timerMenu').classList.toggle('active');
+        }
+
+        function closeTimeUpModal() {
+            document.getElementById('timeUpModal').classList.remove('active');
+            document.getElementById('textEditor').disabled = true;
+        }
+
+        function continueAfterTime() {
+            document.getElementById('timeUpModal').classList.remove('active');
+            document.getElementById('textEditor').disabled = false;
+            timerSeconds = 600;
+            resumeTimer();
+        }
+
+        function saveResponse() {
+            const responses = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+            responses[currentQuestionIndex] = document.getElementById('textEditor').value;
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(responses));
+        }
+
+        function loadSavedResponse() {
+            const responses = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+            const savedText = responses[currentQuestionIndex] || '';
+            document.getElementById('textEditor').value = savedText;
+            updateWordCount();
+            undoStack = [];
+            redoStack = [];
+        }
+
+        function updateWordCount() {
+            const text = document.getElementById('textEditor').value.trim();
+            const words = text ? text.split(/\s+/).length : 0;
+            document.getElementById('wordCount').textContent = words;
+        }
+
+        function toggleWordCount() {
+            wordCountVisible = !wordCountVisible;
+            const wordCountEl = document.getElementById('wordCount');
+            const textEl = document.getElementById('hideWordCountText');
+
+            if (wordCountVisible) {
+                wordCountEl.style.display = 'inline';
+                textEl.textContent = 'Hide Word Count';
+            } else {
+                wordCountEl.style.display = 'none';
+                textEl.textContent = 'Show Word Count';
+            }
+        }
+
+        function cutText() {
+            const editor = document.getElementById('textEditor');
+            const start = editor.selectionStart;
+            const end = editor.selectionEnd;
+
+            if (start !== end) {
+                clipboardText = editor.value.substring(start, end);
+                saveUndoState();
+                editor.value = editor.value.substring(0, start) + editor.value.substring(end);
+                editor.selectionStart = editor.selectionEnd = start;
+                saveResponse();
+                updateWordCount();
+            }
+        }
+
+        function pasteText() {
+            const editor = document.getElementById('textEditor');
+            const start = editor.selectionStart;
+            const end = editor.selectionEnd;
+
+            saveUndoState();
+            editor.value = editor.value.substring(0, start) + clipboardText + editor.value.substring(end);
+            editor.selectionStart = editor.selectionEnd = start + clipboardText.length;
+            saveResponse();
+            updateWordCount();
+        }
+
+        function saveUndoState() {
+            undoStack.push(document.getElementById('textEditor').value);
+            redoStack = [];
+            if (undoStack.length > 50) undoStack.shift();
+        }
+
+        function undoText() {
+            if (undoStack.length > 0) {
+                const currentState = document.getElementById('textEditor').value;
+                redoStack.push(currentState);
+                document.getElementById('textEditor').value = undoStack.pop();
+                saveResponse();
+                updateWordCount();
+            }
+        }
+
+        function redoText() {
+            if (redoStack.length > 0) {
+                const currentState = document.getElementById('textEditor').value;
+                undoStack.push(currentState);
+                document.getElementById('textEditor').value = redoStack.pop();
+                saveResponse();
+                updateWordCount();
+            }
+        }
+
+        document.getElementById('textEditor').addEventListener('input', function () {
+            saveResponse();
+            updateWordCount();
+        });
+
+        document.addEventListener('click', function (e) {
+            if (!e.target.closest('.timer-controls')) {
+                document.getElementById('timerMenu').classList.remove('active');
+            }
+        });
+
+        // Initialize
+        loadQuestion(0);
+        startTimer();
+    </script>
+</body>
+
+</html>
