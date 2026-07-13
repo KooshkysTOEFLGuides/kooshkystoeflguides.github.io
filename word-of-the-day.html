@@ -4,10 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#F4F0E8">
-  <meta name="description" content="Browse all TOEFL notes and guides by Amir Kooshky.">
+  <meta name="description" content="Browse Kooshky's TOEFL Word of the Day archive by word, date, or month.">
   <link rel="icon" href="images/kooshky-favicon-light.png" type="image/png" data-favicon data-light-href="images/kooshky-favicon-light.png" data-dark-href="images/kooshky-favicon-dark.png">
   <link rel="icon" href="images/favicon.ico" sizes="any">
   <link rel="stylesheet" href="styles.css?v=5">
+  <link rel="stylesheet" href="word-of-the-day.css?v=2">
   <script>
     (() => {
       try {
@@ -21,9 +22,10 @@
       }
     })();
   </script>
-  <script src="content-data.js?v=4" defer></script>
-  <script src="site.js?v=4" defer></script>
-  <title>All Contents — Kooshky's TOEFL Guides</title>
+  <script src="word-data.js?v=2" defer></script>
+  <script src="site.js?v=5" defer></script>
+  <script src="word-of-the-day.js?v=2" defer></script>
+  <title>Word of the Day — Kooshky's TOEFL Guides</title>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -37,8 +39,8 @@
 
       <nav class="desktop-nav" aria-label="Primary navigation">
         <a href="index.html">Home</a>
-        <a href="contents.html" aria-current="page">All contents</a>
-        <a href="word-of-the-day.html">Word of the day</a>
+        <a href="contents.html">All contents</a>
+        <a href="word-of-the-day.html" aria-current="page">Word of the day</a>
         <a href="about.html">About me</a>
       </nav>
 
@@ -52,30 +54,51 @@
   <div class="nav-backdrop" data-nav-backdrop hidden></div>
   <nav class="mobile-nav" id="mobile-nav" data-mobile-nav aria-label="Mobile navigation" hidden>
     <a href="index.html">Home</a>
-    <a href="contents.html" aria-current="page">All contents</a>
-    <a href="word-of-the-day.html">Word of the day</a>
+    <a href="contents.html">All contents</a>
+    <a href="word-of-the-day.html" aria-current="page">Word of the day</a>
     <a href="about.html">About me</a>
   </nav>
 
   <main id="main">
     <section class="page-intro">
-      <div class="container">
-        <p class="eyebrow">Library</p>
-        <h1>All contents</h1>
-        <p>Everything on the site, grouped by subject.</p>
+      <div class="container wotd-intro-row">
+        <div>
+          <p class="eyebrow">Vocabulary archive</p>
+          <h1>Word of the Day</h1>
+          <p>Each entry has a full HTML guide with meanings, examples, word family, collocations, and practice. New words appear here at 10:00 AM Iran time.</p>
+        </div>
+        <p class="wotd-clock" data-wotd-clock aria-live="polite"></p>
       </div>
     </section>
 
-    <div class="container">
-      <div class="search-wrap" data-search-wrap>
-        <label>
-          <span class="eyebrow">Find a guide</span>
-          <input type="search" data-content-search placeholder="Search titles, descriptions, or sections…" autocomplete="off">
+    <section class="container" aria-label="Word archive filters">
+      <form class="wotd-tools" role="search" onsubmit="return false;">
+        <label class="wotd-field">
+          <span>Search by word or date</span>
+          <input type="search" data-wotd-search placeholder="e.g. meticulous, July 2026, 2026-07-14" autocomplete="off">
         </label>
-        <div class="search-status" data-search-status aria-live="polite"></div>
+
+        <label class="wotd-field">
+          <span>Month</span>
+          <select data-wotd-month>
+            <option value="">All months</option>
+          </select>
+        </label>
+
+
+        <button class="button" type="button" data-wotd-clear>Clear</button>
+      </form>
+
+      <div class="wotd-status-row">
+        <span data-wotd-status aria-live="polite"></span>
       </div>
-      <div data-content-library></div>
-    </div>
+
+      <noscript>
+        <div class="empty-state"><p>This archive needs JavaScript to build the monthly lists and filters.</p></div>
+      </noscript>
+
+      <div data-wotd-archive></div>
+    </section>
   </main>
 
   <footer class="site-footer">

@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>hierarchy | Extended TOEFL Explanation</title>
+  <style>
+    :root {
+      --bg: #08090d;
+      --bg-soft: #10131b;
+      --card: rgba(255, 255, 255, 0.065);
+      --card-strong: rgba(255, 255, 255, 0.105);
+      --text: #f4f1ea;
+      --muted: #b9b2a7;
+      --faint: #8f887d;
+      --gold: #d8b35a;
+      --gold-soft: rgba(216, 179, 90, 0.16);
+      --blue: #8bb7ff;
+      --green: #9be2bd;
+      --red: #ff9d9d;
+      --border: rgba(255, 255, 255, 0.14);
+      --shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+      --radius-lg: 28px;
+      --radius-md: 18px;
+      --radius-sm: 12px;
+      --max: 980px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at top left, rgba(216, 179, 90, 0.18), transparent 32rem),
+        radial-gradient(circle at bottom right, rgba(139, 183, 255, 0.13), transparent 30rem),
+        var(--bg);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      line-height: 1.65;
+    }
+
+    a {
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      width: min(100%, var(--max));
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* =========================
+     INTRO IMAGE TEMPLATE
+  ========================= */
+
+    .intro-page {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 20px;
+    }
+
+    .intro-shot {
+      width: min(100%, 860px);
+      aspect-ratio: 4 / 5;
+      min-height: 680px;
+      border: 1px solid var(--border);
+      border-radius: 42px;
+      overflow: hidden;
+      position: relative;
+      background:
+        linear-gradient(135deg, rgba(216, 179, 90, 0.18), transparent 35%),
+        linear-gradient(315deg, rgba(139, 183, 255, 0.18), transparent 35%),
+        #0b0d13;
+      box-shadow: var(--shadow);
+      padding: clamp(26px, 6vw, 68px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .intro-shot::before {
+      content: "";
+      position: absolute;
+      inset: 22px;
+      border: 1px solid rgba(216, 179, 90, 0.24);
+      border-radius: 32px;
+      pointer-events: none;
+    }
+
+    .intro-kicker,
+    .ext-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      width: fit-content;
+      padding: 8px 13px;
+      border: 1px solid rgba(216, 179, 90, 0.28);
+      border-radius: 999px;
+      background: var(--gold-soft);
+      color: var(--gold);
+      font-size: clamp(0.78rem, 2.2vw, 0.95rem);
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .intro-center {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .intro-word {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(4.4rem, 4.5vw, 9.5rem);
+      line-height: 0.92;
+      letter-spacing: -0.04em;
+      color: #fff8ea;
+      text-shadow: 0 12px 45px rgba(0, 0, 0, 0.55);
+    }
+
+    .intro-ipa {
+      margin: 18px 0 0;
+      color: var(--gold);
+      font-size: clamp(1.05rem, 4vw, 1.5rem);
+      font-weight: 700;
+    }
+
+    .intro-meanings {
+      margin: 28px auto 0;
+      display: grid;
+      gap: 12px;
+      max-width: 640px;
+    }
+
+    .intro-meaning {
+      padding: 15px 18px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.075);
+      backdrop-filter: blur(12px);
+      font-size: clamp(1rem, 3.2vw, 1.25rem);
+      font-weight: 650;
+    }
+
+    .intro-example {
+      margin: 26px auto 0;
+      max-width: 650px;
+      color: var(--muted);
+      font-size: clamp(0.95rem, 3vw, 1.15rem);
+    }
+
+    .intro-footer,
+    .ext-footer {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 16px;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .intro-footer strong,
+    .ext-footer strong {
+      color: var(--text);
+    }
+
+    /* =========================
+     EXTENDED PAGE TEMPLATE
+  ========================= */
+
+    .extended-page {
+      padding-bottom: 50px;
+    }
+
+    .hero {
+      margin: 18px auto 22px;
+      padding: clamp(24px, 5vw, 46px);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      background:
+        linear-gradient(135deg, rgba(216, 179, 90, 0.14), transparent 42%),
+        var(--card);
+      box-shadow: var(--shadow);
+    }
+
+    .hero h1 {
+      margin: 18px 0 8px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.4rem, 10vw, 6.2rem);
+      line-height: 0.95;
+      letter-spacing: -0.055em;
+
+      white-space: nowrap;
+      overflow-wrap: normal;
+      word-break: normal;
+      hyphens: none;
+      max-width: 100%;
+    }
+
+    .hero-subtitle {
+      margin: 0;
+      color: var(--muted);
+      font-size: clamp(1rem, 3vw, 1.2rem);
+    }
+
+    .brand-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .brand-links a {
+      display: inline-flex;
+      padding: 9px 13px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.055);
+      color: var(--text);
+      font-size: 0.94rem;
+    }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .meta-card,
+    .toc,
+    .section,
+    .sense-card,
+    .info-card,
+    .family-card,
+    .collocation-card,
+    .exercise-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--card);
+    }
+
+    .meta-card {
+      padding: 15px;
+    }
+
+    .meta-label {
+      display: block;
+      color: var(--faint);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 800;
+    }
+
+    .meta-value {
+      display: block;
+      margin-top: 5px;
+      font-weight: 800;
+    }
+
+    .toc {
+      padding: 18px;
+      margin: 20px 0;
+    }
+
+    .toc-title {
+      margin: 0 0 10px;
+      color: var(--gold);
+      font-weight: 900;
+    }
+
+    .toc-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .toc-links a {
+      padding: 8px 11px;
+      border-radius: 999px;
+      background: var(--gold-soft);
+      color: var(--gold);
+      font-size: 0.93rem;
+    }
+
+    .section {
+      margin: 20px 0;
+      padding: clamp(18px, 4vw, 30px);
+    }
+
+    .section h2 {
+      margin: 0 0 18px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.8rem, 6vw, 2.7rem);
+      line-height: 1.1;
+    }
+
+    .sense-card {
+      padding: clamp(16px, 4vw, 26px);
+      margin: 16px 0;
+    }
+
+    .sense-head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .sense-num,
+    .pos-badge,
+    .ipa-badge {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      font-weight: 850;
+    }
+
+    .sense-num {
+      padding: 7px 12px;
+      background: var(--gold);
+      color: #14120b;
+    }
+
+    .pos-badge {
+      padding: 7px 11px;
+      background: rgba(139, 183, 255, 0.16);
+      color: var(--blue);
+    }
+
+    .ipa-badge {
+      padding: 7px 11px;
+      background: rgba(255, 255, 255, 0.07);
+      color: var(--muted);
+    }
+
+    .definition {
+      font-size: 1.12rem;
+      font-weight: 750;
+      color: #fff7e8;
+    }
+
+    .simple-label {
+      margin: 20px 0 8px;
+      color: var(--gold);
+      font-weight: 900;
+    }
+
+    .example-list,
+    .clean-list,
+    .wrong-list {
+      margin: 8px 0 0;
+      padding-left: 1.25rem;
+    }
+
+    .example-list li,
+    .clean-list li,
+    .wrong-list li {
+      margin: 8px 0;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .info-card {
+      padding: 14px;
+    }
+
+    .info-card h4,
+    .family-card h3,
+    .collocation-card h3,
+    .exercise-card h3 {
+      margin: 0 0 8px;
+      color: var(--gold);
+    }
+
+    .warning {
+      border-color: rgba(255, 157, 157, 0.35);
+      background: rgba(255, 157, 157, 0.07);
+    }
+
+    .good {
+      border-color: rgba(155, 226, 189, 0.3);
+      background: rgba(155, 226, 189, 0.06);
+    }
+
+    .family-grid,
+    .collocation-grid,
+    .exercise-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .family-card,
+    .collocation-card,
+    .exercise-card {
+      padding: 16px;
+    }
+
+    .word-pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+    }
+
+    .word-pill {
+      display: inline-flex;
+      padding: 8px 11px;
+      border-radius: 999px;
+      background: var(--card-strong);
+      border: 1px solid var(--border);
+      font-weight: 800;
+    }
+
+    details.answer-key {
+      margin-top: 16px;
+      border: 1px solid rgba(216, 179, 90, 0.3);
+      border-radius: var(--radius-md);
+      background: var(--gold-soft);
+      padding: 14px 16px;
+    }
+
+    details.answer-key summary {
+      cursor: pointer;
+      color: var(--gold);
+      font-weight: 950;
+    }
+
+    .ext-footer {
+      margin-top: 22px;
+      padding: 22px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      background: var(--card);
+    }
+
+    /* =========================
+     RESPONSIVE RULES
+  ========================= */
+
+    @media (max-width: 720px) {
+      .page {
+        padding: 12px;
+      }
+
+      .intro-page {
+        padding: 10px;
+      }
+
+      .intro-shot {
+        min-height: 620px;
+        border-radius: 30px;
+        padding: 26px 18px;
+      }
+
+      .intro-shot::before {
+        inset: 12px;
+        border-radius: 24px;
+      }
+
+      .intro-word {
+        letter-spacing: -0.07em;
+      }
+
+      .intro-footer,
+      .ext-footer {
+        display: grid;
+        justify-content: stretch;
+      }
+
+      .meta-grid,
+      .info-grid,
+      .family-grid,
+      .collocation-grid,
+      .exercise-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero,
+      .section {
+        border-radius: 22px;
+      }
+
+      .sense-head {
+        align-items: flex-start;
+      }
+
+      .brand-links a,
+      .toc-links a {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .hero h1 {
+        font-size: clamp(1.55rem, 8.8vw, 2.65rem);
+        line-height: 1.02;
+        letter-spacing: -0.035em;
+        white-space: nowrap;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .intro-shot {
+        aspect-ratio: auto;
+        min-height: 600px;
+      }
+
+      .intro-meaning {
+        padding: 12px 14px;
+      }
+    }
+  </style>
+</head>
+
+<body class="extended-page">
+  <main class="page">
+
+    <header class="hero">
+      <div class="ext-kicker">📚✨ TOEFL Word of the Day ✨📚</div>
+      <h1>hierarchy</h1>
+      <p class="hero-subtitle">A complete TOEFL learner guide compiled by <strong>Amir Kooshky</strong>.</p>
+
+      <div class="brand-links">
+        <a href="https://t.me/KooshkyTOEFL" target="_blank">Telegram Channel</a>
+        <a href="https://www.instagram.com/kooshkytoefl" target="_blank">Instagram</a>
+        <a href="https://t.me/KooshkyTOEFL_pv" target="_blank">Personal Telegram</a>
+      </div>
+
+      <div class="meta-grid">
+        <div class="meta-card">
+          <span class="meta-label">Date</span>
+          <span class="meta-value">July 6th 2026</span>
+        </div>
+        <div class="meta-card">
+          <span class="meta-label">Word</span>
+          <span class="meta-value">hierarchy</span>
+        </div>
+        <div class="meta-card">
+          <span class="meta-label">Level</span>
+          <span class="meta-value">B1–B2 TOEFL</span>
+        </div>
+      </div>
+    </header>
+
+    <nav class="toc">
+      <p class="toc-title">Study sections</p>
+      <div class="toc-links">
+        <a href="#meanings">Meanings</a>
+        <a href="#family">Word Family</a>
+        <a href="#collocations">Collocations</a>
+        <a href="#synonyms">Synonyms & Antonyms</a>
+        <a href="#etymology">Etymology</a>
+        <a href="#exercises">Exercises</a>
+      </div>
+    </nav>
+
+    <section class="section" id="meanings">
+      <h2>Meanings & Usage</h2>
+
+      <article class="sense-card">
+        <div class="sense-head">
+          <span class="sense-num">Meaning 1</span>
+          <span class="pos-badge">noun · countable</span>
+          <span class="ipa-badge">/ˈhaɪəˌrɑːrki/</span>
+        </div>
+
+        <p class="definition">A system in which people or groups are arranged in levels of power, status, or importance.
+        </p>
+
+        <p class="simple-label">Natural examples</p>
+        <ol class="example-list">
+          <li>The company has a strict hierarchy, so most decisions must be approved by senior managers.</li>
+          <li>In many universities, professors, department chairs, and deans belong to different levels of the academic
+            hierarchy.</li>
+          <li>The new policy tried to reduce the hierarchy between managers and ordinary employees.</li>
+          <li>Social hierarchies can affect who has access to education, wealth, and political influence.</li>
+          <li>Biologists observed a dominance hierarchy among the animals in the group.</li>
+        </ol>
+
+        <div class="info-grid">
+          <div class="info-card good">
+            <h4>Nuance & implication</h4>
+            <p>This meaning often suggests authority, rank, and unequal levels of power. A hierarchy can be useful
+              because it makes responsibility clear, but it can also sound negative if it prevents communication or
+              creates unfairness.</p>
+          </div>
+
+          <div class="info-card">
+            <h4>Grammar notes</h4>
+            <p><strong>Hierarchy</strong> is usually countable: <em>a hierarchy</em>, <em>the hierarchy</em>,
+              <em>several hierarchies</em>. Common patterns include <em>a hierarchy of managers</em>, <em>within the
+                hierarchy</em>, <em>high in the hierarchy</em>, and <em>at the top/bottom of the hierarchy</em>. It is a
+              noun, not a normal verb, so use verbs like <em>create</em>, <em>establish</em>, <em>maintain</em>,
+              <em>reduce</em>, or <em>challenge</em>.</p>
+          </div>
+
+          <div class="info-card warning">
+            <h4>Common wrong usage</h4>
+            <ul class="wrong-list">
+              <li>❌ The manager hierarchied the workers. → ✅ The manager created a hierarchy among the workers.</li>
+              <li>❌ She is in a high hierarchy. → ✅ She is high in the hierarchy.</li>
+            </ul>
+          </div>
+
+          <div class="info-card">
+            <h4>TOEFL tip</h4>
+            <p>In reading passages, <strong>hierarchy</strong> often appears in discussions of society, institutions,
+              workplaces, education, government, or animal behavior. Ask yourself: Who has more power? Who has less?</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="sense-card">
+        <div class="sense-head">
+          <span class="sense-num">Meaning 2</span>
+          <span class="pos-badge">noun · countable</span>
+          <span class="ipa-badge">/ˈhaɪəˌrɑːrki/</span>
+        </div>
+
+        <p class="definition">An arrangement of things, ideas, categories, or needs from higher, more important, or more
+          general levels to lower or more specific levels.</p>
+
+        <p class="simple-label">Natural examples</p>
+        <ol class="example-list">
+          <li>The biology lecture explained the hierarchy from cells to tissues to organs and organ systems.</li>
+          <li>Maslow's hierarchy of needs is often discussed in psychology courses.</li>
+          <li>A strong academic essay needs a clear hierarchy of ideas, with main points supported by details.</li>
+          <li>The website uses color, size, and spacing to create a clear visual hierarchy.</li>
+          <li>Scientists organize living things in a hierarchy of categories, from broad groups to specific species.
+          </li>
+        </ol>
+
+        <div class="info-grid">
+          <div class="info-card good">
+            <h4>Nuance & implication</h4>
+            <p>This meaning is about structure and order, not necessarily power over people. It is common in academic
+              contexts when information is classified, organized, or presented from general to specific or from most
+              important to least important.</p>
+          </div>
+
+          <div class="info-card">
+            <h4>Grammar notes</h4>
+            <p>Use <strong>a hierarchy of + plural noun</strong>: <em>a hierarchy of ideas</em>, <em>a hierarchy of
+                needs</em>, <em>a hierarchy of categories</em>. You can say something is <em>arranged in a
+                hierarchy</em> or <em>organized into a hierarchy</em>. The adjective is <strong>hierarchical</strong>,
+              as in <em>a hierarchical system</em>. The adverb is <strong>hierarchically</strong>, as in <em>The data is
+                organized hierarchically</em>.</p>
+          </div>
+
+          <div class="info-card warning">
+            <h4>Common wrong usage</h4>
+            <ul class="wrong-list">
+              <li>❌ The ideas are in hierarchy. → ✅ The ideas are arranged in a hierarchy.</li>
+              <li>❌ The essay has a hierarchy very logic. → ✅ The essay has a very logical hierarchy of ideas.</li>
+            </ul>
+          </div>
+
+          <div class="info-card">
+            <h4>TOEFL tip</h4>
+            <p>When <strong>hierarchy</strong> appears in science or academic writing, look for levels: general to
+              specific, basic to advanced, large to small, or most important to least important.</p>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <section class="section" id="family">
+      <h2>Word Family</h2>
+
+      <div class="family-grid">
+        <article class="family-card">
+          <h3>hierarchy</h3>
+          <p><strong>Part of speech:</strong> noun</p>
+          <p><strong>Definition:</strong> a system or structure with higher and lower levels of rank, power, importance,
+            or generality</p>
+          <ol class="example-list">
+            <li>The organization has a clear hierarchy of roles.</li>
+            <li>The chart shows a hierarchy of categories.</li>
+          </ol>
+        </article>
+
+        <article class="family-card">
+          <h3>hierarchical</h3>
+          <p><strong>Part of speech:</strong> adjective</p>
+          <p><strong>Definition:</strong> arranged in levels, with higher and lower positions</p>
+          <ol class="example-list">
+            <li>The company uses a hierarchical management structure.</li>
+            <li>The researcher presented the data in a hierarchical model.</li>
+          </ol>
+        </article>
+
+        <article class="family-card">
+          <h3>hierarchically</h3>
+          <p><strong>Part of speech:</strong> adverb</p>
+          <p><strong>Definition:</strong> in a way that is arranged by levels or rank</p>
+          <ol class="example-list">
+            <li>The files are organized hierarchically, from general folders to specific documents.</li>
+            <li>The textbook presents the concepts hierarchically, beginning with the broadest categories.</li>
+          </ol>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="collocations">
+      <h2>Common Collocations</h2>
+
+      <div class="collocation-grid">
+        <article class="collocation-card">
+          <h3>social hierarchy</h3>
+          <p><strong>Meaning:</strong> levels of status or power in a society</p>
+          <p><strong>Example:</strong> The novel shows how the social hierarchy limited the choices of poor families.
+          </p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>organizational hierarchy</h3>
+          <p><strong>Meaning:</strong> the ranking of roles inside an organization</p>
+          <p><strong>Example:</strong> The organizational hierarchy became clearer after the company published a new
+            chart.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>corporate hierarchy</h3>
+          <p><strong>Meaning:</strong> levels of authority in a company</p>
+          <p><strong>Example:</strong> Employees lower in the corporate hierarchy often have less influence over major
+            decisions.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>strict hierarchy</h3>
+          <p><strong>Meaning:</strong> a system with very clear and strong levels of authority</p>
+          <p><strong>Example:</strong> The military is known for its strict hierarchy and formal rules.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>rigid hierarchy</h3>
+          <p><strong>Meaning:</strong> a hierarchy that is difficult to change</p>
+          <p><strong>Example:</strong> A rigid hierarchy can stop new ideas from reaching decision-makers.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>clear hierarchy</h3>
+          <p><strong>Meaning:</strong> a system whose levels are easy to understand</p>
+          <p><strong>Example:</strong> The project needed a clear hierarchy of responsibilities.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>hierarchy of needs</h3>
+          <p><strong>Meaning:</strong> an ordered list of human needs, from basic needs to higher goals</p>
+          <p><strong>Example:</strong> Maslow's hierarchy of needs begins with basic physical needs like food and sleep.
+          </p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>hierarchy of ideas</h3>
+          <p><strong>Meaning:</strong> main ideas and supporting ideas arranged by importance</p>
+          <p><strong>Example:</strong> Before writing the essay, she created a hierarchy of ideas.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>visual hierarchy</h3>
+          <p><strong>Meaning:</strong> the way design guides attention from more important to less important information
+          </p>
+          <p><strong>Example:</strong> Large headings create a strong visual hierarchy on the page.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>dominance hierarchy</h3>
+          <p><strong>Meaning:</strong> a ranking of animals in a group based on power or control</p>
+          <p><strong>Example:</strong> The researchers studied the dominance hierarchy among the wolves.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>at the top of the hierarchy</h3>
+          <p><strong>Meaning:</strong> in the highest position</p>
+          <p><strong>Example:</strong> Senior administrators are at the top of the university hierarchy.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>move up the hierarchy</h3>
+          <p><strong>Meaning:</strong> gain a higher position in a ranked system</p>
+          <p><strong>Example:</strong> After several years, she moved up the hierarchy and became department director.
+          </p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>challenge the hierarchy</h3>
+          <p><strong>Meaning:</strong> question or oppose the existing order of power or status</p>
+          <p><strong>Example:</strong> The reform movement challenged the hierarchy that had controlled the institution
+            for decades.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>establish a hierarchy</h3>
+          <p><strong>Meaning:</strong> create a system of levels or ranks</p>
+          <p><strong>Example:</strong> The researchers established a hierarchy of categories to classify the data.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="synonyms">
+      <h2>Direct Synonyms & Antonyms</h2>
+
+      <div class="info-grid">
+        <div class="info-card good">
+          <h4>Direct synonyms</h4>
+          <div class="word-pill-row">
+            <span class="word-pill">ranking system</span>
+            <span class="word-pill">chain of command</span>
+            <span class="word-pill">power structure</span>
+            <span class="word-pill">ordered structure</span>
+            <span class="word-pill">classification system</span>
+          </div>
+          <p><strong>Ranking system</strong> is the closest general synonym. <strong>Chain of command</strong> is used
+            for authority in organizations or the military. <strong>Power structure</strong> focuses on who controls
+            decisions. <strong>Ordered structure</strong> and <strong>classification system</strong> are closer to the
+            second meaning, where ideas or categories are organized into levels.</p>
+        </div>
+
+        <div class="info-card warning">
+          <h4>Direct antonyms</h4>
+          <div class="word-pill-row">
+            <span class="word-pill">equality</span>
+            <span class="word-pill">flat structure</span>
+            <span class="word-pill">egalitarian system</span>
+            <span class="word-pill">random order</span>
+            <span class="word-pill">disorder</span>
+          </div>
+          <p><strong>Equality</strong>, <strong>flat structure</strong>, and <strong>egalitarian system</strong>
+            contrast with hierarchy as a system of power or status. <strong>Random order</strong> and
+            <strong>disorder</strong> contrast with hierarchy as an organized structure of ideas or categories.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="etymology">
+      <h2>Etymology</h2>
+      <div class="info-card">
+        <p><strong>Hierarchy</strong> comes from Greek roots connected to sacred rule or priestly rank. It entered
+          English through Latin and French. Over time, the meaning became broader: not only religious ranks, but any
+          system arranged in higher and lower levels. This history can help you remember the modern meaning: a
+          <strong>hierarchy</strong> is a structured order of levels.</p>
+      </div>
+    </section>
+
+    <section class="section" id="exercises">
+      <h2>Practice Exercises</h2>
+
+      <div class="exercise-grid">
+        <article class="exercise-card">
+          <h3>1. Word family choice</h3>
+          <p>Choose the best member of the word family for each blank.</p>
+          <ol class="clean-list">
+            <li>The company has a complicated __________, so simple decisions often require several approvals.</li>
+            <li>The information is arranged __________, from broad categories to specific details.</li>
+            <li>A __________ organization usually has clear levels of authority.</li>
+          </ol>
+        </article>
+
+        <article class="exercise-card">
+          <h3>2. Correct or incorrect?</h3>
+          <p>Decide whether each sentence uses the word correctly. If it is wrong, correct it.</p>
+          <ol class="clean-list">
+            <li>The professor asked us to create a hierarchy of ideas before writing the essay.</li>
+            <li>The manager hierarchied the workers into three groups.</li>
+            <li>Senior officials are at the top of the hierarchy.</li>
+          </ol>
+        </article>
+
+        <article class="exercise-card">
+          <h3>3. Collocation practice</h3>
+          <p>Complete each sentence with a natural collocation.</p>
+          <ol class="clean-list">
+            <li>The designer made the title larger to improve the page's __________.</li>
+            <li>The movement tried to challenge the old __________ and give ordinary citizens more power.</li>
+            <li>The researchers studied the __________ among the animals in the group.</li>
+          </ol>
+        </article>
+      </div>
+
+      <details class="answer-key">
+        <summary>Answer Key</summary>
+        <ol class="clean-list">
+          <li><strong>hierarchy</strong> — A noun is needed after <em>a complicated</em>.</li>
+          <li><strong>hierarchically</strong> — An adverb is needed to describe how the information is arranged.</li>
+          <li><strong>hierarchical</strong> — An adjective is needed before <em>organization</em>.</li>
+          <li><strong>Correct.</strong> <em>A hierarchy of ideas</em> is a natural academic phrase.</li>
+          <li><strong>Incorrect.</strong> Better: <em>The manager divided the workers into three levels in the
+              hierarchy.</em> <strong>Hierarchy</strong> is not normally used as a verb.</li>
+          <li><strong>Correct.</strong> <em>At the top of the hierarchy</em> is the natural phrase.</li>
+          <li><strong>visual hierarchy</strong> — This refers to how design guides attention.</li>
+          <li><strong>social hierarchy</strong> — This refers to levels of power or status in society.</li>
+          <li><strong>dominance hierarchy</strong> — This is common in animal behavior studies.</li>
+        </ol>
+      </details>
+    </section>
+
+    <footer class="ext-footer">
+      <span>Compiled by <strong>Amir Kooshky</strong></span>
+      <span><a href="https://t.me/KooshkyTOEFL">📚 @KooshkyTOEFL</a></span>
+      <span><a href="https://www.instagram.com/kooshkytoefl">Instagram</a></span>
+      <span><a href="https://t.me/KooshkyTOEFL_pv">Personal Telegram</a></span>
+    </footer>
+
+  </main>
+</body>
+
+</html>

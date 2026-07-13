@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="A complete TOEFL learner guide to authentic, created by Amir Kooshky.">
+  <title>authentic | Kooshky TOEFL Word of the Day</title>
+  <style>
+/*
+  Kooshky TOEFL Word of the Day
+  Original dictionary-editorial visual system for Amir Kooshky.
+  Mobile-first, print-aware, local-file friendly, and fully usable without JavaScript.
+*/
+:root {
+  color-scheme: light;
+  --paper: #f4f0e7;
+  --surface: #fffdf8;
+  --surface-2: #eee8dc;
+  --ink: #1c1a18;
+  --muted: #69635d;
+  --rule: #d6cdbf;
+  --rule-strong: #a99f92;
+  --accent: #a51f2d;
+  --accent-deep: #72131e;
+  --accent-soft: #f4e3e5;
+  --good: #315f4c;
+  --good-soft: #e5efe9;
+  --warn: #8a5719;
+  --warn-soft: #f8ebd8;
+  --info: #315f76;
+  --info-soft: #e4eef3;
+  --shadow: 0 18px 46px rgba(47, 37, 27, .09);
+  --serif: Georgia, "Times New Roman", Times, serif;
+  --sans: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  --radius: .95rem;
+  --radius-sm: .55rem;
+  --content: 75rem;
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #171614;
+  --surface: #211f1c;
+  --surface-2: #2a2723;
+  --ink: #f3eee5;
+  --muted: #b9b0a5;
+  --rule: #443f39;
+  --rule-strong: #675e56;
+  --accent: #e35d68;
+  --accent-deep: #ff7f88;
+  --accent-soft: #3a2225;
+  --good: #95c8ad;
+  --good-soft: #20342a;
+  --warn: #dfb06e;
+  --warn-soft: #3a2c1d;
+  --info: #91c2d8;
+  --info-soft: #21343e;
+  --shadow: 0 18px 46px rgba(0, 0, 0, .34);
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #171614;
+    --surface: #211f1c;
+    --surface-2: #2a2723;
+    --ink: #f3eee5;
+    --muted: #b9b0a5;
+    --rule: #443f39;
+    --rule-strong: #675e56;
+    --accent: #e35d68;
+    --accent-deep: #ff7f88;
+    --accent-soft: #3a2225;
+    --good: #95c8ad;
+    --good-soft: #20342a;
+    --warn: #dfb06e;
+    --warn-soft: #3a2c1d;
+    --info: #91c2d8;
+    --info-soft: #21343e;
+    --shadow: 0 18px 46px rgba(0, 0, 0, .34);
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 1rem;
+  line-height: 1.72;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--accent-deep); text-underline-offset: .18em; text-decoration-thickness: .075em; }
+a:hover { color: var(--accent); }
+button { font: inherit; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+::selection { background: var(--accent); color: white; }
+
+.skip-link {
+  position: fixed;
+  left: .75rem;
+  top: .75rem;
+  z-index: 1000;
+  transform: translateY(-180%);
+  padding: .62rem .82rem;
+  border-radius: var(--radius-sm);
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--sans);
+  font-weight: 800;
+  text-decoration: none;
+}
+.skip-link:focus { transform: translateY(0); }
+
+.no-js-hidden { display: none !important; }
+html.js .no-js-hidden { display: inline-flex !important; }
+
+.masthead {
+  border-bottom: 1px solid var(--rule);
+  background: color-mix(in srgb, var(--surface) 94%, transparent);
+}
+.masthead-inner {
+  width: min(calc(100% - 1.4rem), var(--content));
+  min-height: 4.4rem;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .9rem;
+}
+.brand { color: inherit; text-decoration: none; line-height: 1.05; }
+.brand strong { display: block; font-size: 1.04rem; letter-spacing: -.02em; }
+.brand span {
+  display: block;
+  margin-top: .18rem;
+  color: var(--accent);
+  font-family: var(--sans);
+  font-size: .65rem;
+  font-weight: 850;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+.utility-actions { display: none; gap: .42rem; align-items: center; }
+html.js .utility-actions { display: flex; }
+.utility-button {
+  min-height: 2.35rem;
+  padding: .42rem .7rem;
+  border: 1px solid var(--rule-strong);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: .74rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+.utility-button:hover { border-color: var(--accent); color: var(--accent); }
+
+.page {
+  width: min(calc(100% - 1.4rem), var(--content));
+  margin-inline: auto;
+  padding: 1.2rem 0 4rem;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(2rem, 10vw, 5.5rem) 0 clamp(2.4rem, 8vw, 4.5rem);
+  border-bottom: 1px solid var(--rule);
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  right: -7rem;
+  top: -9rem;
+  width: 19rem;
+  aspect-ratio: 1;
+  border: 1px solid color-mix(in srgb, var(--accent) 22%, transparent);
+  border-radius: 50%;
+  box-shadow: 0 0 0 2.4rem color-mix(in srgb, var(--accent) 4%, transparent), 0 0 0 5rem color-mix(in srgb, var(--accent) 3%, transparent);
+  pointer-events: none;
+}
+.kicker, .section-kicker, .eyebrow {
+  margin: 0;
+  color: var(--accent);
+  font-family: var(--sans);
+  font-size: .7rem;
+  font-weight: 900;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+.hero h1 {
+  position: relative;
+  z-index: 1;
+  max-width: 13ch;
+  margin: .45rem 0 0;
+  font-size: clamp(3.2rem, 17vw, 8.7rem);
+  line-height: .88;
+  letter-spacing: -.065em;
+  overflow-wrap: anywhere;
+}
+.hero-pronunciation {
+  margin: 1.25rem 0 .15rem;
+  color: var(--accent-deep);
+  font-family: var(--sans);
+  font-size: clamp(1.05rem, 4vw, 1.45rem);
+  font-weight: 750;
+}
+.pronunciation-tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .65rem;
+  max-width: 42rem;
+  margin: .75rem 0 .25rem;
+}
+.pronunciation-audio {
+  width: min(100%, 22rem);
+  height: 2.5rem;
+}
+.listen-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.35rem;
+  padding: .45rem .72rem;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  color: var(--accent);
+  font-family: var(--sans);
+  font-size: .78rem;
+  font-weight: 820;
+  text-decoration: none;
+}
+.listen-link:hover { background: var(--accent); color: var(--accent-ink); }
+.listen-link.secondary { border-color: var(--rule-strong); color: var(--ink); }
+.listen-link.secondary:hover { border-color: var(--accent); background: var(--surface-strong); color: var(--accent); }
+.audio-note { margin: 0 0 .35rem; color: var(--muted); font-family: var(--sans); font-size: .72rem; }
+.hero-pos { margin: 0; color: var(--muted); font-family: var(--sans); font-weight: 720; }
+.hero-summary { max-width: 50rem; margin: 1rem 0 0; font-size: clamp(1.08rem, 3.2vw, 1.34rem); line-height: 1.55; }
+.short-meaning-row { display: flex; flex-wrap: wrap; gap: .45rem; margin-top: 1.2rem; }
+.short-meaning {
+  padding: .36rem .62rem;
+  border: 1px solid var(--rule-strong);
+  border-radius: 999px;
+  background: var(--surface);
+  font-family: var(--sans);
+  font-size: .78rem;
+  font-weight: 760;
+}
+.hero-example {
+  max-width: 53rem;
+  margin: 1.6rem 0 0;
+  padding: 1rem 1.1rem 1rem 1.25rem;
+  border-left: 3px solid var(--accent);
+  background: color-mix(in srgb, var(--surface) 80%, transparent);
+  font-size: clamp(1.05rem, 3vw, 1.3rem);
+  font-style: italic;
+}
+.meta-strip {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: .65rem;
+  margin-top: 1.5rem;
+}
+.meta-item { padding: .75rem .85rem; border: 1px solid var(--rule); border-radius: var(--radius-sm); background: var(--surface); }
+.meta-label { display: block; color: var(--muted); font-family: var(--sans); font-size: .66rem; font-weight: 850; letter-spacing: .12em; text-transform: uppercase; }
+.meta-value { display: block; margin-top: .12rem; font-family: var(--sans); font-weight: 800; }
+
+.toc {
+  margin: 1rem 0 0;
+  padding: .95rem;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+.toc-title { margin: 0 0 .55rem; font-family: var(--sans); font-size: .78rem; font-weight: 900; text-transform: uppercase; letter-spacing: .12em; }
+.toc-links { display: flex; flex-wrap: wrap; gap: .45rem .8rem; }
+.toc a { font-family: var(--sans); font-size: .82rem; font-weight: 760; }
+
+.section { padding: clamp(2.5rem, 8vw, 5rem) 0 0; }
+.section-head { max-width: 48rem; margin-bottom: 1.25rem; }
+.section h2 {
+  margin: .22rem 0 .4rem;
+  font-size: clamp(2rem, 7vw, 3.35rem);
+  line-height: 1.02;
+  letter-spacing: -.035em;
+}
+.section-intro { margin: 0; color: var(--muted); font-size: 1.03rem; }
+
+.overview-grid, .card-grid, .compare-grid, .exercise-grid, .info-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: .85rem;
+}
+.card, .overview-card, .family-card, .collocation-card, .compare-card, .exercise-card {
+  min-width: 0;
+  padding: 1rem;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: 0 7px 20px rgba(40, 30, 20, .035);
+}
+.card h3, .card h4, .overview-card h3, .family-card h3, .collocation-card h3, .compare-card h3, .exercise-card h3 { margin: 0 0 .45rem; line-height: 1.25; }
+.card p:last-child, .overview-card p:last-child, .family-card p:last-child, .collocation-card p:last-child, .compare-card p:last-child, .exercise-card p:last-child { margin-bottom: 0; }
+.label {
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: .69rem;
+  font-weight: 850;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.value { font-weight: 700; }
+
+.sense-card {
+  overflow: hidden;
+  margin-top: 1.1rem;
+  border: 1px solid var(--rule);
+  border-radius: calc(var(--radius) + .15rem);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+.sense-head {
+  padding: 1rem;
+  border-top: 4px solid var(--accent);
+  border-bottom: 1px solid var(--rule);
+  background: color-mix(in srgb, var(--surface-2) 42%, var(--surface));
+}
+.sense-number { color: var(--accent); font-family: var(--sans); font-size: .7rem; font-weight: 900; letter-spacing: .13em; text-transform: uppercase; }
+.sense-head h3 { margin: .2rem 0 .55rem; font-size: clamp(1.55rem, 5vw, 2.2rem); line-height: 1.1; }
+.badge-row { display: flex; flex-wrap: wrap; gap: .38rem; }
+.badge { padding: .27rem .5rem; border: 1px solid var(--rule-strong); border-radius: 999px; font-family: var(--sans); font-size: .72rem; font-weight: 780; }
+.sense-body { padding: 1rem; }
+.definition { margin: 0; font-size: clamp(1.08rem, 3.5vw, 1.28rem); font-weight: 700; }
+.plain-equivalent { margin: .65rem 0 0; color: var(--muted); }
+.pattern-banner {
+  margin: 1rem 0;
+  padding: .8rem .9rem;
+  border-left: 3px solid var(--accent);
+  background: var(--accent-soft);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+.pattern-banner strong { font-family: var(--sans); }
+.context-row { display: flex; flex-wrap: wrap; gap: .38rem; margin-top: .55rem; }
+.context-pill { padding: .25rem .48rem; border-radius: 999px; background: var(--surface-2); font-family: var(--sans); font-size: .73rem; font-weight: 740; }
+.subsection-title { margin: 1.35rem 0 .55rem; font-family: var(--sans); font-size: .82rem; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
+.example-list, .clean-list { margin: .5rem 0 0; padding-left: 1.35rem; }
+.example-list li, .clean-list li { padding-left: .25rem; margin: .42rem 0; }
+.info-card { padding: .9rem; border: 1px solid var(--rule); border-radius: var(--radius-sm); background: var(--surface); }
+.info-card h4 { margin: 0 0 .35rem; font-family: var(--sans); font-size: .9rem; }
+.info-card p { margin: .3rem 0 0; }
+.info-card.good { border-color: color-mix(in srgb, var(--good) 54%, var(--rule)); background: var(--good-soft); }
+.info-card.warning { border-color: color-mix(in srgb, var(--warn) 54%, var(--rule)); background: var(--warn-soft); }
+.info-card.tip { border-color: color-mix(in srgb, var(--info) 54%, var(--rule)); background: var(--info-soft); }
+.grammar-list { display: grid; gap: .55rem; margin: 0; }
+.grammar-item { padding-bottom: .55rem; border-bottom: 1px solid var(--rule); }
+.grammar-item:last-child { padding-bottom: 0; border-bottom: 0; }
+.grammar-item dt { font-family: var(--sans); font-size: .74rem; font-weight: 900; letter-spacing: .07em; text-transform: uppercase; }
+.grammar-item dd { margin: .12rem 0 0; }
+.pattern-list, .error-list { display: grid; gap: .7rem; }
+.pattern-card, .error-card { padding: .82rem; border: 1px solid var(--rule); border-radius: var(--radius-sm); background: color-mix(in srgb, var(--surface-2) 25%, var(--surface)); }
+.pattern-code { display: block; font-family: var(--mono); font-size: .84rem; font-weight: 800; overflow-wrap: anywhere; }
+.pattern-use { margin: .3rem 0; color: var(--muted); }
+.error-wrong, .error-correct { margin: .25rem 0; }
+.error-wrong { color: var(--warn); }
+.error-correct { color: var(--good); }
+.error-explanation { margin: .35rem 0 0; font-size: .93rem; }
+
+.family-card .ipa, .compare-card .meta { color: var(--muted); font-family: var(--sans); font-size: .8rem; }
+.collocation-card h3 { color: var(--accent-deep); }
+.mini-facts { display: grid; gap: .42rem; margin-top: .6rem; }
+.mini-fact { padding-top: .42rem; border-top: 1px solid var(--rule); }
+.mini-fact strong { font-family: var(--sans); font-size: .78rem; }
+.word-pill { display: inline-block; padding: .24rem .5rem; border: 1px solid var(--accent); border-radius: 999px; color: var(--accent-deep); font-family: var(--sans); font-size: .75rem; font-weight: 850; }
+
+.etymology-flow { display: grid; gap: .7rem; }
+.etymology-step { position: relative; padding: .9rem 1rem .9rem 1.15rem; border-left: 3px solid var(--accent); background: var(--surface); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; }
+.etymology-step h3 { margin: 0 0 .25rem; font-family: var(--sans); font-size: .83rem; text-transform: uppercase; letter-spacing: .08em; }
+
+.exercise-card { counter-increment: exercise; }
+.exercise-card h3 { font-family: var(--sans); }
+.exercise-instruction { color: var(--muted); }
+details.answer-key { margin-top: 1rem; border: 1px solid var(--rule-strong); border-radius: var(--radius); background: var(--surface); }
+details.answer-key summary { padding: 1rem; font-family: var(--sans); font-weight: 900; cursor: pointer; }
+.answer-content { padding: 0 1rem 1rem; }
+.answer-group + .answer-group { margin-top: 1.3rem; padding-top: 1rem; border-top: 1px solid var(--rule); }
+.answer-group h3 { margin: 0 0 .5rem; font-family: var(--sans); }
+.answer-item { margin: .65rem 0; }
+.answer-item strong { font-family: var(--sans); }
+
+.footer {
+  margin-top: 4.5rem;
+  padding: 1.5rem 0 0;
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: .82rem;
+}
+.footer-row { display: flex; flex-direction: column; gap: .55rem; }
+.footer-links { display: flex; flex-wrap: wrap; gap: .4rem .8rem; }
+
+.back-to-top {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 100;
+  width: 2.8rem;
+  height: 2.8rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--rule-strong);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(.7rem);
+  pointer-events: none;
+  transition: opacity .2s ease, transform .2s ease;
+}
+.back-to-top.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+
+@media (min-width: 38rem) {
+  .meta-strip { grid-template-columns: repeat(3, 1fr); }
+  .overview-grid, .info-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .card-grid, .compare-grid, .exercise-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .sense-head, .sense-body { padding: 1.25rem; }
+  .footer-row { flex-direction: row; justify-content: space-between; align-items: center; }
+}
+
+@media (min-width: 62rem) {
+  .page, .masthead-inner { width: min(calc(100% - 3rem), var(--content)); }
+  .toc { position: sticky; top: .7rem; z-index: 20; }
+  .overview-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .card-grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .compare-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .exercise-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .sense-head, .sense-body { padding: 1.5rem; }
+  .sense-body > .info-grid { grid-template-columns: 1.05fr .95fr; }
+}
+
+@media print {
+  :root {
+    --paper: #fff;
+    --surface: #fff;
+    --surface-2: #f4f1eb;
+    --ink: #000;
+    --muted: #444;
+    --rule: #bbb;
+    --rule-strong: #888;
+    --accent: #8d1722;
+    --accent-deep: #6f1019;
+    --accent-soft: #f5e8e9;
+    --shadow: none;
+  }
+  @page { size: A4; margin: 15mm; }
+  body { font-size: 10.5pt; background: #fff; }
+  .masthead, .toc, .utility-actions, .back-to-top { display: none !important; }
+  .page { width: 100%; padding: 0; }
+  .hero { padding-top: 0; }
+  .hero h1 { font-size: 56pt; }
+  .section { padding-top: 2rem; }
+  .sense-card, .card, .overview-card, .family-card, .collocation-card, .compare-card, .exercise-card, details.answer-key { box-shadow: none; break-inside: avoid; }
+  details.answer-key > .answer-content { display: block !important; }
+  a { color: inherit; text-decoration: none; }
+}
+
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to the guide</a>
+
+  <header class="masthead">
+    <div class="masthead-inner">
+      <a class="brand" href="https://t.me/KooshkyTOEFL" target="_blank" rel="noopener">
+        <strong>Kooshky TOEFL</strong>
+        <span>Word of the Day</span>
+      </a>
+      <div class="utility-actions" aria-label="Page tools">
+        <button class="utility-button" type="button" data-theme-toggle>Dark mode</button>
+        <button class="utility-button" type="button" data-print>Print or save PDF</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="page" id="main-content">
+    <section class="hero" aria-labelledby="headword">
+      <p class="kicker">TOEFL Word of the Day</p>
+      <h1 id="headword">authentic</h1>
+      <p class="hero-pronunciation">/ɔˈθɛntɪk/</p>
+      <div class="pronunciation-tools" aria-label="Pronunciation audio">
+        <a class="listen-link secondary" href="https://youglish.com/pronounce/authentic/english/us" target="_blank" rel="noopener">Hear “authentic” in real examples</a>
+      </div>
+      <p class="audio-note">Audio and example links require an internet connection.</p>
+      <p class="hero-pos">adjective</p>
+      <div class="short-meaning-row" aria-label="Meanings at a glance">
+<span class="short-meaning">genuine rather than fake</span><span class="short-meaning">true to a culture or period</span><span class="short-meaning">honest and true to yourself</span>      </div>
+<p class="hero-summary">Authentic describes something genuine, a representation true to its source, or a person who honestly expresses their real character.</p><blockquote class="hero-example">“Experts examined the painting to determine whether it was authentic.”</blockquote>      <div class="meta-strip">
+        <div class="meta-item"><span class="meta-label">Date</span><span class="meta-value">July 21st, 2026</span></div>
+        <div class="meta-item"><span class="meta-label">Level</span><span class="meta-value">B1–mid-B2 TOEFL</span></div>
+        <div class="meta-item"><span class="meta-label">Created by</span><span class="meta-value">Amir Kooshky</span></div>
+      </div>
+    </section>
+
+    <nav class="toc" aria-label="Study sections">
+      <p class="toc-title">In this guide</p>
+      <div class="toc-links">
+        <a href="#meanings">Meanings</a>
+<a href="#family">Word family</a><a href="#collocations">Collocations</a><a href="#relations">Synonyms & antonyms</a><a href="#exercises">Exercises</a>      </div>
+    </nav>
+
+
+    <section class="section" id="meanings">
+      <div class="section-head">
+        <p class="section-kicker">Dictionary guide</p>
+        <h2>Meanings and usage</h2>
+        <p class="section-intro">The core definition and examples are always included. Additional notes appear only when they are accurate and useful.</p>
+      </div>
+
+      <article class="sense-card" id="meaning-1">
+        <header class="sense-head">
+          <span class="sense-number">Meaning 1</span>
+          <h3>Genuine rather than fake</h3>
+          <div class="badge-row">
+            <span class="badge">adjective</span>
+            <span class="badge">/ɔˈθɛntɪk/</span>
+<span class="badge">Common in everyday, academic, historical, legal, and commercial English.</span>          </div>
+        </header>
+        <div class="sense-body">
+          <p class="definition">real and genuine rather than fake, copied, or falsely presented</p>
+<p class="plain-equivalent"><strong>In simpler words:</strong> real, not fake</p><div class="pattern-banner"><strong>Typical pattern:</strong> authentic + object or document; be proven or confirmed authentic</div>
+
+          <p class="subsection-title">Natural examples</p>
+          <ol class="example-list">
+<li>Experts examined the painting to determine whether it was authentic.</li><li>The museum displayed an authentic letter written by the former president.</li><li>Researchers must confirm that historical documents are authentic before using them as evidence.</li><li>The signature appeared authentic, but further testing was required.</li><li>Archaeologists discovered several authentic objects from the ancient settlement.</li><li>The seller provided evidence that the manuscript was authentic.</li><li>It can be difficult for inexperienced buyers to distinguish authentic products from imitations.</li>          </ol>
+
+          <div class="info-grid">
+            <section class="info-card good">
+              <h4>Nuance and implication</h4>
+<p><strong>Central nuance:</strong> The word confirms that something truly comes from the person, place, period, or source it claims to come from.</p><p><strong>Usual implication:</strong> Its origin or identity may have been questioned, checked, or compared with copies and imitations.</p><p><strong>Compared with “original”:</strong> Original can mean the first version rather than a copy. Authentic means genuinely what it claims to be, even if it is not the first example ever produced.</p>            </section>
+
+            <section class="info-card">
+              <h4>Grammar notes</h4>
+              <dl class="grammar-list">
+<div class="grammar-item"><dt>How to use it</dt><dd>Use it before a noun, as in an authentic document, or after a form of be, as in The document is authentic.</dd></div><div class="grammar-item"><dt>What can follow it</dt><dd>It commonly comes before nouns such as document, signature, painting, artifact, product, and evidence.</dd></div><div class="grammar-item"><dt>Position in a sentence</dt><dd>It is natural both before a noun and after verbs such as be, seem, appear, prove, and remain.</dd></div>              </dl>
+            </section>
+          </div>
+
+          <p class="subsection-title">Useful patterns</p>
+          <div class="pattern-list">
+            <article class="pattern-card">
+              <code class="pattern-code">authentic + noun</code>
+<p class="pattern-use">Use this pattern to describe a real object, document, or product.</p>              <p><strong>Example:</strong> The collection contains several authentic Roman coins.</p>
+            </article>
+            <article class="pattern-card">
+              <code class="pattern-code">be confirmed or proven authentic</code>
+<p class="pattern-use">Use this pattern when experts establish that something is genuine.</p>              <p><strong>Example:</strong> The handwriting was later confirmed authentic.</p>
+            </article>
+            <article class="pattern-card">
+              <code class="pattern-code">distinguish authentic items from imitations</code>
+<p class="pattern-use">Use this pattern when comparing genuine objects with copies.</p>              <p><strong>Example:</strong> Specialists can distinguish authentic artifacts from modern imitations.</p>
+            </article>
+          </div>
+
+          <p class="subsection-title">Common wrong usage</p>
+          <div class="error-list">
+            <article class="error-card">
+              <p class="error-wrong"><strong>Wrong:</strong> The experts proved the painting as authentic.</p>
+              <p class="error-correct"><strong>Correct:</strong> The experts proved that the painting was authentic.</p>
+<p class="error-explanation">Say prove that something is authentic or prove something authentic.</p>            </article>
+            <article class="error-card">
+              <p class="error-wrong"><strong>Wrong:</strong> This is an authenticity document.</p>
+              <p class="error-correct"><strong>Correct:</strong> This is an authentic document.</p>
+<p class="error-explanation">Use the adjective authentic before a noun.</p>            </article>
+            <article class="error-card">
+              <p class="error-wrong"><strong>Wrong:</strong> The museum owns an authentic of the original letter.</p>
+              <p class="error-correct"><strong>Correct:</strong> The museum owns an authentic copy of the original letter.</p>
+<p class="error-explanation">Authentic is an adjective and needs a noun such as copy after it.</p>            </article>
+          </div>
+
+        </div>
+      </article>
+      <article class="sense-card" id="meaning-2">
+        <header class="sense-head">
+          <span class="sense-number">Meaning 2</span>
+          <h3>True to a culture or period</h3>
+          <div class="badge-row">
+            <span class="badge">adjective</span>
+            <span class="badge">/ɔˈθɛntɪk/</span>
+<span class="badge">Common in cultural, historical, educational, artistic, and travel contexts.</span>          </div>
+        </header>
+        <div class="sense-body">
+          <p class="definition">accurately representing the real traditions, style, conditions, or experiences of a particular place, culture, or period</p>
+<p class="plain-equivalent"><strong>In simpler words:</strong> true to the real style or experience</p><div class="pattern-banner"><strong>Typical pattern:</strong> authentic + cuisine, experience, account, representation, or material</div>
+
+          <p class="subsection-title">Natural examples</p>
+          <ol class="example-list">
+<li>The restaurant is known for serving authentic regional cuisine.</li><li>The filmmakers used period clothing and locations to create an authentic picture of nineteenth-century life.</li><li>Students gained a more authentic understanding of rural life by interviewing local residents.</li><li>The festival offers visitors an authentic experience of local music and dance.</li><li>The building was restored using authentic materials and traditional methods.</li><li>The novel provides an authentic account of life during the economic crisis.</li><li>Teachers often use authentic materials such as news reports and interviews in language classes.</li>          </ol>
+
+          <div class="info-grid">
+            <section class="info-card good">
+              <h4>Nuance and implication</h4>
+<p><strong>Central nuance:</strong> The representation closely matches real traditions, conditions, language, or experiences rather than presenting a simplified or artificial version.</p><p><strong>Usual implication:</strong> The speaker believes that important features of the original culture, period, or situation have been preserved.</p><p><strong>Compared with “traditional”:</strong> Traditional describes something connected with customs passed down over time. Authentic emphasizes that the thing accurately represents the real tradition or source.</p>            </section>
+
+            <section class="info-card">
+              <h4>Grammar notes</h4>
+              <dl class="grammar-list">
+<div class="grammar-item"><dt>How to use it</dt><dd>Use it before a noun such as cuisine, experience, account, or representation.</dd></div><div class="grammar-item"><dt>What can follow it</dt><dd>It often comes before words connected with culture, history, education, art, and personal experience.</dd></div><div class="grammar-item"><dt>Position in a sentence</dt><dd>It usually appears before a noun, but it can also follow be, as in The setting felt authentic.</dd></div>              </dl>
+            </section>
+          </div>
+
+          <p class="subsection-title">Useful patterns</p>
+          <div class="pattern-list">
+            <article class="pattern-card">
+              <code class="pattern-code">authentic + cultural product</code>
+<p class="pattern-use">Use this pattern for food, music, clothing, art, or customs that closely follow a real tradition.</p>              <p><strong>Example:</strong> The musicians performed authentic folk songs from the region.</p>
+            </article>
+            <article class="pattern-card">
+              <code class="pattern-code">an authentic experience of + noun</code>
+<p class="pattern-use">Use this pattern for an experience that feels close to real life in a place, culture, or period.</p>              <p><strong>Example:</strong> The program gives students an authentic experience of working in a research laboratory.</p>
+            </article>
+            <article class="pattern-card">
+              <code class="pattern-code">an authentic account or representation of + noun</code>
+<p class="pattern-use">Use this pattern for a description or image that accurately reflects reality.</p>              <p><strong>Example:</strong> The memoir offers an authentic account of migration and cultural change.</p>
+            </article>
+            <article class="pattern-card">
+              <code class="pattern-code">authentic materials</code>
+<p class="pattern-use">In language education, this means real texts, recordings, or videos created for ordinary communication rather than specifically for learners.</p>              <p><strong>Example:</strong> The instructor introduced authentic materials from newspapers and podcasts.</p>
+            </article>
+          </div>
+
+          <p class="subsection-title">Common wrong usage</p>
+          <div class="error-list">
+            <article class="error-card">
+              <p class="error-wrong"><strong>Wrong:</strong> The restaurant serves authentically Italian dishes.</p>
+              <p class="error-correct"><strong>Correct:</strong> The restaurant serves authentic Italian dishes.</p>
+<p class="error-explanation">Use authentic before a noun such as dishes. Authentically usually describes how something is prepared, presented, or performed.</p>            </article>
+            <article class="error-card">
+              <p class="error-wrong"><strong>Wrong:</strong> The documentary gives an authentic about village life.</p>
+              <p class="error-correct"><strong>Correct:</strong> The documentary gives an authentic account of village life.</p>
+<p class="error-explanation">Authentic is an adjective and needs a noun such as account after it.</p>            </article>
+            <article class="error-card">
+              <p class="error-wrong"><strong>Wrong:</strong> The museum provides visitors an authentic experience from medieval life.</p>
+              <p class="error-correct"><strong>Correct:</strong> The museum provides visitors with an authentic experience of medieval life.</p>
+<p class="error-explanation">Use provide someone with something and an experience of something.</p>            </article>
+          </div>
+
+        </div>
+      </article>
+      <article class="sense-card" id="meaning-3">
+        <header class="sense-head">
+          <span class="sense-number">Meaning 3</span>
+          <h3>Honest and true to yourself</h3>
+          <div class="badge-row">
+            <span class="badge">adjective</span>
+            <span class="badge">/ɔˈθɛntɪk/</span>
+<span class="badge">Common in discussions of identity, leadership, communication, art, and personal development.</span>          </div>
+        </header>
+        <div class="sense-body">
+          <p class="definition">honestly expressing your real personality, thoughts, or feelings instead of pretending to be someone different</p>
+<p class="plain-equivalent"><strong>In simpler words:</strong> honest and true to yourself</p><div class="pattern-banner"><strong>Typical pattern:</strong> be or feel authentic; authentic voice, self, or communication</div>
+
+          <p class="subsection-title">Natural examples</p>
+          <ol class="example-list">
+<li>Her speech felt authentic because she spoke openly about her own experiences.</li><li>Effective leaders communicate in an authentic and respectful way.</li><li>The author developed an authentic voice that reflected her personal background.</li><li>Students often respond positively to teachers who appear confident and authentic.</li><li>He struggled to remain authentic while facing pressure to satisfy other people&#39;s expectations.</li><li>The interview revealed a more authentic side of the public figure.</li><li>Her writing became more authentic when she stopped trying to copy other authors.</li>          </ol>
+
+          <div class="info-grid">
+            <section class="info-card good">
+              <h4>Nuance and implication</h4>
+<p><strong>Central nuance:</strong> The person is not creating a false image or hiding their genuine values, emotions, or personality.</p><p><strong>Usual implication:</strong> Others experience the person or their communication as sincere, believable, and personally meaningful.</p><p><strong>Compared with “sincere”:</strong> Sincere means honestly believing or feeling what you express. Authentic is broader and can describe a person&#39;s whole style, identity, or way of communicating as true to who they really are.</p>            </section>
+
+            <section class="info-card">
+              <h4>Grammar notes</h4>
+              <dl class="grammar-list">
+<div class="grammar-item"><dt>How to use it</dt><dd>Use it after be, feel, seem, or appear to describe a person or their behavior. You can also use it before nouns such as voice, self, leadership, and communication.</dd></div><div class="grammar-item"><dt>What can follow it</dt><dd>When it appears before a noun, it commonly describes a person&#39;s voice, identity, self, style, or way of communicating.</dd></div><div class="grammar-item"><dt>Position in a sentence</dt><dd>Both positions are common: an authentic voice and Her voice is authentic.</dd></div>              </dl>
+            </section>
+          </div>
+
+          <p class="subsection-title">Useful patterns</p>
+          <div class="pattern-list">
+            <article class="pattern-card">
+              <code class="pattern-code">be or feel authentic</code>
+<p class="pattern-use">Use this pattern when a person, performance, or message seems honest and natural.</p>              <p><strong>Example:</strong> His response felt authentic rather than carefully prepared.</p>
+            </article>
+            <article class="pattern-card">
+              <code class="pattern-code">remain authentic</code>
+<p class="pattern-use">Use this pattern for continuing to express your real values or personality despite pressure.</p>              <p><strong>Example:</strong> Artists may find it difficult to remain authentic after achieving commercial success.</p>
+            </article>
+            <article class="pattern-card">
+              <code class="pattern-code">authentic voice</code>
+<p class="pattern-use">Use this expression for a distinctive and honest way of speaking or writing.</p>              <p><strong>Example:</strong> The writer found an authentic voice by drawing on her own experiences.</p>
+            </article>
+            <article class="pattern-card">
+              <code class="pattern-code">authentic self</code>
+<p class="pattern-use">Use this expression for a person&#39;s real identity and values.</p>              <p><strong>Example:</strong> The program encourages participants to express their authentic selves.</p>
+            </article>
+          </div>
+
+          <p class="subsection-title">Common wrong usage</p>
+          <div class="error-list">
+            <article class="error-card">
+              <p class="error-wrong"><strong>Wrong:</strong> She spoke very authentic about her experiences.</p>
+              <p class="error-correct"><strong>Correct:</strong> She spoke very authentically about her experiences.</p>
+<p class="error-explanation">Use authentically to describe how she spoke.</p>            </article>
+            <article class="error-card">
+              <p class="error-wrong"><strong>Wrong:</strong> His speech had many authentic.</p>
+              <p class="error-correct"><strong>Correct:</strong> His speech had great authenticity.</p>
+<p class="error-explanation">Use the noun authenticity after had.</p>            </article>
+            <article class="error-card">
+              <p class="error-wrong"><strong>Wrong:</strong> She tried to be authentic with herself personality.</p>
+              <p class="error-correct"><strong>Correct:</strong> She tried to remain true to her own personality.</p>
+<p class="error-explanation">The original structure is not natural. You can say be authentic or remain true to your own personality.</p>            </article>
+          </div>
+
+        </div>
+      </article>
+    </section>
+
+    <section class="section" id="family">
+      <div class="section-head">
+        <p class="section-kicker">Morphology</p>
+        <h2>Word family</h2>
+        <p class="section-intro">Only common and educationally useful family members are included.</p>
+      </div>
+      <div class="card-grid three">
+        <article class="family-card">
+          <p class="eyebrow">uncountable noun</p>
+          <h3>authenticity</h3>
+<p class="ipa">/ˌɔθənˈtɪsəti/</p>          <p>the quality of being genuine, accurate, or true to a person&#39;s real character</p>
+          <div class="mini-facts">
+<p class="mini-fact"><strong>Relationship:</strong> Authenticity is the main noun form of authentic.</p><p class="mini-fact"><strong>Pattern:</strong> the authenticity of + noun; a sense of authenticity</p><p class="mini-fact"><strong>Usage note:</strong> It is normally used without a or an, although the expression a sense of authenticity is common.</p>          </div>
+          <ol class="example-list"><li>Experts questioned the authenticity of the document.</li><li>The film was praised for the authenticity of its historical setting.</li><li>Her openness gave the speech a sense of authenticity.</li></ol>
+        </article>
+        <article class="family-card">
+          <p class="eyebrow">adverb</p>
+          <h3>authentically</h3>
+<p class="ipa">/ɔˈθɛntɪkli/</p>          <p>in a way that is genuine, accurate, or true to a person&#39;s real character</p>
+          <div class="mini-facts">
+<p class="mini-fact"><strong>Relationship:</strong> Authentically is the adverb form of authentic.</p><p class="mini-fact"><strong>Pattern:</strong> authentically + verb; verb + authentically</p><p class="mini-fact"><strong>Usage note:</strong> Use it to describe how something is represented, prepared, performed, or expressed.</p>          </div>
+          <ol class="example-list"><li>The house was authentically restored using local materials.</li><li>The actors spoke authentically about the difficulties of the profession.</li><li>The dishes are prepared authentically according to regional traditions.</li></ol>
+        </article>
+        <article class="family-card">
+          <p class="eyebrow">transitive verb</p>
+          <h3>authenticate</h3>
+<p class="ipa">/ɔˈθɛntəˌkeɪt/</p>          <p>to prove or check that something is genuine</p>
+          <div class="mini-facts">
+<p class="mini-fact"><strong>Relationship:</strong> Authenticate means establish that something or someone is authentic.</p><p class="mini-fact"><strong>Pattern:</strong> authenticate + object</p><p class="mini-fact"><strong>Usage note:</strong> This verb normally needs a person, object, document, or identity after it.</p>          </div>
+          <ol class="example-list"><li>Several specialists were asked to authenticate the painting.</li><li>The system uses a password to authenticate each user.</li><li>Scientists authenticated the document by analyzing its paper and ink.</li></ol>
+        </article>
+        <article class="family-card">
+          <p class="eyebrow">uncountable noun</p>
+          <h3>authentication</h3>
+<p class="ipa">/ɔˌθɛntəˈkeɪʃən/</p>          <p>the process of proving or checking that something or someone is genuine</p>
+          <div class="mini-facts">
+<p class="mini-fact"><strong>Relationship:</strong> Authentication is the noun for the process of authenticating something.</p><p class="mini-fact"><strong>Pattern:</strong> authentication of + noun; user authentication</p><p class="mini-fact"><strong>Usage note:</strong> It is common in art, document analysis, computing, and security.</p>          </div>
+          <ol class="example-list"><li>The painting was sent to a laboratory for authentication.</li><li>Two-step authentication can improve online security.</li><li>Authentication of the signature required several weeks.</li></ol>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="collocations">
+      <div class="section-head">
+        <p class="section-kicker">Natural combinations</p>
+        <h2>Common collocations</h2>
+        <p class="section-intro">These are established combinations, not merely grammatically possible phrases.</p>
+      </div>
+      <div class="card-grid three">
+        <article class="collocation-card">
+<p class="eyebrow">Genuine rather than fake</p>          <h3>authentic document</h3>
+<p>a document that is genuine and comes from the claimed source</p>          <div class="mini-facts">
+<p class="mini-fact"><strong>Pattern:</strong> an authentic document</p>            <p class="mini-fact"><strong>Example:</strong> The court required an authentic document rather than an unofficial copy.</p>
+          </div>
+        </article>
+        <article class="collocation-card">
+<p class="eyebrow">Genuine rather than fake</p>          <h3>authentic artifact</h3>
+<p>a genuine historical object rather than a modern copy</p>          <div class="mini-facts">
+<p class="mini-fact"><strong>Pattern:</strong> an authentic artifact</p>            <p class="mini-fact"><strong>Example:</strong> The museum purchased an authentic artifact from the Roman period.</p>
+          </div>
+        </article>
+        <article class="collocation-card">
+<p class="eyebrow">Genuine rather than fake</p>          <h3>authentic signature</h3>
+<p>a signature actually written by the person whose name it shows</p>          <div class="mini-facts">
+<p class="mini-fact"><strong>Pattern:</strong> an authentic signature; confirm a signature as authentic</p>            <p class="mini-fact"><strong>Example:</strong> Experts concluded that the signature was authentic.</p>
+          </div>
+        </article>
+        <article class="collocation-card">
+<p class="eyebrow">True to a culture or period</p>          <h3>authentic cuisine</h3>
+<p>food prepared in a way that closely follows the traditions of a place or culture</p>          <div class="mini-facts">
+<p class="mini-fact"><strong>Pattern:</strong> authentic + regional or national cuisine</p>            <p class="mini-fact"><strong>Example:</strong> The restaurant serves authentic cuisine from northern Thailand.</p>
+          </div>
+        </article>
+        <article class="collocation-card">
+<p class="eyebrow">True to a culture or period</p>          <h3>authentic experience</h3>
+<p>an experience that closely reflects real life or genuine traditions</p>          <div class="mini-facts">
+<p class="mini-fact"><strong>Pattern:</strong> an authentic experience of + noun</p>            <p class="mini-fact"><strong>Example:</strong> Living with a local family gave her a more authentic experience of the culture.</p>
+          </div>
+        </article>
+        <article class="collocation-card">
+<p class="eyebrow">True to a culture or period</p>          <h3>authentic account</h3>
+<p>a description that accurately reflects real events or experiences</p>          <div class="mini-facts">
+<p class="mini-fact"><strong>Pattern:</strong> an authentic account of + event or experience</p>            <p class="mini-fact"><strong>Example:</strong> The diary provides an authentic account of daily life during the war.</p>
+          </div>
+        </article>
+        <article class="collocation-card">
+<p class="eyebrow">True to a culture or period</p>          <h3>authentic representation</h3>
+<p>a description or image that accurately reflects its subject</p>          <div class="mini-facts">
+<p class="mini-fact"><strong>Pattern:</strong> an authentic representation of + noun</p>            <p class="mini-fact"><strong>Example:</strong> The exhibition aims to offer an authentic representation of Indigenous traditions.</p>
+          </div>
+        </article>
+        <article class="collocation-card">
+<p class="eyebrow">True to a culture or period</p>          <h3>authentic materials</h3>
+<p>real texts or recordings originally created for ordinary use rather than especially for learners</p>          <div class="mini-facts">
+<p class="mini-fact"><strong>Pattern:</strong> use authentic materials</p>            <p class="mini-fact"><strong>Example:</strong> Language learners benefit from authentic materials such as interviews and news articles.</p>
+<p class="mini-fact"><strong>Usage note:</strong> This expression is especially common in language education.</p>          </div>
+        </article>
+        <article class="collocation-card">
+<p class="eyebrow">Honest and true to yourself</p>          <h3>authentic voice</h3>
+<p>an honest and distinctive way of expressing yourself</p>          <div class="mini-facts">
+<p class="mini-fact"><strong>Pattern:</strong> an authentic voice</p>            <p class="mini-fact"><strong>Example:</strong> The novelist gradually developed an authentic voice of her own.</p>
+          </div>
+        </article>
+        <article class="collocation-card">
+<p class="eyebrow">Honest and true to yourself</p>          <h3>authentic self</h3>
+<p>a person&#39;s real identity, values, and personality</p>          <div class="mini-facts">
+<p class="mini-fact"><strong>Pattern:</strong> someone&#39;s authentic self; authentic selves</p>            <p class="mini-fact"><strong>Example:</strong> Social pressure can make it difficult for people to express their authentic selves.</p>
+          </div>
+        </article>
+        <article class="collocation-card">
+<p class="eyebrow">Honest and true to yourself</p>          <h3>authentic leadership</h3>
+<p>leadership based on honest communication and behavior that reflects the leader&#39;s real values</p>          <div class="mini-facts">
+<p class="mini-fact"><strong>Pattern:</strong> authentic leadership</p>            <p class="mini-fact"><strong>Example:</strong> Authentic leadership depends on honesty, self-awareness, and consistent values.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="relations">
+      <div class="section-head">
+        <p class="section-kicker">Meaning relations</p>
+        <h2>Synonyms and antonyms</h2>
+        <p class="section-intro">Only clear and useful relationships are included.</p>
+      </div>
+      <h3>Close synonyms</h3>
+      <div class="compare-grid">
+        <article class="compare-card">
+          <span class="word-pill">genuine</span>
+          <p class="meta">adjective · Genuine rather than fake</p>
+<p><strong>Shared meaning:</strong> Both words describe something real rather than fake.</p>          <p><strong>Difference:</strong> Genuine is the closest general synonym and also means not fake. Authentic often emphasizes that the object truly comes from a claimed source, maker, culture, or period.</p>
+          <p><strong>Example:</strong> The bracelet is made from genuine gold.</p>
+        </article>
+        <article class="compare-card">
+          <span class="word-pill">original</span>
+          <p class="meta">adjective · Genuine rather than fake</p>
+<p><strong>Shared meaning:</strong> Both words can distinguish real objects from later copies.</p>          <p><strong>Difference:</strong> Original often means the first form or the actual work rather than a copy. Authentic means genuinely what it claims to be, but an authentic copy can still be a copy.</p>
+          <p><strong>Example:</strong> The gallery owns the original painting rather than a reproduction.</p>
+        </article>
+        <article class="compare-card">
+          <span class="word-pill">realistic</span>
+          <p class="meta">adjective · True to a culture or period</p>
+<p><strong>Shared meaning:</strong> Both words can describe a representation that seems true to life.</p>          <p><strong>Difference:</strong> Realistic means appearing close to real life. Authentic additionally suggests faithfulness to the actual source, culture, period, or experience.</p>
+          <p><strong>Example:</strong> The novel gives a realistic description of family conflict.</p>
+        </article>
+        <article class="compare-card">
+          <span class="word-pill">faithful</span>
+          <p class="meta">adjective · True to a culture or period</p>
+<p><strong>Shared meaning:</strong> Both words can describe an accurate representation of a source.</p>          <p><strong>Difference:</strong> Faithful emphasizes close accuracy to an original text, event, design, or source. Authentic also suggests that the result feels genuinely connected to the culture or experience itself.</p>
+          <p><strong>Example:</strong> The film is a faithful adaptation of the novel.</p>
+        </article>
+        <article class="compare-card">
+          <span class="word-pill">sincere</span>
+          <p class="meta">adjective · Honest and true to yourself</p>
+<p><strong>Shared meaning:</strong> Both words suggest honesty rather than pretense.</p>          <p><strong>Difference:</strong> Sincere focuses on honest feelings or intentions. Authentic can describe a person&#39;s broader identity, behavior, voice, or style as true to who they really are.</p>
+          <p><strong>Example:</strong> She offered a sincere apology for the misunderstanding.</p>
+        </article>
+      </div>
+
+      <h3 style="margin-top: 2rem;">Direct or useful antonyms</h3>
+      <div class="compare-grid">
+        <article class="compare-card">
+          <span class="word-pill">fake</span>
+          <p class="meta">adjective · Genuine rather than fake</p>
+          <p><strong>Opposition:</strong> Fake describes something made or presented to look genuine when it is not.</p>
+<p><strong>Usage note:</strong> Fake is common and direct but less formal than counterfeit or inauthentic.</p>          <p><strong>Example:</strong> The supposedly ancient vase was actually fake.</p>
+        </article>
+        <article class="compare-card">
+          <span class="word-pill">counterfeit</span>
+          <p class="meta">adjective · Genuine rather than fake</p>
+          <p><strong>Opposition:</strong> Counterfeit describes an illegal or dishonest copy made to be mistaken for the genuine item.</p>
+<p><strong>Usage note:</strong> It is mainly used for money, branded products, official documents, and valuable objects.</p>          <p><strong>Example:</strong> Police discovered thousands of counterfeit banknotes.</p>
+        </article>
+        <article class="compare-card">
+          <span class="word-pill">inauthentic</span>
+          <p class="meta">adjective · all senses</p>
+          <p><strong>Opposition:</strong> Inauthentic means not genuine, not faithful to the real source, or not honestly expressing a person&#39;s true character.</p>
+<p><strong>Usage note:</strong> This is the direct opposite across all three meanings, but it is more formal than fake.</p>          <p><strong>Example:</strong> Critics described the performance as polished but emotionally inauthentic.</p>
+        </article>
+        <article class="compare-card">
+          <span class="word-pill">artificial</span>
+          <p class="meta">adjective · Honest and true to yourself</p>
+          <p><strong>Opposition:</strong> Artificial can describe behavior or emotion that seems forced, unnatural, or not sincerely felt.</p>
+<p><strong>Usage note:</strong> Artificial has other meanings as well, so it is only an opposite in contexts involving behavior, style, or emotion.</p>          <p><strong>Example:</strong> His cheerful manner seemed artificial and unconvincing.</p>
+        </article>
+      </div>
+    </section>
+
+
+
+    <section class="section" id="exercises">
+      <div class="section-head">
+        <p class="section-kicker">Active practice</p>
+        <h2>Practice exercises</h2>
+      </div>
+      <div class="exercise-grid">
+        <article class="exercise-card">
+          <h3>Word family choice</h3>
+          <p class="exercise-instruction">Choose the best member of the word family for each blank.</p>
+          <ol class="clean-list"><li>Experts were unable to confirm the _____ of the ancient manuscript.</li><li>The dishes are prepared _____ according to traditional regional methods.</li><li>Several historians were asked to _____ the newly discovered letter.</li><li>The museum displayed an _____ sculpture from the ancient settlement.</li><li>The website requires two-step _____ before users can access private records.</li></ol>
+        </article>
+        <article class="exercise-card">
+          <h3>Correct or incorrect?</h3>
+          <p class="exercise-instruction">Decide whether each sentence is correct. Correct the inaccurate ones.</p>
+          <ol class="clean-list"><li>Experts confirmed that the signature was authentic.</li><li>The restaurant offers an authenticity dining experience.</li><li>The documentary provides an authentic account of the event.</li><li>She spoke authentic about the challenges she had faced.</li><li>The teacher used authentic materials from newspapers and radio programs.</li></ol>
+        </article>
+        <article class="exercise-card">
+          <h3>Collocation practice</h3>
+          <p class="exercise-instruction">Complete each sentence with a natural collocation.</p>
+          <ol class="clean-list"><li>The diary offers an authentic _____ of life during the war.</li><li>The restaurant is known for its authentic regional _____.</li><li>The writer developed an authentic _____ by drawing on her own experiences.</li><li>Experts examined the object to determine whether it was an authentic _____.</li><li>The course uses authentic _____ such as interviews, advertisements, and news reports.</li></ol>
+        </article>
+      </div>
+
+      <details class="answer-key">
+        <summary>Open the complete answer key</summary>
+        <div class="answer-content">
+          <section class="answer-group">
+            <h3>Word family choice</h3>
+            <p class="answer-item"><strong>1. authenticity</strong><br>Experts were unable to confirm the authenticity of the ancient manuscript.<br><em>A noun is needed after the.</em></p>
+            <p class="answer-item"><strong>2. authentically</strong><br>The dishes are prepared authentically according to traditional regional methods.<br><em>An adverb is needed to describe how the dishes are prepared.</em></p>
+            <p class="answer-item"><strong>3. authenticate</strong><br>Several historians were asked to authenticate the newly discovered letter.<br><em>A verb is needed after to.</em></p>
+            <p class="answer-item"><strong>4. authentic</strong><br>The museum displayed an authentic sculpture from the ancient settlement.<br><em>An adjective is needed before sculpture.</em></p>
+            <p class="answer-item"><strong>5. authentication</strong><br>The website requires two-step authentication before users can access private records.<br><em>A noun naming the security process is needed.</em></p>
+          </section>
+          <section class="answer-group">
+            <h3>Correct or incorrect?</h3>
+            <p class="answer-item"><strong>1. Correct</strong><br><em>Authentic correctly describes a signature proven to be genuine.</em></p>
+            <p class="answer-item"><strong>2. Incorrect</strong><br>The restaurant offers an authentic dining experience.<br><em>Use the adjective authentic before dining experience.</em></p>
+            <p class="answer-item"><strong>3. Correct</strong><br><em>Authentic account is a natural expression for a description that accurately reflects real events.</em></p>
+            <p class="answer-item"><strong>4. Incorrect</strong><br>She spoke authentically about the challenges she had faced.<br><em>Use the adverb authentically to describe how she spoke.</em></p>
+            <p class="answer-item"><strong>5. Correct</strong><br><em>Authentic materials is a common educational term for materials created for real communication.</em></p>
+          </section>
+          <section class="answer-group">
+            <h3>Collocation practice</h3>
+            <p class="answer-item"><strong>1. account</strong><br>The diary offers an authentic account of life during the war.<br><em>An authentic account accurately reflects real events or experiences.</em></p>
+            <p class="answer-item"><strong>2. cuisine</strong><br>The restaurant is known for its authentic regional cuisine.<br><em>Authentic cuisine closely follows the food traditions of a place or culture.</em></p>
+            <p class="answer-item"><strong>3. voice</strong><br>The writer developed an authentic voice by drawing on her own experiences.<br><em>An authentic voice is an honest and distinctive way of expressing yourself.</em></p>
+            <p class="answer-item"><strong>4. artifact</strong><br>Experts examined the object to determine whether it was an authentic artifact.<br><em>An authentic artifact is a genuine historical object rather than a modern copy.</em></p>
+            <p class="answer-item"><strong>5. materials</strong><br>The course uses authentic materials such as interviews, advertisements, and news reports.<br><em>Authentic materials are real texts or recordings originally created for ordinary communication.</em></p>
+          </section>
+        </div>
+      </details>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-row">
+        <span>Created and compiled by <strong>Amir Kooshky</strong></span>
+        <nav class="footer-links" aria-label="Creator links">
+          <a href="https://t.me/KooshkyTOEFL" target="_blank" rel="noopener">Telegram channel</a>
+          <a href="https://www.instagram.com/kooshkytoefl" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://t.me/KooshkyTOEFL_pv" target="_blank" rel="noopener">Personal Telegram</a>
+        </nav>
+      </div>
+    </footer>
+  </main>
+
+  <button class="back-to-top no-js-hidden" type="button" data-back-to-top aria-label="Go to the top">↑</button>
+  <script>
+(() => {
+  "use strict";
+
+  const root = document.documentElement;
+  root.classList.add("js");
+
+  const storageKey = "kooshky-wotd-theme";
+  const themeButton = document.querySelector("[data-theme-toggle]");
+  const printButton = document.querySelector("[data-print]");
+  const topButton = document.querySelector("[data-back-to-top]");
+
+  const applyTheme = (theme) => {
+    if (theme === "light" || theme === "dark") {
+      root.dataset.theme = theme;
+    } else {
+      delete root.dataset.theme;
+    }
+    if (themeButton) {
+      const active = root.dataset.theme || "system";
+      themeButton.textContent = active === "dark" ? "Light mode" : "Dark mode";
+      themeButton.setAttribute("aria-label", `Switch from ${active} theme`);
+    }
+  };
+
+  let savedTheme = null;
+  try { savedTheme = localStorage.getItem(storageKey); } catch (_) { /* local files may block storage */ }
+  applyTheme(savedTheme);
+
+  themeButton?.addEventListener("click", () => {
+    const systemDark = window.matchMedia?.("(prefers-color-scheme: dark)").matches;
+    const current = root.dataset.theme || (systemDark ? "dark" : "light");
+    const next = current === "dark" ? "light" : "dark";
+    applyTheme(next);
+    try { localStorage.setItem(storageKey, next); } catch (_) { /* nonessential */ }
+  });
+
+  printButton?.addEventListener("click", () => window.print());
+
+  if (topButton) {
+    const updateTopButton = () => topButton.classList.toggle("visible", window.scrollY > 700);
+    window.addEventListener("scroll", updateTopButton, { passive: true });
+    updateTopButton();
+    topButton.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+  }
+})();
+
+  </script>
+</body>
+</html>

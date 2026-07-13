@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIMULTANEOUS | Extended TOEFL Explanation</title>
+  <style>
+    :root {
+      --bg: #08090d;
+      --bg-soft: #10131b;
+      --card: rgba(255, 255, 255, 0.065);
+      --card-strong: rgba(255, 255, 255, 0.105);
+      --text: #f4f1ea;
+      --muted: #b9b2a7;
+      --faint: #8f887d;
+      --gold: #d8b35a;
+      --gold-soft: rgba(216, 179, 90, 0.16);
+      --blue: #8bb7ff;
+      --green: #9be2bd;
+      --red: #ff9d9d;
+      --border: rgba(255, 255, 255, 0.14);
+      --shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+      --radius-lg: 28px;
+      --radius-md: 18px;
+      --radius-sm: 12px;
+      --max: 980px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at top left, rgba(216, 179, 90, 0.18), transparent 32rem),
+        radial-gradient(circle at bottom right, rgba(139, 183, 255, 0.13), transparent 30rem),
+        var(--bg);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      line-height: 1.65;
+    }
+
+    a {
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      width: min(100%, var(--max));
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* =========================
+     INTRO IMAGE TEMPLATE
+  ========================= */
+
+    .intro-page {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 20px;
+    }
+
+    .intro-shot {
+      width: min(100%, 860px);
+      aspect-ratio: 4 / 5;
+      min-height: 680px;
+      border: 1px solid var(--border);
+      border-radius: 42px;
+      overflow: hidden;
+      position: relative;
+      background:
+        linear-gradient(135deg, rgba(216, 179, 90, 0.18), transparent 35%),
+        linear-gradient(315deg, rgba(139, 183, 255, 0.18), transparent 35%),
+        #0b0d13;
+      box-shadow: var(--shadow);
+      padding: clamp(26px, 6vw, 68px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .intro-shot::before {
+      content: "";
+      position: absolute;
+      inset: 22px;
+      border: 1px solid rgba(216, 179, 90, 0.24);
+      border-radius: 32px;
+      pointer-events: none;
+    }
+
+    .intro-kicker,
+    .ext-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      width: fit-content;
+      padding: 8px 13px;
+      border: 1px solid rgba(216, 179, 90, 0.28);
+      border-radius: 999px;
+      background: var(--gold-soft);
+      color: var(--gold);
+      font-size: clamp(0.78rem, 2.2vw, 0.95rem);
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .intro-center {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .intro-word {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(4.4rem, 4.5vw, 9.5rem);
+      line-height: 0.92;
+      letter-spacing: -0.04em;
+      color: #fff8ea;
+      text-shadow: 0 12px 45px rgba(0, 0, 0, 0.55);
+    }
+
+    .intro-ipa {
+      margin: 18px 0 0;
+      color: var(--gold);
+      font-size: clamp(1.05rem, 4vw, 1.5rem);
+      font-weight: 700;
+    }
+
+    .intro-meanings {
+      margin: 28px auto 0;
+      display: grid;
+      gap: 12px;
+      max-width: 640px;
+    }
+
+    .intro-meaning {
+      padding: 15px 18px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.075);
+      backdrop-filter: blur(12px);
+      font-size: clamp(1rem, 3.2vw, 1.25rem);
+      font-weight: 650;
+    }
+
+    .intro-example {
+      margin: 26px auto 0;
+      max-width: 650px;
+      color: var(--muted);
+      font-size: clamp(0.95rem, 3vw, 1.15rem);
+    }
+
+    .intro-footer,
+    .ext-footer {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 16px;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .intro-footer strong,
+    .ext-footer strong {
+      color: var(--text);
+    }
+
+    /* =========================
+     EXTENDED PAGE TEMPLATE
+  ========================= */
+
+    .extended-page {
+      padding-bottom: 50px;
+    }
+
+    .hero {
+      margin: 18px auto 22px;
+      padding: clamp(24px, 5vw, 46px);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      background:
+        linear-gradient(135deg, rgba(216, 179, 90, 0.14), transparent 42%),
+        var(--card);
+      box-shadow: var(--shadow);
+    }
+
+    .hero h1 {
+      margin: 18px 0 8px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.4rem, 10vw, 6.2rem);
+      line-height: 0.95;
+      letter-spacing: -0.055em;
+
+      white-space: nowrap;
+      overflow-wrap: normal;
+      word-break: normal;
+      hyphens: none;
+      max-width: 100%;
+    }
+
+    .hero-subtitle {
+      margin: 0;
+      color: var(--muted);
+      font-size: clamp(1rem, 3vw, 1.2rem);
+    }
+
+    .brand-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .brand-links a {
+      display: inline-flex;
+      padding: 9px 13px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.055);
+      color: var(--text);
+      font-size: 0.94rem;
+    }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .meta-card,
+    .toc,
+    .section,
+    .sense-card,
+    .info-card,
+    .family-card,
+    .collocation-card,
+    .exercise-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--card);
+    }
+
+    .meta-card {
+      padding: 15px;
+    }
+
+    .meta-label {
+      display: block;
+      color: var(--faint);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 800;
+    }
+
+    .meta-value {
+      display: block;
+      margin-top: 5px;
+      font-weight: 800;
+    }
+
+    .toc {
+      padding: 18px;
+      margin: 20px 0;
+    }
+
+    .toc-title {
+      margin: 0 0 10px;
+      color: var(--gold);
+      font-weight: 900;
+    }
+
+    .toc-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .toc-links a {
+      padding: 8px 11px;
+      border-radius: 999px;
+      background: var(--gold-soft);
+      color: var(--gold);
+      font-size: 0.93rem;
+    }
+
+    .section {
+      margin: 20px 0;
+      padding: clamp(18px, 4vw, 30px);
+    }
+
+    .section h2 {
+      margin: 0 0 18px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.8rem, 6vw, 2.7rem);
+      line-height: 1.1;
+    }
+
+    .sense-card {
+      padding: clamp(16px, 4vw, 26px);
+      margin: 16px 0;
+    }
+
+    .sense-head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .sense-num,
+    .pos-badge,
+    .ipa-badge {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      font-weight: 850;
+    }
+
+    .sense-num {
+      padding: 7px 12px;
+      background: var(--gold);
+      color: #14120b;
+    }
+
+    .pos-badge {
+      padding: 7px 11px;
+      background: rgba(139, 183, 255, 0.16);
+      color: var(--blue);
+    }
+
+    .ipa-badge {
+      padding: 7px 11px;
+      background: rgba(255, 255, 255, 0.07);
+      color: var(--muted);
+    }
+
+    .definition {
+      font-size: 1.12rem;
+      font-weight: 750;
+      color: #fff7e8;
+    }
+
+    .simple-label {
+      margin: 20px 0 8px;
+      color: var(--gold);
+      font-weight: 900;
+    }
+
+    .example-list,
+    .clean-list,
+    .wrong-list {
+      margin: 8px 0 0;
+      padding-left: 1.25rem;
+    }
+
+    .example-list li,
+    .clean-list li,
+    .wrong-list li {
+      margin: 8px 0;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .info-card {
+      padding: 14px;
+    }
+
+    .info-card h4,
+    .family-card h3,
+    .collocation-card h3,
+    .exercise-card h3 {
+      margin: 0 0 8px;
+      color: var(--gold);
+    }
+
+    .warning {
+      border-color: rgba(255, 157, 157, 0.35);
+      background: rgba(255, 157, 157, 0.07);
+    }
+
+    .good {
+      border-color: rgba(155, 226, 189, 0.3);
+      background: rgba(155, 226, 189, 0.06);
+    }
+
+    .family-grid,
+    .collocation-grid,
+    .exercise-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .family-card,
+    .collocation-card,
+    .exercise-card {
+      padding: 16px;
+    }
+
+    .word-pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+    }
+
+    .word-pill {
+      display: inline-flex;
+      padding: 8px 11px;
+      border-radius: 999px;
+      background: var(--card-strong);
+      border: 1px solid var(--border);
+      font-weight: 800;
+    }
+
+    details.answer-key {
+      margin-top: 16px;
+      border: 1px solid rgba(216, 179, 90, 0.3);
+      border-radius: var(--radius-md);
+      background: var(--gold-soft);
+      padding: 14px 16px;
+    }
+
+    details.answer-key summary {
+      cursor: pointer;
+      color: var(--gold);
+      font-weight: 950;
+    }
+
+    .ext-footer {
+      margin-top: 22px;
+      padding: 22px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      background: var(--card);
+    }
+
+    /* =========================
+     RESPONSIVE RULES
+  ========================= */
+
+    @media (max-width: 720px) {
+      .page {
+        padding: 12px;
+      }
+
+      .intro-page {
+        padding: 10px;
+      }
+
+      .intro-shot {
+        min-height: 620px;
+        border-radius: 30px;
+        padding: 26px 18px;
+      }
+
+      .intro-shot::before {
+        inset: 12px;
+        border-radius: 24px;
+      }
+
+      .intro-word {
+        letter-spacing: -0.07em;
+      }
+
+      .intro-footer,
+      .ext-footer {
+        display: grid;
+        justify-content: stretch;
+      }
+
+      .meta-grid,
+      .info-grid,
+      .family-grid,
+      .collocation-grid,
+      .exercise-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero,
+      .section {
+        border-radius: 22px;
+      }
+
+      .sense-head {
+        align-items: flex-start;
+      }
+
+      .brand-links a,
+      .toc-links a {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .hero h1 {
+        font-size: clamp(1.55rem, 8.8vw, 2.65rem);
+        line-height: 1.02;
+        letter-spacing: -0.035em;
+        white-space: nowrap;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .intro-shot {
+        aspect-ratio: auto;
+        min-height: 600px;
+      }
+
+      .intro-meaning {
+        padding: 12px 14px;
+      }
+    }
+  </style>
+</head>
+
+<body class="extended-page">
+  <main class="page">
+
+    <header class="hero">
+      <div class="ext-kicker">📚✨ TOEFL Word of the Day ✨📚</div>
+      <h1>SIMULTANEOUS</h1>
+      <p class="hero-subtitle">A complete TOEFL learner guide compiled by <strong>Amir Kooshky</strong>.</p>
+
+      <div class="brand-links">
+        <a href="https://t.me/KooshkyTOEFL" target="_blank">Telegram Channel</a>
+        <a href="https://www.instagram.com/kooshkytoefl" target="_blank">Instagram</a>
+        <a href="https://t.me/KooshkyTOEFL_pv" target="_blank">Personal Telegram</a>
+      </div>
+
+      <div class="meta-grid">
+        <div class="meta-card">
+          <span class="meta-label">Date</span>
+          <span class="meta-value">July 4th 2026</span>
+        </div>
+        <div class="meta-card">
+          <span class="meta-label">Word</span>
+          <span class="meta-value">Simultaneous</span>
+        </div>
+        <div class="meta-card">
+          <span class="meta-label">Level</span>
+          <span class="meta-value">B1–B2 TOEFL</span>
+        </div>
+      </div>
+    </header>
+
+    <nav class="toc">
+      <p class="toc-title">Study sections</p>
+      <div class="toc-links">
+        <a href="#meanings">Meanings</a>
+        <a href="#family">Word Family</a>
+        <a href="#collocations">Collocations</a>
+        <a href="#synonyms">Synonyms & Antonyms</a>
+        <a href="#etymology">Etymology</a>
+        <a href="#exercises">Exercises</a>
+      </div>
+    </nav>
+
+    <section class="section" id="meanings">
+      <h2>Meanings & Usage</h2>
+
+      <article class="sense-card">
+        <div class="sense-head">
+          <span class="sense-num">Meaning 1</span>
+          <span class="pos-badge">adjective</span>
+          <span class="ipa-badge">/ˌsaɪ.məlˈteɪ.ni.əs/</span>
+        </div>
+
+        <p class="definition">Happening or existing at exactly the same time, or almost exactly the same time.</p>
+
+        <p class="simple-label">Natural examples</p>
+        <ol class="example-list">
+          <li>The two earthquakes were not connected, but they were almost simultaneous.</li>
+          <li>Scientists noticed simultaneous changes in temperature and air pressure.</li>
+          <li>The company made simultaneous announcements in New York, London, and Tokyo.</li>
+          <li>The two students gave simultaneous answers, so the teacher could not hear either one clearly.</li>
+          <li>The study found simultaneous growth in employment and consumer spending.</li>
+        </ol>
+
+        <div class="info-grid">
+          <div class="info-card good">
+            <h4>Nuance & implication</h4>
+            <p><strong>Simultaneous</strong> is more exact and academic than “at the same time.” It often suggests that
+              two or more events are closely connected in time, though not always connected in cause.</p>
+          </div>
+
+          <div class="info-card">
+            <h4>Grammar notes</h4>
+            <p><strong>Simultaneous</strong> is an adjective. It usually comes before a noun: <strong>simultaneous
+                changes</strong>, <strong>simultaneous events</strong>. It can also come after linking verbs:
+              <strong>The reactions were simultaneous.</strong></p>
+          </div>
+
+          <div class="info-card warning">
+            <h4>Common wrong usage</h4>
+            <ul class="wrong-list">
+              <li>❌ The two events happened simultaneous. → ✅ The two events happened simultaneously.</li>
+              <li>❌ The simultaneous of the events surprised us. → ✅ The simultaneity of the events surprised us.</li>
+            </ul>
+          </div>
+
+          <div class="info-card">
+            <h4>TOEFL tip</h4>
+            <p>In reading passages, <strong>simultaneous</strong> often signals a time relationship. Ask: “Did these
+              things happen one after another, or at the same time?”</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="sense-card">
+        <div class="sense-head">
+          <span class="sense-num">Meaning 2</span>
+          <span class="pos-badge">adjective</span>
+          <span class="ipa-badge">/ˌsaɪ.məlˈteɪ.ni.əs/</span>
+        </div>
+
+        <p class="definition">Done together at the same time, instead of separately or one after another.</p>
+
+        <p class="simple-label">Natural examples</p>
+        <ol class="example-list">
+          <li>The lecture included simultaneous interpretation for international students.</li>
+          <li>The program allows simultaneous access by many users.</li>
+          <li>The lab used simultaneous measurements to compare the two samples.</li>
+          <li>The device supports simultaneous recording from several cameras.</li>
+          <li>The researchers conducted simultaneous interviews in different cities.</li>
+        </ol>
+
+        <div class="info-grid">
+          <div class="info-card good">
+            <h4>Nuance & implication</h4>
+            <p>This meaning often appears with systems, technology, translation, research, and organized activities. It
+              emphasizes that several actions are happening together as part of one process.</p>
+          </div>
+
+          <div class="info-card">
+            <h4>Grammar notes</h4>
+            <p>Common noun patterns include <strong>simultaneous interpretation</strong>, <strong>simultaneous
+                translation</strong>, <strong>simultaneous access</strong>, <strong>simultaneous measurements</strong>,
+              and <strong>simultaneous processing</strong>.</p>
+          </div>
+
+          <div class="info-card warning">
+            <h4>Common wrong usage</h4>
+            <ul class="wrong-list">
+              <li>❌ The app can simultaneous download files. → ✅ The app can download files simultaneously.</li>
+              <li>❌ We did a simultaneous between two tests. → ✅ We did the two tests simultaneously.</li>
+            </ul>
+          </div>
+
+          <div class="info-card">
+            <h4>TOEFL tip</h4>
+            <p>In academic listening, <strong>simultaneous</strong> may describe methods: researchers may collect data,
+              compare samples, or observe reactions at the same time.</p>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <section class="section" id="family">
+      <h2>Word Family</h2>
+
+      <div class="family-grid">
+        <article class="family-card">
+          <h3>simultaneously</h3>
+          <p><strong>Part of speech:</strong> adverb</p>
+          <p><strong>Definition:</strong> at the same time</p>
+          <ol class="example-list">
+            <li>The two machines started simultaneously.</li>
+            <li>The teacher cannot answer five questions simultaneously.</li>
+          </ol>
+        </article>
+
+        <article class="family-card">
+          <h3>simultaneity</h3>
+          <p><strong>Part of speech:</strong> noun</p>
+          <p><strong>Definition:</strong> the state or fact of happening at the same time</p>
+          <ol class="example-list">
+            <li>The simultaneity of the events made the situation harder to explain.</li>
+            <li>The study focused on the simultaneity of economic and social change.</li>
+          </ol>
+        </article>
+
+        <article class="family-card">
+          <h3>simultaneousness</h3>
+          <p><strong>Part of speech:</strong> noun</p>
+          <p><strong>Definition:</strong> the quality of being simultaneous; less common than
+            <strong>simultaneity</strong></p>
+          <ol class="example-list">
+            <li>The simultaneousness of the reactions was difficult to measure precisely.</li>
+            <li>In academic writing, <strong>simultaneity</strong> is usually more natural than
+              <strong>simultaneousness</strong>.</li>
+          </ol>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="collocations">
+      <h2>Common Collocations</h2>
+
+      <div class="collocation-grid">
+        <article class="collocation-card">
+          <h3>simultaneous changes</h3>
+          <p><strong>Meaning:</strong> changes that happen at the same time</p>
+          <p><strong>Example:</strong> The graph shows simultaneous changes in rainfall and plant growth.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>simultaneous events</h3>
+          <p><strong>Meaning:</strong> events that occur at the same time</p>
+          <p><strong>Example:</strong> The historian tried to explain several simultaneous events across Europe.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>simultaneous interpretation</h3>
+          <p><strong>Meaning:</strong> spoken translation given while the speaker is still talking</p>
+          <p><strong>Example:</strong> The conference provided simultaneous interpretation for foreign guests.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>simultaneous translation</h3>
+          <p><strong>Meaning:</strong> translation done at the same time as the original speech</p>
+          <p><strong>Example:</strong> Simultaneous translation requires excellent listening skills.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>simultaneous access</h3>
+          <p><strong>Meaning:</strong> access by several people or systems at the same time</p>
+          <p><strong>Example:</strong> The database allows simultaneous access by hundreds of users.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>simultaneous measurements</h3>
+          <p><strong>Meaning:</strong> measurements taken at the same time</p>
+          <p><strong>Example:</strong> The researchers took simultaneous measurements of light and temperature.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>simultaneous processing</h3>
+          <p><strong>Meaning:</strong> processing several pieces of information or tasks at the same time</p>
+          <p><strong>Example:</strong> Modern computers are designed for simultaneous processing of many tasks.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>simultaneous occurrence</h3>
+          <p><strong>Meaning:</strong> the fact that two or more things happen together</p>
+          <p><strong>Example:</strong> The simultaneous occurrence of drought and high temperatures damaged crops.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="synonyms">
+      <h2>Direct Synonyms & Antonyms</h2>
+
+      <div class="info-grid">
+        <div class="info-card good">
+          <h4>Direct synonyms</h4>
+          <div class="word-pill-row">
+            <span class="word-pill">concurrent</span>
+            <span class="word-pill">synchronous</span>
+            <span class="word-pill">co-occurring</span>
+          </div>
+          <p><strong>Concurrent</strong> is very close and common in academic or formal contexts.
+            <strong>Synchronous</strong> is common in technology, communication, and education.
+            <strong>Co-occurring</strong> means happening together, often in research or analysis.</p>
+        </div>
+
+        <div class="info-card warning">
+          <h4>Direct antonyms</h4>
+          <div class="word-pill-row">
+            <span class="word-pill">sequential</span>
+            <span class="word-pill">successive</span>
+            <span class="word-pill">separate</span>
+          </div>
+          <p><strong>Sequential</strong> and <strong>successive</strong> mean happening in order, one after another.
+            <strong>Separate</strong> can mean not done together or not connected as one process.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="etymology">
+      <h2>Etymology</h2>
+      <div class="info-card">
+        <p><strong>Simultaneous</strong> comes from Latin roots connected to the idea of “together” or “at the same
+          time.” This history can help you remember the modern meaning: when events are <strong>simultaneous</strong>,
+          they happen together in time.</p>
+      </div>
+    </section>
+
+    <section class="section" id="exercises">
+      <h2>Practice Exercises</h2>
+
+      <div class="exercise-grid">
+        <article class="exercise-card">
+          <h3>1. Word family choice</h3>
+          <p>Choose the best member of the word family for each blank.</p>
+          <ol class="clean-list">
+            <li>The two alarms rang __________, confusing everyone in the building.</li>
+            <li>The __________ of the two discoveries led scientists to compare their causes.</li>
+            <li>The system supports __________ access by multiple users.</li>
+          </ol>
+        </article>
+
+        <article class="exercise-card">
+          <h3>2. Correct or incorrect?</h3>
+          <p>Decide whether each sentence uses the word correctly. If it is wrong, correct it.</p>
+          <ol class="clean-list">
+            <li>The two experiments happened simultaneous.</li>
+            <li>The university offered simultaneous interpretation during the lecture.</li>
+            <li>The researchers simultaneous measured the samples.</li>
+          </ol>
+        </article>
+
+        <article class="exercise-card">
+          <h3>3. Collocation practice</h3>
+          <p>Complete each sentence with a natural collocation.</p>
+          <ol class="clean-list">
+            <li>The conference provided __________ interpretation for international visitors.</li>
+            <li>The graph shows __________ changes in temperature and rainfall.</li>
+            <li>The database allows __________ access by many users.</li>
+          </ol>
+        </article>
+      </div>
+
+      <details class="answer-key">
+        <summary>Answer Key</summary>
+        <ol class="clean-list">
+          <li><strong>simultaneously</strong> — We need an adverb after the verb “rang.”</li>
+          <li><strong>simultaneity</strong> — We need a noun meaning “the fact of happening at the same time.”</li>
+          <li><strong>simultaneous</strong> — We need an adjective before “access.”</li>
+          <li><strong>Incorrect:</strong> The two experiments happened <strong>simultaneously</strong>. Use the adverb
+            after “happened.”</li>
+          <li><strong>Correct.</strong> “Simultaneous interpretation” is a natural collocation.</li>
+          <li><strong>Incorrect:</strong> The researchers <strong>simultaneously measured</strong> the samples. Use the
+            adverb before the verb.</li>
+          <li><strong>simultaneous interpretation</strong> — This means live translation while someone is speaking.</li>
+          <li><strong>simultaneous changes</strong> — This is a natural academic collocation.</li>
+          <li><strong>simultaneous access</strong> — This means many users can access something at the same time.</li>
+        </ol>
+      </details>
+    </section>
+
+    <footer class="ext-footer">
+      <span>Compiled by <strong>Amir Kooshky</strong></span>
+      <span><a href="https://t.me/KooshkyTOEFL">📚 @KooshkyToefl</a></span>
+      <span><a href="https://www.instagram.com/kooshkytoefl">Instagram</a></span>
+      <span><a href="https://t.me/KooshkyTOEFL_pv">Personal Telegram</a></span>
+    </footer>
+
+  </main>
+</body>
+
+</html>

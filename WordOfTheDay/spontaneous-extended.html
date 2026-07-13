@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPONTANEOUS | Extended TOEFL Explanation</title>
+    <style>
+        :root {
+            --bg: #08090d;
+            --bg-soft: #10131b;
+            --card: rgba(255, 255, 255, 0.065);
+            --card-strong: rgba(255, 255, 255, 0.105);
+            --text: #f4f1ea;
+            --muted: #b9b2a7;
+            --faint: #8f887d;
+            --gold: #d8b35a;
+            --gold-soft: rgba(216, 179, 90, 0.16);
+            --blue: #8bb7ff;
+            --green: #9be2bd;
+            --red: #ff9d9d;
+            --border: rgba(255, 255, 255, 0.14);
+            --shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+            --radius-lg: 28px;
+            --radius-md: 18px;
+            --radius-sm: 12px;
+            --max: 980px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background:
+                radial-gradient(circle at top left, rgba(216, 179, 90, 0.18), transparent 32rem),
+                radial-gradient(circle at bottom right, rgba(139, 183, 255, 0.13), transparent 30rem),
+                var(--bg);
+            color: var(--text);
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+            line-height: 1.65;
+        }
+
+        a {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .page {
+            width: min(100%, var(--max));
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* =========================
+     INTRO IMAGE TEMPLATE
+  ========================= */
+
+        .intro-page {
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            padding: 20px;
+        }
+
+        .intro-shot {
+            width: min(100%, 860px);
+            aspect-ratio: 4 / 5;
+            min-height: 680px;
+            border: 1px solid var(--border);
+            border-radius: 42px;
+            overflow: hidden;
+            position: relative;
+            background:
+                linear-gradient(135deg, rgba(216, 179, 90, 0.18), transparent 35%),
+                linear-gradient(315deg, rgba(139, 183, 255, 0.18), transparent 35%),
+                #0b0d13;
+            box-shadow: var(--shadow);
+            padding: clamp(26px, 6vw, 68px);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .intro-shot::before {
+            content: "";
+            position: absolute;
+            inset: 22px;
+            border: 1px solid rgba(216, 179, 90, 0.24);
+            border-radius: 32px;
+            pointer-events: none;
+        }
+
+        .intro-kicker,
+        .ext-kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            width: fit-content;
+            padding: 8px 13px;
+            border: 1px solid rgba(216, 179, 90, 0.28);
+            border-radius: 999px;
+            background: var(--gold-soft);
+            color: var(--gold);
+            font-size: clamp(0.78rem, 2.2vw, 0.95rem);
+            font-weight: 800;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        .intro-center {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .intro-word {
+            margin: 0;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(4.4rem, 4.5vw, 9.5rem);
+            line-height: 0.92;
+            letter-spacing: -0.04em;
+            color: #fff8ea;
+            text-shadow: 0 12px 45px rgba(0, 0, 0, 0.55);
+        }
+
+        .intro-ipa {
+            margin: 18px 0 0;
+            color: var(--gold);
+            font-size: clamp(1.05rem, 4vw, 1.5rem);
+            font-weight: 700;
+        }
+
+        .intro-meanings {
+            margin: 28px auto 0;
+            display: grid;
+            gap: 12px;
+            max-width: 640px;
+        }
+
+        .intro-meaning {
+            padding: 15px 18px;
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            background: rgba(255, 255, 255, 0.075);
+            backdrop-filter: blur(12px);
+            font-size: clamp(1rem, 3.2vw, 1.25rem);
+            font-weight: 650;
+        }
+
+        .intro-example {
+            margin: 26px auto 0;
+            max-width: 650px;
+            color: var(--muted);
+            font-size: clamp(0.95rem, 3vw, 1.15rem);
+        }
+
+        .intro-footer,
+        .ext-footer {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 16px;
+            align-items: center;
+            justify-content: space-between;
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        .intro-footer strong,
+        .ext-footer strong {
+            color: var(--text);
+        }
+
+        /* =========================
+     EXTENDED PAGE TEMPLATE
+  ========================= */
+
+        .extended-page {
+            padding-bottom: 50px;
+        }
+
+        .hero {
+            margin: 18px auto 22px;
+            padding: clamp(24px, 5vw, 46px);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            background:
+                linear-gradient(135deg, rgba(216, 179, 90, 0.14), transparent 42%),
+                var(--card);
+            box-shadow: var(--shadow);
+        }
+
+        .hero h1 {
+            margin: 18px 0 8px;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(2.4rem, 10vw, 6.2rem);
+            line-height: 0.95;
+            letter-spacing: -0.055em;
+
+            white-space: nowrap;
+            overflow-wrap: normal;
+            word-break: normal;
+            hyphens: none;
+            max-width: 100%;
+        }
+
+        .hero-subtitle {
+            margin: 0;
+            color: var(--muted);
+            font-size: clamp(1rem, 3vw, 1.2rem);
+        }
+
+        .brand-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 22px;
+        }
+
+        .brand-links a {
+            display: inline-flex;
+            padding: 9px 13px;
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.055);
+            color: var(--text);
+            font-size: 0.94rem;
+        }
+
+        .meta-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+            margin-top: 22px;
+        }
+
+        .meta-card,
+        .toc,
+        .section,
+        .sense-card,
+        .info-card,
+        .family-card,
+        .collocation-card,
+        .exercise-card {
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            background: var(--card);
+        }
+
+        .meta-card {
+            padding: 15px;
+        }
+
+        .meta-label {
+            display: block;
+            color: var(--faint);
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-weight: 800;
+        }
+
+        .meta-value {
+            display: block;
+            margin-top: 5px;
+            font-weight: 800;
+        }
+
+        .toc {
+            padding: 18px;
+            margin: 20px 0;
+        }
+
+        .toc-title {
+            margin: 0 0 10px;
+            color: var(--gold);
+            font-weight: 900;
+        }
+
+        .toc-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .toc-links a {
+            padding: 8px 11px;
+            border-radius: 999px;
+            background: var(--gold-soft);
+            color: var(--gold);
+            font-size: 0.93rem;
+        }
+
+        .section {
+            margin: 20px 0;
+            padding: clamp(18px, 4vw, 30px);
+        }
+
+        .section h2 {
+            margin: 0 0 18px;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(1.8rem, 6vw, 2.7rem);
+            line-height: 1.1;
+        }
+
+        .sense-card {
+            padding: clamp(16px, 4vw, 26px);
+            margin: 16px 0;
+        }
+
+        .sense-head {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 14px;
+        }
+
+        .sense-num,
+        .pos-badge,
+        .ipa-badge {
+            display: inline-flex;
+            align-items: center;
+            border-radius: 999px;
+            font-weight: 850;
+        }
+
+        .sense-num {
+            padding: 7px 12px;
+            background: var(--gold);
+            color: #14120b;
+        }
+
+        .pos-badge {
+            padding: 7px 11px;
+            background: rgba(139, 183, 255, 0.16);
+            color: var(--blue);
+        }
+
+        .ipa-badge {
+            padding: 7px 11px;
+            background: rgba(255, 255, 255, 0.07);
+            color: var(--muted);
+        }
+
+        .definition {
+            font-size: 1.12rem;
+            font-weight: 750;
+            color: #fff7e8;
+        }
+
+        .simple-label {
+            margin: 20px 0 8px;
+            color: var(--gold);
+            font-weight: 900;
+        }
+
+        .example-list,
+        .clean-list,
+        .wrong-list {
+            margin: 8px 0 0;
+            padding-left: 1.25rem;
+        }
+
+        .example-list li,
+        .clean-list li,
+        .wrong-list li {
+            margin: 8px 0;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-top: 14px;
+        }
+
+        .info-card {
+            padding: 14px;
+        }
+
+        .info-card h4,
+        .family-card h3,
+        .collocation-card h3,
+        .exercise-card h3 {
+            margin: 0 0 8px;
+            color: var(--gold);
+        }
+
+        .warning {
+            border-color: rgba(255, 157, 157, 0.35);
+            background: rgba(255, 157, 157, 0.07);
+        }
+
+        .good {
+            border-color: rgba(155, 226, 189, 0.3);
+            background: rgba(155, 226, 189, 0.06);
+        }
+
+        .family-grid,
+        .collocation-grid,
+        .exercise-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+        }
+
+        .family-card,
+        .collocation-card,
+        .exercise-card {
+            padding: 16px;
+        }
+
+        .word-pill-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 9px;
+        }
+
+        .word-pill {
+            display: inline-flex;
+            padding: 8px 11px;
+            border-radius: 999px;
+            background: var(--card-strong);
+            border: 1px solid var(--border);
+            font-weight: 800;
+        }
+
+        details.answer-key {
+            margin-top: 16px;
+            border: 1px solid rgba(216, 179, 90, 0.3);
+            border-radius: var(--radius-md);
+            background: var(--gold-soft);
+            padding: 14px 16px;
+        }
+
+        details.answer-key summary {
+            cursor: pointer;
+            color: var(--gold);
+            font-weight: 950;
+        }
+
+        .ext-footer {
+            margin-top: 22px;
+            padding: 22px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            background: var(--card);
+        }
+
+        /* =========================
+     RESPONSIVE RULES
+  ========================= */
+
+        @media (max-width: 720px) {
+            .page {
+                padding: 12px;
+            }
+
+            .intro-page {
+                padding: 10px;
+            }
+
+            .intro-shot {
+                min-height: 620px;
+                border-radius: 30px;
+                padding: 26px 18px;
+            }
+
+            .intro-shot::before {
+                inset: 12px;
+                border-radius: 24px;
+            }
+
+            .intro-word {
+                letter-spacing: -0.07em;
+            }
+
+            .intro-footer,
+            .ext-footer {
+                display: grid;
+                justify-content: stretch;
+            }
+
+            .meta-grid,
+            .info-grid,
+            .family-grid,
+            .collocation-grid,
+            .exercise-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero,
+            .section {
+                border-radius: 22px;
+            }
+
+            .sense-head {
+                align-items: flex-start;
+            }
+
+            .brand-links a,
+            .toc-links a {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .hero h1 {
+                font-size: clamp(1.55rem, 8.8vw, 2.65rem);
+                line-height: 1.02;
+                letter-spacing: -0.035em;
+                white-space: nowrap;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .intro-shot {
+                aspect-ratio: auto;
+                min-height: 600px;
+            }
+
+            .intro-meaning {
+                padding: 12px 14px;
+            }
+        }
+    </style>
+</head>
+
+<body class="extended-page">
+    <main class="page">
+
+        <header class="hero">
+            <div class="ext-kicker">📚✨ TOEFL Word of the Day ✨📚</div>
+            <h1>SPONTANEOUS</h1>
+            <p class="hero-subtitle">A complete TOEFL learner guide compiled by <strong>Amir Kooshky</strong>.</p>
+
+            <div class="brand-links">
+                <a href="https://t.me/KooshkyTOEFL" target="_blank">Telegram Channel</a>
+                <a href="https://www.instagram.com/kooshkytoefl" target="_blank">Instagram</a>
+                <a href="https://t.me/KooshkyTOEFL_pv" target="_blank">Personal Telegram</a>
+            </div>
+
+            <div class="meta-grid">
+                <div class="meta-card">
+                    <span class="meta-label">Date</span>
+                    <span class="meta-value">July 2nd, 2026</span>
+                </div>
+                <div class="meta-card">
+                    <span class="meta-label">Word</span>
+                    <span class="meta-value">spontaneous</span>
+                </div>
+                <div class="meta-card">
+                    <span class="meta-label">Level</span>
+                    <span class="meta-value">B1–B2 TOEFL</span>
+                </div>
+            </div>
+        </header>
+
+        <nav class="toc">
+            <p class="toc-title">Study sections</p>
+            <div class="toc-links">
+                <a href="#meanings">Meanings</a>
+                <a href="#family">Word Family</a>
+                <a href="#collocations">Collocations</a>
+                <a href="#synonyms">Synonyms & Antonyms</a>
+                <a href="#etymology">Etymology</a>
+                <a href="#exercises">Exercises</a>
+            </div>
+        </nav>
+
+        <section class="section" id="meanings">
+            <h2>Meanings & Usage</h2>
+
+            <article class="sense-card">
+                <div class="sense-head">
+                    <span class="sense-num">Meaning 1</span>
+                    <span class="pos-badge">adjective</span>
+                    <span class="ipa-badge">/spɑːnˈteɪ.ni.əs/</span>
+                </div>
+
+                <p class="definition">Done naturally, suddenly, or without much planning; not forced or carefully
+                    prepared.</p>
+
+                <p class="simple-label">Natural examples</p>
+                <ol class="example-list">
+                    <li>The students gave a spontaneous cheer when the professor announced the extra credit.</li>
+                    <li>We made a spontaneous decision to stop at the science museum on the way home.</li>
+                    <li>Her spontaneous reaction showed that she was genuinely surprised.</li>
+                    <li>The speech sounded warm and spontaneous, not memorized.</li>
+                    <li>A spontaneous conversation after class helped the students understand the topic better.</li>
+                </ol>
+
+                <div class="info-grid">
+                    <div class="info-card good">
+                        <h4>Nuance & implication</h4>
+                        <p><strong>Spontaneous</strong> often has a positive feeling: natural, honest, lively, or real.
+                            However, it can also suggest that something was not planned carefully. A <strong>spontaneous
+                                decision</strong> may be exciting, but it may also be risky if planning was needed.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h4>Grammar notes</h4>
+                        <p><strong>Spontaneous</strong> is an adjective. It commonly comes before nouns such as
+                            <strong>decision</strong>, <strong>reaction</strong>, <strong>response</strong>,
+                            <strong>applause</strong>, <strong>conversation</strong>, and <strong>gesture</strong>. The
+                            noun form is <strong>spontaneity</strong>, and the adverb is <strong>spontaneously</strong>.
+                        </p>
+                    </div>
+
+                    <div class="info-card warning">
+                        <h4>Common wrong usage</h4>
+                        <ul class="wrong-list">
+                            <li>❌ We decided spontaneous to leave early. → ✅ We decided spontaneously to leave early.
+                            </li>
+                            <li>❌ It was a very spontaneity decision. → ✅ It was a very spontaneous decision.</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <h4>TOEFL tip</h4>
+                        <p>In TOEFL listening, <strong>spontaneous</strong> may contrast with <strong>planned</strong>,
+                            <strong>prepared</strong>, or <strong>deliberate</strong>. If a professor says a reaction
+                            was spontaneous, it probably happened naturally and immediately.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="sense-card">
+                <div class="sense-head">
+                    <span class="sense-num">Meaning 2</span>
+                    <span class="pos-badge">adjective</span>
+                    <span class="ipa-badge">/spɑːnˈteɪ.ni.əs/</span>
+                </div>
+
+                <p class="definition">Happening naturally by itself, without an obvious outside cause or human control.
+                </p>
+
+                <p class="simple-label">Natural examples</p>
+                <ol class="example-list">
+                    <li>The scientists observed spontaneous crystal formation in the solution.</li>
+                    <li>Some patients experience spontaneous recovery without major medical treatment.</li>
+                    <li>The chemical reaction was spontaneous under normal laboratory conditions.</li>
+                    <li>Researchers studied spontaneous brain activity during sleep.</li>
+                    <li>In rare cases, spontaneous fires can occur when certain materials heat up on their own.</li>
+                </ol>
+
+                <div class="info-grid">
+                    <div class="info-card good">
+                        <h4>Nuance & implication</h4>
+                        <p>In science and medicine, <strong>spontaneous</strong> does not mean “random” or “magical.” It
+                            means something happens naturally without a clear external trigger. The cause may still
+                            exist, but it is not directly started by a person or by an obvious outside action.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h4>Grammar notes</h4>
+                        <p>This meaning often appears before scientific nouns such as <strong>reaction</strong>,
+                            <strong>recovery</strong>, <strong>activity</strong>, <strong>growth</strong>,
+                            <strong>formation</strong>, <strong>combustion</strong>, and <strong>mutation</strong>. It
+                            is used mainly as an adjective before a noun: <strong>spontaneous recovery</strong>,
+                            <strong>spontaneous reaction</strong>.
+                        </p>
+                    </div>
+
+                    <div class="info-card warning">
+                        <h4>Common wrong usage</h4>
+                        <ul class="wrong-list">
+                            <li>❌ The reaction spontaneous happened. → ✅ The reaction happened spontaneously.</li>
+                            <li>❌ A spontaneous means there is no cause at all. → ✅ Spontaneous means it happens without
+                                an obvious outside cause.</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <h4>TOEFL tip</h4>
+                        <p>In TOEFL science passages, <strong>spontaneous</strong> often describes a natural process. Do
+                            not assume it means “careless” or “emotional.” In academic science, it usually means the
+                            process occurs without direct external control.</p>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+
+        <section class="section" id="family">
+            <h2>Word Family</h2>
+
+            <div class="family-grid">
+                <article class="family-card">
+                    <h3>spontaneously</h3>
+                    <p><strong>Part of speech:</strong> adverb</p>
+                    <p><strong>Definition:</strong> in a natural or unplanned way; without being forced or directly
+                        caused</p>
+                    <ol class="example-list">
+                        <li>The audience spontaneously stood up and applauded.</li>
+                        <li>The gas ignited spontaneously under extreme heat.</li>
+                    </ol>
+                </article>
+
+                <article class="family-card">
+                    <h3>spontaneity</h3>
+                    <p><strong>Part of speech:</strong> noun</p>
+                    <p><strong>Definition:</strong> the quality of being natural, unplanned, and not forced</p>
+                    <ol class="example-list">
+                        <li>The teacher encouraged spontaneity in classroom discussions.</li>
+                        <li>The performance had a sense of spontaneity that made it exciting.</li>
+                    </ol>
+                </article>
+
+                <article class="family-card">
+                    <h3>nonspontaneous</h3>
+                    <p><strong>Part of speech:</strong> adjective</p>
+                    <p><strong>Definition:</strong> not happening by itself; requiring outside energy or control</p>
+                    <ol class="example-list">
+                        <li>Some chemical reactions are nonspontaneous and need energy to occur.</li>
+                        <li>The process was nonspontaneous under normal conditions.</li>
+                    </ol>
+                </article>
+            </div>
+        </section>
+        <section class="section" id="collocations">
+            <h2>Common Collocations</h2>
+
+            <div class="collocation-grid">
+
+                <article class="collocation-card">
+                    <h3>spontaneous decision</h3>
+                    <p><strong>Meaning:</strong> an unplanned decision made at the moment</p>
+                    <p><strong>Example:</strong> We made a spontaneous decision to visit the coast after the conference.
+                    </p>
+                </article>
+
+                <article class="collocation-card">
+                    <h3>spontaneous reaction</h3>
+                    <p><strong>Meaning:</strong> a natural, immediate response</p>
+                    <p><strong>Example:</strong> Her spontaneous reaction showed genuine excitement.</p>
+                </article>
+
+                <article class="collocation-card">
+                    <h3>spontaneous applause</h3>
+                    <p><strong>Meaning:</strong> applause that begins naturally without being organized</p>
+                    <p><strong>Example:</strong> The lecture ended with spontaneous applause from the audience.</p>
+                </article>
+
+                <article class="collocation-card">
+                    <h3>spontaneous conversation</h3>
+                    <p><strong>Meaning:</strong> an informal conversation that begins naturally</p>
+                    <p><strong>Example:</strong> A spontaneous conversation with a classmate helped clarify the
+                        assignment.</p>
+                </article>
+
+                <article class="collocation-card">
+                    <h3>spontaneous recovery</h3>
+                    <p><strong>Meaning:</strong> recovery that happens naturally without major treatment</p>
+                    <p><strong>Example:</strong> Doctors were surprised by the patient's spontaneous recovery.</p>
+                </article>
+
+                <article class="collocation-card">
+                    <h3>spontaneous combustion</h3>
+                    <p><strong>Meaning:</strong> burning that begins without an external flame</p>
+                    <p><strong>Example:</strong> The professor explained the conditions required for spontaneous
+                        combustion.</p>
+                </article>
+
+                <article class="collocation-card">
+                    <h3>spontaneous mutation</h3>
+                    <p><strong>Meaning:</strong> a naturally occurring genetic change</p>
+                    <p><strong>Example:</strong> The species evolved partly through spontaneous mutations.</p>
+                </article>
+
+                <article class="collocation-card">
+                    <h3>spontaneous process</h3>
+                    <p><strong>Meaning:</strong> a process that occurs naturally without outside intervention</p>
+                    <p><strong>Example:</strong> Diffusion is a spontaneous process under suitable conditions.</p>
+                </article>
+
+                <article class="collocation-card">
+                    <h3>act spontaneously</h3>
+                    <p><strong>Meaning:</strong> behave naturally without planning</p>
+                    <p><strong>Example:</strong> She prefers to act spontaneously rather than follow a strict schedule.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="section" id="synonyms">
+            <h2>Direct Synonyms & Antonyms</h2>
+
+            <div class="info-grid">
+
+                <div class="info-card good">
+                    <h4>Direct synonyms</h4>
+
+                    <div class="word-pill-row">
+                        <span class="word-pill">natural</span>
+                        <span class="word-pill">unplanned</span>
+                        <span class="word-pill">impulsive</span>
+                        <span class="word-pill">instinctive</span>
+                    </div>
+
+                    <p><strong>Natural</strong> is the closest general synonym. <strong>Unplanned</strong> emphasizes
+                        lack of preparation. <strong>Impulsive</strong> often suggests acting quickly without thinking,
+                        so it can have a negative meaning. <strong>Instinctive</strong> emphasizes actions driven by
+                        instinct rather than careful reasoning.</p>
+
+                </div>
+
+                <div class="info-card warning">
+                    <h4>Direct antonyms</h4>
+
+                    <div class="word-pill-row">
+                        <span class="word-pill">planned</span>
+                        <span class="word-pill">deliberate</span>
+                        <span class="word-pill">intentional</span>
+                        <span class="word-pill">forced</span>
+                    </div>
+
+                    <p><strong>Planned</strong> and <strong>deliberate</strong> emphasize preparation.
+                        <strong>Intentional</strong> means done on purpose. <strong>Forced</strong> means caused by
+                        pressure rather than happening naturally.
+                    </p>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section" id="etymology">
+            <h2>Etymology</h2>
+
+            <div class="info-card">
+                <p><strong>Spontaneous</strong> comes from the Latin word <em>sponte</em>, meaning "<strong>of one's own
+                        free will</strong>" or "<strong>voluntarily</strong>." Over time, the word came to describe
+                    actions or events that arise naturally without planning or external force. This origin explains why
+                    <strong>spontaneous</strong> often means both "unplanned" and "happening by itself."
+                </p>
+            </div>
+
+        </section>
+
+        <section class="section" id="exercises">
+
+            <h2>Practice Exercises</h2>
+
+            <div class="exercise-grid">
+
+                <article class="exercise-card">
+                    <h3>1. Word family choice</h3>
+
+                    <p>Choose the best member of the word family for each blank.</p>
+
+                    <ol class="clean-list">
+                        <li>The audience __________ began clapping after the performance.</li>
+                        <li>The discussion had a sense of __________ that made it enjoyable.</li>
+                        <li>The chemical reaction is __________ under ordinary conditions.</li>
+                    </ol>
+
+                </article>
+
+                <article class="exercise-card">
+                    <h3>2. Correct or incorrect?</h3>
+
+                    <p>Decide whether each sentence uses the word correctly. If it is wrong, correct it.</p>
+
+                    <ol class="clean-list">
+                        <li>They made a spontaneous decision to change their travel plans.</li>
+                        <li>The students spontaneous answered the professor's question.</li>
+                        <li>The researchers observed spontaneous cell growth.</li>
+                    </ol>
+
+                </article>
+
+                <article class="exercise-card">
+                    <h3>3. Collocation practice</h3>
+
+                    <p>Complete each sentence with a natural collocation.</p>
+
+                    <ol class="clean-list">
+                        <li>The audience broke into spontaneous __________ after the inspiring speech.</li>
+                        <li>The patient made a spontaneous __________ before any medication was given.</li>
+                        <li>We made a spontaneous __________ to stay an extra day in the city.</li>
+                    </ol>
+
+                </article>
+
+                <article class="exercise-card">
+                    <h3>4. TOEFL-style meaning check</h3>
+
+                    <p>Choose the closest meaning of the word in context.</p>
+
+                    <ol class="clean-list">
+
+                        <li>
+                            The audience's spontaneous applause surprised the speaker because no one had encouraged
+                            people to clap.
+                            <br><br>
+                            A. carefully organized<br>
+                            B. natural and unplanned<br>
+                            C. extremely loud<br>
+                            D. required by the organizers
+                        </li>
+
+                        <li>
+                            Scientists observed a spontaneous reaction after mixing the two substances.
+                            <br><br>
+                            A. a reaction caused by human error<br>
+                            B. a reaction that occurred naturally under those conditions<br>
+                            C. a dangerous explosion<br>
+                            D. a reaction that could not be explained
+                        </li>
+
+                    </ol>
+
+                </article>
+
+            </div>
+
+            <details class="answer-key">
+
+                <summary>Answer Key</summary>
+
+                <ol class="clean-list">
+
+                    <li><strong>1.1 spontaneously</strong> — The adverb modifies the verb <em>began</em>.</li>
+
+                    <li><strong>1.2 spontaneity</strong> — The noun names the quality being described.</li>
+
+                    <li><strong>1.3 spontaneous</strong> — The adjective describes the reaction.</li>
+
+                    <li><strong>2.1 Correct.</strong></li>
+
+                    <li><strong>2.2 Incorrect.</strong> → <strong>The students spontaneously answered the professor's
+                            question.</strong></li>
+
+                    <li><strong>2.3 Correct.</strong></li>
+
+                    <li><strong>3.1 applause</strong> — <em>Spontaneous applause</em> is a very common collocation.</li>
+
+                    <li><strong>3.2 recovery</strong> — <em>Spontaneous recovery</em> is common in medicine.</li>
+
+                    <li><strong>3.3 decision</strong> — <em>Spontaneous decision</em> is one of the most frequent
+                        everyday collocations.</li>
+
+                    <li><strong>4.1 B</strong> — It happened naturally without planning.</li>
+
+                    <li><strong>4.2 B</strong> — In science, <em>spontaneous</em> means occurring naturally under the
+                        given conditions, not necessarily instantly or randomly.</li>
+
+                </ol>
+
+            </details>
+
+        </section>
+
+        <footer class="ext-footer">
+            <span>Compiled by <strong>Amir Kooshky</strong></span>
+            <span><a href="https://t.me/KooshkyTOEFL">📚 @KooshkyToefl</a></span>
+            <span><a href="https://www.instagram.com/kooshkytoefl">Instagram</a></span>
+            <span><a href="https://t.me/KooshkyTOEFL_pv">Personal Telegram</a></span>
+        </footer>
+
+    </main>
+</body>
+
+</html>

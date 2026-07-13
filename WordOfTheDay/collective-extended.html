@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>collective | Extended TOEFL Explanation</title>
+  <style>
+    :root {
+      --bg: #08090d;
+      --bg-soft: #10131b;
+      --card: rgba(255, 255, 255, 0.065);
+      --card-strong: rgba(255, 255, 255, 0.105);
+      --text: #f4f1ea;
+      --muted: #b9b2a7;
+      --faint: #8f887d;
+      --gold: #d8b35a;
+      --gold-soft: rgba(216, 179, 90, 0.16);
+      --blue: #8bb7ff;
+      --green: #9be2bd;
+      --red: #ff9d9d;
+      --border: rgba(255, 255, 255, 0.14);
+      --shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+      --radius-lg: 28px;
+      --radius-md: 18px;
+      --radius-sm: 12px;
+      --max: 980px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at top left, rgba(216, 179, 90, 0.18), transparent 32rem),
+        radial-gradient(circle at bottom right, rgba(139, 183, 255, 0.13), transparent 30rem),
+        var(--bg);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      line-height: 1.65;
+    }
+
+    a {
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      width: min(100%, var(--max));
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* =========================
+     INTRO IMAGE TEMPLATE
+  ========================= */
+
+    .intro-page {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 20px;
+    }
+
+    .intro-shot {
+      width: min(100%, 860px);
+      aspect-ratio: 4 / 5;
+      min-height: 680px;
+      border: 1px solid var(--border);
+      border-radius: 42px;
+      overflow: hidden;
+      position: relative;
+      background:
+        linear-gradient(135deg, rgba(216, 179, 90, 0.18), transparent 35%),
+        linear-gradient(315deg, rgba(139, 183, 255, 0.18), transparent 35%),
+        #0b0d13;
+      box-shadow: var(--shadow);
+      padding: clamp(26px, 6vw, 68px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .intro-shot::before {
+      content: "";
+      position: absolute;
+      inset: 22px;
+      border: 1px solid rgba(216, 179, 90, 0.24);
+      border-radius: 32px;
+      pointer-events: none;
+    }
+
+    .intro-kicker,
+    .ext-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      width: fit-content;
+      padding: 8px 13px;
+      border: 1px solid rgba(216, 179, 90, 0.28);
+      border-radius: 999px;
+      background: var(--gold-soft);
+      color: var(--gold);
+      font-size: clamp(0.78rem, 2.2vw, 0.95rem);
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .intro-center {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .intro-word {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(4.4rem, 4.5vw, 9.5rem);
+      line-height: 0.92;
+      letter-spacing: -0.04em;
+      color: #fff8ea;
+      text-shadow: 0 12px 45px rgba(0, 0, 0, 0.55);
+    }
+
+    .intro-ipa {
+      margin: 18px 0 0;
+      color: var(--gold);
+      font-size: clamp(1.05rem, 4vw, 1.5rem);
+      font-weight: 700;
+    }
+
+    .intro-meanings {
+      margin: 28px auto 0;
+      display: grid;
+      gap: 12px;
+      max-width: 640px;
+    }
+
+    .intro-meaning {
+      padding: 15px 18px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.075);
+      backdrop-filter: blur(12px);
+      font-size: clamp(1rem, 3.2vw, 1.25rem);
+      font-weight: 650;
+    }
+
+    .intro-example {
+      margin: 26px auto 0;
+      max-width: 650px;
+      color: var(--muted);
+      font-size: clamp(0.95rem, 3vw, 1.15rem);
+    }
+
+    .intro-footer,
+    .ext-footer {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 16px;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .intro-footer strong,
+    .ext-footer strong {
+      color: var(--text);
+    }
+
+    /* =========================
+     EXTENDED PAGE TEMPLATE
+  ========================= */
+
+    .extended-page {
+      padding-bottom: 50px;
+    }
+
+    .hero {
+      margin: 18px auto 22px;
+      padding: clamp(24px, 5vw, 46px);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      background:
+        linear-gradient(135deg, rgba(216, 179, 90, 0.14), transparent 42%),
+        var(--card);
+      box-shadow: var(--shadow);
+    }
+
+    .hero h1 {
+      margin: 18px 0 8px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.4rem, 10vw, 6.2rem);
+      line-height: 0.95;
+      letter-spacing: -0.055em;
+
+      white-space: nowrap;
+      overflow-wrap: normal;
+      word-break: normal;
+      hyphens: none;
+      max-width: 100%;
+    }
+
+    .hero-subtitle {
+      margin: 0;
+      color: var(--muted);
+      font-size: clamp(1rem, 3vw, 1.2rem);
+    }
+
+    .brand-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .brand-links a {
+      display: inline-flex;
+      padding: 9px 13px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.055);
+      color: var(--text);
+      font-size: 0.94rem;
+    }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .meta-card,
+    .toc,
+    .section,
+    .sense-card,
+    .info-card,
+    .family-card,
+    .collocation-card,
+    .exercise-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--card);
+    }
+
+    .meta-card {
+      padding: 15px;
+    }
+
+    .meta-label {
+      display: block;
+      color: var(--faint);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 800;
+    }
+
+    .meta-value {
+      display: block;
+      margin-top: 5px;
+      font-weight: 800;
+    }
+
+    .toc {
+      padding: 18px;
+      margin: 20px 0;
+    }
+
+    .toc-title {
+      margin: 0 0 10px;
+      color: var(--gold);
+      font-weight: 900;
+    }
+
+    .toc-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .toc-links a {
+      padding: 8px 11px;
+      border-radius: 999px;
+      background: var(--gold-soft);
+      color: var(--gold);
+      font-size: 0.93rem;
+    }
+
+    .section {
+      margin: 20px 0;
+      padding: clamp(18px, 4vw, 30px);
+    }
+
+    .section h2 {
+      margin: 0 0 18px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.8rem, 6vw, 2.7rem);
+      line-height: 1.1;
+    }
+
+    .sense-card {
+      padding: clamp(16px, 4vw, 26px);
+      margin: 16px 0;
+    }
+
+    .sense-head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .sense-num,
+    .pos-badge,
+    .ipa-badge {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      font-weight: 850;
+    }
+
+    .sense-num {
+      padding: 7px 12px;
+      background: var(--gold);
+      color: #14120b;
+    }
+
+    .pos-badge {
+      padding: 7px 11px;
+      background: rgba(139, 183, 255, 0.16);
+      color: var(--blue);
+    }
+
+    .ipa-badge {
+      padding: 7px 11px;
+      background: rgba(255, 255, 255, 0.07);
+      color: var(--muted);
+    }
+
+    .definition {
+      font-size: 1.12rem;
+      font-weight: 750;
+      color: #fff7e8;
+    }
+
+    .simple-label {
+      margin: 20px 0 8px;
+      color: var(--gold);
+      font-weight: 900;
+    }
+
+    .example-list,
+    .clean-list,
+    .wrong-list {
+      margin: 8px 0 0;
+      padding-left: 1.25rem;
+    }
+
+    .example-list li,
+    .clean-list li,
+    .wrong-list li {
+      margin: 8px 0;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .info-card {
+      padding: 14px;
+    }
+
+    .info-card h4,
+    .family-card h3,
+    .collocation-card h3,
+    .exercise-card h3 {
+      margin: 0 0 8px;
+      color: var(--gold);
+    }
+
+    .warning {
+      border-color: rgba(255, 157, 157, 0.35);
+      background: rgba(255, 157, 157, 0.07);
+    }
+
+    .good {
+      border-color: rgba(155, 226, 189, 0.3);
+      background: rgba(155, 226, 189, 0.06);
+    }
+
+    .family-grid,
+    .collocation-grid,
+    .exercise-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .family-card,
+    .collocation-card,
+    .exercise-card {
+      padding: 16px;
+    }
+
+    .word-pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+    }
+
+    .word-pill {
+      display: inline-flex;
+      padding: 8px 11px;
+      border-radius: 999px;
+      background: var(--card-strong);
+      border: 1px solid var(--border);
+      font-weight: 800;
+    }
+
+    details.answer-key {
+      margin-top: 16px;
+      border: 1px solid rgba(216, 179, 90, 0.3);
+      border-radius: var(--radius-md);
+      background: var(--gold-soft);
+      padding: 14px 16px;
+    }
+
+    details.answer-key summary {
+      cursor: pointer;
+      color: var(--gold);
+      font-weight: 950;
+    }
+
+    .ext-footer {
+      margin-top: 22px;
+      padding: 22px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      background: var(--card);
+    }
+
+    /* =========================
+     RESPONSIVE RULES
+  ========================= */
+
+    @media (max-width: 720px) {
+      .page {
+        padding: 12px;
+      }
+
+      .intro-page {
+        padding: 10px;
+      }
+
+      .intro-shot {
+        min-height: 620px;
+        border-radius: 30px;
+        padding: 26px 18px;
+      }
+
+      .intro-shot::before {
+        inset: 12px;
+        border-radius: 24px;
+      }
+
+      .intro-word {
+        letter-spacing: -0.07em;
+      }
+
+      .intro-footer,
+      .ext-footer {
+        display: grid;
+        justify-content: stretch;
+      }
+
+      .meta-grid,
+      .info-grid,
+      .family-grid,
+      .collocation-grid,
+      .exercise-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero,
+      .section {
+        border-radius: 22px;
+      }
+
+      .sense-head {
+        align-items: flex-start;
+      }
+
+      .brand-links a,
+      .toc-links a {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .hero h1 {
+        font-size: clamp(1.55rem, 8.8vw, 2.65rem);
+        line-height: 1.02;
+        letter-spacing: -0.035em;
+        white-space: nowrap;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .intro-shot {
+        aspect-ratio: auto;
+        min-height: 600px;
+      }
+
+      .intro-meaning {
+        padding: 12px 14px;
+      }
+    }
+  </style>
+</head>
+
+<body class="extended-page">
+  <main class="page">
+
+    <header class="hero">
+      <div class="ext-kicker">📚✨ TOEFL Word of the Day ✨📚</div>
+      <h1>collective</h1>
+      <p class="hero-subtitle">A complete TOEFL learner guide compiled by <strong>Amir Kooshky</strong>.</p>
+
+      <div class="brand-links">
+        <a href="https://t.me/KooshkyTOEFL" target="_blank">Telegram Channel</a>
+        <a href="https://www.instagram.com/kooshkytoefl" target="_blank">Instagram</a>
+        <a href="https://t.me/KooshkyTOEFL_pv" target="_blank">Personal Telegram</a>
+      </div>
+
+      <div class="meta-grid">
+        <div class="meta-card">
+          <span class="meta-label">Date</span>
+          <span class="meta-value">July 8th 2026</span>
+        </div>
+        <div class="meta-card">
+          <span class="meta-label">Word</span>
+          <span class="meta-value">collective</span>
+        </div>
+        <div class="meta-card">
+          <span class="meta-label">Level</span>
+          <span class="meta-value">B1–B2 TOEFL</span>
+        </div>
+      </div>
+    </header>
+
+    <nav class="toc">
+      <p class="toc-title">Study sections</p>
+      <div class="toc-links">
+        <a href="#meanings">Meanings</a>
+        <a href="#family">Word Family</a>
+        <a href="#collocations">Collocations</a>
+        <a href="#synonyms">Synonyms & Antonyms</a>
+        <a href="#etymology">Etymology</a>
+        <a href="#exercises">Exercises</a>
+      </div>
+    </nav>
+
+    <section class="section" id="meanings">
+      <h2>Meanings & Usage</h2>
+
+      <article class="sense-card">
+        <div class="sense-head">
+          <span class="sense-num">Meaning 1</span>
+          <span class="pos-badge">adjective</span>
+          <span class="ipa-badge">/kəˈlektɪv/</span>
+        </div>
+
+        <p class="definition">Shared by, done by, or involving all the members of a group, not just one person.</p>
+
+        <p class="simple-label">Natural examples</p>
+        <ol class="example-list">
+          <li>Solving environmental problems often requires collective action, not only individual choices.</li>
+          <li>The team made a collective decision to repeat the experiment with better controls.</li>
+          <li>The students felt a collective sense of relief after the final exam ended.</li>
+          <li>The report argues that public health depends on collective responsibility.</li>
+          <li>The workers' collective effort helped the organization finish the project ahead of schedule.</li>
+        </ol>
+
+        <div class="info-grid">
+          <div class="info-card good">
+            <h4>Nuance & implication</h4>
+            <p>This meaning emphasizes the group as a whole. It often appears in academic writing about society,
+              politics, history, psychology, education, teamwork, and environmental issues. It can suggest cooperation,
+              shared responsibility, or group-level effects.</p>
+          </div>
+
+          <div class="info-card">
+            <h4>Grammar notes</h4>
+            <p><strong>Collective</strong> is usually an adjective before a noun: <em>collective action</em>,
+              <em>collective memory</em>, <em>collective responsibility</em>, <em>collective decision-making</em>. It
+              does not take a direct object because it is not a verb. Common patterns include <em>collective
+                responsibility for something</em>, <em>a collective effort to do something</em>, and <em>collective
+                action against a problem</em>.</p>
+          </div>
+
+          <div class="info-card warning">
+            <h4>Common wrong usage</h4>
+            <ul class="wrong-list">
+              <li>❌ The team collective solved the problem. → ✅ The team solved the problem collectively.</li>
+              <li>❌ We need a collective to reduce pollution. → ✅ We need collective action to reduce pollution.</li>
+            </ul>
+          </div>
+
+          <div class="info-card">
+            <h4>TOEFL tip</h4>
+            <p>In TOEFL reading, <strong>collective</strong> often signals that the writer is discussing a group-level
+              process. Ask: Is the text about one person, or about people acting together?</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="sense-card">
+        <div class="sense-head">
+          <span class="sense-num">Meaning 2</span>
+          <span class="pos-badge">adjective</span>
+          <span class="ipa-badge">/kəˈlektɪv/</span>
+        </div>
+
+        <p class="definition">Belonging to or describing a group as a whole, especially when the group has a shared
+          identity, memory, behavior, or interest.</p>
+
+        <p class="simple-label">Natural examples</p>
+        <ol class="example-list">
+          <li>National holidays can strengthen a society's collective identity.</li>
+          <li>The museum preserves the collective memory of the community.</li>
+          <li>Researchers studied collective behavior among birds during migration.</li>
+          <li>A crisis can change the collective mood of a city or country.</li>
+          <li>The article discusses how stories shape a group's collective understanding of the past.</li>
+        </ol>
+
+        <div class="info-grid">
+          <div class="info-card good">
+            <h4>Nuance & implication</h4>
+            <p>This meaning is close to Meaning 1, but it focuses less on action and more on shared qualities,
+              experiences, or patterns. It is common in academic phrases such as <em>collective memory</em>,
+              <em>collective identity</em>, <em>collective behavior</em>, and <em>collective interest</em>.</p>
+          </div>
+
+          <div class="info-card">
+            <h4>Grammar notes</h4>
+            <p><strong>Collective</strong> normally modifies abstract nouns in this meaning: <em>memory</em>,
+              <em>identity</em>, <em>behavior</em>, <em>interest</em>, <em>consciousness</em>, <em>experience</em>. Do
+              not confuse <strong>collective</strong> with <strong>collected</strong>. <em>Collected</em> can mean
+              gathered or calm; <em>collective</em> means shared by a group or related to a group as a whole.</p>
+          </div>
+
+          <div class="info-card warning">
+            <h4>Common wrong usage</h4>
+            <ul class="wrong-list">
+              <li>❌ The community's collected memory was shaped by war. → ✅ The community's collective memory was shaped
+                by war.</li>
+              <li>❌ This is a collective problem for only one person. → ✅ This is an individual problem for one person.
+              </li>
+            </ul>
+          </div>
+
+          <div class="info-card">
+            <h4>TOEFL tip</h4>
+            <p>When you see phrases like <strong>collective memory</strong> or <strong>collective behavior</strong>,
+              expect the passage to discuss patterns shared by many people or animals, not private feelings or single
+              actions.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="sense-card">
+        <div class="sense-head">
+          <span class="sense-num">Meaning 3</span>
+          <span class="pos-badge">noun · countable</span>
+          <span class="ipa-badge">/kəˈlektɪv/</span>
+        </div>
+
+        <p class="definition">A group of people, organizations, or workers who act together for a shared purpose, often
+          with shared control or shared resources.</p>
+
+        <p class="simple-label">Natural examples</p>
+        <ol class="example-list">
+          <li>A group of artists formed a collective to share studio space and equipment.</li>
+          <li>The farmers' collective helped small farms sell their products directly to local markets.</li>
+          <li>The workers ran the café as a collective, so major decisions were made together.</li>
+          <li>A student collective organized free tutoring sessions for first-year students.</li>
+          <li>The neighborhood food collective buys fresh produce from nearby farms.</li>
+        </ol>
+
+        <div class="info-grid">
+          <div class="info-card good">
+            <h4>Nuance & implication</h4>
+            <p>As a noun, <strong>collective</strong> is more specific than <em>group</em>. It often suggests
+              cooperation, shared ownership, shared decision-making, or a common social, artistic, political, or
+              economic goal.</p>
+          </div>
+
+          <div class="info-card">
+            <h4>Grammar notes</h4>
+            <p>As a noun, <strong>collective</strong> is countable: <em>a collective</em>, <em>the collective</em>,
+              <em>several collectives</em>. Common patterns include <em>a collective of artists</em>, <em>a workers'
+                collective</em>, <em>a farming collective</em>, and <em>form a collective</em>. Do not use it for every
+              ordinary group; use it when members act together for a shared goal or structure.</p>
+          </div>
+
+          <div class="info-card warning">
+            <h4>Common wrong usage</h4>
+            <ul class="wrong-list">
+              <li>❌ My family is a collective because we live together. → ✅ My family is a group, but not usually called
+                a collective.</li>
+              <li>❌ The collective of three random passengers waited for the bus. → ✅ The group of three passengers
+                waited for the bus.</li>
+            </ul>
+          </div>
+
+          <div class="info-card">
+            <h4>TOEFL tip</h4>
+            <p>If <strong>collective</strong> is used after <em>a</em>, <em>the</em>, or another determiner, it may be a
+              noun. In that case, it means a cooperative group, not just the idea of teamwork.</p>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <section class="section" id="family">
+      <h2>Word Family</h2>
+
+      <div class="family-grid">
+        <article class="family-card">
+          <h3>collective</h3>
+          <p><strong>Part of speech:</strong> adjective / noun</p>
+          <p><strong>Definition:</strong> shared by a group, or a group that works together for a shared purpose</p>
+          <ol class="example-list">
+            <li>The class reached a collective decision.</li>
+            <li>The artists formed a collective downtown.</li>
+          </ol>
+        </article>
+
+        <article class="family-card">
+          <h3>collectively</h3>
+          <p><strong>Part of speech:</strong> adverb</p>
+          <p><strong>Definition:</strong> together as a group; not separately</p>
+          <ol class="example-list">
+            <li>The countries agreed to act collectively against the threat.</li>
+            <li>The students collectively decided to ask for more time.</li>
+          </ol>
+        </article>
+
+        <article class="family-card">
+          <h3>collect</h3>
+          <p><strong>Part of speech:</strong> verb</p>
+          <p><strong>Definition:</strong> to bring things together, gather information, or receive money from people</p>
+          <ol class="example-list">
+            <li>The researchers collected data from three different schools.</li>
+            <li>The museum collects objects from the early twentieth century.</li>
+          </ol>
+        </article>
+
+        <article class="family-card">
+          <h3>collection</h3>
+          <p><strong>Part of speech:</strong> noun</p>
+          <p><strong>Definition:</strong> a group of things gathered together, often because they are similar or
+            valuable</p>
+          <ol class="example-list">
+            <li>The library has a large collection of historical maps.</li>
+            <li>The study is based on a collection of interviews with teachers.</li>
+          </ol>
+        </article>
+
+        <article class="family-card">
+          <h3>collector</h3>
+          <p><strong>Part of speech:</strong> noun</p>
+          <p><strong>Definition:</strong> a person who gathers or keeps a particular type of object</p>
+          <ol class="example-list">
+            <li>The painting was bought by a private collector.</li>
+            <li>Stamp collectors often care about condition and rarity.</li>
+          </ol>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="collocations">
+      <h2>Common Collocations</h2>
+
+      <div class="collocation-grid">
+        <article class="collocation-card">
+          <h3>collective action</h3>
+          <p><strong>Meaning:</strong> action taken by a group to reach a shared goal</p>
+          <p><strong>Example:</strong> Reducing air pollution requires collective action from governments, businesses,
+            and citizens.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>collective effort</h3>
+          <p><strong>Meaning:</strong> work done together by many people</p>
+          <p><strong>Example:</strong> The successful campaign was a collective effort by teachers, parents, and
+            students.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>collective responsibility</h3>
+          <p><strong>Meaning:</strong> responsibility shared by all members of a group</p>
+          <p><strong>Example:</strong> The article argues that public health is a matter of collective responsibility.
+          </p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>collective decision</h3>
+          <p><strong>Meaning:</strong> a decision made by a group together</p>
+          <p><strong>Example:</strong> The research team made a collective decision to change the design of the study.
+          </p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>collective decision-making</h3>
+          <p><strong>Meaning:</strong> the process of making decisions as a group</p>
+          <p><strong>Example:</strong> Collective decision-making can improve trust, but it may also take more time.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>collective memory</h3>
+          <p><strong>Meaning:</strong> shared memories or shared understanding of the past within a group</p>
+          <p><strong>Example:</strong> Monuments can shape a nation's collective memory.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>collective identity</h3>
+          <p><strong>Meaning:</strong> the shared sense of who a group is</p>
+          <p><strong>Example:</strong> Music and language can strengthen a community's collective identity.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>collective behavior</h3>
+          <p><strong>Meaning:</strong> behavior shown by many members of a group</p>
+          <p><strong>Example:</strong> Scientists studied collective behavior in schools of fish.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>collective interest</h3>
+          <p><strong>Meaning:</strong> the shared benefit or goal of a group</p>
+          <p><strong>Example:</strong> The policy was designed to protect the collective interest of the community.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>collective bargaining</h3>
+          <p><strong>Meaning:</strong> negotiation between workers as a group and an employer</p>
+          <p><strong>Example:</strong> Collective bargaining helped workers negotiate better pay and safer conditions.
+          </p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>collective noun</h3>
+          <p><strong>Meaning:</strong> a noun that names a group, such as <em>team</em>, <em>committee</em>, or
+            <em>family</em></p>
+          <p><strong>Example:</strong> <em>Audience</em> is a collective noun because it refers to a group of people.
+          </p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>workers' collective</h3>
+          <p><strong>Meaning:</strong> a workplace or organization controlled by workers together</p>
+          <p><strong>Example:</strong> The workers' collective shared profits and made decisions democratically.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>artist collective</h3>
+          <p><strong>Meaning:</strong> a group of artists who work together or share resources</p>
+          <p><strong>Example:</strong> The artist collective opened a small gallery in an old warehouse.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>farming collective</h3>
+          <p><strong>Meaning:</strong> a group of farmers who share land, tools, labor, or profits</p>
+          <p><strong>Example:</strong> The farming collective allowed small farmers to buy equipment together.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="synonyms">
+      <h2>Direct Synonyms & Antonyms</h2>
+
+      <div class="info-grid">
+        <div class="info-card good">
+          <h4>Direct synonyms</h4>
+          <div class="word-pill-row">
+            <span class="word-pill">shared</span>
+            <span class="word-pill">joint</span>
+            <span class="word-pill">group</span>
+            <span class="word-pill">communal</span>
+            <span class="word-pill">cooperative</span>
+          </div>
+          <p><strong>Shared</strong> is the simplest synonym when something belongs to several people.
+            <strong>Joint</strong> often describes action or responsibility done together. <strong>Communal</strong>
+            often suggests community life or shared resources. <strong>Cooperative</strong> emphasizes working together,
+            especially for a common purpose.</p>
+        </div>
+
+        <div class="info-card warning">
+          <h4>Direct antonyms</h4>
+          <div class="word-pill-row">
+            <span class="word-pill">individual</span>
+            <span class="word-pill">personal</span>
+            <span class="word-pill">private</span>
+            <span class="word-pill">separate</span>
+            <span class="word-pill">independent</span>
+          </div>
+          <p><strong>Individual</strong> is the most common contrast when the focus is one person rather than the group.
+            <strong>Personal</strong> and <strong>private</strong> contrast with shared or public group matters.
+            <strong>Separate</strong> and <strong>independent</strong> emphasize not acting together.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="etymology">
+      <h2>Etymology</h2>
+      <div class="info-card">
+        <p><strong>Collective</strong> comes from the same Latin root as <strong>collect</strong>, meaning to gather
+          together. This history is useful because the modern word still keeps the idea of many people or things being
+          brought together and treated as one group.</p>
+      </div>
+    </section>
+
+    <section class="section" id="exercises">
+      <h2>Practice Exercises</h2>
+
+      <div class="exercise-grid">
+        <article class="exercise-card">
+          <h3>1. Word family choice</h3>
+          <p>Choose the best member of the word family for each blank.</p>
+          <ol class="clean-list">
+            <li>The researchers will __________ data from more than 500 students.</li>
+            <li>The project succeeded because of the team's __________ effort.</li>
+            <li>The students worked __________ to design a fair solution.</li>
+          </ol>
+        </article>
+
+        <article class="exercise-card">
+          <h3>2. Correct or incorrect?</h3>
+          <p>Decide whether each sentence uses the word correctly. If it is wrong, correct it.</p>
+          <ol class="clean-list">
+            <li>The community showed collective responsibility after the flood.</li>
+            <li>The team collective decided to change the plan.</li>
+            <li>A collective of artists opened a shared studio downtown.</li>
+          </ol>
+        </article>
+
+        <article class="exercise-card">
+          <h3>3. Collocation practice</h3>
+          <p>Complete each sentence with a natural collocation.</p>
+          <ol class="clean-list">
+            <li>Reducing plastic waste requires __________ from consumers, companies, and governments.</li>
+            <li>The monument became part of the nation's __________.</li>
+            <li>The union used __________ to negotiate higher wages.</li>
+          </ol>
+        </article>
+      </div>
+
+      <details class="answer-key">
+        <summary>Answer Key</summary>
+        <ol class="clean-list">
+          <li><strong>collect</strong> — The verb means to gather data or information.</li>
+          <li><strong>collective</strong> — The adjective describes an effort made by the whole team.</li>
+          <li><strong>collectively</strong> — The adverb means together as a group.</li>
+          <li><strong>Correct.</strong> <em>Collective responsibility</em> is a natural collocation.</li>
+          <li><strong>Incorrect.</strong> Better: <em>The team collectively decided to change the plan</em> or <em>The
+              team made a collective decision to change the plan</em>.</li>
+          <li><strong>Correct.</strong> A <em>collective of artists</em> means a group of artists working together.</li>
+          <li><strong>collective action</strong> — This means action taken together by a group.</li>
+          <li><strong>collective memory</strong> — This means the shared memory or understanding of the past within a
+            group.</li>
+          <li><strong>collective bargaining</strong> — This means workers negotiating as a group with an employer.</li>
+        </ol>
+      </details>
+    </section>
+
+    <footer class="ext-footer">
+      <span>Compiled by <strong>Amir Kooshky</strong></span>
+      <span><a href="https://t.me/KooshkyTOEFL">📚 @KooshkyTOEFL</a></span>
+      <span><a href="https://www.instagram.com/kooshkytoefl">Instagram</a></span>
+      <span><a href="https://t.me/KooshkyTOEFL_pv">Personal Telegram</a></span>
+    </footer>
+
+  </main>
+</body>
+
+</html>

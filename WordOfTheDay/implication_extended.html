@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>implication | Extended TOEFL Explanation</title>
+  <style>
+    :root {
+      --bg: #08090d;
+      --bg-soft: #10131b;
+      --card: rgba(255, 255, 255, 0.065);
+      --card-strong: rgba(255, 255, 255, 0.105);
+      --text: #f4f1ea;
+      --muted: #b9b2a7;
+      --faint: #8f887d;
+      --gold: #d8b35a;
+      --gold-soft: rgba(216, 179, 90, 0.16);
+      --blue: #8bb7ff;
+      --green: #9be2bd;
+      --red: #ff9d9d;
+      --border: rgba(255, 255, 255, 0.14);
+      --shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+      --radius-lg: 28px;
+      --radius-md: 18px;
+      --radius-sm: 12px;
+      --max: 980px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at top left, rgba(216, 179, 90, 0.18), transparent 32rem),
+        radial-gradient(circle at bottom right, rgba(139, 183, 255, 0.13), transparent 30rem),
+        var(--bg);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      line-height: 1.65;
+    }
+
+    a {
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      width: min(100%, var(--max));
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* =========================
+     INTRO IMAGE TEMPLATE
+  ========================= */
+
+    .intro-page {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 20px;
+    }
+
+    .intro-shot {
+      width: min(100%, 860px);
+      aspect-ratio: 4 / 5;
+      min-height: 680px;
+      border: 1px solid var(--border);
+      border-radius: 42px;
+      overflow: hidden;
+      position: relative;
+      background:
+        linear-gradient(135deg, rgba(216, 179, 90, 0.18), transparent 35%),
+        linear-gradient(315deg, rgba(139, 183, 255, 0.18), transparent 35%),
+        #0b0d13;
+      box-shadow: var(--shadow);
+      padding: clamp(26px, 6vw, 68px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .intro-shot::before {
+      content: "";
+      position: absolute;
+      inset: 22px;
+      border: 1px solid rgba(216, 179, 90, 0.24);
+      border-radius: 32px;
+      pointer-events: none;
+    }
+
+    .intro-kicker,
+    .ext-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      width: fit-content;
+      padding: 8px 13px;
+      border: 1px solid rgba(216, 179, 90, 0.28);
+      border-radius: 999px;
+      background: var(--gold-soft);
+      color: var(--gold);
+      font-size: clamp(0.78rem, 2.2vw, 0.95rem);
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .intro-center {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .intro-word {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(4.4rem, 4.5vw, 9.5rem);
+      line-height: 0.92;
+      letter-spacing: -0.04em;
+      color: #fff8ea;
+      text-shadow: 0 12px 45px rgba(0, 0, 0, 0.55);
+    }
+
+    .intro-ipa {
+      margin: 18px 0 0;
+      color: var(--gold);
+      font-size: clamp(1.05rem, 4vw, 1.5rem);
+      font-weight: 700;
+    }
+
+    .intro-meanings {
+      margin: 28px auto 0;
+      display: grid;
+      gap: 12px;
+      max-width: 640px;
+    }
+
+    .intro-meaning {
+      padding: 15px 18px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.075);
+      backdrop-filter: blur(12px);
+      font-size: clamp(1rem, 3.2vw, 1.25rem);
+      font-weight: 650;
+    }
+
+    .intro-example {
+      margin: 26px auto 0;
+      max-width: 650px;
+      color: var(--muted);
+      font-size: clamp(0.95rem, 3vw, 1.15rem);
+    }
+
+    .intro-footer,
+    .ext-footer {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 16px;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .intro-footer strong,
+    .ext-footer strong {
+      color: var(--text);
+    }
+
+    /* =========================
+     EXTENDED PAGE TEMPLATE
+  ========================= */
+
+    .extended-page {
+      padding-bottom: 50px;
+    }
+
+    .hero {
+      margin: 18px auto 22px;
+      padding: clamp(24px, 5vw, 46px);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      background:
+        linear-gradient(135deg, rgba(216, 179, 90, 0.14), transparent 42%),
+        var(--card);
+      box-shadow: var(--shadow);
+    }
+
+    .hero h1 {
+      margin: 18px 0 8px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.4rem, 10vw, 6.2rem);
+      line-height: 0.95;
+      letter-spacing: -0.055em;
+
+      white-space: nowrap;
+      overflow-wrap: normal;
+      word-break: normal;
+      hyphens: none;
+      max-width: 100%;
+    }
+
+    .hero-subtitle {
+      margin: 0;
+      color: var(--muted);
+      font-size: clamp(1rem, 3vw, 1.2rem);
+    }
+
+    .brand-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .brand-links a {
+      display: inline-flex;
+      padding: 9px 13px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.055);
+      color: var(--text);
+      font-size: 0.94rem;
+    }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .meta-card,
+    .toc,
+    .section,
+    .sense-card,
+    .info-card,
+    .family-card,
+    .collocation-card,
+    .exercise-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--card);
+    }
+
+    .meta-card {
+      padding: 15px;
+    }
+
+    .meta-label {
+      display: block;
+      color: var(--faint);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 800;
+    }
+
+    .meta-value {
+      display: block;
+      margin-top: 5px;
+      font-weight: 800;
+    }
+
+    .toc {
+      padding: 18px;
+      margin: 20px 0;
+    }
+
+    .toc-title {
+      margin: 0 0 10px;
+      color: var(--gold);
+      font-weight: 900;
+    }
+
+    .toc-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .toc-links a {
+      padding: 8px 11px;
+      border-radius: 999px;
+      background: var(--gold-soft);
+      color: var(--gold);
+      font-size: 0.93rem;
+    }
+
+    .section {
+      margin: 20px 0;
+      padding: clamp(18px, 4vw, 30px);
+    }
+
+    .section h2 {
+      margin: 0 0 18px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.8rem, 6vw, 2.7rem);
+      line-height: 1.1;
+    }
+
+    .sense-card {
+      padding: clamp(16px, 4vw, 26px);
+      margin: 16px 0;
+    }
+
+    .sense-head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .sense-num,
+    .pos-badge,
+    .ipa-badge {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      font-weight: 850;
+    }
+
+    .sense-num {
+      padding: 7px 12px;
+      background: var(--gold);
+      color: #14120b;
+    }
+
+    .pos-badge {
+      padding: 7px 11px;
+      background: rgba(139, 183, 255, 0.16);
+      color: var(--blue);
+    }
+
+    .ipa-badge {
+      padding: 7px 11px;
+      background: rgba(255, 255, 255, 0.07);
+      color: var(--muted);
+    }
+
+    .definition {
+      font-size: 1.12rem;
+      font-weight: 750;
+      color: #fff7e8;
+    }
+
+    .simple-label {
+      margin: 20px 0 8px;
+      color: var(--gold);
+      font-weight: 900;
+    }
+
+    .example-list,
+    .clean-list,
+    .wrong-list {
+      margin: 8px 0 0;
+      padding-left: 1.25rem;
+    }
+
+    .example-list li,
+    .clean-list li,
+    .wrong-list li {
+      margin: 8px 0;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .info-card {
+      padding: 14px;
+    }
+
+    .info-card h4,
+    .family-card h3,
+    .collocation-card h3,
+    .exercise-card h3 {
+      margin: 0 0 8px;
+      color: var(--gold);
+    }
+
+    .warning {
+      border-color: rgba(255, 157, 157, 0.35);
+      background: rgba(255, 157, 157, 0.07);
+    }
+
+    .good {
+      border-color: rgba(155, 226, 189, 0.3);
+      background: rgba(155, 226, 189, 0.06);
+    }
+
+    .family-grid,
+    .collocation-grid,
+    .exercise-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .family-card,
+    .collocation-card,
+    .exercise-card {
+      padding: 16px;
+    }
+
+    .word-pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+    }
+
+    .word-pill {
+      display: inline-flex;
+      padding: 8px 11px;
+      border-radius: 999px;
+      background: var(--card-strong);
+      border: 1px solid var(--border);
+      font-weight: 800;
+    }
+
+    details.answer-key {
+      margin-top: 16px;
+      border: 1px solid rgba(216, 179, 90, 0.3);
+      border-radius: var(--radius-md);
+      background: var(--gold-soft);
+      padding: 14px 16px;
+    }
+
+    details.answer-key summary {
+      cursor: pointer;
+      color: var(--gold);
+      font-weight: 950;
+    }
+
+    .ext-footer {
+      margin-top: 22px;
+      padding: 22px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      background: var(--card);
+    }
+
+    /* =========================
+     RESPONSIVE RULES
+  ========================= */
+
+    @media (max-width: 720px) {
+      .page {
+        padding: 12px;
+      }
+
+      .intro-page {
+        padding: 10px;
+      }
+
+      .intro-shot {
+        min-height: 620px;
+        border-radius: 30px;
+        padding: 26px 18px;
+      }
+
+      .intro-shot::before {
+        inset: 12px;
+        border-radius: 24px;
+      }
+
+      .intro-word {
+        letter-spacing: -0.07em;
+      }
+
+      .intro-footer,
+      .ext-footer {
+        display: grid;
+        justify-content: stretch;
+      }
+
+      .meta-grid,
+      .info-grid,
+      .family-grid,
+      .collocation-grid,
+      .exercise-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero,
+      .section {
+        border-radius: 22px;
+      }
+
+      .sense-head {
+        align-items: flex-start;
+      }
+
+      .brand-links a,
+      .toc-links a {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .hero h1 {
+        font-size: clamp(1.55rem, 8.8vw, 2.65rem);
+        line-height: 1.02;
+        letter-spacing: -0.035em;
+        white-space: nowrap;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .intro-shot {
+        aspect-ratio: auto;
+        min-height: 600px;
+      }
+
+      .intro-meaning {
+        padding: 12px 14px;
+      }
+    }
+  </style>
+</head>
+
+<body class="extended-page">
+  <main class="page">
+
+    <header class="hero">
+      <div class="ext-kicker">📚✨ TOEFL Word of the Day ✨📚</div>
+      <h1>implication</h1>
+      <p class="hero-subtitle">A complete TOEFL learner guide compiled by <strong>Amir Kooshky</strong>.</p>
+
+      <div class="brand-links">
+        <a href="https://t.me/KooshkyTOEFL" target="_blank">Telegram Channel</a>
+        <a href="https://www.instagram.com/kooshkytoefl" target="_blank">Instagram</a>
+        <a href="https://t.me/KooshkyTOEFL_pv" target="_blank">Personal Telegram</a>
+      </div>
+
+      <div class="meta-grid">
+        <div class="meta-card">
+          <span class="meta-label">Date</span>
+          <span class="meta-value">July 10th 2026</span>
+        </div>
+        <div class="meta-card">
+          <span class="meta-label">Word</span>
+          <span class="meta-value">implication</span>
+        </div>
+        <div class="meta-card">
+          <span class="meta-label">Level</span>
+          <span class="meta-value">B1–B2 TOEFL</span>
+        </div>
+      </div>
+    </header>
+
+    <nav class="toc">
+      <p class="toc-title">Study sections</p>
+      <div class="toc-links">
+        <a href="#meanings">Meanings</a>
+        <a href="#family">Word Family</a>
+        <a href="#collocations">Collocations</a>
+        <a href="#synonyms">Synonyms & Antonyms</a>
+        <a href="#etymology">Etymology</a>
+        <a href="#exercises">Exercises</a>
+      </div>
+    </nav>
+
+    <section class="section" id="meanings">
+      <h2>Meanings & Usage</h2>
+
+      <article class="sense-card">
+        <div class="sense-head">
+          <span class="sense-num">Meaning 1</span>
+          <span class="pos-badge">countable noun, often plural</span>
+          <span class="ipa-badge">/ˌɪm.pləˈkeɪ.ʃən/</span>
+        </div>
+
+        <p class="definition">A possible result, effect, or consequence of an action, decision, event, or idea.</p>
+
+        <p class="simple-label">Natural examples</p>
+        <ol class="example-list">
+          <li>The discovery has major implications for cancer research.</li>
+          <li>Before adopting the policy, officials considered its economic implications.</li>
+          <li>The study explores the long-term implications of remote work for urban life.</li>
+          <li>Rising sea levels have serious implications for coastal communities.</li>
+          <li>The professor asked students to think about the broader implications of the experiment.</li>
+        </ol>
+
+        <div class="info-grid">
+          <div class="info-card good">
+            <h4>Nuance & implication</h4>
+            <p>This meaning is more academic than simple words like “effect” or “result.” It often suggests that the
+              result is important, indirect, or worth thinking about carefully. In TOEFL texts, writers often discuss
+              the social, economic, scientific, or environmental implications of a finding or policy.</p>
+          </div>
+
+          <div class="info-card">
+            <h4>Grammar notes</h4>
+            <p>In this meaning, <strong>implication</strong> is countable and very often plural: <strong>the
+                implications of something</strong> or <strong>implications for something</strong>. Use
+              <strong>of</strong> for the source and <strong>for</strong> for the affected area or group.</p>
+          </div>
+
+          <div class="info-card warning">
+            <h4>Common wrong usage</h4>
+            <ul class="wrong-list">
+              <li>❌ This policy has many implication. → ✅ This policy has many implications.</li>
+              <li>❌ The implication on students is serious. → ✅ The implications for students are serious.</li>
+            </ul>
+          </div>
+
+          <div class="info-card">
+            <h4>TOEFL tip</h4>
+            <p>In Reading, <strong>implications</strong> often asks you to understand why a detail matters beyond the
+              immediate sentence. In Writing, it is useful for explaining consequences: “This has important implications
+              for education.”</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="sense-card">
+        <div class="sense-head">
+          <span class="sense-num">Meaning 2</span>
+          <span class="pos-badge">countable or uncountable noun</span>
+          <span class="ipa-badge">/ˌɪm.pləˈkeɪ.ʃən/</span>
+        </div>
+
+        <p class="definition">A meaning, idea, or suggestion that is not stated directly but can be understood from what
+          someone says or writes.</p>
+
+        <p class="simple-label">Natural examples</p>
+        <ol class="example-list">
+          <li>The implication of her comment was that the project needed better leadership.</li>
+          <li>He did not criticize the plan directly, but the implication was clear.</li>
+          <li>The article carries the implication that technology alone cannot solve the problem.</li>
+          <li>By implication, the speaker suggested that older methods were no longer useful.</li>
+          <li>Students should pay attention to the implication of a contrast word like “however.”</li>
+        </ol>
+
+        <div class="info-grid">
+          <div class="info-card good">
+            <h4>Nuance & implication</h4>
+            <p>This meaning is about indirect meaning. The speaker or writer may not say something openly, but the
+              listener or reader can infer it. It is close to “suggestion,” but it sounds more formal and analytical.
+            </p>
+          </div>
+
+          <div class="info-card">
+            <h4>Grammar notes</h4>
+            <p>Common patterns include <strong>the implication is that + clause</strong>, <strong>the implication of +
+                noun/comment/statement</strong>, and <strong>by implication</strong>. Do not confuse the noun
+              <strong>implication</strong> with the verb <strong>imply</strong>.</p>
+          </div>
+
+          <div class="info-card warning">
+            <h4>Common wrong usage</h4>
+            <ul class="wrong-list">
+              <li>❌ The author implications that the theory is weak. → ✅ The author implies that the theory is weak.
+              </li>
+              <li>❌ The implication is the economy will improve. → ✅ The implication is that the economy will improve.
+              </li>
+            </ul>
+          </div>
+
+          <div class="info-card">
+            <h4>TOEFL tip</h4>
+            <p>This meaning is very useful for inference questions. When a question asks what a professor “implies,” it
+              is asking for an implication, not a sentence that was stated directly.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="sense-card">
+        <div class="sense-head">
+          <span class="sense-num">Meaning 3</span>
+          <span class="pos-badge">uncountable noun</span>
+          <span class="ipa-badge">/ˌɪm.pləˈkeɪ.ʃən/</span>
+        </div>
+
+        <p class="definition">The fact or suggestion that someone is involved in something wrong, illegal, or harmful.
+        </p>
+
+        <p class="simple-label">Natural examples</p>
+        <ol class="example-list">
+          <li>The official denied any implication in the financial scandal.</li>
+          <li>The report raised questions about the company’s implication in illegal dumping.</li>
+          <li>Several documents suggested his implication in the decision to hide the evidence.</li>
+          <li>The journalist was careful not to make an unfair implication of guilt.</li>
+          <li>The investigation found no clear implication of the researchers in the data manipulation.</li>
+        </ol>
+
+        <div class="info-grid">
+          <div class="info-card good">
+            <h4>Nuance & implication</h4>
+            <p>This meaning is usually negative and formal. It does not always prove guilt; it can mean that someone
+              appears connected to a bad action. Because it is serious, it is often used in legal, political, or
+              journalistic contexts.</p>
+          </div>
+
+          <div class="info-card">
+            <h4>Grammar notes</h4>
+            <p>This meaning is commonly used with <strong>in</strong>: <strong>someone’s implication in a
+                scandal/crime</strong>. You may also see <strong>implication of guilt</strong>. The related verb is
+              <strong>implicate</strong>: “The evidence implicated several officials.”</p>
+          </div>
+
+          <div class="info-card warning">
+            <h4>Common wrong usage</h4>
+            <ul class="wrong-list">
+              <li>❌ The evidence implication the official. → ✅ The evidence implicated the official.</li>
+              <li>❌ His implication to the crime was denied. → ✅ His implication in the crime was denied.</li>
+            </ul>
+          </div>
+
+          <div class="info-card">
+            <h4>TOEFL tip</h4>
+            <p>This meaning is less common than the first two, but it may appear in passages about politics, history,
+              law, or public controversy. Notice the negative context around words like “scandal,” “crime,” “guilt,” or
+              “investigation.”</p>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <section class="section" id="family">
+      <h2>Word Family</h2>
+
+      <div class="family-grid">
+        <article class="family-card">
+          <h3>imply</h3>
+          <p><strong>Part of speech:</strong> transitive verb</p>
+          <p><strong>Definition:</strong> to suggest something without saying it directly.</p>
+          <ol class="example-list">
+            <li>The professor implied that the results were not reliable.</li>
+            <li>The data imply a connection between sleep and memory.</li>
+          </ol>
+        </article>
+
+        <article class="family-card">
+          <h3>implicate</h3>
+          <p><strong>Part of speech:</strong> transitive verb</p>
+          <p><strong>Definition:</strong> to show or suggest that someone or something is involved in something bad or
+            harmful.</p>
+          <ol class="example-list">
+            <li>The documents implicated several officials in the scandal.</li>
+            <li>New evidence may implicate the factory in the pollution case.</li>
+          </ol>
+        </article>
+
+        <article class="family-card">
+          <h3>implied</h3>
+          <p><strong>Part of speech:</strong> adjective</p>
+          <p><strong>Definition:</strong> suggested but not said directly.</p>
+          <ol class="example-list">
+            <li>The implied meaning of the sentence is that the plan failed.</li>
+            <li>TOEFL inference questions often test implied information.</li>
+          </ol>
+        </article>
+
+        <article class="family-card">
+          <h3>implicit</h3>
+          <p><strong>Part of speech:</strong> adjective</p>
+          <p><strong>Definition:</strong> understood without being stated directly; hidden inside the meaning of
+            something.</p>
+          <ol class="example-list">
+            <li>The agreement included an implicit promise of cooperation.</li>
+            <li>The author’s criticism is implicit rather than direct.</li>
+          </ol>
+        </article>
+
+        <article class="family-card">
+          <h3>implicitly</h3>
+          <p><strong>Part of speech:</strong> adverb</p>
+          <p><strong>Definition:</strong> in a way that is suggested but not directly stated.</p>
+          <ol class="example-list">
+            <li>The speaker implicitly criticized the government’s response.</li>
+            <li>The passage implicitly supports the second theory.</li>
+          </ol>
+        </article>
+
+        <article class="family-card">
+          <h3>explicit</h3>
+          <p><strong>Part of speech:</strong> adjective</p>
+          <p><strong>Definition:</strong> stated clearly and directly.</p>
+          <ol class="example-list">
+            <li>The instructions were explicit and easy to follow.</li>
+            <li>The author makes an explicit comparison between the two theories.</li>
+          </ol>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="collocations">
+      <h2>Common Collocations</h2>
+
+      <div class="collocation-grid">
+        <article class="collocation-card">
+          <h3>important implications</h3>
+          <p><strong>Meaning:</strong> serious or meaningful possible results.</p>
+          <p><strong>Example:</strong> The findings have important implications for public health.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>major implications</h3>
+          <p><strong>Meaning:</strong> very large or significant effects.</p>
+          <p><strong>Example:</strong> The new law could have major implications for small businesses.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>serious implications</h3>
+          <p><strong>Meaning:</strong> possible results that may be harmful or difficult to manage.</p>
+          <p><strong>Example:</strong> Water shortages have serious implications for agriculture.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>broader implications</h3>
+          <p><strong>Meaning:</strong> effects that go beyond the immediate situation.</p>
+          <p><strong>Example:</strong> The experiment has broader implications for our understanding of memory.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>long-term implications</h3>
+          <p><strong>Meaning:</strong> effects that may appear or continue far into the future.</p>
+          <p><strong>Example:</strong> Scientists are still studying the long-term implications of climate change.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>practical implications</h3>
+          <p><strong>Meaning:</strong> real-world effects or uses.</p>
+          <p><strong>Example:</strong> The theory has practical implications for classroom teaching.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>policy implications</h3>
+          <p><strong>Meaning:</strong> effects on government rules, decisions, or public programs.</p>
+          <p><strong>Example:</strong> The research has clear policy implications for urban planning.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>economic implications</h3>
+          <p><strong>Meaning:</strong> effects related to money, jobs, markets, or production.</p>
+          <p><strong>Example:</strong> Automation has economic implications for both workers and employers.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>social implications</h3>
+          <p><strong>Meaning:</strong> effects on people, communities, or relationships.</p>
+          <p><strong>Example:</strong> The spread of remote work has social implications for city life.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>environmental implications</h3>
+          <p><strong>Meaning:</strong> effects on nature, ecosystems, or climate.</p>
+          <p><strong>Example:</strong> The dam project has environmental implications for nearby wetlands.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>implications for</h3>
+          <p><strong>Meaning:</strong> effects on a particular field, group, or situation.</p>
+          <p><strong>Example:</strong> The discovery has implications for future space exploration.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>the implication is that</h3>
+          <p><strong>Meaning:</strong> the indirect meaning or suggested conclusion is that something is true.</p>
+          <p><strong>Example:</strong> The implication is that students need more support outside the classroom.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>by implication</h3>
+          <p><strong>Meaning:</strong> as an indirect result of what has been said or shown.</p>
+          <p><strong>Example:</strong> By implication, the study questions several older theories.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>consider the implications</h3>
+          <p><strong>Meaning:</strong> think carefully about possible results.</p>
+          <p><strong>Example:</strong> Researchers must consider the implications of using personal data.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>implication in a scandal</h3>
+          <p><strong>Meaning:</strong> suggested involvement in a public wrongdoing.</p>
+          <p><strong>Example:</strong> The official denied any implication in the scandal.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="synonyms">
+      <h2>Direct Synonyms & Antonyms</h2>
+
+      <div class="info-grid">
+        <div class="info-card good">
+          <h4>Direct synonyms</h4>
+          <div class="word-pill-row">
+            <span class="word-pill">consequence</span>
+            <span class="word-pill">effect</span>
+            <span class="word-pill">suggestion</span>
+            <span class="word-pill">involvement</span>
+          </div>
+          <p>For the “result” meaning, <strong>consequence</strong> and <strong>effect</strong> are closest. For the
+            “indirect meaning” sense, <strong>suggestion</strong> or <strong>implied meaning</strong> is closer. For the
+            negative legal or political sense, <strong>involvement</strong> is the closest simple synonym.</p>
+        </div>
+
+        <div class="info-card warning">
+          <h4>Direct antonyms</h4>
+          <div class="word-pill-row">
+            <span class="word-pill">explicit statement</span>
+            <span class="word-pill">direct statement</span>
+            <span class="word-pill">irrelevance</span>
+            <span class="word-pill">disconnection</span>
+          </div>
+          <p><strong>Implication</strong> has no perfect single-word antonym in all meanings. For indirect meaning, the
+            opposite is an <strong>explicit statement</strong>. For connection to wrongdoing, the opposite idea is
+            <strong>disconnection</strong> or lack of involvement.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="etymology">
+      <h2>Etymology</h2>
+      <div class="info-card">
+        <p><strong>Implication</strong> comes from Latin roots connected to the idea of “folding into” or “entangling.”
+          This history helps explain the modern meanings: an implication is a meaning folded into a statement, a
+          consequence folded into an action, or a person’s connection to a situation.</p>
+      </div>
+    </section>
+
+    <section class="section" id="exercises">
+      <h2>Practice Exercises</h2>
+
+      <div class="exercise-grid">
+        <article class="exercise-card">
+          <h3>1. Word family choice</h3>
+          <p>Choose the best member of the word family for each blank.</p>
+          <ol class="clean-list">
+            <li>The speaker did not say the policy had failed, but she clearly __________ it.</li>
+            <li>The discovery has several important __________ for medical research.</li>
+            <li>The agreement contained an __________ promise to share information.</li>
+          </ol>
+        </article>
+
+        <article class="exercise-card">
+          <h3>2. Correct or incorrect?</h3>
+          <p>Decide whether each sentence uses the word correctly. If it is wrong, correct it.</p>
+          <ol class="clean-list">
+            <li>The new technology may have serious implications for employment.</li>
+            <li>The author implications that the theory is incomplete.</li>
+            <li>The official denied his implication in the corruption scandal.</li>
+          </ol>
+        </article>
+
+        <article class="exercise-card">
+          <h3>3. Collocation practice</h3>
+          <p>Complete each sentence with a natural collocation.</p>
+          <ol class="clean-list">
+            <li>The study has __________ implications for how schools teach reading.</li>
+            <li>Scientists are examining the __________ implications of the new energy project.</li>
+            <li>The __________ is that the original explanation was too simple.</li>
+          </ol>
+        </article>
+      </div>
+
+      <details class="answer-key">
+        <summary>Answer Key</summary>
+        <ol class="clean-list">
+          <li><strong>implied</strong> — The verb form is needed: “she clearly implied it.”</li>
+          <li><strong>implications</strong> — The plural noun is natural with “several important.”</li>
+          <li><strong>implicit</strong> — The adjective means “not directly stated.”</li>
+          <li><strong>Correct.</strong> “Implications for employment” is a natural TOEFL-style collocation.</li>
+          <li><strong>Incorrect.</strong> Correct form: “The author implies that the theory is incomplete.”</li>
+          <li><strong>Correct.</strong> “Implication in a scandal” means suggested involvement in wrongdoing.</li>
+          <li><strong>important</strong> or <strong>major</strong> — Both are natural: “important/major implications.”
+          </li>
+          <li><strong>environmental</strong> — This fits “energy project.”</li>
+          <li><strong>implication</strong> — Pattern: “The implication is that + clause.”</li>
+        </ol>
+      </details>
+    </section>
+
+    <footer class="ext-footer">
+      <span>Compiled by <strong>Amir Kooshky</strong></span>
+      <span><a href="https://t.me/KooshkyTOEFL">📚 @KooshkyTOEFL</a></span>
+      <span><a href="https://www.instagram.com/kooshkytoefl">Instagram</a></span>
+      <span><a href="https://t.me/KooshkyTOEFL_pv">Personal Telegram</a></span>
+    </footer>
+  </main>
+</body>
+
+</html>

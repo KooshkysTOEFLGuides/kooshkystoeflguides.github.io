@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INSTIGATE | Extended TOEFL Explanation</title>
+  <style>
+    :root {
+      --bg: #08090d;
+      --bg-soft: #10131b;
+      --card: rgba(255, 255, 255, 0.065);
+      --card-strong: rgba(255, 255, 255, 0.105);
+      --text: #f4f1ea;
+      --muted: #b9b2a7;
+      --faint: #8f887d;
+      --gold: #d8b35a;
+      --gold-soft: rgba(216, 179, 90, 0.16);
+      --blue: #8bb7ff;
+      --green: #9be2bd;
+      --red: #ff9d9d;
+      --border: rgba(255, 255, 255, 0.14);
+      --shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+      --radius-lg: 28px;
+      --radius-md: 18px;
+      --radius-sm: 12px;
+      --max: 980px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at top left, rgba(216, 179, 90, 0.18), transparent 32rem),
+        radial-gradient(circle at bottom right, rgba(139, 183, 255, 0.13), transparent 30rem),
+        var(--bg);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      line-height: 1.65;
+    }
+
+    a {
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      width: min(100%, var(--max));
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* =========================
+     INTRO IMAGE TEMPLATE
+  ========================= */
+
+    .intro-page {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 20px;
+    }
+
+    .intro-shot {
+      width: min(100%, 860px);
+      aspect-ratio: 4 / 5;
+      min-height: 680px;
+      border: 1px solid var(--border);
+      border-radius: 42px;
+      overflow: hidden;
+      position: relative;
+      background:
+        linear-gradient(135deg, rgba(216, 179, 90, 0.18), transparent 35%),
+        linear-gradient(315deg, rgba(139, 183, 255, 0.18), transparent 35%),
+        #0b0d13;
+      box-shadow: var(--shadow);
+      padding: clamp(26px, 6vw, 68px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .intro-shot::before {
+      content: "";
+      position: absolute;
+      inset: 22px;
+      border: 1px solid rgba(216, 179, 90, 0.24);
+      border-radius: 32px;
+      pointer-events: none;
+    }
+
+    .intro-kicker,
+    .ext-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      width: fit-content;
+      padding: 8px 13px;
+      border: 1px solid rgba(216, 179, 90, 0.28);
+      border-radius: 999px;
+      background: var(--gold-soft);
+      color: var(--gold);
+      font-size: clamp(0.78rem, 2.2vw, 0.95rem);
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .intro-center {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .intro-word {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(4.4rem, 4.5vw, 9.5rem);
+      line-height: 0.92;
+      letter-spacing: -0.04em;
+      color: #fff8ea;
+      text-shadow: 0 12px 45px rgba(0, 0, 0, 0.55);
+    }
+
+    .intro-ipa {
+      margin: 18px 0 0;
+      color: var(--gold);
+      font-size: clamp(1.05rem, 4vw, 1.5rem);
+      font-weight: 700;
+    }
+
+    .intro-meanings {
+      margin: 28px auto 0;
+      display: grid;
+      gap: 12px;
+      max-width: 640px;
+    }
+
+    .intro-meaning {
+      padding: 15px 18px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.075);
+      backdrop-filter: blur(12px);
+      font-size: clamp(1rem, 3.2vw, 1.25rem);
+      font-weight: 650;
+    }
+
+    .intro-example {
+      margin: 26px auto 0;
+      max-width: 650px;
+      color: var(--muted);
+      font-size: clamp(0.95rem, 3vw, 1.15rem);
+    }
+
+    .intro-footer,
+    .ext-footer {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 16px;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .intro-footer strong,
+    .ext-footer strong {
+      color: var(--text);
+    }
+
+    /* =========================
+     EXTENDED PAGE TEMPLATE
+  ========================= */
+
+    .extended-page {
+      padding-bottom: 50px;
+    }
+
+    .hero {
+      margin: 18px auto 22px;
+      padding: clamp(24px, 5vw, 46px);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      background:
+        linear-gradient(135deg, rgba(216, 179, 90, 0.14), transparent 42%),
+        var(--card);
+      box-shadow: var(--shadow);
+    }
+
+    .hero h1 {
+      margin: 18px 0 8px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.4rem, 10vw, 6.2rem);
+      line-height: 0.95;
+      letter-spacing: -0.055em;
+
+      white-space: nowrap;
+      overflow-wrap: normal;
+      word-break: normal;
+      hyphens: none;
+      max-width: 100%;
+    }
+
+    .hero-subtitle {
+      margin: 0;
+      color: var(--muted);
+      font-size: clamp(1rem, 3vw, 1.2rem);
+    }
+
+    .brand-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .brand-links a {
+      display: inline-flex;
+      padding: 9px 13px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.055);
+      color: var(--text);
+      font-size: 0.94rem;
+    }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .meta-card,
+    .toc,
+    .section,
+    .sense-card,
+    .info-card,
+    .family-card,
+    .collocation-card,
+    .exercise-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--card);
+    }
+
+    .meta-card {
+      padding: 15px;
+    }
+
+    .meta-label {
+      display: block;
+      color: var(--faint);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 800;
+    }
+
+    .meta-value {
+      display: block;
+      margin-top: 5px;
+      font-weight: 800;
+    }
+
+    .toc {
+      padding: 18px;
+      margin: 20px 0;
+    }
+
+    .toc-title {
+      margin: 0 0 10px;
+      color: var(--gold);
+      font-weight: 900;
+    }
+
+    .toc-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .toc-links a {
+      padding: 8px 11px;
+      border-radius: 999px;
+      background: var(--gold-soft);
+      color: var(--gold);
+      font-size: 0.93rem;
+    }
+
+    .section {
+      margin: 20px 0;
+      padding: clamp(18px, 4vw, 30px);
+    }
+
+    .section h2 {
+      margin: 0 0 18px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.8rem, 6vw, 2.7rem);
+      line-height: 1.1;
+    }
+
+    .sense-card {
+      padding: clamp(16px, 4vw, 26px);
+      margin: 16px 0;
+    }
+
+    .sense-head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .sense-num,
+    .pos-badge,
+    .ipa-badge {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      font-weight: 850;
+    }
+
+    .sense-num {
+      padding: 7px 12px;
+      background: var(--gold);
+      color: #14120b;
+    }
+
+    .pos-badge {
+      padding: 7px 11px;
+      background: rgba(139, 183, 255, 0.16);
+      color: var(--blue);
+    }
+
+    .ipa-badge {
+      padding: 7px 11px;
+      background: rgba(255, 255, 255, 0.07);
+      color: var(--muted);
+    }
+
+    .definition {
+      font-size: 1.12rem;
+      font-weight: 750;
+      color: #fff7e8;
+    }
+
+    .simple-label {
+      margin: 20px 0 8px;
+      color: var(--gold);
+      font-weight: 900;
+    }
+
+    .example-list,
+    .clean-list,
+    .wrong-list {
+      margin: 8px 0 0;
+      padding-left: 1.25rem;
+    }
+
+    .example-list li,
+    .clean-list li,
+    .wrong-list li {
+      margin: 8px 0;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .info-card {
+      padding: 14px;
+    }
+
+    .info-card h4,
+    .family-card h3,
+    .collocation-card h3,
+    .exercise-card h3 {
+      margin: 0 0 8px;
+      color: var(--gold);
+    }
+
+    .warning {
+      border-color: rgba(255, 157, 157, 0.35);
+      background: rgba(255, 157, 157, 0.07);
+    }
+
+    .good {
+      border-color: rgba(155, 226, 189, 0.3);
+      background: rgba(155, 226, 189, 0.06);
+    }
+
+    .family-grid,
+    .collocation-grid,
+    .exercise-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .family-card,
+    .collocation-card,
+    .exercise-card {
+      padding: 16px;
+    }
+
+    .word-pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+    }
+
+    .word-pill {
+      display: inline-flex;
+      padding: 8px 11px;
+      border-radius: 999px;
+      background: var(--card-strong);
+      border: 1px solid var(--border);
+      font-weight: 800;
+    }
+
+    details.answer-key {
+      margin-top: 16px;
+      border: 1px solid rgba(216, 179, 90, 0.3);
+      border-radius: var(--radius-md);
+      background: var(--gold-soft);
+      padding: 14px 16px;
+    }
+
+    details.answer-key summary {
+      cursor: pointer;
+      color: var(--gold);
+      font-weight: 950;
+    }
+
+    .ext-footer {
+      margin-top: 22px;
+      padding: 22px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      background: var(--card);
+    }
+
+    /* =========================
+     RESPONSIVE RULES
+  ========================= */
+
+    @media (max-width: 720px) {
+      .page {
+        padding: 12px;
+      }
+
+      .intro-page {
+        padding: 10px;
+      }
+
+      .intro-shot {
+        min-height: 620px;
+        border-radius: 30px;
+        padding: 26px 18px;
+      }
+
+      .intro-shot::before {
+        inset: 12px;
+        border-radius: 24px;
+      }
+
+      .intro-word {
+        letter-spacing: -0.07em;
+      }
+
+      .intro-footer,
+      .ext-footer {
+        display: grid;
+        justify-content: stretch;
+      }
+
+      .meta-grid,
+      .info-grid,
+      .family-grid,
+      .collocation-grid,
+      .exercise-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero,
+      .section {
+        border-radius: 22px;
+      }
+
+      .sense-head {
+        align-items: flex-start;
+      }
+
+      .brand-links a,
+      .toc-links a {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .hero h1 {
+        font-size: clamp(1.55rem, 8.8vw, 2.65rem);
+        line-height: 1.02;
+        letter-spacing: -0.035em;
+        white-space: nowrap;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .intro-shot {
+        aspect-ratio: auto;
+        min-height: 600px;
+      }
+
+      .intro-meaning {
+        padding: 12px 14px;
+      }
+    }
+  </style>
+</head>
+
+<body class="extended-page">
+  <main class="page">
+
+    <header class="hero">
+      <div class="ext-kicker">📚✨ TOEFL Word of the Day ✨📚</div>
+      <h1>INSTIGATE</h1>
+      <p class="hero-subtitle">A complete TOEFL learner guide compiled by <strong>Amir Kooshky</strong>.</p>
+
+      <div class="brand-links">
+        <a href="https://t.me/KooshkyTOEFL" target="_blank">Telegram Channel</a>
+        <a href="https://www.instagram.com/kooshkytoefl" target="_blank">Instagram</a>
+        <a href="https://t.me/KooshkyTOEFL_pv" target="_blank">Personal Telegram</a>
+      </div>
+
+      <div class="meta-grid">
+        <div class="meta-card">
+          <span class="meta-label">Date</span>
+          <span class="meta-value">July 9th 2026</span>
+        </div>
+        <div class="meta-card">
+          <span class="meta-label">Word</span>
+          <span class="meta-value">INSTIGATE</span>
+        </div>
+        <div class="meta-card">
+          <span class="meta-label">Level</span>
+          <span class="meta-value">B1–B2 TOEFL</span>
+        </div>
+      </div>
+    </header>
+
+    <nav class="toc">
+      <p class="toc-title">Study sections</p>
+      <div class="toc-links">
+        <a href="#meanings">Meanings</a>
+        <a href="#family">Word Family</a>
+        <a href="#collocations">Collocations</a>
+        <a href="#synonyms">Synonyms & Antonyms</a>
+        <a href="#etymology">Etymology</a>
+        <a href="#exercises">Exercises</a>
+      </div>
+    </nav>
+
+    <section class="section" id="meanings">
+      <h2>Meanings & Usage</h2>
+
+      <article class="sense-card">
+        <div class="sense-head">
+          <span class="sense-num">Meaning 1</span>
+          <span class="pos-badge">transitive verb</span>
+          <span class="ipa-badge">/ˈɪn.stə.ɡeɪt/</span>
+        </div>
+
+        <p class="definition">To make an event, process, action, or formal procedure start.</p>
+
+        <p class="simple-label">Natural examples</p>
+        <ol class="example-list">
+          <li>The university instigated a review of its online learning policies.</li>
+          <li>The mayor instigated a new program to reduce traffic in the city center.</li>
+          <li>The accident instigated a broader investigation into workplace safety.</li>
+          <li>New scientific evidence instigated changes in the treatment guidelines.</li>
+          <li>The committee instigated legal proceedings after discovering financial irregularities.</li>
+        </ol>
+
+        <div class="info-grid">
+          <div class="info-card good">
+            <h4>Nuance & implication</h4>
+            <p>This meaning is formal and often appears with official actions such as reviews, investigations, reforms,
+              programs, or legal proceedings. It suggests that someone or something causes a process to begin, not
+              simply that the process happens by itself.</p>
+          </div>
+
+          <div class="info-card">
+            <h4>Grammar notes</h4>
+            <p><strong>Instigate</strong> is normally transitive: you instigate <em>something</em>. Common objects
+              include <em>a review</em>, <em>an investigation</em>, <em>reform</em>, <em>change</em>, <em>legal
+                proceedings</em>, and <em>new measures</em>.</p>
+          </div>
+
+          <div class="info-card warning">
+            <h4>Common wrong usage</h4>
+            <ul class="wrong-list">
+              <li>❌ The school instigated about the problem. → ✅ The school instigated an investigation into the
+                problem.</li>
+              <li>❌ The new rule was instigated to students. → ✅ The new rule was introduced to students.</li>
+            </ul>
+          </div>
+
+          <div class="info-card">
+            <h4>TOEFL tip</h4>
+            <p>In TOEFL Reading, <strong>instigate</strong> may be close to <em>initiate</em>, <em>start</em>, or
+              <em>bring about</em>. Check whether the object is a formal action or process.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="sense-card">
+        <div class="sense-head">
+          <span class="sense-num">Meaning 2</span>
+          <span class="pos-badge">transitive verb</span>
+          <span class="ipa-badge">/ˈɪn.stə.ɡeɪt/</span>
+        </div>
+
+        <p class="definition">To deliberately encourage, provoke, or cause a negative action, conflict, or trouble to
+          begin.</p>
+
+        <p class="simple-label">Natural examples</p>
+        <ol class="example-list">
+          <li>The leader was accused of instigating violence during the protest.</li>
+          <li>Several online posts instigated a heated argument among community members.</li>
+          <li>The rumor instigated panic in the neighborhood.</li>
+          <li>Officials claimed that outside groups had instigated the unrest.</li>
+          <li>Instead of calming the situation, his speech instigated further conflict.</li>
+        </ol>
+
+        <div class="info-grid">
+          <div class="info-card good">
+            <h4>Nuance & implication</h4>
+            <p>This meaning usually has a negative tone. It often implies responsibility: the person who instigates
+              violence, unrest, or an argument is not just present; they help cause it or encourage it.</p>
+          </div>
+
+          <div class="info-card">
+            <h4>Grammar notes</h4>
+            <p>The most common pattern is <strong>instigate + negative event</strong>: <em>instigate violence</em>,
+              <em>instigate unrest</em>, <em>instigate a riot</em>, <em>instigate a conflict</em>. A less common but
+              possible pattern is <strong>instigate someone to do something</strong>, especially in formal or legal
+              contexts.</p>
+          </div>
+
+          <div class="info-card warning">
+            <h4>Common wrong usage</h4>
+            <ul class="wrong-list">
+              <li>❌ The teacher instigated students to study harder. → ✅ The teacher encouraged students to study
+                harder.</li>
+              <li>❌ The argument instigated because of a small mistake. → ✅ The argument started because of a small
+                mistake.</li>
+            </ul>
+          </div>
+
+          <div class="info-card">
+            <h4>TOEFL tip</h4>
+            <p>When <strong>instigate</strong> appears with words like <em>violence</em>, <em>unrest</em>,
+              <em>panic</em>, <em>rebellion</em>, or <em>conflict</em>, the sentence usually has a negative implication.
+            </p>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <section class="section" id="family">
+      <h2>Word Family</h2>
+
+      <div class="family-grid">
+        <article class="family-card">
+          <h3>instigation</h3>
+          <p><strong>Part of speech:</strong> noun</p>
+          <p><strong>Definition:</strong> the act of causing, encouraging, or starting something, especially something
+            negative or formal</p>
+          <ol class="example-list">
+            <li>The policy review began at the instigation of several faculty members.</li>
+            <li>The police investigated his possible role in the instigation of the violence.</li>
+          </ol>
+        </article>
+
+        <article class="family-card">
+          <h3>instigator</h3>
+          <p><strong>Part of speech:</strong> countable noun</p>
+          <p><strong>Definition:</strong> a person who starts or encourages something, especially trouble, conflict, or
+            a plan</p>
+          <ol class="example-list">
+            <li>Officials tried to identify the main instigator of the unrest.</li>
+            <li>She was not the instigator of the disagreement, but she made it worse.</li>
+          </ol>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="collocations">
+      <h2>Common Collocations</h2>
+
+      <div class="collocation-grid">
+        <article class="collocation-card">
+          <h3>instigate an investigation</h3>
+          <p><strong>Meaning:</strong> to officially start an investigation</p>
+          <p><strong>Example:</strong> The accident instigated an investigation into safety procedures.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>instigate a review</h3>
+          <p><strong>Meaning:</strong> to start a formal process of examining something</p>
+          <p><strong>Example:</strong> Student complaints instigated a review of the grading system.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>instigate reforms</h3>
+          <p><strong>Meaning:</strong> to begin or cause changes that improve a system</p>
+          <p><strong>Example:</strong> The economic crisis instigated major reforms in the banking sector.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>instigate change</h3>
+          <p><strong>Meaning:</strong> to cause change to begin</p>
+          <p><strong>Example:</strong> Public pressure can instigate meaningful change in environmental policy.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>instigate legal proceedings</h3>
+          <p><strong>Meaning:</strong> to begin a legal process or court action</p>
+          <p><strong>Example:</strong> The company instigated legal proceedings against the former employee.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>instigate violence</h3>
+          <p><strong>Meaning:</strong> to encourage or cause violent behavior</p>
+          <p><strong>Example:</strong> The speech was criticized for instigating violence.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>instigate unrest</h3>
+          <p><strong>Meaning:</strong> to cause public disorder, protest, or conflict</p>
+          <p><strong>Example:</strong> False information can instigate unrest during a crisis.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>be accused of instigating</h3>
+          <p><strong>Meaning:</strong> to be blamed for starting or encouraging something bad</p>
+          <p><strong>Example:</strong> Several activists were accused of instigating the protests.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>at the instigation of someone</h3>
+          <p><strong>Meaning:</strong> because someone suggested, encouraged, or caused it</p>
+          <p><strong>Example:</strong> The meeting was held at the instigation of the department chair.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>the main instigator</h3>
+          <p><strong>Meaning:</strong> the person most responsible for starting something</p>
+          <p><strong>Example:</strong> Investigators believed he was the main instigator of the attack.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="synonyms">
+      <h2>Direct Synonyms & Antonyms</h2>
+
+      <div class="info-grid">
+        <div class="info-card good">
+          <h4>Direct synonyms</h4>
+          <div class="word-pill-row">
+            <span class="word-pill">initiate</span>
+            <span class="word-pill">provoke</span>
+            <span class="word-pill">incite</span>
+            <span class="word-pill">trigger</span>
+            <span class="word-pill">set off</span>
+          </div>
+          <p><strong>Initiate</strong> is more neutral and often positive or official. <strong>Provoke</strong> means to
+            cause a reaction. <strong>Incite</strong> is very close to <strong>instigate</strong> when the action is
+            negative, especially violence or unrest.</p>
+        </div>
+
+        <div class="info-card warning">
+          <h4>Direct antonyms</h4>
+          <div class="word-pill-row">
+            <span class="word-pill">prevent</span>
+            <span class="word-pill">stop</span>
+            <span class="word-pill">discourage</span>
+            <span class="word-pill">suppress</span>
+            <span class="word-pill">calm</span>
+          </div>
+          <p>These words are used when someone blocks an event from starting, reduces conflict, or prevents people from
+            taking action.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="etymology">
+      <h2>Etymology</h2>
+      <div class="info-card">
+        <p><strong>Instigate</strong> comes from Latin <em>instigare</em>, meaning “to urge on” or “to provoke.” This
+          history helps explain the modern meaning: when you instigate something, you push it forward and help make it
+          begin.</p>
+      </div>
+    </section>
+
+    <section class="section" id="exercises">
+      <h2>Practice Exercises</h2>
+
+      <div class="exercise-grid">
+        <article class="exercise-card">
+          <h3>1. Word family choice</h3>
+          <p>Choose the best member of the word family for each blank.</p>
+          <ol class="clean-list">
+            <li>The police tried to find the main __________ of the violence.</li>
+            <li>The review began at the __________ of several senior professors.</li>
+            <li>The report may __________ major reforms in the education system.</li>
+          </ol>
+        </article>
+
+        <article class="exercise-card">
+          <h3>2. Correct or incorrect?</h3>
+          <p>Decide whether each sentence uses the word correctly. If it is wrong, correct it.</p>
+          <ol class="clean-list">
+            <li>The government instigated a review of its immigration policy.</li>
+            <li>The teacher instigated the students to feel more confident.</li>
+            <li>Several messages online were accused of instigating panic.</li>
+          </ol>
+        </article>
+
+        <article class="exercise-card">
+          <h3>3. Collocation practice</h3>
+          <p>Complete each sentence with a natural collocation.</p>
+          <ol class="clean-list">
+            <li>The safety failure instigated __________ into the factory’s working conditions.</li>
+            <li>The organization was accused of instigating __________ during the demonstration.</li>
+            <li>Public pressure helped instigate __________ in the healthcare system.</li>
+          </ol>
+        </article>
+      </div>
+
+      <details class="answer-key">
+        <summary>Answer Key</summary>
+        <ol class="clean-list">
+          <li><strong>instigator</strong> — A person who starts or encourages something, especially trouble.</li>
+          <li><strong>instigation</strong> — The phrase is <em>at the instigation of someone</em>.</li>
+          <li><strong>instigate</strong> — The verb is needed before the object <em>major reforms</em>.</li>
+          <li><strong>Correct.</strong> <em>Instigate a review</em> is a natural formal collocation.</li>
+          <li><strong>Incorrect.</strong> Better: <em>The teacher encouraged the students to feel more confident.</em>
+          </li>
+          <li><strong>Awkward/partly incorrect.</strong> Better: <em>Several online messages were accused of instigating
+              panic.</em></li>
+          <li><strong>an investigation</strong> — <em>Instigate an investigation</em> means to start an official
+            inquiry.</li>
+          <li><strong>violence</strong> or <strong>unrest</strong> — Both are natural negative objects after
+            <em>instigate</em>.</li>
+          <li><strong>reforms</strong> or <strong>change</strong> — Both fit the idea of starting improvements in a
+            system.</li>
+        </ol>
+      </details>
+    </section>
+
+    <footer class="ext-footer">
+      <span>Compiled by <strong>Amir Kooshky</strong></span>
+      <span><a href="https://t.me/KooshkyTOEFL">📚 @KooshkyTOEFL</a></span>
+      <span><a href="https://www.instagram.com/kooshkytoefl">Instagram</a></span>
+      <span><a href="https://t.me/KooshkyTOEFL_pv">Personal Telegram</a></span>
+    </footer>
+  </main>
+</body>
+
+</html>

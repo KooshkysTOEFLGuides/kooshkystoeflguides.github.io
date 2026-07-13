@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="A complete TOEFL learner guide to prone, created by Amir Kooshky.">
+  <title>prone | Kooshky TOEFL Word of the Day</title>
+  <style>
+/*
+  Kooshky TOEFL Word of the Day
+  Original dictionary-editorial visual system for Amir Kooshky.
+  Mobile-first, print-aware, local-file friendly, and fully usable without JavaScript.
+*/
+:root {
+  color-scheme: light;
+  --paper: #f4f0e7;
+  --surface: #fffdf8;
+  --surface-2: #eee8dc;
+  --ink: #1c1a18;
+  --muted: #69635d;
+  --rule: #d6cdbf;
+  --rule-strong: #a99f92;
+  --accent: #a51f2d;
+  --accent-deep: #72131e;
+  --accent-soft: #f4e3e5;
+  --good: #315f4c;
+  --good-soft: #e5efe9;
+  --warn: #8a5719;
+  --warn-soft: #f8ebd8;
+  --info: #315f76;
+  --info-soft: #e4eef3;
+  --shadow: 0 18px 46px rgba(47, 37, 27, .09);
+  --serif: Georgia, "Times New Roman", Times, serif;
+  --sans: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  --radius: .95rem;
+  --radius-sm: .55rem;
+  --content: 75rem;
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #171614;
+  --surface: #211f1c;
+  --surface-2: #2a2723;
+  --ink: #f3eee5;
+  --muted: #b9b0a5;
+  --rule: #443f39;
+  --rule-strong: #675e56;
+  --accent: #e35d68;
+  --accent-deep: #ff7f88;
+  --accent-soft: #3a2225;
+  --good: #95c8ad;
+  --good-soft: #20342a;
+  --warn: #dfb06e;
+  --warn-soft: #3a2c1d;
+  --info: #91c2d8;
+  --info-soft: #21343e;
+  --shadow: 0 18px 46px rgba(0, 0, 0, .34);
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #171614;
+    --surface: #211f1c;
+    --surface-2: #2a2723;
+    --ink: #f3eee5;
+    --muted: #b9b0a5;
+    --rule: #443f39;
+    --rule-strong: #675e56;
+    --accent: #e35d68;
+    --accent-deep: #ff7f88;
+    --accent-soft: #3a2225;
+    --good: #95c8ad;
+    --good-soft: #20342a;
+    --warn: #dfb06e;
+    --warn-soft: #3a2c1d;
+    --info: #91c2d8;
+    --info-soft: #21343e;
+    --shadow: 0 18px 46px rgba(0, 0, 0, .34);
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 1rem;
+  line-height: 1.72;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--accent-deep); text-underline-offset: .18em; text-decoration-thickness: .075em; }
+a:hover { color: var(--accent); }
+button { font: inherit; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+::selection { background: var(--accent); color: white; }
+
+.skip-link {
+  position: fixed;
+  left: .75rem;
+  top: .75rem;
+  z-index: 1000;
+  transform: translateY(-180%);
+  padding: .62rem .82rem;
+  border-radius: var(--radius-sm);
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--sans);
+  font-weight: 800;
+  text-decoration: none;
+}
+.skip-link:focus { transform: translateY(0); }
+
+.no-js-hidden { display: none !important; }
+html.js .no-js-hidden { display: inline-flex !important; }
+
+.masthead {
+  border-bottom: 1px solid var(--rule);
+  background: color-mix(in srgb, var(--surface) 94%, transparent);
+}
+.masthead-inner {
+  width: min(calc(100% - 1.4rem), var(--content));
+  min-height: 4.4rem;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .9rem;
+}
+.brand { color: inherit; text-decoration: none; line-height: 1.05; }
+.brand strong { display: block; font-size: 1.04rem; letter-spacing: -.02em; }
+.brand span {
+  display: block;
+  margin-top: .18rem;
+  color: var(--accent);
+  font-family: var(--sans);
+  font-size: .65rem;
+  font-weight: 850;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+.utility-actions { display: none; gap: .42rem; align-items: center; }
+html.js .utility-actions { display: flex; }
+.utility-button {
+  min-height: 2.35rem;
+  padding: .42rem .7rem;
+  border: 1px solid var(--rule-strong);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: .74rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+.utility-button:hover { border-color: var(--accent); color: var(--accent); }
+
+.page {
+  width: min(calc(100% - 1.4rem), var(--content));
+  margin-inline: auto;
+  padding: 1.2rem 0 4rem;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(2rem, 10vw, 5.5rem) 0 clamp(2.4rem, 8vw, 4.5rem);
+  border-bottom: 1px solid var(--rule);
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  right: -7rem;
+  top: -9rem;
+  width: 19rem;
+  aspect-ratio: 1;
+  border: 1px solid color-mix(in srgb, var(--accent) 22%, transparent);
+  border-radius: 50%;
+  box-shadow: 0 0 0 2.4rem color-mix(in srgb, var(--accent) 4%, transparent), 0 0 0 5rem color-mix(in srgb, var(--accent) 3%, transparent);
+  pointer-events: none;
+}
+.kicker, .section-kicker, .eyebrow {
+  margin: 0;
+  color: var(--accent);
+  font-family: var(--sans);
+  font-size: .7rem;
+  font-weight: 900;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+.hero h1 {
+  position: relative;
+  z-index: 1;
+  max-width: 13ch;
+  margin: .45rem 0 0;
+  font-size: clamp(3.2rem, 17vw, 8.7rem);
+  line-height: .88;
+  letter-spacing: -.065em;
+  overflow-wrap: anywhere;
+}
+.hero-pronunciation {
+  margin: 1.25rem 0 .15rem;
+  color: var(--accent-deep);
+  font-family: var(--sans);
+  font-size: clamp(1.05rem, 4vw, 1.45rem);
+  font-weight: 750;
+}
+.hero-pos { margin: 0; color: var(--muted); font-family: var(--sans); font-weight: 720; }
+.hero-summary { max-width: 50rem; margin: 1rem 0 0; font-size: clamp(1.08rem, 3.2vw, 1.34rem); line-height: 1.55; }
+.short-meaning-row { display: flex; flex-wrap: wrap; gap: .45rem; margin-top: 1.2rem; }
+.short-meaning {
+  padding: .36rem .62rem;
+  border: 1px solid var(--rule-strong);
+  border-radius: 999px;
+  background: var(--surface);
+  font-family: var(--sans);
+  font-size: .78rem;
+  font-weight: 760;
+}
+.hero-example {
+  max-width: 53rem;
+  margin: 1.6rem 0 0;
+  padding: 1rem 1.1rem 1rem 1.25rem;
+  border-left: 3px solid var(--accent);
+  background: color-mix(in srgb, var(--surface) 80%, transparent);
+  font-size: clamp(1.05rem, 3vw, 1.3rem);
+  font-style: italic;
+}
+.meta-strip {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: .65rem;
+  margin-top: 1.5rem;
+}
+.meta-item { padding: .75rem .85rem; border: 1px solid var(--rule); border-radius: var(--radius-sm); background: var(--surface); }
+.meta-label { display: block; color: var(--muted); font-family: var(--sans); font-size: .66rem; font-weight: 850; letter-spacing: .12em; text-transform: uppercase; }
+.meta-value { display: block; margin-top: .12rem; font-family: var(--sans); font-weight: 800; }
+
+.toc {
+  margin: 1rem 0 0;
+  padding: .95rem;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+.toc-title { margin: 0 0 .55rem; font-family: var(--sans); font-size: .78rem; font-weight: 900; text-transform: uppercase; letter-spacing: .12em; }
+.toc-links { display: flex; flex-wrap: wrap; gap: .45rem .8rem; }
+.toc a { font-family: var(--sans); font-size: .82rem; font-weight: 760; }
+
+.section { padding: clamp(2.5rem, 8vw, 5rem) 0 0; }
+.section-head { max-width: 48rem; margin-bottom: 1.25rem; }
+.section h2 {
+  margin: .22rem 0 .4rem;
+  font-size: clamp(2rem, 7vw, 3.35rem);
+  line-height: 1.02;
+  letter-spacing: -.035em;
+}
+.section-intro { margin: 0; color: var(--muted); font-size: 1.03rem; }
+
+.overview-grid, .card-grid, .compare-grid, .exercise-grid, .info-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: .85rem;
+}
+.card, .overview-card, .family-card, .collocation-card, .compare-card, .exercise-card {
+  min-width: 0;
+  padding: 1rem;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: 0 7px 20px rgba(40, 30, 20, .035);
+}
+.card h3, .card h4, .overview-card h3, .family-card h3, .collocation-card h3, .compare-card h3, .exercise-card h3 { margin: 0 0 .45rem; line-height: 1.25; }
+.card p:last-child, .overview-card p:last-child, .family-card p:last-child, .collocation-card p:last-child, .compare-card p:last-child, .exercise-card p:last-child { margin-bottom: 0; }
+.label {
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: .69rem;
+  font-weight: 850;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.value { font-weight: 700; }
+
+.sense-card {
+  overflow: hidden;
+  margin-top: 1.1rem;
+  border: 1px solid var(--rule);
+  border-radius: calc(var(--radius) + .15rem);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+.sense-head {
+  padding: 1rem;
+  border-top: 4px solid var(--accent);
+  border-bottom: 1px solid var(--rule);
+  background: color-mix(in srgb, var(--surface-2) 42%, var(--surface));
+}
+.sense-number { color: var(--accent); font-family: var(--sans); font-size: .7rem; font-weight: 900; letter-spacing: .13em; text-transform: uppercase; }
+.sense-head h3 { margin: .2rem 0 .55rem; font-size: clamp(1.55rem, 5vw, 2.2rem); line-height: 1.1; }
+.badge-row { display: flex; flex-wrap: wrap; gap: .38rem; }
+.badge { padding: .27rem .5rem; border: 1px solid var(--rule-strong); border-radius: 999px; font-family: var(--sans); font-size: .72rem; font-weight: 780; }
+.sense-body { padding: 1rem; }
+.definition { margin: 0; font-size: clamp(1.08rem, 3.5vw, 1.28rem); font-weight: 700; }
+.plain-equivalent { margin: .65rem 0 0; color: var(--muted); }
+.pattern-banner {
+  margin: 1rem 0;
+  padding: .8rem .9rem;
+  border-left: 3px solid var(--accent);
+  background: var(--accent-soft);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+.pattern-banner strong { font-family: var(--sans); }
+.context-row { display: flex; flex-wrap: wrap; gap: .38rem; margin-top: .55rem; }
+.context-pill { padding: .25rem .48rem; border-radius: 999px; background: var(--surface-2); font-family: var(--sans); font-size: .73rem; font-weight: 740; }
+.subsection-title { margin: 1.35rem 0 .55rem; font-family: var(--sans); font-size: .82rem; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
+.example-list, .clean-list { margin: .5rem 0 0; padding-left: 1.35rem; }
+.example-list li, .clean-list li { padding-left: .25rem; margin: .42rem 0; }
+.info-card { padding: .9rem; border: 1px solid var(--rule); border-radius: var(--radius-sm); background: var(--surface); }
+.info-card h4 { margin: 0 0 .35rem; font-family: var(--sans); font-size: .9rem; }
+.info-card p { margin: .3rem 0 0; }
+.info-card.good { border-color: color-mix(in srgb, var(--good) 54%, var(--rule)); background: var(--good-soft); }
+.info-card.warning { border-color: color-mix(in srgb, var(--warn) 54%, var(--rule)); background: var(--warn-soft); }
+.info-card.tip { border-color: color-mix(in srgb, var(--info) 54%, var(--rule)); background: var(--info-soft); }
+.grammar-list { display: grid; gap: .55rem; margin: 0; }
+.grammar-item { padding-bottom: .55rem; border-bottom: 1px solid var(--rule); }
+.grammar-item:last-child { padding-bottom: 0; border-bottom: 0; }
+.grammar-item dt { font-family: var(--sans); font-size: .74rem; font-weight: 900; letter-spacing: .07em; text-transform: uppercase; }
+.grammar-item dd { margin: .12rem 0 0; }
+.pattern-list, .error-list { display: grid; gap: .7rem; }
+.pattern-card, .error-card { padding: .82rem; border: 1px solid var(--rule); border-radius: var(--radius-sm); background: color-mix(in srgb, var(--surface-2) 25%, var(--surface)); }
+.pattern-code { display: block; font-family: var(--mono); font-size: .84rem; font-weight: 800; overflow-wrap: anywhere; }
+.pattern-use { margin: .3rem 0; color: var(--muted); }
+.error-wrong, .error-correct { margin: .25rem 0; }
+.error-wrong { color: var(--warn); }
+.error-correct { color: var(--good); }
+.error-explanation { margin: .35rem 0 0; font-size: .93rem; }
+
+.family-card .ipa, .compare-card .meta { color: var(--muted); font-family: var(--sans); font-size: .8rem; }
+.collocation-card h3 { color: var(--accent-deep); }
+.mini-facts { display: grid; gap: .42rem; margin-top: .6rem; }
+.mini-fact { padding-top: .42rem; border-top: 1px solid var(--rule); }
+.mini-fact strong { font-family: var(--sans); font-size: .78rem; }
+.word-pill { display: inline-block; padding: .24rem .5rem; border: 1px solid var(--accent); border-radius: 999px; color: var(--accent-deep); font-family: var(--sans); font-size: .75rem; font-weight: 850; }
+
+.etymology-flow { display: grid; gap: .7rem; }
+.etymology-step { position: relative; padding: .9rem 1rem .9rem 1.15rem; border-left: 3px solid var(--accent); background: var(--surface); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; }
+.etymology-step h3 { margin: 0 0 .25rem; font-family: var(--sans); font-size: .83rem; text-transform: uppercase; letter-spacing: .08em; }
+
+.exercise-card { counter-increment: exercise; }
+.exercise-card h3 { font-family: var(--sans); }
+.exercise-instruction { color: var(--muted); }
+details.answer-key { margin-top: 1rem; border: 1px solid var(--rule-strong); border-radius: var(--radius); background: var(--surface); }
+details.answer-key summary { padding: 1rem; font-family: var(--sans); font-weight: 900; cursor: pointer; }
+.answer-content { padding: 0 1rem 1rem; }
+.answer-group + .answer-group { margin-top: 1.3rem; padding-top: 1rem; border-top: 1px solid var(--rule); }
+.answer-group h3 { margin: 0 0 .5rem; font-family: var(--sans); }
+.answer-item { margin: .65rem 0; }
+.answer-item strong { font-family: var(--sans); }
+
+.footer {
+  margin-top: 4.5rem;
+  padding: 1.5rem 0 0;
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: .82rem;
+}
+.footer-row { display: flex; flex-direction: column; gap: .55rem; }
+.footer-links { display: flex; flex-wrap: wrap; gap: .4rem .8rem; }
+
+.back-to-top {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 100;
+  width: 2.8rem;
+  height: 2.8rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--rule-strong);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(.7rem);
+  pointer-events: none;
+  transition: opacity .2s ease, transform .2s ease;
+}
+.back-to-top.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+
+@media (min-width: 38rem) {
+  .meta-strip { grid-template-columns: repeat(3, 1fr); }
+  .overview-grid, .info-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .card-grid, .compare-grid, .exercise-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .sense-head, .sense-body { padding: 1.25rem; }
+  .footer-row { flex-direction: row; justify-content: space-between; align-items: center; }
+}
+
+@media (min-width: 62rem) {
+  .page, .masthead-inner { width: min(calc(100% - 3rem), var(--content)); }
+  .toc { position: sticky; top: .7rem; z-index: 20; }
+  .overview-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .card-grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .compare-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .exercise-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .sense-head, .sense-body { padding: 1.5rem; }
+  .sense-body > .info-grid { grid-template-columns: 1.05fr .95fr; }
+}
+
+@media print {
+  :root {
+    --paper: #fff;
+    --surface: #fff;
+    --surface-2: #f4f1eb;
+    --ink: #000;
+    --muted: #444;
+    --rule: #bbb;
+    --rule-strong: #888;
+    --accent: #8d1722;
+    --accent-deep: #6f1019;
+    --accent-soft: #f5e8e9;
+    --shadow: none;
+  }
+  @page { size: A4; margin: 15mm; }
+  body { font-size: 10.5pt; background: #fff; }
+  .masthead, .toc, .utility-actions, .back-to-top { display: none !important; }
+  .page { width: 100%; padding: 0; }
+  .hero { padding-top: 0; }
+  .hero h1 { font-size: 56pt; }
+  .section { padding-top: 2rem; }
+  .sense-card, .card, .overview-card, .family-card, .collocation-card, .compare-card, .exercise-card, details.answer-key { box-shadow: none; break-inside: avoid; }
+  details.answer-key > .answer-content { display: block !important; }
+  a { color: inherit; text-decoration: none; }
+}
+
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to the guide</a>
+
+  <header class="masthead">
+    <div class="masthead-inner">
+      <a class="brand" href="https://t.me/KooshkyTOEFL" target="_blank" rel="noopener">
+        <strong>Kooshky TOEFL</strong>
+        <span>Word of the Day</span>
+      </a>
+      <div class="utility-actions" aria-label="Page tools">
+        <button class="utility-button" type="button" data-theme-toggle>Dark mode</button>
+        <button class="utility-button" type="button" data-print>Print or save PDF</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="page" id="main-content">
+    <section class="hero" aria-labelledby="headword">
+      <p class="kicker">TOEFL Word of the Day</p>
+      <h1 id="headword">prone</h1>
+      <p class="hero-pronunciation">/proʊn/</p>
+      <p class="hero-pos">adjective</p>
+      <div class="short-meaning-row" aria-label="Meanings at a glance">
+<span class="short-meaning">likely to experience or do something</span><span class="short-meaning">lying face downward</span>      </div>
+<p class="hero-summary">Prone can describe a tendency toward something or a body position facing downward.</p><blockquote class="hero-example">“Coastal areas are prone to flooding during severe storms.”</blockquote>      <div class="meta-strip">
+        <div class="meta-item"><span class="meta-label">Date</span><span class="meta-value">July 15th, 2026</span></div>
+        <div class="meta-item"><span class="meta-label">Level</span><span class="meta-value">B1–mid-B2 TOEFL</span></div>
+        <div class="meta-item"><span class="meta-label">Created by</span><span class="meta-value">Amir Kooshky</span></div>
+      </div>
+    </section>
+
+    <nav class="toc" aria-label="Study sections">
+      <p class="toc-title">In this guide</p>
+      <div class="toc-links">
+<a href="#overview">Overview</a><a href="#pronunciation">Pronunciation</a>        <a href="#meanings">Meanings</a>
+<a href="#collocations">Collocations</a><a href="#relations">Synonyms & antonyms</a><a href="#confusables">Often confused</a><a href="#exercises">Exercises</a>      </div>
+    </nav>
+
+    <section class="section" id="overview">
+      <div class="section-head">
+        <p class="section-kicker">Quick orientation</p>
+        <h2>Usage overview</h2>
+      </div>
+      <div class="overview-grid">
+<article class="overview-card"><h3>Core idea</h3><p>The most common sense describes someone or something with a natural tendency or higher risk of a particular result.</p></article><article class="overview-card"><h3>Register</h3><p>The tendency sense is common in neutral and formal English, especially in academic, medical, scientific, and news contexts. The body-position sense is more formal and technical.</p></article><article class="overview-card"><h3>Where it appears</h3><p>Learners often encounter prone in discussions of health, environmental risks, human behavior, technical problems, and physical position.</p></article><article class="overview-card"><h3>TOEFL value</h3><p>Prone is useful for describing risk, tendency, and vulnerability in academic reading, lectures, and cause-and-effect writing.</p></article>      </div>
+    </section>
+
+    <section class="section" id="pronunciation">
+      <div class="section-head">
+        <p class="section-kicker">Sound</p>
+        <h2>Pronunciation</h2>
+      </div>
+      <div class="card-grid three">
+        <article class="card">
+          <p class="eyebrow">Learner tip</p>
+          <h3>Stress and sounds</h3>
+          <p>The word rhymes with known and phone.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="meanings">
+      <div class="section-head">
+        <p class="section-kicker">Dictionary guide</p>
+        <h2>Meanings and usage</h2>
+        <p class="section-intro">The core definition and examples are always included. Additional notes appear only when they are accurate and useful.</p>
+      </div>
+
+      <article class="sense-card" id="meaning-1">
+        <header class="sense-head">
+          <span class="sense-number">Meaning 1</span>
+          <h3>Likely or susceptible</h3>
+          <div class="badge-row">
+            <span class="badge">adjective</span>
+            <span class="badge">/proʊn/</span>
+<span class="badge">Neutral to formal; especially common in academic, medical, scientific, and technical contexts.</span>          </div>
+        </header>
+        <div class="sense-body">
+          <p class="definition">likely to experience something harmful or unpleasant, or likely to behave in a particular way</p>
+<p class="plain-equivalent"><strong>In simpler words:</strong> likely to have, suffer from, or do something</p><div class="pattern-banner"><strong>Typical pattern:</strong> be prone to plus noun or gerund</div>
+          <p class="subsection-title">Common contexts</p>
+          <div class="context-row">
+<span class="context-pill">health problems</span><span class="context-pill">natural disasters</span><span class="context-pill">technical failures</span><span class="context-pill">human behavior</span><span class="context-pill">errors</span><span class="context-pill">injuries</span><span class="context-pill">environmental risks</span>          </div>
+
+          <p class="subsection-title">Natural examples</p>
+          <ol class="example-list">
+<li>Coastal areas are prone to flooding during severe storms.</li><li>Young children are more prone to dehydration than healthy adults.</li><li>People who are prone to worrying may find uncertainty especially stressful.</li><li>The older version of the software was prone to unexpected crashes.</li><li>Plants grown in wet soil are more prone to fungal diseases.</li><li>He is prone to making quick decisions without considering the consequences.</li><li>Mountain roads are particularly prone to landslides after heavy rainfall.</li><li>Some laboratory measurements are prone to error when the equipment is not properly calibrated.</li>          </ol>
+
+          <div class="info-grid">
+            <section class="info-card good">
+              <h4>Nuance and implication</h4>
+<p><strong>Central nuance:</strong> Prone suggests that something happens more easily or more often than usual because of a person&#39;s nature, an object&#39;s design, or existing conditions.</p><p><strong>Usual implication:</strong> The result is usually negative, undesirable, or risky.</p><p><strong>Compared with “likely”:</strong> Likely can describe a prediction based on current evidence. Prone usually describes a continuing tendency, weakness, or vulnerability.</p>            </section>
+
+            <section class="info-card">
+              <h4>Grammar notes</h4>
+              <dl class="grammar-list">
+<div class="grammar-item"><dt>Complements and objects</dt><dd>Prone is normally followed by to and then a noun, pronoun, or gerund. A to-infinitive is also possible, especially with repeated behavior, but the gerund pattern is often more natural for learners.</dd></div><div class="grammar-item"><dt>Prepositions</dt><dd>Use prone to, not prone for or prone with.</dd></div><div class="grammar-item"><dt>Form and position</dt><dd>This sense usually appears after a linking verb, as in is prone to error. It also appears in compound adjectives before nouns, such as accident-prone workers and flood-prone regions.</dd></div>              </dl>
+            </section>
+          </div>
+
+          <p class="subsection-title">Useful patterns</p>
+          <div class="pattern-list">
+            <article class="pattern-card">
+              <code class="pattern-code">be prone to plus noun</code>
+<p class="pattern-use">Use this to describe a higher risk of a condition, event, or problem.</p>              <p><strong>Example:</strong> Older buildings may be prone to structural damage during earthquakes.</p>
+            </article>
+            <article class="pattern-card">
+              <code class="pattern-code">be prone to plus gerund</code>
+<p class="pattern-use">Use this to describe a repeated tendency to behave in a certain way.</p>              <p><strong>Example:</strong> He is prone to exaggerating minor problems.</p>
+            </article>
+            <article class="pattern-card">
+              <code class="pattern-code">more or less prone to</code>
+<p class="pattern-use">Use comparative forms to compare levels of risk or tendency.</p>              <p><strong>Example:</strong> Certain crops are more prone to disease in humid climates.</p>
+            </article>
+            <article class="pattern-card">
+              <code class="pattern-code">noun plus prone</code>
+<p class="pattern-use">Prone can form a compound adjective identifying the type of problem that commonly occurs.</p>              <p><strong>Example:</strong> The engineers replaced several error-prone procedures with automated checks.</p>
+            </article>
+          </div>
+
+          <p class="subsection-title">Common wrong usage</p>
+          <div class="error-list">
+            <article class="error-card">
+              <p class="error-wrong"><strong>Wrong:</strong> This region is prone for earthquakes.</p>
+              <p class="error-correct"><strong>Correct:</strong> This region is prone to earthquakes.</p>
+<p class="error-explanation">The adjective prone is followed by the preposition to.</p>            </article>
+            <article class="error-card">
+              <p class="error-wrong"><strong>Wrong:</strong> She is prone to make careless mistakes.</p>
+              <p class="error-correct"><strong>Correct:</strong> She is prone to making careless mistakes.</p>
+<p class="error-explanation">A gerund is generally the most natural form after prone to when describing repeated behavior.</p>            </article>
+            <article class="error-card">
+              <p class="error-wrong"><strong>Wrong:</strong> The machine is prone with overheating.</p>
+              <p class="error-correct"><strong>Correct:</strong> The machine is prone to overheating.</p>
+<p class="error-explanation">Use prone to followed by a noun or gerund.</p>            </article>
+            <article class="error-card">
+              <p class="error-wrong"><strong>Wrong:</strong> Heavy rain made the road prone to be flooded.</p>
+              <p class="error-correct"><strong>Correct:</strong> Heavy rain made the road prone to flooding.</p>
+<p class="error-explanation">A noun or gerund is more natural than a passive infinitive after prone to.</p>            </article>
+          </div>
+
+          <p class="subsection-title">TOEFL use</p>
+          <div class="info-grid">
+<section class="info-card tip"><h4>Reading and listening</h4><p>Prone to often signals an increased risk or a repeated tendency. The cause of that vulnerability may appear before or after the phrase.</p></section><section class="info-card tip"><h4>Writing and speaking</h4><p>Use prone to with specific nouns such as flooding, disease, error, damage, or conflict. It is especially useful when comparing risks.</p></section><section class="info-card"><h4>Paraphrase tip</h4><p>Depending on context, prone to can mean likely to experience, susceptible to, vulnerable to, or having a tendency to.</p></section>          </div>
+        </div>
+      </article>
+      <article class="sense-card" id="meaning-2">
+        <header class="sense-head">
+          <span class="sense-number">Meaning 2</span>
+          <h3>Lying face downward</h3>
+          <div class="badge-row">
+            <span class="badge">adjective</span>
+            <span class="badge">/proʊn/</span>
+<span class="badge">Formal and technical; common in medical, anatomical, military, and descriptive contexts.</span>          </div>
+        </header>
+        <div class="sense-body">
+          <p class="definition">lying flat with the front of the body facing downward</p>
+<p class="plain-equivalent"><strong>In simpler words:</strong> lying face down</p><div class="pattern-banner"><strong>Typical pattern:</strong> lie prone or be in a prone position</div>
+          <p class="subsection-title">Common contexts</p>
+          <div class="context-row">
+<span class="context-pill">medicine</span><span class="context-pill">anatomy</span><span class="context-pill">physical exercise</span><span class="context-pill">emergency response</span><span class="context-pill">military movement</span><span class="context-pill">descriptions of accidents</span>          </div>
+
+          <p class="subsection-title">Natural examples</p>
+          <ol class="example-list">
+<li>The patient was placed in a prone position during the examination.</li><li>The archaeologist lay prone on the ground to examine the markings closely.</li><li>The injured hiker was found lying prone beside the trail.</li><li>The exercise begins with the participant in a prone position.</li><li>The photographer remained prone in the grass while waiting for the bird to appear.</li><li>Rescuers carefully turned the prone man onto his back.</li><li>The soldiers moved into a prone position to remain hidden.</li><li>Researchers recorded the participants&#39; breathing while they were lying prone.</li>          </ol>
+
+          <div class="info-grid">
+            <section class="info-card good">
+              <h4>Nuance and implication</h4>
+<p><strong>Central nuance:</strong> The chest and front of the body face the surface beneath the person.</p><p><strong>Usual implication:</strong> The word precisely identifies body orientation and does not by itself explain why the person is in that position.</p><p><strong>Compared with “supine”:</strong> Prone means lying face downward, while supine means lying on the back with the face upward.</p>            </section>
+
+            <section class="info-card">
+              <h4>Grammar notes</h4>
+              <dl class="grammar-list">
+<div class="grammar-item"><dt>Complements and objects</dt><dd>Prone commonly follows lie, remain, be found, or be placed. It also appears before position as an attributive adjective.</dd></div><div class="grammar-item"><dt>Prepositions</dt><dd>Common patterns include prone on the ground and in a prone position.</dd></div><div class="grammar-item"><dt>Form and position</dt><dd>It is often used after a verb in the phrase lie prone or before the noun position. The phrase lying prone is especially common.</dd></div>              </dl>
+            </section>
+          </div>
+
+          <p class="subsection-title">Useful patterns</p>
+          <div class="pattern-list">
+            <article class="pattern-card">
+              <code class="pattern-code">lie prone</code>
+              <p><strong>Example:</strong> The scientist lay prone beside the nest to observe the birds without disturbing them.</p>
+            </article>
+            <article class="pattern-card">
+              <code class="pattern-code">be found lying prone</code>
+              <p><strong>Example:</strong> The missing climber was found lying prone near the base of the hill.</p>
+            </article>
+            <article class="pattern-card">
+              <code class="pattern-code">in a prone position</code>
+<p class="pattern-use">This is the standard formal expression for the face-down body position.</p>              <p><strong>Example:</strong> The procedure requires the patient to remain in a prone position.</p>
+            </article>
+            <article class="pattern-card">
+              <code class="pattern-code">place someone in a prone position</code>
+              <p><strong>Example:</strong> The medical team placed the patient in a prone position to improve breathing.</p>
+            </article>
+          </div>
+
+          <p class="subsection-title">Common wrong usage</p>
+          <div class="error-list">
+            <article class="error-card">
+              <p class="error-wrong"><strong>Wrong:</strong> The patient was lying prone on his back.</p>
+              <p class="error-correct"><strong>Correct:</strong> The patient was lying supine on his back.</p>
+<p class="error-explanation">Prone means face down. Supine means lying on the back.</p>            </article>
+            <article class="error-card">
+              <p class="error-wrong"><strong>Wrong:</strong> She was in prone position.</p>
+              <p class="error-correct"><strong>Correct:</strong> She was in a prone position.</p>
+<p class="error-explanation">Position is a singular countable noun here, so it needs the article a.</p>            </article>
+            <article class="error-card">
+              <p class="error-wrong"><strong>Wrong:</strong> He laid prone on the floor.</p>
+              <p class="error-correct"><strong>Correct:</strong> He lay prone on the floor.</p>
+<p class="error-explanation">The past tense of the intransitive verb lie is lay. Laid is the past tense of lay, which normally takes an object.</p>            </article>
+          </div>
+
+          <p class="subsection-title">TOEFL use</p>
+          <div class="info-grid">
+<section class="info-card tip"><h4>Reading and listening</h4><p>In medical or scientific contexts, prone identifies a precise physical position and contrasts with supine.</p></section><section class="info-card tip"><h4>Writing and speaking</h4><p>For general communication, face down is often simpler. Use prone when a formal or technical description is appropriate.</p></section><section class="info-card"><h4>Paraphrase tip</h4><p>Prone in this sense can usually be paraphrased as lying face downward or in a face-down position.</p></section>          </div>
+        </div>
+      </article>
+    </section>
+
+
+    <section class="section" id="collocations">
+      <div class="section-head">
+        <p class="section-kicker">Natural combinations</p>
+        <h2>Common collocations</h2>
+        <p class="section-intro">These are established combinations, not merely grammatically possible phrases.</p>
+      </div>
+      <div class="card-grid three">
+        <article class="collocation-card">
+<p class="eyebrow">Likely or susceptible</p>          <h3>prone to error</h3>
+<p>likely to contain or produce mistakes</p>          <div class="mini-facts">
+<p class="mini-fact"><strong>Pattern:</strong> be prone to error</p>            <p class="mini-fact"><strong>Example:</strong> Manual calculations are more prone to error than automated ones.</p>
+          </div>
+        </article>
+        <article class="collocation-card">
+<p class="eyebrow">Likely or susceptible</p>          <h3>prone to flooding</h3>
+<p>likely to experience floods</p>          <div class="mini-facts">
+<p class="mini-fact"><strong>Pattern:</strong> be prone to flooding</p>            <p class="mini-fact"><strong>Example:</strong> Low-lying neighborhoods are especially prone to flooding.</p>
+          </div>
+        </article>
+        <article class="collocation-card">
+<p class="eyebrow">Likely or susceptible</p>          <h3>prone to infection</h3>
+<p>likely to develop an infection</p>          <div class="mini-facts">
+<p class="mini-fact"><strong>Pattern:</strong> be prone to infection</p>            <p class="mini-fact"><strong>Example:</strong> Patients with weakened immune systems are more prone to infection.</p>
+          </div>
+        </article>
+        <article class="collocation-card">
+<p class="eyebrow">Likely or susceptible</p>          <h3>prone to injury</h3>
+<p>likely to become injured</p>          <div class="mini-facts">
+<p class="mini-fact"><strong>Pattern:</strong> be prone to injury</p>            <p class="mini-fact"><strong>Example:</strong> Athletes who skip warm-up exercises may be more prone to injury.</p>
+          </div>
+        </article>
+        <article class="collocation-card">
+<p class="eyebrow">Likely or susceptible</p>          <h3>prone to exaggeration</h3>
+<p>likely to describe things as more extreme than they really are</p>          <div class="mini-facts">
+<p class="mini-fact"><strong>Pattern:</strong> be prone to exaggeration</p>            <p class="mini-fact"><strong>Example:</strong> The witness was known to be prone to exaggeration.</p>
+          </div>
+        </article>
+        <article class="collocation-card">
+<p class="eyebrow">Likely or susceptible</p>          <h3>accident-prone</h3>
+<p>likely to experience or cause accidents</p>          <div class="mini-facts">
+<p class="mini-fact"><strong>Pattern:</strong> accident-prone plus noun</p>            <p class="mini-fact"><strong>Example:</strong> The company introduced extra training for workers in accident-prone roles.</p>
+<p class="mini-fact"><strong>Usage note:</strong> Usually written with a hyphen before a noun.</p>          </div>
+        </article>
+        <article class="collocation-card">
+<p class="eyebrow">Likely or susceptible</p>          <h3>flood-prone</h3>
+<p>likely to experience flooding</p>          <div class="mini-facts">
+<p class="mini-fact"><strong>Pattern:</strong> flood-prone plus noun</p>            <p class="mini-fact"><strong>Example:</strong> New houses should not be built in flood-prone areas.</p>
+<p class="mini-fact"><strong>Usage note:</strong> Usually written with a hyphen before a noun.</p>          </div>
+        </article>
+        <article class="collocation-card">
+<p class="eyebrow">Likely or susceptible</p>          <h3>error-prone</h3>
+<p>likely to produce mistakes</p>          <div class="mini-facts">
+<p class="mini-fact"><strong>Pattern:</strong> error-prone plus noun or linking verb plus error-prone</p>            <p class="mini-fact"><strong>Example:</strong> The old reporting system was slow and error-prone.</p>
+          </div>
+        </article>
+        <article class="collocation-card">
+<p class="eyebrow">Lying face downward</p>          <h3>prone position</h3>
+<p>a position in which the front of the body faces downward</p>          <div class="mini-facts">
+<p class="mini-fact"><strong>Pattern:</strong> in a prone position</p>            <p class="mini-fact"><strong>Example:</strong> The scan was performed with the patient in a prone position.</p>
+          </div>
+        </article>
+        <article class="collocation-card">
+<p class="eyebrow">Lying face downward</p>          <h3>lie prone</h3>
+<p>lie flat with the face and front of the body downward</p>          <div class="mini-facts">
+<p class="mini-fact"><strong>Pattern:</strong> lie prone</p>            <p class="mini-fact"><strong>Example:</strong> The observer lay prone behind a fallen tree.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="relations">
+      <div class="section-head">
+        <p class="section-kicker">Meaning relations</p>
+        <h2>Synonyms and antonyms</h2>
+        <p class="section-intro">Only clear and useful relationships are included.</p>
+      </div>
+      <h3>Close synonyms</h3>
+      <div class="compare-grid">
+        <article class="compare-card">
+          <span class="word-pill">susceptible</span>
+          <p class="meta">adjective · Likely or susceptible</p>
+<p><strong>Shared meaning:</strong> Both words can describe a person or thing that is easily affected by a problem.</p>          <p><strong>Difference:</strong> Susceptible often emphasizes being easily affected by an outside influence, especially disease, damage, or persuasion. Prone can also describe a repeated personal behavior.</p>
+          <p><strong>Example:</strong> Young plants are highly susceptible to frost.</p>
+        </article>
+        <article class="compare-card">
+          <span class="word-pill">vulnerable</span>
+          <p class="meta">adjective · Likely or susceptible</p>
+<p><strong>Shared meaning:</strong> Both can indicate an increased risk of harm.</p>          <p><strong>Difference:</strong> Vulnerable emphasizes weakness or lack of protection. Prone emphasizes a tendency or higher probability.</p>
+          <p><strong>Example:</strong> Small islands are particularly vulnerable to rising sea levels.</p>
+        </article>
+        <article class="compare-card">
+          <span class="word-pill">inclined</span>
+          <p class="meta">adjective · Likely or susceptible</p>
+<p><strong>Shared meaning:</strong> Both can describe a tendency to behave in a particular way.</p>          <p><strong>Difference:</strong> Inclined is often neutral and may describe a preference or willingness. Prone usually suggests a repeated and often undesirable tendency.</p>
+          <p><strong>Example:</strong> She is inclined to avoid unnecessary risks.</p>
+        </article>
+        <article class="compare-card">
+          <span class="word-pill">likely</span>
+          <p class="meta">adjective · Likely or susceptible</p>
+<p><strong>Shared meaning:</strong> Both can indicate that something has a high chance of happening.</p>          <p><strong>Difference:</strong> Likely often describes a prediction about one situation. Prone usually describes a continuing tendency or vulnerability.</p>
+          <p><strong>Example:</strong> The roads are likely to become icy overnight.</p>
+        </article>
+        <article class="compare-card">
+          <span class="word-pill">face down</span>
+          <p class="meta">adverbial phrase · Lying face downward</p>
+<p><strong>Shared meaning:</strong> Both describe the same basic body orientation.</p>          <p><strong>Difference:</strong> Face down is more common in everyday English, while prone is more formal and technical.</p>
+          <p><strong>Example:</strong> The swimmer floated face down for several seconds.</p>
+        </article>
+      </div>
+
+      <h3 style="margin-top: 2rem;">Direct or useful antonyms</h3>
+      <div class="compare-grid">
+        <article class="compare-card">
+          <span class="word-pill">resistant</span>
+          <p class="meta">adjective · Likely or susceptible</p>
+          <p><strong>Opposition:</strong> Resistant describes something that is not easily affected by a particular problem or force.</p>
+<p><strong>Usage note:</strong> It is an opposite only when prone describes susceptibility to a specific influence.</p>          <p><strong>Example:</strong> This variety of wheat is resistant to several common diseases.</p>
+        </article>
+        <article class="compare-card">
+          <span class="word-pill">supine</span>
+          <p class="meta">adjective · Lying face downward</p>
+          <p><strong>Opposition:</strong> Supine means lying on the back with the face upward.</p>
+<p><strong>Usage note:</strong> This is a formal anatomical opposite of prone.</p>          <p><strong>Example:</strong> The patient remained supine throughout the procedure.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="confusables">
+      <div class="section-head">
+        <p class="section-kicker">Precision</p>
+        <h2>Words learners may confuse</h2>
+      </div>
+      <div class="compare-grid">
+        <article class="compare-card">
+          <span class="word-pill">likely</span>
+<p class="meta">adjective</p><p><strong>Why it is confusing:</strong> Both words can indicate that something has a high chance of happening.</p>          <p><strong>Key difference:</strong> Likely often predicts a particular future event, while prone usually describes a continuing tendency or vulnerability.</p>
+          <p><strong>prone:</strong> This type of engine is prone to overheating.</p>
+          <p><strong>likely:</strong> The engine is likely to overheat during today&#39;s test.</p>
+        </article>
+        <article class="compare-card">
+          <span class="word-pill">supine</span>
+<p class="meta">adjective</p><p><strong>Why it is confusing:</strong> Both are formal terms used to describe body position.</p>          <p><strong>Key difference:</strong> Prone means lying face downward, while supine means lying on the back with the face upward.</p>
+          <p><strong>prone:</strong> The patient was placed in a prone position.</p>
+          <p><strong>supine:</strong> The patient was placed in a supine position.</p>
+        </article>
+      </div>
+    </section>
+
+
+    <section class="section" id="exercises">
+      <div class="section-head">
+        <p class="section-kicker">Active practice</p>
+        <h2>Practice exercises</h2>
+      </div>
+      <div class="exercise-grid">
+        <article class="exercise-card">
+          <h3>Correct or incorrect?</h3>
+          <p class="exercise-instruction">Decide whether each sentence is correct. Correct the inaccurate ones.</p>
+          <ol class="clean-list"><li>Areas near the river are prone to flooding in the spring.</li><li>This device is prone for technical failure.</li><li>He is prone to making decisions too quickly.</li><li>The patient lay prone with her face upward.</li></ol>
+        </article>
+        <article class="exercise-card">
+          <h3>Collocation practice</h3>
+          <p class="exercise-instruction">Complete each sentence with a natural collocation.</p>
+          <ol class="clean-list"><li>Low-lying coastal communities are prone _____ flooding.</li><li>The older system was highly error-_____.</li><li>The patient was asked to remain in a _____ position.</li><li>People who are prone to _____ may react strongly to minor problems.</li></ol>
+        </article>
+      </div>
+
+      <details class="answer-key">
+        <summary>Open the complete answer key</summary>
+        <div class="answer-content">
+          <section class="answer-group">
+            <h3>Correct or incorrect?</h3>
+            <p class="answer-item"><strong>1. Correct</strong><br><em>The standard pattern is prone to followed by a noun or gerund.</em></p>
+            <p class="answer-item"><strong>2. Incorrect</strong><br>This device is prone to technical failure.<br><em>Prone is followed by to, not for.</em></p>
+            <p class="answer-item"><strong>3. Correct</strong><br><em>A gerund can follow prone to when describing repeated behavior.</em></p>
+            <p class="answer-item"><strong>4. Incorrect</strong><br>The patient lay supine with her face upward.<br><em>Prone means face downward. Supine means face upward.</em></p>
+          </section>
+          <section class="answer-group">
+            <h3>Collocation practice</h3>
+            <p class="answer-item"><strong>1. to</strong><br>Low-lying coastal communities are prone to flooding.<br><em>The adjective prone is followed by to.</em></p>
+            <p class="answer-item"><strong>2. prone</strong><br>The older system was highly error-prone.<br><em>Error-prone means likely to produce mistakes.</em></p>
+            <p class="answer-item"><strong>3. prone</strong><br>The patient was asked to remain in a prone position.<br><em>A prone position is a face-down position.</em></p>
+            <p class="answer-item"><strong>4. worrying</strong><br>People who are prone to worrying may react strongly to minor problems.<br><em>A gerund naturally follows prone to when describing repeated behavior.</em></p>
+          </section>
+        </div>
+      </details>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-row">
+        <span>Created and compiled by <strong>Amir Kooshky</strong></span>
+        <nav class="footer-links" aria-label="Creator links">
+          <a href="https://t.me/KooshkyTOEFL" target="_blank" rel="noopener">Telegram channel</a>
+          <a href="https://www.instagram.com/kooshkytoefl" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://t.me/KooshkyTOEFL_pv" target="_blank" rel="noopener">Personal Telegram</a>
+        </nav>
+      </div>
+    </footer>
+  </main>
+
+  <button class="back-to-top no-js-hidden" type="button" data-back-to-top aria-label="Go to the top">↑</button>
+  <script>
+(() => {
+  "use strict";
+
+  const root = document.documentElement;
+  root.classList.add("js");
+
+  const storageKey = "kooshky-wotd-theme";
+  const themeButton = document.querySelector("[data-theme-toggle]");
+  const printButton = document.querySelector("[data-print]");
+  const topButton = document.querySelector("[data-back-to-top]");
+
+  const applyTheme = (theme) => {
+    if (theme === "light" || theme === "dark") {
+      root.dataset.theme = theme;
+    } else {
+      delete root.dataset.theme;
+    }
+    if (themeButton) {
+      const active = root.dataset.theme || "system";
+      themeButton.textContent = active === "dark" ? "Light mode" : "Dark mode";
+      themeButton.setAttribute("aria-label", `Switch from ${active} theme`);
+    }
+  };
+
+  let savedTheme = null;
+  try { savedTheme = localStorage.getItem(storageKey); } catch (_) { /* local files may block storage */ }
+  applyTheme(savedTheme);
+
+  themeButton?.addEventListener("click", () => {
+    const systemDark = window.matchMedia?.("(prefers-color-scheme: dark)").matches;
+    const current = root.dataset.theme || (systemDark ? "dark" : "light");
+    const next = current === "dark" ? "light" : "dark";
+    applyTheme(next);
+    try { localStorage.setItem(storageKey, next); } catch (_) { /* nonessential */ }
+  });
+
+  printButton?.addEventListener("click", () => window.print());
+
+  if (topButton) {
+    const updateTopButton = () => topButton.classList.toggle("visible", window.scrollY > 700);
+    window.addEventListener("scroll", updateTopButton, { passive: true });
+    updateTopButton();
+    topButton.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+  }
+})();
+
+  </script>
+</body>
+</html>

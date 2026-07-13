@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUANTIFY | Extended TOEFL Explanation</title>
+    <style>
+        :root {
+            --bg: #08090d;
+            --bg-soft: #10131b;
+            --card: rgba(255, 255, 255, 0.065);
+            --card-strong: rgba(255, 255, 255, 0.105);
+            --text: #f4f1ea;
+            --muted: #b9b2a7;
+            --faint: #8f887d;
+            --gold: #d8b35a;
+            --gold-soft: rgba(216, 179, 90, 0.16);
+            --blue: #8bb7ff;
+            --green: #9be2bd;
+            --red: #ff9d9d;
+            --border: rgba(255, 255, 255, 0.14);
+            --shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+            --radius-lg: 28px;
+            --radius-md: 18px;
+            --radius-sm: 12px;
+            --max: 980px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background:
+                radial-gradient(circle at top left, rgba(216, 179, 90, 0.18), transparent 32rem),
+                radial-gradient(circle at bottom right, rgba(139, 183, 255, 0.13), transparent 30rem),
+                var(--bg);
+            color: var(--text);
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+            line-height: 1.65;
+        }
+
+        a {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .page {
+            width: min(100%, var(--max));
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* =========================
+     INTRO IMAGE TEMPLATE
+  ========================= */
+
+        .intro-page {
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            padding: 20px;
+        }
+
+        .intro-shot {
+            width: min(100%, 860px);
+            aspect-ratio: 4 / 5;
+            min-height: 680px;
+            border: 1px solid var(--border);
+            border-radius: 42px;
+            overflow: hidden;
+            position: relative;
+            background:
+                linear-gradient(135deg, rgba(216, 179, 90, 0.18), transparent 35%),
+                linear-gradient(315deg, rgba(139, 183, 255, 0.18), transparent 35%),
+                #0b0d13;
+            box-shadow: var(--shadow);
+            padding: clamp(26px, 6vw, 68px);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .intro-shot::before {
+            content: "";
+            position: absolute;
+            inset: 22px;
+            border: 1px solid rgba(216, 179, 90, 0.24);
+            border-radius: 32px;
+            pointer-events: none;
+        }
+
+        .intro-kicker,
+        .ext-kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            width: fit-content;
+            padding: 8px 13px;
+            border: 1px solid rgba(216, 179, 90, 0.28);
+            border-radius: 999px;
+            background: var(--gold-soft);
+            color: var(--gold);
+            font-size: clamp(0.78rem, 2.2vw, 0.95rem);
+            font-weight: 800;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        .intro-center {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .intro-word {
+            margin: 0;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(4.4rem, 4.5vw, 9.5rem);
+            line-height: 0.92;
+            letter-spacing: -0.04em;
+            color: #fff8ea;
+            text-shadow: 0 12px 45px rgba(0, 0, 0, 0.55);
+        }
+
+        .intro-ipa {
+            margin: 18px 0 0;
+            color: var(--gold);
+            font-size: clamp(1.05rem, 4vw, 1.5rem);
+            font-weight: 700;
+        }
+
+        .intro-meanings {
+            margin: 28px auto 0;
+            display: grid;
+            gap: 12px;
+            max-width: 640px;
+        }
+
+        .intro-meaning {
+            padding: 15px 18px;
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            background: rgba(255, 255, 255, 0.075);
+            backdrop-filter: blur(12px);
+            font-size: clamp(1rem, 3.2vw, 1.25rem);
+            font-weight: 650;
+        }
+
+        .intro-example {
+            margin: 26px auto 0;
+            max-width: 650px;
+            color: var(--muted);
+            font-size: clamp(0.95rem, 3vw, 1.15rem);
+        }
+
+        .intro-footer,
+        .ext-footer {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 16px;
+            align-items: center;
+            justify-content: space-between;
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        .intro-footer strong,
+        .ext-footer strong {
+            color: var(--text);
+        }
+
+        /* =========================
+     EXTENDED PAGE TEMPLATE
+  ========================= */
+
+        .extended-page {
+            padding-bottom: 50px;
+        }
+
+        .hero {
+            margin: 18px auto 22px;
+            padding: clamp(24px, 5vw, 46px);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            background:
+                linear-gradient(135deg, rgba(216, 179, 90, 0.14), transparent 42%),
+                var(--card);
+            box-shadow: var(--shadow);
+        }
+
+        .hero h1 {
+            margin: 18px 0 8px;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(2.4rem, 10vw, 6.2rem);
+            line-height: 0.95;
+            letter-spacing: -0.055em;
+
+            white-space: nowrap;
+            overflow-wrap: normal;
+            word-break: normal;
+            hyphens: none;
+            max-width: 100%;
+        }
+
+        .hero-subtitle {
+            margin: 0;
+            color: var(--muted);
+            font-size: clamp(1rem, 3vw, 1.2rem);
+        }
+
+        .brand-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 22px;
+        }
+
+        .brand-links a {
+            display: inline-flex;
+            padding: 9px 13px;
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.055);
+            color: var(--text);
+            font-size: 0.94rem;
+        }
+
+        .meta-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+            margin-top: 22px;
+        }
+
+        .meta-card,
+        .toc,
+        .section,
+        .sense-card,
+        .info-card,
+        .family-card,
+        .collocation-card,
+        .exercise-card {
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            background: var(--card);
+        }
+
+        .meta-card {
+            padding: 15px;
+        }
+
+        .meta-label {
+            display: block;
+            color: var(--faint);
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-weight: 800;
+        }
+
+        .meta-value {
+            display: block;
+            margin-top: 5px;
+            font-weight: 800;
+        }
+
+        .toc {
+            padding: 18px;
+            margin: 20px 0;
+        }
+
+        .toc-title {
+            margin: 0 0 10px;
+            color: var(--gold);
+            font-weight: 900;
+        }
+
+        .toc-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .toc-links a {
+            padding: 8px 11px;
+            border-radius: 999px;
+            background: var(--gold-soft);
+            color: var(--gold);
+            font-size: 0.93rem;
+        }
+
+        .section {
+            margin: 20px 0;
+            padding: clamp(18px, 4vw, 30px);
+        }
+
+        .section h2 {
+            margin: 0 0 18px;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(1.8rem, 6vw, 2.7rem);
+            line-height: 1.1;
+        }
+
+        .sense-card {
+            padding: clamp(16px, 4vw, 26px);
+            margin: 16px 0;
+        }
+
+        .sense-head {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 14px;
+        }
+
+        .sense-num,
+        .pos-badge,
+        .ipa-badge {
+            display: inline-flex;
+            align-items: center;
+            border-radius: 999px;
+            font-weight: 850;
+        }
+
+        .sense-num {
+            padding: 7px 12px;
+            background: var(--gold);
+            color: #14120b;
+        }
+
+        .pos-badge {
+            padding: 7px 11px;
+            background: rgba(139, 183, 255, 0.16);
+            color: var(--blue);
+        }
+
+        .ipa-badge {
+            padding: 7px 11px;
+            background: rgba(255, 255, 255, 0.07);
+            color: var(--muted);
+        }
+
+        .definition {
+            font-size: 1.12rem;
+            font-weight: 750;
+            color: #fff7e8;
+        }
+
+        .simple-label {
+            margin: 20px 0 8px;
+            color: var(--gold);
+            font-weight: 900;
+        }
+
+        .example-list,
+        .clean-list,
+        .wrong-list {
+            margin: 8px 0 0;
+            padding-left: 1.25rem;
+        }
+
+        .example-list li,
+        .clean-list li,
+        .wrong-list li {
+            margin: 8px 0;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-top: 14px;
+        }
+
+        .info-card {
+            padding: 14px;
+        }
+
+        .info-card h4,
+        .family-card h3,
+        .collocation-card h3,
+        .exercise-card h3 {
+            margin: 0 0 8px;
+            color: var(--gold);
+        }
+
+        .warning {
+            border-color: rgba(255, 157, 157, 0.35);
+            background: rgba(255, 157, 157, 0.07);
+        }
+
+        .good {
+            border-color: rgba(155, 226, 189, 0.3);
+            background: rgba(155, 226, 189, 0.06);
+        }
+
+        .family-grid,
+        .collocation-grid,
+        .exercise-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+        }
+
+        .family-card,
+        .collocation-card,
+        .exercise-card {
+            padding: 16px;
+        }
+
+        .word-pill-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 9px;
+        }
+
+        .word-pill {
+            display: inline-flex;
+            padding: 8px 11px;
+            border-radius: 999px;
+            background: var(--card-strong);
+            border: 1px solid var(--border);
+            font-weight: 800;
+        }
+
+        details.answer-key {
+            margin-top: 16px;
+            border: 1px solid rgba(216, 179, 90, 0.3);
+            border-radius: var(--radius-md);
+            background: var(--gold-soft);
+            padding: 14px 16px;
+        }
+
+        details.answer-key summary {
+            cursor: pointer;
+            color: var(--gold);
+            font-weight: 950;
+        }
+
+        .ext-footer {
+            margin-top: 22px;
+            padding: 22px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            background: var(--card);
+        }
+
+        /* =========================
+     RESPONSIVE RULES
+  ========================= */
+
+        @media (max-width: 720px) {
+            .page {
+                padding: 12px;
+            }
+
+            .intro-page {
+                padding: 10px;
+            }
+
+            .intro-shot {
+                min-height: 620px;
+                border-radius: 30px;
+                padding: 26px 18px;
+            }
+
+            .intro-shot::before {
+                inset: 12px;
+                border-radius: 24px;
+            }
+
+            .intro-word {
+                letter-spacing: -0.07em;
+            }
+
+            .intro-footer,
+            .ext-footer {
+                display: grid;
+                justify-content: stretch;
+            }
+
+            .meta-grid,
+            .info-grid,
+            .family-grid,
+            .collocation-grid,
+            .exercise-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero,
+            .section {
+                border-radius: 22px;
+            }
+
+            .sense-head {
+                align-items: flex-start;
+            }
+
+            .brand-links a,
+            .toc-links a {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .hero h1 {
+                font-size: clamp(1.55rem, 8.8vw, 2.65rem);
+                line-height: 1.02;
+                letter-spacing: -0.035em;
+                white-space: nowrap;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .intro-shot {
+                aspect-ratio: auto;
+                min-height: 600px;
+            }
+
+            .intro-meaning {
+                padding: 12px 14px;
+            }
+        }
+    </style>
+</head>
+
+<body class="extended-page">
+    <main class="page">
+
+        <header class="hero">
+            <div class="ext-kicker">📚✨ TOEFL Word of the Day ✨📚</div>
+            <h1>QUANTIFY</h1>
+            <p class="hero-subtitle">A complete TOEFL learner guide compiled by <strong>Amir Kooshky</strong>.</p>
+
+            <div class="brand-links">
+                <a href="https://t.me/KooshkyTOEFL" target="_blank">Telegram Channel</a>
+                <a href="https://www.instagram.com/kooshkytoefl" target="_blank">Instagram</a>
+                <a href="https://t.me/KooshkyTOEFL_pv" target="_blank">Personal Telegram</a>
+            </div>
+
+            <div class="meta-grid">
+                <div class="meta-card">
+                    <span class="meta-label">Date</span>
+                    <span class="meta-value">July 1st, 2026</span>
+                </div>
+                <div class="meta-card">
+                    <span class="meta-label">Word</span>
+                    <span class="meta-value">quantify</span>
+                </div>
+                <div class="meta-card">
+                    <span class="meta-label">Level</span>
+                    <span class="meta-value">B1–B2 TOEFL</span>
+                </div>
+            </div>
+        </header>
+
+        <nav class="toc">
+            <p class="toc-title">Study sections</p>
+            <div class="toc-links">
+                <a href="#meanings">Meanings</a>
+                <a href="#family">Word Family</a>
+                <a href="#collocations">Collocations</a>
+                <a href="#synonyms">Synonyms & Antonyms</a>
+                <a href="#etymology">Etymology</a>
+                <a href="#exercises">Exercises</a>
+            </div>
+        </nav>
+
+        <section class="section" id="meanings">
+            <h2>Meanings & Usage</h2>
+
+            <article class="sense-card">
+                <div class="sense-head">
+                    <span class="sense-num">Meaning 1</span>
+                    <span class="pos-badge">verb (transitive)</span>
+                    <span class="ipa-badge">/ˈkwɑːn.t̬ə.faɪ/</span>
+                </div>
+
+                <p class="definition">
+                    To measure something and express it as a number, amount, or value.
+                </p>
+
+                <p class="simple-label">Natural examples</p>
+                <ol class="example-list">
+                    <li>The researchers quantified the amount of carbon dioxide released into the atmosphere.</li>
+                    <li>Scientists are trying to quantify the effects of climate change on agriculture.</li>
+                    <li>The survey quantified the percentage of students who study abroad.</li>
+                    <li>The laboratory can accurately quantify the level of bacteria in the sample.</li>
+                    <li>Modern software helps businesses quantify energy consumption more efficiently.</li>
+                </ol>
+
+                <div class="info-grid">
+
+                    <div class="info-card good">
+                        <h4>Nuance & implication</h4>
+                        <p>
+                            <strong>Quantify</strong> emphasizes converting observations into measurable data. It is
+                            especially common in science, economics, psychology, medicine, engineering, and research
+                            papers. When you quantify something, you make it more objective by using numbers instead of
+                            vague descriptions.
+                        </p>
+                    </div>
+
+                    <div class="info-card">
+                        <h4>Grammar notes</h4>
+                        <p>
+                            <strong>Quantify</strong> is almost always a <strong>transitive verb</strong>, so it
+                            normally takes a direct object: <em>quantify costs</em>, <em>quantify risk</em>,
+                            <em>quantify pollution</em>. It is commonly followed by phrases such as <strong>by
+                                using...</strong>, <strong>in terms of...</strong>, or <strong>as a percentage</strong>.
+                        </p>
+                    </div>
+
+                    <div class="info-card warning">
+                        <h4>Common wrong usage</h4>
+                        <ul class="wrong-list">
+                            <li>❌ The scientist quantified about pollution. → ✅ The scientist quantified the amount of
+                                pollution.</li>
+                            <li>❌ We quantified that pollution. → ✅ We quantified the level of pollution.</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <h4>TOEFL tip</h4>
+                        <p>
+                            TOEFL passages often contrast <strong>qualitative</strong> observations with
+                            <strong>quantified</strong> evidence. Watch for numbers, measurements, percentages, or
+                            statistics—they often signal that information has been quantified.
+                        </p>
+                    </div>
+
+                </div>
+            </article>
+
+            <article class="sense-card">
+
+                <div class="sense-head">
+                    <span class="sense-num">Meaning 2</span>
+                    <span class="pos-badge">verb (transitive)</span>
+                    <span class="ipa-badge">/ˈkwɑːn.t̬ə.faɪ/</span>
+                </div>
+
+                <p class="definition">
+                    To describe or evaluate something more precisely by expressing it with numbers, measurements, or
+                    data.
+                </p>
+
+                <p class="simple-label">Natural examples</p>
+                <ol class="example-list">
+                    <li>The report quantified the financial benefits of renewable energy.</li>
+                    <li>It is difficult to quantify the value of a good education.</li>
+                    <li>The company attempted to quantify customer satisfaction using surveys.</li>
+                    <li>The economist quantified the impact of inflation on household spending.</li>
+                    <li>Researchers quantified the relationship between exercise and mental health.</li>
+                </ol>
+
+                <div class="info-grid">
+
+                    <div class="info-card good">
+                        <h4>Nuance & implication</h4>
+                        <p>
+                            This meaning often involves ideas that are naturally difficult to measure—such as happiness,
+                            quality, value, influence, or risk. <strong>Quantify</strong> suggests finding a reliable
+                            numerical way to describe them, even if the measurement is only an estimate.
+                        </p>
+                    </div>
+
+                    <div class="info-card">
+                        <h4>Grammar notes</h4>
+                        <p>
+                            Common objects include <strong>impact</strong>, <strong>benefit</strong>,
+                            <strong>cost</strong>, <strong>risk</strong>, <strong>effect</strong>,
+                            <strong>value</strong>, and <strong>relationship</strong>. Very often the verb appears after
+                            <em>attempt to</em>, <em>try to</em>, <em>be able to</em>, or <em>be difficult to</em>.
+                        </p>
+                    </div>
+
+                    <div class="info-card warning">
+                        <h4>Common wrong usage</h4>
+                        <ul class="wrong-list">
+                            <li>❌ We quantified how good the movie. → ✅ We quantified how highly people rated the movie.
+                            </li>
+                            <li>❌ The report quantified about the costs. → ✅ The report quantified the costs.</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <h4>TOEFL tip</h4>
+                        <p>
+                            Academic lectures frequently explain that some concepts are <strong>difficult to
+                                quantify</strong>. Recognizing this phrase helps you understand that researchers are
+                            discussing the limits of measurement rather than the concept itself.
+                        </p>
+                    </div>
+
+                </div>
+
+            </article>
+
+        </section>
+
+        <section class="section" id="family">
+            <h2>Word Family</h2>
+
+            <div class="family-grid">
+
+                <article class="family-card">
+                    <h3>quantification</h3>
+                    <p><strong>Part of speech:</strong> noun</p>
+                    <p><strong>Definition:</strong> the process of measuring or expressing something as a number.</p>
+                    <ol class="example-list">
+                        <li>The quantification of greenhouse gases is essential for climate research.</li>
+                        <li>Modern software improves the quantification of medical data.</li>
+                    </ol>
+                </article>
+
+                <article class="family-card">
+                    <h3>quantifiable</h3>
+                    <p><strong>Part of speech:</strong> adjective</p>
+                    <p><strong>Definition:</strong> able to be measured or expressed with numbers.</p>
+                    <ol class="example-list">
+                        <li>Productivity is usually quantifiable.</li>
+                        <li>Some social benefits are difficult but not impossible to make quantifiable.</li>
+                    </ol>
+                </article>
+
+                <article class="family-card">
+                    <h3>unquantifiable</h3>
+                    <p><strong>Part of speech:</strong> adjective</p>
+                    <p><strong>Definition:</strong> impossible or extremely difficult to measure accurately.</p>
+                    <ol class="example-list">
+                        <li>The emotional impact of the event was largely unquantifiable.</li>
+                        <li>Some cultural values remain unquantifiable.</li>
+                    </ol>
+                </article>
+
+            </div>
+
+        </section>
+        <section class="section" id="collocations">
+            <h2>Common Collocations</h2>
+
+            <div class="collocation-grid">
+                <article class="collocation-card">
+                    <h3>quantify the impact</h3>
+                    <p><strong>Meaning:</strong> measure how strong or important an effect is</p>
+                    <p><strong>Example:</strong> The study tried to quantify the impact of air pollution on children’s
+                        health.</p>
+                </article>
+
+                <article class="collocation-card">
+                    <h3>quantify the effect</h3>
+                    <p><strong>Meaning:</strong> measure what result something has</p>
+                    <p><strong>Example:</strong> Researchers quantified the effect of sleep loss on memory.</p>
+                </article>
+
+                <article class="collocation-card">
+                    <h3>quantify the amount</h3>
+                    <p><strong>Meaning:</strong> measure how much of something exists</p>
+                    <p><strong>Example:</strong> Scientists quantified the amount of plastic in the water sample.</p>
+                </article>
+
+                <article class="collocation-card">
+                    <h3>quantify the risk</h3>
+                    <p><strong>Meaning:</strong> estimate how likely or serious a danger is</p>
+                    <p><strong>Example:</strong> Doctors used the data to quantify the risk of heart disease.</p>
+                </article>
+
+                <article class="collocation-card">
+                    <h3>quantify the benefits</h3>
+                    <p><strong>Meaning:</strong> measure the advantages of something</p>
+                    <p><strong>Example:</strong> The report quantified the benefits of investing in public
+                        transportation.</p>
+                </article>
+
+                <article class="collocation-card">
+                    <h3>difficult to quantify</h3>
+                    <p><strong>Meaning:</strong> hard to measure with numbers</p>
+                    <p><strong>Example:</strong> The cultural value of the building is difficult to quantify.</p>
+                </article>
+
+                <article class="collocation-card">
+                    <h3>hard to quantify</h3>
+                    <p><strong>Meaning:</strong> not easy to express as a number</p>
+                    <p><strong>Example:</strong> The long-term effects of early education can be hard to quantify.</p>
+                </article>
+
+                <article class="collocation-card">
+                    <h3>attempt to quantify</h3>
+                    <p><strong>Meaning:</strong> try to measure something that may not be easy to measure</p>
+                    <p><strong>Example:</strong> Economists attempted to quantify the cost of traffic congestion.</p>
+                </article>
+
+                <article class="collocation-card">
+                    <h3>accurately quantify</h3>
+                    <p><strong>Meaning:</strong> measure something in a precise and reliable way</p>
+                    <p><strong>Example:</strong> New tools allow scientists to accurately quantify changes in soil
+                        quality.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section" id="synonyms">
+            <h2>Direct Synonyms & Antonyms</h2>
+
+            <div class="info-grid">
+                <div class="info-card good">
+                    <h4>Direct synonyms</h4>
+                    <div class="word-pill-row">
+                        <span class="word-pill">measure</span>
+                        <span class="word-pill">calculate</span>
+                        <span class="word-pill">estimate</span>
+                        <span class="word-pill">assess numerically</span>
+                    </div>
+                    <p><strong>Measure</strong> is the closest general synonym. <strong>Calculate</strong> suggests
+                        using math to find a result. <strong>Estimate</strong> means the number may not be exact.
+                        <strong>Assess numerically</strong> is more formal and means evaluate something with numbers.
+                    </p>
+                </div>
+
+                <div class="info-card warning">
+                    <h4>Direct antonyms</h4>
+                    <div class="word-pill-row">
+                        <span class="word-pill">qualify</span>
+                        <span class="word-pill">describe qualitatively</span>
+                        <span class="word-pill">leave unmeasured</span>
+                    </div>
+                    <p><strong>Qualify</strong> can contrast with <strong>quantify</strong> in academic contexts, but it
+                        usually means describe the quality or nature of something rather than measure its amount.
+                        <strong>Describe qualitatively</strong> means explain with words, categories, or qualities
+                        instead of numbers.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="etymology">
+            <h2>Etymology</h2>
+            <div class="info-card">
+                <p><strong>Quantify</strong> comes from roots related to <strong>quantity</strong>, meaning “amount.”
+                    The ending <strong>-ify</strong> often means “make” or “turn into.” So, <strong>quantify</strong>
+                    literally suggests “turning something into an amount.” This can help you remember that to quantify
+                    something is to express it with numbers or measurable data.</p>
+            </div>
+        </section>
+
+        <section class="section" id="exercises">
+            <h2>Practice Exercises</h2>
+
+            <div class="exercise-grid">
+                <article class="exercise-card">
+                    <h3>1. Word family choice</h3>
+                    <p>Choose the best member of the word family for each blank.</p>
+                    <ol class="clean-list">
+                        <li>The emotional value of the painting is almost __________.</li>
+                        <li>The __________ of air pollution helped the city design better environmental policies.</li>
+                        <li>The results are __________ because they can be expressed as percentages.</li>
+                    </ol>
+                </article>
+
+                <article class="exercise-card">
+                    <h3>2. Correct or incorrect?</h3>
+                    <p>Decide whether each sentence uses the word correctly. If it is wrong, correct it.</p>
+                    <ol class="clean-list">
+                        <li>The researchers quantified the effect of exercise on sleep quality.</li>
+                        <li>The report quantified about the economic costs of flooding.</li>
+                        <li>It is difficult to quantify happiness with a single number.</li>
+                    </ol>
+                </article>
+
+                <article class="exercise-card">
+                    <h3>3. Collocation practice</h3>
+                    <p>Complete each sentence with a natural collocation.</p>
+                    <ol class="clean-list">
+                        <li>The study attempted to quantify the __________ of noise pollution on learning.</li>
+                        <li>It is difficult to __________ the cultural importance of a language.</li>
+                        <li>Scientists used satellite images to accurately __________ changes in forest cover.</li>
+                    </ol>
+                </article>
+
+                <article class="exercise-card">
+                    <h3>4. TOEFL-style meaning check</h3>
+                    <p>Choose the closest meaning of the word in context.</p>
+                    <ol class="clean-list">
+                        <li>
+                            The researchers tried to quantify the benefits of early childhood education by comparing
+                            graduation rates and income levels.
+                            <br>
+                            A. explain emotionally<br>
+                            B. measure using data<br>
+                            C. reject as unreliable<br>
+                            D. describe without numbers
+                        </li>
+                        <li>
+                            Although the effect of the policy was difficult to quantify, surveys suggested that it
+                            improved public confidence.
+                            <br>
+                            A. difficult to measure exactly<br>
+                            B. easy to prove legally<br>
+                            C. impossible to discuss clearly<br>
+                            D. unrelated to public opinion
+                        </li>
+                    </ol>
+                </article>
+            </div>
+
+            <details class="answer-key">
+                <summary>Answer Key</summary>
+                <ol class="clean-list">
+                    <li><strong>1.1 unquantifiable</strong> — The sentence means the emotional value cannot easily be
+                        measured.</li>
+                    <li><strong>1.2 quantification</strong> — You need the noun meaning the process of measuring
+                        something with numbers.</li>
+                    <li><strong>1.3 quantifiable</strong> — The results can be expressed as numbers, so they are
+                        quantifiable.</li>
+                    <li><strong>2.1 Correct.</strong> <strong>Quantify the effect</strong> is a natural collocation.
+                    </li>
+                    <li><strong>2.2 Incorrect.</strong> Say: <strong>The report quantified the economic costs of
+                            flooding.</strong></li>
+                    <li><strong>2.3 Correct.</strong> <strong>Difficult to quantify</strong> is a common and natural
+                        phrase.</li>
+                    <li><strong>3.1 impact/effect</strong> — Both <strong>quantify the impact</strong> and
+                        <strong>quantify the effect</strong> are natural.
+                    </li>
+                    <li><strong>3.2 quantify</strong> — The sentence means it is hard to measure cultural importance
+                        with numbers.</li>
+                    <li><strong>3.3 quantify</strong> — The sentence needs the verb after <strong>to
+                            accurately</strong>.</li>
+                    <li><strong>4.1 B</strong> — <strong>Quantify</strong> means measure or express something using data
+                        or numbers.</li>
+                    <li><strong>4.2 A</strong> — <strong>Difficult to quantify</strong> means difficult to measure
+                        exactly.</li>
+                </ol>
+            </details>
+        </section>
+
+        <footer class="ext-footer">
+            <span>Compiled by <strong>Amir Kooshky</strong></span>
+            <span><a href="https://t.me/KooshkyTOEFL">📚 @KooshkyToefl</a></span>
+            <span><a href="https://www.instagram.com/kooshkytoefl">Instagram</a></span>
+            <span><a href="https://t.me/KooshkyTOEFL_pv">Personal Telegram</a></span>
+        </footer>
+
+    </main>
+</body>
+
+</html>

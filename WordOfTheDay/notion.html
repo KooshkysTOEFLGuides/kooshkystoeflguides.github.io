@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>notion | Extended TOEFL Explanation</title>
+  <style>
+    :root {
+      --bg: #08090d;
+      --bg-soft: #10131b;
+      --card: rgba(255, 255, 255, 0.065);
+      --card-strong: rgba(255, 255, 255, 0.105);
+      --text: #f4f1ea;
+      --muted: #b9b2a7;
+      --faint: #8f887d;
+      --gold: #d8b35a;
+      --gold-soft: rgba(216, 179, 90, 0.16);
+      --blue: #8bb7ff;
+      --green: #9be2bd;
+      --red: #ff9d9d;
+      --border: rgba(255, 255, 255, 0.14);
+      --shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+      --radius-lg: 28px;
+      --radius-md: 18px;
+      --radius-sm: 12px;
+      --max: 980px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at top left, rgba(216, 179, 90, 0.18), transparent 32rem),
+        radial-gradient(circle at bottom right, rgba(139, 183, 255, 0.13), transparent 30rem),
+        var(--bg);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      line-height: 1.65;
+    }
+
+    a {
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      width: min(100%, var(--max));
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* =========================
+     INTRO IMAGE TEMPLATE
+  ========================= */
+
+    .intro-page {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 20px;
+    }
+
+    .intro-shot {
+      width: min(100%, 860px);
+      aspect-ratio: 4 / 5;
+      min-height: 680px;
+      border: 1px solid var(--border);
+      border-radius: 42px;
+      overflow: hidden;
+      position: relative;
+      background:
+        linear-gradient(135deg, rgba(216, 179, 90, 0.18), transparent 35%),
+        linear-gradient(315deg, rgba(139, 183, 255, 0.18), transparent 35%),
+        #0b0d13;
+      box-shadow: var(--shadow);
+      padding: clamp(26px, 6vw, 68px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .intro-shot::before {
+      content: "";
+      position: absolute;
+      inset: 22px;
+      border: 1px solid rgba(216, 179, 90, 0.24);
+      border-radius: 32px;
+      pointer-events: none;
+    }
+
+    .intro-kicker,
+    .ext-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      width: fit-content;
+      padding: 8px 13px;
+      border: 1px solid rgba(216, 179, 90, 0.28);
+      border-radius: 999px;
+      background: var(--gold-soft);
+      color: var(--gold);
+      font-size: clamp(0.78rem, 2.2vw, 0.95rem);
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .intro-center {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .intro-word {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(4.4rem, 4.5vw, 9.5rem);
+      line-height: 0.92;
+      letter-spacing: -0.04em;
+      color: #fff8ea;
+      text-shadow: 0 12px 45px rgba(0, 0, 0, 0.55);
+    }
+
+    .intro-ipa {
+      margin: 18px 0 0;
+      color: var(--gold);
+      font-size: clamp(1.05rem, 4vw, 1.5rem);
+      font-weight: 700;
+    }
+
+    .intro-meanings {
+      margin: 28px auto 0;
+      display: grid;
+      gap: 12px;
+      max-width: 640px;
+    }
+
+    .intro-meaning {
+      padding: 15px 18px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.075);
+      backdrop-filter: blur(12px);
+      font-size: clamp(1rem, 3.2vw, 1.25rem);
+      font-weight: 650;
+    }
+
+    .intro-example {
+      margin: 26px auto 0;
+      max-width: 650px;
+      color: var(--muted);
+      font-size: clamp(0.95rem, 3vw, 1.15rem);
+    }
+
+    .intro-footer,
+    .ext-footer {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 16px;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .intro-footer strong,
+    .ext-footer strong {
+      color: var(--text);
+    }
+
+    /* =========================
+     EXTENDED PAGE TEMPLATE
+  ========================= */
+
+    .extended-page {
+      padding-bottom: 50px;
+    }
+
+    .hero {
+      margin: 18px auto 22px;
+      padding: clamp(24px, 5vw, 46px);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      background:
+        linear-gradient(135deg, rgba(216, 179, 90, 0.14), transparent 42%),
+        var(--card);
+      box-shadow: var(--shadow);
+    }
+
+    .hero h1 {
+      margin: 18px 0 8px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.4rem, 10vw, 6.2rem);
+      line-height: 0.95;
+      letter-spacing: -0.055em;
+
+      white-space: nowrap;
+      overflow-wrap: normal;
+      word-break: normal;
+      hyphens: none;
+      max-width: 100%;
+    }
+
+    .hero-subtitle {
+      margin: 0;
+      color: var(--muted);
+      font-size: clamp(1rem, 3vw, 1.2rem);
+    }
+
+    .brand-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .brand-links a {
+      display: inline-flex;
+      padding: 9px 13px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.055);
+      color: var(--text);
+      font-size: 0.94rem;
+    }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .meta-card,
+    .toc,
+    .section,
+    .sense-card,
+    .info-card,
+    .family-card,
+    .collocation-card,
+    .exercise-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--card);
+    }
+
+    .meta-card {
+      padding: 15px;
+    }
+
+    .meta-label {
+      display: block;
+      color: var(--faint);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 800;
+    }
+
+    .meta-value {
+      display: block;
+      margin-top: 5px;
+      font-weight: 800;
+    }
+
+    .toc {
+      padding: 18px;
+      margin: 20px 0;
+    }
+
+    .toc-title {
+      margin: 0 0 10px;
+      color: var(--gold);
+      font-weight: 900;
+    }
+
+    .toc-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .toc-links a {
+      padding: 8px 11px;
+      border-radius: 999px;
+      background: var(--gold-soft);
+      color: var(--gold);
+      font-size: 0.93rem;
+    }
+
+    .section {
+      margin: 20px 0;
+      padding: clamp(18px, 4vw, 30px);
+    }
+
+    .section h2 {
+      margin: 0 0 18px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.8rem, 6vw, 2.7rem);
+      line-height: 1.1;
+    }
+
+    .sense-card {
+      padding: clamp(16px, 4vw, 26px);
+      margin: 16px 0;
+    }
+
+    .sense-head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .sense-num,
+    .pos-badge,
+    .ipa-badge {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      font-weight: 850;
+    }
+
+    .sense-num {
+      padding: 7px 12px;
+      background: var(--gold);
+      color: #14120b;
+    }
+
+    .pos-badge {
+      padding: 7px 11px;
+      background: rgba(139, 183, 255, 0.16);
+      color: var(--blue);
+    }
+
+    .ipa-badge {
+      padding: 7px 11px;
+      background: rgba(255, 255, 255, 0.07);
+      color: var(--muted);
+    }
+
+    .definition {
+      font-size: 1.12rem;
+      font-weight: 750;
+      color: #fff7e8;
+    }
+
+    .simple-label {
+      margin: 20px 0 8px;
+      color: var(--gold);
+      font-weight: 900;
+    }
+
+    .example-list,
+    .clean-list,
+    .wrong-list {
+      margin: 8px 0 0;
+      padding-left: 1.25rem;
+    }
+
+    .example-list li,
+    .clean-list li,
+    .wrong-list li {
+      margin: 8px 0;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .info-card {
+      padding: 14px;
+    }
+
+    .info-card h4,
+    .family-card h3,
+    .collocation-card h3,
+    .exercise-card h3 {
+      margin: 0 0 8px;
+      color: var(--gold);
+    }
+
+    .warning {
+      border-color: rgba(255, 157, 157, 0.35);
+      background: rgba(255, 157, 157, 0.07);
+    }
+
+    .good {
+      border-color: rgba(155, 226, 189, 0.3);
+      background: rgba(155, 226, 189, 0.06);
+    }
+
+    .family-grid,
+    .collocation-grid,
+    .exercise-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .family-card,
+    .collocation-card,
+    .exercise-card {
+      padding: 16px;
+    }
+
+    .word-pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+    }
+
+    .word-pill {
+      display: inline-flex;
+      padding: 8px 11px;
+      border-radius: 999px;
+      background: var(--card-strong);
+      border: 1px solid var(--border);
+      font-weight: 800;
+    }
+
+    details.answer-key {
+      margin-top: 16px;
+      border: 1px solid rgba(216, 179, 90, 0.3);
+      border-radius: var(--radius-md);
+      background: var(--gold-soft);
+      padding: 14px 16px;
+    }
+
+    details.answer-key summary {
+      cursor: pointer;
+      color: var(--gold);
+      font-weight: 950;
+    }
+
+    .ext-footer {
+      margin-top: 22px;
+      padding: 22px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      background: var(--card);
+    }
+
+    /* =========================
+     RESPONSIVE RULES
+  ========================= */
+
+    @media (max-width: 720px) {
+      .page {
+        padding: 12px;
+      }
+
+      .intro-page {
+        padding: 10px;
+      }
+
+      .intro-shot {
+        min-height: 620px;
+        border-radius: 30px;
+        padding: 26px 18px;
+      }
+
+      .intro-shot::before {
+        inset: 12px;
+        border-radius: 24px;
+      }
+
+      .intro-word {
+        letter-spacing: -0.07em;
+      }
+
+      .intro-footer,
+      .ext-footer {
+        display: grid;
+        justify-content: stretch;
+      }
+
+      .meta-grid,
+      .info-grid,
+      .family-grid,
+      .collocation-grid,
+      .exercise-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero,
+      .section {
+        border-radius: 22px;
+      }
+
+      .sense-head {
+        align-items: flex-start;
+      }
+
+      .brand-links a,
+      .toc-links a {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .hero h1 {
+        font-size: clamp(1.55rem, 8.8vw, 2.65rem);
+        line-height: 1.02;
+        letter-spacing: -0.035em;
+        white-space: nowrap;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .intro-shot {
+        aspect-ratio: auto;
+        min-height: 600px;
+      }
+
+      .intro-meaning {
+        padding: 12px 14px;
+      }
+    }
+  </style>
+</head>
+
+<body class="extended-page">
+  <main class="page">
+
+    <header class="hero">
+      <div class="ext-kicker">📚✨ TOEFL Word of the Day ✨📚</div>
+      <h1>notion</h1>
+      <p class="hero-subtitle">A complete TOEFL learner guide compiled by <strong>Amir Kooshky</strong>.</p>
+
+      <div class="brand-links">
+        <a href="https://t.me/KooshkyTOEFL" target="_blank">Telegram Channel</a>
+        <a href="https://www.instagram.com/kooshkytoefl" target="_blank">Instagram</a>
+        <a href="https://t.me/KooshkyTOEFL_pv" target="_blank">Personal Telegram</a>
+      </div>
+
+      <div class="meta-grid">
+        <div class="meta-card">
+          <span class="meta-label">Date</span>
+          <span class="meta-value">July 12th 2026</span>
+        </div>
+        <div class="meta-card">
+          <span class="meta-label">Word</span>
+          <span class="meta-value">notion</span>
+        </div>
+        <div class="meta-card">
+          <span class="meta-label">Level</span>
+          <span class="meta-value">B1–B2 TOEFL</span>
+        </div>
+      </div>
+    </header>
+
+    <nav class="toc">
+      <p class="toc-title">Study sections</p>
+      <div class="toc-links">
+        <a href="#meanings">Meanings</a>
+        <a href="#family">Word Family</a>
+        <a href="#collocations">Collocations</a>
+        <a href="#synonyms">Synonyms & Antonyms</a>
+        <a href="#etymology">Etymology</a>
+        <a href="#exercises">Exercises</a>
+      </div>
+    </nav>
+
+    <section class="section" id="meanings">
+      <h2>Meanings & Usage</h2>
+
+      <article class="sense-card">
+        <div class="sense-head">
+          <span class="sense-num">Meaning 1</span>
+          <span class="pos-badge">countable noun</span>
+          <span class="ipa-badge">/ˈnoʊ.ʃən/</span>
+        </div>
+
+        <p class="definition">An idea, belief, opinion, or concept, especially one that people discuss, accept,
+          question, or use to explain something.</p>
+
+        <p class="simple-label">Natural examples</p>
+        <ol class="example-list">
+          <li>The article challenges the common notion that economic growth always improves quality of life.</li>
+          <li>The professor introduced the notion of cultural adaptation in the first lecture.</li>
+          <li>Many ancient societies had different notions of time, nature, and human responsibility.</li>
+          <li>The study supports the notion that sleep plays an important role in memory.</li>
+          <li>The museum exhibition explores the notion of identity in modern art.</li>
+          <li>Some researchers reject the notion that intelligence can be measured by a single test.</li>
+        </ol>
+
+        <div class="info-grid">
+          <div class="info-card good">
+            <h4>Nuance & implication</h4>
+            <p><em>Notion</em> is more academic and abstract than <em>idea</em>. It often refers to a belief, concept,
+              or way of thinking that may be discussed, challenged, supported, or criticized. In TOEFL Reading, it
+              frequently appears in phrases like <em>the notion that...</em> or <em>the notion of...</em>.</p>
+          </div>
+
+          <div class="info-card">
+            <h4>Grammar notes</h4>
+            <p><em>Notion</em> is usually a countable noun in this meaning: <em>a notion</em>, <em>the notion</em>,
+              <em>several notions</em>. Common patterns include <em>the notion that + clause</em> and <em>the notion of
+                + noun/gerund</em>. Do not use it as a verb.</p>
+          </div>
+
+          <div class="info-card warning">
+            <h4>Common wrong usage</h4>
+            <ul class="wrong-list">
+              <li>❌ The research notions that stress affects learning. → ✅ The research suggests that stress affects
+                learning.</li>
+              <li>❌ The notion about evolution changed over time. → ✅ The notion of evolution changed over time.</li>
+              <li>❌ Many scientists accepted notion that climate patterns were stable. → ✅ Many scientists accepted the
+                notion that climate patterns were stable.</li>
+            </ul>
+          </div>
+
+          <div class="info-card">
+            <h4>TOEFL tip</h4>
+            <p>When you see <em>the notion that...</em>, look for the full idea after <em>that</em>. In inference and
+              vocabulary questions, the passage may ask whether the author supports, rejects, modifies, or challenges
+              that notion.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="sense-card">
+        <div class="sense-head">
+          <span class="sense-num">Meaning 2</span>
+          <span class="pos-badge">countable noun, often singular</span>
+          <span class="ipa-badge">/ˈnoʊ.ʃən/</span>
+        </div>
+
+        <p class="definition">A general, rough, or incomplete understanding of something; not detailed knowledge.</p>
+
+        <p class="simple-label">Natural examples</p>
+        <ol class="example-list">
+          <li>Before taking the course, I had only a vague notion of how ecosystems function.</li>
+          <li>The documentary gives viewers a basic notion of how glaciers shape landscapes.</li>
+          <li>Many people have little notion of how much energy large data centers use.</li>
+          <li>The experiment helped students gain a clearer notion of scientific uncertainty.</li>
+          <li>Without historical context, readers may have no real notion of why the conflict began.</li>
+          <li>The diagram provides a general notion of the structure, but it leaves out many details.</li>
+        </ol>
+
+        <div class="info-grid">
+          <div class="info-card good">
+            <h4>Nuance & implication</h4>
+            <p>This meaning suggests that the person understands something only generally, not deeply. Phrases like
+              <em>a vague notion</em>, <em>a basic notion</em>, and <em>little notion</em> are common. It is useful when
+              contrasting basic awareness with expert knowledge.</p>
+          </div>
+
+          <div class="info-card">
+            <h4>Grammar notes</h4>
+            <p>Common patterns include <em>have a notion of + noun/gerund</em>, <em>have no notion of...</em>, <em>have
+                little notion of...</em>, and <em>give someone a notion of...</em>. In this meaning, <em>notion</em>
+              usually takes <em>of</em>, not <em>about</em>, in formal academic English.</p>
+          </div>
+
+          <div class="info-card warning">
+            <h4>Common wrong usage</h4>
+            <ul class="wrong-list">
+              <li>❌ I have a notion about how the process works. → ✅ I have a notion of how the process works.</li>
+              <li>❌ The lecture gave students a notion to the problem. → ✅ The lecture gave students a notion of the
+                problem.</li>
+              <li>❌ She has notion of biology. → ✅ She has a basic notion of biology.</li>
+            </ul>
+          </div>
+
+          <div class="info-card">
+            <h4>TOEFL tip</h4>
+            <p>In TOEFL Listening, professors may use <em>notion</em> to introduce a simplified concept before adding
+              details. When you hear <em>basic notion</em> or <em>general notion</em>, expect clarification or examples
+              afterward.</p>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <section class="section" id="family">
+      <h2>Word Family</h2>
+
+      <div class="family-grid">
+        <article class="family-card">
+          <h3>notion</h3>
+          <p><strong>Part of speech:</strong> noun</p>
+          <p><strong>Definition:</strong> an idea, concept, belief, or general understanding</p>
+          <ol class="example-list">
+            <li>The theory depends on the notion that behavior is shaped by environment.</li>
+            <li>The introduction gives readers a basic notion of the problem.</li>
+          </ol>
+        </article>
+
+        <article class="family-card">
+          <h3>notional</h3>
+          <p><strong>Part of speech:</strong> adjective</p>
+          <p><strong>Definition:</strong> related to ideas or concepts rather than concrete physical facts; sometimes
+            approximate rather than exact</p>
+          <ol class="example-list">
+            <li>The map shows a notional boundary rather than an officially recognized border.</li>
+            <li>Economists sometimes use notional examples to explain complex models.</li>
+          </ol>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="collocations">
+      <h2>Common Collocations</h2>
+
+      <div class="collocation-grid">
+        <article class="collocation-card">
+          <h3>the notion that...</h3>
+          <p><strong>Meaning:</strong> the idea or belief that something is true</p>
+          <p><strong>Example:</strong> The results challenge the notion that larger schools always provide better
+            education.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>the notion of...</h3>
+          <p><strong>Meaning:</strong> the concept or idea connected with something</p>
+          <p><strong>Example:</strong> The lecture focused on the notion of sustainability in urban planning.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>a common notion</h3>
+          <p><strong>Meaning:</strong> an idea many people believe</p>
+          <p><strong>Example:</strong> It is a common notion that young people adapt to technology more quickly.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>a traditional notion</h3>
+          <p><strong>Meaning:</strong> an older or long-established idea</p>
+          <p><strong>Example:</strong> The novel questions traditional notions of family and social duty.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>a popular notion</h3>
+          <p><strong>Meaning:</strong> an idea widely accepted by ordinary people</p>
+          <p><strong>Example:</strong> The article rejects the popular notion that multitasking saves time.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>a vague notion</h3>
+          <p><strong>Meaning:</strong> an unclear or incomplete idea</p>
+          <p><strong>Example:</strong> Students had only a vague notion of the historical causes of the war.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>a basic notion</h3>
+          <p><strong>Meaning:</strong> a simple general understanding</p>
+          <p><strong>Example:</strong> The course gives beginners a basic notion of how economic systems work.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>a central notion</h3>
+          <p><strong>Meaning:</strong> a key idea in an argument, theory, or system</p>
+          <p><strong>Example:</strong> Natural selection is a central notion in evolutionary biology.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>challenge the notion</h3>
+          <p><strong>Meaning:</strong> to question whether an idea is true</p>
+          <p><strong>Example:</strong> Recent research challenges the notion that aging always reduces creativity.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>support the notion</h3>
+          <p><strong>Meaning:</strong> to provide evidence that an idea may be true</p>
+          <p><strong>Example:</strong> The findings support the notion that social interaction improves mental health.
+          </p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>reject the notion</h3>
+          <p><strong>Meaning:</strong> to say that an idea is wrong or not convincing</p>
+          <p><strong>Example:</strong> The historian rejects the notion that technological change happens in isolation.
+          </p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>have no notion of...</h3>
+          <p><strong>Meaning:</strong> to have no real understanding of something</p>
+          <p><strong>Example:</strong> Many consumers have no notion of how complex global supply chains are.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="synonyms">
+      <h2>Direct Synonyms & Antonyms</h2>
+
+      <div class="info-grid">
+        <div class="info-card good">
+          <h4>Direct synonyms</h4>
+          <div class="word-pill-row">
+            <span class="word-pill">idea</span>
+            <span class="word-pill">concept</span>
+            <span class="word-pill">belief</span>
+            <span class="word-pill">understanding</span>
+            <span class="word-pill">view</span>
+          </div>
+          <p><em>Idea</em> is the most general synonym. <em>Concept</em> is more academic and theoretical.
+            <em>Belief</em> emphasizes that someone thinks something is true. <em>Understanding</em> is closest when
+            <em>notion</em> means a general awareness of something.</p>
+        </div>
+
+        <div class="info-card warning">
+          <h4>Direct antonyms</h4>
+          <div class="word-pill-row">
+            <span class="word-pill">fact</span>
+            <span class="word-pill">certainty</span>
+            <span class="word-pill">ignorance</span>
+          </div>
+          <p>There is no perfect opposite for <em>notion</em>. <em>Fact</em> contrasts with an idea or belief that may
+            be debated. <em>Certainty</em> contrasts with a vague or uncertain notion. <em>Ignorance</em> contrasts with
+            having even a basic notion of something.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="etymology">
+      <h2>Etymology</h2>
+      <div class="info-card">
+        <p><em>Notion</em> comes through French and Latin from a root connected to “knowing.” This history is useful
+          because the modern word still connects to what a person knows, thinks, understands, or believes. In academic
+          English, it often points to an idea that can be explained, questioned, or developed.</p>
+      </div>
+    </section>
+
+    <section class="section" id="exercises">
+      <h2>Practice Exercises</h2>
+
+      <div class="exercise-grid">
+        <article class="exercise-card">
+          <h3>1. Word family choice</h3>
+          <p>Choose the best member of the word family for each blank.</p>
+          <ol class="clean-list">
+            <li>The study challenges the ________ that older adults cannot learn new skills.</li>
+            <li>The border on the diagram is only ________; it does not represent an official legal boundary.</li>
+            <li>The lecture gave students a basic ________ of how coral reefs support marine life.</li>
+          </ol>
+        </article>
+
+        <article class="exercise-card">
+          <h3>2. Correct or incorrect?</h3>
+          <p>Decide whether each sentence uses the word correctly. If it is wrong, correct it.</p>
+          <ol class="clean-list">
+            <li>The article rejects the notion that cities are always harmful to the environment.</li>
+            <li>The professor notioned that memory is influenced by emotion.</li>
+            <li>Many students have only a vague notion about how academic research is conducted.</li>
+          </ol>
+        </article>
+
+        <article class="exercise-card">
+          <h3>3. Collocation practice</h3>
+          <p>Complete each sentence with a natural collocation.</p>
+          <ol class="clean-list">
+            <li>Recent evidence ________ the notion that bilingual children are slower learners.</li>
+            <li>The author explores the notion ________ personal identity in digital spaces.</li>
+            <li>The findings support the notion ________ sleep improves memory formation.</li>
+          </ol>
+        </article>
+      </div>
+
+      <details class="answer-key">
+        <summary>Answer Key</summary>
+        <ol class="clean-list">
+          <li><strong>notion</strong> — The sentence needs a noun meaning “idea or belief.”</li>
+          <li><strong>notional</strong> — The sentence needs an adjective meaning “conceptual or approximate.”</li>
+          <li><strong>notion</strong> — The phrase <em>a basic notion of</em> means a general understanding.</li>
+          <li><strong>Correct.</strong> <em>Rejects the notion that...</em> is a natural academic pattern.</li>
+          <li><strong>Incorrect.</strong> Say: <em>The professor suggested that memory is influenced by emotion.</em>
+            <em>Notion</em> is not a verb.</li>
+          <li><strong>Mostly incorrect in formal use.</strong> Say: <em>a vague notion of how academic research is
+              conducted</em>.</li>
+          <li><strong>challenges</strong> — <em>Challenge the notion</em> means question the idea.</li>
+          <li><strong>of</strong> — Use <em>the notion of + noun/gerund</em>.</li>
+          <li><strong>that</strong> — Use <em>the notion that + clause</em>.</li>
+        </ol>
+      </details>
+    </section>
+
+    <footer class="ext-footer">
+      <span>Compiled by <strong>Amir Kooshky</strong></span>
+      <span><a href="https://t.me/KooshkyTOEFL">📚 @KooshkyTOEFL</a></span>
+      <span><a href="https://www.instagram.com/kooshkytoefl">Instagram</a></span>
+      <span><a href="https://t.me/KooshkyTOEFL_pv">Personal Telegram</a></span>
+    </footer>
+
+  </main>
+</body>
+
+</html>

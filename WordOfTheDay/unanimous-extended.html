@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNANIMOUS | Extended TOEFL Explanation</title>
+    <style>
+        :root {
+            --bg: #08090d;
+            --bg-soft: #10131b;
+            --card: rgba(255, 255, 255, 0.065);
+            --card-strong: rgba(255, 255, 255, 0.105);
+            --text: #f4f1ea;
+            --muted: #b9b2a7;
+            --faint: #8f887d;
+            --gold: #d8b35a;
+            --gold-soft: rgba(216, 179, 90, 0.16);
+            --blue: #8bb7ff;
+            --green: #9be2bd;
+            --red: #ff9d9d;
+            --border: rgba(255, 255, 255, 0.14);
+            --shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+            --radius-lg: 28px;
+            --radius-md: 18px;
+            --radius-sm: 12px;
+            --max: 980px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background:
+                radial-gradient(circle at top left, rgba(216, 179, 90, 0.18), transparent 32rem),
+                radial-gradient(circle at bottom right, rgba(139, 183, 255, 0.13), transparent 30rem),
+                var(--bg);
+            color: var(--text);
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+            line-height: 1.65;
+        }
+
+        a {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .page {
+            width: min(100%, var(--max));
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* =========================
+     INTRO IMAGE TEMPLATE
+  ========================= */
+
+        .intro-page {
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            padding: 20px;
+        }
+
+        .intro-shot {
+            width: min(100%, 860px);
+            aspect-ratio: 4 / 5;
+            min-height: 680px;
+            border: 1px solid var(--border);
+            border-radius: 42px;
+            overflow: hidden;
+            position: relative;
+            background:
+                linear-gradient(135deg, rgba(216, 179, 90, 0.18), transparent 35%),
+                linear-gradient(315deg, rgba(139, 183, 255, 0.18), transparent 35%),
+                #0b0d13;
+            box-shadow: var(--shadow);
+            padding: clamp(26px, 6vw, 68px);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .intro-shot::before {
+            content: "";
+            position: absolute;
+            inset: 22px;
+            border: 1px solid rgba(216, 179, 90, 0.24);
+            border-radius: 32px;
+            pointer-events: none;
+        }
+
+        .intro-kicker,
+        .ext-kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            width: fit-content;
+            padding: 8px 13px;
+            border: 1px solid rgba(216, 179, 90, 0.28);
+            border-radius: 999px;
+            background: var(--gold-soft);
+            color: var(--gold);
+            font-size: clamp(0.78rem, 2.2vw, 0.95rem);
+            font-weight: 800;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        .intro-center {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .intro-word {
+            margin: 0;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(4.4rem, 4.5vw, 9.5rem);
+            line-height: 0.92;
+            letter-spacing: -0.04em;
+            color: #fff8ea;
+            text-shadow: 0 12px 45px rgba(0, 0, 0, 0.55);
+        }
+
+        .intro-ipa {
+            margin: 18px 0 0;
+            color: var(--gold);
+            font-size: clamp(1.05rem, 4vw, 1.5rem);
+            font-weight: 700;
+        }
+
+        .intro-meanings {
+            margin: 28px auto 0;
+            display: grid;
+            gap: 12px;
+            max-width: 640px;
+        }
+
+        .intro-meaning {
+            padding: 15px 18px;
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            background: rgba(255, 255, 255, 0.075);
+            backdrop-filter: blur(12px);
+            font-size: clamp(1rem, 3.2vw, 1.25rem);
+            font-weight: 650;
+        }
+
+        .intro-example {
+            margin: 26px auto 0;
+            max-width: 650px;
+            color: var(--muted);
+            font-size: clamp(0.95rem, 3vw, 1.15rem);
+        }
+
+        .intro-footer,
+        .ext-footer {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 16px;
+            align-items: center;
+            justify-content: space-between;
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        .intro-footer strong,
+        .ext-footer strong {
+            color: var(--text);
+        }
+
+        /* =========================
+     EXTENDED PAGE TEMPLATE
+  ========================= */
+
+        .extended-page {
+            padding-bottom: 50px;
+        }
+
+        .hero {
+            margin: 18px auto 22px;
+            padding: clamp(24px, 5vw, 46px);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            background:
+                linear-gradient(135deg, rgba(216, 179, 90, 0.14), transparent 42%),
+                var(--card);
+            box-shadow: var(--shadow);
+        }
+
+        .hero h1 {
+            margin: 18px 0 8px;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(2.4rem, 10vw, 6.2rem);
+            line-height: 0.95;
+            letter-spacing: -0.055em;
+
+            white-space: nowrap;
+            overflow-wrap: normal;
+            word-break: normal;
+            hyphens: none;
+            max-width: 100%;
+        }
+
+        .hero-subtitle {
+            margin: 0;
+            color: var(--muted);
+            font-size: clamp(1rem, 3vw, 1.2rem);
+        }
+
+        .brand-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 22px;
+        }
+
+        .brand-links a {
+            display: inline-flex;
+            padding: 9px 13px;
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.055);
+            color: var(--text);
+            font-size: 0.94rem;
+        }
+
+        .meta-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+            margin-top: 22px;
+        }
+
+        .meta-card,
+        .toc,
+        .section,
+        .sense-card,
+        .info-card,
+        .family-card,
+        .collocation-card,
+        .exercise-card {
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            background: var(--card);
+        }
+
+        .meta-card {
+            padding: 15px;
+        }
+
+        .meta-label {
+            display: block;
+            color: var(--faint);
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-weight: 800;
+        }
+
+        .meta-value {
+            display: block;
+            margin-top: 5px;
+            font-weight: 800;
+        }
+
+        .toc {
+            padding: 18px;
+            margin: 20px 0;
+        }
+
+        .toc-title {
+            margin: 0 0 10px;
+            color: var(--gold);
+            font-weight: 900;
+        }
+
+        .toc-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .toc-links a {
+            padding: 8px 11px;
+            border-radius: 999px;
+            background: var(--gold-soft);
+            color: var(--gold);
+            font-size: 0.93rem;
+        }
+
+        .section {
+            margin: 20px 0;
+            padding: clamp(18px, 4vw, 30px);
+        }
+
+        .section h2 {
+            margin: 0 0 18px;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(1.8rem, 6vw, 2.7rem);
+            line-height: 1.1;
+        }
+
+        .sense-card {
+            padding: clamp(16px, 4vw, 26px);
+            margin: 16px 0;
+        }
+
+        .sense-head {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 14px;
+        }
+
+        .sense-num,
+        .pos-badge,
+        .ipa-badge {
+            display: inline-flex;
+            align-items: center;
+            border-radius: 999px;
+            font-weight: 850;
+        }
+
+        .sense-num {
+            padding: 7px 12px;
+            background: var(--gold);
+            color: #14120b;
+        }
+
+        .pos-badge {
+            padding: 7px 11px;
+            background: rgba(139, 183, 255, 0.16);
+            color: var(--blue);
+        }
+
+        .ipa-badge {
+            padding: 7px 11px;
+            background: rgba(255, 255, 255, 0.07);
+            color: var(--muted);
+        }
+
+        .definition {
+            font-size: 1.12rem;
+            font-weight: 750;
+            color: #fff7e8;
+        }
+
+        .simple-label {
+            margin: 20px 0 8px;
+            color: var(--gold);
+            font-weight: 900;
+        }
+
+        .example-list,
+        .clean-list,
+        .wrong-list {
+            margin: 8px 0 0;
+            padding-left: 1.25rem;
+        }
+
+        .example-list li,
+        .clean-list li,
+        .wrong-list li {
+            margin: 8px 0;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-top: 14px;
+        }
+
+        .info-card {
+            padding: 14px;
+        }
+
+        .info-card h4,
+        .family-card h3,
+        .collocation-card h3,
+        .exercise-card h3 {
+            margin: 0 0 8px;
+            color: var(--gold);
+        }
+
+        .warning {
+            border-color: rgba(255, 157, 157, 0.35);
+            background: rgba(255, 157, 157, 0.07);
+        }
+
+        .good {
+            border-color: rgba(155, 226, 189, 0.3);
+            background: rgba(155, 226, 189, 0.06);
+        }
+
+        .family-grid,
+        .collocation-grid,
+        .exercise-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+        }
+
+        .family-card,
+        .collocation-card,
+        .exercise-card {
+            padding: 16px;
+        }
+
+        .word-pill-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 9px;
+        }
+
+        .word-pill {
+            display: inline-flex;
+            padding: 8px 11px;
+            border-radius: 999px;
+            background: var(--card-strong);
+            border: 1px solid var(--border);
+            font-weight: 800;
+        }
+
+        details.answer-key {
+            margin-top: 16px;
+            border: 1px solid rgba(216, 179, 90, 0.3);
+            border-radius: var(--radius-md);
+            background: var(--gold-soft);
+            padding: 14px 16px;
+        }
+
+        details.answer-key summary {
+            cursor: pointer;
+            color: var(--gold);
+            font-weight: 950;
+        }
+
+        .ext-footer {
+            margin-top: 22px;
+            padding: 22px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            background: var(--card);
+        }
+
+        /* =========================
+     RESPONSIVE RULES
+  ========================= */
+
+        @media (max-width: 720px) {
+            .page {
+                padding: 12px;
+            }
+
+            .intro-page {
+                padding: 10px;
+            }
+
+            .intro-shot {
+                min-height: 620px;
+                border-radius: 30px;
+                padding: 26px 18px;
+            }
+
+            .intro-shot::before {
+                inset: 12px;
+                border-radius: 24px;
+            }
+
+            .intro-word {
+                letter-spacing: -0.07em;
+            }
+
+            .intro-footer,
+            .ext-footer {
+                display: grid;
+                justify-content: stretch;
+            }
+
+            .meta-grid,
+            .info-grid,
+            .family-grid,
+            .collocation-grid,
+            .exercise-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero,
+            .section {
+                border-radius: 22px;
+            }
+
+            .sense-head {
+                align-items: flex-start;
+            }
+
+            .brand-links a,
+            .toc-links a {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .hero h1 {
+                font-size: clamp(1.55rem, 8.8vw, 2.65rem);
+                line-height: 1.02;
+                letter-spacing: -0.035em;
+                white-space: nowrap;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .intro-shot {
+                aspect-ratio: auto;
+                min-height: 600px;
+            }
+
+            .intro-meaning {
+                padding: 12px 14px;
+            }
+        }
+    </style>
+</head>
+
+<body class="extended-page">
+    <main class="page">
+
+        <header class="hero">
+            <div class="ext-kicker">📚✨ TOEFL Word of the Day ✨📚</div>
+            <h1>UNANIMOUS</h1>
+            <p class="hero-subtitle">A complete TOEFL learner guide compiled by <strong>Amir Kooshky</strong>.</p>
+
+            <div class="brand-links">
+                <a href="https://t.me/KooshkyTOEFL">Telegram Channel</a>
+                <a href="https://www.instagram.com/kooshkytoefl">Instagram</a>
+                <a href="https://t.me/KooshkyTOEFL_pv">Personal Telegram</a>
+            </div>
+
+            <div class="meta-grid">
+                <div class="meta-card">
+                    <span class="meta-label">Date</span>
+                    <span class="meta-value">June 30th, 2026</span>
+                </div>
+                <div class="meta-card">
+                    <span class="meta-label">Word</span>
+                    <span class="meta-value">unanimous</span>
+                </div>
+                <div class="meta-card">
+                    <span class="meta-label">Level</span>
+                    <span class="meta-value">B1–B2 TOEFL</span>
+                </div>
+            </div>
+        </header>
+
+        <nav class="toc">
+            <p class="toc-title">Study sections</p>
+            <div class="toc-links">
+                <a href="#meanings">Meanings</a>
+                <a href="#family">Word Family</a>
+                <a href="#collocations">Collocations</a>
+                <a href="#synonyms">Synonyms & Antonyms</a>
+                <a href="#etymology">Etymology</a>
+                <a href="#exercises">Exercises</a>
+            </div>
+        </nav>
+
+        <section class="section" id="meanings">
+            <h2>Meanings & Usage</h2>
+
+            <article class="sense-card">
+                <div class="sense-head">
+                    <span class="sense-num">Meaning 1</span>
+                    <span class="pos-badge">adjective</span>
+                    <span class="ipa-badge">/juˈnæn.ə.məs/</span>
+                </div>
+
+                <p class="definition">If a decision, vote, agreement, or opinion is unanimous, everyone in the group
+                    agrees.</p>
+
+                <p class="simple-label">Natural examples</p>
+                <ol class="example-list">
+                    <li>The committee reached a unanimous decision to approve the research proposal.</li>
+                    <li>The jury returned a unanimous verdict after only two hours.</li>
+                    <li>The board gave unanimous approval to the new scholarship program.</li>
+                    <li>The judges were unanimous in their decision to give the award to the young scientist.</li>
+                    <li>After a long debate, the students made a unanimous choice to delay the trip.</li>
+                </ol>
+
+                <div class="info-grid">
+                    <div class="info-card good">
+                        <h4>Nuance & implication</h4>
+                        <p><strong>Unanimous</strong> is stronger than <strong>general</strong> or
+                            <strong>widespread</strong>. It means there is no disagreement inside the group. In academic
+                            or official contexts, it often suggests strong agreement, formal decision-making, or clear
+                            support from all members.
+                        </p>
+                    </div>
+
+                    <div class="info-card">
+                        <h4>Grammar notes</h4>
+                        <p><strong>Unanimous</strong> is an adjective. It commonly comes before nouns like
+                            <strong>decision</strong>, <strong>vote</strong>, <strong>agreement</strong>,
+                            <strong>approval</strong>, <strong>support</strong>, and <strong>verdict</strong>. You can
+                            also say <strong>be unanimous in + noun/-ing</strong>, as in <strong>They were unanimous in
+                                supporting the plan</strong>.
+                        </p>
+                    </div>
+
+                    <div class="info-card warning">
+                        <h4>Common wrong usage</h4>
+                        <ul class="wrong-list">
+                            <li>❌ The committee unanimous approved the plan. → ✅ The committee unanimously approved the
+                                plan.</li>
+                            <li>❌ They made an unanimous decision. → ✅ They made a unanimous decision.</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <h4>TOEFL tip</h4>
+                        <p>In TOEFL reading or listening, <strong>unanimous</strong> often signals that all members of a
+                            group agree. If the passage says a decision was unanimous, do not choose an answer
+                            suggesting disagreement, debate, or only partial support.</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="sense-card">
+                <div class="sense-head">
+                    <span class="sense-num">Meaning 2</span>
+                    <span class="pos-badge">adjective</span>
+                    <span class="ipa-badge">/juˈnæn.ə.məs/</span>
+                </div>
+
+                <p class="definition">If people are unanimous, they all have the same opinion or feeling about
+                    something.</p>
+
+                <p class="simple-label">Natural examples</p>
+                <ol class="example-list">
+                    <li>The researchers were unanimous that the experiment needed more data.</li>
+                    <li>Students were unanimous in their praise for the professor’s clear explanations.</li>
+                    <li>The experts were unanimous on one point: the city needed better public transportation.</li>
+                    <li>Local residents were nearly unanimous in opposing the construction project.</li>
+                    <li>The reviewers were unanimous that the book was useful but too technical for beginners.</li>
+                </ol>
+
+                <div class="info-grid">
+                    <div class="info-card good">
+                        <h4>Nuance & implication</h4>
+                        <p>This meaning focuses on <strong>people</strong>, not the decision itself. It shows that all
+                            members of a group share the same view. In real contexts, writers may use <strong>nearly
+                                unanimous</strong> or <strong>almost unanimous</strong> when one or two people disagree.
+                        </p>
+                    </div>
+
+                    <div class="info-card">
+                        <h4>Grammar notes</h4>
+                        <p>Common patterns include <strong>be unanimous that + clause</strong>, <strong>be unanimous in
+                                + noun/-ing</strong>, and <strong>be unanimous on/about + issue</strong>. For formal
+                            writing, <strong>unanimous that</strong> and <strong>unanimous in</strong> are especially
+                            natural.</p>
+                    </div>
+
+                    <div class="info-card warning">
+                        <h4>Common wrong usage</h4>
+                        <ul class="wrong-list">
+                            <li>❌ The experts were unanimous to the solution. → ✅ The experts were unanimous on the
+                                solution.</li>
+                            <li>❌ The students were unanimous to support the change. → ✅ The students were unanimous in
+                                supporting the change.</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <h4>TOEFL tip</h4>
+                        <p>When <strong>unanimous</strong> describes people, pay attention to the preposition or clause
+                            after it. <strong>Unanimous that</strong> usually introduces the shared opinion, while
+                            <strong>unanimous in</strong> often introduces the shared action or attitude.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+
+        <section class="section" id="family">
+            <h2>Word Family</h2>
+
+            <div class="family-grid">
+                <article class="family-card">
+                    <h3>unanimously</h3>
+                    <p><strong>Part of speech:</strong> adverb</p>
+                    <p><strong>Definition:</strong> in a way that shows everyone agrees</p>
+                    <ol class="example-list">
+                        <li>The proposal was unanimously accepted by the committee.</li>
+                        <li>The judges unanimously selected the documentary as the winner.</li>
+                    </ol>
+                </article>
+
+                <article class="family-card">
+                    <h3>unanimity</h3>
+                    <p><strong>Part of speech:</strong> noun</p>
+                    <p><strong>Definition:</strong> complete agreement among all people in a group</p>
+                    <ol class="example-list">
+                        <li>The council reached unanimity after several rounds of discussion.</li>
+                        <li>There was rare unanimity among scientists about the importance of the discovery.</li>
+                    </ol>
+                </article>
+
+                <article class="family-card">
+                    <h3>non-unanimous</h3>
+                    <p><strong>Part of speech:</strong> adjective</p>
+                    <p><strong>Definition:</strong> not agreed on by everyone in a group</p>
+                    <ol class="example-list">
+                        <li>The court’s non-unanimous decision showed that the case was difficult.</li>
+                        <li>A non-unanimous vote may suggest disagreement within the committee.</li>
+                    </ol>
+                </article>
+            </div>
+        </section>
+        <section class="section" id="collocations">
+            <h2>Common Collocations</h2>
+
+            <div class="collocation-grid">
+                <article class="collocation-card">
+                    <h3>unanimous decision</h3>
+                    <p><strong>Meaning:</strong> a decision that everyone agrees with</p>
+                    <p><strong>Example:</strong> The committee reached a unanimous decision to fund the project.</p>
+                </article>
+
+                <article class="collocation-card">
+                    <h3>unanimous vote</h3>
+                    <p><strong>Meaning:</strong> a vote in which everyone chooses the same side</p>
+                    <p><strong>Example:</strong> The proposal passed by a unanimous vote.</p>
+                </article>
+
+                <article class="collocation-card">
+                    <h3>unanimous approval</h3>
+                    <p><strong>Meaning:</strong> complete support from everyone</p>
+                    <p><strong>Example:</strong> The new policy received unanimous approval from the board.</p>
+                </article>
+
+                <article class="collocation-card">
+                    <h3>unanimous support</h3>
+                    <p><strong>Meaning:</strong> support from every person in a group</p>
+                    <p><strong>Example:</strong> The plan won unanimous support from local teachers.</p>
+                </article>
+
+                <article class="collocation-card">
+                    <h3>unanimous verdict</h3>
+                    <p><strong>Meaning:</strong> a legal decision that all jury members agree on</p>
+                    <p><strong>Example:</strong> The jury delivered a unanimous verdict after reviewing the evidence.
+                    </p>
+                </article>
+
+                <article class="collocation-card">
+                    <h3>unanimous agreement</h3>
+                    <p><strong>Meaning:</strong> complete agreement among all members</p>
+                    <p><strong>Example:</strong> There was unanimous agreement that the deadline should be extended.</p>
+                </article>
+
+                <article class="collocation-card">
+                    <h3>be unanimous in supporting</h3>
+                    <p><strong>Meaning:</strong> all people support the same idea or action</p>
+                    <p><strong>Example:</strong> The researchers were unanimous in supporting further study.</p>
+                </article>
+
+                <article class="collocation-card">
+                    <h3>be unanimous that</h3>
+                    <p><strong>Meaning:</strong> all people agree that something is true</p>
+                    <p><strong>Example:</strong> Experts were unanimous that the evidence was convincing.</p>
+                </article>
+
+                <article class="collocation-card">
+                    <h3>almost unanimous</h3>
+                    <p><strong>Meaning:</strong> supported by nearly everyone, but not absolutely everyone</p>
+                    <p><strong>Example:</strong> The decision was almost unanimous, with only one member voting against
+                        it.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section" id="synonyms">
+            <h2>Direct Synonyms & Antonyms</h2>
+
+            <div class="info-grid">
+                <div class="info-card good">
+                    <h4>Direct synonyms</h4>
+                    <div class="word-pill-row">
+                        <span class="word-pill">agreed</span>
+                        <span class="word-pill">united</span>
+                        <span class="word-pill">of one mind</span>
+                        <span class="word-pill">undivided</span>
+                    </div>
+                    <p><strong>Agreed</strong> is simple and general. <strong>United</strong> often suggests people
+                        stand together emotionally or politically. <strong>Of one mind</strong> means people share the
+                        same opinion, but it is less common in academic writing. <strong>Undivided</strong> is often
+                        used in phrases like <strong>undivided support</strong> or <strong>undivided attention</strong>.
+                    </p>
+                </div>
+
+                <div class="info-card warning">
+                    <h4>Direct antonyms</h4>
+                    <div class="word-pill-row">
+                        <span class="word-pill">divided</span>
+                        <span class="word-pill">split</span>
+                        <span class="word-pill">non-unanimous</span>
+                        <span class="word-pill">disagreeing</span>
+                    </div>
+                    <p><strong>Divided</strong> and <strong>split</strong> mean a group has different opinions.
+                        <strong>Non-unanimous</strong> is more formal and means not everyone agreed.
+                        <strong>Disagreeing</strong> describes people who do not share the same opinion.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="etymology">
+            <h2>Etymology</h2>
+            <div class="info-card">
+                <p><strong>Unanimous</strong> comes from Latin roots meaning “one mind” or “one spirit.” The first part
+                    is related to <strong>uni-</strong>, meaning “one,” and the second part is related to
+                    <strong>animus</strong>, meaning “mind” or “spirit.” This history helps you remember the modern
+                    meaning: when a group is unanimous, they are like “one mind” on an issue.
+                </p>
+            </div>
+        </section>
+
+        <section class="section" id="exercises">
+            <h2>Practice Exercises</h2>
+
+            <div class="exercise-grid">
+                <article class="exercise-card">
+                    <h3>1. Word family choice</h3>
+                    <p>Choose the best member of the word family for each blank.</p>
+                    <ol class="clean-list">
+                        <li>The board voted __________ to approve the new science building.</li>
+                        <li>The final decision was not __________ because two members disagreed.</li>
+                        <li>The committee finally reached __________ after three hours of discussion.</li>
+                    </ol>
+                </article>
+
+                <article class="exercise-card">
+                    <h3>2. Correct or incorrect?</h3>
+                    <p>Decide whether each sentence uses the word correctly. If it is wrong, correct it.</p>
+                    <ol class="clean-list">
+                        <li>The researchers were unanimous that the method was reliable.</li>
+                        <li>The council unanimous rejected the proposal.</li>
+                        <li>The students were unanimous to support the new schedule.</li>
+                    </ol>
+                </article>
+
+                <article class="exercise-card">
+                    <h3>3. Collocation practice</h3>
+                    <p>Complete each sentence with a natural collocation.</p>
+                    <ol class="clean-list">
+                        <li>After reviewing the evidence, the jury reached a unanimous __________.</li>
+                        <li>The school board gave unanimous __________ to the new reading program.</li>
+                        <li>Experts were unanimous __________ the need for further research.</li>
+                    </ol>
+                </article>
+
+                <article class="exercise-card">
+                    <h3>4. TOEFL-style meaning check</h3>
+                    <p>Choose the closest meaning of the word in context.</p>
+                    <ol class="clean-list">
+                        <li>
+                            The committee’s recommendation was unanimous, leaving little doubt about the strength of its
+                            support.
+                            <br>
+                            A. delayed because of disagreement<br>
+                            B. supported by all members<br>
+                            C. based on weak evidence<br>
+                            D. accepted only by experts
+                        </li>
+                        <li>
+                            Although the public response was not unanimous, most residents favored the new
+                            transportation plan.
+                            <br>
+                            A. shared by absolutely everyone<br>
+                            B. strongly emotional<br>
+                            C. legally required<br>
+                            D. difficult to understand
+                        </li>
+                    </ol>
+                </article>
+            </div>
+
+            <details class="answer-key">
+                <summary>Answer Key</summary>
+                <ol class="clean-list">
+                    <li><strong>1.1 unanimously</strong> — You need the adverb because it describes how the board voted.
+                    </li>
+                    <li><strong>1.2 unanimous</strong> — You need the adjective after <strong>was not</strong>.</li>
+                    <li><strong>1.3 unanimity</strong> — You need the noun meaning complete agreement.</li>
+                    <li><strong>2.1 Correct.</strong> The pattern <strong>unanimous that + clause</strong> is natural.
+                    </li>
+                    <li><strong>2.2 Incorrect.</strong> Say: <strong>The council unanimously rejected the
+                            proposal.</strong></li>
+                    <li><strong>2.3 Incorrect.</strong> Say: <strong>The students were unanimous in supporting the new
+                            schedule.</strong></li>
+                    <li><strong>3.1 verdict</strong> — <strong>Unanimous verdict</strong> is common in legal contexts.
+                    </li>
+                    <li><strong>3.2 approval</strong> — <strong>Unanimous approval</strong> means everyone supported it.
+                    </li>
+                    <li><strong>3.3 on/about</strong> — Both are possible, but <strong>unanimous on</strong> is often
+                        natural with an issue or need.</li>
+                    <li><strong>4.1 B</strong> — <strong>Unanimous</strong> means supported or agreed on by everyone in
+                        the group.</li>
+                    <li><strong>4.2 A</strong> — The sentence says the response was <strong>not unanimous</strong>, so
+                        it was not shared by absolutely everyone.</li>
+                </ol>
+            </details>
+        </section>
+
+        <footer class="ext-footer">
+            <span>Compiled by <strong>Amir Kooshky</strong></span>
+            <span><a href="https://t.me/KooshkyTOEFL">📚 @KooshkyToefl</a></span>
+            <span><a href="https://www.instagram.com/kooshkytoefl">Instagram</a></span>
+            <span><a href="https://t.me/KooshkyTOEFL_pv">Personal Telegram</a></span>
+        </footer>
+
+    </main>
+</body>
+
+</html>

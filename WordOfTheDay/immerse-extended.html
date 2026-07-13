@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="A complete TOEFL learner guide to immerse, created by Amir Kooshky.">
+  <title>immerse | Kooshky TOEFL Word of the Day</title>
+  <style>
+/*
+  Kooshky TOEFL Word of the Day
+  Original dictionary-editorial visual system for Amir Kooshky.
+  Mobile-first, print-aware, local-file friendly, and fully usable without JavaScript.
+*/
+:root {
+  color-scheme: light;
+  --paper: #f4f0e7;
+  --surface: #fffdf8;
+  --surface-2: #eee8dc;
+  --ink: #1c1a18;
+  --muted: #69635d;
+  --rule: #d6cdbf;
+  --rule-strong: #a99f92;
+  --accent: #a51f2d;
+  --accent-deep: #72131e;
+  --accent-soft: #f4e3e5;
+  --good: #315f4c;
+  --good-soft: #e5efe9;
+  --warn: #8a5719;
+  --warn-soft: #f8ebd8;
+  --info: #315f76;
+  --info-soft: #e4eef3;
+  --shadow: 0 18px 46px rgba(47, 37, 27, .09);
+  --serif: Georgia, "Times New Roman", Times, serif;
+  --sans: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  --radius: .95rem;
+  --radius-sm: .55rem;
+  --content: 75rem;
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #171614;
+  --surface: #211f1c;
+  --surface-2: #2a2723;
+  --ink: #f3eee5;
+  --muted: #b9b0a5;
+  --rule: #443f39;
+  --rule-strong: #675e56;
+  --accent: #e35d68;
+  --accent-deep: #ff7f88;
+  --accent-soft: #3a2225;
+  --good: #95c8ad;
+  --good-soft: #20342a;
+  --warn: #dfb06e;
+  --warn-soft: #3a2c1d;
+  --info: #91c2d8;
+  --info-soft: #21343e;
+  --shadow: 0 18px 46px rgba(0, 0, 0, .34);
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #171614;
+    --surface: #211f1c;
+    --surface-2: #2a2723;
+    --ink: #f3eee5;
+    --muted: #b9b0a5;
+    --rule: #443f39;
+    --rule-strong: #675e56;
+    --accent: #e35d68;
+    --accent-deep: #ff7f88;
+    --accent-soft: #3a2225;
+    --good: #95c8ad;
+    --good-soft: #20342a;
+    --warn: #dfb06e;
+    --warn-soft: #3a2c1d;
+    --info: #91c2d8;
+    --info-soft: #21343e;
+    --shadow: 0 18px 46px rgba(0, 0, 0, .34);
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 1rem;
+  line-height: 1.72;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--accent-deep); text-underline-offset: .18em; text-decoration-thickness: .075em; }
+a:hover { color: var(--accent); }
+button { font: inherit; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+::selection { background: var(--accent); color: white; }
+
+.skip-link {
+  position: fixed;
+  left: .75rem;
+  top: .75rem;
+  z-index: 1000;
+  transform: translateY(-180%);
+  padding: .62rem .82rem;
+  border-radius: var(--radius-sm);
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--sans);
+  font-weight: 800;
+  text-decoration: none;
+}
+.skip-link:focus { transform: translateY(0); }
+
+.no-js-hidden { display: none !important; }
+html.js .no-js-hidden { display: inline-flex !important; }
+
+.masthead {
+  border-bottom: 1px solid var(--rule);
+  background: color-mix(in srgb, var(--surface) 94%, transparent);
+}
+.masthead-inner {
+  width: min(calc(100% - 1.4rem), var(--content));
+  min-height: 4.4rem;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .9rem;
+}
+.brand { color: inherit; text-decoration: none; line-height: 1.05; }
+.brand strong { display: block; font-size: 1.04rem; letter-spacing: -.02em; }
+.brand span {
+  display: block;
+  margin-top: .18rem;
+  color: var(--accent);
+  font-family: var(--sans);
+  font-size: .65rem;
+  font-weight: 850;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+.utility-actions { display: none; gap: .42rem; align-items: center; }
+html.js .utility-actions { display: flex; }
+.utility-button {
+  min-height: 2.35rem;
+  padding: .42rem .7rem;
+  border: 1px solid var(--rule-strong);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: .74rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+.utility-button:hover { border-color: var(--accent); color: var(--accent); }
+
+.page {
+  width: min(calc(100% - 1.4rem), var(--content));
+  margin-inline: auto;
+  padding: 1.2rem 0 4rem;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(2rem, 10vw, 5.5rem) 0 clamp(2.4rem, 8vw, 4.5rem);
+  border-bottom: 1px solid var(--rule);
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  right: -7rem;
+  top: -9rem;
+  width: 19rem;
+  aspect-ratio: 1;
+  border: 1px solid color-mix(in srgb, var(--accent) 22%, transparent);
+  border-radius: 50%;
+  box-shadow: 0 0 0 2.4rem color-mix(in srgb, var(--accent) 4%, transparent), 0 0 0 5rem color-mix(in srgb, var(--accent) 3%, transparent);
+  pointer-events: none;
+}
+.kicker, .section-kicker, .eyebrow {
+  margin: 0;
+  color: var(--accent);
+  font-family: var(--sans);
+  font-size: .7rem;
+  font-weight: 900;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+.hero h1 {
+  position: relative;
+  z-index: 1;
+  max-width: 13ch;
+  margin: .45rem 0 0;
+  font-size: clamp(3.2rem, 17vw, 8.7rem);
+  line-height: .88;
+  letter-spacing: -.065em;
+  overflow-wrap: anywhere;
+}
+.hero-pronunciation {
+  margin: 1.25rem 0 .15rem;
+  color: var(--accent-deep);
+  font-family: var(--sans);
+  font-size: clamp(1.05rem, 4vw, 1.45rem);
+  font-weight: 750;
+}
+.pronunciation-tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .65rem;
+  max-width: 42rem;
+  margin: .75rem 0 .25rem;
+}
+.pronunciation-audio {
+  width: min(100%, 22rem);
+  height: 2.5rem;
+}
+.listen-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.35rem;
+  padding: .45rem .72rem;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  color: var(--accent);
+  font-family: var(--sans);
+  font-size: .78rem;
+  font-weight: 820;
+  text-decoration: none;
+}
+.listen-link:hover { background: var(--accent); color: var(--accent-ink); }
+.listen-link.secondary { border-color: var(--rule-strong); color: var(--ink); }
+.listen-link.secondary:hover { border-color: var(--accent); background: var(--surface-strong); color: var(--accent); }
+.audio-note { margin: 0 0 .35rem; color: var(--muted); font-family: var(--sans); font-size: .72rem; }
+.hero-pos { margin: 0; color: var(--muted); font-family: var(--sans); font-weight: 720; }
+.hero-summary { max-width: 50rem; margin: 1rem 0 0; font-size: clamp(1.08rem, 3.2vw, 1.34rem); line-height: 1.55; }
+.short-meaning-row { display: flex; flex-wrap: wrap; gap: .45rem; margin-top: 1.2rem; }
+.short-meaning {
+  padding: .36rem .62rem;
+  border: 1px solid var(--rule-strong);
+  border-radius: 999px;
+  background: var(--surface);
+  font-family: var(--sans);
+  font-size: .78rem;
+  font-weight: 760;
+}
+.hero-example {
+  max-width: 53rem;
+  margin: 1.6rem 0 0;
+  padding: 1rem 1.1rem 1rem 1.25rem;
+  border-left: 3px solid var(--accent);
+  background: color-mix(in srgb, var(--surface) 80%, transparent);
+  font-size: clamp(1.05rem, 3vw, 1.3rem);
+  font-style: italic;
+}
+.meta-strip {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: .65rem;
+  margin-top: 1.5rem;
+}
+.meta-item { padding: .75rem .85rem; border: 1px solid var(--rule); border-radius: var(--radius-sm); background: var(--surface); }
+.meta-label { display: block; color: var(--muted); font-family: var(--sans); font-size: .66rem; font-weight: 850; letter-spacing: .12em; text-transform: uppercase; }
+.meta-value { display: block; margin-top: .12rem; font-family: var(--sans); font-weight: 800; }
+
+.toc {
+  margin: 1rem 0 0;
+  padding: .95rem;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+.toc-title { margin: 0 0 .55rem; font-family: var(--sans); font-size: .78rem; font-weight: 900; text-transform: uppercase; letter-spacing: .12em; }
+.toc-links { display: flex; flex-wrap: wrap; gap: .45rem .8rem; }
+.toc a { font-family: var(--sans); font-size: .82rem; font-weight: 760; }
+
+.section { padding: clamp(2.5rem, 8vw, 5rem) 0 0; }
+.section-head { max-width: 48rem; margin-bottom: 1.25rem; }
+.section h2 {
+  margin: .22rem 0 .4rem;
+  font-size: clamp(2rem, 7vw, 3.35rem);
+  line-height: 1.02;
+  letter-spacing: -.035em;
+}
+.section-intro { margin: 0; color: var(--muted); font-size: 1.03rem; }
+
+.overview-grid, .card-grid, .compare-grid, .exercise-grid, .info-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: .85rem;
+}
+.card, .overview-card, .family-card, .collocation-card, .compare-card, .exercise-card {
+  min-width: 0;
+  padding: 1rem;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: 0 7px 20px rgba(40, 30, 20, .035);
+}
+.card h3, .card h4, .overview-card h3, .family-card h3, .collocation-card h3, .compare-card h3, .exercise-card h3 { margin: 0 0 .45rem; line-height: 1.25; }
+.card p:last-child, .overview-card p:last-child, .family-card p:last-child, .collocation-card p:last-child, .compare-card p:last-child, .exercise-card p:last-child { margin-bottom: 0; }
+.label {
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: .69rem;
+  font-weight: 850;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.value { font-weight: 700; }
+
+.sense-card {
+  overflow: hidden;
+  margin-top: 1.1rem;
+  border: 1px solid var(--rule);
+  border-radius: calc(var(--radius) + .15rem);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+.sense-head {
+  padding: 1rem;
+  border-top: 4px solid var(--accent);
+  border-bottom: 1px solid var(--rule);
+  background: color-mix(in srgb, var(--surface-2) 42%, var(--surface));
+}
+.sense-number { color: var(--accent); font-family: var(--sans); font-size: .7rem; font-weight: 900; letter-spacing: .13em; text-transform: uppercase; }
+.sense-head h3 { margin: .2rem 0 .55rem; font-size: clamp(1.55rem, 5vw, 2.2rem); line-height: 1.1; }
+.badge-row { display: flex; flex-wrap: wrap; gap: .38rem; }
+.badge { padding: .27rem .5rem; border: 1px solid var(--rule-strong); border-radius: 999px; font-family: var(--sans); font-size: .72rem; font-weight: 780; }
+.sense-body { padding: 1rem; }
+.definition { margin: 0; font-size: clamp(1.08rem, 3.5vw, 1.28rem); font-weight: 700; }
+.plain-equivalent { margin: .65rem 0 0; color: var(--muted); }
+.pattern-banner {
+  margin: 1rem 0;
+  padding: .8rem .9rem;
+  border-left: 3px solid var(--accent);
+  background: var(--accent-soft);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+.pattern-banner strong { font-family: var(--sans); }
+.context-row { display: flex; flex-wrap: wrap; gap: .38rem; margin-top: .55rem; }
+.context-pill { padding: .25rem .48rem; border-radius: 999px; background: var(--surface-2); font-family: var(--sans); font-size: .73rem; font-weight: 740; }
+.subsection-title { margin: 1.35rem 0 .55rem; font-family: var(--sans); font-size: .82rem; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
+.example-list, .clean-list { margin: .5rem 0 0; padding-left: 1.35rem; }
+.example-list li, .clean-list li { padding-left: .25rem; margin: .42rem 0; }
+.info-card { padding: .9rem; border: 1px solid var(--rule); border-radius: var(--radius-sm); background: var(--surface); }
+.info-card h4 { margin: 0 0 .35rem; font-family: var(--sans); font-size: .9rem; }
+.info-card p { margin: .3rem 0 0; }
+.info-card.good { border-color: color-mix(in srgb, var(--good) 54%, var(--rule)); background: var(--good-soft); }
+.info-card.warning { border-color: color-mix(in srgb, var(--warn) 54%, var(--rule)); background: var(--warn-soft); }
+.info-card.tip { border-color: color-mix(in srgb, var(--info) 54%, var(--rule)); background: var(--info-soft); }
+.grammar-list { display: grid; gap: .55rem; margin: 0; }
+.grammar-item { padding-bottom: .55rem; border-bottom: 1px solid var(--rule); }
+.grammar-item:last-child { padding-bottom: 0; border-bottom: 0; }
+.grammar-item dt { font-family: var(--sans); font-size: .74rem; font-weight: 900; letter-spacing: .07em; text-transform: uppercase; }
+.grammar-item dd { margin: .12rem 0 0; }
+.pattern-list, .error-list { display: grid; gap: .7rem; }
+.pattern-card, .error-card { padding: .82rem; border: 1px solid var(--rule); border-radius: var(--radius-sm); background: color-mix(in srgb, var(--surface-2) 25%, var(--surface)); }
+.pattern-code { display: block; font-family: var(--mono); font-size: .84rem; font-weight: 800; overflow-wrap: anywhere; }
+.pattern-use { margin: .3rem 0; color: var(--muted); }
+.error-wrong, .error-correct { margin: .25rem 0; }
+.error-wrong { color: var(--warn); }
+.error-correct { color: var(--good); }
+.error-explanation { margin: .35rem 0 0; font-size: .93rem; }
+
+.family-card .ipa, .compare-card .meta { color: var(--muted); font-family: var(--sans); font-size: .8rem; }
+.collocation-card h3 { color: var(--accent-deep); }
+.mini-facts { display: grid; gap: .42rem; margin-top: .6rem; }
+.mini-fact { padding-top: .42rem; border-top: 1px solid var(--rule); }
+.mini-fact strong { font-family: var(--sans); font-size: .78rem; }
+.word-pill { display: inline-block; padding: .24rem .5rem; border: 1px solid var(--accent); border-radius: 999px; color: var(--accent-deep); font-family: var(--sans); font-size: .75rem; font-weight: 850; }
+
+.etymology-flow { display: grid; gap: .7rem; }
+.etymology-step { position: relative; padding: .9rem 1rem .9rem 1.15rem; border-left: 3px solid var(--accent); background: var(--surface); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; }
+.etymology-step h3 { margin: 0 0 .25rem; font-family: var(--sans); font-size: .83rem; text-transform: uppercase; letter-spacing: .08em; }
+
+.exercise-card { counter-increment: exercise; }
+.exercise-card h3 { font-family: var(--sans); }
+.exercise-instruction { color: var(--muted); }
+details.answer-key { margin-top: 1rem; border: 1px solid var(--rule-strong); border-radius: var(--radius); background: var(--surface); }
+details.answer-key summary { padding: 1rem; font-family: var(--sans); font-weight: 900; cursor: pointer; }
+.answer-content { padding: 0 1rem 1rem; }
+.answer-group + .answer-group { margin-top: 1.3rem; padding-top: 1rem; border-top: 1px solid var(--rule); }
+.answer-group h3 { margin: 0 0 .5rem; font-family: var(--sans); }
+.answer-item { margin: .65rem 0; }
+.answer-item strong { font-family: var(--sans); }
+
+.footer {
+  margin-top: 4.5rem;
+  padding: 1.5rem 0 0;
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: .82rem;
+}
+.footer-row { display: flex; flex-direction: column; gap: .55rem; }
+.footer-links { display: flex; flex-wrap: wrap; gap: .4rem .8rem; }
+
+.back-to-top {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 100;
+  width: 2.8rem;
+  height: 2.8rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--rule-strong);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(.7rem);
+  pointer-events: none;
+  transition: opacity .2s ease, transform .2s ease;
+}
+.back-to-top.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+
+@media (min-width: 38rem) {
+  .meta-strip { grid-template-columns: repeat(3, 1fr); }
+  .overview-grid, .info-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .card-grid, .compare-grid, .exercise-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .sense-head, .sense-body { padding: 1.25rem; }
+  .footer-row { flex-direction: row; justify-content: space-between; align-items: center; }
+}
+
+@media (min-width: 62rem) {
+  .page, .masthead-inner { width: min(calc(100% - 3rem), var(--content)); }
+  .toc { position: sticky; top: .7rem; z-index: 20; }
+  .overview-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .card-grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .compare-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .exercise-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .sense-head, .sense-body { padding: 1.5rem; }
+  .sense-body > .info-grid { grid-template-columns: 1.05fr .95fr; }
+}
+
+@media print {
+  :root {
+    --paper: #fff;
+    --surface: #fff;
+    --surface-2: #f4f1eb;
+    --ink: #000;
+    --muted: #444;
+    --rule: #bbb;
+    --rule-strong: #888;
+    --accent: #8d1722;
+    --accent-deep: #6f1019;
+    --accent-soft: #f5e8e9;
+    --shadow: none;
+  }
+  @page { size: A4; margin: 15mm; }
+  body { font-size: 10.5pt; background: #fff; }
+  .masthead, .toc, .utility-actions, .back-to-top { display: none !important; }
+  .page { width: 100%; padding: 0; }
+  .hero { padding-top: 0; }
+  .hero h1 { font-size: 56pt; }
+  .section { padding-top: 2rem; }
+  .sense-card, .card, .overview-card, .family-card, .collocation-card, .compare-card, .exercise-card, details.answer-key { box-shadow: none; break-inside: avoid; }
+  details.answer-key > .answer-content { display: block !important; }
+  a { color: inherit; text-decoration: none; }
+}
+
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to the guide</a>
+
+  <header class="masthead">
+    <div class="masthead-inner">
+      <a class="brand" href="https://t.me/KooshkyTOEFL" target="_blank" rel="noopener">
+        <strong>Kooshky TOEFL</strong>
+        <span>Word of the Day</span>
+      </a>
+      <div class="utility-actions" aria-label="Page tools">
+        <button class="utility-button" type="button" data-theme-toggle>Dark mode</button>
+        <button class="utility-button" type="button" data-print>Print or save PDF</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="page" id="main-content">
+    <section class="hero" aria-labelledby="headword">
+      <p class="kicker">TOEFL Word of the Day</p>
+      <h1 id="headword">immerse</h1>
+      <p class="hero-pronunciation">/ɪˈmɝːs/</p>
+      <div class="pronunciation-tools" aria-label="Pronunciation audio">
+        <audio class="pronunciation-audio" controls preload="none">
+          <source src="https://api.dictionaryapi.dev/media/pronunciations/en/immerse-us.mp3" type="audio/mpeg">
+          Your browser does not support audio playback.
+        </audio>
+        <a class="listen-link" href="https://api.dictionaryapi.dev/media/pronunciations/en/immerse-us.mp3" target="_blank" rel="noopener">Open pronunciation audio</a>
+        <a class="listen-link secondary" href="https://youglish.com/pronounce/immerse/english/us" target="_blank" rel="noopener">Hear “immerse” in real examples</a>
+      </div>
+      <p class="audio-note">Audio and example links require an internet connection.</p>
+      <p class="hero-pos">transitive verb</p>
+      <div class="short-meaning-row" aria-label="Meanings at a glance">
+<span class="short-meaning">put completely under liquid</span><span class="short-meaning">become deeply involved</span>      </div>
+<p class="hero-summary">Immerse can mean putting something completely under a liquid or becoming deeply involved in an activity, subject, or experience.</p><blockquote class="hero-example">“Living with a host family allowed her to immerse herself in the local culture.”</blockquote>      <div class="meta-strip">
+        <div class="meta-item"><span class="meta-label">Date</span><span class="meta-value">July 25th, 2026</span></div>
+        <div class="meta-item"><span class="meta-label">Level</span><span class="meta-value">B1–mid-B2 TOEFL</span></div>
+        <div class="meta-item"><span class="meta-label">Created by</span><span class="meta-value">Amir Kooshky</span></div>
+      </div>
+    </section>
+
+    <nav class="toc" aria-label="Study sections">
+      <p class="toc-title">In this guide</p>
+      <div class="toc-links">
+        <a href="#meanings">Meanings</a>
+<a href="#family">Word family</a><a href="#collocations">Collocations</a><a href="#relations">Synonyms & antonyms</a><a href="#exercises">Exercises</a>      </div>
+    </nav>
+
+
+    <section class="section" id="meanings">
+      <div class="section-head">
+        <p class="section-kicker">Dictionary guide</p>
+        <h2>Meanings and usage</h2>
+        <p class="section-intro">The core definition and examples are always included. Additional notes appear only when they are accurate and useful.</p>
+      </div>
+
+      <article class="sense-card" id="meaning-1">
+        <header class="sense-head">
+          <span class="sense-number">Meaning 1</span>
+          <h3>Put completely under liquid</h3>
+          <div class="badge-row">
+            <span class="badge">transitive verb</span>
+            <span class="badge">/ɪˈmɝːs/</span>
+<span class="badge">Common in scientific, technical, instructional, and formal English.</span>          </div>
+        </header>
+        <div class="sense-body">
+          <p class="definition">to put something completely below the surface of a liquid</p>
+<p class="plain-equivalent"><strong>In simpler words:</strong> put completely under liquid</p><div class="pattern-banner"><strong>Typical pattern:</strong> immerse + object + in + liquid</div>
+
+          <p class="subsection-title">Natural examples</p>
+          <ol class="example-list">
+<li>The technician immersed the metal sample in a chemical solution.</li><li>Before planting, immerse the seeds in warm water for several hours.</li><li>The researcher carefully immersed the instrument in the tank.</li><li>Do not immerse the electrical device in water.</li><li>The cloth was immersed in dye until it developed a deep blue color.</li><li>Scientists immersed the sensors in seawater to test their durability.</li><li>The container must remain tightly closed when it is immersed in the liquid.</li>          </ol>
+
+          <div class="info-grid">
+            <section class="info-card good">
+              <h4>Nuance and implication</h4>
+<p><strong>Central nuance:</strong> The object goes completely below the surface rather than only touching the liquid.</p><p><strong>Usual implication:</strong> The action is often deliberate and done for testing, cleaning, treating, coloring, or preparing something.</p><p><strong>Compared with “dip”:</strong> Dip usually means putting something into a liquid briefly or only partly. Immerse normally means putting it completely below the surface.</p>            </section>
+
+            <section class="info-card">
+              <h4>Grammar notes</h4>
+              <dl class="grammar-list">
+<div class="grammar-item"><dt>How to use it</dt><dd>This verb normally needs an object. Say immerse the cloth in water, not simply immerse in water.</dd></div><div class="grammar-item"><dt>What can follow it</dt><dd>Put the object directly after immerse, and then use in before the liquid.</dd></div><div class="grammar-item"><dt>Common preposition</dt><dd>Use immerse something in a liquid. For example: Immerse the sample in water.</dd></div><div class="grammar-item"><dt>Position in a sentence</dt><dd>In passive sentences, the object comes first: The sample was immersed in water.</dd></div>              </dl>
+            </section>
+          </div>
+
+          <p class="subsection-title">Useful patterns</p>
+          <div class="pattern-list">
+            <article class="pattern-card">
+              <code class="pattern-code">immerse + object + in + liquid</code>
+<p class="pattern-use">Use this pattern when someone puts an object completely below the surface of a liquid.</p>              <p><strong>Example:</strong> The scientist immersed the material in a salt solution.</p>
+            </article>
+            <article class="pattern-card">
+              <code class="pattern-code">be immersed in + liquid</code>
+<p class="pattern-use">Use this pattern when the focus is on the object under the liquid rather than the person performing the action.</p>              <p><strong>Example:</strong> The roots should be immersed in water before planting.</p>
+            </article>
+            <article class="pattern-card">
+              <code class="pattern-code">fully or completely immerse + object</code>
+<p class="pattern-use">Use fully or completely to emphasize that no part should remain above the surface.</p>              <p><strong>Example:</strong> Fully immerse the fabric to ensure an even color.</p>
+            </article>
+          </div>
+
+          <p class="subsection-title">Common wrong usage</p>
+          <div class="error-list">
+            <article class="error-card">
+              <p class="error-wrong"><strong>Wrong:</strong> Immerse the cloth into the solution for ten minutes.</p>
+              <p class="error-correct"><strong>Correct:</strong> Immerse the cloth in the solution for ten minutes.</p>
+<p class="error-explanation">Use in after immerse when naming the liquid.</p>            </article>
+            <article class="error-card">
+              <p class="error-wrong"><strong>Wrong:</strong> The scientist immersed in water the sample.</p>
+              <p class="error-correct"><strong>Correct:</strong> The scientist immersed the sample in water.</p>
+<p class="error-explanation">Put the object directly after immerse, followed by in and the liquid.</p>            </article>
+            <article class="error-card">
+              <p class="error-wrong"><strong>Wrong:</strong> The device should not immerse in water.</p>
+              <p class="error-correct"><strong>Correct:</strong> The device should not be immersed in water.</p>
+<p class="error-explanation">Use be immersed when the device receives the action.</p>            </article>
+          </div>
+
+        </div>
+      </article>
+      <article class="sense-card" id="meaning-2">
+        <header class="sense-head">
+          <span class="sense-number">Meaning 2</span>
+          <h3>Become deeply involved</h3>
+          <div class="badge-row">
+            <span class="badge">transitive verb</span>
+            <span class="badge">/ɪˈmɝːs/</span>
+<span class="badge">Common in academic, educational, professional, and everyday English.</span>          </div>
+        </header>
+        <div class="sense-body">
+          <p class="definition">to involve yourself or another person deeply in an activity, subject, culture, or experience so that it receives most or all of the person&#39;s attention</p>
+<p class="plain-equivalent"><strong>In simpler words:</strong> become completely involved in something</p><div class="pattern-banner"><strong>Typical pattern:</strong> immerse yourself in + noun; be immersed in + noun; immerse someone in + noun</div>
+
+          <p class="subsection-title">Natural examples</p>
+          <ol class="example-list">
+<li>Living with a host family allowed her to immerse herself in the local culture.</li><li>He immersed himself in his research and rarely took a day off.</li><li>Students learn more quickly when they are immersed in an English-speaking environment.</li><li>The course immerses participants in real-world problems from the first week.</li><li>She spent the summer immersing herself in the history of the region.</li><li>Readers can easily become immersed in the novel&#39;s detailed world.</li><li>The internship gave students a chance to immerse themselves in professional laboratory work.</li><li>After the move, the family made an effort to immerse themselves in community life.</li>          </ol>
+
+          <div class="info-grid">
+            <section class="info-card good">
+              <h4>Nuance and implication</h4>
+<p><strong>Central nuance:</strong> The person gives strong, sustained attention to an activity or becomes surrounded by a new environment or experience.</p><p><strong>Usual implication:</strong> This deep involvement often helps the person learn, understand, experience, or enjoy something more fully.</p><p><strong>Compared with “participate”:</strong> Participate means take part in an activity. Immerse yourself in something suggests much deeper involvement and attention.</p>            </section>
+
+            <section class="info-card">
+              <h4>Grammar notes</h4>
+              <dl class="grammar-list">
+<div class="grammar-item"><dt>How to use it</dt><dd>When the subject chooses to become deeply involved, use immerse yourself in something. Change yourself to myself, himself, herself, ourselves, or themselves when needed.</dd></div><div class="grammar-item"><dt>What can follow it</dt><dd>It is followed by in and then a noun or an -ing form, such as immerse yourself in a culture or in studying a language.</dd></div><div class="grammar-item"><dt>Common preposition</dt><dd>Use in, not into or with: immerse yourself in the subject.</dd></div><div class="grammar-item"><dt>Position in a sentence</dt><dd>The passive form be immersed in is also very common: She was immersed in her work.</dd></div>              </dl>
+            </section>
+          </div>
+
+          <p class="subsection-title">Useful patterns</p>
+          <div class="pattern-list">
+            <article class="pattern-card">
+              <code class="pattern-code">immerse yourself in + noun or -ing form</code>
+<p class="pattern-use">Use this pattern when someone chooses to become deeply involved in something.</p>              <p><strong>Example:</strong> To improve quickly, immerse yourself in speaking and listening to English every day.</p>
+            </article>
+            <article class="pattern-card">
+              <code class="pattern-code">be immersed in + activity or experience</code>
+<p class="pattern-use">Use this pattern when someone is giving something their full attention or is completely surrounded by an experience.</p>              <p><strong>Example:</strong> The students were immersed in a discussion of climate policy.</p>
+            </article>
+            <article class="pattern-card">
+              <code class="pattern-code">immerse someone in + environment or subject</code>
+<p class="pattern-use">Use this pattern when a course, program, or experience gives someone intense exposure to something.</p>              <p><strong>Example:</strong> The program immerses students in the daily life of the community.</p>
+            </article>
+            <article class="pattern-card">
+              <code class="pattern-code">become deeply or fully immersed in + noun</code>
+<p class="pattern-use">Use this pattern to emphasize increasing or complete involvement.</p>              <p><strong>Example:</strong> She became deeply immersed in the study of ancient languages.</p>
+            </article>
+          </div>
+
+          <p class="subsection-title">Common wrong usage</p>
+          <div class="error-list">
+            <article class="error-card">
+              <p class="error-wrong"><strong>Wrong:</strong> He immersed in his studies for several weeks.</p>
+              <p class="error-correct"><strong>Correct:</strong> He immersed himself in his studies for several weeks.</p>
+<p class="error-explanation">When the subject actively becomes involved, use immerse himself, herself, yourself, or another matching form.</p>            </article>
+            <article class="error-card">
+              <p class="error-wrong"><strong>Wrong:</strong> She immersed herself into the local culture.</p>
+              <p class="error-correct"><strong>Correct:</strong> She immersed herself in the local culture.</p>
+<p class="error-explanation">Use in after immerse yourself.</p>            </article>
+            <article class="error-card">
+              <p class="error-wrong"><strong>Wrong:</strong> The students were immersed with the project.</p>
+              <p class="error-correct"><strong>Correct:</strong> The students were immersed in the project.</p>
+<p class="error-explanation">Use immersed in, not immersed with.</p>            </article>
+            <article class="error-card">
+              <p class="error-wrong"><strong>Wrong:</strong> The course immerses to students in practical research.</p>
+              <p class="error-correct"><strong>Correct:</strong> The course immerses students in practical research.</p>
+<p class="error-explanation">Put the person directly after immerse. Do not use to.</p>            </article>
+          </div>
+
+        </div>
+      </article>
+    </section>
+
+    <section class="section" id="family">
+      <div class="section-head">
+        <p class="section-kicker">Morphology</p>
+        <h2>Word family</h2>
+        <p class="section-intro">Only common and educationally useful family members are included.</p>
+      </div>
+      <div class="card-grid three">
+        <article class="family-card">
+          <p class="eyebrow">countable and uncountable noun</p>
+          <h3>immersion</h3>
+<p class="ipa">/ɪˈmɝːʒən/</p>          <p>the act of putting something under a liquid, or the experience of being deeply involved in a subject, activity, language, or culture</p>
+          <div class="mini-facts">
+<p class="mini-fact"><strong>Relationship:</strong> Immersion is the noun form of immerse.</p><p class="mini-fact"><strong>Pattern:</strong> immersion in + liquid, subject, activity, language, or culture</p><p class="mini-fact"><strong>Usage note:</strong> It is often uncountable. A countable use is possible for a particular intensive learning experience, such as a two-week immersion.</p>          </div>
+          <ol class="example-list"><li>The samples were tested after immersion in salt water.</li><li>Language immersion can help learners develop more natural listening skills.</li><li>Her complete immersion in the project led to several important discoveries.</li></ol>
+        </article>
+        <article class="family-card">
+          <p class="eyebrow">adjective</p>
+          <h3>immersive</h3>
+<p class="ipa">/ɪˈmɝːsɪv/</p>          <p>creating a strong feeling of being completely surrounded by and involved in an experience</p>
+          <div class="mini-facts">
+<p class="mini-fact"><strong>Relationship:</strong> Immersive describes an experience or environment that makes people feel deeply involved.</p><p class="mini-fact"><strong>Pattern:</strong> immersive + experience, environment, program, technology, or exhibition</p><p class="mini-fact"><strong>Usage note:</strong> This adjective is especially common in education, technology, games, art, and entertainment.</p>          </div>
+          <ol class="example-list"><li>The museum uses sound and projected images to create an immersive experience.</li><li>Students participated in an immersive language program.</li><li>Virtual reality can provide an immersive learning environment.</li></ol>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="collocations">
+      <div class="section-head">
+        <p class="section-kicker">Natural combinations</p>
+        <h2>Common collocations</h2>
+        <p class="section-intro">These are established combinations, not merely grammatically possible phrases.</p>
+      </div>
+      <div class="card-grid three">
+        <article class="collocation-card">
+<p class="eyebrow">Put completely under liquid</p>          <h3>immerse in water</h3>
+<p>put something completely below the surface of water</p>          <div class="mini-facts">
+<p class="mini-fact"><strong>Pattern:</strong> immerse + object + in water</p>            <p class="mini-fact"><strong>Example:</strong> Immerse the roots in water before placing the plant in the soil.</p>
+          </div>
+        </article>
+        <article class="collocation-card">
+<p class="eyebrow">Put completely under liquid</p>          <h3>immerse in a solution</h3>
+<p>put something completely under a prepared liquid mixture</p>          <div class="mini-facts">
+<p class="mini-fact"><strong>Pattern:</strong> immerse + object + in a solution</p>            <p class="mini-fact"><strong>Example:</strong> The samples were immersed in a weak chemical solution.</p>
+          </div>
+        </article>
+        <article class="collocation-card">
+<p class="eyebrow">Put completely under liquid</p>          <h3>fully immerse</h3>
+<p>put something entirely below the liquid&#39;s surface</p>          <div class="mini-facts">
+<p class="mini-fact"><strong>Pattern:</strong> fully immerse + object</p>            <p class="mini-fact"><strong>Example:</strong> Fully immerse the material so that the treatment reaches every surface.</p>
+          </div>
+        </article>
+        <article class="collocation-card">
+<p class="eyebrow">Become deeply involved</p>          <h3>immerse yourself in a culture</h3>
+<p>become closely involved in the daily life, language, and customs of a culture</p>          <div class="mini-facts">
+<p class="mini-fact"><strong>Pattern:</strong> immerse yourself in + culture</p>            <p class="mini-fact"><strong>Example:</strong> Travelers can learn more by immersing themselves in the local culture.</p>
+          </div>
+        </article>
+        <article class="collocation-card">
+<p class="eyebrow">Become deeply involved</p>          <h3>immerse yourself in a subject</h3>
+<p>study or explore a subject with great attention</p>          <div class="mini-facts">
+<p class="mini-fact"><strong>Pattern:</strong> immerse yourself in + subject</p>            <p class="mini-fact"><strong>Example:</strong> She immersed herself in the subject before beginning the field research.</p>
+          </div>
+        </article>
+        <article class="collocation-card">
+<p class="eyebrow">Become deeply involved</p>          <h3>be immersed in work</h3>
+<p>be giving work nearly all of your attention</p>          <div class="mini-facts">
+<p class="mini-fact"><strong>Pattern:</strong> be immersed in + work</p>            <p class="mini-fact"><strong>Example:</strong> He was so immersed in his work that he did not notice the time.</p>
+          </div>
+        </article>
+        <article class="collocation-card">
+<p class="eyebrow">Become deeply involved</p>          <h3>be deeply immersed in</h3>
+<p>be involved in something with very strong attention and interest</p>          <div class="mini-facts">
+<p class="mini-fact"><strong>Pattern:</strong> be deeply immersed in + noun</p>            <p class="mini-fact"><strong>Example:</strong> The researcher became deeply immersed in the study of animal communication.</p>
+          </div>
+        </article>
+        <article class="collocation-card">
+<p class="eyebrow">Become deeply involved</p>          <h3>immerse students in</h3>
+<p>give students intensive and direct experience of a subject or environment</p>          <div class="mini-facts">
+<p class="mini-fact"><strong>Pattern:</strong> immerse students in + subject, language, or environment</p>            <p class="mini-fact"><strong>Example:</strong> The course immerses students in realistic workplace situations.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="relations">
+      <div class="section-head">
+        <p class="section-kicker">Meaning relations</p>
+        <h2>Synonyms and antonyms</h2>
+        <p class="section-intro">Only clear and useful relationships are included.</p>
+      </div>
+      <h3>Close synonyms</h3>
+      <div class="compare-grid">
+        <article class="compare-card">
+          <span class="word-pill">submerge</span>
+          <p class="meta">transitive and intransitive verb · Put completely under liquid</p>
+<p><strong>Shared meaning:</strong> Both words can mean put or go completely below the surface of a liquid.</p>          <p><strong>Difference:</strong> Submerge also means go or put something completely below a liquid&#39;s surface. Immerse more often suggests a deliberate action for a purpose such as testing, washing, or treatment, while submerge is also common for objects that sink or become covered by water.</p>
+          <p><strong>Example:</strong> Floodwater submerged several roads near the river.</p>
+        </article>
+        <article class="compare-card">
+          <span class="word-pill">dip</span>
+          <p class="meta">transitive and intransitive verb · Put completely under liquid</p>
+<p><strong>Shared meaning:</strong> Both words describe putting something into a liquid.</p>          <p><strong>Difference:</strong> Dip usually means put something into a liquid briefly or only partly. Immerse normally means put it completely under the surface, often for longer.</p>
+          <p><strong>Example:</strong> She dipped the brush into the paint.</p>
+        </article>
+        <article class="compare-card">
+          <span class="word-pill">be absorbed in</span>
+          <p class="meta">verb phrase · Become deeply involved</p>
+<p><strong>Shared meaning:</strong> Both expressions describe being deeply involved in an activity or subject.</p>          <p><strong>Difference:</strong> Be absorbed in focuses on giving something your complete attention. Immerse yourself in can also suggest entering a wider environment, culture, or experience.</p>
+          <p><strong>Example:</strong> She was absorbed in a detailed study of medieval history.</p>
+        </article>
+        <article class="compare-card">
+          <span class="word-pill">engross</span>
+          <p class="meta">transitive verb · Become deeply involved</p>
+<p><strong>Shared meaning:</strong> Both words involve complete or nearly complete attention.</p>          <p><strong>Difference:</strong> Engross means hold someone&#39;s complete attention. Immerse can describe either choosing to become deeply involved or being placed in an environment that encourages deep involvement.</p>
+          <p><strong>Example:</strong> The documentary engrossed viewers from the opening scene.</p>
+        </article>
+      </div>
+
+    </section>
+
+
+
+    <section class="section" id="exercises">
+      <div class="section-head">
+        <p class="section-kicker">Active practice</p>
+        <h2>Practice exercises</h2>
+      </div>
+      <div class="exercise-grid">
+        <article class="exercise-card">
+          <h3>Word family choice</h3>
+          <p class="exercise-instruction">Choose the best member of the word family for each blank.</p>
+          <ol class="clean-list"><li>The museum created an _____ exhibition using sound, light, and moving images.</li><li>Full _____ in the language helped her become a more confident speaker.</li><li>The researchers will _____ the samples in seawater for twenty-four hours.</li><li>The training program offers an _____ learning environment.</li></ol>
+        </article>
+        <article class="exercise-card">
+          <h3>Correct or incorrect?</h3>
+          <p class="exercise-instruction">Decide whether each sentence is correct. Correct the inaccurate ones.</p>
+          <ol class="clean-list"><li>The technician immersed the instrument in the liquid.</li><li>She immersed herself into the study of local history.</li><li>The students were fully immersed in the discussion.</li><li>The course immerses to participants in real workplace situations.</li><li>Do not immerse this electrical device in water.</li></ol>
+        </article>
+        <article class="exercise-card">
+          <h3>Collocation practice</h3>
+          <p class="exercise-instruction">Complete each sentence with a natural collocation.</p>
+          <ol class="clean-list"><li>Before the test, fully _____ the sample in the solution.</li><li>Living abroad allowed her to immerse herself in the local _____.</li><li>He became deeply _____ in his research.</li><li>The program _____ students in an English-speaking environment.</li><li>The samples were immersed in a chemical _____.</li></ol>
+        </article>
+      </div>
+
+      <details class="answer-key">
+        <summary>Open the complete answer key</summary>
+        <div class="answer-content">
+          <section class="answer-group">
+            <h3>Word family choice</h3>
+            <p class="answer-item"><strong>1. immersive</strong><br>The museum created an immersive exhibition using sound, light, and moving images.<br><em>An adjective is needed before exhibition.</em></p>
+            <p class="answer-item"><strong>2. immersion</strong><br>Full immersion in the language helped her become a more confident speaker.<br><em>A noun is needed after full.</em></p>
+            <p class="answer-item"><strong>3. immerse</strong><br>The researchers will immerse the samples in seawater for twenty-four hours.<br><em>The base form of the verb is needed after will.</em></p>
+            <p class="answer-item"><strong>4. immersive</strong><br>The training program offers an immersive learning environment.<br><em>Immersive describes an environment that makes learners feel deeply involved.</em></p>
+          </section>
+          <section class="answer-group">
+            <h3>Correct or incorrect?</h3>
+            <p class="answer-item"><strong>1. Correct</strong><br><em>The object comes directly after immerse, followed by in and the liquid.</em></p>
+            <p class="answer-item"><strong>2. Incorrect</strong><br>She immersed herself in the study of local history.<br><em>Use in after immerse yourself.</em></p>
+            <p class="answer-item"><strong>3. Correct</strong><br><em>Be immersed in is a natural pattern for deep involvement.</em></p>
+            <p class="answer-item"><strong>4. Incorrect</strong><br>The course immerses participants in real workplace situations.<br><em>Put the person directly after immerse. Do not use to.</em></p>
+            <p class="answer-item"><strong>5. Correct</strong><br><em>Immerse something in water is the correct physical pattern.</em></p>
+          </section>
+          <section class="answer-group">
+            <h3>Collocation practice</h3>
+            <p class="answer-item"><strong>1. immerse</strong><br>Before the test, fully immerse the sample in the solution.<br><em>Fully immerse means put something completely below the surface.</em></p>
+            <p class="answer-item"><strong>2. culture</strong><br>Living abroad allowed her to immerse herself in the local culture.<br><em>Immerse yourself in a culture means become closely involved in its language, customs, and daily life.</em></p>
+            <p class="answer-item"><strong>3. immersed</strong><br>He became deeply immersed in his research.<br><em>Deeply immersed in means strongly and continuously involved in something.</em></p>
+            <p class="answer-item"><strong>4. immerses</strong><br>The program immerses students in an English-speaking environment.<br><em>Immerse students in means give them intensive exposure to a subject or environment.</em></p>
+            <p class="answer-item"><strong>5. solution</strong><br>The samples were immersed in a chemical solution.<br><em>Immerse in a solution is a common technical pattern.</em></p>
+          </section>
+        </div>
+      </details>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-row">
+        <span>Created and compiled by <strong>Amir Kooshky</strong></span>
+        <nav class="footer-links" aria-label="Creator links">
+          <a href="https://t.me/KooshkyTOEFL" target="_blank" rel="noopener">Telegram channel</a>
+          <a href="https://www.instagram.com/kooshkytoefl" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://t.me/KooshkyTOEFL_pv" target="_blank" rel="noopener">Personal Telegram</a>
+        </nav>
+      </div>
+    </footer>
+  </main>
+
+  <button class="back-to-top no-js-hidden" type="button" data-back-to-top aria-label="Go to the top">↑</button>
+  <script>
+(() => {
+  "use strict";
+
+  const root = document.documentElement;
+  root.classList.add("js");
+
+  const storageKey = "kooshky-wotd-theme";
+  const themeButton = document.querySelector("[data-theme-toggle]");
+  const printButton = document.querySelector("[data-print]");
+  const topButton = document.querySelector("[data-back-to-top]");
+
+  const applyTheme = (theme) => {
+    if (theme === "light" || theme === "dark") {
+      root.dataset.theme = theme;
+    } else {
+      delete root.dataset.theme;
+    }
+    if (themeButton) {
+      const active = root.dataset.theme || "system";
+      themeButton.textContent = active === "dark" ? "Light mode" : "Dark mode";
+      themeButton.setAttribute("aria-label", `Switch from ${active} theme`);
+    }
+  };
+
+  let savedTheme = null;
+  try { savedTheme = localStorage.getItem(storageKey); } catch (_) { /* local files may block storage */ }
+  applyTheme(savedTheme);
+
+  themeButton?.addEventListener("click", () => {
+    const systemDark = window.matchMedia?.("(prefers-color-scheme: dark)").matches;
+    const current = root.dataset.theme || (systemDark ? "dark" : "light");
+    const next = current === "dark" ? "light" : "dark";
+    applyTheme(next);
+    try { localStorage.setItem(storageKey, next); } catch (_) { /* nonessential */ }
+  });
+
+  printButton?.addEventListener("click", () => window.print());
+
+  if (topButton) {
+    const updateTopButton = () => topButton.classList.toggle("visible", window.scrollY > 700);
+    window.addEventListener("scroll", updateTopButton, { passive: true });
+    updateTopButton();
+    topButton.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+  }
+})();
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TOEFL Word of the Day - Imply</title>
+  <style>
+    /* extended.css */
+    /* Fully responsive CSS for TOEFL Word of the Day extended page */
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg: #080b12;
+      --bg-soft: #0f1422;
+      --card: rgba(255, 255, 255, 0.06);
+      --card-strong: rgba(255, 255, 255, 0.1);
+      --text: #f5f7fb;
+      --muted: #b8c0d4;
+      --soft: #d9def0;
+      --accent: #8cc7ff;
+      --accent-2: #b98cff;
+      --good: #6ee7a8;
+      --bad: #ff8c8c;
+      --border: rgba(255, 255, 255, 0.14);
+      --shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+      --radius-lg: 28px;
+      --radius-md: 18px;
+      --radius-sm: 12px;
+    }
+
+    html {
+      width: 100%;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      width: 100%;
+      margin: 0;
+      overflow-x: hidden;
+      background:
+        radial-gradient(circle at top left, rgba(140, 199, 255, 0.18), transparent 32rem),
+        radial-gradient(circle at top right, rgba(185, 140, 255, 0.16), transparent 30rem),
+        var(--bg);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      line-height: 1.65;
+    }
+
+    .page {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 32px 0 48px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      background:
+        linear-gradient(135deg, rgba(140, 199, 255, 0.16), rgba(185, 140, 255, 0.1)),
+        rgba(255, 255, 255, 0.055);
+      box-shadow: var(--shadow);
+      margin-bottom: 32px;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 340px;
+      height: 340px;
+      right: -130px;
+      top: -130px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(140, 199, 255, 0.32), transparent 65%);
+    }
+
+    .hero-content {
+      position: relative;
+      padding: clamp(28px, 5vw, 64px);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      max-width: 100%;
+      padding: 8px 14px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--accent);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 18px 0 4px;
+      font-size: clamp(3rem, 11vw, 7rem);
+      line-height: 0.95;
+      letter-spacing: -0.05em;
+      overflow-wrap: anywhere;
+    }
+
+    .ipa {
+      color: var(--soft);
+      font-size: clamp(1.15rem, 2.5vw, 1.7rem);
+      font-weight: 700;
+    }
+
+    .summary {
+      max-width: 820px;
+      margin: 22px 0 0;
+      color: var(--soft);
+      font-size: clamp(1rem, 2vw, 1.18rem);
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .pill,
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      max-width: 100%;
+      padding: 7px 12px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.075);
+      color: var(--soft);
+      font-size: 0.9rem;
+      font-weight: 700;
+      overflow-wrap: anywhere;
+    }
+
+    .section-title {
+      margin: 34px 0 14px;
+      font-size: clamp(1.45rem, 4vw, 2.15rem);
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 100%;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--card);
+      box-shadow: 0 16px 50px rgba(0, 0, 0, 0.22);
+      padding: clamp(18px, 3vw, 30px);
+      margin-bottom: 18px;
+    }
+
+    .sense-head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .sense-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 38px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #07101c;
+      font-weight: 900;
+    }
+
+    .pos,
+    .mini-ipa {
+      display: inline-flex;
+      align-items: center;
+      max-width: 100%;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--soft);
+      font-size: 0.92rem;
+      font-weight: 700;
+      overflow-wrap: anywhere;
+    }
+
+    .definition {
+      margin: 0 0 12px;
+      color: var(--text);
+      font-size: clamp(1.05rem, 2vw, 1.2rem);
+      font-weight: 700;
+    }
+
+    .core {
+      margin: 0 0 18px;
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .note-box {
+      min-width: 0;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      background: rgba(255, 255, 255, 0.045);
+      padding: 18px;
+    }
+
+    .note-box h3,
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      color: var(--accent);
+      line-height: 1.25;
+    }
+
+    .pill a,
+    .footer a,
+    .handle a {
+      color: var(--gold2);
+      text-decoration: none;
+      font-weight: 750;
+    }
+
+    .pill a:hover,
+    .footer a:hover,
+    .handle a:hover {
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    p {
+      overflow-wrap: anywhere;
+    }
+
+    ul,
+    ol {
+      padding-left: 1.25rem;
+    }
+
+    li {
+      margin: 0.35rem 0;
+      overflow-wrap: anywhere;
+    }
+
+    .wrong,
+    .right {
+      padding: 10px 12px;
+      border-radius: 12px;
+      font-weight: 800;
+    }
+
+    .wrong {
+      background: rgba(255, 140, 140, 0.12);
+      color: #ffd2d2;
+    }
+
+    .right {
+      background: rgba(110, 231, 168, 0.12);
+      color: #d5ffe6;
+    }
+
+    /* Important table fix */
+    .table {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      overflow-x: auto;
+      border-collapse: collapse;
+      border-spacing: 0;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: thin;
+    }
+
+    .table th,
+    .table td {
+      min-width: 160px;
+      border-bottom: 1px solid var(--border);
+      padding: 14px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .table th {
+      color: var(--accent);
+      font-size: 0.88rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      background: rgba(255, 255, 255, 0.055);
+    }
+
+    .table td {
+      color: var(--soft);
+    }
+
+    .table tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .table ul {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .exercise .q {
+      margin: 10px 0;
+      padding: 12px 14px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.045);
+    }
+
+    .answer-key h3 {
+      margin-top: 22px;
+    }
+
+    .answer-key h3:first-child {
+      margin-top: 0;
+    }
+
+    .footer {
+      margin-top: 34px;
+      padding: 22px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--soft);
+      text-align: center;
+      font-weight: 800;
+    }
+
+    /* Tablet */
+    @media (max-width: 860px) {
+      .page {
+        width: min(100% - 24px, 760px);
+        padding-top: 18px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-content {
+        padding: 34px 24px;
+      }
+
+      .card {
+        padding: 20px;
+      }
+    }
+
+    /* Mobile: convert tables into stacked cards instead of horizontal overflow */
+    @media (max-width: 640px) {
+      body {
+        line-height: 1.6;
+      }
+
+      .page {
+        width: 100%;
+        padding: 12px 10px 32px;
+      }
+
+      .hero {
+        border-radius: 22px;
+        margin-bottom: 22px;
+      }
+
+      .hero-content {
+        padding: 28px 18px;
+      }
+
+      h1 {
+        font-size: clamp(3rem, 17vw, 4.8rem);
+        letter-spacing: -0.07em;
+      }
+
+      .summary {
+        font-size: 1rem;
+      }
+
+      .meta {
+        gap: 8px;
+      }
+
+      .pill,
+      .tag,
+      .pos,
+      .mini-ipa {
+        font-size: 0.82rem;
+      }
+
+      .section-title {
+        margin: 26px 0 12px;
+      }
+
+      .card {
+        border-radius: 18px;
+        padding: 16px;
+      }
+
+      .note-box {
+        padding: 14px;
+      }
+
+      .sense-head {
+        align-items: flex-start;
+      }
+
+      .sense-num {
+        width: 44px;
+        height: 34px;
+      }
+
+      /* True mobile table layout */
+      .table {
+        display: block;
+        overflow-x: visible;
+      }
+
+      .table thead {
+        display: none;
+      }
+
+      .table tbody,
+      .table tr,
+      .table td {
+        display: block;
+        width: 100%;
+        min-width: 0;
+      }
+
+      .table tr {
+        margin-bottom: 14px;
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.045);
+        overflow: hidden;
+      }
+
+      .table tr:last-child {
+        margin-bottom: 0;
+      }
+
+      .table td {
+        border-bottom: 1px solid var(--border);
+        padding: 12px 14px;
+      }
+
+      .table td:last-child {
+        border-bottom: 0;
+      }
+
+      .table td strong {
+        color: var(--text);
+      }
+
+      .table td::before {
+        display: block;
+        margin-bottom: 4px;
+        color: var(--accent);
+        font-size: 0.72rem;
+        font-weight: 900;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+
+      /* 5-column Word Family table */
+      /* Mobile table labels */
+
+      /* Default fallback */
+      .table td:nth-child(1)::before {
+        content: "Item";
+      }
+
+      .table td:nth-child(2)::before {
+        content: "Type";
+      }
+
+      .table td:nth-child(3)::before {
+        content: "Meaning";
+      }
+
+      .table td:nth-child(4)::before {
+        content: "Example / note";
+      }
+
+      .table td:nth-child(5)::before {
+        content: "Usage note";
+      }
+
+      /* Word Family table */
+      .page>section:nth-of-type(2) .table td:nth-child(1)::before {
+        content: "Form";
+      }
+
+      .page>section:nth-of-type(2) .table td:nth-child(2)::before {
+        content: "Part of speech";
+      }
+
+      .page>section:nth-of-type(2) .table td:nth-child(3)::before {
+        content: "Simple definition";
+      }
+
+      .page>section:nth-of-type(2) .table td:nth-child(4)::before {
+        content: "Examples";
+      }
+
+      .page>section:nth-of-type(2) .table td:nth-child(5)::before {
+        content: "Usage note";
+      }
+
+      /* Useful Collocations table */
+      .page>section:nth-of-type(3) .table td:nth-child(1)::before {
+        content: "Collocation";
+      }
+
+      .page>section:nth-of-type(3) .table td:nth-child(2)::before {
+        content: "Simple meaning";
+      }
+
+      .page>section:nth-of-type(3) .table td:nth-child(3)::before {
+        content: "Natural example";
+      }
+
+      /* Synonyms and Antonyms table */
+      .page>section:nth-of-type(4) .table td:nth-child(1)::before {
+        content: "Type";
+      }
+
+      .page>section:nth-of-type(4) .table td:nth-child(2)::before {
+        content: "Word or phrase";
+      }
+
+      .page>section:nth-of-type(4) .table td:nth-child(3)::before {
+        content: "Nuance";
+      }
+
+      .exercise .q {
+        padding: 10px 12px;
+      }
+
+      .footer {
+        border-radius: 18px;
+      }
+    }
+
+    /* Very small screens */
+    @media (max-width: 380px) {
+      .page {
+        padding-left: 8px;
+        padding-right: 8px;
+      }
+
+      .hero-content {
+        padding: 24px 14px;
+      }
+
+      .card {
+        padding: 14px;
+      }
+
+      .eyebrow {
+        font-size: 0.72rem;
+      }
+
+      .ipa {
+        font-size: 1.05rem;
+      }
+
+      .table td {
+        padding: 10px 12px;
+      }
+    }
+
+    /* Print-friendly fallback */
+    @media print {
+      body {
+        background: #ffffff;
+        color: #000000;
+      }
+
+      .page {
+        width: 100%;
+        padding: 0;
+      }
+
+      .hero,
+      .card,
+      .footer,
+      .note-box {
+        box-shadow: none;
+        background: #ffffff;
+        color: #000000;
+        border-color: #cccccc;
+      }
+
+      .summary,
+      .core,
+      .table td,
+      .footer {
+        color: #222222;
+      }
+
+      .table {
+        display: table;
+        overflow: visible;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <header class="hero">
+      <div class="hero-content">
+        <div class="eyebrow">TOEFL Word of the Day</div>
+        <h1>imply</h1>
+        <div class="ipa">/ɪmˈplaɪ/</div>
+        <p class="summary">
+          <strong>Imply</strong> means to suggest something without saying it directly, or to make something seem
+          naturally or logically true.
+        </p>
+        <div class="meta">
+          <span class="pill">June 29th 2026</span>
+          <span class="pill"><a href="https://t.me/KooshkyTOEFL" target="_blank">@KooshkyToefl</a></span>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <h2 class="section-title"><span>01</span> Meanings and Usage</h2>
+
+      <article class="card">
+        <div class="sense-head">
+          <div class="sense-num">1</div>
+          <div class="pos">verb · transitive</div>
+          <div class="mini-ipa">/ɪmˈplaɪ/</div>
+        </div>
+
+        <p class="definition">
+          To suggest an idea, feeling, or message without saying it directly.
+        </p>
+
+        <p class="core">
+          <strong>Core idea:</strong> The meaning is hidden or indirect, but the listener or reader can understand it.
+        </p>
+
+        <div class="grid">
+          <div class="note-box">
+            <h3>Examples</h3>
+            <ul>
+              <li>His silence implied that he did not agree with the decision.</li>
+              <li>The article implies that poor planning caused the problem.</li>
+              <li>Her smile seemed to imply that she already knew the answer.</li>
+              <li>The professor did not say the exam would be difficult, but he implied it.</li>
+              <li>The results imply that students learn better when they receive regular feedback.</li>
+            </ul>
+          </div>
+
+          <div class="note-box">
+            <h3>Nuance and implication</h3>
+            <p>
+              <strong>Imply</strong> is about the speaker, writer, evidence, or situation. It means the message is
+              suggested, not directly stated. In TOEFL reading, writers often imply ideas through evidence, tone,
+              contrast, or word choice.
+            </p>
+          </div>
+
+          <div class="note-box">
+            <h3>Grammar notes</h3>
+            <ul>
+              <li><strong>imply + that-clause:</strong> The speaker implied that the plan had failed.</li>
+              <li><strong>imply + noun:</strong> The data implies a serious problem.</li>
+              <li><strong>be implied by:</strong> This conclusion is implied by the evidence.</li>
+              <li>Do not use <strong>imply to</strong> before a person.</li>
+            </ul>
+          </div>
+
+          <div class="note-box">
+            <h3>Common wrong usage</h3>
+            <p class="wrong">✗ The teacher implied me that I should study more.</p>
+            <p class="right">✓ The teacher implied that I should study more.</p>
+            <p>
+              <strong>Imply</strong> does not take a person as the direct object. Use a <strong>that-clause</strong> for
+              the suggested message.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="sense-head">
+          <div class="sense-num">2</div>
+          <div class="pos">verb · transitive</div>
+          <div class="mini-ipa">/ɪmˈplaɪ/</div>
+        </div>
+
+        <p class="definition">
+          To make something necessary, expected, or naturally connected with something else.
+        </p>
+
+        <p class="core">
+          <strong>Core idea:</strong> One thing brings another thing with it as a natural result.
+        </p>
+
+        <div class="grid">
+          <div class="note-box">
+            <h3>Examples</h3>
+            <ul>
+              <li>A leadership role implies responsibility, patience, and clear communication.</li>
+              <li>Buying a house often implies a long-term financial commitment.</li>
+              <li>Scientific research implies careful observation and honest reporting.</li>
+              <li>Freedom of speech does not imply freedom from criticism.</li>
+              <li>Accepting the scholarship implies that the student agrees to the university’s conditions.</li>
+            </ul>
+          </div>
+
+          <div class="note-box">
+            <h3>Nuance and implication</h3>
+            <p>
+              In this meaning, <strong>imply</strong> is not about hidden speech. It means one idea includes or brings
+              another idea. It is common in academic writing when explaining consequences, responsibilities, conditions,
+              or assumptions.
+            </p>
+          </div>
+
+          <div class="note-box">
+            <h3>Grammar notes</h3>
+            <ul>
+              <li><strong>subject + imply + noun:</strong> Success implies effort.</li>
+              <li><strong>subject + imply + that-clause:</strong> The rule implies that all students must register.</li>
+              <li>This use is more formal and academic than everyday alternatives like <strong>mean</strong> or
+                <strong>involve</strong>.</li>
+            </ul>
+          </div>
+
+          <div class="note-box">
+            <h3>Common wrong usage</h3>
+            <p class="wrong">✗ This job implies to work on weekends.</p>
+            <p class="right">✓ This job implies working on weekends.</p>
+            <p>
+              After <strong>imply</strong>, use a noun, gerund, or that-clause. Do not use <strong>imply to do</strong>.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="sense-head">
+          <div class="sense-num">3</div>
+          <div class="pos">verb · transitive</div>
+          <div class="mini-ipa">/ɪmˈplaɪ/</div>
+        </div>
+
+        <p class="definition">
+          To mean something as a logical result, especially in reasoning or explanation.
+        </p>
+
+        <p class="core">
+          <strong>Core idea:</strong> If one statement is true, another statement follows from it.
+        </p>
+
+        <div class="grid">
+          <div class="note-box">
+            <h3>Examples</h3>
+            <ul>
+              <li>If the store is closed on Mondays, that implies we cannot go there today.</li>
+              <li>The phrase “limited time” implies that the offer will end soon.</li>
+              <li>The evidence does not necessarily imply that the theory is wrong.</li>
+              <li>If all participants passed the test, it implies that Ali passed too.</li>
+              <li>The author’s argument implies that education affects economic development.</li>
+            </ul>
+          </div>
+
+          <div class="note-box">
+            <h3>Nuance and implication</h3>
+            <p>
+              This meaning is especially useful for TOEFL reading and academic discussion. It often appears with words
+              like <strong>therefore</strong>, <strong>evidence</strong>, <strong>argument</strong>,
+              <strong>conclusion</strong>, and <strong>suggest</strong>.
+            </p>
+          </div>
+
+          <div class="note-box">
+            <h3>Grammar notes</h3>
+            <ul>
+              <li><strong>This implies that...</strong> is very common in academic writing.</li>
+              <li><strong>Not necessarily imply</strong> means the conclusion may be possible, but it is not certain.
+              </li>
+              <li><strong>imply</strong> is often stronger and more logical than <strong>hint</strong>.</li>
+            </ul>
+          </div>
+
+          <div class="note-box">
+            <h3>Common wrong usage</h3>
+            <p class="wrong">✗ The evidence implies to the conclusion.</p>
+            <p class="right">✓ The evidence implies the conclusion.</p>
+            <p class="right">✓ The evidence implies that the conclusion may be correct.</p>
+            <p>
+              Use <strong>imply + noun</strong> or <strong>imply that + clause</strong>, not <strong>imply to</strong>.
+            </p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section>
+      <h2 class="section-title"><span>02</span> Word Family</h2>
+
+      <article class="card">
+        <div class="grid">
+          <div class="note-box">
+            <h3>implication</h3>
+            <p><strong>Part of speech:</strong> noun</p>
+            <p><strong>Definition:</strong> a possible result, effect, or hidden meaning of something.</p>
+            <ul>
+              <li>The discovery has important implications for medical research.</li>
+              <li>The implication of his comment was that the team had failed.</li>
+            </ul>
+            <p><strong>Usage note:</strong> Common in academic English: <strong>implications for/of</strong>.</p>
+          </div>
+
+          <div class="note-box">
+            <h3>implicit</h3>
+            <p><strong>Part of speech:</strong> adjective</p>
+            <p><strong>Definition:</strong> suggested or understood without being said directly.</p>
+            <ul>
+              <li>There was an implicit criticism in her question.</li>
+              <li>The article contains an implicit warning about climate change.</li>
+            </ul>
+            <p><strong>Usage note:</strong> Opposite of <strong>explicit</strong>.</p>
+          </div>
+
+          <div class="note-box">
+            <h3>implicitly</h3>
+            <p><strong>Part of speech:</strong> adverb</p>
+            <p><strong>Definition:</strong> in a way that is suggested but not directly stated.</p>
+            <ul>
+              <li>The author implicitly criticizes the government’s policy.</li>
+              <li>The rule implicitly allows students to work in groups.</li>
+            </ul>
+          </div>
+
+          <div class="note-box">
+            <h3>implied</h3>
+            <p><strong>Part of speech:</strong> adjective</p>
+            <p><strong>Definition:</strong> suggested without being directly stated.</p>
+            <ul>
+              <li>The implied meaning of the sentence is negative.</li>
+              <li>The contract includes several implied responsibilities.</li>
+            </ul>
+            <p><strong>Usage note:</strong> Although <strong>implied</strong> is also a past form, it is useful as an
+              adjective.</p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section>
+      <h2 class="section-title"><span>03</span> Common Collocations</h2>
+
+      <article class="card">
+        <table class="table collocation-table">
+          <thead>
+            <tr>
+              <th>Collocation</th>
+              <th>Meaning</th>
+              <th>Example</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td data-label="Collocation"><span class="tag">strongly imply</span></td>
+              <td data-label="Meaning">to suggest something very clearly without saying it directly</td>
+              <td data-label="Example">The study strongly implies that exercise improves memory.</td>
+            </tr>
+            <tr>
+              <td data-label="Collocation"><span class="tag">seem to imply</span></td>
+              <td data-label="Meaning">to appear to suggest something</td>
+              <td data-label="Example">His answer seemed to imply that he had doubts about the plan.</td>
+            </tr>
+            <tr>
+              <td data-label="Collocation"><span class="tag">evidence implies</span></td>
+              <td data-label="Meaning">facts suggest a conclusion</td>
+              <td data-label="Example">The evidence implies that the species migrated earlier than expected.</td>
+            </tr>
+            <tr>
+              <td data-label="Collocation"><span class="tag">data implies</span></td>
+              <td data-label="Meaning">numbers or research results suggest something</td>
+              <td data-label="Example">The data implies a relationship between sleep quality and test performance.</td>
+            </tr>
+            <tr>
+              <td data-label="Collocation"><span class="tag">does not necessarily imply</span></td>
+              <td data-label="Meaning">does not prove or automatically mean</td>
+              <td data-label="Example">A high income does not necessarily imply happiness.</td>
+            </tr>
+            <tr>
+              <td data-label="Collocation"><span class="tag">imply responsibility</span></td>
+              <td data-label="Meaning">to bring responsibility as a natural result</td>
+              <td data-label="Example">Being a team leader implies responsibility for other people’s work.</td>
+            </tr>
+            <tr>
+              <td data-label="Collocation"><span class="tag">imply a connection</span></td>
+              <td data-label="Meaning">to suggest that two things are related</td>
+              <td data-label="Example">The findings imply a connection between diet and concentration.</td>
+            </tr>
+            <tr>
+              <td data-label="Collocation"><span class="tag">imply criticism</span></td>
+              <td data-label="Meaning">to indirectly show criticism</td>
+              <td data-label="Example">Her question implied criticism of the company’s decision.</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+    </section>
+
+    <section>
+      <h2 class="section-title"><span>04</span> Synonyms and Antonyms</h2>
+
+      <article class="card">
+        <table class="table syn-ant-table">
+          <thead>
+            <tr>
+              <th>Meaning</th>
+              <th>Synonyms</th>
+              <th>Nuance Notes</th>
+              <th>Antonyms</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td data-label="Meaning">to suggest something indirectly</td>
+              <td data-label="Synonyms">suggest, hint, indicate, insinuate</td>
+              <td data-label="Nuance Notes">
+                <strong>Suggest</strong> is general and common. <strong>Hint</strong> is lighter and less direct.
+                <strong>Indicate</strong> is often used with evidence. <strong>Insinuate</strong> can sound negative.
+              </td>
+              <td data-label="Antonyms">state, say directly, express explicitly, declare</td>
+            </tr>
+            <tr>
+              <td data-label="Meaning">to make something necessary or naturally connected</td>
+              <td data-label="Synonyms">involve, require, entail, mean</td>
+              <td data-label="Nuance Notes">
+                <strong>Involve</strong> is common and practical. <strong>Entail</strong> is formal and means “include
+                as a necessary result.”
+                <strong>Mean</strong> is simpler and more general.
+              </td>
+              <td data-label="Antonyms">exclude, rule out, prevent, contradict</td>
+            </tr>
+            <tr>
+              <td data-label="Meaning">to mean something as a logical result</td>
+              <td data-label="Synonyms">show, indicate, lead to the conclusion, suggest</td>
+              <td data-label="Nuance Notes">
+                <strong>Show</strong> is stronger when proof is clear. <strong>Suggest</strong> is weaker.
+                <strong>Lead to the conclusion</strong> is useful in academic explanations.
+              </td>
+              <td data-label="Antonyms">disprove, contradict, rule out, fail to show</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+    </section>
+
+    <section>
+      <h2 class="section-title"><span>05</span> Etymology</h2>
+
+      <article class="card">
+        <p>
+          <strong>Imply</strong> comes from Latin roots meaning “to fold in” or “to involve.” This history helps explain
+          the modern meaning: an idea is not openly stated, but it is “included inside” the message, situation, or
+          evidence.
+        </p>
+      </article>
+    </section>
+
+    <section>
+      <h2 class="section-title"><span>06</span> Exercises</h2>
+
+      <article class="card exercise">
+        <div class="q">
+          <h3>1. Fill in the blank with the correct word-family member.</h3>
+          <p>The author never says the policy failed, but the criticism is clearly __________.</p>
+          <p>Options: imply · implication · implicit · implicitly</p>
+        </div>
+
+        <div class="q">
+          <h3>2. Choose the correct meaning in context.</h3>
+          <p>“A higher position in the company implies greater responsibility.”</p>
+          <p>What does <strong>implies</strong> mean here?</p>
+          <p>A) says directly · B) makes naturally connected · C) hides completely · D) asks politely</p>
+        </div>
+
+        <div class="q">
+          <h3>3. Correct the wrong usage.</h3>
+          <p class="wrong">The professor implied us that the topic would be on the exam.</p>
+        </div>
+
+        <div class="q">
+          <h3>4. Natural or unnatural?</h3>
+          <p>“The evidence does not necessarily imply that the theory is correct.”</p>
+        </div>
+
+        <div class="q">
+          <h3>5. Choose the best collocation.</h3>
+          <p>The survey results __________ a connection between screen time and sleep problems.</p>
+          <p>A) strongly imply · B) strongly say · C) strongly speak · D) strongly tell</p>
+        </div>
+
+        <div class="q">
+          <h3>6. Short production task</h3>
+          <p>Write one academic sentence using <strong>imply</strong> about education, technology, health, or the
+            environment.</p>
+        </div>
+      </article>
+    </section>
+
+    <section>
+      <h2 class="section-title"><span>07</span> Answer Key</h2>
+
+      <article class="card answer-key">
+        <ol>
+          <li><strong>implicit</strong> — It describes criticism that is suggested but not directly stated.</li>
+          <li><strong>B</strong> — The position naturally brings greater responsibility.</li>
+          <li><strong>The professor implied that the topic would be on the exam.</strong> Do not use a person directly
+            after <strong>imply</strong>.</li>
+          <li><strong>Natural.</strong> The phrase <strong>does not necessarily imply</strong> is common in academic
+            English.</li>
+          <li><strong>A</strong> — <strong>Strongly imply</strong> is a natural collocation.</li>
+          <li><strong>Sample answer:</strong> The study implies that regular sleep can improve students’ academic
+            performance.</li>
+        </ol>
+      </article>
+    </section>
+
+    <footer class="footer">
+      <p>📚 <a href="https://t.me/KooshkyTOEFL" target="_blank">@KooshkyToefl</a></p>
+    </footer>
+  </main>
+</body>
+
+</html>

@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="A complete TOEFL learner guide to retention, created by Amir Kooshky.">
+  <title>retention | Kooshky TOEFL Word of the Day</title>
+  <style>
+/*
+  Kooshky TOEFL Word of the Day
+  Original dictionary-editorial visual system for Amir Kooshky.
+  Mobile-first, print-aware, local-file friendly, and fully usable without JavaScript.
+*/
+:root {
+  color-scheme: light;
+  --paper: #f4f0e7;
+  --surface: #fffdf8;
+  --surface-2: #eee8dc;
+  --ink: #1c1a18;
+  --muted: #69635d;
+  --rule: #d6cdbf;
+  --rule-strong: #a99f92;
+  --accent: #a51f2d;
+  --accent-deep: #72131e;
+  --accent-soft: #f4e3e5;
+  --good: #315f4c;
+  --good-soft: #e5efe9;
+  --warn: #8a5719;
+  --warn-soft: #f8ebd8;
+  --info: #315f76;
+  --info-soft: #e4eef3;
+  --shadow: 0 18px 46px rgba(47, 37, 27, .09);
+  --serif: Georgia, "Times New Roman", Times, serif;
+  --sans: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  --radius: .95rem;
+  --radius-sm: .55rem;
+  --content: 75rem;
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #171614;
+  --surface: #211f1c;
+  --surface-2: #2a2723;
+  --ink: #f3eee5;
+  --muted: #b9b0a5;
+  --rule: #443f39;
+  --rule-strong: #675e56;
+  --accent: #e35d68;
+  --accent-deep: #ff7f88;
+  --accent-soft: #3a2225;
+  --good: #95c8ad;
+  --good-soft: #20342a;
+  --warn: #dfb06e;
+  --warn-soft: #3a2c1d;
+  --info: #91c2d8;
+  --info-soft: #21343e;
+  --shadow: 0 18px 46px rgba(0, 0, 0, .34);
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #171614;
+    --surface: #211f1c;
+    --surface-2: #2a2723;
+    --ink: #f3eee5;
+    --muted: #b9b0a5;
+    --rule: #443f39;
+    --rule-strong: #675e56;
+    --accent: #e35d68;
+    --accent-deep: #ff7f88;
+    --accent-soft: #3a2225;
+    --good: #95c8ad;
+    --good-soft: #20342a;
+    --warn: #dfb06e;
+    --warn-soft: #3a2c1d;
+    --info: #91c2d8;
+    --info-soft: #21343e;
+    --shadow: 0 18px 46px rgba(0, 0, 0, .34);
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 1rem;
+  line-height: 1.72;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--accent-deep); text-underline-offset: .18em; text-decoration-thickness: .075em; }
+a:hover { color: var(--accent); }
+button { font: inherit; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+::selection { background: var(--accent); color: white; }
+
+.skip-link {
+  position: fixed;
+  left: .75rem;
+  top: .75rem;
+  z-index: 1000;
+  transform: translateY(-180%);
+  padding: .62rem .82rem;
+  border-radius: var(--radius-sm);
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--sans);
+  font-weight: 800;
+  text-decoration: none;
+}
+.skip-link:focus { transform: translateY(0); }
+
+.no-js-hidden { display: none !important; }
+html.js .no-js-hidden { display: inline-flex !important; }
+
+.masthead {
+  border-bottom: 1px solid var(--rule);
+  background: color-mix(in srgb, var(--surface) 94%, transparent);
+}
+.masthead-inner {
+  width: min(calc(100% - 1.4rem), var(--content));
+  min-height: 4.4rem;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .9rem;
+}
+.brand { color: inherit; text-decoration: none; line-height: 1.05; }
+.brand strong { display: block; font-size: 1.04rem; letter-spacing: -.02em; }
+.brand span {
+  display: block;
+  margin-top: .18rem;
+  color: var(--accent);
+  font-family: var(--sans);
+  font-size: .65rem;
+  font-weight: 850;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+.utility-actions { display: none; gap: .42rem; align-items: center; }
+html.js .utility-actions { display: flex; }
+.utility-button {
+  min-height: 2.35rem;
+  padding: .42rem .7rem;
+  border: 1px solid var(--rule-strong);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: .74rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+.utility-button:hover { border-color: var(--accent); color: var(--accent); }
+
+.page {
+  width: min(calc(100% - 1.4rem), var(--content));
+  margin-inline: auto;
+  padding: 1.2rem 0 4rem;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(2rem, 10vw, 5.5rem) 0 clamp(2.4rem, 8vw, 4.5rem);
+  border-bottom: 1px solid var(--rule);
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  right: -7rem;
+  top: -9rem;
+  width: 19rem;
+  aspect-ratio: 1;
+  border: 1px solid color-mix(in srgb, var(--accent) 22%, transparent);
+  border-radius: 50%;
+  box-shadow: 0 0 0 2.4rem color-mix(in srgb, var(--accent) 4%, transparent), 0 0 0 5rem color-mix(in srgb, var(--accent) 3%, transparent);
+  pointer-events: none;
+}
+.kicker, .section-kicker, .eyebrow {
+  margin: 0;
+  color: var(--accent);
+  font-family: var(--sans);
+  font-size: .7rem;
+  font-weight: 900;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+.hero h1 {
+  position: relative;
+  z-index: 1;
+  max-width: 13ch;
+  margin: .45rem 0 0;
+  font-size: clamp(3.2rem, 17vw, 8.7rem);
+  line-height: .88;
+  letter-spacing: -.065em;
+  overflow-wrap: anywhere;
+}
+.hero-pronunciation {
+  margin: 1.25rem 0 .15rem;
+  color: var(--accent-deep);
+  font-family: var(--sans);
+  font-size: clamp(1.05rem, 4vw, 1.45rem);
+  font-weight: 750;
+}
+.pronunciation-tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .65rem;
+  max-width: 42rem;
+  margin: .75rem 0 .25rem;
+}
+.pronunciation-audio {
+  width: min(100%, 22rem);
+  height: 2.5rem;
+}
+.listen-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.35rem;
+  padding: .45rem .72rem;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  color: var(--accent);
+  font-family: var(--sans);
+  font-size: .78rem;
+  font-weight: 820;
+  text-decoration: none;
+}
+.listen-link:hover { background: var(--accent); color: var(--accent-ink); }
+.listen-link.secondary { border-color: var(--rule-strong); color: var(--ink); }
+.listen-link.secondary:hover { border-color: var(--accent); background: var(--surface-strong); color: var(--accent); }
+.audio-note { margin: 0 0 .35rem; color: var(--muted); font-family: var(--sans); font-size: .72rem; }
+.hero-pos { margin: 0; color: var(--muted); font-family: var(--sans); font-weight: 720; }
+.hero-summary { max-width: 50rem; margin: 1rem 0 0; font-size: clamp(1.08rem, 3.2vw, 1.34rem); line-height: 1.55; }
+.short-meaning-row { display: flex; flex-wrap: wrap; gap: .45rem; margin-top: 1.2rem; }
+.short-meaning {
+  padding: .36rem .62rem;
+  border: 1px solid var(--rule-strong);
+  border-radius: 999px;
+  background: var(--surface);
+  font-family: var(--sans);
+  font-size: .78rem;
+  font-weight: 760;
+}
+.hero-example {
+  max-width: 53rem;
+  margin: 1.6rem 0 0;
+  padding: 1rem 1.1rem 1rem 1.25rem;
+  border-left: 3px solid var(--accent);
+  background: color-mix(in srgb, var(--surface) 80%, transparent);
+  font-size: clamp(1.05rem, 3vw, 1.3rem);
+  font-style: italic;
+}
+.meta-strip {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: .65rem;
+  margin-top: 1.5rem;
+}
+.meta-item { padding: .75rem .85rem; border: 1px solid var(--rule); border-radius: var(--radius-sm); background: var(--surface); }
+.meta-label { display: block; color: var(--muted); font-family: var(--sans); font-size: .66rem; font-weight: 850; letter-spacing: .12em; text-transform: uppercase; }
+.meta-value { display: block; margin-top: .12rem; font-family: var(--sans); font-weight: 800; }
+
+.toc {
+  margin: 1rem 0 0;
+  padding: .95rem;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+.toc-title { margin: 0 0 .55rem; font-family: var(--sans); font-size: .78rem; font-weight: 900; text-transform: uppercase; letter-spacing: .12em; }
+.toc-links { display: flex; flex-wrap: wrap; gap: .45rem .8rem; }
+.toc a { font-family: var(--sans); font-size: .82rem; font-weight: 760; }
+
+.section { padding: clamp(2.5rem, 8vw, 5rem) 0 0; }
+.section-head { max-width: 48rem; margin-bottom: 1.25rem; }
+.section h2 {
+  margin: .22rem 0 .4rem;
+  font-size: clamp(2rem, 7vw, 3.35rem);
+  line-height: 1.02;
+  letter-spacing: -.035em;
+}
+.section-intro { margin: 0; color: var(--muted); font-size: 1.03rem; }
+
+.overview-grid, .card-grid, .compare-grid, .exercise-grid, .info-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: .85rem;
+}
+.card, .overview-card, .family-card, .collocation-card, .compare-card, .exercise-card {
+  min-width: 0;
+  padding: 1rem;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: 0 7px 20px rgba(40, 30, 20, .035);
+}
+.card h3, .card h4, .overview-card h3, .family-card h3, .collocation-card h3, .compare-card h3, .exercise-card h3 { margin: 0 0 .45rem; line-height: 1.25; }
+.card p:last-child, .overview-card p:last-child, .family-card p:last-child, .collocation-card p:last-child, .compare-card p:last-child, .exercise-card p:last-child { margin-bottom: 0; }
+.label {
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: .69rem;
+  font-weight: 850;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.value { font-weight: 700; }
+
+.sense-card {
+  overflow: hidden;
+  margin-top: 1.1rem;
+  border: 1px solid var(--rule);
+  border-radius: calc(var(--radius) + .15rem);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+.sense-head {
+  padding: 1rem;
+  border-top: 4px solid var(--accent);
+  border-bottom: 1px solid var(--rule);
+  background: color-mix(in srgb, var(--surface-2) 42%, var(--surface));
+}
+.sense-number { color: var(--accent); font-family: var(--sans); font-size: .7rem; font-weight: 900; letter-spacing: .13em; text-transform: uppercase; }
+.sense-head h3 { margin: .2rem 0 .55rem; font-size: clamp(1.55rem, 5vw, 2.2rem); line-height: 1.1; }
+.badge-row { display: flex; flex-wrap: wrap; gap: .38rem; }
+.badge { padding: .27rem .5rem; border: 1px solid var(--rule-strong); border-radius: 999px; font-family: var(--sans); font-size: .72rem; font-weight: 780; }
+.sense-body { padding: 1rem; }
+.definition { margin: 0; font-size: clamp(1.08rem, 3.5vw, 1.28rem); font-weight: 700; }
+.plain-equivalent { margin: .65rem 0 0; color: var(--muted); }
+.pattern-banner {
+  margin: 1rem 0;
+  padding: .8rem .9rem;
+  border-left: 3px solid var(--accent);
+  background: var(--accent-soft);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+.pattern-banner strong { font-family: var(--sans); }
+.context-row { display: flex; flex-wrap: wrap; gap: .38rem; margin-top: .55rem; }
+.context-pill { padding: .25rem .48rem; border-radius: 999px; background: var(--surface-2); font-family: var(--sans); font-size: .73rem; font-weight: 740; }
+.subsection-title { margin: 1.35rem 0 .55rem; font-family: var(--sans); font-size: .82rem; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
+.example-list, .clean-list { margin: .5rem 0 0; padding-left: 1.35rem; }
+.example-list li, .clean-list li { padding-left: .25rem; margin: .42rem 0; }
+.info-card { padding: .9rem; border: 1px solid var(--rule); border-radius: var(--radius-sm); background: var(--surface); }
+.info-card h4 { margin: 0 0 .35rem; font-family: var(--sans); font-size: .9rem; }
+.info-card p { margin: .3rem 0 0; }
+.info-card.good { border-color: color-mix(in srgb, var(--good) 54%, var(--rule)); background: var(--good-soft); }
+.info-card.warning { border-color: color-mix(in srgb, var(--warn) 54%, var(--rule)); background: var(--warn-soft); }
+.info-card.tip { border-color: color-mix(in srgb, var(--info) 54%, var(--rule)); background: var(--info-soft); }
+.grammar-list { display: grid; gap: .55rem; margin: 0; }
+.grammar-item { padding-bottom: .55rem; border-bottom: 1px solid var(--rule); }
+.grammar-item:last-child { padding-bottom: 0; border-bottom: 0; }
+.grammar-item dt { font-family: var(--sans); font-size: .74rem; font-weight: 900; letter-spacing: .07em; text-transform: uppercase; }
+.grammar-item dd { margin: .12rem 0 0; }
+.pattern-list, .error-list { display: grid; gap: .7rem; }
+.pattern-card, .error-card { padding: .82rem; border: 1px solid var(--rule); border-radius: var(--radius-sm); background: color-mix(in srgb, var(--surface-2) 25%, var(--surface)); }
+.pattern-code { display: block; font-family: var(--mono); font-size: .84rem; font-weight: 800; overflow-wrap: anywhere; }
+.pattern-use { margin: .3rem 0; color: var(--muted); }
+.error-wrong, .error-correct { margin: .25rem 0; }
+.error-wrong { color: var(--warn); }
+.error-correct { color: var(--good); }
+.error-explanation { margin: .35rem 0 0; font-size: .93rem; }
+
+.family-card .ipa, .compare-card .meta { color: var(--muted); font-family: var(--sans); font-size: .8rem; }
+.collocation-card h3 { color: var(--accent-deep); }
+.mini-facts { display: grid; gap: .42rem; margin-top: .6rem; }
+.mini-fact { padding-top: .42rem; border-top: 1px solid var(--rule); }
+.mini-fact strong { font-family: var(--sans); font-size: .78rem; }
+.word-pill { display: inline-block; padding: .24rem .5rem; border: 1px solid var(--accent); border-radius: 999px; color: var(--accent-deep); font-family: var(--sans); font-size: .75rem; font-weight: 850; }
+
+.etymology-flow { display: grid; gap: .7rem; }
+.etymology-step { position: relative; padding: .9rem 1rem .9rem 1.15rem; border-left: 3px solid var(--accent); background: var(--surface); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; }
+.etymology-step h3 { margin: 0 0 .25rem; font-family: var(--sans); font-size: .83rem; text-transform: uppercase; letter-spacing: .08em; }
+
+.exercise-card { counter-increment: exercise; }
+.exercise-card h3 { font-family: var(--sans); }
+.exercise-instruction { color: var(--muted); }
+details.answer-key { margin-top: 1rem; border: 1px solid var(--rule-strong); border-radius: var(--radius); background: var(--surface); }
+details.answer-key summary { padding: 1rem; font-family: var(--sans); font-weight: 900; cursor: pointer; }
+.answer-content { padding: 0 1rem 1rem; }
+.answer-group + .answer-group { margin-top: 1.3rem; padding-top: 1rem; border-top: 1px solid var(--rule); }
+.answer-group h3 { margin: 0 0 .5rem; font-family: var(--sans); }
+.answer-item { margin: .65rem 0; }
+.answer-item strong { font-family: var(--sans); }
+
+.footer {
+  margin-top: 4.5rem;
+  padding: 1.5rem 0 0;
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: .82rem;
+}
+.footer-row { display: flex; flex-direction: column; gap: .55rem; }
+.footer-links { display: flex; flex-wrap: wrap; gap: .4rem .8rem; }
+
+.back-to-top {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 100;
+  width: 2.8rem;
+  height: 2.8rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--rule-strong);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(.7rem);
+  pointer-events: none;
+  transition: opacity .2s ease, transform .2s ease;
+}
+.back-to-top.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+
+@media (min-width: 38rem) {
+  .meta-strip { grid-template-columns: repeat(3, 1fr); }
+  .overview-grid, .info-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .card-grid, .compare-grid, .exercise-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .sense-head, .sense-body { padding: 1.25rem; }
+  .footer-row { flex-direction: row; justify-content: space-between; align-items: center; }
+}
+
+@media (min-width: 62rem) {
+  .page, .masthead-inner { width: min(calc(100% - 3rem), var(--content)); }
+  .toc { position: sticky; top: .7rem; z-index: 20; }
+  .overview-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .card-grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .compare-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .exercise-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .sense-head, .sense-body { padding: 1.5rem; }
+  .sense-body > .info-grid { grid-template-columns: 1.05fr .95fr; }
+}
+
+@media print {
+  :root {
+    --paper: #fff;
+    --surface: #fff;
+    --surface-2: #f4f1eb;
+    --ink: #000;
+    --muted: #444;
+    --rule: #bbb;
+    --rule-strong: #888;
+    --accent: #8d1722;
+    --accent-deep: #6f1019;
+    --accent-soft: #f5e8e9;
+    --shadow: none;
+  }
+  @page { size: A4; margin: 15mm; }
+  body { font-size: 10.5pt; background: #fff; }
+  .masthead, .toc, .utility-actions, .back-to-top { display: none !important; }
+  .page { width: 100%; padding: 0; }
+  .hero { padding-top: 0; }
+  .hero h1 { font-size: 56pt; }
+  .section { padding-top: 2rem; }
+  .sense-card, .card, .overview-card, .family-card, .collocation-card, .compare-card, .exercise-card, details.answer-key { box-shadow: none; break-inside: avoid; }
+  details.answer-key > .answer-content { display: block !important; }
+  a { color: inherit; text-decoration: none; }
+}
+
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to the guide</a>
+
+  <header class="masthead">
+    <div class="masthead-inner">
+      <a class="brand" href="https://t.me/KooshkyTOEFL" target="_blank" rel="noopener">
+        <strong>Kooshky TOEFL</strong>
+        <span>Word of the Day</span>
+      </a>
+      <div class="utility-actions" aria-label="Page tools">
+        <button class="utility-button" type="button" data-theme-toggle>Dark mode</button>
+        <button class="utility-button" type="button" data-print>Print or save PDF</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="page" id="main-content">
+    <section class="hero" aria-labelledby="headword">
+      <p class="kicker">TOEFL Word of the Day</p>
+      <h1 id="headword">retention</h1>
+      <p class="hero-pronunciation">/rɪˈtɛnʃən/</p>
+      <div class="pronunciation-tools" aria-label="Pronunciation audio">
+        <a class="listen-link secondary" href="https://youglish.com/pronounce/retention/english/us" target="_blank" rel="noopener">Hear “retention” in real examples</a>
+      </div>
+      <p class="audio-note">Audio and example links require an internet connection.</p>
+      <p class="hero-pos">uncountable noun</p>
+      <div class="short-meaning-row" aria-label="Meanings at a glance">
+<span class="short-meaning">continuing to keep something</span><span class="short-meaning">ability to remember</span><span class="short-meaning">keeping employees or customers</span><span class="short-meaning">holding water, heat, or fluid</span>      </div>
+<p class="hero-summary">Retention refers to continuing to keep something, remembering what has been learned, keeping people in an organization, or holding a substance such as water or heat.</p><blockquote class="hero-example">“Regular review can improve the long-term retention of new vocabulary.”</blockquote>      <div class="meta-strip">
+        <div class="meta-item"><span class="meta-label">Date</span><span class="meta-value">July 22nd, 2026</span></div>
+        <div class="meta-item"><span class="meta-label">Level</span><span class="meta-value">B1–mid-B2 TOEFL</span></div>
+        <div class="meta-item"><span class="meta-label">Created by</span><span class="meta-value">Amir Kooshky</span></div>
+      </div>
+    </section>
+
+    <nav class="toc" aria-label="Study sections">
+      <p class="toc-title">In this guide</p>
+      <div class="toc-links">
+        <a href="#meanings">Meanings</a>
+<a href="#family">Word family</a><a href="#collocations">Collocations</a><a href="#relations">Synonyms & antonyms</a><a href="#confusables">Often confused</a><a href="#exercises">Exercises</a>      </div>
+    </nav>
+
+
+    <section class="section" id="meanings">
+      <div class="section-head">
+        <p class="section-kicker">Dictionary guide</p>
+        <h2>Meanings and usage</h2>
+        <p class="section-intro">The core definition and examples are always included. Additional notes appear only when they are accurate and useful.</p>
+      </div>
+
+      <article class="sense-card" id="meaning-1">
+        <header class="sense-head">
+          <span class="sense-number">Meaning 1</span>
+          <h3>Continuing to keep something</h3>
+          <div class="badge-row">
+            <span class="badge">uncountable noun</span>
+            <span class="badge">/rɪˈtɛnʃən/</span>
+<span class="badge">Common in formal, academic, legal, administrative, and technical English.</span>          </div>
+        </header>
+        <div class="sense-body">
+          <p class="definition">the act of continuing to keep, possess, or control something instead of losing, removing, or giving it away</p>
+<p class="plain-equivalent"><strong>In simpler words:</strong> continuing to keep something</p><div class="pattern-banner"><strong>Typical pattern:</strong> retention of + noun</div>
+
+          <p class="subsection-title">Natural examples</p>
+          <ol class="example-list">
+<li>The law requires the retention of financial records for at least five years.</li><li>The policy allows employees to retain ownership of their original research, but the institution controls data retention.</li><li>The preservation method improves the retention of nutrients during food processing.</li><li>The agreement guarantees the retention of local control over the project.</li><li>Careful drying techniques support the retention of the fruit&#39;s natural color and flavor.</li><li>The museum developed strict rules for the retention and protection of donated objects.</li><li>The new system was designed to improve data retention without increasing storage costs.</li>          </ol>
+
+          <div class="info-grid">
+            <section class="info-card good">
+              <h4>Nuance and implication</h4>
+<p><strong>Central nuance:</strong> Retention emphasizes that something remains available, present, owned, or controlled over time.</p><p><strong>Usual implication:</strong> Without a particular action, rule, or system, the thing might otherwise be lost, removed, transferred, or reduced.</p><p><strong>Compared with “preservation”:</strong> Preservation focuses on protecting something from damage or change. Retention focuses on continuing to keep or maintain possession of it.</p>            </section>
+
+            <section class="info-card">
+              <h4>Grammar notes</h4>
+              <dl class="grammar-list">
+<div class="grammar-item"><dt>How to use it</dt><dd>Retention is normally used without a or an. Use retention of before the thing that is kept, as in the retention of records.</dd></div><div class="grammar-item"><dt>What can follow it</dt><dd>It is commonly followed by of and a noun such as data, records, ownership, control, nutrients, or information.</dd></div><div class="grammar-item"><dt>Common preposition</dt><dd>Use retention of something, not retention for something, when naming what is kept.</dd></div><div class="grammar-item"><dt>Noun use</dt><dd>Retention is normally uncountable, so do not usually say a retention or retentions.</dd></div>              </dl>
+            </section>
+          </div>
+
+          <p class="subsection-title">Useful patterns</p>
+          <div class="pattern-list">
+            <article class="pattern-card">
+              <code class="pattern-code">retention of + noun</code>
+<p class="pattern-use">Use this pattern to identify the thing that continues to be kept.</p>              <p><strong>Example:</strong> The contract permits the retention of ownership by the original creator.</p>
+            </article>
+            <article class="pattern-card">
+              <code class="pattern-code">data or record retention</code>
+<p class="pattern-use">Use this pattern for rules or systems that determine how long information is stored.</p>              <p><strong>Example:</strong> The organization revised its data retention policy.</p>
+            </article>
+            <article class="pattern-card">
+              <code class="pattern-code">improve or support retention</code>
+<p class="pattern-use">Use this pattern when a method helps something remain present or available.</p>              <p><strong>Example:</strong> Lower cooking temperatures may improve nutrient retention.</p>
+            </article>
+          </div>
+
+          <p class="subsection-title">Common wrong usage</p>
+          <div class="error-list">
+            <article class="error-card">
+              <p class="error-wrong"><strong>Wrong:</strong> The company requires the retention for all customer records.</p>
+              <p class="error-correct"><strong>Correct:</strong> The company requires the retention of all customer records.</p>
+<p class="error-explanation">Use retention of to name what is kept.</p>            </article>
+            <article class="error-card">
+              <p class="error-wrong"><strong>Wrong:</strong> The retention of the data are required by law.</p>
+              <p class="error-correct"><strong>Correct:</strong> The retention of the data is required by law.</p>
+<p class="error-explanation">Retention is singular and uncountable, so use is.</p>            </article>
+            <article class="error-card">
+              <p class="error-wrong"><strong>Wrong:</strong> The policy supports a retention of local ownership.</p>
+              <p class="error-correct"><strong>Correct:</strong> The policy supports the retention of local ownership.</p>
+<p class="error-explanation">Retention is normally uncountable. In this structure, the retention of is natural.</p>            </article>
+          </div>
+
+        </div>
+      </article>
+      <article class="sense-card" id="meaning-2">
+        <header class="sense-head">
+          <span class="sense-number">Meaning 2</span>
+          <h3>Ability to remember</h3>
+          <div class="badge-row">
+            <span class="badge">uncountable noun</span>
+            <span class="badge">/rɪˈtɛnʃən/</span>
+<span class="badge">Common in education, psychology, language learning, and cognitive science.</span>          </div>
+        </header>
+        <div class="sense-body">
+          <p class="definition">the ability to remember information or skills after learning them</p>
+<p class="plain-equivalent"><strong>In simpler words:</strong> ability to remember what you learned</p><div class="pattern-banner"><strong>Typical pattern:</strong> retention of + information or skill; memory retention; long-term retention</div>
+
+          <p class="subsection-title">Natural examples</p>
+          <ol class="example-list">
+<li>Regular review can improve the long-term retention of new vocabulary.</li><li>The researchers measured information retention one week after the lecture.</li><li>Students showed better retention when they connected new ideas with previous knowledge.</li><li>Lack of sleep can reduce memory retention and concentration.</li><li>The experiment compared the retention of facts learned through reading and listening.</li><li>Frequent practice supports the retention of complex skills.</li><li>The teacher used short quizzes to check students&#39; retention of the material.</li><li>Active participation often leads to stronger retention than passive listening.</li>          </ol>
+
+          <div class="info-grid">
+            <section class="info-card good">
+              <h4>Nuance and implication</h4>
+<p><strong>Central nuance:</strong> This sense focuses on whether learned information or skills remain in memory over time.</p><p><strong>Usual implication:</strong> Retention is usually measured after some time has passed, not immediately after learning.</p><p><strong>Compared with “recall”:</strong> Retention is the continued storage of information in memory. Recall is the act of bringing that information back to mind at a particular moment.</p>            </section>
+
+            <section class="info-card">
+              <h4>Grammar notes</h4>
+              <dl class="grammar-list">
+<div class="grammar-item"><dt>How to use it</dt><dd>Use retention alone when the subject is clear, or use retention of before the information or skill being remembered.</dd></div><div class="grammar-item"><dt>What can follow it</dt><dd>It often appears with memory, information, knowledge, vocabulary, facts, skills, learning, and long-term.</dd></div><div class="grammar-item"><dt>Common preposition</dt><dd>Say retention of vocabulary or retention of information.</dd></div><div class="grammar-item"><dt>Noun use</dt><dd>Retention is uncountable in this meaning. Say good retention or poor retention, not a retention.</dd></div>              </dl>
+            </section>
+          </div>
+
+          <p class="subsection-title">Useful patterns</p>
+          <div class="pattern-list">
+            <article class="pattern-card">
+              <code class="pattern-code">retention of + information or skill</code>
+<p class="pattern-use">Use this pattern to identify what remains in memory.</p>              <p><strong>Example:</strong> The study examined the retention of scientific vocabulary.</p>
+            </article>
+            <article class="pattern-card">
+              <code class="pattern-code">improve or increase retention</code>
+<p class="pattern-use">Use this pattern for a method that helps learners remember more.</p>              <p><strong>Example:</strong> Spaced review can significantly improve retention.</p>
+            </article>
+            <article class="pattern-card">
+              <code class="pattern-code">long-term retention</code>
+<p class="pattern-use">Use this expression for remembering information over an extended period.</p>              <p><strong>Example:</strong> Meaningful examples support long-term retention.</p>
+            </article>
+            <article class="pattern-card">
+              <code class="pattern-code">memory retention</code>
+<p class="pattern-use">Use this expression when discussing the ability to store learned information.</p>              <p><strong>Example:</strong> Stress can have a negative effect on memory retention.</p>
+            </article>
+          </div>
+
+          <p class="subsection-title">Common wrong usage</p>
+          <div class="error-list">
+            <article class="error-card">
+              <p class="error-wrong"><strong>Wrong:</strong> Daily practice improves the retention for new words.</p>
+              <p class="error-correct"><strong>Correct:</strong> Daily practice improves the retention of new words.</p>
+<p class="error-explanation">Use retention of to name what learners remember.</p>            </article>
+            <article class="error-card">
+              <p class="error-wrong"><strong>Wrong:</strong> The students had a strong retention of the lecture.</p>
+              <p class="error-correct"><strong>Correct:</strong> The students showed strong retention of the lecture content.</p>
+<p class="error-explanation">Retention is normally uncountable, and lecture content is more precise than lecture here.</p>            </article>
+            <article class="error-card">
+              <p class="error-wrong"><strong>Wrong:</strong> The test measured how much information students retentioned.</p>
+              <p class="error-correct"><strong>Correct:</strong> The test measured how much information students retained.</p>
+<p class="error-explanation">Retention is a noun. The related verb is retain.</p>            </article>
+          </div>
+
+        </div>
+      </article>
+      <article class="sense-card" id="meaning-3">
+        <header class="sense-head">
+          <span class="sense-number">Meaning 3</span>
+          <h3>Keeping people in an organization</h3>
+          <div class="badge-row">
+            <span class="badge">uncountable noun</span>
+            <span class="badge">/rɪˈtɛnʃən/</span>
+<span class="badge">Very common in business, education, health care, human resources, and public policy.</span>          </div>
+        </header>
+        <div class="sense-body">
+          <p class="definition">the ability of an organization, business, or program to keep its employees, customers, members, or students</p>
+<p class="plain-equivalent"><strong>In simpler words:</strong> success in keeping employees, customers, or students</p><div class="pattern-banner"><strong>Typical pattern:</strong> employee, staff, customer, or student retention; retention of + people</div>
+
+          <p class="subsection-title">Natural examples</p>
+          <ol class="example-list">
+<li>Flexible working conditions have improved employee retention.</li><li>The university introduced new support services to increase student retention.</li><li>High customer retention can reduce a company&#39;s marketing costs.</li><li>Low salaries were identified as a major cause of poor staff retention.</li><li>Mentoring programs may improve teacher retention in rural schools.</li><li>The company studies customer satisfaction because it strongly affects retention.</li><li>A sense of belonging is an important factor in student retention.</li><li>The hospital offered additional training to support the retention of experienced nurses.</li>          </ol>
+
+          <div class="info-grid">
+            <section class="info-card good">
+              <h4>Nuance and implication</h4>
+<p><strong>Central nuance:</strong> This sense measures whether people continue working for, buying from, belonging to, or studying at an organization.</p><p><strong>Usual implication:</strong> High retention is usually viewed positively because replacing employees, customers, or students can be difficult and expensive.</p><p><strong>Compared with “recruitment”:</strong> Recruitment means attracting new people to an organization. Retention means keeping the people who are already there.</p>            </section>
+
+            <section class="info-card">
+              <h4>Grammar notes</h4>
+              <dl class="grammar-list">
+<div class="grammar-item"><dt>How to use it</dt><dd>Place the type of person before retention, as in employee retention, or use retention of followed by a group.</dd></div><div class="grammar-item"><dt>What can follow it</dt><dd>It commonly appears after employee, staff, teacher, customer, student, member, and patient.</dd></div><div class="grammar-item"><dt>Common preposition</dt><dd>Use retention of employees when the group comes after the word.</dd></div><div class="grammar-item"><dt>Noun use</dt><dd>Retention is uncountable. Say improve retention, not improve a retention.</dd></div>              </dl>
+            </section>
+          </div>
+
+          <p class="subsection-title">Useful patterns</p>
+          <div class="pattern-list">
+            <article class="pattern-card">
+              <code class="pattern-code">employee, staff, or teacher retention</code>
+<p class="pattern-use">Use this pattern for an organization&#39;s ability to keep workers.</p>              <p><strong>Example:</strong> Better promotion opportunities may improve employee retention.</p>
+            </article>
+            <article class="pattern-card">
+              <code class="pattern-code">customer retention</code>
+<p class="pattern-use">Use this expression for a business&#39;s ability to keep existing customers.</p>              <p><strong>Example:</strong> Reliable service is essential for customer retention.</p>
+            </article>
+            <article class="pattern-card">
+              <code class="pattern-code">student retention</code>
+<p class="pattern-use">Use this expression for keeping students enrolled in a school or program.</p>              <p><strong>Example:</strong> Academic advising can improve student retention.</p>
+            </article>
+            <article class="pattern-card">
+              <code class="pattern-code">retention rate</code>
+<p class="pattern-use">Use this expression for the percentage of people who remain over a particular period.</p>              <p><strong>Example:</strong> The company reported a staff retention rate of ninety percent.</p>
+            </article>
+          </div>
+
+          <p class="subsection-title">Common wrong usage</p>
+          <div class="error-list">
+            <article class="error-card">
+              <p class="error-wrong"><strong>Wrong:</strong> The company wants to improve the retention of its customers in the company.</p>
+              <p class="error-correct"><strong>Correct:</strong> The company wants to improve customer retention.</p>
+<p class="error-explanation">Customer retention is the shorter and more natural expression.</p>            </article>
+            <article class="error-card">
+              <p class="error-wrong"><strong>Wrong:</strong> Higher salaries can increase employees retention.</p>
+              <p class="error-correct"><strong>Correct:</strong> Higher salaries can increase employee retention.</p>
+<p class="error-explanation">Use the singular form employee before another noun.</p>            </article>
+            <article class="error-card">
+              <p class="error-wrong"><strong>Wrong:</strong> The school has a good students retention rate.</p>
+              <p class="error-correct"><strong>Correct:</strong> The school has a good student retention rate.</p>
+<p class="error-explanation">Use student, not students, before retention rate.</p>            </article>
+          </div>
+
+        </div>
+      </article>
+      <article class="sense-card" id="meaning-4">
+        <header class="sense-head">
+          <span class="sense-number">Meaning 4</span>
+          <h3>Holding a substance or quality</h3>
+          <div class="badge-row">
+            <span class="badge">uncountable noun</span>
+            <span class="badge">/rɪˈtɛnʃən/</span>
+<span class="badge">Common in environmental science, agriculture, medicine, engineering, and materials science.</span>          </div>
+        </header>
+        <div class="sense-body">
+          <p class="definition">the ability or process of holding a substance, especially water, heat, or fluid, instead of releasing it</p>
+<p class="plain-equivalent"><strong>In simpler words:</strong> ability to hold something instead of releasing it</p><div class="pattern-banner"><strong>Typical pattern:</strong> water, heat, moisture, fluid, or color retention</div>
+
+          <p class="subsection-title">Natural examples</p>
+          <ol class="example-list">
+<li>Adding organic matter to soil can improve water retention.</li><li>Thick walls increase heat retention during cold weather.</li><li>Excessive salt consumption may contribute to fluid retention in the body.</li><li>The material was selected for its excellent moisture retention.</li><li>Forests improve water retention and reduce the risk of soil erosion.</li><li>The container&#39;s design supports heat retention for several hours.</li><li>Poor drainage can lead to excessive water retention in agricultural fields.</li><li>Some fabrics provide better color retention after repeated washing.</li>          </ol>
+
+          <div class="info-grid">
+            <section class="info-card good">
+              <h4>Nuance and implication</h4>
+<p><strong>Central nuance:</strong> This sense describes how well a body, material, soil, or object keeps a substance or quality inside it.</p><p><strong>Usual implication:</strong> Retention may be useful, as with soil moisture or building heat, or harmful, as with excessive fluid retention in the body.</p><p><strong>Compared with “absorption”:</strong> Absorption is the process of taking a substance in. Retention is the ability to continue holding it after it has been taken in.</p>            </section>
+
+            <section class="info-card">
+              <h4>Grammar notes</h4>
+              <dl class="grammar-list">
+<div class="grammar-item"><dt>How to use it</dt><dd>Place the substance before retention, as in water retention, or use retention of followed by the substance.</dd></div><div class="grammar-item"><dt>What can follow it</dt><dd>It commonly appears with water, moisture, heat, fluid, color, and nutrients.</dd></div><div class="grammar-item"><dt>Common preposition</dt><dd>Use retention of heat when the substance follows the noun.</dd></div><div class="grammar-item"><dt>Noun use</dt><dd>Retention is uncountable in this meaning.</dd></div>              </dl>
+            </section>
+          </div>
+
+          <p class="subsection-title">Useful patterns</p>
+          <div class="pattern-list">
+            <article class="pattern-card">
+              <code class="pattern-code">water or moisture retention</code>
+<p class="pattern-use">Use this expression for the ability of soil, plants, or materials to hold water.</p>              <p><strong>Example:</strong> Clay soils generally have greater water retention than sandy soils.</p>
+            </article>
+            <article class="pattern-card">
+              <code class="pattern-code">heat retention</code>
+<p class="pattern-use">Use this expression for the ability of a material or structure to keep heat.</p>              <p><strong>Example:</strong> Insulation improves heat retention inside the building.</p>
+            </article>
+            <article class="pattern-card">
+              <code class="pattern-code">fluid retention</code>
+<p class="pattern-use">Use this expression when the body holds more fluid than normal.</p>              <p><strong>Example:</strong> The medication may cause temporary fluid retention.</p>
+            </article>
+            <article class="pattern-card">
+              <code class="pattern-code">retention of + substance or quality</code>
+<p class="pattern-use">Use this pattern when the substance comes after the noun.</p>              <p><strong>Example:</strong> The coating improves the retention of color over time.</p>
+            </article>
+          </div>
+
+          <p class="subsection-title">Common wrong usage</p>
+          <div class="error-list">
+            <article class="error-card">
+              <p class="error-wrong"><strong>Wrong:</strong> This soil has a high retention of water capacity.</p>
+              <p class="error-correct"><strong>Correct:</strong> This soil has a high water-retention capacity.</p>
+<p class="error-explanation">Use water-retention before capacity, or say this soil has a high capacity for water retention.</p>            </article>
+            <article class="error-card">
+              <p class="error-wrong"><strong>Wrong:</strong> The walls improve the heat&#39;s retention.</p>
+              <p class="error-correct"><strong>Correct:</strong> The walls improve heat retention.</p>
+<p class="error-explanation">Heat retention is the natural expression.</p>            </article>
+            <article class="error-card">
+              <p class="error-wrong"><strong>Wrong:</strong> Too much salt can cause the body to retention fluid.</p>
+              <p class="error-correct"><strong>Correct:</strong> Too much salt can cause the body to retain fluid.</p>
+<p class="error-explanation">Retention is a noun. Use the verb retain after to.</p>            </article>
+          </div>
+
+        </div>
+      </article>
+    </section>
+
+    <section class="section" id="family">
+      <div class="section-head">
+        <p class="section-kicker">Morphology</p>
+        <h2>Word family</h2>
+        <p class="section-intro">Only common and educationally useful family members are included.</p>
+      </div>
+      <div class="card-grid three">
+        <article class="family-card">
+          <p class="eyebrow">transitive verb</p>
+          <h3>retain</h3>
+<p class="ipa">/rɪˈteɪn/</p>          <p>to continue to have, keep, remember, or hold something</p>
+          <div class="mini-facts">
+<p class="mini-fact"><strong>Relationship:</strong> Retain is the verb from which retention is formed.</p><p class="mini-fact"><strong>Pattern:</strong> retain + object</p><p class="mini-fact"><strong>Usage note:</strong> Retain normally needs a person, thing, quality, substance, or piece of information after it.</p>          </div>
+          <ol class="example-list"><li>Students retain information more effectively when they review it regularly.</li><li>The soil retains enough moisture to support plant growth.</li><li>The company introduced new benefits to retain experienced employees.</li></ol>
+        </article>
+        <article class="family-card">
+          <p class="eyebrow">adjective</p>
+          <h3>retentive</h3>
+<p class="ipa">/rɪˈtɛntɪv/</p>          <p>able to hold or remember something well</p>
+          <div class="mini-facts">
+<p class="mini-fact"><strong>Relationship:</strong> Retentive describes a person, memory, material, or soil that retains something effectively.</p><p class="mini-fact"><strong>Pattern:</strong> a retentive memory; retentive soil</p><p class="mini-fact"><strong>Usage note:</strong> This adjective is less common than retain and retention and is mainly used with memory, soil, and materials.</p>          </div>
+          <ol class="example-list"><li>She has a highly retentive memory for names and dates.</li><li>The soil&#39;s retentive properties help plants survive dry periods.</li></ol>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="collocations">
+      <div class="section-head">
+        <p class="section-kicker">Natural combinations</p>
+        <h2>Common collocations</h2>
+        <p class="section-intro">These are established combinations, not merely grammatically possible phrases.</p>
+      </div>
+      <div class="card-grid three">
+        <article class="collocation-card">
+<p class="eyebrow">Continuing to keep something</p>          <h3>data retention</h3>
+<p>the practice of storing digital information for a period of time</p>          <div class="mini-facts">
+<p class="mini-fact"><strong>Pattern:</strong> data retention policy or period</p>            <p class="mini-fact"><strong>Example:</strong> The company introduced a stricter data retention policy.</p>
+          </div>
+        </article>
+        <article class="collocation-card">
+<p class="eyebrow">Continuing to keep something</p>          <h3>record retention</h3>
+<p>the practice of keeping documents or records for a required period</p>          <div class="mini-facts">
+<p class="mini-fact"><strong>Pattern:</strong> record retention rules or requirements</p>            <p class="mini-fact"><strong>Example:</strong> Government agencies must follow record retention requirements.</p>
+          </div>
+        </article>
+        <article class="collocation-card">
+<p class="eyebrow">Continuing to keep something</p>          <h3>nutrient retention</h3>
+<p>the continued presence of nutrients during cooking or processing</p>          <div class="mini-facts">
+<p class="mini-fact"><strong>Pattern:</strong> improve nutrient retention</p>            <p class="mini-fact"><strong>Example:</strong> Steaming often results in better nutrient retention than boiling.</p>
+          </div>
+        </article>
+        <article class="collocation-card">
+<p class="eyebrow">Ability to remember</p>          <h3>memory retention</h3>
+<p>the ability to store and remember information</p>          <div class="mini-facts">
+<p class="mini-fact"><strong>Pattern:</strong> improve or reduce memory retention</p>            <p class="mini-fact"><strong>Example:</strong> Adequate sleep supports memory retention.</p>
+          </div>
+        </article>
+        <article class="collocation-card">
+<p class="eyebrow">Ability to remember</p>          <h3>long-term retention</h3>
+<p>the ability to remember information for a long period</p>          <div class="mini-facts">
+<p class="mini-fact"><strong>Pattern:</strong> support long-term retention</p>            <p class="mini-fact"><strong>Example:</strong> Frequent review is essential for long-term retention.</p>
+          </div>
+        </article>
+        <article class="collocation-card">
+<p class="eyebrow">Keeping people in an organization</p>          <h3>employee retention</h3>
+<p>an organization&#39;s ability to keep its workers</p>          <div class="mini-facts">
+<p class="mini-fact"><strong>Pattern:</strong> improve employee retention</p>            <p class="mini-fact"><strong>Example:</strong> Competitive salaries can improve employee retention.</p>
+          </div>
+        </article>
+        <article class="collocation-card">
+<p class="eyebrow">Keeping people in an organization</p>          <h3>customer retention</h3>
+<p>a business&#39;s ability to keep existing customers</p>          <div class="mini-facts">
+<p class="mini-fact"><strong>Pattern:</strong> increase customer retention</p>            <p class="mini-fact"><strong>Example:</strong> Fast and reliable support contributes to customer retention.</p>
+          </div>
+        </article>
+        <article class="collocation-card">
+<p class="eyebrow">Keeping people in an organization</p>          <h3>student retention</h3>
+<p>a school&#39;s ability to keep students enrolled</p>          <div class="mini-facts">
+<p class="mini-fact"><strong>Pattern:</strong> improve student retention</p>            <p class="mini-fact"><strong>Example:</strong> The college expanded its advising program to improve student retention.</p>
+          </div>
+        </article>
+        <article class="collocation-card">
+<p class="eyebrow">Keeping people in an organization</p>          <h3>retention rate</h3>
+<p>the percentage of people who remain with an organization or program</p>          <div class="mini-facts">
+<p class="mini-fact"><strong>Pattern:</strong> a high or low retention rate</p>            <p class="mini-fact"><strong>Example:</strong> The organization has achieved a high employee retention rate.</p>
+          </div>
+        </article>
+        <article class="collocation-card">
+<p class="eyebrow">Holding a substance or quality</p>          <h3>water retention</h3>
+<p>the ability of soil, materials, or the body to hold water</p>          <div class="mini-facts">
+<p class="mini-fact"><strong>Pattern:</strong> improve water retention</p>            <p class="mini-fact"><strong>Example:</strong> Compost improves water retention in sandy soil.</p>
+          </div>
+        </article>
+        <article class="collocation-card">
+<p class="eyebrow">Holding a substance or quality</p>          <h3>heat retention</h3>
+<p>the ability to keep heat instead of losing it</p>          <div class="mini-facts">
+<p class="mini-fact"><strong>Pattern:</strong> improve or provide heat retention</p>            <p class="mini-fact"><strong>Example:</strong> The material provides excellent heat retention.</p>
+          </div>
+        </article>
+        <article class="collocation-card">
+<p class="eyebrow">Holding a substance or quality</p>          <h3>fluid retention</h3>
+<p>the accumulation of extra fluid in the body</p>          <div class="mini-facts">
+<p class="mini-fact"><strong>Pattern:</strong> cause or experience fluid retention</p>            <p class="mini-fact"><strong>Example:</strong> The patient reported mild fluid retention after beginning the treatment.</p>
+<p class="mini-fact"><strong>Usage note:</strong> This is common in medical contexts.</p>          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="relations">
+      <div class="section-head">
+        <p class="section-kicker">Meaning relations</p>
+        <h2>Synonyms and antonyms</h2>
+        <p class="section-intro">Only clear and useful relationships are included.</p>
+      </div>
+      <h3>Close synonyms</h3>
+      <div class="compare-grid">
+        <article class="compare-card">
+          <span class="word-pill">preservation</span>
+          <p class="meta">uncountable noun · Continuing to keep something</p>
+<p><strong>Shared meaning:</strong> Both words can involve keeping something over time.</p>          <p><strong>Difference:</strong> Preservation emphasizes protecting something from damage, decay, or change. Retention emphasizes continuing to keep or maintain possession of it.</p>
+          <p><strong>Example:</strong> The organization supports the preservation of historic buildings.</p>
+        </article>
+        <article class="compare-card">
+          <span class="word-pill">memory</span>
+          <p class="meta">countable and uncountable noun · Ability to remember</p>
+<p><strong>Shared meaning:</strong> Both words relate to storing and remembering information.</p>          <p><strong>Difference:</strong> Memory is the general ability or process of remembering. Retention specifically concerns how well information remains available after learning.</p>
+          <p><strong>Example:</strong> Her memory for names is unusually strong.</p>
+        </article>
+        <article class="compare-card">
+          <span class="word-pill">continuation</span>
+          <p class="meta">countable and uncountable noun · Keeping people in an organization</p>
+<p><strong>Shared meaning:</strong> Both words involve something remaining in place over time.</p>          <p><strong>Difference:</strong> Continuation broadly means that something keeps happening. Retention specifically refers to keeping people within a company, program, or institution.</p>
+          <p><strong>Example:</strong> The continuation of the program depends on future funding.</p>
+        </article>
+        <article class="compare-card">
+          <span class="word-pill">storage</span>
+          <p class="meta">uncountable noun · Holding a substance or quality</p>
+<p><strong>Shared meaning:</strong> Both words involve keeping something rather than releasing or losing it.</p>          <p><strong>Difference:</strong> Storage emphasizes placing and keeping something for future use. Retention emphasizes the ability to prevent a substance or quality from escaping or being lost.</p>
+          <p><strong>Example:</strong> The facility provides secure storage for medical supplies.</p>
+        </article>
+      </div>
+
+      <h3 style="margin-top: 2rem;">Direct or useful antonyms</h3>
+      <div class="compare-grid">
+        <article class="compare-card">
+          <span class="word-pill">loss</span>
+          <p class="meta">countable and uncountable noun · all senses</p>
+          <p><strong>Opposition:</strong> Loss describes no longer having, keeping, remembering, or holding something.</p>
+<p><strong>Usage note:</strong> This is the broadest opposite and can apply to information, employees, heat, nutrients, or memory.</p>          <p><strong>Example:</strong> Heat loss through the windows increased energy costs.</p>
+        </article>
+        <article class="compare-card">
+          <span class="word-pill">turnover</span>
+          <p class="meta">uncountable noun · Keeping people in an organization</p>
+          <p><strong>Opposition:</strong> Turnover refers to employees or members leaving and being replaced, while retention refers to keeping them.</p>
+<p><strong>Usage note:</strong> This contrast is especially common in employment contexts.</p>          <p><strong>Example:</strong> Poor management contributed to high staff turnover.</p>
+        </article>
+        <article class="compare-card">
+          <span class="word-pill">forgetting</span>
+          <p class="meta">uncountable noun · Ability to remember</p>
+          <p><strong>Opposition:</strong> Forgetting is the process of losing information from memory, while retention is the continued ability to remember it.</p>
+<p><strong>Usage note:</strong> This is the most direct opposite in learning and memory contexts.</p>          <p><strong>Example:</strong> Without review, forgetting may occur rapidly.</p>
+        </article>
+        <article class="compare-card">
+          <span class="word-pill">release</span>
+          <p class="meta">uncountable noun · Holding a substance or quality</p>
+          <p><strong>Opposition:</strong> Release means allowing a substance such as heat, water, or fluid to leave rather than continuing to hold it.</p>
+<p><strong>Usage note:</strong> This contrast applies mainly to physical substances and energy.</p>          <p><strong>Example:</strong> The slow release of heat kept the room warm overnight.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="confusables">
+      <div class="section-head">
+        <p class="section-kicker">Precision</p>
+        <h2>Words learners may confuse</h2>
+      </div>
+      <div class="compare-grid">
+        <article class="compare-card">
+          <span class="word-pill">detention</span>
+<p class="meta">noun</p><p><strong>Why it is confusing:</strong> The words have similar spelling and pronunciation but very different meanings.</p>          <p><strong>Key difference:</strong> Retention means continuing to keep, remember, or hold something. Detention means being kept in a place, often as punishment or by legal authority.</p>
+          <p><strong>retention:</strong> Regular review improves vocabulary retention.</p>
+          <p><strong>detention:</strong> The student received detention for repeatedly arriving late.</p>
+        </article>
+      </div>
+    </section>
+
+
+    <section class="section" id="exercises">
+      <div class="section-head">
+        <p class="section-kicker">Active practice</p>
+        <h2>Practice exercises</h2>
+      </div>
+      <div class="exercise-grid">
+        <article class="exercise-card">
+          <h3>Word family choice</h3>
+          <p class="exercise-instruction">Choose the best member of the word family for each blank.</p>
+          <ol class="clean-list"><li>Regular testing can improve the long-term _____ of new information.</li><li>Students are more likely to _____ vocabulary that they use actively.</li><li>She has a remarkably _____ memory for historical dates.</li></ol>
+        </article>
+        <article class="exercise-card">
+          <h3>Correct or incorrect?</h3>
+          <p class="exercise-instruction">Decide whether each sentence is correct. Correct the inaccurate ones.</p>
+          <ol class="clean-list"><li>The law requires the retention of medical records for several years.</li><li>Spaced practice improves the retention for new vocabulary.</li><li>The company introduced flexible schedules to improve employee retention.</li><li>The material has excellent heat retentions.</li><li>Organic matter can increase water retention in soil.</li></ol>
+        </article>
+        <article class="exercise-card">
+          <h3>Collocation practice</h3>
+          <p class="exercise-instruction">Complete each sentence with a natural collocation.</p>
+          <ol class="clean-list"><li>Frequent review supports long-term _____.</li><li>Better management has improved employee _____.</li><li>Adding compost can improve water _____ in dry soil.</li><li>The company revised its data _____ policy.</li><li>Reliable service is an important factor in customer _____.</li></ol>
+        </article>
+      </div>
+
+      <details class="answer-key">
+        <summary>Open the complete answer key</summary>
+        <div class="answer-content">
+          <section class="answer-group">
+            <h3>Word family choice</h3>
+            <p class="answer-item"><strong>1. retention</strong><br>Regular testing can improve the long-term retention of new information.<br><em>A noun is needed after long-term.</em></p>
+            <p class="answer-item"><strong>2. retain</strong><br>Students are more likely to retain vocabulary that they use actively.<br><em>A verb is needed after to.</em></p>
+            <p class="answer-item"><strong>3. retentive</strong><br>She has a remarkably retentive memory for historical dates.<br><em>An adjective is needed before memory.</em></p>
+          </section>
+          <section class="answer-group">
+            <h3>Correct or incorrect?</h3>
+            <p class="answer-item"><strong>1. Correct</strong><br><em>Retention of correctly identifies what must continue to be kept.</em></p>
+            <p class="answer-item"><strong>2. Incorrect</strong><br>Spaced practice improves the retention of new vocabulary.<br><em>Use retention of to identify what is remembered.</em></p>
+            <p class="answer-item"><strong>3. Correct</strong><br><em>Employee retention is a natural expression for keeping workers.</em></p>
+            <p class="answer-item"><strong>4. Incorrect</strong><br>The material has excellent heat retention.<br><em>Retention is uncountable and is not normally used in the plural.</em></p>
+            <p class="answer-item"><strong>5. Correct</strong><br><em>Water retention is a natural scientific collocation.</em></p>
+          </section>
+          <section class="answer-group">
+            <h3>Collocation practice</h3>
+            <p class="answer-item"><strong>1. retention</strong><br>Frequent review supports long-term retention.<br><em>Long-term retention means remembering information for an extended period.</em></p>
+            <p class="answer-item"><strong>2. retention</strong><br>Better management has improved employee retention.<br><em>Employee retention means keeping workers in an organization.</em></p>
+            <p class="answer-item"><strong>3. retention</strong><br>Adding compost can improve water retention in dry soil.<br><em>Water retention is the ability of soil to hold water.</em></p>
+            <p class="answer-item"><strong>4. retention</strong><br>The company revised its data retention policy.<br><em>A data retention policy determines how long information is stored.</em></p>
+            <p class="answer-item"><strong>5. retention</strong><br>Reliable service is an important factor in customer retention.<br><em>Customer retention means keeping existing customers.</em></p>
+          </section>
+        </div>
+      </details>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-row">
+        <span>Created and compiled by <strong>Amir Kooshky</strong></span>
+        <nav class="footer-links" aria-label="Creator links">
+          <a href="https://t.me/KooshkyTOEFL" target="_blank" rel="noopener">Telegram channel</a>
+          <a href="https://www.instagram.com/kooshkytoefl" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://t.me/KooshkyTOEFL_pv" target="_blank" rel="noopener">Personal Telegram</a>
+        </nav>
+      </div>
+    </footer>
+  </main>
+
+  <button class="back-to-top no-js-hidden" type="button" data-back-to-top aria-label="Go to the top">↑</button>
+  <script>
+(() => {
+  "use strict";
+
+  const root = document.documentElement;
+  root.classList.add("js");
+
+  const storageKey = "kooshky-wotd-theme";
+  const themeButton = document.querySelector("[data-theme-toggle]");
+  const printButton = document.querySelector("[data-print]");
+  const topButton = document.querySelector("[data-back-to-top]");
+
+  const applyTheme = (theme) => {
+    if (theme === "light" || theme === "dark") {
+      root.dataset.theme = theme;
+    } else {
+      delete root.dataset.theme;
+    }
+    if (themeButton) {
+      const active = root.dataset.theme || "system";
+      themeButton.textContent = active === "dark" ? "Light mode" : "Dark mode";
+      themeButton.setAttribute("aria-label", `Switch from ${active} theme`);
+    }
+  };
+
+  let savedTheme = null;
+  try { savedTheme = localStorage.getItem(storageKey); } catch (_) { /* local files may block storage */ }
+  applyTheme(savedTheme);
+
+  themeButton?.addEventListener("click", () => {
+    const systemDark = window.matchMedia?.("(prefers-color-scheme: dark)").matches;
+    const current = root.dataset.theme || (systemDark ? "dark" : "light");
+    const next = current === "dark" ? "light" : "dark";
+    applyTheme(next);
+    try { localStorage.setItem(storageKey, next); } catch (_) { /* nonessential */ }
+  });
+
+  printButton?.addEventListener("click", () => window.print());
+
+  if (topButton) {
+    const updateTopButton = () => topButton.classList.toggle("visible", window.scrollY > 700);
+    window.addEventListener("scroll", updateTopButton, { passive: true });
+    updateTopButton();
+    topButton.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+  }
+})();
+
+  </script>
+</body>
+</html>

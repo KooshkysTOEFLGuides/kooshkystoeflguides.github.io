@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALLOCATE | Extended TOEFL Explanation</title>
+  <style>
+    :root {
+      --bg: #08090d;
+      --bg-soft: #10131b;
+      --card: rgba(255, 255, 255, 0.065);
+      --card-strong: rgba(255, 255, 255, 0.105);
+      --text: #f4f1ea;
+      --muted: #b9b2a7;
+      --faint: #8f887d;
+      --gold: #d8b35a;
+      --gold-soft: rgba(216, 179, 90, 0.16);
+      --blue: #8bb7ff;
+      --green: #9be2bd;
+      --red: #ff9d9d;
+      --border: rgba(255, 255, 255, 0.14);
+      --shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+      --radius-lg: 28px;
+      --radius-md: 18px;
+      --radius-sm: 12px;
+      --max: 980px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at top left, rgba(216, 179, 90, 0.18), transparent 32rem),
+        radial-gradient(circle at bottom right, rgba(139, 183, 255, 0.13), transparent 30rem),
+        var(--bg);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      line-height: 1.65;
+    }
+
+    a {
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      width: min(100%, var(--max));
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* =========================
+     INTRO IMAGE TEMPLATE
+  ========================= */
+
+    .intro-page {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 20px;
+    }
+
+    .intro-shot {
+      width: min(100%, 860px);
+      aspect-ratio: 4 / 5;
+      min-height: 680px;
+      border: 1px solid var(--border);
+      border-radius: 42px;
+      overflow: hidden;
+      position: relative;
+      background:
+        linear-gradient(135deg, rgba(216, 179, 90, 0.18), transparent 35%),
+        linear-gradient(315deg, rgba(139, 183, 255, 0.18), transparent 35%),
+        #0b0d13;
+      box-shadow: var(--shadow);
+      padding: clamp(26px, 6vw, 68px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .intro-shot::before {
+      content: "";
+      position: absolute;
+      inset: 22px;
+      border: 1px solid rgba(216, 179, 90, 0.24);
+      border-radius: 32px;
+      pointer-events: none;
+    }
+
+    .intro-kicker,
+    .ext-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      width: fit-content;
+      padding: 8px 13px;
+      border: 1px solid rgba(216, 179, 90, 0.28);
+      border-radius: 999px;
+      background: var(--gold-soft);
+      color: var(--gold);
+      font-size: clamp(0.78rem, 2.2vw, 0.95rem);
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .intro-center {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .intro-word {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(4.4rem, 4.5vw, 9.5rem);
+      line-height: 0.92;
+      letter-spacing: -0.04em;
+      color: #fff8ea;
+      text-shadow: 0 12px 45px rgba(0, 0, 0, 0.55);
+    }
+
+    .intro-ipa {
+      margin: 18px 0 0;
+      color: var(--gold);
+      font-size: clamp(1.05rem, 4vw, 1.5rem);
+      font-weight: 700;
+    }
+
+    .intro-meanings {
+      margin: 28px auto 0;
+      display: grid;
+      gap: 12px;
+      max-width: 640px;
+    }
+
+    .intro-meaning {
+      padding: 15px 18px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.075);
+      backdrop-filter: blur(12px);
+      font-size: clamp(1rem, 3.2vw, 1.25rem);
+      font-weight: 650;
+    }
+
+    .intro-example {
+      margin: 26px auto 0;
+      max-width: 650px;
+      color: var(--muted);
+      font-size: clamp(0.95rem, 3vw, 1.15rem);
+    }
+
+    .intro-footer,
+    .ext-footer {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 16px;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .intro-footer strong,
+    .ext-footer strong {
+      color: var(--text);
+    }
+
+    /* =========================
+     EXTENDED PAGE TEMPLATE
+  ========================= */
+
+    .extended-page {
+      padding-bottom: 50px;
+    }
+
+    .hero {
+      margin: 18px auto 22px;
+      padding: clamp(24px, 5vw, 46px);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      background:
+        linear-gradient(135deg, rgba(216, 179, 90, 0.14), transparent 42%),
+        var(--card);
+      box-shadow: var(--shadow);
+    }
+
+    .hero h1 {
+      margin: 18px 0 8px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.4rem, 10vw, 6.2rem);
+      line-height: 0.95;
+      letter-spacing: -0.055em;
+
+      white-space: nowrap;
+      overflow-wrap: normal;
+      word-break: normal;
+      hyphens: none;
+      max-width: 100%;
+    }
+
+    .hero-subtitle {
+      margin: 0;
+      color: var(--muted);
+      font-size: clamp(1rem, 3vw, 1.2rem);
+    }
+
+    .brand-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .brand-links a {
+      display: inline-flex;
+      padding: 9px 13px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.055);
+      color: var(--text);
+      font-size: 0.94rem;
+    }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .meta-card,
+    .toc,
+    .section,
+    .sense-card,
+    .info-card,
+    .family-card,
+    .collocation-card,
+    .exercise-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--card);
+    }
+
+    .meta-card {
+      padding: 15px;
+    }
+
+    .meta-label {
+      display: block;
+      color: var(--faint);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 800;
+    }
+
+    .meta-value {
+      display: block;
+      margin-top: 5px;
+      font-weight: 800;
+    }
+
+    .toc {
+      padding: 18px;
+      margin: 20px 0;
+    }
+
+    .toc-title {
+      margin: 0 0 10px;
+      color: var(--gold);
+      font-weight: 900;
+    }
+
+    .toc-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .toc-links a {
+      padding: 8px 11px;
+      border-radius: 999px;
+      background: var(--gold-soft);
+      color: var(--gold);
+      font-size: 0.93rem;
+    }
+
+    .section {
+      margin: 20px 0;
+      padding: clamp(18px, 4vw, 30px);
+    }
+
+    .section h2 {
+      margin: 0 0 18px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.8rem, 6vw, 2.7rem);
+      line-height: 1.1;
+    }
+
+    .sense-card {
+      padding: clamp(16px, 4vw, 26px);
+      margin: 16px 0;
+    }
+
+    .sense-head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .sense-num,
+    .pos-badge,
+    .ipa-badge {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      font-weight: 850;
+    }
+
+    .sense-num {
+      padding: 7px 12px;
+      background: var(--gold);
+      color: #14120b;
+    }
+
+    .pos-badge {
+      padding: 7px 11px;
+      background: rgba(139, 183, 255, 0.16);
+      color: var(--blue);
+    }
+
+    .ipa-badge {
+      padding: 7px 11px;
+      background: rgba(255, 255, 255, 0.07);
+      color: var(--muted);
+    }
+
+    .definition {
+      font-size: 1.12rem;
+      font-weight: 750;
+      color: #fff7e8;
+    }
+
+    .simple-label {
+      margin: 20px 0 8px;
+      color: var(--gold);
+      font-weight: 900;
+    }
+
+    .example-list,
+    .clean-list,
+    .wrong-list {
+      margin: 8px 0 0;
+      padding-left: 1.25rem;
+    }
+
+    .example-list li,
+    .clean-list li,
+    .wrong-list li {
+      margin: 8px 0;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .info-card {
+      padding: 14px;
+    }
+
+    .info-card h4,
+    .family-card h3,
+    .collocation-card h3,
+    .exercise-card h3 {
+      margin: 0 0 8px;
+      color: var(--gold);
+    }
+
+    .warning {
+      border-color: rgba(255, 157, 157, 0.35);
+      background: rgba(255, 157, 157, 0.07);
+    }
+
+    .good {
+      border-color: rgba(155, 226, 189, 0.3);
+      background: rgba(155, 226, 189, 0.06);
+    }
+
+    .family-grid,
+    .collocation-grid,
+    .exercise-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .family-card,
+    .collocation-card,
+    .exercise-card {
+      padding: 16px;
+    }
+
+    .word-pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+    }
+
+    .word-pill {
+      display: inline-flex;
+      padding: 8px 11px;
+      border-radius: 999px;
+      background: var(--card-strong);
+      border: 1px solid var(--border);
+      font-weight: 800;
+    }
+
+    details.answer-key {
+      margin-top: 16px;
+      border: 1px solid rgba(216, 179, 90, 0.3);
+      border-radius: var(--radius-md);
+      background: var(--gold-soft);
+      padding: 14px 16px;
+    }
+
+    details.answer-key summary {
+      cursor: pointer;
+      color: var(--gold);
+      font-weight: 950;
+    }
+
+    .ext-footer {
+      margin-top: 22px;
+      padding: 22px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      background: var(--card);
+    }
+
+    /* =========================
+     RESPONSIVE RULES
+  ========================= */
+
+    @media (max-width: 720px) {
+      .page {
+        padding: 12px;
+      }
+
+      .intro-page {
+        padding: 10px;
+      }
+
+      .intro-shot {
+        min-height: 620px;
+        border-radius: 30px;
+        padding: 26px 18px;
+      }
+
+      .intro-shot::before {
+        inset: 12px;
+        border-radius: 24px;
+      }
+
+      .intro-word {
+        letter-spacing: -0.07em;
+      }
+
+      .intro-footer,
+      .ext-footer {
+        display: grid;
+        justify-content: stretch;
+      }
+
+      .meta-grid,
+      .info-grid,
+      .family-grid,
+      .collocation-grid,
+      .exercise-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero,
+      .section {
+        border-radius: 22px;
+      }
+
+      .sense-head {
+        align-items: flex-start;
+      }
+
+      .brand-links a,
+      .toc-links a {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .hero h1 {
+        font-size: clamp(1.55rem, 8.8vw, 2.65rem);
+        line-height: 1.02;
+        letter-spacing: -0.035em;
+        white-space: nowrap;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .intro-shot {
+        aspect-ratio: auto;
+        min-height: 600px;
+      }
+
+      .intro-meaning {
+        padding: 12px 14px;
+      }
+    }
+  </style>
+</head>
+
+<body class="extended-page">
+  <main class="page">
+
+    <header class="hero">
+      <div class="ext-kicker">📚✨ TOEFL Word of the Day ✨📚</div>
+      <h1>ALLOCATE</h1>
+      <p class="hero-subtitle">A complete TOEFL learner guide compiled by <strong>Amir Kooshky</strong>.</p>
+
+      <div class="brand-links">
+        <a href="https://t.me/KooshkyTOEFL" target="_blank">Telegram Channel</a>
+        <a href="https://www.instagram.com/kooshkytoefl" target="_blank">Instagram</a>
+        <a href="https://t.me/KooshkyTOEFL_pv" target="_blank">Personal Telegram</a>
+      </div>
+
+      <div class="meta-grid">
+        <div class="meta-card">
+          <span class="meta-label">Date</span>
+          <span class="meta-value">July 3rd, 2026</span>
+        </div>
+        <div class="meta-card">
+          <span class="meta-label">Word</span>
+          <span class="meta-value">allocate</span>
+        </div>
+        <div class="meta-card">
+          <span class="meta-label">Level</span>
+          <span class="meta-value">B1–B2 TOEFL</span>
+        </div>
+      </div>
+    </header>
+
+    <nav class="toc">
+      <p class="toc-title">Study sections</p>
+      <div class="toc-links">
+        <a href="#meanings">Meanings</a>
+        <a href="#family">Word Family</a>
+        <a href="#collocations">Collocations</a>
+        <a href="#synonyms">Synonyms & Antonyms</a>
+        <a href="#etymology">Etymology</a>
+        <a href="#exercises">Exercises</a>
+      </div>
+    </nav>
+
+    <section class="section" id="meanings">
+      <h2>Meanings & Usage</h2>
+
+      <article class="sense-card">
+        <div class="sense-head">
+          <span class="sense-num">Meaning 1</span>
+          <span class="pos-badge">transitive verb</span>
+          <span class="ipa-badge">/ˈæləˌkeɪt/</span>
+        </div>
+
+        <p class="definition">To officially give or set aside money, time, space, people, or other resources for a
+          particular purpose.</p>
+
+        <p class="simple-label">Natural examples</p>
+        <ol class="example-list">
+          <li>The government allocated more funding to public schools.</li>
+          <li>We need to allocate at least two hours for the TOEFL practice test.</li>
+          <li>The university allocated additional space for student research projects.</li>
+          <li>The company allocated extra staff to the customer service department.</li>
+          <li>Several million dollars were allocated for environmental protection.</li>
+        </ol>
+
+        <div class="info-grid">
+          <div class="info-card good">
+            <h4>Nuance & implication</h4>
+            <p><strong>Allocate</strong> sounds planned, official, and practical. It usually implies that resources are
+              limited, so someone must decide where they should go. It is more formal and academic than simply saying
+              <strong>give</strong>.</p>
+          </div>
+
+          <div class="info-card">
+            <h4>Grammar notes</h4>
+            <p><strong>Allocate</strong> is a transitive verb, so it needs an object. Common patterns are
+              <strong>allocate something to someone/something</strong> and <strong>allocate something for a
+                purpose</strong>. Common objects include <strong>money, funds, resources, time, space, staff, budget,
+                responsibility</strong>, and <strong>land</strong>.</p>
+          </div>
+
+          <div class="info-card warning">
+            <h4>Common wrong usage</h4>
+            <ul class="wrong-list">
+              <li>❌ The school allocated to improve the library. → ✅ The school allocated money to improve the library.
+              </li>
+              <li>❌ We allocated for the project more time. → ✅ We allocated more time for the project.</li>
+            </ul>
+          </div>
+
+          <div class="info-card">
+            <h4>TOEFL tip</h4>
+            <p>In TOEFL Reading and Listening, <strong>allocate</strong> often appears in passages about government
+              budgets, education, research, city planning, environmental policy, and business management.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="sense-card">
+        <div class="sense-head">
+          <span class="sense-num">Meaning 2</span>
+          <span class="pos-badge">transitive verb</span>
+          <span class="ipa-badge">/ˈæləˌkeɪt/</span>
+        </div>
+
+        <p class="definition">To divide something and give each person, group, or activity a particular share.</p>
+
+        <p class="simple-label">Natural examples</p>
+        <ol class="example-list">
+          <li>The teacher allocated one tablet to each group.</li>
+          <li>The budget was allocated among several departments.</li>
+          <li>Emergency supplies were allocated according to each region’s needs.</li>
+          <li>The committee allocated seats to students from different programs.</li>
+          <li>The available research grants were allocated between the two laboratories.</li>
+        </ol>
+
+        <div class="info-grid">
+          <div class="info-card good">
+            <h4>Nuance & implication</h4>
+            <p>This meaning focuses on <strong>fair or planned distribution</strong>. The word does not simply mean
+              “give”; it suggests that something is divided according to a rule, plan, need, or decision.</p>
+          </div>
+
+          <div class="info-card">
+            <h4>Grammar notes</h4>
+            <p>Use <strong>allocate something among</strong> three or more people or groups, and <strong>allocate
+                something between</strong> two people or groups. You can also say <strong>be allocated to</strong>
+              someone or something in the passive voice.</p>
+          </div>
+
+          <div class="info-card warning">
+            <h4>Common wrong usage</h4>
+            <ul class="wrong-list">
+              <li>❌ The food was allocated between five villages. → ✅ The food was allocated among five villages.</li>
+              <li>❌ Each students was allocated a desk. → ✅ Each student was allocated a desk.</li>
+            </ul>
+          </div>
+
+          <div class="info-card">
+            <h4>TOEFL tip</h4>
+            <p>When a TOEFL passage discusses how resources are shared, <strong>allocate</strong> can signal a
+              relationship between limited supply and competing needs.</p>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <section class="section" id="family">
+      <h2>Word Family</h2>
+
+      <div class="family-grid">
+        <article class="family-card">
+          <h3>allocation</h3>
+          <p><strong>Part of speech:</strong> noun</p>
+          <p><strong>Definition:</strong> the act of assigning something for a purpose; also, the amount that is
+            assigned</p>
+          <ol class="example-list">
+            <li>The allocation of funds depends on each department’s needs.</li>
+            <li>The school received a larger allocation for science equipment.</li>
+          </ol>
+        </article>
+
+        <article class="family-card">
+          <h3>allocated</h3>
+          <p><strong>Part of speech:</strong> adjective / past participle</p>
+          <p><strong>Definition:</strong> given, assigned, or set aside for a particular use</p>
+          <ol class="example-list">
+            <li>The allocated time for the writing task is 20 minutes.</li>
+            <li>Students must finish the activity within the allocated period.</li>
+          </ol>
+        </article>
+
+        <article class="family-card">
+          <h3>allocator</h3>
+          <p><strong>Part of speech:</strong> noun</p>
+          <p><strong>Definition:</strong> a person or system that assigns resources; common mostly in finance or
+            technology</p>
+          <ol class="example-list">
+            <li>A budget allocator decides how money should be distributed.</li>
+            <li>The program uses a memory allocator to manage computer memory.</li>
+          </ol>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="collocations">
+      <h2>Common Collocations</h2>
+
+      <div class="collocation-grid">
+        <article class="collocation-card">
+          <h3>allocate money</h3>
+          <p><strong>Meaning:</strong> assign money for a specific purpose</p>
+          <p><strong>Example:</strong> The city allocated money to repair old bridges.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>allocate funds</h3>
+          <p><strong>Meaning:</strong> officially set aside money, especially in a budget</p>
+          <p><strong>Example:</strong> The university allocated funds for new laboratory equipment.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>allocate resources</h3>
+          <p><strong>Meaning:</strong> assign useful things such as money, time, people, or materials</p>
+          <p><strong>Example:</strong> Governments must allocate resources carefully during a crisis.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>allocate time</h3>
+          <p><strong>Meaning:</strong> set aside time for an activity</p>
+          <p><strong>Example:</strong> Students should allocate enough time for revision.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>allocate space</h3>
+          <p><strong>Meaning:</strong> give or reserve physical space for a use</p>
+          <p><strong>Example:</strong> The library allocated more space for group study rooms.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>allocate staff</h3>
+          <p><strong>Meaning:</strong> assign workers to a task, project, or department</p>
+          <p><strong>Example:</strong> The hospital allocated extra staff to the emergency department.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>allocate land</h3>
+          <p><strong>Meaning:</strong> assign land for a particular use</p>
+          <p><strong>Example:</strong> The local government allocated land for affordable housing.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>allocate a budget</h3>
+          <p><strong>Meaning:</strong> decide how much money is available for something</p>
+          <p><strong>Example:</strong> The committee allocated a larger budget to environmental research.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>allocate responsibility</h3>
+          <p><strong>Meaning:</strong> officially give a duty to a person or group</p>
+          <p><strong>Example:</strong> The manager allocated responsibility for data analysis to two researchers.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>allocate seats</h3>
+          <p><strong>Meaning:</strong> distribute available seats among people or groups</p>
+          <p><strong>Example:</strong> Seats were allocated according to the number of registered participants.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>be allocated to</h3>
+          <p><strong>Meaning:</strong> be assigned to a person, group, or purpose</p>
+          <p><strong>Example:</strong> More funding was allocated to rural schools.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>be allocated for</h3>
+          <p><strong>Meaning:</strong> be reserved for a particular activity or use</p>
+          <p><strong>Example:</strong> Several rooms were allocated for student meetings.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="synonyms">
+      <h2>Direct Synonyms & Antonyms</h2>
+
+      <div class="info-grid">
+        <div class="info-card good">
+          <h4>Direct synonyms</h4>
+          <div class="word-pill-row">
+            <span class="word-pill">assign</span>
+            <span class="word-pill">distribute</span>
+            <span class="word-pill">apportion</span>
+            <span class="word-pill">allot</span>
+            <span class="word-pill">set aside</span>
+          </div>
+          <p><strong>Assign</strong> is the closest general synonym. <strong>Distribute</strong> focuses more on giving
+            things out. <strong>Apportion</strong> and <strong>allot</strong> are more formal and often mean dividing
+            something into shares. <strong>Set aside</strong> means reserve something for a purpose.</p>
+        </div>
+
+        <div class="info-card warning">
+          <h4>Direct antonyms</h4>
+          <div class="word-pill-row">
+            <span class="word-pill">withhold</span>
+            <span class="word-pill">retain</span>
+            <span class="word-pill">keep</span>
+            <span class="word-pill">misallocate</span>
+          </div>
+          <p><strong>Withhold</strong> means not give something that could be given. <strong>Retain</strong> and
+            <strong>keep</strong> mean continue to hold something instead of assigning it elsewhere.
+            <strong>Misallocate</strong> means allocate something badly or to the wrong place.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="etymology">
+      <h2>Etymology</h2>
+      <div class="info-card">
+        <p><strong>Allocate</strong> comes from Latin roots connected to “placing” or “assigning something to a place.”
+          This history can help you remember the modern meaning: when you allocate time, money, or resources, you
+          “place” them into a specific role, purpose, or share.</p>
+      </div>
+    </section>
+
+    <section class="section" id="exercises">
+      <h2>Practice Exercises</h2>
+
+      <div class="exercise-grid">
+        <article class="exercise-card">
+          <h3>1. Word family choice</h3>
+          <p>Choose the best member of the word family for each blank.</p>
+          <ol class="clean-list">
+            <li>The city’s new budget includes a larger ________ for public transportation.</li>
+            <li>The exam must be completed within the ________ time.</li>
+            <li>The committee will ________ more funds to scientific research next year.</li>
+          </ol>
+        </article>
+
+        <article class="exercise-card">
+          <h3>2. Correct or incorrect?</h3>
+          <p>Decide whether each sentence uses the word correctly. If it is wrong, correct it.</p>
+          <ol class="clean-list">
+            <li>The school allocated more computers to the language lab.</li>
+            <li>The organization allocated to help poor families.</li>
+            <li>The supplies were allocated among four villages.</li>
+          </ol>
+        </article>
+
+        <article class="exercise-card">
+          <h3>3. Collocation practice</h3>
+          <p>Complete each sentence with a natural collocation.</p>
+          <ol class="clean-list">
+            <li>The government decided to allocate ________ to improve rural hospitals.</li>
+            <li>Students should allocate enough ________ for proofreading their essays.</li>
+            <li>The university allocated extra ________ to the growing computer science department.</li>
+          </ol>
+        </article>
+      </div>
+
+      <details class="answer-key">
+        <summary>Answer Key</summary>
+        <ol class="clean-list">
+          <li><strong>allocation</strong> — A noun is needed after “a larger.”</li>
+          <li><strong>allocated</strong> — This adjective means “assigned or given for a purpose.”</li>
+          <li><strong>allocate</strong> — The sentence needs the base verb after “will.”</li>
+          <li><strong>Correct.</strong> The pattern “allocate something to something” is natural.</li>
+          <li><strong>Incorrect.</strong> Say: “The organization allocated money/resources to help poor families.”</li>
+          <li><strong>Correct.</strong> Use “among” for three or more groups.</li>
+          <li><strong>funds / money / resources</strong> — All are natural with “allocate.”</li>
+          <li><strong>time</strong> — “Allocate time” is a common collocation.</li>
+          <li><strong>staff / space / resources</strong> — The best answer depends on context, but all can be natural.
+          </li>
+        </ol>
+      </details>
+    </section>
+
+    <footer class="ext-footer">
+      <span>Compiled by <strong>Amir Kooshky</strong></span>
+      <span><a href="https://t.me/KooshkyTOEFL">📚 @KooshkyToefl</a></span>
+      <span><a href="https://www.instagram.com/kooshkytoefl">Instagram</a></span>
+      <span><a href="https://t.me/KooshkyTOEFL_pv">Personal Telegram</a></span>
+    </footer>
+
+  </main>
+</body>
+
+</html>

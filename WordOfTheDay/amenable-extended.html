@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>amenable | Extended TOEFL Explanation</title>
+  <style>
+    :root {
+      --bg: #08090d;
+      --bg-soft: #10131b;
+      --card: rgba(255, 255, 255, 0.065);
+      --card-strong: rgba(255, 255, 255, 0.105);
+      --text: #f4f1ea;
+      --muted: #b9b2a7;
+      --faint: #8f887d;
+      --gold: #d8b35a;
+      --gold-soft: rgba(216, 179, 90, 0.16);
+      --blue: #8bb7ff;
+      --green: #9be2bd;
+      --red: #ff9d9d;
+      --border: rgba(255, 255, 255, 0.14);
+      --shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+      --radius-lg: 28px;
+      --radius-md: 18px;
+      --radius-sm: 12px;
+      --max: 980px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at top left, rgba(216, 179, 90, 0.18), transparent 32rem),
+        radial-gradient(circle at bottom right, rgba(139, 183, 255, 0.13), transparent 30rem),
+        var(--bg);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      line-height: 1.65;
+    }
+
+    a {
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      width: min(100%, var(--max));
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* =========================
+     INTRO IMAGE TEMPLATE
+  ========================= */
+
+    .intro-page {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 20px;
+    }
+
+    .intro-shot {
+      width: min(100%, 860px);
+      aspect-ratio: 4 / 5;
+      min-height: 680px;
+      border: 1px solid var(--border);
+      border-radius: 42px;
+      overflow: hidden;
+      position: relative;
+      background:
+        linear-gradient(135deg, rgba(216, 179, 90, 0.18), transparent 35%),
+        linear-gradient(315deg, rgba(139, 183, 255, 0.18), transparent 35%),
+        #0b0d13;
+      box-shadow: var(--shadow);
+      padding: clamp(26px, 6vw, 68px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .intro-shot::before {
+      content: "";
+      position: absolute;
+      inset: 22px;
+      border: 1px solid rgba(216, 179, 90, 0.24);
+      border-radius: 32px;
+      pointer-events: none;
+    }
+
+    .intro-kicker,
+    .ext-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      width: fit-content;
+      padding: 8px 13px;
+      border: 1px solid rgba(216, 179, 90, 0.28);
+      border-radius: 999px;
+      background: var(--gold-soft);
+      color: var(--gold);
+      font-size: clamp(0.78rem, 2.2vw, 0.95rem);
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .intro-center {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .intro-word {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(4.4rem, 4.5vw, 9.5rem);
+      line-height: 0.92;
+      letter-spacing: -0.04em;
+      color: #fff8ea;
+      text-shadow: 0 12px 45px rgba(0, 0, 0, 0.55);
+    }
+
+    .intro-ipa {
+      margin: 18px 0 0;
+      color: var(--gold);
+      font-size: clamp(1.05rem, 4vw, 1.5rem);
+      font-weight: 700;
+    }
+
+    .intro-meanings {
+      margin: 28px auto 0;
+      display: grid;
+      gap: 12px;
+      max-width: 640px;
+    }
+
+    .intro-meaning {
+      padding: 15px 18px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.075);
+      backdrop-filter: blur(12px);
+      font-size: clamp(1rem, 3.2vw, 1.25rem);
+      font-weight: 650;
+    }
+
+    .intro-example {
+      margin: 26px auto 0;
+      max-width: 650px;
+      color: var(--muted);
+      font-size: clamp(0.95rem, 3vw, 1.15rem);
+    }
+
+    .intro-footer,
+    .ext-footer {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 16px;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .intro-footer strong,
+    .ext-footer strong {
+      color: var(--text);
+    }
+
+    /* =========================
+     EXTENDED PAGE TEMPLATE
+  ========================= */
+
+    .extended-page {
+      padding-bottom: 50px;
+    }
+
+    .hero {
+      margin: 18px auto 22px;
+      padding: clamp(24px, 5vw, 46px);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      background:
+        linear-gradient(135deg, rgba(216, 179, 90, 0.14), transparent 42%),
+        var(--card);
+      box-shadow: var(--shadow);
+    }
+
+    .hero h1 {
+      margin: 18px 0 8px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.4rem, 10vw, 6.2rem);
+      line-height: 0.95;
+      letter-spacing: -0.055em;
+
+      white-space: nowrap;
+      overflow-wrap: normal;
+      word-break: normal;
+      hyphens: none;
+      max-width: 100%;
+    }
+
+    .hero-subtitle {
+      margin: 0;
+      color: var(--muted);
+      font-size: clamp(1rem, 3vw, 1.2rem);
+    }
+
+    .brand-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .brand-links a {
+      display: inline-flex;
+      padding: 9px 13px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.055);
+      color: var(--text);
+      font-size: 0.94rem;
+    }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .meta-card,
+    .toc,
+    .section,
+    .sense-card,
+    .info-card,
+    .family-card,
+    .collocation-card,
+    .exercise-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--card);
+    }
+
+    .meta-card {
+      padding: 15px;
+    }
+
+    .meta-label {
+      display: block;
+      color: var(--faint);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 800;
+    }
+
+    .meta-value {
+      display: block;
+      margin-top: 5px;
+      font-weight: 800;
+    }
+
+    .toc {
+      padding: 18px;
+      margin: 20px 0;
+    }
+
+    .toc-title {
+      margin: 0 0 10px;
+      color: var(--gold);
+      font-weight: 900;
+    }
+
+    .toc-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .toc-links a {
+      padding: 8px 11px;
+      border-radius: 999px;
+      background: var(--gold-soft);
+      color: var(--gold);
+      font-size: 0.93rem;
+    }
+
+    .section {
+      margin: 20px 0;
+      padding: clamp(18px, 4vw, 30px);
+    }
+
+    .section h2 {
+      margin: 0 0 18px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.8rem, 6vw, 2.7rem);
+      line-height: 1.1;
+    }
+
+    .sense-card {
+      padding: clamp(16px, 4vw, 26px);
+      margin: 16px 0;
+    }
+
+    .sense-head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .sense-num,
+    .pos-badge,
+    .ipa-badge {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      font-weight: 850;
+    }
+
+    .sense-num {
+      padding: 7px 12px;
+      background: var(--gold);
+      color: #14120b;
+    }
+
+    .pos-badge {
+      padding: 7px 11px;
+      background: rgba(139, 183, 255, 0.16);
+      color: var(--blue);
+    }
+
+    .ipa-badge {
+      padding: 7px 11px;
+      background: rgba(255, 255, 255, 0.07);
+      color: var(--muted);
+    }
+
+    .definition {
+      font-size: 1.12rem;
+      font-weight: 750;
+      color: #fff7e8;
+    }
+
+    .simple-label {
+      margin: 20px 0 8px;
+      color: var(--gold);
+      font-weight: 900;
+    }
+
+    .example-list,
+    .clean-list,
+    .wrong-list {
+      margin: 8px 0 0;
+      padding-left: 1.25rem;
+    }
+
+    .example-list li,
+    .clean-list li,
+    .wrong-list li {
+      margin: 8px 0;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .info-card {
+      padding: 14px;
+    }
+
+    .info-card h4,
+    .family-card h3,
+    .collocation-card h3,
+    .exercise-card h3 {
+      margin: 0 0 8px;
+      color: var(--gold);
+    }
+
+    .warning {
+      border-color: rgba(255, 157, 157, 0.35);
+      background: rgba(255, 157, 157, 0.07);
+    }
+
+    .good {
+      border-color: rgba(155, 226, 189, 0.3);
+      background: rgba(155, 226, 189, 0.06);
+    }
+
+    .family-grid,
+    .collocation-grid,
+    .exercise-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .family-card,
+    .collocation-card,
+    .exercise-card {
+      padding: 16px;
+    }
+
+    .word-pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+    }
+
+    .word-pill {
+      display: inline-flex;
+      padding: 8px 11px;
+      border-radius: 999px;
+      background: var(--card-strong);
+      border: 1px solid var(--border);
+      font-weight: 800;
+    }
+
+    details.answer-key {
+      margin-top: 16px;
+      border: 1px solid rgba(216, 179, 90, 0.3);
+      border-radius: var(--radius-md);
+      background: var(--gold-soft);
+      padding: 14px 16px;
+    }
+
+    details.answer-key summary {
+      cursor: pointer;
+      color: var(--gold);
+      font-weight: 950;
+    }
+
+    .ext-footer {
+      margin-top: 22px;
+      padding: 22px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      background: var(--card);
+    }
+
+    /* =========================
+     RESPONSIVE RULES
+  ========================= */
+
+    @media (max-width: 720px) {
+      .page {
+        padding: 12px;
+      }
+
+      .intro-page {
+        padding: 10px;
+      }
+
+      .intro-shot {
+        min-height: 620px;
+        border-radius: 30px;
+        padding: 26px 18px;
+      }
+
+      .intro-shot::before {
+        inset: 12px;
+        border-radius: 24px;
+      }
+
+      .intro-word {
+        letter-spacing: -0.07em;
+      }
+
+      .intro-footer,
+      .ext-footer {
+        display: grid;
+        justify-content: stretch;
+      }
+
+      .meta-grid,
+      .info-grid,
+      .family-grid,
+      .collocation-grid,
+      .exercise-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero,
+      .section {
+        border-radius: 22px;
+      }
+
+      .sense-head {
+        align-items: flex-start;
+      }
+
+      .brand-links a,
+      .toc-links a {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .hero h1 {
+        font-size: clamp(1.55rem, 8.8vw, 2.65rem);
+        line-height: 1.02;
+        letter-spacing: -0.035em;
+        white-space: nowrap;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .intro-shot {
+        aspect-ratio: auto;
+        min-height: 600px;
+      }
+
+      .intro-meaning {
+        padding: 12px 14px;
+      }
+    }
+  </style>
+</head>
+
+<body class="extended-page">
+  <main class="page">
+
+    <header class="hero">
+      <div class="ext-kicker">📚✨ TOEFL Word of the Day ✨📚</div>
+      <h1>amenable</h1>
+      <p class="hero-subtitle">A complete TOEFL learner guide compiled by <strong>Amir Kooshky</strong>.</p>
+
+      <div class="brand-links">
+        <a href="https://t.me/KooshkyTOEFL" target="_blank">Telegram Channel</a>
+        <a href="https://www.instagram.com/kooshkytoefl" target="_blank">Instagram</a>
+        <a href="https://t.me/KooshkyTOEFL_pv" target="_blank">Personal Telegram</a>
+      </div>
+
+      <div class="meta-grid">
+        <div class="meta-card">
+          <span class="meta-label">Date</span>
+          <span class="meta-value">July 7th 2026</span>
+        </div>
+        <div class="meta-card">
+          <span class="meta-label">Word</span>
+          <span class="meta-value">amenable</span>
+        </div>
+        <div class="meta-card">
+          <span class="meta-label">Level</span>
+          <span class="meta-value">B1–B2 TOEFL</span>
+        </div>
+      </div>
+    </header>
+
+    <nav class="toc">
+      <p class="toc-title">Study sections</p>
+      <div class="toc-links">
+        <a href="#meanings">Meanings</a>
+        <a href="#family">Word Family</a>
+        <a href="#collocations">Collocations</a>
+        <a href="#synonyms">Synonyms & Antonyms</a>
+        <a href="#etymology">Etymology</a>
+        <a href="#exercises">Exercises</a>
+      </div>
+    </nav>
+
+    <section class="section" id="meanings">
+      <h2>Meanings & Usage</h2>
+
+      <article class="sense-card">
+        <div class="sense-head">
+          <span class="sense-num">Meaning 1</span>
+          <span class="pos-badge">adjective</span>
+          <span class="ipa-badge">/əˈmiːnəbəl/</span>
+        </div>
+
+        <p class="definition">Willing to accept an idea, suggestion, plan, rule, or request; open to agreement or
+          cooperation.</p>
+
+        <p class="simple-label">Natural examples</p>
+        <ol class="example-list">
+          <li>The professor was amenable to extending the deadline after several students explained the situation.</li>
+          <li>The committee seemed amenable to a compromise that would satisfy both groups.</li>
+          <li>Our landlord is usually amenable to reasonable requests if we explain them clearly.</li>
+          <li>The manager was not amenable to changing the meeting time because the schedule was already full.</li>
+          <li>Students are more amenable to feedback when they understand how it will improve their work.</li>
+        </ol>
+
+        <div class="info-grid">
+          <div class="info-card good">
+            <h4>Nuance & implication</h4>
+            <p><strong>Amenable</strong> is a fairly formal and academic word. It suggests polite willingness,
+              flexibility, or readiness to listen. It is stronger and more precise than simply saying <em>nice</em> or
+              <em>okay with</em>. It often appears when people, institutions, or decision-makers are open to discussion,
+              advice, compromise, or change.</p>
+          </div>
+
+          <div class="info-card">
+            <h4>Grammar notes</h4>
+            <p><strong>Amenable</strong> is an adjective, so it usually comes after <em>be</em>, <em>seem</em>,
+              <em>remain</em>, or <em>become</em>. The most common pattern is <strong>amenable to + noun /
+                gerund</strong>: <em>amenable to compromise</em>, <em>amenable to suggestion</em>, <em>amenable to
+                changing the plan</em>. Do not use it before a direct object; it is not a verb.</p>
+          </div>
+
+          <div class="info-card warning">
+            <h4>Common wrong usage</h4>
+            <ul class="wrong-list">
+              <li>❌ The professor amenabled the deadline. → ✅ The professor was amenable to extending the deadline.</li>
+              <li>❌ She is amenable with my idea. → ✅ She is amenable to my idea.</li>
+            </ul>
+          </div>
+
+          <div class="info-card">
+            <h4>TOEFL tip</h4>
+            <p>In listening passages, <strong>amenable to</strong> can signal that a person is willing to negotiate or
+              accept a solution. Pay attention to the object after <em>to</em>; it tells you what the person is open to.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <article class="sense-card">
+        <div class="sense-head">
+          <span class="sense-num">Meaning 2</span>
+          <span class="pos-badge">adjective</span>
+          <span class="ipa-badge">/əˈmiːnəbəl/</span>
+        </div>
+
+        <p class="definition">Able to be treated, changed, influenced, studied, analyzed, or dealt with in a particular
+          way.</p>
+
+        <p class="simple-label">Natural examples</p>
+        <ol class="example-list">
+          <li>The disease is often amenable to treatment if doctors discover it early.</li>
+          <li>The data set is amenable to statistical analysis because it contains clear numerical patterns.</li>
+          <li>Some environmental problems are more amenable to local solutions than national ones.</li>
+          <li>The clay soil became more amenable to farming after organic material was added.</li>
+          <li>This question is amenable to experimental study because researchers can test it in a controlled setting.
+          </li>
+        </ol>
+
+        <div class="info-grid">
+          <div class="info-card good">
+            <h4>Nuance & implication</h4>
+            <p>This meaning is common in academic and scientific writing. It does not mean that a person is willing.
+              Instead, it means that a problem, material, disease, data set, or question can be successfully handled by
+              a method. The word often suggests that the thing is suitable for a particular process.</p>
+          </div>
+
+          <div class="info-card">
+            <h4>Grammar notes</h4>
+            <p>The pattern is still <strong>amenable to + noun</strong>, but the subject is usually a thing, not a
+              person: <em>amenable to treatment</em>, <em>amenable to analysis</em>, <em>amenable to change</em>,
+              <em>amenable to reform</em>. In this meaning, <em>to</em> is a preposition, so use a noun or gerund after
+              it, not a base verb.</p>
+          </div>
+
+          <div class="info-card warning">
+            <h4>Common wrong usage</h4>
+            <ul class="wrong-list">
+              <li>❌ The disease is amenable to treat. → ✅ The disease is amenable to treatment.</li>
+              <li>❌ The data is amenable for analysis. → ✅ The data is amenable to analysis.</li>
+            </ul>
+          </div>
+
+          <div class="info-card">
+            <h4>TOEFL tip</h4>
+            <p>In reading passages, <strong>amenable to analysis/treatment/change</strong> often means that a method can
+              work. If you see this phrase, identify the method after <em>to</em>; it usually tells you how the problem
+              or material can be handled.</p>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <section class="section" id="family">
+      <h2>Word Family</h2>
+
+      <div class="family-grid">
+        <article class="family-card">
+          <h3>amenable</h3>
+          <p><strong>Part of speech:</strong> adjective</p>
+          <p><strong>Definition:</strong> willing to accept something, or able to be dealt with in a particular way</p>
+          <ol class="example-list">
+            <li>The director was amenable to small changes in the proposal.</li>
+            <li>The problem is amenable to a simple mathematical solution.</li>
+          </ol>
+        </article>
+
+        <article class="family-card">
+          <h3>amenability</h3>
+          <p><strong>Part of speech:</strong> noun</p>
+          <p><strong>Definition:</strong> the quality of being willing to accept something, or the quality of being
+            suitable for treatment, analysis, or change</p>
+          <ol class="example-list">
+            <li>The manager's amenability to feedback improved communication in the office.</li>
+            <li>The study examined the soil's amenability to different farming methods.</li>
+          </ol>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="collocations">
+      <h2>Common Collocations</h2>
+
+      <div class="collocation-grid">
+        <article class="collocation-card">
+          <h3>amenable to suggestion</h3>
+          <p><strong>Meaning:</strong> willing to listen to other people's ideas</p>
+          <p><strong>Example:</strong> The instructor was amenable to suggestion and changed the project guidelines
+            after hearing student concerns.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>amenable to compromise</h3>
+          <p><strong>Meaning:</strong> willing to find a middle solution</p>
+          <p><strong>Example:</strong> Both sides were amenable to compromise after several hours of discussion.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>amenable to change</h3>
+          <p><strong>Meaning:</strong> willing to change, or able to be changed</p>
+          <p><strong>Example:</strong> Younger institutions are often more amenable to change than older, more rigid
+            ones.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>amenable to persuasion</h3>
+          <p><strong>Meaning:</strong> willing to be convinced by reasons or evidence</p>
+          <p><strong>Example:</strong> The board was not enthusiastic at first, but it proved amenable to persuasion.
+          </p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>amenable to feedback</h3>
+          <p><strong>Meaning:</strong> willing to accept comments and improve</p>
+          <p><strong>Example:</strong> Students who are amenable to feedback usually make faster progress in writing.
+          </p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>amenable to treatment</h3>
+          <p><strong>Meaning:</strong> able to be treated successfully</p>
+          <p><strong>Example:</strong> The condition is more amenable to treatment when it is diagnosed early.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>amenable to analysis</h3>
+          <p><strong>Meaning:</strong> suitable for careful study or examination</p>
+          <p><strong>Example:</strong> The survey results were amenable to analysis because the questions were clearly
+            designed.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>amenable to reform</h3>
+          <p><strong>Meaning:</strong> able or willing to be improved by changes</p>
+          <p><strong>Example:</strong> The school system was more amenable to reform after parents and teachers agreed
+            on the main problems.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>readily amenable to</h3>
+          <p><strong>Meaning:</strong> easily suitable for a method, change, or process</p>
+          <p><strong>Example:</strong> The text is readily amenable to digital analysis because it is already in a clean
+            electronic format.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>prove amenable to</h3>
+          <p><strong>Meaning:</strong> turn out to be willing or suitable for something</p>
+          <p><strong>Example:</strong> The material proved amenable to recycling after researchers developed a new
+            process.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="synonyms">
+      <h2>Direct Synonyms & Antonyms</h2>
+
+      <div class="info-grid">
+        <div class="info-card good">
+          <h4>Direct synonyms</h4>
+          <div class="word-pill-row">
+            <span class="word-pill">open to</span>
+            <span class="word-pill">receptive to</span>
+            <span class="word-pill">willing to consider</span>
+            <span class="word-pill">responsive to</span>
+            <span class="word-pill">suitable for</span>
+          </div>
+          <p><strong>Open to</strong> is the simplest synonym for people who may accept an idea. <strong>Receptive
+              to</strong> is close and slightly formal. <strong>Willing to consider</strong> is clear and useful in
+            speaking. For things, <strong>responsive to</strong> and <strong>suitable for</strong> are often closer,
+            especially in phrases like <em>amenable to treatment</em> or <em>amenable to analysis</em>.</p>
+        </div>
+
+        <div class="info-card warning">
+          <h4>Direct antonyms</h4>
+          <div class="word-pill-row">
+            <span class="word-pill">resistant to</span>
+            <span class="word-pill">opposed to</span>
+            <span class="word-pill">unwilling</span>
+            <span class="word-pill">unresponsive to</span>
+            <span class="word-pill">unsuitable for</span>
+          </div>
+          <p><strong>Resistant to</strong> is the most useful opposite because it works for people, systems, diseases,
+            and materials. <strong>Opposed to</strong> and <strong>unwilling</strong> describe people who do not want to
+            accept something. <strong>Unresponsive to</strong> and <strong>unsuitable for</strong> are better for
+            things, methods, treatments, or analysis.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="etymology">
+      <h2>Etymology</h2>
+      <div class="info-card">
+        <p><strong>Amenable</strong> came into English through French. It is connected to an older French verb meaning
+          “to lead or bring,” and it first had a legal sense of being answerable or able to be brought before authority.
+          The modern meanings developed from that idea of being responsive or subject to something: a person can be
+          <strong>amenable to</strong> advice, and a problem can be <strong>amenable to</strong> treatment or analysis.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="exercises">
+      <h2>Practice Exercises</h2>
+
+      <div class="exercise-grid">
+        <article class="exercise-card">
+          <h3>1. Word family choice</h3>
+          <p>Choose the best member of the word family for each blank.</p>
+          <ol class="clean-list">
+            <li>The director was __________ to a small change in the schedule.</li>
+            <li>The study measured the material's __________ to recycling.</li>
+            <li>The problem proved __________ to statistical analysis.</li>
+          </ol>
+        </article>
+
+        <article class="exercise-card">
+          <h3>2. Correct or incorrect?</h3>
+          <p>Decide whether each sentence uses the word correctly. If it is wrong, correct it.</p>
+          <ol class="clean-list">
+            <li>The professor was amenable to discussing the deadline.</li>
+            <li>The data was amenable for analysis.</li>
+            <li>The committee amenabled the proposal after the meeting.</li>
+          </ol>
+        </article>
+
+        <article class="exercise-card">
+          <h3>3. Collocation practice</h3>
+          <p>Complete each sentence with a natural collocation.</p>
+          <ol class="clean-list">
+            <li>The illness is more __________ when doctors find it early.</li>
+            <li>The two groups were finally __________ after a long debate.</li>
+            <li>The survey results were __________ because the responses were easy to compare.</li>
+          </ol>
+        </article>
+      </div>
+
+      <details class="answer-key">
+        <summary>Answer Key</summary>
+        <ol class="clean-list">
+          <li><strong>amenable</strong> — The adjective is needed after <em>was</em>.</li>
+          <li><strong>amenability</strong> — The noun is needed after the possessive <em>material's</em>.</li>
+          <li><strong>amenable</strong> — The phrase <em>prove amenable to</em> means “turn out to be suitable for.”
+          </li>
+          <li><strong>Correct.</strong> <em>Amenable to discussing</em> is natural because <em>to</em> is followed by a
+            gerund.</li>
+          <li><strong>Incorrect.</strong> Better: <em>The data was amenable to analysis.</em> The correct preposition is
+            <em>to</em>.</li>
+          <li><strong>Incorrect.</strong> Better: <em>The committee was amenable to the proposal after the meeting.</em>
+            <strong>Amenable</strong> is an adjective, not a verb.</li>
+          <li><strong>amenable to treatment</strong> — This means able to be treated successfully.</li>
+          <li><strong>amenable to compromise</strong> — This means willing to find a middle solution.</li>
+          <li><strong>amenable to analysis</strong> — This means suitable for careful study or examination.</li>
+        </ol>
+      </details>
+    </section>
+
+    <footer class="ext-footer">
+      <span>Compiled by <strong>Amir Kooshky</strong></span>
+      <span><a href="https://t.me/KooshkyTOEFL">📚 @KooshkyTOEFL</a></span>
+      <span><a href="https://www.instagram.com/kooshkytoefl">Instagram</a></span>
+      <span><a href="https://t.me/KooshkyTOEFL_pv">Personal Telegram</a></span>
+    </footer>
+
+  </main>
+</body>
+
+</html>

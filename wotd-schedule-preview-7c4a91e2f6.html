@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#F4F0E8">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="description" content="Internal Word of the Day schedule preview.">
+  <link rel="icon" href="images/kooshky-favicon-light.png" type="image/png" data-favicon data-light-href="images/kooshky-favicon-light.png" data-dark-href="images/kooshky-favicon-dark.png">
+  <link rel="icon" href="images/favicon.ico" sizes="any">
+  <link rel="stylesheet" href="styles.css?v=5">
+  <link rel="stylesheet" href="word-of-the-day.css?v=2">
+  <script>
+    (() => {
+      try {
+        const saved = localStorage.getItem("kooshky-guides:theme:v1");
+        const preferred = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        const theme = saved || preferred;
+        document.documentElement.dataset.theme = theme;
+        document.documentElement.style.colorScheme = theme;
+      } catch (_) {
+        document.documentElement.dataset.theme = "light";
+      }
+    })();
+  </script>
+  <script src="word-data.js?v=2" defer></script>
+  <script src="site.js?v=5" defer></script>
+  <script src="word-of-the-day.js?v=2" defer></script>
+  <title>WOTD Schedule Preview</title>
+</head>
+<body data-wotd-debug>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-logo" aria-hidden="true"></span>
+        <span><small>Kooshky's</small><strong>TOEFL Guides</strong></span>
+      </a>
+
+      <div class="header-actions">
+        <button class="plain-button" type="button" data-theme-toggle aria-label="Use dark theme" aria-pressed="false">◐ <span data-theme-label>Dark</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-intro">
+      <div class="container wotd-intro-row">
+        <div>
+          <p class="eyebrow">Internal preview</p>
+          <h1>Word schedule</h1>
+          <p>Published and scheduled entries are both visible on this page.</p>
+        </div>
+        <p class="wotd-clock" data-wotd-clock aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="wotd-debug-note">
+        <p>Scheduled entries are marked clearly. The public archive continues to hide them until 10:00 AM on their publication date.</p>
+      </div>
+
+      <form class="wotd-tools" role="search" onsubmit="return false;">
+        <label class="wotd-field">
+          <span>Search by word or date</span>
+          <input type="search" data-wotd-search placeholder="Search the full schedule" autocomplete="off">
+        </label>
+
+        <label class="wotd-field">
+          <span>Month</span>
+          <select data-wotd-month><option value="">All months</option></select>
+        </label>
+
+
+        <button class="button" type="button" data-wotd-clear>Clear</button>
+      </form>
+
+      <div class="wotd-status-row">
+        <span data-wotd-status aria-live="polite"></span>
+        <a href="word-of-the-day.html">Open public archive</a>
+      </div>
+
+      <div data-wotd-archive></div>
+    </section>
+  </main>
+</body>
+</html>

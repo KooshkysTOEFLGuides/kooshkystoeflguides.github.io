@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>monitor | Extended TOEFL Explanation</title>
+  <style>
+    :root {
+      --bg: #08090d;
+      --bg-soft: #10131b;
+      --card: rgba(255, 255, 255, 0.065);
+      --card-strong: rgba(255, 255, 255, 0.105);
+      --text: #f4f1ea;
+      --muted: #b9b2a7;
+      --faint: #8f887d;
+      --gold: #d8b35a;
+      --gold-soft: rgba(216, 179, 90, 0.16);
+      --blue: #8bb7ff;
+      --green: #9be2bd;
+      --red: #ff9d9d;
+      --border: rgba(255, 255, 255, 0.14);
+      --shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+      --radius-lg: 28px;
+      --radius-md: 18px;
+      --radius-sm: 12px;
+      --max: 980px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at top left, rgba(216, 179, 90, 0.18), transparent 32rem),
+        radial-gradient(circle at bottom right, rgba(139, 183, 255, 0.13), transparent 30rem),
+        var(--bg);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      line-height: 1.65;
+    }
+
+    a {
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      width: min(100%, var(--max));
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* =========================
+     INTRO IMAGE TEMPLATE
+  ========================= */
+
+    .intro-page {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 20px;
+    }
+
+    .intro-shot {
+      width: min(100%, 860px);
+      aspect-ratio: 4 / 5;
+      min-height: 680px;
+      border: 1px solid var(--border);
+      border-radius: 42px;
+      overflow: hidden;
+      position: relative;
+      background:
+        linear-gradient(135deg, rgba(216, 179, 90, 0.18), transparent 35%),
+        linear-gradient(315deg, rgba(139, 183, 255, 0.18), transparent 35%),
+        #0b0d13;
+      box-shadow: var(--shadow);
+      padding: clamp(26px, 6vw, 68px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .intro-shot::before {
+      content: "";
+      position: absolute;
+      inset: 22px;
+      border: 1px solid rgba(216, 179, 90, 0.24);
+      border-radius: 32px;
+      pointer-events: none;
+    }
+
+    .intro-kicker,
+    .ext-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      width: fit-content;
+      padding: 8px 13px;
+      border: 1px solid rgba(216, 179, 90, 0.28);
+      border-radius: 999px;
+      background: var(--gold-soft);
+      color: var(--gold);
+      font-size: clamp(0.78rem, 2.2vw, 0.95rem);
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .intro-center {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .intro-word {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(4.4rem, 4.5vw, 9.5rem);
+      line-height: 0.92;
+      letter-spacing: -0.04em;
+      color: #fff8ea;
+      text-shadow: 0 12px 45px rgba(0, 0, 0, 0.55);
+    }
+
+    .intro-ipa {
+      margin: 18px 0 0;
+      color: var(--gold);
+      font-size: clamp(1.05rem, 4vw, 1.5rem);
+      font-weight: 700;
+    }
+
+    .intro-meanings {
+      margin: 28px auto 0;
+      display: grid;
+      gap: 12px;
+      max-width: 640px;
+    }
+
+    .intro-meaning {
+      padding: 15px 18px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.075);
+      backdrop-filter: blur(12px);
+      font-size: clamp(1rem, 3.2vw, 1.25rem);
+      font-weight: 650;
+    }
+
+    .intro-example {
+      margin: 26px auto 0;
+      max-width: 650px;
+      color: var(--muted);
+      font-size: clamp(0.95rem, 3vw, 1.15rem);
+    }
+
+    .intro-footer,
+    .ext-footer {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 16px;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .intro-footer strong,
+    .ext-footer strong {
+      color: var(--text);
+    }
+
+    /* =========================
+     EXTENDED PAGE TEMPLATE
+  ========================= */
+
+    .extended-page {
+      padding-bottom: 50px;
+    }
+
+    .hero {
+      margin: 18px auto 22px;
+      padding: clamp(24px, 5vw, 46px);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      background:
+        linear-gradient(135deg, rgba(216, 179, 90, 0.14), transparent 42%),
+        var(--card);
+      box-shadow: var(--shadow);
+    }
+
+    .hero h1 {
+      margin: 18px 0 8px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.4rem, 10vw, 6.2rem);
+      line-height: 0.95;
+      letter-spacing: -0.055em;
+
+      white-space: nowrap;
+      overflow-wrap: normal;
+      word-break: normal;
+      hyphens: none;
+      max-width: 100%;
+    }
+
+    .hero-subtitle {
+      margin: 0;
+      color: var(--muted);
+      font-size: clamp(1rem, 3vw, 1.2rem);
+    }
+
+    .brand-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .brand-links a {
+      display: inline-flex;
+      padding: 9px 13px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.055);
+      color: var(--text);
+      font-size: 0.94rem;
+    }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .meta-card,
+    .toc,
+    .section,
+    .sense-card,
+    .info-card,
+    .family-card,
+    .collocation-card,
+    .exercise-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--card);
+    }
+
+    .meta-card {
+      padding: 15px;
+    }
+
+    .meta-label {
+      display: block;
+      color: var(--faint);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 800;
+    }
+
+    .meta-value {
+      display: block;
+      margin-top: 5px;
+      font-weight: 800;
+    }
+
+    .toc {
+      padding: 18px;
+      margin: 20px 0;
+    }
+
+    .toc-title {
+      margin: 0 0 10px;
+      color: var(--gold);
+      font-weight: 900;
+    }
+
+    .toc-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .toc-links a {
+      padding: 8px 11px;
+      border-radius: 999px;
+      background: var(--gold-soft);
+      color: var(--gold);
+      font-size: 0.93rem;
+    }
+
+    .section {
+      margin: 20px 0;
+      padding: clamp(18px, 4vw, 30px);
+    }
+
+    .section h2 {
+      margin: 0 0 18px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.8rem, 6vw, 2.7rem);
+      line-height: 1.1;
+    }
+
+    .sense-card {
+      padding: clamp(16px, 4vw, 26px);
+      margin: 16px 0;
+    }
+
+    .sense-head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .sense-num,
+    .pos-badge,
+    .ipa-badge {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      font-weight: 850;
+    }
+
+    .sense-num {
+      padding: 7px 12px;
+      background: var(--gold);
+      color: #14120b;
+    }
+
+    .pos-badge {
+      padding: 7px 11px;
+      background: rgba(139, 183, 255, 0.16);
+      color: var(--blue);
+    }
+
+    .ipa-badge {
+      padding: 7px 11px;
+      background: rgba(255, 255, 255, 0.07);
+      color: var(--muted);
+    }
+
+    .definition {
+      font-size: 1.12rem;
+      font-weight: 750;
+      color: #fff7e8;
+    }
+
+    .simple-label {
+      margin: 20px 0 8px;
+      color: var(--gold);
+      font-weight: 900;
+    }
+
+    .example-list,
+    .clean-list,
+    .wrong-list {
+      margin: 8px 0 0;
+      padding-left: 1.25rem;
+    }
+
+    .example-list li,
+    .clean-list li,
+    .wrong-list li {
+      margin: 8px 0;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .info-card {
+      padding: 14px;
+    }
+
+    .info-card h4,
+    .family-card h3,
+    .collocation-card h3,
+    .exercise-card h3 {
+      margin: 0 0 8px;
+      color: var(--gold);
+    }
+
+    .warning {
+      border-color: rgba(255, 157, 157, 0.35);
+      background: rgba(255, 157, 157, 0.07);
+    }
+
+    .good {
+      border-color: rgba(155, 226, 189, 0.3);
+      background: rgba(155, 226, 189, 0.06);
+    }
+
+    .family-grid,
+    .collocation-grid,
+    .exercise-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .family-card,
+    .collocation-card,
+    .exercise-card {
+      padding: 16px;
+    }
+
+    .word-pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+    }
+
+    .word-pill {
+      display: inline-flex;
+      padding: 8px 11px;
+      border-radius: 999px;
+      background: var(--card-strong);
+      border: 1px solid var(--border);
+      font-weight: 800;
+    }
+
+    details.answer-key {
+      margin-top: 16px;
+      border: 1px solid rgba(216, 179, 90, 0.3);
+      border-radius: var(--radius-md);
+      background: var(--gold-soft);
+      padding: 14px 16px;
+    }
+
+    details.answer-key summary {
+      cursor: pointer;
+      color: var(--gold);
+      font-weight: 950;
+    }
+
+    .ext-footer {
+      margin-top: 22px;
+      padding: 22px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      background: var(--card);
+    }
+
+    /* =========================
+     RESPONSIVE RULES
+  ========================= */
+
+    @media (max-width: 720px) {
+      .page {
+        padding: 12px;
+      }
+
+      .intro-page {
+        padding: 10px;
+      }
+
+      .intro-shot {
+        min-height: 620px;
+        border-radius: 30px;
+        padding: 26px 18px;
+      }
+
+      .intro-shot::before {
+        inset: 12px;
+        border-radius: 24px;
+      }
+
+      .intro-word {
+        letter-spacing: -0.07em;
+      }
+
+      .intro-footer,
+      .ext-footer {
+        display: grid;
+        justify-content: stretch;
+      }
+
+      .meta-grid,
+      .info-grid,
+      .family-grid,
+      .collocation-grid,
+      .exercise-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero,
+      .section {
+        border-radius: 22px;
+      }
+
+      .sense-head {
+        align-items: flex-start;
+      }
+
+      .brand-links a,
+      .toc-links a {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .hero h1 {
+        font-size: clamp(1.55rem, 8.8vw, 2.65rem);
+        line-height: 1.02;
+        letter-spacing: -0.035em;
+        white-space: nowrap;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .intro-shot {
+        aspect-ratio: auto;
+        min-height: 600px;
+      }
+
+      .intro-meaning {
+        padding: 12px 14px;
+      }
+    }
+  </style>
+</head>
+
+<body class="extended-page">
+  <main class="page">
+
+    <header class="hero">
+      <div class="ext-kicker">📚✨ TOEFL Word of the Day ✨📚</div>
+      <h1>monitor</h1>
+      <p class="hero-subtitle">A complete TOEFL learner guide compiled by <strong>Amir Kooshky</strong>.</p>
+
+      <div class="brand-links">
+        <a href="https://t.me/KooshkyTOEFL" target="_blank">Telegram Channel</a>
+        <a href="https://www.instagram.com/kooshkytoefl" target="_blank">Instagram</a>
+        <a href="https://t.me/KooshkyTOEFL_pv" target="_blank">Personal Telegram</a>
+      </div>
+
+      <div class="meta-grid">
+        <div class="meta-card">
+          <span class="meta-label">Date</span>
+          <span class="meta-value">July 13th 2026</span>
+        </div>
+        <div class="meta-card">
+          <span class="meta-label">Word</span>
+          <span class="meta-value">monitor</span>
+        </div>
+        <div class="meta-card">
+          <span class="meta-label">Level</span>
+          <span class="meta-value">B1–B2 TOEFL</span>
+        </div>
+      </div>
+    </header>
+
+    <nav class="toc">
+      <p class="toc-title">Study sections</p>
+      <div class="toc-links">
+        <a href="#meanings">Meanings</a>
+        <a href="#family">Word Family</a>
+        <a href="#collocations">Collocations</a>
+        <a href="#synonyms">Synonyms & Antonyms</a>
+        <a href="#etymology">Etymology</a>
+        <a href="#exercises">Exercises</a>
+      </div>
+    </nav>
+
+    <section class="section" id="meanings">
+      <h2>Meanings & Usage</h2>
+
+      <article class="sense-card">
+        <div class="sense-head">
+          <span class="sense-num">Meaning 1</span>
+          <span class="pos-badge">transitive verb</span>
+          <span class="ipa-badge">/ˈmɑː.nə.t̬ɚ/</span>
+        </div>
+
+        <p class="definition">To watch, check, or measure something carefully over a period of time, usually to see
+          whether it changes, improves, or becomes dangerous.</p>
+
+        <p class="simple-label">Natural examples</p>
+        <ol class="example-list">
+          <li>Scientists monitor air quality in large cities to track pollution levels.</li>
+          <li>The school monitors student progress throughout the semester.</li>
+          <li>Doctors monitored the patient’s heart rate after the surgery.</li>
+          <li>Researchers used cameras to monitor animal behavior in the forest.</li>
+          <li>The company monitors energy use in order to reduce costs.</li>
+        </ol>
+
+        <div class="info-grid">
+          <div class="info-card good">
+            <h4>Nuance & implication</h4>
+            <p><strong>Monitor</strong> suggests careful and repeated checking, not just looking once. It is often used
+              in academic, scientific, medical, environmental, and administrative contexts. It does not necessarily mean
+              to control or fix the problem; it mainly means to observe and collect information.</p>
+          </div>
+
+          <div class="info-card">
+            <h4>Grammar notes</h4>
+            <p><strong>Monitor</strong> is usually a transitive verb: <strong>monitor something/someone</strong>. Common
+              objects include <strong>progress</strong>, <strong>behavior</strong>, <strong>performance</strong>,
+              <strong>conditions</strong>, <strong>changes</strong>, <strong>heart rate</strong>, <strong>air
+                quality</strong>, and <strong>water levels</strong>. It can be used in the passive: <strong>The area is
+                monitored regularly.</strong></p>
+          </div>
+
+          <div class="info-card warning">
+            <h4>Common wrong usage</h4>
+            <ul class="wrong-list">
+              <li>❌ Scientists monitor about climate changes. → ✅ Scientists monitor climate changes.</li>
+              <li>❌ The teacher monitored to the students’ progress. → ✅ The teacher monitored the students’ progress.
+              </li>
+            </ul>
+          </div>
+
+          <div class="info-card">
+            <h4>TOEFL tip</h4>
+            <p>In TOEFL Reading and Listening, <strong>monitor</strong> often appears in passages about science,
+              medicine, technology, education, and the environment. Pay attention to what is being monitored and why:
+              danger, improvement, change, or performance.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="sense-card">
+        <div class="sense-head">
+          <span class="sense-num">Meaning 2</span>
+          <span class="pos-badge">countable noun</span>
+          <span class="ipa-badge">/ˈmɑː.nə.t̬ɚ/</span>
+        </div>
+
+        <p class="definition">A screen that shows information, pictures, data, or video, especially as part of a
+          computer or electronic system.</p>
+
+        <p class="simple-label">Natural examples</p>
+        <ol class="example-list">
+          <li>The students looked at the monitor while the professor explained the graph.</li>
+          <li>The lab computer has a large monitor for displaying microscope images.</li>
+          <li>The technician connected a second monitor to compare the two data sets.</li>
+          <li>The image on the monitor was too dark, so the researcher adjusted the brightness.</li>
+          <li>Security guards watched several monitors showing live video from the building.</li>
+        </ol>
+
+        <div class="info-grid">
+          <div class="info-card good">
+            <h4>Nuance & implication</h4>
+            <p>As a noun, <strong>monitor</strong> usually means a display screen, not the whole computer. In academic
+              or technical contexts, it may show data, graphs, medical information, camera footage, or experimental
+              results.</p>
+          </div>
+
+          <div class="info-card">
+            <h4>Grammar notes</h4>
+            <p>This noun is countable: <strong>a monitor</strong>, <strong>two monitors</strong>. Common phrases include
+              <strong>computer monitor</strong>, <strong>second monitor</strong>, <strong>security monitor</strong>, and
+              <strong>on the monitor</strong>. Use <strong>screen</strong> when the exact device type is not important.
+            </p>
+          </div>
+
+          <div class="info-card warning">
+            <h4>Common wrong usage</h4>
+            <ul class="wrong-list">
+              <li>❌ I bought a new monitor computer. → ✅ I bought a new computer monitor.</li>
+              <li>❌ The information appeared in the monitor. → ✅ The information appeared on the monitor.</li>
+            </ul>
+          </div>
+
+          <div class="info-card">
+            <h4>TOEFL tip</h4>
+            <p>When <strong>monitor</strong> is a noun in a campus or lab conversation, it may refer to a computer
+              screen, a security screen, or a device that displays measurements. Context will tell you whether it is a
+              screen or a checking device.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="sense-card">
+        <div class="sense-head">
+          <span class="sense-num">Meaning 3</span>
+          <span class="pos-badge">countable noun</span>
+          <span class="ipa-badge">/ˈmɑː.nə.t̬ɚ/</span>
+        </div>
+
+        <p class="definition">A person or device that watches, checks, or measures something to make sure conditions are
+          safe, normal, or acceptable.</p>
+
+        <p class="simple-label">Natural examples</p>
+        <ol class="example-list">
+          <li>The patient was connected to a heart monitor during the procedure.</li>
+          <li>The classroom monitor helped the teacher organize the materials.</li>
+          <li>A radiation monitor detected unsafe levels near the laboratory.</li>
+          <li>The baby monitor allowed the parents to hear sounds from the next room.</li>
+          <li>Election monitors observed the voting process to ensure fairness.</li>
+        </ol>
+
+        <div class="info-grid">
+          <div class="info-card good">
+            <h4>Nuance & implication</h4>
+            <p>This meaning focuses on responsibility: a monitor checks a situation and may warn people if something is
+              wrong. It can refer to a machine, such as a heart monitor, or a person, such as an election monitor or
+              classroom monitor.</p>
+          </div>
+
+          <div class="info-card">
+            <h4>Grammar notes</h4>
+            <p>This noun is countable: <strong>a monitor</strong>, <strong>several monitors</strong>. Common compound
+              nouns include <strong>heart monitor</strong>, <strong>baby monitor</strong>, <strong>radiation
+                monitor</strong>, <strong>election monitor</strong>, and <strong>classroom monitor</strong>. The pattern
+              <strong>a monitor for something</strong> is also possible: <strong>a monitor for oxygen levels</strong>.
+            </p>
+          </div>
+
+          <div class="info-card warning">
+            <h4>Common wrong usage</h4>
+            <ul class="wrong-list">
+              <li>❌ The monitor controlled the patient’s heart rate. → ✅ The monitor measured the patient’s heart rate.
+              </li>
+              <li>❌ The school chose a monitor to the classroom. → ✅ The school chose a monitor for the classroom.</li>
+            </ul>
+          </div>
+
+          <div class="info-card">
+            <h4>TOEFL tip</h4>
+            <p>If <strong>monitor</strong> appears with words like <strong>heart</strong>, <strong>oxygen</strong>,
+              <strong>radiation</strong>, <strong>election</strong>, or <strong>classroom</strong>, it probably means a
+              device or person that checks a situation, not a computer screen.</p>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <section class="section" id="family">
+      <h2>Word Family</h2>
+
+      <div class="family-grid">
+        <article class="family-card">
+          <h3>monitor</h3>
+          <p><strong>Part of speech:</strong> verb</p>
+          <p><strong>Definition:</strong> to watch, check, or measure something carefully over time</p>
+          <ol class="example-list">
+            <li>Researchers monitor changes in sea temperature every month.</li>
+            <li>The university monitors attendance in large lecture courses.</li>
+          </ol>
+        </article>
+
+        <article class="family-card">
+          <h3>monitor</h3>
+          <p><strong>Part of speech:</strong> noun</p>
+          <p><strong>Definition:</strong> a screen, device, or person that displays, checks, or observes information</p>
+          <ol class="example-list">
+            <li>The monitor displayed a clear image of the experiment.</li>
+            <li>An election monitor watched the voting process carefully.</li>
+          </ol>
+        </article>
+
+        <article class="family-card">
+          <h3>monitoring</h3>
+          <p><strong>Part of speech:</strong> noun / gerund</p>
+          <p><strong>Definition:</strong> the process of regularly checking or measuring something</p>
+          <ol class="example-list">
+            <li>Long-term monitoring helped scientists detect changes in the ecosystem.</li>
+            <li>Continuous monitoring is necessary for patients in critical condition.</li>
+          </ol>
+        </article>
+
+        <article class="family-card">
+          <h3>monitored</h3>
+          <p><strong>Part of speech:</strong> adjective / past participle</p>
+          <p><strong>Definition:</strong> checked or watched carefully over time</p>
+          <ol class="example-list">
+            <li>The monitored area showed lower levels of air pollution.</li>
+            <li>Participants were monitored during the sleep experiment.</li>
+          </ol>
+        </article>
+
+        <article class="family-card">
+          <h3>self-monitoring</h3>
+          <p><strong>Part of speech:</strong> noun / adjective</p>
+          <p><strong>Definition:</strong> the act of checking one’s own behavior, performance, or condition</p>
+          <ol class="example-list">
+            <li>Self-monitoring can help students notice their own writing mistakes.</li>
+            <li>The app supports self-monitoring of exercise and sleep patterns.</li>
+          </ol>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="collocations">
+      <h2>Common Collocations</h2>
+
+      <div class="collocation-grid">
+        <article class="collocation-card">
+          <h3>monitor progress</h3>
+          <p><strong>Meaning:</strong> check how much someone or something improves over time</p>
+          <p><strong>Example:</strong> Teachers monitor progress through quizzes, essays, and class participation.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>monitor changes</h3>
+          <p><strong>Meaning:</strong> watch how something becomes different over time</p>
+          <p><strong>Example:</strong> Scientists monitor changes in ocean temperature to study climate patterns.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>monitor behavior</h3>
+          <p><strong>Meaning:</strong> observe how people or animals act</p>
+          <p><strong>Example:</strong> Researchers monitored animal behavior before and after the habitat changed.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>monitor performance</h3>
+          <p><strong>Meaning:</strong> check how well a person, system, or machine works</p>
+          <p><strong>Example:</strong> Engineers monitor performance to detect problems before the system fails.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>monitor heart rate</h3>
+          <p><strong>Meaning:</strong> measure how fast the heart is beating</p>
+          <p><strong>Example:</strong> Doctors monitored the athlete’s heart rate during the stress test.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>monitor air quality</h3>
+          <p><strong>Meaning:</strong> check how clean or polluted the air is</p>
+          <p><strong>Example:</strong> The city monitors air quality near busy roads and industrial areas.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>closely monitor</h3>
+          <p><strong>Meaning:</strong> watch very carefully</p>
+          <p><strong>Example:</strong> The researchers closely monitored the plants during the drought.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>regularly monitor</h3>
+          <p><strong>Meaning:</strong> check repeatedly according to a schedule</p>
+          <p><strong>Example:</strong> Public health officials regularly monitor water quality in the region.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>computer monitor</h3>
+          <p><strong>Meaning:</strong> a screen connected to a computer</p>
+          <p><strong>Example:</strong> The graph appeared clearly on the computer monitor.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>heart monitor</h3>
+          <p><strong>Meaning:</strong> a device that measures a person’s heart activity</p>
+          <p><strong>Example:</strong> The patient wore a heart monitor for twenty-four hours.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>monitoring system</h3>
+          <p><strong>Meaning:</strong> a set of tools or devices used to check conditions</p>
+          <p><strong>Example:</strong> The building uses a monitoring system to detect smoke and gas leaks.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>continuous monitoring</h3>
+          <p><strong>Meaning:</strong> checking something all the time or without long breaks</p>
+          <p><strong>Example:</strong> Continuous monitoring allowed doctors to respond quickly to any change.</p>
+        </article>
+
+        <article class="collocation-card">
+          <h3>environmental monitoring</h3>
+          <p><strong>Meaning:</strong> checking air, water, soil, or wildlife conditions</p>
+          <p><strong>Example:</strong> Environmental monitoring revealed a gradual increase in river pollution.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="synonyms">
+      <h2>Direct Synonyms & Antonyms</h2>
+
+      <div class="info-grid">
+        <div class="info-card good">
+          <h4>Direct synonyms</h4>
+          <div class="word-pill-row">
+            <span class="word-pill">track</span>
+            <span class="word-pill">observe</span>
+            <span class="word-pill">check</span>
+            <span class="word-pill">watch</span>
+            <span class="word-pill">supervise</span>
+          </div>
+          <p><strong>Track</strong> is close when you follow changes over time. <strong>Observe</strong> is more neutral
+            and scientific. <strong>Check</strong> can be a single action, while <strong>monitor</strong> usually
+            suggests repeated checking. <strong>Supervise</strong> is used when a person is responsible for others.</p>
+        </div>
+
+        <div class="info-card warning">
+          <h4>Direct antonyms</h4>
+          <div class="word-pill-row">
+            <span class="word-pill">ignore</span>
+            <span class="word-pill">neglect</span>
+            <span class="word-pill">overlook</span>
+          </div>
+          <p><strong>Ignore</strong> means not to pay attention. <strong>Neglect</strong> means failing to give needed
+            care or attention. <strong>Overlook</strong> means not noticing something, often by accident.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="etymology">
+      <h2>Etymology</h2>
+      <div class="info-card">
+        <p><strong>Monitor</strong> comes from Latin <strong>monere</strong>, meaning “to warn” or “to remind.” This
+          history helps explain the modern meaning: a monitor watches or checks something so that people can be warned
+          if a problem appears. That is why the word is common in medicine, science, security, education, and
+          technology.</p>
+      </div>
+    </section>
+
+    <section class="section" id="exercises">
+      <h2>Practice Exercises</h2>
+
+      <div class="exercise-grid">
+        <article class="exercise-card">
+          <h3>1. Word family choice</h3>
+          <p>Choose the best member of the word family for each blank.</p>
+          <ol class="clean-list">
+            <li>Long-term ______ helped scientists understand changes in the lake’s ecosystem.</li>
+            <li>The patient was ______ carefully after the operation.</li>
+            <li>The laboratory bought a larger ______ to display detailed images.</li>
+          </ol>
+        </article>
+
+        <article class="exercise-card">
+          <h3>2. Correct or incorrect?</h3>
+          <p>Decide whether each sentence uses the word correctly. If it is wrong, correct it.</p>
+          <ol class="clean-list">
+            <li>The researchers monitored air quality near the factory.</li>
+            <li>The information appeared in the monitor.</li>
+            <li>The teacher monitored to the students’ progress during the course.</li>
+          </ol>
+        </article>
+
+        <article class="exercise-card">
+          <h3>3. Collocation practice</h3>
+          <p>Complete each sentence with a natural collocation.</p>
+          <ol class="clean-list">
+            <li>Doctors used a ______ monitor to measure the patient’s heartbeat.</li>
+            <li>Environmental scientists ______ changes in sea level over many years.</li>
+            <li>The school uses regular tests to monitor student ______.</li>
+          </ol>
+        </article>
+      </div>
+
+      <details class="answer-key">
+        <summary>Answer Key</summary>
+        <ol class="clean-list">
+          <li><strong>monitoring</strong> — The sentence needs a noun meaning “the process of checking over time.”</li>
+          <li><strong>monitored</strong> — This is a passive structure: “was monitored.”</li>
+          <li><strong>monitor</strong> — Here it means a display screen.</li>
+          <li><strong>Correct</strong> — “Monitor air quality” is a natural collocation.</li>
+          <li><strong>Incorrect</strong> — Say “appeared <strong>on</strong> the monitor,” not “in the monitor.”</li>
+          <li><strong>Incorrect</strong> — Say “monitored the students’ progress,” with a direct object and no “to.”
+          </li>
+          <li><strong>heart</strong> — “Heart monitor” is a device that checks heart activity.</li>
+          <li><strong>monitor</strong> — “Monitor changes” is a common academic collocation.</li>
+          <li><strong>progress</strong> — “Monitor student progress” is common in education contexts.</li>
+        </ol>
+      </details>
+    </section>
+
+    <footer class="ext-footer">
+      <span>Compiled by <strong>Amir Kooshky</strong></span>
+      <span><a href="https://t.me/KooshkyTOEFL">📚 @KooshkyTOEFL</a></span>
+      <span><a href="https://www.instagram.com/kooshkytoefl">Instagram</a></span>
+      <span><a href="https://t.me/KooshkyTOEFL_pv">Personal Telegram</a></span>
+    </footer>
+
+  </main>
+</body>
+
+</html>

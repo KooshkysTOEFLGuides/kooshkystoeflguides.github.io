@@ -1,0 +1,2524 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
+  <title>TOEFL Reading Cloze Practice | Kooshky's TOEFL Guides</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f4ed;
+      --surface: #fffdf8;
+      --surface-2: #f1ece1;
+      --surface-3: #e6ded0;
+      --text: #181815;
+      --muted: #65615a;
+      --border: #d7cdbc;
+      --accent: #1b554b;
+      --accent-2: #b9822f;
+      --accent-soft: #e7f0ed;
+      --good: #167247;
+      --good-soft: #e8f6ee;
+      --bad: #b23b35;
+      --bad-soft: #fae9e8;
+      --warn: #8a5c14;
+      --warn-soft: #fff3d6;
+      --shadow: 0 18px 55px rgba(24, 22, 17, .13);
+      --shadow-sm: 0 10px 28px rgba(24, 22, 17, .09);
+      --radius-xl: 24px;
+      --radius-lg: 18px;
+      --radius-md: 13px;
+      --header-h: 76px;
+      --safe-bottom: max(16px, env(safe-area-inset-bottom));
+      --focus: 0 0 0 4px rgba(27, 85, 75, .2);
+    }
+
+    html[data-theme="dark"] {
+      color-scheme: dark;
+      --bg: #11120f;
+      --surface: #191b17;
+      --surface-2: #22241f;
+      --surface-3: #2d2f29;
+      --text: #f4efe6;
+      --muted: #b7afa2;
+      --border: #3f3b34;
+      --accent: #8bd2c1;
+      --accent-2: #e2bf73;
+      --accent-soft: #17312c;
+      --good: #77d99f;
+      --good-soft: #143724;
+      --bad: #ffa09b;
+      --bad-soft: #3d1d1b;
+      --warn: #f0cc7b;
+      --warn-soft: #3b3016;
+      --shadow: 0 18px 60px rgba(0, 0, 0, .36);
+      --shadow-sm: 0 10px 30px rgba(0, 0, 0, .25);
+      --focus: 0 0 0 4px rgba(139, 210, 193, .24);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-width: 0;
+      background:
+        radial-gradient(circle at top left, color-mix(in srgb, var(--accent-soft), transparent 20%), transparent 34rem),
+        var(--bg);
+      color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+      text-rendering: optimizeLegibility;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    button,
+    input {
+      font: inherit;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    :focus-visible {
+      outline: none;
+      box-shadow: var(--focus);
+    }
+
+    ::selection {
+      background: color-mix(in srgb, var(--accent), transparent 72%);
+    }
+
+    .skip-link {
+      position: fixed;
+      left: 1rem;
+      top: .75rem;
+      z-index: 900;
+      transform: translateY(-160%);
+      background: var(--accent);
+      color: var(--bg);
+      padding: .65rem .9rem;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 900;
+    }
+
+    .skip-link:focus,
+    .skip-link:focus-visible {
+      transform: translateY(0);
+    }
+
+    .shell {
+      width: min(1240px, calc(100% - 2rem));
+      margin-inline: auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 110;
+      min-height: var(--header-h);
+      padding: max(.82rem, env(safe-area-inset-top)) clamp(1rem, 3vw, 2rem) .82rem;
+      border-bottom: 1px solid var(--border);
+      background: color-mix(in srgb, var(--surface), transparent 10%);
+      backdrop-filter: blur(16px);
+    }
+
+    .header-inner {
+      width: min(1240px, 100%);
+      margin-inline: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .brand {
+      min-width: 0;
+      display: flex;
+      gap: .72rem;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: linear-gradient(145deg, var(--surface), var(--surface-2));
+      box-shadow: var(--shadow-sm);
+      color: var(--accent);
+      font-weight: 950;
+    }
+
+    .brand-title {
+      display: block;
+      font-weight: 950;
+      letter-spacing: -.02em;
+      overflow-wrap: anywhere;
+    }
+
+    .brand-subtitle {
+      display: block;
+      color: var(--muted);
+      font-size: .82rem;
+      overflow-wrap: anywhere;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: .55rem;
+      min-width: 0;
+    }
+
+    .site-nav {
+      display: flex;
+      align-items: center;
+      gap: .35rem;
+      min-width: 0;
+    }
+
+    .nav-link,
+    .ghost-btn,
+    .primary-btn,
+    .icon-btn {
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: var(--surface);
+      color: var(--text);
+      text-decoration: none;
+      white-space: nowrap;
+      padding: .62rem .88rem;
+      font-weight: 800;
+      font-size: .92rem;
+    }
+
+    .nav-link:hover,
+    .ghost-btn:hover,
+    .icon-btn:hover {
+      background: var(--surface-2);
+    }
+
+    .primary-btn {
+      border-color: color-mix(in srgb, var(--accent), var(--border) 30%);
+      background: var(--accent);
+      color: var(--bg);
+    }
+
+    .icon-btn {
+      min-width: 42px;
+      padding-inline: .72rem;
+    }
+
+    .menu-toggle {
+      display: none;
+    }
+
+    main {
+      padding: clamp(1rem, 2.5vw, 2rem) 0 4.5rem;
+    }
+
+    section,
+    article,
+    aside,
+    h1,
+    h2,
+    h3 {
+      scroll-margin-top: calc(var(--header-h) + 1.3rem);
+    }
+
+    .hero {
+      width: min(1240px, calc(100% - 2rem));
+      margin: 1rem auto 1.2rem;
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(260px, .65fr);
+      gap: 1rem;
+      align-items: stretch;
+    }
+
+    .hero-card,
+    .stats-card,
+    .panel,
+    .exercise-card,
+    .spec-card {
+      border: 1px solid var(--border);
+      background: var(--surface);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .hero-card {
+      padding: clamp(1.25rem, 3vw, 2.1rem);
+    }
+
+    .eyebrow {
+      margin: 0 0 .65rem;
+      color: var(--accent);
+      font-size: .75rem;
+      font-weight: 950;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 4.7vw, 4rem);
+      line-height: 1.03;
+      letter-spacing: -.055em;
+      overflow-wrap: anywhere;
+    }
+
+    .lead {
+      max-width: 72ch;
+      margin: 1rem 0 0;
+      color: var(--muted);
+      font-size: clamp(1rem, 1.5vw, 1.12rem);
+    }
+
+    .hero-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .55rem;
+      margin-top: 1.2rem;
+    }
+
+    .stats-card {
+      padding: 1.1rem;
+      display: grid;
+      gap: .75rem;
+      align-content: center;
+    }
+
+    .stat {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: .86rem .95rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--surface-2);
+    }
+
+    .stat span {
+      color: var(--muted);
+    }
+
+    .stat strong {
+      font-size: 1.15rem;
+    }
+
+    .app-layout {
+      display: grid;
+      grid-template-columns: minmax(260px, 330px) minmax(0, 1fr);
+      gap: 1rem;
+      align-items: start;
+    }
+
+    .panel {
+      padding: 1rem;
+      position: sticky;
+      top: calc(var(--header-h) + 1rem);
+      max-height: calc(100vh - var(--header-h) - 2rem);
+      overflow: auto;
+      overscroll-behavior: contain;
+    }
+
+    .panel-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: .75rem;
+      margin-bottom: .8rem;
+    }
+
+    .panel-head h2 {
+      margin: 0;
+      font-size: 1.05rem;
+    }
+
+    .exercise-list {
+      display: grid;
+      gap: .55rem;
+    }
+
+    .exercise-item {
+      width: 100%;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: .55rem;
+      align-items: center;
+      text-align: left;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: .78rem;
+      background: var(--surface);
+      color: var(--text);
+    }
+
+    .exercise-item:hover {
+      background: var(--surface-2);
+    }
+
+    .exercise-item[aria-current="true"] {
+      border-color: color-mix(in srgb, var(--accent), var(--border) 25%);
+      background: var(--accent-soft);
+    }
+
+    .item-title {
+      display: block;
+      font-weight: 900;
+      overflow-wrap: anywhere;
+    }
+
+    .item-meta {
+      display: block;
+      margin-top: .18rem;
+      font-size: .78rem;
+      color: var(--muted);
+      overflow-wrap: anywhere;
+    }
+
+    .score-pill {
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: .3rem .5rem;
+      color: var(--muted);
+      font-size: .78rem;
+      font-weight: 900;
+      background: var(--surface-2);
+      white-space: nowrap;
+    }
+
+    .score-pill.is-good {
+      color: var(--good);
+      background: var(--good-soft);
+      border-color: color-mix(in srgb, var(--good), var(--border) 30%);
+    }
+
+    .score-pill.is-mixed {
+      color: var(--warn);
+      background: var(--warn-soft);
+      border-color: color-mix(in srgb, var(--warn), var(--border) 35%);
+    }
+
+    .exercise-card {
+      overflow: clip;
+    }
+
+    .exercise-toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: .75rem;
+      flex-wrap: wrap;
+      padding: .9rem clamp(1rem, 2.4vw, 1.35rem);
+      border-bottom: 1px solid var(--border);
+      background: color-mix(in srgb, var(--surface), var(--surface-2) 55%);
+    }
+
+    .toolbar-group {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: .55rem;
+    }
+
+    .position-chip {
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: .43rem .65rem;
+      color: var(--muted);
+      background: var(--surface);
+      font-weight: 850;
+      white-space: nowrap;
+    }
+
+    .exercise-body {
+      padding: clamp(1rem, 2.6vw, 1.45rem);
+    }
+
+    .exercise-title {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: start;
+      margin-bottom: 1rem;
+    }
+
+    .exercise-title h2 {
+      margin: 0;
+      font-size: clamp(1.55rem, 3vw, 2.25rem);
+      letter-spacing: -.035em;
+      overflow-wrap: anywhere;
+    }
+
+    .category-chip {
+      flex: 0 0 auto;
+      max-width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: .34rem .58rem;
+      color: var(--accent);
+      background: var(--accent-soft);
+      font-size: .78rem;
+      font-weight: 900;
+      overflow-wrap: anywhere;
+    }
+
+    .passage-area {
+      font-size: clamp(1.08rem, 1.35vw, 1.19rem);
+      line-height: 2.08;
+      padding: clamp(1rem, 2.6vw, 1.45rem);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      background: color-mix(in srgb, var(--surface), var(--surface-2) 35%);
+      overflow-wrap: normal;
+      word-break: normal;
+      hyphens: none;
+    }
+
+    .cloze-word {
+      --slot-w: .82em;
+      --slot-gap: .10em;
+      display: inline-flex;
+      align-items: baseline;
+      gap: .08em;
+      vertical-align: baseline;
+      white-space: nowrap;
+      break-inside: avoid;
+      margin: 0 .16em;
+      padding: .02em .06em .10em;
+      border: 0;
+      border-radius: .42em;
+      background: transparent;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+    }
+
+    .cloze-word.is-active {
+      box-shadow: none;
+      background: color-mix(in srgb, var(--accent-soft), transparent 42%);
+    }
+
+    .blank-prefix {
+      font-weight: 900;
+      letter-spacing: .01em;
+    }
+
+    .blank-box {
+      position: relative;
+      display: inline-flex;
+      align-items: baseline;
+      vertical-align: baseline;
+    }
+
+    .slot-row {
+      display: inline-grid;
+      grid-auto-flow: column;
+      grid-auto-columns: var(--slot-w);
+      gap: var(--slot-gap);
+      align-items: end;
+      vertical-align: baseline;
+    }
+
+    .slot {
+      position: relative;
+      display: inline-grid;
+      place-items: center;
+      width: var(--slot-w);
+      min-width: var(--slot-w);
+      height: 1.34em;
+      border: 0;
+      border-bottom: 2px solid var(--accent);
+      border-radius: .08em;
+      background: color-mix(in srgb, var(--accent-soft), transparent 48%);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      font-size: .98em;
+      font-weight: 950;
+      line-height: 1;
+      text-align: center;
+      color: var(--text);
+    }
+
+    .slot.has-char {
+      background: color-mix(in srgb, var(--accent-soft), transparent 36%);
+    }
+
+    .slot.is-caret::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: .17em;
+      bottom: .16em;
+      width: 2px;
+      border-radius: 999px;
+      background: var(--accent);
+      transform: translateX(-50%);
+      animation: caretBlink 1s steps(1, end) infinite;
+      pointer-events: none;
+    }
+
+    .slot.has-char.is-caret::after {
+      left: .08em;
+      transform: none;
+    }
+
+    .slot.is-caret-end::after {
+      left: calc(100% + var(--slot-gap));
+      transform: none;
+    }
+
+    @keyframes caretBlink {
+
+      0%,
+      49% {
+        opacity: 1;
+      }
+
+      50%,
+      100% {
+        opacity: 0;
+      }
+    }
+
+    .blank-proxy {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: transparent;
+      caret-color: transparent;
+      opacity: .01;
+      outline: none;
+      appearance: none;
+      -webkit-appearance: none;
+    }
+
+    .cloze-word.is-correct {
+      background: color-mix(in srgb, var(--good-soft), transparent 16%);
+    }
+
+    .cloze-word.is-correct .slot {
+      border-bottom-color: var(--good);
+      background: color-mix(in srgb, var(--good-soft), var(--surface) 38%);
+    }
+
+    .cloze-word.is-incorrect {
+      background: color-mix(in srgb, var(--bad-soft), transparent 18%);
+    }
+
+    .cloze-word.is-incorrect .slot {
+      border-bottom-color: var(--bad);
+      background: color-mix(in srgb, var(--bad-soft), var(--surface) 30%);
+    }
+
+    .hint-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem;
+      margin-top: .9rem;
+      color: var(--muted);
+      font-size: .88rem;
+    }
+
+    .hint-chip {
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: .32rem .56rem;
+      background: var(--surface);
+      overflow-wrap: anywhere;
+    }
+
+    .results {
+      display: none;
+      margin-top: 1rem;
+      border-top: 1px solid var(--border);
+      padding-top: 1rem;
+    }
+
+    .results.is-visible {
+      display: block;
+    }
+
+    .result-summary {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: .75rem;
+      flex-wrap: wrap;
+      padding: 1rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      background: var(--surface-2);
+      margin-bottom: 1rem;
+    }
+
+    .small-muted {
+      color: var(--muted);
+      font-size: .88rem;
+    }
+
+    .answer-details {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      background: var(--surface);
+      margin-top: .8rem;
+      overflow: clip;
+    }
+
+    .answer-details summary {
+      padding: .9rem 1rem;
+      cursor: pointer;
+      font-weight: 950;
+      background: var(--surface-2);
+    }
+
+    .answer-grid,
+    .clue-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+      gap: .75rem;
+      padding: 1rem;
+    }
+
+    .answer-card,
+    .clue-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: .9rem;
+      background: var(--surface);
+      overflow-wrap: anywhere;
+    }
+
+    .answer-card.correct {
+      border-color: color-mix(in srgb, var(--good), var(--border) 30%);
+      background: var(--good-soft);
+    }
+
+    .answer-card.incorrect {
+      border-color: color-mix(in srgb, var(--bad), var(--border) 25%);
+      background: var(--bad-soft);
+    }
+
+    .answer-top {
+      display: flex;
+      justify-content: space-between;
+      gap: .6rem;
+      margin-bottom: .45rem;
+    }
+
+    .answer-num,
+    .status-dot {
+      font-weight: 950;
+    }
+
+    .answer-line {
+      margin: .3rem 0;
+    }
+
+    .clue-card h4 {
+      margin: 0 0 .4rem;
+    }
+
+    .clue-type {
+      display: inline-flex;
+      margin-bottom: .45rem;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: .25rem .5rem;
+      color: var(--accent);
+      background: var(--accent-soft);
+      font-weight: 900;
+      font-size: .82rem;
+    }
+
+    .clue-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .spec-card {
+      margin-top: 1rem;
+      padding: 1rem;
+    }
+
+    .spec-card summary {
+      cursor: pointer;
+      font-weight: 950;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      background: var(--surface-2);
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+    }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+    }
+
+    .footer {
+      margin-top: 2rem;
+      padding: 1.4rem 0 calc(1.4rem + var(--safe-bottom));
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .footer a {
+      font-weight: 850;
+    }
+
+    .lookup-popover {
+      position: fixed;
+      z-index: 520;
+      display: none;
+      max-width: min(330px, calc(100vw - 1.2rem));
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+      padding: .58rem;
+    }
+
+    .lookup-popover.is-visible {
+      display: block;
+    }
+
+    .lookup-word {
+      padding: .35rem .45rem .45rem;
+      color: var(--muted);
+      font-weight: 850;
+      overflow-wrap: anywhere;
+    }
+
+    .lookup-links {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: .4rem;
+    }
+
+    .lookup-links a {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: .52rem .62rem;
+      text-decoration: none;
+      background: var(--surface-2);
+      font-weight: 850;
+      overflow-wrap: anywhere;
+    }
+
+    .promo-backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 650;
+      display: none;
+      align-items: start;
+      justify-content: center;
+      padding: calc(var(--header-h) + 1rem) 1rem 1rem;
+      background: rgba(0, 0, 0, .28);
+    }
+
+    .promo-backdrop.is-visible {
+      display: flex;
+    }
+
+    .promo-card {
+      width: min(560px, 100%);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      background: var(--surface);
+      color: var(--text);
+      box-shadow: var(--shadow);
+      padding: 1rem;
+    }
+
+    .promo-head {
+      display: flex;
+      justify-content: space-between;
+      gap: .75rem;
+      align-items: start;
+    }
+
+    .promo-head h2 {
+      margin: 0;
+      letter-spacing: -.03em;
+    }
+
+    .promo-card p {
+      color: var(--muted);
+    }
+
+    .promo-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .55rem;
+    }
+
+    .toast {
+      position: fixed;
+      left: 50%;
+      bottom: calc(var(--safe-bottom) + 1rem);
+      transform: translateX(-50%) translateY(140%);
+      z-index: 700;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: var(--surface);
+      color: var(--text);
+      box-shadow: var(--shadow);
+      padding: .72rem 1rem;
+      font-weight: 900;
+      transition: transform .2s ease;
+      max-width: calc(100vw - 2rem);
+      overflow-wrap: anywhere;
+    }
+
+    .toast.is-visible {
+      transform: translateX(-50%) translateY(0);
+    }
+
+    .to-top {
+      position: fixed;
+      right: max(1rem, env(safe-area-inset-right));
+      bottom: calc(var(--safe-bottom) + 1rem);
+      z-index: 430;
+      display: none;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .to-top.is-visible {
+      display: inline-flex;
+    }
+
+    body.promo-open .to-top {
+      bottom: calc(var(--safe-bottom) + 5.5rem);
+    }
+
+    @media (max-width: 860px) {
+      :root {
+        --header-h: 70px;
+      }
+
+      .menu-toggle {
+        display: inline-flex;
+      }
+
+      .header-actions {
+        margin-left: auto;
+      }
+
+      .site-nav {
+        position: fixed;
+        top: calc(var(--header-h) + .5rem);
+        right: max(1rem, env(safe-area-inset-right));
+        left: max(1rem, env(safe-area-inset-left));
+        z-index: 120;
+        display: none;
+        grid-template-columns: 1fr;
+        padding: .75rem;
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        background: var(--surface);
+        box-shadow: var(--shadow);
+      }
+
+      .site-nav.is-open {
+        display: grid;
+      }
+
+      .nav-link {
+        width: 100%;
+        text-align: center;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .app-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .exercise-card {
+        order: 1;
+      }
+
+      .panel {
+        order: 2;
+        position: static;
+        max-height: min(55vh, 430px);
+        overflow: auto;
+        margin-top: .25rem;
+      }
+
+      .panel-head {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        padding-bottom: .7rem;
+        background: var(--surface);
+      }
+    }
+
+    @media (max-width: 560px) {
+
+      .shell,
+      .hero {
+        width: min(100% - 1rem, 1240px);
+      }
+
+      .brand-subtitle {
+        display: none;
+      }
+
+      .hero-card {
+        padding: 1.1rem;
+      }
+
+      .stats-card {
+        padding: .85rem;
+      }
+
+      .exercise-toolbar {
+        align-items: stretch;
+      }
+
+      .toolbar-group {
+        width: 100%;
+      }
+
+      .toolbar-group .ghost-btn,
+      .toolbar-group .primary-btn,
+      .toolbar-group .position-chip {
+        flex: 1 1 auto;
+        text-align: center;
+      }
+
+      .exercise-title {
+        flex-direction: column;
+      }
+
+      .passage-area {
+        line-height: 2.18;
+        padding: .9rem;
+      }
+
+      .cloze-word {
+        --slot-w: .78em;
+        --slot-gap: .09em;
+        margin-inline: .10em;
+      }
+
+      .lookup-links {
+        grid-template-columns: 1fr;
+      }
+
+      .promo-backdrop {
+        padding-top: calc(var(--header-h) + .75rem);
+      }
+
+      .to-top {
+        right: max(.75rem, env(safe-area-inset-right));
+        bottom: calc(var(--safe-bottom) + .75rem);
+      }
+
+      body.promo-open .to-top {
+        bottom: calc(var(--safe-bottom) + 5.75rem);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#practice">Skip to practice</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="Kooshky's TOEFL Guides home">
+        <span class="brand-mark">K</span>
+        <span class="brand-text">
+          <span class="brand-title">Kooshky's TOEFL Guides</span>
+          <span class="brand-subtitle">Reading cloze practice</span>
+        </span>
+      </a>
+      <div class="header-actions">
+        <button class="icon-btn menu-toggle" type="button" id="menuToggle" aria-expanded="false"
+          aria-controls="siteNav">Menu</button>
+        <nav class="site-nav" id="siteNav" aria-label="Main links">
+          <a class="nav-link" href="#practice">Practice</a>
+          <a class="nav-link" href="#exerciseListPanel">Exercises</a>
+          <a class="nav-link" href="https://t.me/KooshkyTOEFL" target="_blank" rel="noopener">Telegram</a>
+          <a class="nav-link" href="https://www.instagram.com/kooshkytoefl" target="_blank" rel="noopener">Instagram</a>
+          <a class="nav-link" href="https://t.me/kooshkyTOEFL_pv" target="_blank" rel="noopener">DM</a>
+        </nav>
+        <button class="icon-btn" type="button" id="themeToggle" aria-label="Toggle day and night mode">◐</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="hero-card">
+        <p class="eyebrow">TOEFL Reading Fill-the-Blanks</p>
+        <h1 id="heroTitle">Practice suffix cloze exercises with instant review.</h1>
+        <p class="lead">Type the missing ending for each blanked word. Your answers are saved on this browser, and
+          nothing is checked until you press <b>Check answers</b>.</p>
+        <div class="hero-links">
+          <a class="primary-btn" href="https://t.me/KooshkyTOEFL" target="_blank" rel="noopener">More lessons on
+            Telegram</a>
+          <a class="ghost-btn" href="https://www.instagram.com/kooshkytoefl" target="_blank" rel="noopener">Follow on
+            Instagram</a>
+          <a class="ghost-btn" href="https://t.me/kooshkyTOEFL_pv" target="_blank" rel="noopener">Personal Telegram
+            DM</a>
+        </div>
+      </div>
+      <aside class="stats-card" aria-label="Practice stats">
+        <div class="stat"><span>Exercises</span><strong id="statExercises">0</strong></div>
+        <div class="stat"><span>Checked</span><strong id="statChecked">0</strong></div>
+        <div class="stat"><span>Average score</span><strong id="statAverage">—</strong></div>
+      </aside>
+    </section>
+
+    <section class="shell app-layout" id="practice" aria-label="Interactive practice area">
+      <aside class="panel" id="exerciseListPanel" aria-labelledby="listTitle">
+        <div class="panel-head">
+          <h2 id="listTitle">Exercises</h2>
+          <span class="small-muted" id="listCount">—</span>
+        </div>
+        <div class="exercise-list" id="exerciseList"></div>
+      </aside>
+
+      <article class="exercise-card" aria-live="polite">
+        <div class="exercise-toolbar">
+          <div class="toolbar-group">
+            <button class="ghost-btn" type="button" id="prevBtn">← Previous</button>
+            <span class="position-chip" id="currentPosition">—</span>
+            <button class="ghost-btn" type="button" id="nextBtn">Next →</button>
+          </div>
+          <div class="toolbar-group">
+            <button class="primary-btn" type="button" id="checkBtn">Check answers</button>
+            <button class="ghost-btn" type="button" id="clearBtn">Clear this exercise</button>
+          </div>
+        </div>
+        <div class="exercise-body" id="exerciseHost"></div>
+      </article>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="shell footer-inner">
+      <div>Part of <strong>Kooshky's TOEFL Guides</strong>. For more TOEFL lessons and practice, check the Telegram
+        channel and Instagram page.</div>
+      <div>
+        <a href="https://t.me/KooshkyTOEFL" target="_blank" rel="noopener">Telegram</a> ·
+        <a href="https://www.instagram.com/kooshkytoefl" target="_blank" rel="noopener">Instagram</a> ·
+        <a href="https://t.me/kooshkyTOEFL_pv" target="_blank" rel="noopener">DM</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="lookup-popover" id="lookupPopover" role="dialog" aria-label="Dictionary lookup links">
+    <div class="lookup-word" id="lookupWord"></div>
+    <div class="lookup-links" id="lookupLinks"></div>
+  </div>
+
+  <div class="promo-backdrop" id="promoBackdrop" role="dialog" aria-modal="true" aria-labelledby="promoTitle">
+    <div class="promo-card">
+      <div class="promo-head">
+        <div>
+          <p class="eyebrow">More TOEFL practice</p>
+          <h2 id="promoTitle">Want more exercises like this?</h2>
+        </div>
+        <button class="icon-btn" type="button" id="promoClose" aria-label="Close invitation">×</button>
+      </div>
+      <p>Join <strong>Kooshky's TOEFL Guides</strong> on Telegram for more TOEFL reading, vocabulary, grammar, and
+        test-strategy content.</p>
+      <div class="promo-actions">
+        <a class="primary-btn" href="https://t.me/KooshkyTOEFL" target="_blank" rel="noopener">Open Telegram Channel</a>
+        <a class="ghost-btn" href="https://www.instagram.com/kooshkytoefl" target="_blank" rel="noopener">See
+          Instagram</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <button class="icon-btn to-top" id="toTop" type="button" aria-label="Go to top">↑ Top</button>
+
+  <script>
+    /*
+      Reusable JS data format:
+      - EXERCISE_DATA is an array.
+      - id: unique stable string. Do not change it after students start using the file, because storage uses it.
+      - title/category: shown in the UI.
+      - template: passage text. Use {{0}}, {{1}}, ... where each cloze word should appear.
+      - blanks[i].prefix: visible beginning of the word.
+      - blanks[i].hidden: missing suffix students type. Its length controls the number of visible slots. Do not leave this empty.
+      - blanks[i].answer: full word. Used in the answer key and for checking fallback.
+      - clues[i].answer/type/explanation: shown after Check answers.
+      Append new exercises by adding more objects to the array.
+    */
+    const EXERCISE_DATA = [
+      {
+        id: "1001",
+        title: "Glaciers and Valley Formation",
+        category: "Earth Science",
+        template: "Glaciers are slow-moving masses of ice that reshape mountain landscapes over long periods. {{0}} a {{1}} moves {{2}}, it {{3}} rock {{4}} the {{5}} floor {{6}} carries {{7}} fragments {{8}} the {{9}}. This steady erosion can carve narrow river valleys into wider U-shaped valleys. When the climate warms, the ice may melt and leave behind ridges of rock, sand, and clay called moraines. Such deposits help geologists reconstruct the direction and size of former glaciers.",
+        blanks: [
+          { prefix: "A", hidden: "s", answer: "As" },
+          { prefix: "gla", hidden: "cier", answer: "glacier" },
+          { prefix: "down", hidden: "hill", answer: "downhill" },
+          { prefix: "scr", hidden: "apes", answer: "scrapes" },
+          { prefix: "fr", hidden: "om", answer: "from" },
+          { prefix: "val", hidden: "ley", answer: "valley" },
+          { prefix: "a", hidden: "nd", answer: "and" },
+          { prefix: "th", hidden: "ese", answer: "these" },
+          { prefix: "wit", hidden: "hin", answer: "within" },
+          { prefix: "i", hidden: "ce", answer: "ice" }
+        ],
+        clues: [
+          {
+            answer: "As",
+            type: "fixed-expression + chronology clue",
+            explanation: "The sentence describes what happens during the time a glacier moves, so “As” naturally introduces the simultaneous action."
+          },
+          {
+            answer: "glacier",
+            type: "reference + topic-domain clue",
+            explanation: "The first sentence introduces glaciers, and “a ___ moves” refers back to one of those slow-moving ice masses."
+          },
+          {
+            answer: "downhill",
+            type: "grammar-slot + common-world-knowledge clue",
+            explanation: "After “moves,” an adverb of direction is needed, and ice flows from higher land to lower land."
+          },
+          {
+            answer: "scrapes",
+            type: "grammar-slot + later-confirmation clue",
+            explanation: "The subject “it” needs a present-tense verb, and the next sentence confirms this action as “erosion.”"
+          },
+          {
+            answer: "from",
+            type: "preposition-pattern clue",
+            explanation: "The natural pattern is “scrapes rock from the valley floor,” meaning the rock is removed out of that surface."
+          },
+          {
+            answer: "valley",
+            type: "topic-domain + collocation clue",
+            explanation: "The passage is about glaciers reshaping mountain landscapes, and “valley floor” is the standard landform phrase."
+          },
+          {
+            answer: "and",
+            type: "parallel-structure clue",
+            explanation: "The sentence joins two parallel present-tense verbs: “scrapes” and “carries.”"
+          },
+          {
+            answer: "these",
+            type: "reference / cohesion clue",
+            explanation: "“These fragments” points back to the pieces of rock scraped from the valley floor."
+          },
+          {
+            answer: "within",
+            type: "preposition-pattern + meaning clue",
+            explanation: "The phrase shows the fragments are inside the glacier, so “within the ice” is the natural spatial expression."
+          },
+          {
+            answer: "ice",
+            type: "topic-domain clue",
+            explanation: "The first sentence defines glaciers as masses of ice, so fragments carried “within the ___” are within the ice."
+          }
+        ]
+      },
+      {
+        id: "1002",
+        title: "Seed Dispersal",
+        category: "Ecology",
+        template: "Seed dispersal helps plants spread their offspring beyond the parent plant. {{0}} seeds {{1}} wings {{2}} feathery {{3}} that {{4}} the {{5}} and {{6}} them {{7}} open {{8}}. Others {{9}} enclosed in sweet fruits that animals eat, allowing the seeds to pass through the digestive system. By moving seeds away from crowded areas, dispersal reduces competition for light, water, and minerals. It also helps plant populations reach new habitats after disturbances such as fires or floods.",
+        blanks: [
+          { prefix: "So", hidden: "me", answer: "Some" },
+          { prefix: "ha", hidden: "ve", answer: "have" },
+          { prefix: "o", hidden: "r", answer: "or" },
+          { prefix: "struc", hidden: "tures", answer: "structures" },
+          { prefix: "ca", hidden: "tch", answer: "catch" },
+          { prefix: "wi", hidden: "nd", answer: "wind" },
+          { prefix: "ca", hidden: "rry", answer: "carry" },
+          { prefix: "acr", hidden: "oss", answer: "across" },
+          { prefix: "gro", hidden: "und", answer: "ground" },
+          { prefix: "a", hidden: "re", answer: "are" }
+        ],
+        clues: [
+          {
+            answer: "Some",
+            type: "contrast / concession + parallel-structure clue",
+            explanation: "The later word “Others” creates the common contrast pattern “Some seeds... Others...”"
+          },
+          {
+            answer: "have",
+            type: "grammar-slot clue",
+            explanation: "The plural subject “seeds” needs a present-tense verb before the object “wings.”"
+          },
+          {
+            answer: "or",
+            type: "parallel-list clue",
+            explanation: "The sentence lists two possible wind-catching features: “wings” and “feathery structures.”"
+          },
+          {
+            answer: "structures",
+            type: "grammar-slot + parallel-list clue",
+            explanation: "The adjective “feathery” needs a plural noun, and it is parallel with “wings.”"
+          },
+          {
+            answer: "catch",
+            type: "grammar-slot + cause-effect clue",
+            explanation: "“Structures that ___ the wind” requires a base verb, and catching the wind explains how the seeds move."
+          },
+          {
+            answer: "wind",
+            type: "collocation + topic-domain clue",
+            explanation: "Seeds with wings or feathery structures are carried by air movement, and “catch the wind” is a natural phrase."
+          },
+          {
+            answer: "carry",
+            type: "parallel-structure + cause-effect clue",
+            explanation: "The verb is parallel with “catch,” and it explains the result of wind contact: the wind carries the seeds."
+          },
+          {
+            answer: "across",
+            type: "preposition-pattern + meaning clue",
+            explanation: "The phrase “carry them ___ open ground” needs a movement preposition showing travel over an area."
+          },
+          {
+            answer: "ground",
+            type: "grammar-slot + topic-domain clue",
+            explanation: "“Open” modifies a noun referring to a place, and seeds can be carried across open ground."
+          },
+          {
+            answer: "are",
+            type: "grammar-slot clue",
+            explanation: "“Others ___ enclosed” requires the plural auxiliary “are” before the past participle “enclosed.”"
+          }
+        ]
+      },
+      {
+        id: "1003",
+        title: "Ancient Pottery and Daily Life",
+        category: "Archaeology",
+        template: "Archaeologists study pottery because broken pots can reveal how ancient people stored, cooked, and traded goods. {{0}} a {{1}} was {{2}} from {{3}} clay, {{4}} shape {{5}} markings {{6}} show {{7}} habits {{8}} a {{9}}. If similar designs appear at distant sites, researchers may infer that communities exchanged vessels or copied each other's styles. Residues of grains, oils, or spices can also show what people prepared in the pots. Together, these clues help reconstruct ordinary life in past communities.",
+        blanks: [
+          { prefix: "Wh", hidden: "en", answer: "When" },
+          { prefix: "p", hidden: "ot", answer: "pot" },
+          { prefix: "ma", hidden: "de", answer: "made" },
+          { prefix: "lo", hidden: "cal", answer: "local" },
+          { prefix: "i", hidden: "ts", answer: "its" },
+          { prefix: "a", hidden: "nd", answer: "and" },
+          { prefix: "co", hidden: "uld", answer: "could" },
+          { prefix: "da", hidden: "ily", answer: "daily" },
+          { prefix: "wit", hidden: "hin", answer: "within" },
+          { prefix: "settle", hidden: "ment", answer: "settlement" }
+        ],
+        clues: [
+          {
+            answer: "When",
+            type: "chronology / sequence clue",
+            explanation: "The sentence describes the condition under which pottery can provide evidence, so “When” naturally introduces the time or situation."
+          },
+          {
+            answer: "pot",
+            type: "topic-domain + article clue",
+            explanation: "The first sentence discusses pottery and broken pots, and “a ___ was made” requires a singular count noun."
+          },
+          {
+            answer: "made",
+            type: "grammar-slot + fixed-expression clue",
+            explanation: "The passive structure “was ___ from local clay” requires a past participle, and “made from” is the natural phrase."
+          },
+          {
+            answer: "local",
+            type: "grammar-slot + meaning clue",
+            explanation: "The word modifies “clay,” and the idea is that clay from the nearby area can connect a pot to a place."
+          },
+          {
+            answer: "its",
+            type: "reference / cohesion clue",
+            explanation: "“Its” refers back to the pot and introduces features belonging to that pot: its shape and markings."
+          },
+          {
+            answer: "and",
+            type: "parallel-list clue",
+            explanation: "The sentence joins two related features of pottery: “shape” and “markings.”"
+          },
+          {
+            answer: "could",
+            type: "grammar-slot clue",
+            explanation: "Before the base verb “show,” the sentence needs a modal auxiliary, and “could show” expresses possible evidence."
+          },
+          {
+            answer: "daily",
+            type: "collocation + meaning clue",
+            explanation: "“Daily habits” is a natural academic phrase, and pottery can reveal ordinary activities such as cooking and storage."
+          },
+          {
+            answer: "within",
+            type: "preposition-pattern + meaning clue",
+            explanation: "The phrase shows where those habits occurred, so “within a settlement” means inside a community or village."
+          },
+          {
+            answer: "settlement",
+            type: "topic-domain + morphology clue",
+            explanation: "In archaeology, a settlement is a place where people lived, and the suffix “-ment” forms a common noun."
+          }
+        ]
+      },
+      {
+        id: "1004",
+        title: "Solar Panels and Electricity",
+        category: "Technology",
+        template: "Solar panels convert sunlight into electricity that can power homes, schools, and small devices. {{0}} light {{1}} the {{2}}, tiny {{3}} inside {{4}} electric {{5}} that {{6}} through {{7}} and {{8}} a {{9}}. This current can be used immediately or stored in batteries for later use. Solar power is especially useful in sunny regions, but clouds and night reduce the amount of energy produced. For that reason, many systems combine solar panels with other sources of electricity.",
+        blanks: [
+          { prefix: "Wh", hidden: "en", answer: "When" },
+          { prefix: "hi", hidden: "ts", answer: "hits" },
+          { prefix: "pan", hidden: "el", answer: "panel" },
+          { prefix: "mater", hidden: "ials", answer: "materials" },
+          { prefix: "rele", hidden: "ase", answer: "release" },
+          { prefix: "cha", hidden: "rges", answer: "charges" },
+          { prefix: "mo", hidden: "ve", answer: "move" },
+          { prefix: "wi", hidden: "res", answer: "wires" },
+          { prefix: "cre", hidden: "ate", answer: "create" },
+          { prefix: "cur", hidden: "rent", answer: "current" }
+        ],
+        clues: [
+          {
+            answer: "When",
+            type: "chronology / sequence clue",
+            explanation: "The sentence describes what happens at the moment sunlight reaches the panel, so “When” naturally introduces the process."
+          },
+          {
+            answer: "hits",
+            type: "grammar-slot + common-world-knowledge clue",
+            explanation: "The subject “light” needs a present-tense verb, and light naturally “hits” or reaches a surface."
+          },
+          {
+            answer: "panel",
+            type: "reference / cohesion clue",
+            explanation: "“The panel” refers back to “Solar panels” in the first sentence."
+          },
+          {
+            answer: "materials",
+            type: "grammar-slot + topic-domain clue",
+            explanation: "The adjective “tiny” needs a plural noun, and solar panels contain materials that react to light."
+          },
+          {
+            answer: "release",
+            type: "grammar-slot + cause-effect clue",
+            explanation: "The plural subject “materials” needs a base present-tense verb, and the result of light hitting the panel is that electric charges are released."
+          },
+          {
+            answer: "charges",
+            type: "collocation + topic-domain clue",
+            explanation: "“Electric charges” is a standard science phrase, and the passage is explaining how electricity is produced."
+          },
+          {
+            answer: "move",
+            type: "grammar-slot + meaning clue",
+            explanation: "The plural noun “charges” needs a verb, and charges moving through wires explains electric current."
+          },
+          {
+            answer: "wires",
+            type: "topic-domain + common-world-knowledge clue",
+            explanation: "Electric charges commonly move through wires, making this a familiar electricity-related noun."
+          },
+          {
+            answer: "create",
+            type: "parallel-structure + cause-effect clue",
+            explanation: "The verb is parallel with “move” and explains the result of moving charges: they create a current."
+          },
+          {
+            answer: "current",
+            type: "later-confirmation + topic-domain clue",
+            explanation: "The next sentence begins “This current,” confirming that the missing word is “current.”"
+          }
+        ]
+      },
+      {
+        id: "1005",
+        title: "Working Memory in Learning",
+        category: "Psychology and Education",
+        template: "Working memory is the mental system that holds information briefly while we use it. A student {{0}} a {{1}} problem, {{2}} example, {{3}} keep {{4}} numbers {{5}} mind {{6}} deciding {{7}} operation {{8}} perform {{9}}. Because this system has limited capacity, distractions can reduce accuracy and slow learning. Teachers often support working memory by presenting information in small steps and connecting new material to familiar ideas. Such strategies help students manage attention during complex tasks.",
+        blanks: [
+          { prefix: "solv", hidden: "ing", answer: "solving" },
+          { prefix: "ma", hidden: "th", answer: "math" },
+          { prefix: "f", hidden: "or", answer: "for" },
+          { prefix: "m", hidden: "ay", answer: "may" },
+          { prefix: "sev", hidden: "eral", answer: "several" },
+          { prefix: "i", hidden: "n", answer: "in" },
+          { prefix: "wh", hidden: "ile", answer: "while" },
+          { prefix: "wh", hidden: "ich", answer: "which" },
+          { prefix: "t", hidden: "o", answer: "to" },
+          { prefix: "ne", hidden: "xt", answer: "next" }
+        ],
+        clues: [
+          {
+            answer: "solving",
+            type: "grammar-slot + morphology clue",
+            explanation: "After “A student,” the -ing form describes what the student is doing."
+          },
+          {
+            answer: "math",
+            type: "collocation + example clue",
+            explanation: "“A math problem” is a common school example, and it illustrates how working memory is used."
+          },
+          {
+            answer: "for",
+            type: "fixed-expression clue",
+            explanation: "The standard phrase is “for example,” which introduces the student situation as an example."
+          },
+          {
+            answer: "may",
+            type: "grammar-slot clue",
+            explanation: "Before the base verb “keep,” the sentence needs a modal auxiliary such as “may.”"
+          },
+          {
+            answer: "several",
+            type: "article / determiner + quantity clue",
+            explanation: "The plural noun “numbers” needs a determiner, and “several” fits the idea of holding multiple items in memory."
+          },
+          {
+            answer: "in",
+            type: "fixed-expression clue",
+            explanation: "“Keep numbers in mind” is the standard expression for mentally holding information."
+          },
+          {
+            answer: "while",
+            type: "chronology / sequence clue",
+            explanation: "The sentence describes two actions happening at the same time: keeping numbers in mind and deciding what to do."
+          },
+          {
+            answer: "which",
+            type: "grammar-slot clue",
+            explanation: "“Deciding ___ operation” requires a question word before the noun “operation.”"
+          },
+          {
+            answer: "to",
+            type: "grammar-slot clue",
+            explanation: "The phrase “operation to perform” uses the infinitive marker “to.”"
+          },
+          {
+            answer: "next",
+            type: "chronology / sequence clue",
+            explanation: "The student is deciding the following step in the problem, so “next” signals sequence."
+          }
+        ]
+      },
+      {
+        id: "1006",
+        title: "Wetlands as Natural Filters",
+        category: "Ecology",
+        template: "Wetlands are areas where water covers the ground for part or all of the year. {{0}} water {{1}} slowly {{2}} a {{3}}, plants {{4}} soil {{5}} mud, {{6}} nutrients, {{7}} provide {{8}} for {{9}}. Some of these nutrients would otherwise flow into rivers and lakes, where they could feed too much algae. Wetlands also reduce flooding because they hold excess water after heavy rain. For these reasons, many communities protect or restore them.",
+        blanks: [
+          { prefix: "A", hidden: "s", answer: "As" },
+          { prefix: "mo", hidden: "ves", answer: "moves" },
+          { prefix: "thr", hidden: "ough", answer: "through" },
+          { prefix: "wet", hidden: "land", answer: "wetland" },
+          { prefix: "a", hidden: "nd", answer: "and" },
+          { prefix: "tr", hidden: "ap", answer: "trap" },
+          { prefix: "abs", hidden: "orb", answer: "absorb" },
+          { prefix: "a", hidden: "nd", answer: "and" },
+          { prefix: "she", hidden: "lter", answer: "shelter" },
+          { prefix: "ins", hidden: "ects", answer: "insects" }
+        ],
+        clues: [
+          {
+            answer: "As",
+            type: "chronology / sequence clue",
+            explanation: "The sentence describes what happens while water passes through a wetland, so “As” naturally introduces the process."
+          },
+          {
+            answer: "moves",
+            type: "grammar-slot + meaning clue",
+            explanation: "The subject “water” needs a present-tense verb, and water can move slowly through a wetland."
+          },
+          {
+            answer: "through",
+            type: "preposition-pattern clue",
+            explanation: "The phrase “moves slowly ___ a wetland” requires a preposition showing movement inside and across an area."
+          },
+          {
+            answer: "wetland",
+            type: "reference + topic-domain clue",
+            explanation: "The first sentence introduces wetlands, and the phrase “a wetland” refers back to one example of that land type."
+          },
+          {
+            answer: "and",
+            type: "parallel-list clue",
+            explanation: "The sentence joins two subjects, “plants” and “soil,” that both help filter the water."
+          },
+          {
+            answer: "trap",
+            type: "grammar-slot + cause-effect clue",
+            explanation: "The plural subject “plants and soil” needs a present-tense verb, and trapping mud explains how wetlands clean water."
+          },
+          {
+            answer: "absorb",
+            type: "parallel-structure + meaning clue",
+            explanation: "“Absorb” is parallel with “trap,” and nutrients are substances that plants and soil can take in."
+          },
+          {
+            answer: "and",
+            type: "parallel-list clue",
+            explanation: "The sentence lists three functions of wetlands: trap mud, absorb nutrients, and provide shelter."
+          },
+          {
+            answer: "shelter",
+            type: "collocation + topic-domain clue",
+            explanation: "“Provide shelter for insects” is a natural phrase, and wetlands commonly support small animals."
+          },
+          {
+            answer: "insects",
+            type: "topic-domain + common-world-knowledge clue",
+            explanation: "Wetlands provide habitat for small animals, and insects are a familiar group found near water and plants."
+          }
+        ]
+      },
+      {
+        id: "1007",
+        title: "Bird Migration",
+        category: "Life Science",
+        template: "Migration is the seasonal movement of animals from one region to another. {{0}} days {{1}} shorter, {{2}} birds {{3}} flying {{4}}, where {{5}} weather {{6}} available {{7}} help {{8}} survive {{9}}. In spring, the same birds often return north to breed and raise young. Scientists think migration is guided by daylight, temperature, landmarks, and Earth's magnetic field. Although the journey can be risky, it allows animals to use resources that appear in different places at different times.",
+        blanks: [
+          { prefix: "Wh", hidden: "en", answer: "When" },
+          { prefix: "bec", hidden: "ome", answer: "become" },
+          { prefix: "ma", hidden: "ny", answer: "many" },
+          { prefix: "be", hidden: "gin", answer: "begin" },
+          { prefix: "so", hidden: "uth", answer: "south" },
+          { prefix: "war", hidden: "mer", answer: "warmer" },
+          { prefix: "a", hidden: "nd", answer: "and" },
+          { prefix: "fo", hidden: "od", answer: "food" },
+          { prefix: "th", hidden: "em", answer: "them" },
+          { prefix: "win", hidden: "ter", answer: "winter" }
+        ],
+        clues: [
+          {
+            answer: "When",
+            type: "chronology / sequence clue",
+            explanation: "The sentence explains the time or condition that starts migration: days becoming shorter."
+          },
+          {
+            answer: "become",
+            type: "grammar-slot + meaning clue",
+            explanation: "The plural subject “days” needs a present-tense verb, and days can “become shorter” in autumn."
+          },
+          {
+            answer: "many",
+            type: "article / determiner clue",
+            explanation: "The plural noun “birds” needs a determiner, and “many birds” fits the broad biological explanation."
+          },
+          {
+            answer: "begin",
+            type: "grammar-slot + chronology clue",
+            explanation: "The subject “many birds” needs a present-tense verb, and “begin flying” describes the start of migration."
+          },
+          {
+            answer: "south",
+            type: "topic-domain + common-world-knowledge clue",
+            explanation: "The later phrase “warmer weather” supports the idea that birds fly south in winter."
+          },
+          {
+            answer: "warmer",
+            type: "grammar-slot + cause-effect clue",
+            explanation: "The word modifies “weather,” and warmer weather helps explain why birds can survive there."
+          },
+          {
+            answer: "and",
+            type: "parallel-list clue",
+            explanation: "The sentence joins two helpful conditions: “warmer weather” and “available food.”"
+          },
+          {
+            answer: "food",
+            type: "topic-domain + cause-effect clue",
+            explanation: "Food is a basic resource animals need, and the sentence says it helps them survive."
+          },
+          {
+            answer: "them",
+            type: "reference / cohesion clue",
+            explanation: "“Them” refers back to “many birds.”"
+          },
+          {
+            answer: "winter",
+            type: "contrast + chronology clue",
+            explanation: "The next sentence mentions spring, so this sentence is about surviving the opposite season, winter."
+          }
+        ]
+      },
+      {
+        id: "1008",
+        title: "Museum Preservation",
+        category: "Art and Culture",
+        template: "Museums preserve objects so people can study art, history, and culture from the past. {{0}} an {{1}} is {{2}}, workers {{3}} it {{4}}, record {{5}} condition, {{6}} place {{7}} under {{8}} light in a {{9}}. Low light helps prevent colors and paper from fading over time. Careful records are also important because they show whether an item has changed or been damaged. In this way, a museum protects materials while making them available to the public.",
+        blanks: [
+          { prefix: "Bef", hidden: "ore", answer: "Before" },
+          { prefix: "obj", hidden: "ect", answer: "object" },
+          { prefix: "disp", hidden: "layed", answer: "displayed" },
+          { prefix: "cl", hidden: "ean", answer: "clean" },
+          { prefix: "gen", hidden: "tly", answer: "gently" },
+          { prefix: "i", hidden: "ts", answer: "its" },
+          { prefix: "a", hidden: "nd", answer: "and" },
+          { prefix: "i", hidden: "t", answer: "it" },
+          { prefix: "l", hidden: "ow", answer: "low" },
+          { prefix: "ca", hidden: "se", answer: "case" }
+        ],
+        clues: [
+          {
+            answer: "Before",
+            type: "chronology / sequence clue",
+            explanation: "The sentence explains what museum workers do earlier in the process, before an object is displayed."
+          },
+          {
+            answer: "object",
+            type: "reference + topic-domain clue",
+            explanation: "The first sentence mentions museum objects, and “an object” refers back to one of them."
+          },
+          {
+            answer: "displayed",
+            type: "grammar-slot + topic-domain clue",
+            explanation: "The passive structure “is ___” requires a past participle, and museums display objects for visitors."
+          },
+          {
+            answer: "clean",
+            type: "grammar-slot + parallel-process clue",
+            explanation: "The plural subject “workers” needs a present-tense verb, and cleaning is a normal first step before preservation or display."
+          },
+          {
+            answer: "gently",
+            type: "grammar-slot + meaning clue",
+            explanation: "The word modifies “clean,” and delicate museum objects should be cleaned carefully, not roughly."
+          },
+          {
+            answer: "its",
+            type: "reference / cohesion clue",
+            explanation: "“Its condition” refers to the condition of the object."
+          },
+          {
+            answer: "and",
+            type: "parallel-list clue",
+            explanation: "The sentence lists museum actions: clean it, record its condition, and place it under light."
+          },
+          {
+            answer: "it",
+            type: "reference / cohesion clue",
+            explanation: "“It” refers back to the object being prepared for display."
+          },
+          {
+            answer: "low",
+            type: "later-confirmation + collocation clue",
+            explanation: "The next sentence begins “Low light,” confirming that the missing adjective is “low.”"
+          },
+          {
+            answer: "case",
+            type: "topic-domain + meaning clue",
+            explanation: "Museum objects are often placed in a protective case, which fits the idea of preserving them while showing them."
+          }
+        ]
+      },
+      {
+        id: "1009",
+        title: "Supply, Demand, and Prices",
+        category: "Economics",
+        template: "Supply and demand describe how prices often change in a market. {{0}} many {{1}} want the {{2}} product {{3}} only a {{4}} units {{5}} available, the {{6}} usually {{7}} quickly {{8}} the {{9}}. Producers may then make more of the product because higher prices can mean higher profits. Conversely, if stores have more goods than customers want, sellers may lower prices to attract buyers. This pattern helps explain changes in everyday items such as fruit, clothing, and electronics.",
+        blanks: [
+          { prefix: "I", hidden: "f", answer: "If" },
+          { prefix: "buy", hidden: "ers", answer: "buyers" },
+          { prefix: "sa", hidden: "me", answer: "same" },
+          { prefix: "b", hidden: "ut", answer: "but" },
+          { prefix: "f", hidden: "ew", answer: "few" },
+          { prefix: "a", hidden: "re", answer: "are" },
+          { prefix: "pr", hidden: "ice", answer: "price" },
+          { prefix: "ri", hidden: "ses", answer: "rises" },
+          { prefix: "i", hidden: "n", answer: "in" },
+          { prefix: "mar", hidden: "ket", answer: "market" }
+        ],
+        clues: [
+          {
+            answer: "If",
+            type: "cause-effect clue",
+            explanation: "The sentence presents a condition that leads to a result, so “If” introduces the condition."
+          },
+          {
+            answer: "buyers",
+            type: "topic-domain + grammar-slot clue",
+            explanation: "In a market, buyers are people who want products, and the plural noun fits with “many.”"
+          },
+          {
+            answer: "same",
+            type: "article / determiner + meaning clue",
+            explanation: "The phrase “the same product” shows that many buyers want one particular item."
+          },
+          {
+            answer: "but",
+            type: "contrast clue",
+            explanation: "The sentence contrasts high demand with low supply: many buyers want the product, but few units are available."
+          },
+          {
+            answer: "few",
+            type: "quantity clue",
+            explanation: "“Only a few units” shows limited supply, which helps explain why the price rises."
+          },
+          {
+            answer: "are",
+            type: "grammar-slot clue",
+            explanation: "The plural noun “units” needs the plural linking verb “are” before the adjective “available.”"
+          },
+          {
+            answer: "price",
+            type: "topic-domain + reference clue",
+            explanation: "The first sentence introduces prices, and the result of high demand and low supply is a change in price."
+          },
+          {
+            answer: "rises",
+            type: "cause-effect clue",
+            explanation: "When many buyers want a product and only a few units are available, the expected result is that the price rises."
+          },
+          {
+            answer: "in",
+            type: "preposition-pattern clue",
+            explanation: "The phrase “in the market” is the natural way to describe where buying and selling happen."
+          },
+          {
+            answer: "market",
+            type: "reference + topic-domain clue",
+            explanation: "The first sentence mentions “a market,” and the phrase “the market” refers back to that setting."
+          }
+        ]
+      },
+      {
+        id: "1010",
+        title: "Cloud Formation",
+        category: "Earth Science",
+        template: "Clouds are part of the water cycle, the movement of water between Earth's surface and the atmosphere. Warm {{0}} rises {{1}} cools, {{2}} water {{3}} to {{4}} tiny {{5}} that {{6}} into {{7}} above {{8}} or {{9}}. If the droplets grow heavy enough, they fall as rain or snow. This process returns water to rivers, lakes, and soil. Clouds also affect temperature because they can block sunlight during the day and trap heat at night.",
+        blanks: [
+          { prefix: "a", hidden: "ir", answer: "air" },
+          { prefix: "a", hidden: "nd", answer: "and" },
+          { prefix: "cau", hidden: "sing", answer: "causing" },
+          { prefix: "va", hidden: "por", answer: "vapor" },
+          { prefix: "fo", hidden: "rm", answer: "form" },
+          { prefix: "drop", hidden: "lets", answer: "droplets" },
+          { prefix: "gat", hidden: "her", answer: "gather" },
+          { prefix: "clo", hidden: "uds", answer: "clouds" },
+          { prefix: "la", hidden: "nd", answer: "land" },
+          { prefix: "oc", hidden: "ean", answer: "ocean" }
+        ],
+        clues: [
+          {
+            answer: "air",
+            type: "topic-domain + common-world-knowledge clue",
+            explanation: "Clouds form in the atmosphere, and warm air rising is a familiar part of basic weather processes."
+          },
+          {
+            answer: "and",
+            type: "parallel-structure clue",
+            explanation: "The sentence joins two linked actions: warm air rises and cools."
+          },
+          {
+            answer: "causing",
+            type: "cause-effect clue",
+            explanation: "The cooling of warm air leads to water vapor forming droplets, so “causing” introduces the result."
+          },
+          {
+            answer: "vapor",
+            type: "collocation + topic-domain clue",
+            explanation: "“Water vapor” is the standard phrase for water in gas form in the atmosphere."
+          },
+          {
+            answer: "form",
+            type: "grammar-slot + process clue",
+            explanation: "After “to,” the sentence needs a base verb, and water vapor can form droplets."
+          },
+          {
+            answer: "droplets",
+            type: "later-confirmation + topic-domain clue",
+            explanation: "The next sentence says “If the droplets grow heavy enough,” confirming that the missing noun is “droplets.”"
+          },
+          {
+            answer: "gather",
+            type: "grammar-slot + meaning clue",
+            explanation: "The plural noun “droplets” needs a verb, and droplets gather together to make clouds."
+          },
+          {
+            answer: "clouds",
+            type: "topic-domain + definition clue",
+            explanation: "The passage is about cloud formation, and gathered droplets form clouds."
+          },
+          {
+            answer: "land",
+            type: "parallel-list clue",
+            explanation: "“Land or ocean” is a natural pair showing that clouds can form above different surfaces."
+          },
+          {
+            answer: "ocean",
+            type: "parallel-list + topic-domain clue",
+            explanation: "The phrase pairs “land” with “ocean,” both places above which clouds can form."
+          }
+        ]
+      }
+    ];
+
+    (() => {
+      'use strict';
+
+      const STORAGE_NS = 'KTG_TOEFL_READING_SUFFIX_CLOZE_V4_20260706_9b2f6d7c__';
+      const KEY_THEME = STORAGE_NS + 'theme';
+      const KEY_CURRENT = STORAGE_NS + 'currentExerciseIndex';
+      const PROMO_TRIGGERS = [2, 10, 50];
+
+      const els = {
+        html: document.documentElement,
+        body: document.body,
+        menuToggle: document.getElementById('menuToggle'),
+        siteNav: document.getElementById('siteNav'),
+        themeToggle: document.getElementById('themeToggle'),
+        exerciseList: document.getElementById('exerciseList'),
+        exerciseHost: document.getElementById('exerciseHost'),
+        prevBtn: document.getElementById('prevBtn'),
+        nextBtn: document.getElementById('nextBtn'),
+        checkBtn: document.getElementById('checkBtn'),
+        clearBtn: document.getElementById('clearBtn'),
+        currentPosition: document.getElementById('currentPosition'),
+        statExercises: document.getElementById('statExercises'),
+        statChecked: document.getElementById('statChecked'),
+        statAverage: document.getElementById('statAverage'),
+        listCount: document.getElementById('listCount'),
+        lookupPopover: document.getElementById('lookupPopover'),
+        lookupWord: document.getElementById('lookupWord'),
+        lookupLinks: document.getElementById('lookupLinks'),
+        promoBackdrop: document.getElementById('promoBackdrop'),
+        promoClose: document.getElementById('promoClose'),
+        toast: document.getElementById('toast'),
+        toTop: document.getElementById('toTop')
+      };
+
+      const escapeHTML = (value) => String(value ?? '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+
+      const normalizeAnswer = (value) => String(value || '')
+        .trim()
+        .toLowerCase()
+        .replace(/[’‘]/g, "'")
+        .replace(/\s+/g, '');
+
+      const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
+
+      function safeJSONGet(key, fallback) {
+        try {
+          const raw = localStorage.getItem(key);
+          return raw ? JSON.parse(raw) : fallback;
+        } catch {
+          return fallback;
+        }
+      }
+
+      function saveJSON(key, value) {
+        try { localStorage.setItem(key, JSON.stringify(value)); } catch { }
+      }
+
+      function showToast(message) {
+        els.toast.textContent = message;
+        els.toast.classList.add('is-visible');
+        window.clearTimeout(showToast.timer);
+        showToast.timer = window.setTimeout(() => els.toast.classList.remove('is-visible'), 1800);
+      }
+
+      function answerKey(id) { return STORAGE_NS + 'answers__' + id; }
+      function resultKey(id) { return STORAGE_NS + 'checked_result__' + id; }
+      function promoKey(trigger) { return STORAGE_NS + 'promo_seen_at_exercise_' + trigger; }
+
+      function validateExercise(ex, index) {
+        const blankCount = Array.isArray(ex.blanks) ? ex.blanks.length : 0;
+        const missing = [];
+        for (let i = 0; i < blankCount; i += 1) {
+          if (!String(ex.template || '').includes('{{' + i + '}}')) missing.push(i);
+        }
+        return {
+          ...ex,
+          id: String(ex.id || `exercise-${index + 1}`),
+          title: String(ex.title || `Exercise ${index + 1}`),
+          category: String(ex.category || 'READING'),
+          template: String(ex.template || ''),
+          blanks: (ex.blanks || []).map((blank, i) => {
+            let prefix = String(blank.prefix || '');
+            let hidden = String(blank.hidden || '');
+            const answer = String(blank.answer || (prefix + hidden));
+            if (!hidden && answer && prefix === answer && answer.length > 1) {
+              const chars = Array.from(answer);
+              const hide = Math.ceil(chars.length / 2);
+              prefix = chars.slice(0, chars.length - hide).join('');
+              hidden = chars.slice(chars.length - hide).join('');
+            }
+            return { prefix, hidden, answer, index: i + 1 };
+          }),
+          clues: (ex.clues || []).map((clue, i) => ({
+            answer: String(clue.answer || ex.blanks?.[i]?.answer || ''),
+            type: String(clue.type || 'Clue'),
+            explanation: String(clue.explanation || 'No clue explanation was provided.')
+          })),
+          _missingPlaceholders: missing
+        };
+      }
+
+      const exercises = EXERCISE_DATA.map(validateExercise).filter(ex => ex.blanks.length && ex.template);
+      let currentIndex = clamp(Number(localStorage.getItem(KEY_CURRENT) || 0), 0, Math.max(exercises.length - 1, 0));
+
+      function getAnswers(exercise) {
+        const saved = safeJSONGet(answerKey(exercise.id), []);
+        return Array.from({ length: exercise.blanks.length }, (_, i) => String(saved[i] || ''));
+      }
+
+      function setAnswers(exercise, answers) { saveJSON(answerKey(exercise.id), answers); }
+      function getResult(exercise) { return safeJSONGet(resultKey(exercise.id), null); }
+      function clearResult(exercise) { try { localStorage.removeItem(resultKey(exercise.id)); } catch { } }
+
+      function setTheme(theme) {
+        els.html.dataset.theme = theme;
+        try { localStorage.setItem(KEY_THEME, theme); } catch { }
+        els.themeToggle.textContent = theme === 'dark' ? '☀' : '◐';
+      }
+
+      function renderSlots(value, length, cursorPos = -1, focused = false) {
+        const chars = Array.from(String(value || '')).slice(0, length);
+        const pos = clamp(Number(cursorPos), 0, length);
+        return Array.from({ length }, (_, i) => {
+          const char = chars[i] || '';
+          const classes = ['slot'];
+          if (char) classes.push('has-char');
+          if (focused && pos === i) classes.push('is-caret');
+          if (focused && pos === length && i === length - 1) classes.push('is-caret', 'is-caret-end');
+          return `<span class="${classes.join(' ')}" data-slot-index="${i}" aria-hidden="true">${escapeHTML(char)}</span>`;
+        }).join('');
+      }
+
+      function renderBlank(blank, idx, saved) {
+        const len = Math.max(1, String(blank.hidden || '').length);
+        const safeValue = String(saved || '').replace(/\s+/g, '').slice(0, len);
+        return `<span class="cloze-word" data-blank="${idx}" style="--slots:${len}">
+          <span class="blank-prefix">${escapeHTML(blank.prefix)}</span><span class="blank-box">
+            <span class="slot-row" data-slots-for="${idx}">${renderSlots(safeValue, len)}</span>
+            <input class="blank-proxy" id="blank-${idx}" data-index="${idx}" type="text"
+              inputmode="text" autocomplete="off" autocapitalize="none" spellcheck="false"
+              maxlength="${len}" value="${escapeHTML(safeValue)}"
+              aria-label="Missing ending for ${escapeHTML(blank.prefix)} blank ${idx + 1}">
+          </span>
+        </span>`;
+      }
+
+      function buildPassageHTML(exercise, answers) {
+        const tokenPattern = /\{\{(\d+)\}\}/g;
+        let html = '';
+        let cursor = 0;
+        let match;
+        while ((match = tokenPattern.exec(exercise.template)) !== null) {
+          html += escapeHTML(exercise.template.slice(cursor, match.index)).replace(/\n/g, '<br>');
+          const idx = Number(match[1]);
+          const blank = exercise.blanks[idx];
+          if (blank) html += renderBlank(blank, idx, answers[idx] || '');
+          cursor = tokenPattern.lastIndex;
+        }
+        html += escapeHTML(exercise.template.slice(cursor)).replace(/\n/g, '<br>');
+        return html;
+      }
+
+      function updateSlotDisplay(input) {
+        const idx = Number(input.dataset.index);
+        const ex = exercises[currentIndex];
+        const blank = ex?.blanks[idx];
+        const row = els.exerciseHost.querySelector(`[data-slots-for="${idx}"]`);
+        if (!blank || !row) return;
+        const length = Math.max(1, String(blank.hidden || '').length);
+        const clean = input.value.replace(/\s+/g, '').slice(0, length);
+        if (input.value !== clean) input.value = clean;
+        const focused = document.activeElement === input;
+        const cursorPos = focused ? (input.selectionStart ?? clean.length) : -1;
+        row.innerHTML = renderSlots(clean, length, cursorPos, focused);
+      }
+
+      function setInputCursor(input, position) {
+        const length = Number(input.maxLength) > 0 ? Number(input.maxLength) : input.value.length;
+        const pos = clamp(Number(position), 0, length);
+        input.focus({ preventScroll: true });
+        requestAnimationFrame(() => {
+          try { input.setSelectionRange(pos, pos); } catch { }
+          updateSlotDisplay(input);
+        });
+      }
+
+      function refreshAllCarets() {
+        getCurrentInputs().forEach(updateSlotDisplay);
+      }
+
+      function getCurrentInputs() {
+        return Array.from(els.exerciseHost.querySelectorAll('.blank-proxy'));
+      }
+
+      function collectCurrentAnswers() { return getCurrentInputs().map(input => input.value); }
+
+      function saveCurrentAnswers({ clearChecked = true } = {}) {
+        const ex = exercises[currentIndex];
+        if (!ex) return;
+        setAnswers(ex, collectCurrentAnswers());
+        if (clearChecked) clearResult(ex);
+        renderExerciseList();
+        updateStats();
+      }
+
+      function focusInput(index, place = 'end') {
+        const inputs = getCurrentInputs();
+        const input = inputs[index];
+        if (!input) return;
+        const pos = place === 'start' ? 0 : input.value.length;
+        setInputCursor(input, pos);
+      }
+
+      function resetVisualCheck() {
+        els.exerciseHost.querySelectorAll('.cloze-word').forEach(wrap => wrap.classList.remove('is-correct', 'is-incorrect'));
+        const panel = document.getElementById('resultsPanel');
+        if (panel) {
+          panel.classList.remove('is-visible');
+          panel.innerHTML = '';
+        }
+      }
+
+      function distributeValues(startIndex, values) {
+        const inputs = getCurrentInputs();
+        values.forEach((value, offset) => {
+          const input = inputs[startIndex + offset];
+          const ex = exercises[currentIndex];
+          const blank = ex?.blanks[startIndex + offset];
+          if (input && blank) {
+            input.value = String(value || '').replace(/\s+/g, '').slice(0, blank.hidden.length);
+            updateSlotDisplay(input);
+          }
+        });
+        const nextIndex = Math.min(startIndex + values.length, inputs.length - 1);
+        focusInput(nextIndex, 'end');
+      }
+
+      function wireInputs(exercise) {
+        const inputs = getCurrentInputs();
+        inputs.forEach((input, idx) => {
+          const wrap = input.closest('.cloze-word');
+          const length = Math.max(1, String(exercise.blanks[idx].hidden || '').length);
+          input.maxLength = length;
+
+          wrap?.addEventListener('pointerdown', (event) => {
+            const slot = event.target.closest?.('.slot');
+            const desiredPos = slot ? Number(slot.dataset.slotIndex || 0) : input.value.length;
+            event.preventDefault();
+            setInputCursor(input, desiredPos);
+          });
+
+          input.addEventListener('focus', () => {
+            wrap?.classList.add('is-active');
+            updateSlotDisplay(input);
+          });
+          input.addEventListener('blur', () => {
+            wrap?.classList.remove('is-active');
+            updateSlotDisplay(input);
+          });
+          input.addEventListener('select', () => updateSlotDisplay(input));
+          input.addEventListener('keyup', () => updateSlotDisplay(input));
+          input.addEventListener('pointerup', () => window.setTimeout(() => updateSlotDisplay(input), 0));
+
+          input.addEventListener('input', () => {
+            const raw = input.value;
+            if (/\s/.test(raw.trim())) {
+              distributeValues(idx, raw.trim().split(/\s+/).filter(Boolean));
+            } else {
+              updateSlotDisplay(input);
+            }
+            saveCurrentAnswers({ clearChecked: true });
+            resetVisualCheck();
+            const hiddenLength = Math.max(1, String(exercise.blanks[idx].hidden || '').length);
+            if (normalizeAnswer(input.value).length >= hiddenLength && idx < inputs.length - 1) {
+              focusInput(idx + 1, 'end');
+            }
+          });
+
+          input.addEventListener('paste', (event) => {
+            const text = event.clipboardData?.getData('text') || '';
+            if (text.trim()) {
+              event.preventDefault();
+              const values = text.trim().split(/\s+/).filter(Boolean);
+              if (values.length > 1) distributeValues(idx, values);
+              else {
+                input.value = values[0].replace(/\s+/g, '').slice(0, length);
+                updateSlotDisplay(input);
+              }
+              saveCurrentAnswers({ clearChecked: true });
+              resetVisualCheck();
+            }
+          });
+
+          input.addEventListener('keydown', (event) => {
+            const start = input.selectionStart ?? 0;
+            const end = input.selectionEnd ?? 0;
+            const atStart = start === 0 && end === 0;
+            const atEnd = start === input.value.length && end === input.value.length;
+            if (event.key === 'ArrowRight' && atEnd && idx < inputs.length - 1) {
+              event.preventDefault();
+              focusInput(idx + 1, 'start');
+            } else if (event.key === 'ArrowLeft' && atStart && idx > 0) {
+              event.preventDefault();
+              focusInput(idx - 1, 'end');
+            } else if ((event.key === 'ArrowDown' || event.key === 'Enter') && idx < inputs.length - 1) {
+              event.preventDefault();
+              focusInput(idx + 1, 'end');
+            } else if (event.key === 'ArrowUp' && idx > 0) {
+              event.preventDefault();
+              focusInput(idx - 1, 'end');
+            } else if (event.key === 'Backspace' && atStart && idx > 0) {
+              event.preventDefault();
+              focusInput(idx - 1, 'end');
+            }
+          });
+        });
+      }
+
+      function renderExerciseList() {
+        els.exerciseList.innerHTML = exercises.map((ex, idx) => {
+          const result = getResult(ex);
+          const saved = getAnswers(ex).some(Boolean);
+          let pill = '—';
+          let pillClass = '';
+          if (result) {
+            pill = `${result.score}/${result.total}`;
+            pillClass = result.score === result.total ? ' is-good' : ' is-mixed';
+          } else if (saved) {
+            pill = 'saved';
+          }
+          return `<button class="exercise-item" type="button" data-index="${idx}" aria-current="${idx === currentIndex ? 'true' : 'false'}">
+            <span><span class="item-title">${escapeHTML(ex.title)}</span><span class="item-meta">${escapeHTML(ex.category)}</span></span>
+            <span class="score-pill${pillClass}">${escapeHTML(pill)}</span>
+          </button>`;
+        }).join('');
+        els.exerciseList.querySelectorAll('.exercise-item').forEach(button => {
+          button.addEventListener('click', () => goToExercise(Number(button.dataset.index)));
+        });
+        els.listCount.textContent = `${exercises.length} total`;
+      }
+
+      function updateStats() {
+        const results = exercises.map(getResult).filter(Boolean);
+        const possible = results.reduce((sum, r) => sum + r.total, 0);
+        const score = results.reduce((sum, r) => sum + r.score, 0);
+        els.statExercises.textContent = exercises.length;
+        els.statChecked.textContent = results.length;
+        els.statAverage.textContent = possible ? `${Math.round((score / possible) * 100)}%` : '—';
+        els.currentPosition.textContent = exercises.length ? `${currentIndex + 1}/${exercises.length}` : '—';
+      }
+
+      function updateButtons() {
+        els.prevBtn.disabled = currentIndex <= 0;
+        els.nextBtn.disabled = currentIndex >= exercises.length - 1;
+      }
+
+      function renderCurrentExercise() {
+        if (!exercises.length) {
+          els.exerciseHost.innerHTML = `<h2>No exercises found</h2><p>Add objects to <code>EXERCISE_DATA</code>.</p>`;
+          return;
+        }
+        const ex = exercises[currentIndex];
+        const answers = getAnswers(ex);
+        els.exerciseHost.innerHTML = `
+          <div class="exercise-title">
+            <div>
+              <p class="eyebrow">Exercise ${currentIndex + 1} of ${exercises.length}</p>
+              <h2>${escapeHTML(ex.title)}</h2>
+            </div>
+            <span class="category-chip">${escapeHTML(ex.category)}</span>
+          </div>
+          <div class="passage-area" id="passageArea">${buildPassageHTML(ex, answers)}</div>
+          <div class="hint-row" aria-label="Keyboard help">
+            <span class="hint-chip">Type the missing ending only.</span>
+            <span class="hint-chip">Each missing character has its own slot.</span>
+            <span class="hint-chip">Tab, arrows, Enter, and Backspace move naturally.</span>
+            <span class="hint-chip">Select any word for dictionary links.</span>
+          </div>
+          <section class="results" id="resultsPanel" aria-live="polite"></section>
+        `;
+        wireInputs(ex);
+        const result = getResult(ex);
+        if (result) applyCheckResult(ex, result, false);
+        updateButtons();
+        renderExerciseList();
+        updateStats();
+        maybeShowPromoForCurrentExercise();
+      }
+
+      function checkCurrent() {
+        const ex = exercises[currentIndex];
+        if (!ex) return;
+        const answers = collectCurrentAnswers();
+        setAnswers(ex, answers);
+        const items = ex.blanks.map((blank, idx) => {
+          const user = answers[idx] || '';
+          const userNorm = normalizeAnswer(user);
+          const hiddenNorm = normalizeAnswer(blank.hidden);
+          const fullNorm = normalizeAnswer(blank.answer);
+          const prefixedNorm = normalizeAnswer(blank.prefix + user);
+          return {
+            index: idx + 1,
+            user,
+            expectedHidden: blank.hidden,
+            expectedFull: blank.answer,
+            prefix: blank.prefix,
+            correct: userNorm === hiddenNorm || userNorm === fullNorm || prefixedNorm === fullNorm
+          };
+        });
+        const score = items.filter(item => item.correct).length;
+        const result = { score, total: items.length, items, checkedAt: new Date().toISOString() };
+        saveJSON(resultKey(ex.id), result);
+        applyCheckResult(ex, result, true);
+        renderExerciseList();
+        updateStats();
+      }
+
+      function applyCheckResult(ex, result, shouldScroll) {
+        const wraps = Array.from(els.exerciseHost.querySelectorAll('.cloze-word'));
+        result.items.forEach((item, idx) => {
+          wraps[idx]?.classList.toggle('is-correct', item.correct);
+          wraps[idx]?.classList.toggle('is-incorrect', !item.correct);
+        });
+        const panel = document.getElementById('resultsPanel');
+        if (!panel) return;
+        const answerCards = result.items.map(item => {
+          const clue = ex.clues[item.index - 1] || { type: 'Clue', explanation: 'No clue explanation was provided.' };
+          const userShown = item.user.trim() ? item.user.trim() : '—';
+          return `<div class="answer-card ${item.correct ? 'correct' : 'incorrect'}">
+            <div class="answer-top"><span class="answer-num">Blank ${item.index}</span><span class="status-dot">${item.correct ? 'Correct' : 'Review'}</span></div>
+            <div class="answer-line">Your answer: <b>${escapeHTML(userShown)}</b></div>
+            <div class="answer-line">Expected ending: <b>${escapeHTML(item.expectedHidden)}</b> <span class="small-muted">full word: ${escapeHTML(item.expectedFull)}</span></div>
+            <div class="answer-line">Clue type: <b>${escapeHTML(clue.type || '—')}</b></div>
+            <div class="answer-line">Explanation: ${escapeHTML(clue.explanation || 'No clue explanation was provided.')}</div>
+          </div>`;
+        }).join('');
+        const clueCards = ex.blanks.map((blank, idx) => {
+          const clue = ex.clues[idx] || { answer: blank.answer, type: 'Clue', explanation: 'No clue explanation was provided.' };
+          return `<div class="clue-card">
+            <h4>Blank ${idx + 1}: ${escapeHTML(clue.answer || blank.answer)}</h4>
+            <div class="clue-type">${escapeHTML(clue.type || 'Clue')}</div>
+            <p>${escapeHTML(clue.explanation || '')}</p>
+          </div>`;
+        }).join('');
+        panel.innerHTML = `
+          <div class="result-summary">
+            <div><strong>${result.score}/${result.total} correct</strong><div class="small-muted">Saved to this browser after checking.</div></div>
+            <button class="ghost-btn" type="button" id="focusFirstMiss">${result.score === result.total ? 'Review answers' : 'Go to first mistake'}</button>
+          </div>
+          <details class="answer-details" open>
+            <summary>Answer key, your results, and clue explanations</summary>
+            <div class="answer-grid">${answerCards}</div>
+          </details>
+          <details class="answer-details" open>
+            <summary>Clue notes only</summary>
+            <div class="clue-list">${clueCards}</div>
+          </details>
+        `;
+        panel.classList.add('is-visible');
+        document.getElementById('focusFirstMiss')?.addEventListener('click', () => {
+          const firstMiss = result.items.find(item => !item.correct);
+          if (firstMiss) focusInput(firstMiss.index - 1, 'end');
+          else focusInput(0, 'end');
+        });
+        if (shouldScroll) panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+      function clearCurrent() {
+        const ex = exercises[currentIndex];
+        if (!ex) return;
+        setAnswers(ex, Array.from({ length: ex.blanks.length }, () => ''));
+        clearResult(ex);
+        renderCurrentExercise();
+        showToast('Answers cleared for this exercise.');
+      }
+
+      function goToExercise(index) {
+        currentIndex = clamp(index, 0, exercises.length - 1);
+        try { localStorage.setItem(KEY_CURRENT, String(currentIndex)); } catch { }
+        renderCurrentExercise();
+        document.getElementById('practice')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+      function maybeShowPromoForCurrentExercise() {
+        const humanIndex = currentIndex + 1;
+        if (!PROMO_TRIGGERS.includes(humanIndex)) return;
+        const key = promoKey(humanIndex);
+        if (localStorage.getItem(key)) return;
+        try { localStorage.setItem(key, '1'); } catch { }
+        window.setTimeout(() => {
+          els.promoBackdrop.classList.add('is-visible');
+          els.body.classList.add('promo-open');
+        }, 350);
+      }
+
+      function closePromo() {
+        els.promoBackdrop.classList.remove('is-visible');
+        els.body.classList.remove('promo-open');
+      }
+
+      function hideLookup() {
+        els.lookupPopover.classList.remove('is-visible');
+      }
+
+      function positionPopover(rect) {
+        const pop = els.lookupPopover;
+        const margin = 8;
+        pop.classList.add('is-visible');
+        const width = pop.offsetWidth || 300;
+        const height = pop.offsetHeight || 150;
+        let left = rect.left + rect.width / 2 - width / 2;
+        let top = rect.bottom + margin;
+        if (top + height > window.innerHeight - margin) top = rect.top - height - margin;
+        left = clamp(left, margin, window.innerWidth - width - margin);
+        top = clamp(top, margin, window.innerHeight - height - margin);
+        pop.style.left = `${left}px`;
+        pop.style.top = `${top}px`;
+      }
+
+      function updateLookupFromSelection() {
+        const selection = window.getSelection();
+        if (!selection || selection.isCollapsed) { hideLookup(); return; }
+        const text = selection.toString().trim().replace(/\s+/g, ' ');
+        if (!text || text.length > 80) { hideLookup(); return; }
+        const anchor = selection.anchorNode?.parentElement;
+        if (anchor?.closest?.('input, textarea, button, a, .lookup-popover, .promo-backdrop')) return;
+        let rect;
+        try {
+          const range = selection.getRangeAt(0);
+          rect = range.getBoundingClientRect();
+          if (!rect || (!rect.width && !rect.height)) rect = range.getClientRects()[0];
+        } catch { }
+        if (!rect) { hideLookup(); return; }
+        const lookupTerm = text.replace(/^[^\p{L}\p{N}]+|[^\p{L}\p{N}]+$/gu, '');
+        if (!lookupTerm) { hideLookup(); return; }
+        const slug = encodeURIComponent(lookupTerm.toLowerCase());
+        const google = encodeURIComponent('meaning of ' + lookupTerm);
+        els.lookupWord.textContent = `Look up: ${lookupTerm}`;
+        els.lookupLinks.innerHTML = `
+          <a target="_blank" rel="noopener" href="https://dictionary.cambridge.org/dictionary/english/${slug}">Cambridge</a>
+          <a target="_blank" rel="noopener" href="https://www.oxfordlearnersdictionaries.com/definition/english/${slug}?q=${encodeURIComponent(lookupTerm)}">Oxford</a>
+          <a target="_blank" rel="noopener" href="https://www.merriam-webster.com/dictionary/${slug}">Merriam-Webster</a>
+          <a target="_blank" rel="noopener" href="https://www.google.com/search?q=${google}">Google meaning</a>
+        `;
+        positionPopover(rect);
+      }
+
+      function scheduleSelectionUpdate() {
+        window.clearTimeout(scheduleSelectionUpdate.timer);
+        scheduleSelectionUpdate.timer = window.setTimeout(updateLookupFromSelection, 90);
+      }
+
+      function initEvents() {
+        els.menuToggle.addEventListener('click', () => {
+          const open = els.siteNav.classList.toggle('is-open');
+          els.menuToggle.setAttribute('aria-expanded', String(open));
+        });
+        els.siteNav.addEventListener('click', (event) => {
+          if (event.target.closest('a')) {
+            els.siteNav.classList.remove('is-open');
+            els.menuToggle.setAttribute('aria-expanded', 'false');
+          }
+        });
+        document.addEventListener('click', (event) => {
+          if (!event.target.closest('.site-nav, .menu-toggle')) {
+            els.siteNav.classList.remove('is-open');
+            els.menuToggle.setAttribute('aria-expanded', 'false');
+          }
+          if (!event.target.closest('.lookup-popover')) {
+            const sel = window.getSelection();
+            if (!sel || sel.isCollapsed) hideLookup();
+          }
+        });
+        els.themeToggle.addEventListener('click', () => setTheme(els.html.dataset.theme === 'dark' ? 'light' : 'dark'));
+        els.prevBtn.addEventListener('click', () => goToExercise(currentIndex - 1));
+        els.nextBtn.addEventListener('click', () => goToExercise(currentIndex + 1));
+        els.checkBtn.addEventListener('click', checkCurrent);
+        els.clearBtn.addEventListener('click', clearCurrent);
+        els.promoClose.addEventListener('click', closePromo);
+        els.promoBackdrop.addEventListener('click', (event) => { if (event.target === els.promoBackdrop) closePromo(); });
+        els.toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        document.addEventListener('selectionchange', scheduleSelectionUpdate);
+        document.addEventListener('pointerup', scheduleSelectionUpdate);
+        document.addEventListener('touchend', scheduleSelectionUpdate, { passive: true });
+        document.addEventListener('keydown', (event) => {
+          if (event.key === 'Escape') {
+            hideLookup();
+            closePromo();
+          }
+        });
+        window.addEventListener('scroll', () => {
+          els.toTop.classList.toggle('is-visible', window.scrollY > 520);
+          hideLookup();
+        }, { passive: true });
+        window.addEventListener('resize', hideLookup);
+      }
+
+      function init() {
+        const storedTheme = localStorage.getItem(KEY_THEME);
+        const preferred = window.matchMedia?.('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        setTheme(storedTheme || preferred);
+        initEvents();
+        renderExerciseList();
+        renderCurrentExercise();
+        updateStats();
+      }
+
+      init();
+    })();
+  </script>
+</body>
+
+</html>

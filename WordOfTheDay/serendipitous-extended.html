@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="A complete TOEFL learner guide to serendipitous, created by Amir Kooshky.">
+  <title>serendipitous | Kooshky TOEFL Word of the Day</title>
+  <style>
+/*
+  Kooshky TOEFL Word of the Day
+  Original dictionary-editorial visual system for Amir Kooshky.
+  Mobile-first, print-aware, local-file friendly, and fully usable without JavaScript.
+*/
+:root {
+  color-scheme: light;
+  --paper: #f4f0e7;
+  --surface: #fffdf8;
+  --surface-2: #eee8dc;
+  --ink: #1c1a18;
+  --muted: #69635d;
+  --rule: #d6cdbf;
+  --rule-strong: #a99f92;
+  --accent: #a51f2d;
+  --accent-deep: #72131e;
+  --accent-soft: #f4e3e5;
+  --good: #315f4c;
+  --good-soft: #e5efe9;
+  --warn: #8a5719;
+  --warn-soft: #f8ebd8;
+  --info: #315f76;
+  --info-soft: #e4eef3;
+  --shadow: 0 18px 46px rgba(47, 37, 27, .09);
+  --serif: Georgia, "Times New Roman", Times, serif;
+  --sans: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  --radius: .95rem;
+  --radius-sm: .55rem;
+  --content: 75rem;
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #171614;
+  --surface: #211f1c;
+  --surface-2: #2a2723;
+  --ink: #f3eee5;
+  --muted: #b9b0a5;
+  --rule: #443f39;
+  --rule-strong: #675e56;
+  --accent: #e35d68;
+  --accent-deep: #ff7f88;
+  --accent-soft: #3a2225;
+  --good: #95c8ad;
+  --good-soft: #20342a;
+  --warn: #dfb06e;
+  --warn-soft: #3a2c1d;
+  --info: #91c2d8;
+  --info-soft: #21343e;
+  --shadow: 0 18px 46px rgba(0, 0, 0, .34);
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #171614;
+    --surface: #211f1c;
+    --surface-2: #2a2723;
+    --ink: #f3eee5;
+    --muted: #b9b0a5;
+    --rule: #443f39;
+    --rule-strong: #675e56;
+    --accent: #e35d68;
+    --accent-deep: #ff7f88;
+    --accent-soft: #3a2225;
+    --good: #95c8ad;
+    --good-soft: #20342a;
+    --warn: #dfb06e;
+    --warn-soft: #3a2c1d;
+    --info: #91c2d8;
+    --info-soft: #21343e;
+    --shadow: 0 18px 46px rgba(0, 0, 0, .34);
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 1rem;
+  line-height: 1.72;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--accent-deep); text-underline-offset: .18em; text-decoration-thickness: .075em; }
+a:hover { color: var(--accent); }
+button { font: inherit; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+::selection { background: var(--accent); color: white; }
+
+.skip-link {
+  position: fixed;
+  left: .75rem;
+  top: .75rem;
+  z-index: 1000;
+  transform: translateY(-180%);
+  padding: .62rem .82rem;
+  border-radius: var(--radius-sm);
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--sans);
+  font-weight: 800;
+  text-decoration: none;
+}
+.skip-link:focus { transform: translateY(0); }
+
+.no-js-hidden { display: none !important; }
+html.js .no-js-hidden { display: inline-flex !important; }
+
+.masthead {
+  border-bottom: 1px solid var(--rule);
+  background: color-mix(in srgb, var(--surface) 94%, transparent);
+}
+.masthead-inner {
+  width: min(calc(100% - 1.4rem), var(--content));
+  min-height: 4.4rem;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .9rem;
+}
+.brand { color: inherit; text-decoration: none; line-height: 1.05; }
+.brand strong { display: block; font-size: 1.04rem; letter-spacing: -.02em; }
+.brand span {
+  display: block;
+  margin-top: .18rem;
+  color: var(--accent);
+  font-family: var(--sans);
+  font-size: .65rem;
+  font-weight: 850;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+.utility-actions { display: none; gap: .42rem; align-items: center; }
+html.js .utility-actions { display: flex; }
+.utility-button {
+  min-height: 2.35rem;
+  padding: .42rem .7rem;
+  border: 1px solid var(--rule-strong);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: .74rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+.utility-button:hover { border-color: var(--accent); color: var(--accent); }
+
+.page {
+  width: min(calc(100% - 1.4rem), var(--content));
+  margin-inline: auto;
+  padding: 1.2rem 0 4rem;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(2rem, 10vw, 5.5rem) 0 clamp(2.4rem, 8vw, 4.5rem);
+  border-bottom: 1px solid var(--rule);
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  right: -7rem;
+  top: -9rem;
+  width: 19rem;
+  aspect-ratio: 1;
+  border: 1px solid color-mix(in srgb, var(--accent) 22%, transparent);
+  border-radius: 50%;
+  box-shadow: 0 0 0 2.4rem color-mix(in srgb, var(--accent) 4%, transparent), 0 0 0 5rem color-mix(in srgb, var(--accent) 3%, transparent);
+  pointer-events: none;
+}
+.kicker, .section-kicker, .eyebrow {
+  margin: 0;
+  color: var(--accent);
+  font-family: var(--sans);
+  font-size: .7rem;
+  font-weight: 900;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+.hero h1 {
+  position: relative;
+  z-index: 1;
+  max-width: 13ch;
+  margin: .45rem 0 0;
+  font-size: clamp(3.2rem, 17vw, 8.7rem);
+  line-height: .88;
+  letter-spacing: -.065em;
+  overflow-wrap: anywhere;
+}
+.hero-pronunciation {
+  margin: 1.25rem 0 .15rem;
+  color: var(--accent-deep);
+  font-family: var(--sans);
+  font-size: clamp(1.05rem, 4vw, 1.45rem);
+  font-weight: 750;
+}
+.pronunciation-tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .65rem;
+  max-width: 42rem;
+  margin: .75rem 0 .25rem;
+}
+.pronunciation-audio {
+  width: min(100%, 22rem);
+  height: 2.5rem;
+}
+.listen-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.35rem;
+  padding: .45rem .72rem;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  color: var(--accent);
+  font-family: var(--sans);
+  font-size: .78rem;
+  font-weight: 820;
+  text-decoration: none;
+}
+.listen-link:hover { background: var(--accent); color: var(--accent-ink); }
+.listen-link.secondary { border-color: var(--rule-strong); color: var(--ink); }
+.listen-link.secondary:hover { border-color: var(--accent); background: var(--surface-strong); color: var(--accent); }
+.audio-note { margin: 0 0 .35rem; color: var(--muted); font-family: var(--sans); font-size: .72rem; }
+.hero-pos { margin: 0; color: var(--muted); font-family: var(--sans); font-weight: 720; }
+.hero-summary { max-width: 50rem; margin: 1rem 0 0; font-size: clamp(1.08rem, 3.2vw, 1.34rem); line-height: 1.55; }
+.short-meaning-row { display: flex; flex-wrap: wrap; gap: .45rem; margin-top: 1.2rem; }
+.short-meaning {
+  padding: .36rem .62rem;
+  border: 1px solid var(--rule-strong);
+  border-radius: 999px;
+  background: var(--surface);
+  font-family: var(--sans);
+  font-size: .78rem;
+  font-weight: 760;
+}
+.hero-example {
+  max-width: 53rem;
+  margin: 1.6rem 0 0;
+  padding: 1rem 1.1rem 1rem 1.25rem;
+  border-left: 3px solid var(--accent);
+  background: color-mix(in srgb, var(--surface) 80%, transparent);
+  font-size: clamp(1.05rem, 3vw, 1.3rem);
+  font-style: italic;
+}
+.meta-strip {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: .65rem;
+  margin-top: 1.5rem;
+}
+.meta-item { padding: .75rem .85rem; border: 1px solid var(--rule); border-radius: var(--radius-sm); background: var(--surface); }
+.meta-label { display: block; color: var(--muted); font-family: var(--sans); font-size: .66rem; font-weight: 850; letter-spacing: .12em; text-transform: uppercase; }
+.meta-value { display: block; margin-top: .12rem; font-family: var(--sans); font-weight: 800; }
+
+.toc {
+  margin: 1rem 0 0;
+  padding: .95rem;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+.toc-title { margin: 0 0 .55rem; font-family: var(--sans); font-size: .78rem; font-weight: 900; text-transform: uppercase; letter-spacing: .12em; }
+.toc-links { display: flex; flex-wrap: wrap; gap: .45rem .8rem; }
+.toc a { font-family: var(--sans); font-size: .82rem; font-weight: 760; }
+
+.section { padding: clamp(2.5rem, 8vw, 5rem) 0 0; }
+.section-head { max-width: 48rem; margin-bottom: 1.25rem; }
+.section h2 {
+  margin: .22rem 0 .4rem;
+  font-size: clamp(2rem, 7vw, 3.35rem);
+  line-height: 1.02;
+  letter-spacing: -.035em;
+}
+.section-intro { margin: 0; color: var(--muted); font-size: 1.03rem; }
+
+.overview-grid, .card-grid, .compare-grid, .exercise-grid, .info-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: .85rem;
+}
+.card, .overview-card, .family-card, .collocation-card, .compare-card, .exercise-card {
+  min-width: 0;
+  padding: 1rem;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: 0 7px 20px rgba(40, 30, 20, .035);
+}
+.card h3, .card h4, .overview-card h3, .family-card h3, .collocation-card h3, .compare-card h3, .exercise-card h3 { margin: 0 0 .45rem; line-height: 1.25; }
+.card p:last-child, .overview-card p:last-child, .family-card p:last-child, .collocation-card p:last-child, .compare-card p:last-child, .exercise-card p:last-child { margin-bottom: 0; }
+.label {
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: .69rem;
+  font-weight: 850;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.value { font-weight: 700; }
+
+.sense-card {
+  overflow: hidden;
+  margin-top: 1.1rem;
+  border: 1px solid var(--rule);
+  border-radius: calc(var(--radius) + .15rem);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+.sense-head {
+  padding: 1rem;
+  border-top: 4px solid var(--accent);
+  border-bottom: 1px solid var(--rule);
+  background: color-mix(in srgb, var(--surface-2) 42%, var(--surface));
+}
+.sense-number { color: var(--accent); font-family: var(--sans); font-size: .7rem; font-weight: 900; letter-spacing: .13em; text-transform: uppercase; }
+.sense-head h3 { margin: .2rem 0 .55rem; font-size: clamp(1.55rem, 5vw, 2.2rem); line-height: 1.1; }
+.badge-row { display: flex; flex-wrap: wrap; gap: .38rem; }
+.badge { padding: .27rem .5rem; border: 1px solid var(--rule-strong); border-radius: 999px; font-family: var(--sans); font-size: .72rem; font-weight: 780; }
+.sense-body { padding: 1rem; }
+.definition { margin: 0; font-size: clamp(1.08rem, 3.5vw, 1.28rem); font-weight: 700; }
+.plain-equivalent { margin: .65rem 0 0; color: var(--muted); }
+.pattern-banner {
+  margin: 1rem 0;
+  padding: .8rem .9rem;
+  border-left: 3px solid var(--accent);
+  background: var(--accent-soft);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+.pattern-banner strong { font-family: var(--sans); }
+.context-row { display: flex; flex-wrap: wrap; gap: .38rem; margin-top: .55rem; }
+.context-pill { padding: .25rem .48rem; border-radius: 999px; background: var(--surface-2); font-family: var(--sans); font-size: .73rem; font-weight: 740; }
+.subsection-title { margin: 1.35rem 0 .55rem; font-family: var(--sans); font-size: .82rem; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
+.example-list, .clean-list { margin: .5rem 0 0; padding-left: 1.35rem; }
+.example-list li, .clean-list li { padding-left: .25rem; margin: .42rem 0; }
+.info-card { padding: .9rem; border: 1px solid var(--rule); border-radius: var(--radius-sm); background: var(--surface); }
+.info-card h4 { margin: 0 0 .35rem; font-family: var(--sans); font-size: .9rem; }
+.info-card p { margin: .3rem 0 0; }
+.info-card.good { border-color: color-mix(in srgb, var(--good) 54%, var(--rule)); background: var(--good-soft); }
+.info-card.warning { border-color: color-mix(in srgb, var(--warn) 54%, var(--rule)); background: var(--warn-soft); }
+.info-card.tip { border-color: color-mix(in srgb, var(--info) 54%, var(--rule)); background: var(--info-soft); }
+.grammar-list { display: grid; gap: .55rem; margin: 0; }
+.grammar-item { padding-bottom: .55rem; border-bottom: 1px solid var(--rule); }
+.grammar-item:last-child { padding-bottom: 0; border-bottom: 0; }
+.grammar-item dt { font-family: var(--sans); font-size: .74rem; font-weight: 900; letter-spacing: .07em; text-transform: uppercase; }
+.grammar-item dd { margin: .12rem 0 0; }
+.pattern-list, .error-list { display: grid; gap: .7rem; }
+.pattern-card, .error-card { padding: .82rem; border: 1px solid var(--rule); border-radius: var(--radius-sm); background: color-mix(in srgb, var(--surface-2) 25%, var(--surface)); }
+.pattern-code { display: block; font-family: var(--mono); font-size: .84rem; font-weight: 800; overflow-wrap: anywhere; }
+.pattern-use { margin: .3rem 0; color: var(--muted); }
+.error-wrong, .error-correct { margin: .25rem 0; }
+.error-wrong { color: var(--warn); }
+.error-correct { color: var(--good); }
+.error-explanation { margin: .35rem 0 0; font-size: .93rem; }
+
+.family-card .ipa, .compare-card .meta { color: var(--muted); font-family: var(--sans); font-size: .8rem; }
+.collocation-card h3 { color: var(--accent-deep); }
+.mini-facts { display: grid; gap: .42rem; margin-top: .6rem; }
+.mini-fact { padding-top: .42rem; border-top: 1px solid var(--rule); }
+.mini-fact strong { font-family: var(--sans); font-size: .78rem; }
+.word-pill { display: inline-block; padding: .24rem .5rem; border: 1px solid var(--accent); border-radius: 999px; color: var(--accent-deep); font-family: var(--sans); font-size: .75rem; font-weight: 850; }
+
+.etymology-flow { display: grid; gap: .7rem; }
+.etymology-step { position: relative; padding: .9rem 1rem .9rem 1.15rem; border-left: 3px solid var(--accent); background: var(--surface); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; }
+.etymology-step h3 { margin: 0 0 .25rem; font-family: var(--sans); font-size: .83rem; text-transform: uppercase; letter-spacing: .08em; }
+
+.exercise-card { counter-increment: exercise; }
+.exercise-card h3 { font-family: var(--sans); }
+.exercise-instruction { color: var(--muted); }
+details.answer-key { margin-top: 1rem; border: 1px solid var(--rule-strong); border-radius: var(--radius); background: var(--surface); }
+details.answer-key summary { padding: 1rem; font-family: var(--sans); font-weight: 900; cursor: pointer; }
+.answer-content { padding: 0 1rem 1rem; }
+.answer-group + .answer-group { margin-top: 1.3rem; padding-top: 1rem; border-top: 1px solid var(--rule); }
+.answer-group h3 { margin: 0 0 .5rem; font-family: var(--sans); }
+.answer-item { margin: .65rem 0; }
+.answer-item strong { font-family: var(--sans); }
+
+.footer {
+  margin-top: 4.5rem;
+  padding: 1.5rem 0 0;
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: .82rem;
+}
+.footer-row { display: flex; flex-direction: column; gap: .55rem; }
+.footer-links { display: flex; flex-wrap: wrap; gap: .4rem .8rem; }
+
+.back-to-top {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 100;
+  width: 2.8rem;
+  height: 2.8rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--rule-strong);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(.7rem);
+  pointer-events: none;
+  transition: opacity .2s ease, transform .2s ease;
+}
+.back-to-top.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+
+@media (min-width: 38rem) {
+  .meta-strip { grid-template-columns: repeat(3, 1fr); }
+  .overview-grid, .info-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .card-grid, .compare-grid, .exercise-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .sense-head, .sense-body { padding: 1.25rem; }
+  .footer-row { flex-direction: row; justify-content: space-between; align-items: center; }
+}
+
+@media (min-width: 62rem) {
+  .page, .masthead-inner { width: min(calc(100% - 3rem), var(--content)); }
+  .toc { position: sticky; top: .7rem; z-index: 20; }
+  .overview-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .card-grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .compare-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .exercise-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .sense-head, .sense-body { padding: 1.5rem; }
+  .sense-body > .info-grid { grid-template-columns: 1.05fr .95fr; }
+}
+
+@media print {
+  :root {
+    --paper: #fff;
+    --surface: #fff;
+    --surface-2: #f4f1eb;
+    --ink: #000;
+    --muted: #444;
+    --rule: #bbb;
+    --rule-strong: #888;
+    --accent: #8d1722;
+    --accent-deep: #6f1019;
+    --accent-soft: #f5e8e9;
+    --shadow: none;
+  }
+  @page { size: A4; margin: 15mm; }
+  body { font-size: 10.5pt; background: #fff; }
+  .masthead, .toc, .utility-actions, .back-to-top { display: none !important; }
+  .page { width: 100%; padding: 0; }
+  .hero { padding-top: 0; }
+  .hero h1 { font-size: 56pt; }
+  .section { padding-top: 2rem; }
+  .sense-card, .card, .overview-card, .family-card, .collocation-card, .compare-card, .exercise-card, details.answer-key { box-shadow: none; break-inside: avoid; }
+  details.answer-key > .answer-content { display: block !important; }
+  a { color: inherit; text-decoration: none; }
+}
+
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to the guide</a>
+
+  <header class="masthead">
+    <div class="masthead-inner">
+      <a class="brand" href="https://t.me/KooshkyTOEFL" target="_blank" rel="noopener">
+        <strong>Kooshky TOEFL</strong>
+        <span>Word of the Day</span>
+      </a>
+      <div class="utility-actions" aria-label="Page tools">
+        <button class="utility-button" type="button" data-theme-toggle>Dark mode</button>
+        <button class="utility-button" type="button" data-print>Print or save PDF</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="page" id="main-content">
+    <section class="hero" aria-labelledby="headword">
+      <p class="kicker">TOEFL Word of the Day</p>
+      <h1 id="headword">serendipitous</h1>
+      <p class="hero-pronunciation">/ˌserənˈdɪpətəs/</p>
+      <div class="pronunciation-tools" aria-label="Pronunciation audio">
+        <a class="listen-link secondary" href="https://youglish.com/pronounce/serendipitous/english/us" target="_blank" rel="noopener">Hear “serendipitous” in real examples</a>
+      </div>
+      <p class="audio-note">Audio and example links require an internet connection.</p>
+      <p class="hero-pos">adjective</p>
+      <div class="short-meaning-row" aria-label="Meanings at a glance">
+<span class="short-meaning">happening by fortunate chance</span>      </div>
+<p class="hero-summary">Serendipitous describes an unplanned event or discovery that turns out to be interesting, useful, or pleasant.</p><blockquote class="hero-example">“A serendipitous conversation at the conference led the researchers to begin a joint project.”</blockquote>      <div class="meta-strip">
+        <div class="meta-item"><span class="meta-label">Date</span><span class="meta-value">July 16th, 2026</span></div>
+        <div class="meta-item"><span class="meta-label">Level</span><span class="meta-value">B1–mid-B2 TOEFL</span></div>
+        <div class="meta-item"><span class="meta-label">Created by</span><span class="meta-value">Amir Kooshky</span></div>
+      </div>
+    </section>
+
+    <nav class="toc" aria-label="Study sections">
+      <p class="toc-title">In this guide</p>
+      <div class="toc-links">
+        <a href="#meanings">Meanings</a>
+<a href="#family">Word family</a><a href="#collocations">Collocations</a><a href="#relations">Synonyms & antonyms</a><a href="#etymology">Etymology</a><a href="#exercises">Exercises</a>      </div>
+    </nav>
+
+
+    <section class="section" id="meanings">
+      <div class="section-head">
+        <p class="section-kicker">Dictionary guide</p>
+        <h2>Meanings and usage</h2>
+        <p class="section-intro">The core definition and examples are always included. Additional notes appear only when they are accurate and useful.</p>
+      </div>
+
+      <article class="sense-card" id="meaning-1">
+        <header class="sense-head">
+          <span class="sense-number">Meaning 1</span>
+          <h3>Happening by fortunate chance</h3>
+          <div class="badge-row">
+            <span class="badge">adjective</span>
+            <span class="badge">/ˌserənˈdɪpətəs/</span>
+<span class="badge">More common in formal, academic, and literary English than in everyday conversation.</span>          </div>
+        </header>
+        <div class="sense-body">
+          <p class="definition">happening or being discovered by chance in a way that is interesting, useful, or pleasant</p>
+<p class="plain-equivalent"><strong>In simpler words:</strong> happening by lucky chance</p><div class="pattern-banner"><strong>Typical pattern:</strong> serendipitous + noun</div>
+
+          <p class="subsection-title">Natural examples</p>
+          <ol class="example-list">
+<li>A serendipitous conversation at the conference led the researchers to begin a joint project.</li><li>The drug&#39;s potential use as a treatment emerged from a serendipitous laboratory observation.</li><li>While browsing the archive, the historian made a serendipitous discovery that changed her interpretation of the event.</li><li>Our meeting was entirely serendipitous; neither of us had planned to visit the museum that day.</li><li>The student found a valuable source through a serendipitous online search.</li><li>A wrong turn led to a serendipitous encounter with a quiet village.</li><li>The team benefited from a serendipitous connection between two apparently unrelated ideas.</li>          </ol>
+
+          <div class="info-grid">
+            <section class="info-card good">
+              <h4>Nuance and implication</h4>
+<p><strong>Central nuance:</strong> The event is not planned, but it produces an interesting, useful, or pleasant result.</p><p><strong>Usual implication:</strong> It usually suggests a positive surprise rather than a merely random event.</p><p><strong>Compared with “accidental”:</strong> Accidental only means unplanned and may describe something neutral or harmful. Serendipitous usually suggests that the chance event has a welcome or valuable result.</p>            </section>
+
+            <section class="info-card">
+              <h4>Grammar notes</h4>
+              <dl class="grammar-list">
+<div class="grammar-item"><dt>How to use it</dt><dd>Use it to describe a noun, or place it after a form of be. For example: a serendipitous discovery; The discovery was serendipitous.</dd></div><div class="grammar-item"><dt>What can follow it</dt><dd>It commonly comes before nouns such as discovery, encounter, finding, meeting, connection, and event.</dd></div><div class="grammar-item"><dt>Position in a sentence</dt><dd>It usually appears before a noun, but it can also appear after be, seem, or feel.</dd></div>              </dl>
+            </section>
+          </div>
+
+          <p class="subsection-title">Useful patterns</p>
+          <div class="pattern-list">
+            <article class="pattern-card">
+              <code class="pattern-code">serendipitous + noun</code>
+<p class="pattern-use">Use this pattern to describe an unplanned event, meeting, or discovery with a welcome result.</p>              <p><strong>Example:</strong> The researchers made a serendipitous discovery while testing a different theory.</p>
+            </article>
+            <article class="pattern-card">
+              <code class="pattern-code">be + serendipitous</code>
+<p class="pattern-use">Use this pattern when the adjective describes the subject of the sentence.</p>              <p><strong>Example:</strong> Their encounter was completely serendipitous.</p>
+            </article>
+          </div>
+
+          <p class="subsection-title">Common wrong usage</p>
+          <div class="error-list">
+            <article class="error-card">
+              <p class="error-wrong"><strong>Wrong:</strong> The scientist serendipitous discovered the effect.</p>
+              <p class="error-correct"><strong>Correct:</strong> The scientist serendipitously discovered the effect.</p>
+<p class="error-explanation">Use serendipitously to describe how an action happened.</p>            </article>
+            <article class="error-card">
+              <p class="error-wrong"><strong>Wrong:</strong> Their discovery was a serendipitous.</p>
+              <p class="error-correct"><strong>Correct:</strong> Their discovery was serendipitous.</p>
+<p class="error-explanation">Serendipitous is an adjective, not a countable noun, so do not use a before it when no noun follows.</p>            </article>
+            <article class="error-card">
+              <p class="error-wrong"><strong>Wrong:</strong> The equipment failure was serendipitous because it destroyed the entire experiment.</p>
+              <p class="error-correct"><strong>Correct:</strong> The equipment failure was accidental and destroyed the entire experiment.</p>
+<p class="error-explanation">Serendipitous normally suggests an interesting, useful, or pleasant result, not simply an unplanned harmful event.</p>            </article>
+          </div>
+
+        </div>
+      </article>
+    </section>
+
+    <section class="section" id="family">
+      <div class="section-head">
+        <p class="section-kicker">Morphology</p>
+        <h2>Word family</h2>
+        <p class="section-intro">Only common and educationally useful family members are included.</p>
+      </div>
+      <div class="card-grid three">
+        <article class="family-card">
+          <p class="eyebrow">uncountable noun</p>
+          <h3>serendipity</h3>
+<p class="ipa">/ˌserənˈdɪpəti/</p>          <p>the occurrence of finding something interesting, useful, or pleasant by chance</p>
+          <div class="mini-facts">
+<p class="mini-fact"><strong>Relationship:</strong> Serendipity is the noun from which serendipitous is formed.</p><p class="mini-fact"><strong>Pattern:</strong> by serendipity or a piece of serendipity</p><p class="mini-fact"><strong>Usage note:</strong> Serendipity is normally uncountable. Say serendipity or a piece of serendipity, not a serendipity.</p>          </div>
+          <ol class="example-list"><li>The discovery of the old letters was a remarkable piece of serendipity.</li><li>Serendipity sometimes plays an important role in scientific research.</li><li>By pure serendipity, she met a former classmate who could help with the project.</li></ol>
+        </article>
+        <article class="family-card">
+          <p class="eyebrow">adverb</p>
+          <h3>serendipitously</h3>
+<p class="ipa">/ˌserənˈdɪpətəsli/</p>          <p>by chance in a way that produces an interesting, useful, or pleasant result</p>
+          <div class="mini-facts">
+<p class="mini-fact"><strong>Relationship:</strong> Serendipitously is the adverb form of serendipitous.</p><p class="mini-fact"><strong>Pattern:</strong> verb + serendipitously</p><p class="mini-fact"><strong>Usage note:</strong> Use it to describe how an event, meeting, or discovery happened.</p>          </div>
+          <ol class="example-list"><li>The two researchers met serendipitously at a workshop.</li><li>The solution was discovered serendipitously during an unrelated experiment.</li></ol>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="collocations">
+      <div class="section-head">
+        <p class="section-kicker">Natural combinations</p>
+        <h2>Common collocations</h2>
+        <p class="section-intro">These are established combinations, not merely grammatically possible phrases.</p>
+      </div>
+      <div class="card-grid three">
+        <article class="collocation-card">
+<p class="eyebrow">Happening by fortunate chance</p>          <h3>serendipitous discovery</h3>
+<p>an important or welcome discovery made by chance</p>          <div class="mini-facts">
+<p class="mini-fact"><strong>Pattern:</strong> a serendipitous discovery</p>            <p class="mini-fact"><strong>Example:</strong> A serendipitous discovery in the laboratory opened a new area of research.</p>
+<p class="mini-fact"><strong>Usage note:</strong> This is especially common in discussions of science, history, and research.</p>          </div>
+        </article>
+        <article class="collocation-card">
+<p class="eyebrow">Happening by fortunate chance</p>          <h3>serendipitous encounter</h3>
+<p>an unplanned meeting that has a positive or interesting result</p>          <div class="mini-facts">
+<p class="mini-fact"><strong>Pattern:</strong> a serendipitous encounter with + person or thing</p>            <p class="mini-fact"><strong>Example:</strong> A serendipitous encounter with a local artist changed the direction of her project.</p>
+          </div>
+        </article>
+        <article class="collocation-card">
+<p class="eyebrow">Happening by fortunate chance</p>          <h3>serendipitous finding</h3>
+<p>a useful or interesting result found unexpectedly</p>          <div class="mini-facts">
+<p class="mini-fact"><strong>Pattern:</strong> a serendipitous finding</p>            <p class="mini-fact"><strong>Example:</strong> The study began with a serendipitous finding that the researchers had not expected.</p>
+          </div>
+        </article>
+        <article class="collocation-card">
+<p class="eyebrow">Happening by fortunate chance</p>          <h3>serendipitous meeting</h3>
+<p>an unplanned meeting with a welcome result</p>          <div class="mini-facts">
+<p class="mini-fact"><strong>Pattern:</strong> a serendipitous meeting</p>            <p class="mini-fact"><strong>Example:</strong> Their serendipitous meeting at the library developed into a lasting professional partnership.</p>
+          </div>
+        </article>
+        <article class="collocation-card">
+<p class="eyebrow">Happening by fortunate chance</p>          <h3>serendipitous connection</h3>
+<p>an unexpected and useful link between people, facts, or ideas</p>          <div class="mini-facts">
+<p class="mini-fact"><strong>Pattern:</strong> a serendipitous connection between + two things</p>            <p class="mini-fact"><strong>Example:</strong> The author noticed a serendipitous connection between two sources from different periods.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="relations">
+      <div class="section-head">
+        <p class="section-kicker">Meaning relations</p>
+        <h2>Synonyms and antonyms</h2>
+        <p class="section-intro">Only clear and useful relationships are included.</p>
+      </div>
+      <h3>Close synonyms</h3>
+      <div class="compare-grid">
+        <article class="compare-card">
+          <span class="word-pill">fortuitous</span>
+          <p class="meta">adjective · Happening by fortunate chance</p>
+<p><strong>Shared meaning:</strong> Both words can describe an unplanned event with a favorable result.</p>          <p><strong>Difference:</strong> Fortuitous also means happening by chance and often describes a favorable result. Serendipitous more strongly suggests an unexpected discovery, meeting, or connection that proves valuable or pleasant.</p>
+          <p><strong>Example:</strong> A fortuitous delay allowed the team to correct a serious error.</p>
+        </article>
+        <article class="compare-card">
+          <span class="word-pill">unexpected</span>
+          <p class="meta">adjective · Happening by fortunate chance</p>
+<p><strong>Shared meaning:</strong> Both words can describe something that was not planned or predicted.</p>          <p><strong>Difference:</strong> Unexpected only means not expected. It can describe good, bad, or neutral events and does not necessarily suggest a valuable chance discovery.</p>
+          <p><strong>Example:</strong> The unexpected storm forced the researchers to leave the site early.</p>
+        </article>
+        <article class="compare-card">
+          <span class="word-pill">fortunate</span>
+          <p class="meta">adjective · Happening by fortunate chance</p>
+<p><strong>Shared meaning:</strong> Both words often describe a positive result.</p>          <p><strong>Difference:</strong> Fortunate means lucky or favorable, but the event does not have to be unplanned or involve discovering something by chance.</p>
+          <p><strong>Example:</strong> It was fortunate that the backup files had been saved.</p>
+        </article>
+        <article class="compare-card">
+          <span class="word-pill">chance</span>
+          <p class="meta">adjective · Happening by fortunate chance</p>
+<p><strong>Shared meaning:</strong> Both can describe something that happens without planning.</p>          <p><strong>Difference:</strong> Chance simply means accidental or unplanned. It does not by itself suggest that the result is useful, interesting, or pleasant.</p>
+          <p><strong>Example:</strong> A chance remark gave the journalist a new lead.</p>
+        </article>
+      </div>
+
+    </section>
+
+
+    <section class="section" id="etymology">
+      <div class="section-head">
+        <p class="section-kicker">Word history</p>
+        <h2>Etymology</h2>
+        <p class="section-intro">Only confidently documented details are shown.</p>
+      </div>
+      <div class="etymology-flow">
+<article class="etymology-step"><h3>Origin</h3><p>Serendipitous was formed from serendipity, a word coined by the English writer Horace Walpole in 1754 after the tale The Three Princes of Serendip.</p></article><article class="etymology-step"><h3>Historical form</h3><p>Serendip was an old name for Sri Lanka.</p></article><article class="etymology-step"><h3>Development</h3><p>The adjective came to describe events or discoveries that happen by chance and lead to an interesting, useful, or pleasant result.</p></article><article class="etymology-step"><h3>Memory link</h3><p>Think of unexpectedly finding something valuable while looking for something else.</p></article>      </div>
+    </section>
+
+    <section class="section" id="exercises">
+      <div class="section-head">
+        <p class="section-kicker">Active practice</p>
+        <h2>Practice exercises</h2>
+      </div>
+      <div class="exercise-grid">
+        <article class="exercise-card">
+          <h3>Word family choice</h3>
+          <p class="exercise-instruction">Choose the best member of the word family for each blank.</p>
+          <ol class="clean-list"><li>The discovery was a remarkable example of _____.</li><li>The researchers made a _____ discovery while studying a different question.</li><li>The two scholars met _____ at an international conference.</li></ol>
+        </article>
+        <article class="exercise-card">
+          <h3>Correct or incorrect?</h3>
+          <p class="exercise-instruction">Decide whether each sentence is correct. Correct the inaccurate ones.</p>
+          <ol class="clean-list"><li>The archive visit led to a serendipitous discovery.</li><li>The scientist serendipitous found a new use for the material.</li><li>Their meeting was serendipitous and led to a successful collaboration.</li><li>The deliberate and carefully scheduled meeting was serendipitous.</li></ol>
+        </article>
+        <article class="exercise-card">
+          <h3>Collocation practice</h3>
+          <p class="exercise-instruction">Complete each sentence with a natural collocation.</p>
+          <ol class="clean-list"><li>A serendipitous _____ in the laboratory led to a major breakthrough.</li><li>A serendipitous _____ with a visiting professor gave her a new research idea.</li><li>The historian noticed a serendipitous _____ between the two documents.</li></ol>
+        </article>
+      </div>
+
+      <details class="answer-key">
+        <summary>Open the complete answer key</summary>
+        <div class="answer-content">
+          <section class="answer-group">
+            <h3>Word family choice</h3>
+            <p class="answer-item"><strong>1. serendipity</strong><br>The discovery was a remarkable example of serendipity.<br><em>A noun is needed after of.</em></p>
+            <p class="answer-item"><strong>2. serendipitous</strong><br>The researchers made a serendipitous discovery while studying a different question.<br><em>An adjective is needed before discovery.</em></p>
+            <p class="answer-item"><strong>3. serendipitously</strong><br>The two scholars met serendipitously at an international conference.<br><em>An adverb is needed to describe how they met.</em></p>
+          </section>
+          <section class="answer-group">
+            <h3>Correct or incorrect?</h3>
+            <p class="answer-item"><strong>1. Correct</strong><br><em>Serendipitous correctly describes an unplanned and valuable discovery.</em></p>
+            <p class="answer-item"><strong>2. Incorrect</strong><br>The scientist serendipitously found a new use for the material.<br><em>Use the adverb serendipitously to describe how the scientist found it.</em></p>
+            <p class="answer-item"><strong>3. Correct</strong><br><em>The adjective can appear after was and describes a chance meeting with a positive result.</em></p>
+            <p class="answer-item"><strong>4. Incorrect</strong><br>The deliberate and carefully scheduled meeting was productive.<br><em>A serendipitous meeting is unplanned, so the word conflicts with deliberate and carefully scheduled.</em></p>
+          </section>
+          <section class="answer-group">
+            <h3>Collocation practice</h3>
+            <p class="answer-item"><strong>1. discovery</strong><br>A serendipitous discovery in the laboratory led to a major breakthrough.<br><em>Serendipitous discovery is a common collocation, especially in scientific contexts.</em></p>
+            <p class="answer-item"><strong>2. encounter</strong><br>A serendipitous encounter with a visiting professor gave her a new research idea.<br><em>A serendipitous encounter is an unplanned meeting with a useful or pleasant result.</em></p>
+            <p class="answer-item"><strong>3. connection</strong><br>The historian noticed a serendipitous connection between the two documents.<br><em>A serendipitous connection is an unexpected and useful link.</em></p>
+          </section>
+        </div>
+      </details>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-row">
+        <span>Created and compiled by <strong>Amir Kooshky</strong></span>
+        <nav class="footer-links" aria-label="Creator links">
+          <a href="https://t.me/KooshkyTOEFL" target="_blank" rel="noopener">Telegram channel</a>
+          <a href="https://www.instagram.com/kooshkytoefl" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://t.me/KooshkyTOEFL_pv" target="_blank" rel="noopener">Personal Telegram</a>
+        </nav>
+      </div>
+    </footer>
+  </main>
+
+  <button class="back-to-top no-js-hidden" type="button" data-back-to-top aria-label="Go to the top">↑</button>
+  <script>
+(() => {
+  "use strict";
+
+  const root = document.documentElement;
+  root.classList.add("js");
+
+  const storageKey = "kooshky-wotd-theme";
+  const themeButton = document.querySelector("[data-theme-toggle]");
+  const printButton = document.querySelector("[data-print]");
+  const topButton = document.querySelector("[data-back-to-top]");
+
+  const applyTheme = (theme) => {
+    if (theme === "light" || theme === "dark") {
+      root.dataset.theme = theme;
+    } else {
+      delete root.dataset.theme;
+    }
+    if (themeButton) {
+      const active = root.dataset.theme || "system";
+      themeButton.textContent = active === "dark" ? "Light mode" : "Dark mode";
+      themeButton.setAttribute("aria-label", `Switch from ${active} theme`);
+    }
+  };
+
+  let savedTheme = null;
+  try { savedTheme = localStorage.getItem(storageKey); } catch (_) { /* local files may block storage */ }
+  applyTheme(savedTheme);
+
+  themeButton?.addEventListener("click", () => {
+    const systemDark = window.matchMedia?.("(prefers-color-scheme: dark)").matches;
+    const current = root.dataset.theme || (systemDark ? "dark" : "light");
+    const next = current === "dark" ? "light" : "dark";
+    applyTheme(next);
+    try { localStorage.setItem(storageKey, next); } catch (_) { /* nonessential */ }
+  });
+
+  printButton?.addEventListener("click", () => window.print());
+
+  if (topButton) {
+    const updateTopButton = () => topButton.classList.toggle("visible", window.scrollY > 700);
+    window.addEventListener("scroll", updateTopButton, { passive: true });
+    updateTopButton();
+    topButton.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+  }
+})();
+
+  </script>
+</body>
+</html>
