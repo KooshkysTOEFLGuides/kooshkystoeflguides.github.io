@@ -1,0 +1,1096 @@
+  <!doctype html>
+  <html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="Browse all Kooshky TOEFL articles by reading, listening, speaking, writing, vocabulary, grammar, strategy, and resources.">
+    <meta name="theme-color" content="#F4F0E8">
+    <title>All TOEFL Articles — Kooshky's TOEFL Guides</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Literata:opsz,wght@7..72,600;7..72,700&display=swap" rel="stylesheet">
+
+<script>
+  (() => {
+    try {
+      const saved = localStorage.getItem('kooshky-guides:theme:v1');
+      const preferred = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.dataset.theme = saved || preferred;
+    } catch (_) {
+      document.documentElement.dataset.theme = 'light';
+    }
+  })();
+</script>
+
+    <style>
+
+  :root {
+    color-scheme: light;
+    --color-page: #f4f0e8;
+    --color-surface: #fcfaf6;
+    --color-surface-raised: #ffffff;
+    --color-text: #182027;
+    --color-text-muted: #59636c;
+    --color-border: #d7d0c3;
+    --color-border-strong: #b9b0a1;
+    --color-accent: #a9470d;
+    --color-accent-strong: #7d3208;
+    --color-accent-soft: #f3e2d3;
+    --color-secondary: #1e5b63;
+    --color-secondary-strong: #17484e;
+    --color-secondary-soft: #ddeae8;
+    --color-focus: #1f78a8;
+    --color-backdrop: rgb(17 20 23 / 0.62);
+    --font-heading: "Literata", Georgia, "Times New Roman", serif;
+    --font-body: "IBM Plex Sans", Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --space-1: .25rem;
+    --space-2: .5rem;
+    --space-3: .75rem;
+    --space-4: 1rem;
+    --space-5: 1.5rem;
+    --space-6: 2rem;
+    --space-7: 3rem;
+    --space-8: 4.5rem;
+    --radius-sm: .35rem;
+    --radius-md: .6rem;
+    --radius-lg: .9rem;
+    --shadow-sm: 0 1px 2px rgb(24 32 39 / .08);
+    --shadow-md: 0 16px 42px rgb(24 32 39 / .16);
+    --page-width: 92rem;
+    --reading-width: 74ch;
+    --header-height: 4.35rem;
+    --z-header: 100;
+    --z-nav-backdrop: 180;
+    --z-nav: 190;
+    --z-floating: 220;
+    --z-lookup: 320;
+    --z-modal-backdrop: 400;
+    --z-modal: 410;
+  }
+
+  html[data-theme="dark"] {
+    color-scheme: dark;
+    --color-page: #111417;
+    --color-surface: #181d21;
+    --color-surface-raised: #1d2328;
+    --color-text: #ece7dd;
+    --color-text-muted: #adb4b8;
+    --color-border: #30383e;
+    --color-border-strong: #465159;
+    --color-accent: #f28c45;
+    --color-accent-strong: #ffb06f;
+    --color-accent-soft: #332219;
+    --color-secondary: #70b7b4;
+    --color-secondary-strong: #9bd4d1;
+    --color-secondary-soft: #193033;
+    --color-focus: #77c8ff;
+    --color-backdrop: rgb(0 0 0 / .72);
+    --shadow-sm: 0 1px 2px rgb(0 0 0 / .25);
+    --shadow-md: 0 18px 48px rgb(0 0 0 / .44);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-height) + 1rem); }
+  body {
+    margin: 0;
+    min-width: 0;
+    background: var(--color-page);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.7;
+    text-rendering: optimizeLegibility;
+  }
+  body.nav-open, body.modal-open { overflow: hidden; }
+  a { color: var(--color-secondary); text-decoration-thickness: .08em; text-underline-offset: .18em; overflow-wrap: anywhere; }
+  a:hover { color: var(--color-secondary-strong); }
+  button, input, summary { font: inherit; }
+  button { color: inherit; }
+  img, svg { max-width: 100%; height: auto; }
+  :focus-visible { outline: 3px solid var(--color-focus); outline-offset: 3px; }
+  ::selection { background: var(--color-accent-soft); color: var(--color-text); }
+  [hidden] { display: none !important; }
+
+  .skip-link {
+    position: fixed;
+    top: max(.75rem, env(safe-area-inset-top));
+    left: max(.75rem, env(safe-area-inset-left));
+    z-index: calc(var(--z-modal) + 20);
+    transform: translateY(-170%);
+    padding: .72rem 1rem;
+    border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius-sm);
+    background: var(--color-surface-raised);
+    color: var(--color-text);
+    font-weight: 700;
+    box-shadow: var(--shadow-md);
+    transition: transform 180ms ease;
+  }
+  .skip-link:focus, .skip-link:focus-visible { transform: translateY(0); }
+
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: var(--z-header);
+    border-bottom: 1px solid var(--color-border);
+    background: color-mix(in srgb, var(--color-page) 92%, transparent);
+    backdrop-filter: blur(14px);
+  }
+  .header-inner {
+    min-height: var(--header-height);
+    max-width: var(--page-width);
+    margin-inline: auto;
+    padding: max(.65rem, env(safe-area-inset-top)) clamp(1rem, 3vw, 2.5rem) .65rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-5);
+  }
+  .brand-lockup {
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    color: var(--color-text);
+    text-decoration: none;
+  }
+  .brand-mark {
+    width: .42rem;
+    height: 2.35rem;
+    flex: 0 0 auto;
+    border-radius: 999px;
+    background: var(--color-accent);
+  }
+  .brand-text { min-width: 0; }
+  .brand-eyebrow {
+    display: block;
+    color: var(--color-accent);
+    font-size: .68rem;
+    font-weight: 800;
+    letter-spacing: .14em;
+    line-height: 1.15;
+    text-transform: uppercase;
+  }
+  .brand-title {
+    display: block;
+    color: var(--color-text);
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.3;
+    white-space: nowrap;
+  }
+  .desktop-nav { display: flex; align-items: center; gap: .2rem; }
+  .desktop-nav a {
+    padding: .58rem .76rem;
+    border-radius: var(--radius-sm);
+    color: var(--color-text-muted);
+    font-size: .9rem;
+    font-weight: 700;
+    text-decoration: none;
+  }
+  .desktop-nav a:hover, .desktop-nav a[aria-current="page"] { background: var(--color-secondary-soft); color: var(--color-secondary-strong); }
+  .header-actions { display: flex; align-items: center; gap: .5rem; }
+  .icon-button {
+    min-width: 2.75rem;
+    min-height: 2.75rem;
+    display: inline-grid;
+    place-items: center;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background: var(--color-surface);
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+  }
+  .icon-button:hover { border-color: var(--color-border-strong); background: var(--color-surface-raised); }
+  .menu-button { display: none; }
+
+  .mobile-nav-backdrop {
+    position: fixed;
+    inset: var(--header-height) 0 0;
+    z-index: var(--z-nav-backdrop);
+    background: var(--color-backdrop);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 190ms ease;
+  }
+  .mobile-nav-backdrop.is-visible { opacity: 1; pointer-events: auto; }
+  .mobile-nav {
+    position: fixed;
+    inset: var(--header-height) 0 auto auto;
+    z-index: var(--z-nav);
+    width: min(22rem, calc(100vw - 2rem));
+    max-height: calc(100dvh - var(--header-height));
+    overflow: auto;
+    padding: 1rem max(1rem, env(safe-area-inset-right)) calc(1rem + env(safe-area-inset-bottom)) 1rem;
+    border-left: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+    border-radius: 0 0 0 var(--radius-lg);
+    background: var(--color-surface-raised);
+    box-shadow: var(--shadow-md);
+    transform: translateX(104%);
+    transition: transform 190ms ease;
+  }
+  .mobile-nav.is-open { transform: translateX(0); }
+  .mobile-nav nav { display: grid; gap: .45rem; }
+  .mobile-nav a {
+    padding: .9rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    color: var(--color-text);
+    font-weight: 700;
+    text-decoration: none;
+  }
+  .mobile-nav a[aria-current="page"] { border-color: var(--color-secondary); background: var(--color-secondary-soft); color: var(--color-secondary-strong); }
+
+  .page-shell { max-width: var(--page-width); margin-inline: auto; padding: clamp(1rem, 3vw, 2.5rem); }
+  .hero {
+    position: relative;
+    overflow: hidden;
+    min-height: min(39rem, calc(100dvh - var(--header-height) - 2rem));
+    display: grid;
+    align-items: end;
+    margin-bottom: var(--space-8);
+    padding: clamp(1.6rem, 5vw, 4rem);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background:
+      linear-gradient(135deg, color-mix(in srgb, var(--color-accent-soft) 76%, transparent), transparent 58%),
+      var(--color-surface);
+    box-shadow: var(--shadow-sm);
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: clamp(.42rem, .8vw, .7rem);
+    background: var(--color-accent);
+  }
+  .hero-inner { position: relative; z-index: 1; max-width: 65rem; }
+  .eyebrow {
+    margin: 0 0 .75rem;
+    color: var(--color-accent);
+    font-size: .76rem;
+    font-weight: 800;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+  }
+  .hero h1 {
+    max-width: 15ch;
+    margin: 0;
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 7vw, 6.4rem);
+    line-height: .98;
+    letter-spacing: -.045em;
+    overflow-wrap: anywhere;
+  }
+  .hero-lede {
+    max-width: 58ch;
+    margin: 1.5rem 0 0;
+    color: var(--color-text-muted);
+    font-size: clamp(1.05rem, 2vw, 1.3rem);
+    line-height: 1.65;
+  }
+  .hero-credit { margin: 1rem 0 0; color: var(--color-text-muted); }
+  .hero-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.6rem; }
+  .button-link, .button {
+    min-height: 2.85rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .55rem;
+    padding: .72rem 1rem;
+    border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius-sm);
+    background: var(--color-surface-raised);
+    color: var(--color-text);
+    font-weight: 800;
+    line-height: 1.25;
+    text-decoration: none;
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+  }
+  .button-link:hover, .button:hover { border-color: var(--color-secondary); background: var(--color-secondary-soft); color: var(--color-secondary-strong); }
+  .button-link.primary, .button.primary { border-color: var(--color-accent); background: var(--color-accent); color: #fff; }
+  html[data-theme="dark"] .button-link.primary, html[data-theme="dark"] .button.primary { color: #111417; }
+  .button-link.primary:hover, .button.primary:hover { background: var(--color-accent-strong); color: #fff; }
+  html[data-theme="dark"] .button-link.primary:hover, html[data-theme="dark"] .button.primary:hover { color: #111417; }
+
+  .content-section { scroll-margin-top: calc(var(--header-height) + 1.25rem); margin-block: var(--space-8); }
+  .section-heading { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 1rem; align-items: start; margin-bottom: 1.5rem; }
+  .section-index {
+    min-width: 2.7rem;
+    padding-top: .26rem;
+    color: var(--color-accent);
+    font-size: .73rem;
+    font-weight: 800;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+  }
+  .section-title-wrap h2 {
+    margin: 0;
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 4vw, 3rem);
+    line-height: 1.12;
+    letter-spacing: -.025em;
+    overflow-wrap: anywhere;
+  }
+  .section-title-wrap p { max-width: 64ch; margin: .6rem 0 0; color: var(--color-text-muted); }
+
+  .article-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+  .article-card {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+    padding: 1.25rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-sm);
+  }
+  .article-card:hover { border-color: var(--color-border-strong); }
+  .article-card .card-kicker { margin: 0; color: var(--color-accent); font-size: .72rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+  .article-card h3 { margin: 0; font-family: var(--font-heading); font-size: 1.35rem; line-height: 1.25; overflow-wrap: anywhere; }
+  .article-card p { margin: 0; color: var(--color-text-muted); }
+  .article-card .card-link { margin-top: auto; font-weight: 800; }
+
+  .empty-state {
+    min-height: 14rem;
+    display: grid;
+    place-items: center;
+    padding: clamp(1.5rem, 5vw, 3.5rem);
+    border: 1px dashed var(--color-border-strong);
+    border-radius: var(--radius-md);
+    background: color-mix(in srgb, var(--color-surface) 76%, transparent);
+    text-align: center;
+  }
+  .empty-state-inner { max-width: 35rem; }
+  .empty-state .empty-label { margin: 0 0 .6rem; color: var(--color-accent); font-size: .72rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+  .empty-state h3 { margin: 0; font-family: var(--font-heading); font-size: clamp(1.45rem, 3vw, 2rem); }
+  .empty-state p { margin: .7rem auto 0; color: var(--color-text-muted); }
+  .empty-state .button-link { margin-top: 1.15rem; }
+
+  .category-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; }
+  .category-card {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 13rem;
+    padding: 1.2rem;
+    border: 1px solid var(--color-border);
+    border-top: .34rem solid var(--color-secondary);
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+    color: var(--color-text);
+    text-decoration: none;
+    box-shadow: var(--shadow-sm);
+  }
+  .category-card:hover { border-color: var(--color-secondary); color: var(--color-text); transform: translateY(-2px); }
+  .category-number { color: var(--color-secondary); font-size: .72rem; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+  .category-card h3 { margin: auto 0 .35rem; font-family: var(--font-heading); font-size: 1.35rem; line-height: 1.2; overflow-wrap: anywhere; }
+  .category-card p { margin: 0; color: var(--color-text-muted); font-size: .92rem; }
+
+  .feature-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+  .feature-card {
+    padding: 1.35rem;
+    border: 1px solid var(--color-border);
+    border-left: .34rem solid var(--color-accent);
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+  }
+  .feature-card:nth-child(even) { border-left-color: var(--color-secondary); }
+  .feature-card .feature-label { margin: 0 0 .4rem; color: var(--color-accent); font-size: .72rem; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+  .feature-card:nth-child(even) .feature-label { color: var(--color-secondary); }
+  .feature-card h3 { margin: 0; font-family: var(--font-heading); font-size: 1.35rem; line-height: 1.25; }
+  .feature-card p { margin: .65rem 0 0; color: var(--color-text-muted); }
+
+  .split-panel { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(18rem, .85fr); gap: 1.2rem; }
+  .panel {
+    min-width: 0;
+    padding: clamp(1.35rem, 3vw, 2.2rem);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+  }
+  .panel[data-tone="teal"] { background: var(--color-secondary-soft); border-color: color-mix(in srgb, var(--color-secondary) 45%, var(--color-border)); }
+  .panel h2, .panel h3 { margin-top: 0; font-family: var(--font-heading); line-height: 1.2; }
+  .panel h2 { font-size: clamp(1.7rem, 4vw, 2.7rem); }
+  .panel p { color: var(--color-text-muted); }
+  .panel p:last-child { margin-bottom: 0; }
+
+  .library-tools {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 1rem;
+    align-items: end;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+  }
+  .field-label { display: block; margin-bottom: .4rem; color: var(--color-text-muted); font-size: .78rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+  .search-input {
+    width: 100%;
+    min-height: 3rem;
+    padding: .72rem .9rem;
+    border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius-sm);
+    background: var(--color-surface-raised);
+    color: var(--color-text);
+  }
+  .library-count { margin: 0; padding: .74rem .9rem; border: 1px solid var(--color-border); border-radius: var(--radius-sm); color: var(--color-text-muted); font-weight: 700; white-space: nowrap; }
+  .jump-nav { display: flex; flex-wrap: wrap; gap: .55rem; margin: 0 0 1.5rem; }
+  .jump-nav a {
+    padding: .55rem .72rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background: var(--color-surface);
+    color: var(--color-text-muted);
+    font-size: .88rem;
+    font-weight: 700;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+  }
+  .jump-nav a:hover { border-color: var(--color-secondary); background: var(--color-secondary-soft); color: var(--color-secondary-strong); }
+  .library-section { scroll-margin-top: calc(var(--header-height) + 1rem); margin-block: 2.5rem; }
+  .library-section-header { display: flex; align-items: end; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; padding-bottom: .8rem; border-bottom: 1px solid var(--color-border); }
+  .library-section-header h2 { margin: 0; font-family: var(--font-heading); font-size: clamp(1.5rem, 3vw, 2.25rem); overflow-wrap: anywhere; }
+  .category-count { color: var(--color-text-muted); font-size: .9rem; font-weight: 700; }
+  .library-section .empty-state { min-height: 9rem; }
+
+  .site-footer { margin-top: var(--space-8); border-top: 1px solid var(--color-border); background: var(--color-surface); }
+  .footer-inner {
+    max-width: var(--page-width);
+    margin-inline: auto;
+    padding: 2.4rem clamp(1rem, 3vw, 2.5rem) calc(2.4rem + env(safe-area-inset-bottom));
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(15rem, .8fr);
+    gap: 2rem;
+  }
+  .footer-title { margin: 0; font-family: var(--font-heading); font-size: 1.35rem; }
+  .footer-copy { max-width: 55ch; margin: .5rem 0 0; color: var(--color-text-muted); }
+  .footer-links { display: flex; flex-wrap: wrap; align-content: start; justify-content: flex-end; gap: .6rem 1rem; }
+  .footer-links a { font-weight: 700; }
+  .copyright { grid-column: 1 / -1; margin: 0; padding-top: 1.2rem; border-top: 1px solid var(--color-border); color: var(--color-text-muted); font-size: .86rem; }
+
+  .go-top {
+    position: fixed;
+    right: max(1rem, env(safe-area-inset-right));
+    bottom: max(1rem, env(safe-area-inset-bottom));
+    z-index: var(--z-floating);
+    width: 3rem;
+    height: 3rem;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius-sm);
+    background: var(--color-surface-raised);
+    box-shadow: var(--shadow-md);
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(.7rem);
+    transition: opacity 180ms ease, transform 180ms ease, bottom 180ms ease;
+  }
+  .go-top.is-visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+
+  .lookup-menu {
+    position: fixed;
+    z-index: var(--z-lookup);
+    width: min(20rem, calc(100vw - 1.5rem));
+    padding: .75rem;
+    border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius-md);
+    background: var(--color-surface-raised);
+    box-shadow: var(--shadow-md);
+  }
+  .lookup-word { margin: 0 0 .55rem; font-weight: 800; line-height: 1.35; overflow-wrap: anywhere; }
+  .lookup-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .4rem; }
+  .lookup-links a {
+    padding: .55rem .6rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    color: var(--color-text);
+    font-size: .82rem;
+    font-weight: 800;
+    line-height: 1.25;
+    text-align: center;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+  }
+  .lookup-links a:hover { border-color: var(--color-secondary); background: var(--color-secondary-soft); color: var(--color-secondary-strong); }
+
+  .modal-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: var(--z-modal-backdrop);
+    display: none;
+    place-items: center;
+    padding: max(1rem, env(safe-area-inset-top)) max(1rem, env(safe-area-inset-right)) max(1rem, env(safe-area-inset-bottom)) max(1rem, env(safe-area-inset-left));
+    background: var(--color-backdrop);
+  }
+  .modal-backdrop.is-visible { display: grid; }
+  .promo-modal {
+    position: relative;
+    z-index: var(--z-modal);
+    width: min(34rem, 100%);
+    max-height: min(86dvh, 42rem);
+    overflow: auto;
+    padding: clamp(1.35rem, 4vw, 2rem);
+    border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface-raised);
+    box-shadow: var(--shadow-md);
+  }
+  .promo-modal::before { content: ""; display: block; width: 4.5rem; height: .36rem; margin-bottom: 1.2rem; border-radius: 999px; background: var(--color-accent); }
+  .modal-close {
+    position: absolute;
+    top: .75rem;
+    right: .75rem;
+    width: 2.6rem;
+    height: 2.6rem;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background: var(--color-surface);
+    cursor: pointer;
+  }
+  .promo-kicker { margin: 0 3rem .45rem 0; color: var(--color-accent); font-size: .74rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+  .promo-modal h2 { margin: 0; font-family: var(--font-heading); font-size: clamp(1.65rem, 5vw, 2.45rem); line-height: 1.12; }
+  .promo-modal p { color: var(--color-text-muted); }
+
+  @media (max-width: 64rem) {
+    .article-grid, .category-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .feature-grid { grid-template-columns: 1fr; }
+    .split-panel { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 48rem) {
+    :root { --header-height: 4rem; }
+    .desktop-nav { display: none; }
+    .menu-button { display: inline-grid; }
+    .page-shell { padding: 1rem; }
+    .hero { min-height: auto; margin-bottom: 3rem; padding: 1.6rem 1.2rem 1.6rem 1.55rem; }
+    .hero h1 { max-width: none; font-size: clamp(2.45rem, 14vw, 4.4rem); }
+    .hero-actions { display: grid; grid-template-columns: 1fr; }
+    .button-link { width: 100%; }
+    .article-grid, .category-grid { grid-template-columns: 1fr; }
+    .section-heading { grid-template-columns: 1fr; gap: .35rem; }
+    .section-index { padding-top: 0; }
+    .library-tools { grid-template-columns: 1fr; }
+    .library-count { white-space: normal; }
+    .library-section-header { align-items: start; flex-direction: column; gap: .2rem; }
+    .footer-inner { grid-template-columns: 1fr; }
+    .footer-links { justify-content: flex-start; }
+    .copyright { grid-column: 1; }
+  }
+  @media (max-width: 24rem) {
+    .header-inner { gap: .4rem; padding-inline: .65rem; }
+    .brand-mark { height: 2rem; }
+    .brand-eyebrow { font-size: .59rem; }
+    .brand-title { max-width: 10.2rem; font-size: .88rem; white-space: normal; }
+    .header-actions { gap: .35rem; }
+    .icon-button { min-width: 2.55rem; min-height: 2.55rem; }
+    .lookup-links { grid-template-columns: 1fr; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+  }
+
+    </style>
+  </head>
+  <body>
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand-lockup" href="index.html" aria-label="Kooshky's TOEFL Guides home">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-text">
+        <span class="brand-eyebrow">Kooshky Editorial Signal</span>
+        <span class="brand-title">Kooshky's TOEFL Guides</span>
+      </span>
+    </a>
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="index.html" >Home</a>
+      <a href="articles.html" aria-current="page">All articles</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#connect">Connect</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-button" id="themeToggle" type="button" aria-label="Switch to dark mode" aria-pressed="false" title="Change theme"><span id="themeIcon" aria-hidden="true">☾</span></button>
+      <button class="icon-button menu-button" id="menuButton" type="button" aria-label="Open navigation" aria-controls="mobileNav" aria-expanded="false" title="Menu"><span aria-hidden="true">☰</span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-nav-backdrop" id="mobileNavBackdrop" aria-hidden="true"></div>
+<aside class="mobile-nav" id="mobileNav" aria-label="Mobile navigation" aria-hidden="true">
+  <nav>
+    <a href="index.html" >Home</a>
+    <a href="articles.html" aria-current="page">All articles</a>
+    <a href="index.html#about">About Amir Kooshky</a>
+    <a href="index.html#connect">Telegram, Instagram &amp; DM</a>
+  </nav>
+</aside>
+
+
+<main class="page-shell" id="main-content">
+  <section class="hero" aria-labelledby="articles-title">
+    <div class="hero-inner">
+      <p class="eyebrow">The complete library</p>
+      <h1 id="articles-title">All TOEFL articles.</h1>
+      <p class="hero-lede">Browse the full collection by skill. The page is deliberately ready but empty, so each new guide can be added to the correct section without redesigning the library.</p>
+      <p class="hero-credit">Collected and compiled by <strong>Amir Kooshky</strong>.</p>
+      <div class="hero-actions">
+        <a class="button-link primary" href="index.html">Return to the homepage</a>
+        <a class="button-link" href="https://t.me/KooshkyTOEFL" target="_blank" rel="noopener noreferrer">Telegram channel</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section" aria-labelledby="library-title">
+    <div class="section-heading">
+      <span class="section-index">Library</span>
+      <div class="section-title-wrap">
+        <h2 id="library-title">Find a guide</h2>
+        <p>Search will work automatically as article cards are added. Use the category links to jump directly to a TOEFL skill.</p>
+      </div>
+    </div>
+    <div class="library-tools">
+      <label>
+        <span class="field-label">Search the library</span>
+        <input class="search-input" id="articleSearch" type="search" placeholder="Search titles, descriptions, or categories" autocomplete="off" aria-describedby="libraryCount">
+      </label>
+      <p class="library-count" id="libraryCount" aria-live="polite">0 articles available</p>
+    </div>
+    <nav class="jump-nav" aria-label="Article categories">
+      <a href="#reading">Reading</a><a href="#listening">Listening</a><a href="#speaking">Speaking</a><a href="#writing">Writing</a><a href="#vocabulary">Vocabulary</a><a href="#grammar">Grammar & language</a><a href="#strategy">Test strategy</a><a href="#resources">Study resources</a>
+    </nav>
+    <div id="articleLibrary">
+
+    <section class="library-section" id="reading" data-category-section="reading">
+      <div class="library-section-header">
+        <div>
+          <p class="eyebrow">Category 01</p>
+          <h2>Reading</h2>
+        </div>
+        <span class="category-count" data-category-count="reading">0 articles</span>
+      </div>
+      <p>Passage structure, question types, vocabulary, and comprehension.</p>
+      <div class="article-grid" data-article-grid="reading"></div>
+      <div class="empty-state" data-empty-state="reading">
+        <div class="empty-state-inner">
+          <p class="empty-label">No articles yet</p>
+          <h3>This section is ready for future guides.</h3>
+          <p>Articles in this category will appear here as the library expands.</p>
+        </div>
+      </div>
+    </section>
+    <section class="library-section" id="listening" data-category-section="listening">
+      <div class="library-section-header">
+        <div>
+          <p class="eyebrow">Category 02</p>
+          <h2>Listening</h2>
+        </div>
+        <span class="category-count" data-category-count="listening">0 articles</span>
+      </div>
+      <p>Academic lectures, conversations, note-taking, organization, and attitude.</p>
+      <div class="article-grid" data-article-grid="listening"></div>
+      <div class="empty-state" data-empty-state="listening">
+        <div class="empty-state-inner">
+          <p class="empty-label">No articles yet</p>
+          <h3>This section is ready for future guides.</h3>
+          <p>Articles in this category will appear here as the library expands.</p>
+        </div>
+      </div>
+    </section>
+    <section class="library-section" id="speaking" data-category-section="speaking">
+      <div class="library-section-header">
+        <div>
+          <p class="eyebrow">Category 03</p>
+          <h2>Speaking</h2>
+        </div>
+        <span class="category-count" data-category-count="speaking">0 articles</span>
+      </div>
+      <p>Interview preparation, idea development, delivery, and useful language.</p>
+      <div class="article-grid" data-article-grid="speaking"></div>
+      <div class="empty-state" data-empty-state="speaking">
+        <div class="empty-state-inner">
+          <p class="empty-label">No articles yet</p>
+          <h3>This section is ready for future guides.</h3>
+          <p>Articles in this category will appear here as the library expands.</p>
+        </div>
+      </div>
+    </section>
+    <section class="library-section" id="writing" data-category-section="writing">
+      <div class="library-section-header">
+        <div>
+          <p class="eyebrow">Category 04</p>
+          <h2>Writing</h2>
+        </div>
+        <span class="category-count" data-category-count="writing">0 articles</span>
+      </div>
+      <p>Write an Email, Academic Discussion, development, tone, and revision.</p>
+      <div class="article-grid" data-article-grid="writing"></div>
+      <div class="empty-state" data-empty-state="writing">
+        <div class="empty-state-inner">
+          <p class="empty-label">No articles yet</p>
+          <h3>This section is ready for future guides.</h3>
+          <p>Articles in this category will appear here as the library expands.</p>
+        </div>
+      </div>
+    </section>
+    <section class="library-section" id="vocabulary" data-category-section="vocabulary">
+      <div class="library-section-header">
+        <div>
+          <p class="eyebrow">Category 05</p>
+          <h2>Vocabulary</h2>
+        </div>
+        <span class="category-count" data-category-count="vocabulary">0 articles</span>
+      </div>
+      <p>Academic words, collocations, word families, contrast, and retention.</p>
+      <div class="article-grid" data-article-grid="vocabulary"></div>
+      <div class="empty-state" data-empty-state="vocabulary">
+        <div class="empty-state-inner">
+          <p class="empty-label">No articles yet</p>
+          <h3>This section is ready for future guides.</h3>
+          <p>Articles in this category will appear here as the library expands.</p>
+        </div>
+      </div>
+    </section>
+    <section class="library-section" id="grammar" data-category-section="grammar">
+      <div class="library-section-header">
+        <div>
+          <p class="eyebrow">Category 06</p>
+          <h2>Grammar & language</h2>
+        </div>
+        <span class="category-count" data-category-count="grammar">0 articles</span>
+      </div>
+      <p>Grammar and language choices taught through meaning and real use.</p>
+      <div class="article-grid" data-article-grid="grammar"></div>
+      <div class="empty-state" data-empty-state="grammar">
+        <div class="empty-state-inner">
+          <p class="empty-label">No articles yet</p>
+          <h3>This section is ready for future guides.</h3>
+          <p>Articles in this category will appear here as the library expands.</p>
+        </div>
+      </div>
+    </section>
+    <section class="library-section" id="strategy" data-category-section="strategy">
+      <div class="library-section-header">
+        <div>
+          <p class="eyebrow">Category 07</p>
+          <h2>Test strategy</h2>
+        </div>
+        <span class="category-count" data-category-count="strategy">0 articles</span>
+      </div>
+      <p>Scoring, timing, preparation, test-day decisions, and common traps.</p>
+      <div class="article-grid" data-article-grid="strategy"></div>
+      <div class="empty-state" data-empty-state="strategy">
+        <div class="empty-state-inner">
+          <p class="empty-label">No articles yet</p>
+          <h3>This section is ready for future guides.</h3>
+          <p>Articles in this category will appear here as the library expands.</p>
+        </div>
+      </div>
+    </section>
+    <section class="library-section" id="resources" data-category-section="resources">
+      <div class="library-section-header">
+        <div>
+          <p class="eyebrow">Category 08</p>
+          <h2>Study resources</h2>
+        </div>
+        <span class="category-count" data-category-count="resources">0 articles</span>
+      </div>
+      <p>Books, channels, tools, and structured practice recommendations.</p>
+      <div class="article-grid" data-article-grid="resources"></div>
+      <div class="empty-state" data-empty-state="resources">
+        <div class="empty-state-inner">
+          <p class="empty-label">No articles yet</p>
+          <h3>This section is ready for future guides.</h3>
+          <p>Articles in this category will appear here as the library expands.</p>
+        </div>
+      </div>
+    </section>
+    </div>
+  </section>
+
+  <section class="content-section split-panel" aria-labelledby="library-connect-title">
+    <article class="panel">
+      <p class="eyebrow">A growing archive</p>
+      <h2 id="library-connect-title">One place for long-form TOEFL notes</h2>
+      <p>Each guide can remain a standalone HTML file. It only needs a relative link from the appropriate category on this page.</p>
+      <p>The library can therefore grow gradually without requiring old notes to be rebuilt immediately.</p>
+    </article>
+    <aside class="panel" data-tone="teal">
+      <p class="eyebrow">New material</p>
+      <h3>Follow Kooshky TOEFL</h3>
+      <p>New articles, shorter lessons, vocabulary work, and announcements are shared through Telegram and Instagram.</p>
+      <div class="hero-actions">
+        <a class="button-link primary" href="https://t.me/KooshkyTOEFL" target="_blank" rel="noopener noreferrer">Telegram</a>
+        <a class="button-link" href="https://instagram.com/kooshkytoefl" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </div>
+    </aside>
+  </section>
+</main>
+
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <p class="footer-title">Kooshky's TOEFL Guides</p>
+      <p class="footer-copy">Clear, practical TOEFL notes collected and compiled by Amir Kooshky for students who want serious material without unnecessary complication.</p>
+    </div>
+    <nav class="footer-links" aria-label="Footer links">
+      <a href="index.html">Home</a>
+      <a href="articles.html">All articles</a>
+      <a href="https://t.me/KooshkyTOEFL" target="_blank" rel="noopener noreferrer">Telegram</a>
+      <a href="https://instagram.com/kooshkytoefl" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://t.me/kooshkyTOEFL_pv" target="_blank" rel="noopener noreferrer">Personal DM</a>
+    </nav>
+    <p class="copyright">© <span id="year"></span> Amir Kooshky. Educational material for TOEFL learners.</p>
+  </div>
+</footer>
+<button class="go-top" id="goTop" type="button" aria-label="Go to the top of the page" title="Go to top">↑</button>
+<aside class="lookup-menu" id="lookupMenu" role="menu" aria-label="Look up selected text" aria-hidden="true" hidden>
+  <p class="lookup-word" id="lookupWord"></p>
+  <div class="lookup-links">
+    <a data-dictionary="cambridge" href="#" target="_blank" rel="noopener noreferrer">Cambridge</a>
+    <a data-dictionary="oxford" href="#" target="_blank" rel="noopener noreferrer">Oxford</a>
+    <a data-dictionary="webster" href="#" target="_blank" rel="noopener noreferrer">Merriam-Webster</a>
+    <a data-dictionary="google" href="#" target="_blank" rel="noopener noreferrer">Google meaning</a>
+  </div>
+</aside>
+<div class="modal-backdrop" id="promoBackdrop" aria-hidden="true">
+  <section class="promo-modal" id="promoModal" role="dialog" aria-modal="true" aria-labelledby="promoTitle" aria-describedby="promoDescription">
+    <button class="modal-close" id="promoClose" type="button" aria-label="Close Telegram invitation">×</button>
+    <p class="promo-kicker">More TOEFL material</p>
+    <h2 id="promoTitle">Continue learning on Telegram</h2>
+    <p id="promoDescription">Join Kooshky TOEFL for new guides, vocabulary, practice material, and focused explanations prepared for serious TOEFL learners.</p>
+    <a class="button-link primary" href="https://t.me/KooshkyTOEFL" target="_blank" rel="noopener noreferrer">Visit @KooshkyTOEFL</a>
+  </section>
+</div>
+
+    <script>
+
+  (() => {
+    'use strict';
+
+    const root = document.documentElement;
+    const body = document.body;
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const themeMeta = document.querySelector('meta[name="theme-color"]');
+    const menuButton = document.getElementById('menuButton');
+    const mobileNav = document.getElementById('mobileNav');
+    const mobileBackdrop = document.getElementById('mobileNavBackdrop');
+    const goTop = document.getElementById('goTop');
+    const modalBackdrop = document.getElementById('promoBackdrop');
+    const promoModal = document.getElementById('promoModal');
+    const promoClose = document.getElementById('promoClose');
+    const lookupMenu = document.getElementById('lookupMenu');
+    const lookupWord = document.getElementById('lookupWord');
+    const sitePromoKey = 'kooshky-guides:site:telegram-invite:v1';
+    let lastFocused = null;
+    let promoShownThisLoad = false;
+    let selectionTimer = 0;
+
+    function safeStorageGet(key) {
+      try { return localStorage.getItem(key); } catch (_) { return null; }
+    }
+    function safeStorageSet(key, value) {
+      try { localStorage.setItem(key, value); } catch (_) {}
+    }
+
+    function syncTheme() {
+      const dark = root.dataset.theme === 'dark';
+      themeToggle?.setAttribute('aria-pressed', String(dark));
+      themeToggle?.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+      if (themeIcon) themeIcon.textContent = dark ? '☀' : '☾';
+      if (themeMeta) themeMeta.setAttribute('content', dark ? '#111417' : '#F4F0E8');
+    }
+    syncTheme();
+    themeToggle?.addEventListener('click', () => {
+      root.dataset.theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+      safeStorageSet('kooshky-guides:theme:v1', root.dataset.theme);
+      syncTheme();
+    });
+
+    function setNav(open) {
+      if (!mobileNav || !mobileBackdrop || !menuButton) return;
+      mobileNav.classList.toggle('is-open', open);
+      mobileBackdrop.classList.toggle('is-visible', open);
+      mobileNav.setAttribute('aria-hidden', String(!open));
+      menuButton.setAttribute('aria-expanded', String(open));
+      menuButton.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+      body.classList.toggle('nav-open', open);
+      if (open) mobileNav.querySelector('a')?.focus();
+    }
+    menuButton?.addEventListener('click', () => setNav(menuButton.getAttribute('aria-expanded') !== 'true'));
+    mobileBackdrop?.addEventListener('click', () => setNav(false));
+    mobileNav?.addEventListener('click', event => {
+      if (event.target.closest('a')) setNav(false);
+    });
+
+    function setGoTop() {
+      goTop?.classList.toggle('is-visible', window.scrollY > Math.max(420, window.innerHeight * .6));
+    }
+    setGoTop();
+    window.addEventListener('scroll', setGoTop, { passive: true });
+    goTop?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' }));
+
+    function openPromo() {
+      if (!modalBackdrop || promoShownThisLoad || safeStorageGet(sitePromoKey)) return;
+      promoShownThisLoad = true;
+      safeStorageSet(sitePromoKey, 'shown');
+      lastFocused = document.activeElement;
+      modalBackdrop.classList.add('is-visible');
+      modalBackdrop.setAttribute('aria-hidden', 'false');
+      body.classList.add('modal-open');
+      promoClose?.focus();
+    }
+    function closePromo() {
+      if (!modalBackdrop) return;
+      modalBackdrop.classList.remove('is-visible');
+      modalBackdrop.setAttribute('aria-hidden', 'true');
+      body.classList.remove('modal-open');
+      if (lastFocused instanceof HTMLElement) lastFocused.focus();
+    }
+    function promoScrollCheck() {
+      if (promoShownThisLoad || safeStorageGet(sitePromoKey)) return;
+      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+      if (maxScroll > 0 && window.scrollY / maxScroll >= .48) openPromo();
+    }
+    window.addEventListener('scroll', promoScrollCheck, { passive: true });
+    promoClose?.addEventListener('click', closePromo);
+    modalBackdrop?.addEventListener('click', event => { if (event.target === modalBackdrop) closePromo(); });
+
+    function cleanSelection(text) {
+      return text.replace(/\s+/g, ' ').trim().replace(/^[^\p{L}\p{N}]+|[^\p{L}\p{N}]+$/gu, '');
+    }
+    function selectionInsideExcludedElement(selection) {
+      const node = selection.anchorNode;
+      const element = node?.nodeType === Node.ELEMENT_NODE ? node : node?.parentElement;
+      return Boolean(element?.closest('button, a, input, textarea, select, nav, header, footer, #lookupMenu, #promoBackdrop'));
+    }
+    function hideLookup() {
+      if (!lookupMenu) return;
+      lookupMenu.hidden = true;
+      lookupMenu.setAttribute('aria-hidden', 'true');
+    }
+    function positionLookup(rect) {
+      if (!lookupMenu) return;
+      const margin = 10;
+      const width = lookupMenu.offsetWidth;
+      const height = lookupMenu.offsetHeight;
+      let left = rect ? rect.left + rect.width / 2 - width / 2 : (window.innerWidth - width) / 2;
+      let top = rect ? rect.bottom + 14 : window.innerHeight * .35;
+      left = Math.min(Math.max(margin, left), window.innerWidth - width - margin);
+      if (top + height > window.innerHeight - margin) top = rect ? rect.top - height - 16 : window.innerHeight - height - margin;
+      top = Math.min(Math.max(margin, top), window.innerHeight - height - margin);
+      lookupMenu.style.left = `${Math.round(left)}px`;
+      lookupMenu.style.top = `${Math.round(top)}px`;
+    }
+    function updateLookup() {
+      window.clearTimeout(selectionTimer);
+      selectionTimer = window.setTimeout(() => {
+        const selection = window.getSelection();
+        if (!selection || selection.isCollapsed || selection.rangeCount === 0 || selectionInsideExcludedElement(selection)) { hideLookup(); return; }
+        const text = cleanSelection(selection.toString());
+        if (!text || text.length > 90 || text.split(/\s+/).length > 8) { hideLookup(); return; }
+        const range = selection.getRangeAt(0);
+        const rect = range.getBoundingClientRect();
+        const encoded = encodeURIComponent(text.toLowerCase());
+        lookupWord.textContent = text;
+        const links = lookupMenu.querySelectorAll('[data-dictionary]');
+        links.forEach(link => {
+          const type = link.dataset.dictionary;
+          if (type === 'cambridge') link.href = `https://dictionary.cambridge.org/dictionary/english/${encoded}`;
+          if (type === 'oxford') link.href = `https://www.oxfordlearnersdictionaries.com/definition/english/${encoded}?q=${encoded}`;
+          if (type === 'webster') link.href = `https://www.merriam-webster.com/dictionary/${encoded}`;
+          if (type === 'google') link.href = `https://www.google.com/search?q=${encodeURIComponent('meaning of ' + text)}`;
+        });
+        lookupMenu.hidden = false;
+        lookupMenu.setAttribute('aria-hidden', 'false');
+        positionLookup(rect && (rect.width || rect.height) ? rect : null);
+      }, 170);
+    }
+    document.addEventListener('selectionchange', updateLookup);
+    document.addEventListener('pointerup', updateLookup);
+    document.addEventListener('touchend', updateLookup, { passive: true });
+    document.addEventListener('pointerdown', event => {
+      if (!lookupMenu?.contains(event.target)) hideLookup();
+    });
+    window.addEventListener('scroll', hideLookup, { passive: true });
+    window.addEventListener('resize', hideLookup);
+
+    document.addEventListener('keydown', event => {
+      if (event.key !== 'Escape') return;
+      hideLookup();
+      if (modalBackdrop?.classList.contains('is-visible')) closePromo();
+      if (menuButton?.getAttribute('aria-expanded') === 'true') setNav(false);
+    });
+
+    const year = document.getElementById('year');
+    if (year) year.textContent = String(new Date().getFullYear());
+  })();
+
+
+  (() => {
+    'use strict';
+    const search = document.getElementById('articleSearch');
+    const count = document.getElementById('libraryCount');
+    const sections = [...document.querySelectorAll('[data-category-section]')];
+
+    function refreshLibrary() {
+      const query = (search?.value || '').trim().toLowerCase();
+      let visibleTotal = 0;
+      let actualTotal = 0;
+
+      sections.forEach(section => {
+        const slug = section.dataset.categorySection;
+        const cards = [...section.querySelectorAll('.article-card')];
+        actualTotal += cards.length;
+        let visibleInSection = 0;
+
+        cards.forEach(card => {
+          const haystack = `${card.textContent} ${card.dataset.category || ''}`.toLowerCase();
+          const visible = !query || haystack.includes(query);
+          card.hidden = !visible;
+          if (visible) visibleInSection += 1;
+        });
+
+        visibleTotal += visibleInSection;
+        const empty = section.querySelector(`[data-empty-state="${slug}"]`);
+        if (empty) {
+          empty.hidden = cards.length > 0 && visibleInSection > 0;
+          const heading = empty.querySelector('h3');
+          const copy = empty.querySelector('p:last-child');
+          if (query && cards.length > 0 && visibleInSection === 0) {
+            if (heading) heading.textContent = 'No matching guides in this section.';
+            if (copy) copy.textContent = 'Try a broader search or clear the search field.';
+          } else {
+            if (heading) heading.textContent = 'This section is ready for future guides.';
+            if (copy) copy.textContent = 'Articles in this category will appear here as the library expands.';
+          }
+        }
+        const categoryCount = section.querySelector(`[data-category-count="${slug}"]`);
+        if (categoryCount) categoryCount.textContent = `${cards.length} ${cards.length === 1 ? 'article' : 'articles'}`;
+      });
+
+      if (count) {
+        if (query) count.textContent = `${visibleTotal} matching ${visibleTotal === 1 ? 'article' : 'articles'}`;
+        else count.textContent = `${actualTotal} ${actualTotal === 1 ? 'article' : 'articles'} available`;
+      }
+    }
+
+    search?.addEventListener('input', refreshLibrary);
+    refreshLibrary();
+  })();
+
+    </script>
+  </body>
+  </html>
