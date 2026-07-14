@@ -59,6 +59,15 @@ window.KOOSHKY_SECTIONS = [
 
 window.KOOSHKY_CONTENT = [
   {
+    "title": "Advanced Usages for Comparative Grammars",
+    "href": "Grammar/kooshkys_toefl_guides_more_less_than.html",
+    "section": "grammar",
+    "summary": "Highly sophisticated grammatical structures using more/less, than, rather, etc. A must-know for TOEFL Writing!",
+    "date": "2026-07-16",
+    "publishAt": "2026-07-16T14:55:00+03:30",
+    "featured": true
+  },
+  {
     "title": "Advanced Usages for As...As Grammar",
     "href": "Grammar/kooshkys_toefl_guides_as_as.html",
     "section": "grammar",
@@ -228,6 +237,15 @@ window.KOOSHKY_CONTENT = [
     "date": "2026-07-15",
     "publishAt": "2026-07-15T14:55:00+03:30",
     "featured": true
+  },
+  {
+    "title": "Complete Guide to Articles: a/an, the, etc.",
+    "href": "Grammar/KooshkysGuideToArticles.html",
+    "section": "grammar",
+    "summary": "Full guide to use of articles in TOEFL Writing.",
+    "date": "2026-06-16",
+    "publishAt": "2026-06-16T00:00:00+03:30",
+    "featured": false
   },
   {
     "title": "Describing Problems with Gym Equipment",

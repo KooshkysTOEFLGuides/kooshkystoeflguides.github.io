@@ -1,0 +1,1955 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="A comprehensive Kooshky’s TOEFL Guides lesson on more, less, than, rather than, other than, irregular comparatives, special quantity meanings, ellipsis, advanced comparison structures, and clear transformation practice." name="description"/>
+<meta content="light dark" name="color-scheme"/>
+<title>Beyond “More Than”: The Full Comparative System | Kooshky’s TOEFL Guides</title>
+<script>
+    (function () {
+      var theme = 'light';
+      try {
+        var saved = localStorage.getItem('kooshky-guides:theme:v1');
+        if (saved === 'dark') { theme = 'dark'; }
+        else if (saved === 'light') { theme = 'light'; }
+      } catch (error) {
+        theme = 'light';
+      }
+      document.documentElement.setAttribute('data-theme', theme);
+    }());
+  </script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&amp;family=Literata:opsz,wght@7..72,600;7..72,700&amp;display=swap" rel="stylesheet"/>
+<style>
+    :root {
+      --color-page: #F4F0E8;
+      --color-surface: #FCFAF6;
+      --color-text: #182027;
+      --color-text-muted: #59636C;
+      --color-border: #D7D0C3;
+      --color-accent: #A9470D;
+      --color-accent-secondary: #1E5B63;
+      --color-accent-soft: #F3E2D3;
+      --color-secondary-soft: #DDEAE8;
+      --color-backdrop: rgba(24, 32, 39, 0.48);
+      --color-focus: #1E5B63;
+
+      --font-heading: "Literata", Georgia, "Times New Roman", serif;
+      --font-body: "IBM Plex Sans", Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+      --space-1: 0.25rem;
+      --space-2: 0.5rem;
+      --space-3: 0.75rem;
+      --space-4: 1rem;
+      --space-5: 1.5rem;
+      --space-6: 2rem;
+      --space-7: 3rem;
+      --space-8: 4.5rem;
+
+      --radius-small: 4px;
+      --radius-medium: 6px;
+      --radius-large: 10px;
+
+      --z-header: 100;
+      --z-floating-control: 200;
+      --z-selection-menu: 300;
+      --z-mobile-backdrop: 350;
+      --z-mobile-menu: 360;
+      --z-modal-backdrop: 400;
+      --z-modal: 410;
+
+      --content-width: 72ch;
+      --header-height: 3.75rem;
+      --go-top-bottom: max(1rem, env(safe-area-inset-bottom));
+    }
+
+    html[data-theme="dark"] {
+      color-scheme: dark;
+      --color-page: #111417;
+      --color-surface: #181D21;
+      --color-text: #ECE7DD;
+      --color-text-muted: #ADB4B8;
+      --color-border: #30383E;
+      --color-accent: #F28C45;
+      --color-accent-secondary: #70B7B4;
+      --color-accent-soft: #332219;
+      --color-secondary-soft: #193033;
+      --color-backdrop: rgba(0, 0, 0, 0.64);
+      --color-focus: #70B7B4;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    html {
+      color-scheme: light;
+      scroll-behavior: smooth;
+      background: var(--color-page);
+    }
+
+    body {
+      margin: 0;
+      min-width: 0;
+      overflow-x: hidden;
+      background: var(--color-page);
+      color: var(--color-text);
+      font-family: var(--font-body);
+      font-size: clamp(1rem, 0.98rem + 0.12vw, 1.08rem);
+      line-height: 1.72;
+      text-rendering: optimizeLegibility;
+    }
+
+    body.nav-open,
+    body.modal-open { overflow: hidden; }
+
+    body.modal-open { --go-top-bottom: max(6.5rem, calc(env(safe-area-inset-bottom) + 5.5rem)); }
+
+    img, svg { max-width: 100%; }
+    a { color: var(--color-accent-secondary); text-underline-offset: 0.18em; }
+    a:hover { color: var(--color-accent); }
+    button, input, textarea, select { font: inherit; }
+
+    :focus-visible {
+      outline: 3px solid var(--color-focus);
+      outline-offset: 3px;
+    }
+
+    ::selection { background: var(--color-accent-soft); color: var(--color-text); }
+
+    .skip-link {
+      position: fixed;
+      top: 0.6rem;
+      left: 0.6rem;
+      z-index: calc(var(--z-modal) + 20);
+      transform: translateY(-150%);
+      padding: 0.65rem 0.9rem;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-small);
+      background: var(--color-surface);
+      color: var(--color-text);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .skip-link:focus { transform: translateY(0); }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: var(--z-header);
+      min-height: var(--header-height);
+      border-bottom: 1px solid var(--color-border);
+      background: color-mix(in srgb, var(--color-page) 92%, transparent);
+      backdrop-filter: blur(10px);
+    }
+
+    .topbar__inner {
+      width: min(100% - 2rem, 1180px);
+      min-height: var(--header-height);
+      margin-inline: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-3);
+    }
+
+    .topbar__brand {
+      min-width: 0;
+      color: var(--color-text);
+      font-family: var(--font-heading);
+      font-size: 0.98rem;
+      font-weight: 700;
+      text-decoration: none;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .topbar__actions { display: flex; align-items: center; gap: var(--space-2); }
+
+    .control-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      min-height: 2.55rem;
+      padding: 0.55rem 0.8rem;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-medium);
+      background: var(--color-surface);
+      color: var(--color-text);
+      cursor: pointer;
+      font-weight: 600;
+      line-height: 1;
+    }
+
+    .control-button:hover { border-color: var(--color-accent-secondary); }
+
+    .menu-button { display: none; }
+
+    .hero {
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .hero__inner {
+      width: min(100% - 2rem, 1180px);
+      margin-inline: auto;
+      padding-block: clamp(2.8rem, 6vw, 5.5rem) clamp(2.5rem, 5vw, 4.2rem);
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(15rem, 22rem);
+      gap: clamp(2rem, 5vw, 5rem);
+      align-items: end;
+    }
+
+    .masthead-label,
+    .chapter-marker,
+    .editorial-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      color: var(--color-accent);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+
+    .masthead-label::before {
+      content: "";
+      width: 2.5rem;
+      height: 2px;
+      background: var(--color-accent);
+    }
+
+    .hero h1 {
+      max-width: 18ch;
+      margin: var(--space-4) 0 var(--space-4);
+      font-family: var(--font-heading);
+      font-size: clamp(2.25rem, 5.8vw, 4.7rem);
+      line-height: 1.03;
+      letter-spacing: -0.035em;
+      overflow-wrap: anywhere;
+    }
+
+    .hero__subtitle {
+      max-width: 62ch;
+      margin: 0;
+      color: var(--color-text-muted);
+      font-size: clamp(1.05rem, 1rem + 0.35vw, 1.3rem);
+      line-height: 1.55;
+    }
+
+    .hero__meta {
+      border-left: 3px solid var(--color-accent-secondary);
+      padding-left: var(--space-5);
+    }
+
+    .hero__meta p { margin: 0 0 var(--space-4); }
+    .hero__meta strong { color: var(--color-text); }
+
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+    }
+
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      min-height: 2.4rem;
+      padding: 0.48rem 0.7rem;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-small);
+      background: var(--color-surface);
+      color: var(--color-text);
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      overflow-wrap: anywhere;
+    }
+
+    .social-link:hover { border-color: var(--color-accent); }
+
+    .layout {
+      width: min(100% - 2rem, 1180px);
+      margin-inline: auto;
+      display: grid;
+      grid-template-columns: minmax(14rem, 18rem) minmax(0, 1fr);
+      gap: clamp(2rem, 5vw, 5rem);
+      align-items: start;
+      padding-block: var(--space-7) var(--space-8);
+    }
+
+    .toc-panel {
+      position: sticky;
+      top: calc(var(--header-height) + 1.25rem);
+      max-height: calc(100vh - var(--header-height) - 2.5rem);
+      overflow: auto;
+      padding-right: var(--space-3);
+      scrollbar-width: thin;
+    }
+
+    .toc-panel__heading {
+      margin: 0 0 var(--space-3);
+      color: var(--color-text-muted);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .toc-list,
+    .toc-list ol {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .toc-list li { margin: 0.15rem 0; }
+
+    .toc-list a {
+      display: block;
+      padding: 0.38rem 0.55rem;
+      border-left: 2px solid transparent;
+      color: var(--color-text-muted);
+      font-size: 0.9rem;
+      line-height: 1.35;
+      text-decoration: none;
+    }
+
+    .toc-list a:hover,
+    .toc-list a[aria-current="true"] {
+      border-left-color: var(--color-accent);
+      background: var(--color-accent-soft);
+      color: var(--color-text);
+    }
+
+    .toc-list .toc-level-3 a {
+      padding-left: 1.2rem;
+      font-size: 0.84rem;
+    }
+
+    .article { min-width: 0; }
+
+    .article > section,
+    .article > aside {
+      max-width: var(--content-width);
+      margin-inline: auto;
+    }
+
+    .article > section + section,
+    .article > section + aside,
+    .article > aside + section {
+      margin-top: var(--space-8);
+      padding-top: var(--space-7);
+      border-top: 1px solid var(--color-border);
+    }
+
+    h2, h3, h4 {
+      font-family: var(--font-heading);
+      color: var(--color-text);
+      overflow-wrap: anywhere;
+    }
+
+    h2 {
+      margin: var(--space-2) 0 var(--space-5);
+      font-size: clamp(1.8rem, 1.55rem + 1.2vw, 2.7rem);
+      line-height: 1.14;
+      letter-spacing: -0.025em;
+      scroll-margin-top: calc(var(--header-height) + 1.5rem);
+    }
+
+    h3 {
+      margin: var(--space-7) 0 var(--space-4);
+      font-size: clamp(1.3rem, 1.2rem + 0.5vw, 1.75rem);
+      line-height: 1.25;
+      scroll-margin-top: calc(var(--header-height) + 1.5rem);
+    }
+
+    h4 {
+      margin: var(--space-5) 0 var(--space-2);
+      font-size: 1.08rem;
+    }
+
+    p { margin: 0 0 var(--space-4); }
+    ul, ol { margin: 0 0 var(--space-5); padding-left: 1.35rem; }
+    li + li { margin-top: 0.38rem; }
+    strong { font-weight: 600; }
+
+    code, .pattern {
+      font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Consolas, monospace;
+    }
+
+    .lead {
+      color: var(--color-text-muted);
+      font-size: 1.12rem;
+      line-height: 1.7;
+    }
+
+    .chapter-marker { margin-bottom: var(--space-2); }
+
+    .callout,
+    .example-panel,
+    .compare-panel,
+    .practice-panel {
+      margin: var(--space-5) 0;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-medium);
+      background: var(--color-surface);
+    }
+
+    .callout {
+      position: relative;
+      padding: var(--space-5);
+      border-left-width: 4px;
+    }
+
+    .callout--teal { border-left-color: var(--color-accent-secondary); background: var(--color-secondary-soft); }
+    .callout--saffron { border-left-color: var(--color-accent); background: var(--color-accent-soft); }
+    .callout p:last-child { margin-bottom: 0; }
+
+    .editorial-label {
+      margin-bottom: var(--space-3);
+      color: var(--color-text-muted);
+      letter-spacing: 0.1em;
+    }
+
+    .example-panel { overflow: hidden; }
+
+    .example-panel__header {
+      padding: 0.7rem 1rem;
+      border-bottom: 1px solid var(--color-border);
+      background: color-mix(in srgb, var(--color-surface) 70%, var(--color-page));
+      color: var(--color-text-muted);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .example-list {
+      margin: 0;
+      padding: var(--space-4) var(--space-5) var(--space-5) 2.2rem;
+    }
+
+    .example-list li + li { margin-top: 0.65rem; }
+
+    .example-list strong,
+    .example-sentence strong {
+      color: var(--color-accent-secondary);
+      font-weight: 600;
+    }
+
+    .example-sentence {
+      margin: 0;
+      padding: var(--space-4) var(--space-5);
+      border-top: 1px solid var(--color-border);
+    }
+
+    .example-sentence:first-child { border-top: 0; }
+
+    .pattern-box {
+      margin: var(--space-4) 0 var(--space-5);
+      padding: 0.85rem 1rem;
+      border: 1px dashed var(--color-accent-secondary);
+      border-radius: var(--radius-small);
+      background: var(--color-secondary-soft);
+      overflow-wrap: anywhere;
+    }
+
+    .pattern-box .pattern { font-size: 0.96rem; font-weight: 600; }
+
+    .basic-grid,
+    .frame-grid,
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: var(--space-4);
+      margin: var(--space-5) 0;
+    }
+
+    .basic-card,
+    .frame-card,
+    .comparison-card {
+      min-width: 0;
+      padding: var(--space-5);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-medium);
+      background: var(--color-surface);
+    }
+
+    .basic-card h3,
+    .frame-card h3,
+    .comparison-card h3 {
+      margin: 0 0 var(--space-3);
+      font-family: var(--font-body);
+      font-size: 1rem;
+      line-height: 1.35;
+    }
+
+    .basic-card p:last-child,
+    .frame-card p:last-child,
+    .comparison-card p:last-child { margin-bottom: 0; }
+
+    .mini-examples {
+      margin: var(--space-3) 0 0;
+      padding-left: 1.2rem;
+      font-size: 0.96rem;
+    }
+
+    .mini-examples strong { color: var(--color-accent-secondary); }
+
+    .compare-panel { padding: var(--space-5); }
+
+    .compare-row {
+      display: grid;
+      grid-template-columns: minmax(10rem, 0.85fr) minmax(0, 1.4fr);
+      gap: var(--space-4);
+      padding: var(--space-4) 0;
+      border-top: 1px solid var(--color-border);
+    }
+
+    .compare-row:first-child { padding-top: 0; border-top: 0; }
+    .compare-row:last-child { padding-bottom: 0; }
+    .compare-row p { margin: 0; }
+
+    .compare-row__label {
+      color: var(--color-accent);
+      font-weight: 600;
+    }
+
+    .inline-link {
+      font-weight: 600;
+      white-space: normal;
+    }
+
+    .sentence-frame {
+      margin: 0 0 var(--space-3);
+      color: var(--color-accent-secondary);
+      font-weight: 600;
+    }
+
+    .error-line {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr);
+      gap: var(--space-3);
+      align-items: start;
+      margin: var(--space-3) 0;
+    }
+
+    .error-mark,
+    .correct-mark {
+      min-width: 2rem;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .error-mark { color: var(--color-accent); }
+    .correct-mark { color: var(--color-accent-secondary); }
+
+    details {
+      margin: var(--space-4) 0;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-medium);
+      background: var(--color-surface);
+    }
+
+    summary {
+      cursor: pointer;
+      padding: var(--space-4) var(--space-5);
+      color: var(--color-text);
+      font-weight: 600;
+    }
+
+    details[open] summary { border-bottom: 1px solid var(--color-border); }
+    .details-content { padding: var(--space-5); }
+    .details-content > :last-child { margin-bottom: 0; }
+
+    .practice-panel { padding: var(--space-5); }
+    .practice-panel ol { margin-bottom: 0; }
+    .practice-panel li { padding-left: 0.25rem; }
+
+    .answer-list { counter-reset: answer; list-style: none; padding: 0; }
+    .answer-list li { counter-increment: answer; position: relative; padding-left: 2.2rem; }
+    .answer-list li::before {
+      content: counter(answer) ".";
+      position: absolute;
+      left: 0;
+      color: var(--color-accent);
+      font-weight: 700;
+    }
+
+    .glossary-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: var(--space-4);
+      margin: var(--space-5) 0;
+    }
+
+    .glossary-item {
+      padding: var(--space-4);
+      border-top: 3px solid var(--color-accent-secondary);
+      background: var(--color-secondary-soft);
+    }
+
+    .glossary-item dt { margin-bottom: var(--space-2); font-weight: 700; }
+    .glossary-item dd { margin: 0; color: var(--color-text-muted); }
+
+    .mid-cta {
+      max-width: var(--content-width);
+      margin: var(--space-8) auto 0;
+      padding: var(--space-6);
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+      background: linear-gradient(90deg, var(--color-accent-soft), var(--color-secondary-soft));
+    }
+
+    .mid-cta h2 { margin-top: 0; font-size: clamp(1.45rem, 1.25rem + 0.8vw, 2rem); }
+    .mid-cta p:last-child { margin-bottom: 0; }
+
+    .footer {
+      border-top: 1px solid var(--color-border);
+      background: var(--color-surface);
+    }
+
+    .footer__inner {
+      width: min(100% - 2rem, 1180px);
+      margin-inline: auto;
+      padding-block: var(--space-6);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: var(--space-4);
+      color: var(--color-text-muted);
+      font-size: 0.92rem;
+    }
+
+    .footer__links { display: flex; flex-wrap: wrap; gap: var(--space-4); }
+
+    .go-top {
+      position: fixed;
+      right: max(1rem, env(safe-area-inset-right));
+      bottom: var(--go-top-bottom);
+      z-index: var(--z-floating-control);
+      width: 3rem;
+      height: 3rem;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-medium);
+      background: var(--color-surface);
+      color: var(--color-text);
+      box-shadow: 0 4px 18px color-mix(in srgb, var(--color-text) 13%, transparent);
+      cursor: pointer;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(0.4rem);
+      transition: opacity 180ms ease, transform 180ms ease, bottom 180ms ease;
+    }
+
+    .go-top.is-visible {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
+    .mobile-backdrop,
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: var(--color-backdrop);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 180ms ease;
+    }
+
+    .mobile-backdrop { z-index: var(--z-mobile-backdrop); }
+    .modal-backdrop { z-index: var(--z-modal-backdrop); }
+
+    .mobile-backdrop.is-open,
+    .modal-backdrop.is-open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .mobile-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: var(--z-mobile-menu);
+      width: min(88vw, 22rem);
+      height: 100dvh;
+      padding: var(--space-5);
+      border-right: 1px solid var(--color-border);
+      background: var(--color-surface);
+      transform: translateX(-104%);
+      transition: transform 200ms ease;
+      overflow: auto;
+    }
+
+    .mobile-nav.is-open { transform: translateX(0); }
+
+    .mobile-nav__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: var(--space-3);
+      margin-bottom: var(--space-4);
+    }
+
+    .mobile-nav__title {
+      margin: 0;
+      font-family: var(--font-heading);
+      font-size: 1.2rem;
+    }
+
+    .mobile-nav .toc-list a { font-size: 0.94rem; }
+
+    .telegram-dialog {
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      z-index: var(--z-modal);
+      width: min(calc(100vw - 2rem), 31rem);
+      max-height: min(82dvh, 36rem);
+      overflow: auto;
+      padding: var(--space-6);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-large);
+      background: var(--color-surface);
+      color: var(--color-text);
+      box-shadow: 0 18px 50px color-mix(in srgb, #000 32%, transparent);
+      opacity: 0;
+      pointer-events: none;
+      transform: translate(-50%, calc(-50% + 0.6rem));
+      transition: opacity 180ms ease, transform 180ms ease;
+    }
+
+    .telegram-dialog.is-open {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translate(-50%, -50%);
+    }
+
+    .telegram-dialog__close {
+      position: absolute;
+      top: 0.75rem;
+      right: 0.75rem;
+      width: 2.5rem;
+      height: 2.5rem;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-small);
+      background: var(--color-surface);
+      color: var(--color-text);
+      cursor: pointer;
+    }
+
+    .telegram-dialog h2 {
+      margin: 0 2.2rem var(--space-3) 0;
+      font-size: 1.65rem;
+    }
+
+    .telegram-dialog__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-3);
+      margin-top: var(--space-5);
+    }
+
+    .button-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 2.75rem;
+      padding: 0.68rem 1rem;
+      border: 1px solid var(--color-accent-secondary);
+      border-radius: var(--radius-medium);
+      background: var(--color-accent-secondary);
+      color: #fff;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    html[data-theme="dark"] .button-link { color: #111417; }
+
+    .button-link--secondary {
+      background: transparent;
+      color: var(--color-text);
+      border-color: var(--color-border);
+    }
+
+    .selection-menu {
+      position: fixed;
+      z-index: var(--z-selection-menu);
+      display: none;
+      width: min(18rem, calc(100vw - 1rem));
+      padding: var(--space-2);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-medium);
+      background: var(--color-surface);
+      box-shadow: 0 10px 30px color-mix(in srgb, var(--color-text) 20%, transparent);
+    }
+
+    .selection-menu.is-open { display: block; }
+
+    .selection-menu__title {
+      margin: 0;
+      padding: 0.45rem 0.55rem 0.55rem;
+      border-bottom: 1px solid var(--color-border);
+      color: var(--color-text-muted);
+      font-size: 0.8rem;
+      font-weight: 600;
+      overflow-wrap: anywhere;
+    }
+
+    .selection-menu__links {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: var(--space-1);
+      padding-top: var(--space-2);
+    }
+
+    .selection-menu a {
+      padding: 0.55rem;
+      border-radius: var(--radius-small);
+      color: var(--color-text);
+      font-size: 0.82rem;
+      line-height: 1.25;
+      text-decoration: none;
+    }
+
+    .selection-menu a:hover { background: var(--color-secondary-soft); }
+
+    .visually-hidden {
+      position: absolute !important;
+      width: 1px !important;
+      height: 1px !important;
+      padding: 0 !important;
+      margin: -1px !important;
+      overflow: hidden !important;
+      clip: rect(0, 0, 0, 0) !important;
+      white-space: nowrap !important;
+      border: 0 !important;
+    }
+
+
+    .grammar-term {
+      display: inline;
+      padding: 0.02em 0.18em;
+      border-bottom: 1px dotted var(--color-accent-secondary);
+      background: color-mix(in srgb, var(--color-secondary-soft) 72%, transparent);
+      color: var(--color-text);
+      font-weight: 600;
+      text-decoration: none;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+    }
+    .grammar-term:hover { color: var(--color-accent); border-bottom-style: solid; }
+
+    .toc-list .toc-node { margin: 0.15rem 0; }
+    .toc-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: start; gap: 0.2rem; }
+    .toc-row > a { min-width: 0; }
+    .toc-toggle {
+      width: 2rem;
+      height: 2rem;
+      margin-top: 0.12rem;
+      border: 0;
+      border-radius: var(--radius-small);
+      background: transparent;
+      color: var(--color-text-muted);
+      cursor: pointer;
+      line-height: 1;
+    }
+    .toc-toggle:hover { background: var(--color-secondary-soft); color: var(--color-text); }
+    .toc-toggle__icon { display: inline-block; transition: transform 180ms ease; }
+    .toc-toggle[aria-expanded="true"] .toc-toggle__icon { transform: rotate(90deg); }
+    .toc-children { margin-left: 0.55rem !important; padding-left: 0.5rem !important; border-left: 1px solid var(--color-border); }
+    .toc-children[hidden] { display: none !important; }
+    .toc-level-3 > .toc-row > a { padding-left: 0.8rem; font-size: 0.85rem; }
+    .toc-level-4 > .toc-row > a { padding-left: 1.25rem; font-size: 0.8rem; }
+
+    .limit-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: var(--space-3);
+      margin: var(--space-5) 0;
+    }
+    .limit-item {
+      display: grid;
+      gap: var(--space-2);
+      min-width: 0;
+      padding: var(--space-4);
+      border: 1px solid var(--color-border);
+      border-left: 3px solid var(--color-accent-secondary);
+      border-radius: var(--radius-medium);
+      background: var(--color-surface);
+    }
+    .limit-item strong { color: var(--color-accent-secondary); }
+    .limit-item span { color: var(--color-text-muted); }
+
+    .task-instruction {
+      margin: var(--space-2) 0 var(--space-4);
+      color: var(--color-text-muted);
+      font-size: 0.94rem;
+      font-style: italic;
+    }
+    .practice-panel li > p:first-child { margin-bottom: var(--space-1); }
+    .answer-note { margin-top: var(--space-2); color: var(--color-text-muted); font-size: 0.94rem; }
+    .answer-key > summary, .model-bank > summary { color: var(--color-accent-secondary); }
+
+    .model-bank__content { display: grid; gap: var(--space-7); }
+    .model-group { display: grid; gap: 0; }
+    .model-group__title {
+      margin: 0 0 var(--space-3);
+      padding-bottom: var(--space-2);
+      border-bottom: 2px solid var(--color-accent);
+      color: var(--color-accent);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .model-item {
+      display: grid;
+      grid-template-columns: 2.3rem minmax(0, 1fr);
+      gap: var(--space-3);
+      padding: var(--space-5) 0;
+      border-top: 1px solid var(--color-border);
+    }
+    .model-group .model-item:nth-child(2) { border-top: 0; }
+    .model-item__number {
+      color: var(--color-accent);
+      font-family: var(--font-heading);
+      font-weight: 700;
+    }
+    .model-item__sentence { margin-bottom: var(--space-3); font-size: 1.02rem; }
+    .model-item__sentence strong { color: var(--color-accent-secondary); }
+    .model-item__note { margin: 0; color: var(--color-text-muted); font-size: 0.92rem; line-height: 1.6; }
+
+    .glossary-stack {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: var(--space-4);
+      margin: var(--space-5) 0;
+    }
+    .glossary-stack .glossary-item {
+      scroll-margin-top: calc(var(--header-height) + 1.5rem);
+      border: 1px solid var(--color-border);
+      border-top: 3px solid var(--color-accent-secondary);
+      border-radius: var(--radius-medium);
+    }
+    .glossary-stack .glossary-item:target {
+      border-color: var(--color-accent);
+      background: var(--color-accent-soft);
+    }
+
+    @media (max-width: 680px) {
+      .limit-grid, .glossary-stack { grid-template-columns: 1fr; }
+      .model-item { grid-template-columns: 1.9rem minmax(0, 1fr); }
+    }
+
+
+    @media (max-width: 900px) {
+      .menu-button { display: inline-flex; }
+      .hero__inner { grid-template-columns: 1fr; align-items: start; }
+      .hero__meta { max-width: 42rem; }
+      .layout { grid-template-columns: minmax(0, 1fr); padding-top: var(--space-6); }
+      .toc-panel { display: none; }
+    }
+
+    @media (max-width: 680px) {
+      :root { --header-height: 3.5rem; }
+      .topbar__inner { width: min(100% - 1rem, 1180px); }
+      .topbar__brand { max-width: 46vw; font-size: 0.9rem; }
+      .control-button { min-height: 2.4rem; padding: 0.5rem 0.62rem; }
+      .control-button__label--optional { display: none; }
+      .hero__inner,
+      .layout,
+      .footer__inner { width: min(100% - 1.25rem, 1180px); }
+      .hero h1 { max-width: 100%; }
+      .hero__meta { padding-left: var(--space-4); }
+      .basic-grid,
+      .frame-grid,
+      .comparison-grid,
+      .glossary-grid { grid-template-columns: 1fr; }
+      .compare-row { grid-template-columns: 1fr; gap: var(--space-2); }
+      .callout,
+      .basic-card,
+      .frame-card,
+      .comparison-card,
+      .practice-panel { padding: var(--space-4); }
+      .example-list { padding-right: var(--space-4); padding-left: 2rem; }
+      .telegram-dialog { padding: var(--space-5); }
+      .selection-menu__links { grid-template-columns: 1fr; }
+    }
+
+    @media print {
+      .topbar,
+      .toc-panel,
+      .go-top,
+      .selection-menu,
+      .mobile-nav,
+      .mobile-backdrop,
+      .modal-backdrop,
+      .telegram-dialog { display: none !important; }
+      body { background: #fff; color: #000; }
+      .layout { display: block; width: 100%; padding: 0; }
+      .article > section,
+      .article > aside { max-width: none; }
+      a { color: #000; text-decoration: none; }
+      details { break-inside: avoid; }
+      details > * { display: block !important; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+      }
+    }
+  
+    .section-link-note {
+      margin: var(--space-4) 0 var(--space-6);
+      padding: var(--space-3) var(--space-4);
+      border-left: 3px solid var(--color-accent-secondary);
+      background: var(--color-secondary-soft);
+      color: var(--color-text-muted);
+    }
+
+    .section-link-note a {
+      font-weight: 700;
+    }
+
+    .example-note {
+      display: inline-block;
+      margin-top: var(--space-2);
+      color: var(--color-text-muted);
+      font-size: 0.93em;
+    }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to the guide</a>
+<header class="topbar">
+<div class="topbar__inner">
+<a class="topbar__brand" href="/">Kooshky’s TOEFL Guides</a>
+<div class="topbar__actions">
+<button aria-controls="mobileNav" aria-expanded="false" class="control-button menu-button" id="menuButton" type="button">
+<span aria-hidden="true">☰</span>
+<span>Contents</span>
+</button>
+<button aria-label="Switch color theme" aria-pressed="false" class="control-button" id="themeButton" type="button">
+<span aria-hidden="true" id="themeIcon">◐</span>
+<span class="control-button__label--optional" id="themeLabel">Theme</span>
+</button>
+</div>
+</div>
+</header>
+<div id="top"></div>
+<section aria-labelledby="guide-title" class="hero">
+<div class="hero__inner">
+<div>
+<div class="masthead-label">Kooshky’s TOEFL Guides</div>
+<h1 id="guide-title">Beyond “More Than”</h1>
+<p class="hero__subtitle">A practical guide to the full <strong>comparative system</strong>—from <em>taller than</em> and <em>more useful than</em> to classification, ellipsis, <em>rather than</em>, <em>other than</em>, and precise TOEFL-ready comparisons.</p>
+</div>
+<aside aria-label="Guide information" class="hero__meta">
+<p>Collected and compiled by <strong>Amir Kooshky</strong>.</p>
+<p>For more TOEFL lessons, examples, and practice material, visit the Telegram channel and Instagram page.</p>
+<div class="social-links">
+<a class="social-link" href="https://t.me/KooshkyTOEFL" rel="noopener noreferrer" target="_blank">Telegram channel</a>
+<a class="social-link" href="https://instagram.com/kooshkytoefl" rel="noopener noreferrer" target="_blank">Instagram</a>
+<a class="social-link" href="https://t.me/kooshkyTOEFL_pv" rel="noopener noreferrer" target="_blank">Telegram DM</a>
+</div>
+</aside>
+</div>
+</section>
+<div class="layout">
+<nav aria-label="Guide contents" class="toc-panel">
+<p class="toc-panel__heading">Chapter index</p>
+<ol class="toc-list" id="desktopToc"></ol>
+</nav>
+<main class="article" id="main-content"><section aria-labelledby="intro-heading">
+<div class="chapter-marker">Chapter 01</div>
+<h2 id="intro-heading">The big idea behind comparative structures</h2>
+<p class="lead">Most learners first meet comparisons through sentences such as <strong>Mina is taller than Sara</strong> or <strong>This method is more effective than the old one</strong>. Those are only the basic shapes. A comparison can contain a long description, a quantity, two competing labels, a complete idea, an omitted verb, or a special expression whose meaning is no longer a simple comparison.</p>
+<div class="callout callout--teal"><div class="editorial-label">Key point</div><p>A comparative sentence normally contains two sides:</p>
+<div class="pattern-box"><span class="pattern">the stronger / weaker / larger / smaller side + than + the comparison point</span></div>
+<p>The words before <em>than</em> tell us <strong>what difference</strong> exists. The words after <em>than</em> identify the <a class="grammar-term" href="#term-comparison-point">comparison point</a>: a person, thing, action, expectation, time, place, number, or complete idea.</p></div>
+<p>This guide uses a few short grammar labels. When a highlighted term such as <a class="grammar-term" href="#term-modifier">modifier</a>, <a class="grammar-term" href="#term-complement">complement</a>, or <a class="grammar-term" href="#term-ellipsis">ellipsis</a> appears, you can click it to open its plain-English explanation in the <a class="inline-link" href="#grammar-toolbox-heading">grammar toolbox</a>.</p>
+</section>
+<section aria-labelledby="basic-review-heading">
+<div class="chapter-marker">Chapter 02</div>
+<h2 id="basic-review-heading">A very quick review of the familiar patterns</h2>
+<p>This chapter is a reminder, not a full lesson. Before the ordinary patterns, notice the most common irregular forms: they appear throughout this guide and do not follow the usual <em>-er</em> or <em>more</em> rules.</p>
+<div class="callout callout--teal">
+<div class="editorial-label">Irregulars to know first</div>
+<p><strong>Good</strong> describes a person or thing, while <strong>well</strong> usually describes how an action is performed; however, <strong>both become <em>better</em></strong> in a comparison. In the same way, <em>bad</em> and <em>badly</em> both become <em>worse</em>.</p>
+<div class="compare-panel">
+<div class="compare-row"><p class="compare-row__label"><em>good / well → better</em></p><p>The revised plan is <strong>better than</strong> the original. She explained the idea <strong>better than</strong> I did.</p></div>
+<div class="compare-row"><p class="compare-row__label"><em>bad / badly → worse</em></p><p>The second error was <strong>worse than</strong> the first. The machine performed <strong>worse than</strong> expected.</p></div>
+<div class="compare-row"><p class="compare-row__label"><em>many / much → more</em></p><p>The course includes <strong>more examples than</strong> before and requires <strong>more time than</strong> the shorter version.</p></div>
+<div class="compare-row"><p class="compare-row__label"><em>little → less; few → fewer</em></p><p>The new task requires <strong>less preparation</strong> and contains <strong>fewer questions</strong>.</p></div>
+<div class="compare-row"><p class="compare-row__label"><em>far → farther / further</em></p><p>The new campus is <strong>farther away</strong>; the abstract consequences may extend <strong>further than</strong> expected.</p></div>
+</div>
+</div>
+<div class="basic-grid">
+<article class="basic-card"><h3>Short comparative adjective + <em>than</em></h3><p>Many short <a class="grammar-term" href="#term-adjective">adjectives</a> take <em>-er</em>.</p><ul class="mini-examples"><li>The second room is <strong>larger than</strong> the first.</li><li>Public transport is <strong>cheaper than</strong> driving.</li><li>The task was <strong>easier than</strong> I expected.</li></ul></article>
+<article class="basic-card"><h3><em>more / less</em> + adjective or adverb + <em>than</em></h3><p>Longer descriptions normally use <em>more</em> or <em>less</em>.</p><ul class="mini-examples"><li>The new rule is <strong>more practical than</strong> the old one.</li><li>She answered <strong>more confidently than</strong> before.</li><li>The process is <strong>less expensive than</strong> expected.</li></ul></article>
+<article class="basic-card"><h3><em>more / fewer / less</em> + noun + <em>than</em></h3><p>Use these to compare numbers and amounts.</p><ul class="mini-examples"><li>We interviewed <strong>more students than</strong> last year.</li><li>The second essay contained <strong>fewer errors than</strong> the first.</li><li>The new system uses <strong>less energy than</strong> the old one.</li></ul></article>
+<article class="basic-card"><h3>Comparative adverb + <em>than</em></h3><p>The comparison can describe how an action is performed.</p><ul class="mini-examples"><li>Nadia spoke <strong>more confidently than</strong> Amir.</li><li>The second group finished <strong>faster than</strong> the first.</li><li>She handled the question <strong>better than</strong> she had during practice.</li></ul></article>
+</div>
+<div class="callout callout--saffron"><div class="editorial-label">Remember</div><p>Do not use two comparative markers together: <strong>better</strong>, not <s>more better</s>; <strong>easier</strong>, not <s>more easier</s>; <strong>worse</strong>, not <s>more worse</s>.</p></div>
+</section>
+<section aria-labelledby="form-choice-heading">
+<div class="chapter-marker">Chapter 03</div>
+<h2 id="form-choice-heading">Choose the correct comparative form</h2>
+<h3 id="short-versus-long-adjectives">Use <em>-er</em> with many short adjectives</h3>
+<p>Most one-syllable adjectives use <em>-er</em>. The spelling may change, but the meaning does not.</p>
+<div class="example-panel"><div class="example-panel__header">Examples</div><ul class="example-list"><li><strong>small → smaller:</strong> The online class was smaller than the in-person class.</li><li><strong>large → larger:</strong> The second sample was larger than the first.</li><li><strong>easy → easier:</strong> The revised instructions are easier to follow than the original ones.</li><li><strong>big → bigger:</strong> The long-term problem may be bigger than the immediate one.</li></ul></div>
+<h3 id="more-with-long-descriptions">Use <em>more</em> with long or complete descriptions</h3>
+<p>Most adjectives with three or more syllables use <em>more</em>. Many two-syllable adjectives also prefer it, especially in formal writing.</p>
+<div class="example-panel"><div class="example-panel__header">Examples</div><ul class="example-list"><li>The second approach is <strong>more reliable than</strong> the first.</li><li>This explanation is <strong>more intellectually demanding than</strong> it initially appears.</li><li>The policy became <strong>more politically difficult to defend than</strong> its supporters had anticipated.</li><li>Her final response was <strong>more carefully organized than</strong> her first attempt.</li></ul></div>
+<h3 id="farther-further-older-elder">Two useful irregular distinctions</h3>
+<div class="compare-panel">
+<div class="compare-row"><p class="compare-row__label"><em>farther / further</em></p><p><em>Farther</em> is especially common for physical distance: <em>The station is farther than I thought.</em> <em>Further</em> is common for additional or abstract extension: <em>We need further discussion.</em> In many distance comparisons, both are accepted.</p></div>
+<div class="compare-row"><p class="compare-row__label"><em>older / elder</em></p><p>Use <strong>older than</strong> in ordinary comparisons: <em>Mina is older than Reza.</em> <em>Elder</em> is mainly used before a family noun—<em>my elder sister</em>—and normally not with <em>than</em>.</p></div>
+</div>
+<h3 id="two-syllable-choice">Some two-syllable adjectives allow both forms</h3>
+<p>Words such as <em>simple, quiet, clever, narrow,</em> and <em>gentle</em> may appear with either pattern. One form may sound more natural in a particular sentence.</p>
+<div class="comparison-grid">
+<article class="comparison-card"><h3><em>simpler than</em></h3><p>Short, direct, and usually more natural: <em>The revised method is simpler than the original.</em></p></article>
+<article class="comparison-card"><h3><em>more simple than</em></h3><p>Possible when directly contrasting two qualities: <em>The plan is more simple than elegant.</em> Here, the meaning is closer to “simple rather than elegant.”</p></article>
+</div>
+<h3 id="less-comparatives">Use <em>less</em> to compare a lower degree</h3>
+<p><em>Less</em> works before both adjectives and adverbs, including short ones, although an opposite <em>-er</em> form may sometimes sound more natural.</p>
+<div class="example-panel"><div class="example-panel__header">Examples</div><ul class="example-list"><li>The new route is <strong>less direct than</strong> the old one.</li><li>Students responded <strong>less confidently than</strong> they had during practice.</li><li>The second solution is <strong>less costly than</strong> the first.</li><li><strong>Less easy than</strong> is grammatical, but <strong>harder than</strong> is usually more natural.</li></ul></div>
+</section>
+<section aria-labelledby="expanded-comparisons-heading">
+<div class="chapter-marker">Chapter 04</div>
+<h2 id="expanded-comparisons-heading">Compare complete descriptions—not only single words</h2>
+<p>The element before <em>than</em> can be an entire description. Keep all the words that naturally belong to that description inside the comparison.</p>
+<h3 id="adjective-complements">Keep an adjective’s natural partner with it</h3>
+<div class="pattern-box"><span class="pattern">more / less + adjective + its natural partner + than ...</span></div>
+<div class="example-panel"><div class="example-panel__header">Examples</div><ul class="example-list"><li>Students are <strong>more concerned about housing costs than about tuition fees</strong>.</li><li>The new policy is <strong>less harmful to small businesses than</strong> the earlier proposal.</li><li>The second explanation is <strong>more relevant to first-year students than to experienced researchers</strong>.</li><li>This method is <strong>more suitable for short-term analysis than for long-term prediction</strong>.</li></ul></div>
+<h3 id="infinitive-comparisons">Compare actions with <em>to + verb</em></h3>
+<div class="example-panel"><div class="example-panel__header">Examples</div><ul class="example-list"><li>The software is <strong>easier to install than to maintain</strong>.</li><li>It is <strong>more useful to explain one idea fully than to list five undeveloped ideas</strong>.</li><li>Students may find the concept <strong>harder to apply than to understand</strong>.</li><li>The committee was <strong>more likely to delay the decision than to reject the proposal completely</strong>.</li></ul></div>
+<p>The second <em>to</em> can sometimes disappear—<em>easier to install than maintain</em>—but keeping it often makes a long sentence clearer and more balanced.</p>
+<h3 id="coordinated-comparisons">Compare two combined qualities or manners</h3>
+<div class="example-panel"><div class="example-panel__header">Examples</div><ul class="example-list"><li>Her answer was <strong>more direct and better supported than</strong> her previous one.</li><li>The new system operates <strong>more quietly and efficiently than</strong> the old machinery.</li><li>The problem is <strong>less financial and more administrative than</strong> the report suggests.</li><li>The response should be <strong>more carefully reasoned than aggressively worded</strong>.</li></ul></div>
+<h3 id="comparative-noun-order">Use the ordinary noun order—and recognize the formal reversed form</h3>
+<div class="compare-panel">
+<div class="compare-row"><p class="compare-row__label">Normal and strongly preferred</p><p>It was <strong>a more serious problem than</strong> anyone had realized.</p></div>
+<div class="compare-row"><p class="compare-row__label">Formal and less common</p><p>It was <strong>more serious a problem than</strong> anyone had realized.</p></div>
+</div>
+<p>The reversed form is grammatical, but it is much less common than <em>as serious a problem as</em>. For normal TOEFL writing, use <strong>a more serious problem than</strong> unless you have a clear stylistic reason not to.</p>
+</section>
+<section aria-labelledby="quantity-heading">
+<div class="chapter-marker">Chapter 05</div>
+<h2 id="quantity-heading">Compare numbers, amounts, measurements, and exact differences</h2>
+<h3 id="more-fewer-less-nouns"><em>More</em>, <em>fewer</em>, and <em>less</em></h3>
+<div class="comparison-grid">
+<article class="comparison-card"><h3><em>more</em></h3><p>Works with plural countable nouns and uncountable nouns: <em>more students, more evidence, more time</em>.</p></article>
+<article class="comparison-card"><h3><em>fewer</em></h3><p>Use with plural countable nouns: <em>fewer students, fewer mistakes, fewer meetings</em>.</p></article>
+<article class="comparison-card"><h3><em>less</em></h3><p>Use with uncountable nouns and measurements: <em>less information, less traffic, less than two hours</em>.</p></article>
+</div>
+<div class="example-panel"><div class="example-panel__header">Examples</div><ul class="example-list"><li>The second group produced <strong>more ideas than</strong> the first but provided <strong>less evidence than</strong> the professor expected.</li><li>The revised survey contains <strong>fewer questions than</strong> the original and therefore requires <strong>less time than</strong> before.</li><li>The city invested <strong>more money in public transport than in road expansion</strong>.</li><li>The new course gives students <strong>more opportunities to speak than</strong> the previous course did.</li></ul></div>
+<h3 id="less-with-measurements"><em>Less than</em> with measurements and totals</h3>
+<p>Even when a measurement contains a plural-looking unit, English normally treats the whole measurement as one amount.</p>
+<div class="example-panel"><div class="example-panel__header">Examples</div><ul class="example-list"><li>The journey takes <strong>less than three hours</strong>.</li><li>The device weighs <strong>less than ten kilograms</strong>.</li><li>The repair cost <strong>less than fifty euros</strong>.</li><li>The difference was <strong>less than five percentage points</strong>.</li></ul></div>
+<h3 id="more-than-one"><em>More than one</em> usually takes a singular verb</h3>
+<div class="callout callout--saffron"><div class="editorial-label">Common difficulty</div><p>Although the meaning is plural, the standard pattern is <strong>More than one student has complained</strong>, not <s>have complained</s>. With <em>more than two students</em>, use a plural verb normally.</p></div>
+<h3 id="difference-by-amount">State the exact difference</h3>
+<div class="example-panel"><div class="example-panel__header">Examples</div><ul class="example-list"><li>The new figure is <strong>20 percent higher than</strong> last year’s.</li><li>Attendance was <strong>300 students higher than</strong> expected.</li><li>The second essay was <strong>two points better than</strong> the first.</li><li>Mina is <strong>three years older than</strong> her brother.</li><li>The final cost was <strong>€2,000 lower than</strong> the original estimate.</li></ul></div>
+<p>You can also place the difference after the verb: <em>The new figure exceeded last year’s <strong>by 20 percent</strong></em>.</p>
+<h3 id="multiples-warning">Be careful with exact multiples</h3>
+<div class="callout callout--saffron"><div class="editorial-label">Precision note</div><p><strong>Three times more than</strong> is often interpreted inconsistently. For exact academic meaning, prefer <strong>three times as much as</strong>, <strong>three times as many as</strong>, or <strong>three times the amount of</strong>. Use <em>300% more than</em> only when you genuinely mean four times the original total.</p></div>
+</section>
+<section aria-labelledby="classification-heading">
+<div class="chapter-marker">Chapter 06</div>
+<h2 id="classification-heading">Use comparison to classify, correct, and choose the better label</h2>
+<h3 id="more-x-than-y"><em>More X than Y</em>: X is the stronger or more accurate description</h3>
+<p>The two sides do not have to be measurable qualities. They may be two labels, reactions, explanations, causes, or activities.</p>
+<div class="example-panel"><div class="example-panel__header">Examples</div><ul class="example-list"><li>She was <strong>more disappointed than angry</strong>.</li><li>The proposal is <strong>more ambitious than practical</strong>.</li><li>The course tests <strong>more analytical ability than factual memory</strong>.</li><li>The disagreement was <strong>more about values than about evidence</strong>.</li><li>The policy failed <strong>more because of poor implementation than because of its original design</strong>.</li></ul></div>
+<h3 id="less-x-than-y"><em>Less X than Y</em>: Y is the more accurate description</h3><p data-revision-note="1"><strong>Less X than Y</strong> does more than say that X exists at a lower degree. It often means that Y is the more accurate label: the response may contain some errors, but incompleteness explains it better. Keep the two descriptions parallel.</p>
+<div class="example-panel"><div class="example-panel__header">Examples</div><ul class="example-list"><li>The response was <strong>less incorrect than incomplete</strong>.</li><li>The obstacle is <strong>less technical than political</strong>.</li><li>The change was <strong>less a solution than a temporary delay</strong>.</li><li>His comments were <strong>less an explanation than an attempt to avoid responsibility</strong>.</li></ul></div>
+<h3 id="more-of-a-than"><em>More of a noun than ...</em>: the ordinary, flexible pattern</h3>
+<p>Use <strong>more of a/an + noun + than</strong> when deciding which noun label fits better. This is the safest and most common version.</p>
+<div class="example-panel"><div class="example-panel__header">Examples</div><ul class="example-list"><li>The meeting became <strong>more of a political performance than a serious discussion</strong>.</li><li>His response was <strong>more of an excuse than an explanation</strong>.</li><li>The assignment was <strong>more of a challenge than</strong> the instructor had intended.</li><li>The delay created <strong>more of a problem for commuters than for local businesses</strong>.</li></ul></div>
+<h3 id="more-a-than"><em>More a noun than ...</em>: possible, but more compressed</h3>
+<p>The <em>of</em> can sometimes disappear, especially when two clear category labels are contrasted. The result often sounds more formal, rhetorical, or literary.</p>
+<div class="compare-panel">
+<div class="compare-row"><p class="compare-row__label">Common and conversational</p><p>The book is <strong>more of a meditation than a history</strong>.</p></div>
+<div class="compare-row"><p class="compare-row__label">Compressed and formal</p><p>The book is <strong>more a meditation than a history</strong>.</p></div>
+</div>
+<p>Dropping <em>of</em> is not equally natural with every noun. <em>More of a nuisance than a danger</em> usually sounds better than <em>more a nuisance than a danger</em>.</p>
+<h3 id="less-of-a-than"><em>Less of a noun than ...</em></h3><p data-revision-note="1"><strong>Less of a/an + noun + than</strong> measures how weakly a noun label applies. It is useful when something seemed likely to be a burden, surprise, threat, or problem but proved milder or different.</p>
+<div class="example-panel"><div class="example-panel__header">Examples</div><ul class="example-list"><li>The change was <strong>less of a surprise than</strong> the media suggested.</li><li>The course proved <strong>less of a burden than</strong> students had feared.</li><li>The error is <strong>less of a grammar problem than a problem of unclear reasoning</strong>.</li></ul></div>
+<h3 id="not-so-much-as"><em>Not so much X as Y</em>: directly correct the description</h3>
+<p><strong>Not so much X as Y</strong> means that X is not the best description and Y is more accurate, more important, or more responsible. X may still be partly true; the structure redirects the listener’s attention from X to Y. The two sides should have matching shapes: adjective with adjective, noun with noun, <em>about</em>-phrase with <em>about</em>-phrase, or reason with reason.</p>
+<div class="pattern-box"><span class="pattern">not so much + the weaker description + as + the better description</span></div>
+<div class="example-panel"><div class="example-panel__header">Examples and meanings</div><ul class="example-list">
+<li>The problem is <strong>not so much financial as administrative</strong>.<span class="example-note">Money is involved, but poor administration is the main problem.</span></li>
+<li>She was <strong>not so much angry as disappointed</strong>.<span class="example-note">She may have felt some anger, but disappointment describes her feelings better.</span></li>
+<li>The task tests <strong>not so much memorization as the ability to organize ideas quickly</strong>.<span class="example-note">Memory may help, but fast organization is the skill that matters most.</span></li>
+<li>The reform failed <strong>not so much because people opposed its goals as because they distrusted its implementation</strong>.<span class="example-note">The goals were not the main cause of failure; distrust about how the reform would be carried out was.</span></li>
+<li>The debate is <strong>not so much about what machines can do as about what humans should allow them to do</strong>.<span class="example-note">Technical ability is part of the debate, but human responsibility is its central issue.</span></li>
+<li>His answer was <strong>not so much inaccurate as irrelevant</strong>.<span class="example-note">The information may have been factually correct, but it did not answer the question.</span></li>
+<li>The delay resulted <strong>not so much from a lack of effort as from an unrealistic schedule</strong>.<span class="example-note">People worked hard; the timetable itself created the delay.</span></li>
+<li>The new rule <strong>does not so much remove choice as change where that choice is exercised</strong>.<span class="example-note">Choice still exists, but it now appears at a different stage. With verbs, English often uses <em>does not so much X as Y</em>.</span></li>
+</ul></div>
+<div class="callout callout--teal"><div class="editorial-label">Usage note</div><p>This pattern is useful when correcting an oversimplified claim without saying it is completely false. It is common in careful discussion and academic argument. Do not use it merely to compare two measurable degrees; use an ordinary comparative for that: <em>The first result was more accurate than the second.</em></p></div>
+<h3 id="not-so-x-as-y"><em>Not so X as Y</em>: the shorter form without <em>much</em></h3>
+<p>With two short descriptions—especially adjectives or participles—<em>much</em> can be omitted: <strong>not so angry as disappointed</strong>. The meaning is usually the same corrective meaning: Y is the better description. This form is grammatical, but it is less common in present-day everyday English and often sounds formal, literary, or deliberately compressed. For clear TOEFL writing, <strong>not so much X as Y</strong> is normally the safer and more flexible choice.</p>
+<div class="example-panel"><div class="example-panel__header">Examples and meanings</div><ul class="example-list">
+<li>She was <strong>not so angry as disappointed</strong>.<span class="example-note">Disappointment, rather than anger, was her main feeling.</span></li>
+<li>The answer was <strong>not so inaccurate as irrelevant</strong>.<span class="example-note">Its central weakness was failure to address the question, not factual error.</span></li>
+<li>The plan is <strong>not so impractical as incomplete</strong>.<span class="example-note">The plan might work, but important parts have not yet been developed.</span></li>
+<li>The room was <strong>not so small as badly designed</strong>.<span class="example-note">Its size was manageable; poor use of the available space was the real problem.</span></li>
+</ul></div>
+<div class="callout callout--saffron"><div class="editorial-label">Do not overextend it</div><p>The shorter form works best with brief, balanced descriptions. With nouns, long phrases, causes, or complete ideas, keep <em>much</em>: <em>not so much a financial problem as an administrative one</em>; <em>not so much because X as because Y</em>.</p></div>
+
+
+</section>
+<section aria-labelledby="degree-heading">
+<div class="chapter-marker">Chapter 07</div>
+<h2 id="degree-heading">Control the size and certainty of the difference</h2>
+<h3 id="large-difference-modifiers">Show a large difference</h3>
+<div class="limit-grid">
+<div class="limit-item"><strong>much / far</strong><span>much better; far less expensive</span></div>
+<div class="limit-item"><strong>a lot</strong><span>a lot more useful; a lot fewer mistakes</span></div>
+<div class="limit-item"><strong>considerably / substantially</strong><span>considerably higher; substantially less reliable</span></div>
+<div class="limit-item"><strong>significantly / dramatically</strong><span>significantly more effective; dramatically lower</span></div>
+</div>
+<div class="example-panel"><div class="example-panel__header">Examples</div><ul class="example-list"><li>The revised system is <strong>far more reliable than</strong> the original.</li><li>Students made <strong>considerably fewer errors than</strong> they had during the first week.</li><li>The long-term cost may be <strong>substantially higher than</strong> the initial price suggests.</li><li>The second treatment was <strong>significantly less effective than</strong> the first.</li></ul></div>
+<h3 id="small-difference-modifiers">Show a small difference</h3>
+<div class="limit-grid">
+<div class="limit-item"><strong>a little / slightly</strong><span>a little clearer; slightly more formal</span></div>
+<div class="limit-item"><strong>somewhat</strong><span>somewhat less convincing</span></div>
+<div class="limit-item"><strong>marginally</strong><span>marginally higher; marginally fewer</span></div>
+<div class="limit-item"><strong>not much</strong><span>not much better; not much more expensive</span></div>
+</div>
+<h3 id="even-still-any"><em>Even</em>, <em>still</em>, and <em>any</em></h3>
+<div class="example-panel"><div class="example-panel__header">Examples</div><ul class="example-list"><li>The second explanation is <strong>even clearer than</strong> the first.</li><li>After the revision, the task became <strong>still more difficult than</strong> before.</li><li>Is the new version <strong>any better than</strong> the old one?</li><li>The additional examples did not make the argument <strong>any more convincing than</strong> it already was.</li></ul></div>
+<h3 id="comparison-limits">Name the comparison limit precisely</h3>
+<div class="example-panel"><div class="example-panel__header">Examples</div><ul class="example-list"><li>The response was <strong>longer than necessary</strong>.</li><li>The results were <strong>better than expected</strong>.</li><li>The problem is <strong>more serious than it first appeared</strong>.</li><li>Reliable evidence is <strong>more important than ever</strong>.</li><li>The process took <strong>longer than usual</strong>.</li><li>The new policy created <strong>more difficulties than anyone had predicted</strong>.</li></ul></div>
+</section>
+<section aria-labelledby="after-than-heading">
+<div class="chapter-marker">Chapter 08</div>
+<h2 id="after-than-heading">What can come after <em>than</em>?</h2>
+<p>The part after <em>than</em> identifies the comparison point. It can be short or long, but it must make clear what the first side is being compared with.</p>
+<h3 id="noun-pronoun-after-than">A noun or pronoun</h3>
+<p>A noun phrase can name the person or thing used as the standard. With a pronoun, everyday English often uses the object form—<em>than me</em>—while a complete form such as <em>than I am</em> is more explicit and can prevent ambiguity.</p>
+<div class="example-panel"><div class="example-panel__header">Examples</div><ul class="example-list"><li>Mina is taller than <strong>her brother</strong>.</li><li>The new route is safer than <strong>the old one</strong>.</li><li>She is more experienced than <strong>me</strong>.</li><li>She is more experienced than <strong>I am</strong>.</li></ul></div>
+<div class="callout callout--teal"><div class="editorial-label">Meaning can change</div><p><em>She likes the professor more than me</em> can mean “more than she likes me” or, for some readers, “more than I like the professor.” A full ending removes the doubt: <em>more than she likes me</em> / <em>more than I do</em>.</p></div>
+<h3 id="action-phrase-after-than">A matched action phrase</h3>
+<p>The second side can be an action beginning with <em>to</em> or <em>-ing</em>. Match the form on both sides so the reader can see the alternatives immediately. The second <em>to</em> is sometimes omitted, but it is worth keeping in long sentences.</p>
+<div class="example-panel"><div class="example-panel__header">Examples</div><ul class="example-list"><li>It is easier <strong>to describe the problem than to solve it</strong>.</li><li>Students learn more <strong>by revising their own work than by memorizing a model</strong>.</li><li>For a short response, it is more useful <strong>to develop one reason fully than to list several reasons briefly</strong>.</li></ul></div>
+<h3 id="complete-idea-after-than">A complete idea</h3>
+<p>A full subject-and-verb idea is useful when the comparison involves an expectation, prediction, belief, or different person’s action. Include as much of the idea as the reader needs; a long ending is not a problem when it prevents confusion.</p>
+<div class="example-panel"><div class="example-panel__header">Examples</div><ul class="example-list"><li>The policy was more controversial than <strong>its supporters had expected it to be</strong>.</li><li>Students understood the lecture better than <strong>the professor thought they would</strong>.</li><li>The project required more time than <strong>we had originally budgeted for</strong>.</li><li>The evidence is less conclusive than <strong>the article suggests</strong>.</li></ul></div>
+<h3 id="helper-after-than">A helper verb instead of a repeated action</h3>
+<p>A helper verb carries the tense or possibility of an action that the reader can recover. Use <em>do/does/did</em> for an ordinary repeated verb; repeat <em>be, have</em>, or a modal such as <em>can, will</em>, or <em>would</em> when that is the helper already needed.</p>
+<div class="example-panel"><div class="example-panel__header">Examples</div><ul class="example-list"><li>She works harder than I <strong>do</strong>. <span class="example-note"><em>Do</em> replaces <em>work</em>.</span></li><li>The second group has improved more than the first <strong>has</strong>. <span class="example-note"><em>Has</em> replaces <em>has improved</em>.</span></li><li>The policy may cost more than experts said it <strong>would</strong>. <span class="example-note"><em>Would</em> replaces <em>would cost</em>.</span></li><li>Students can develop ideas more effectively than they think they <strong>can</strong>. <span class="example-note"><em>Can</em> replaces <em>can develop ideas</em>.</span></li></ul></div>
+<h3 id="reduced-after-than">A reduced academic ending</h3>
+<p>Academic English often shortens a predictable passive idea: <em>than was expected</em> becomes <em>than expected</em>, and <em>than had originally been planned</em> becomes <em>than originally planned</em>. Use this only when it is obvious what was expected, planned, reported, or intended.</p>
+<div class="example-panel"><div class="example-panel__header">Examples</div><ul class="example-list"><li>The results were better than <strong>expected</strong>.</li><li>The project took longer than <strong>originally planned</strong>.</li><li>The consequences were more serious than <strong>previously reported</strong>.</li><li>The final sample was smaller than <strong>initially intended</strong>.</li></ul></div>
+<div class="callout callout--saffron"><div class="editorial-label">Clarity first</div><p>If different people had different expectations, name them: <em>The results were better than the researchers had expected</em>, not simply <em>better than expected</em>.</p></div>
+<h3 id="time-place-after-than">A time, place, or situation</h3>
+<p>A short time, place, or condition can stand for a longer repeated idea. For example, <em>better than last year</em> usually means “better than students performed last year.” Make sure the same action or quality is understood on both sides.</p>
+<div class="example-panel"><div class="example-panel__header">Examples</div><ul class="example-list"><li>Students performed better than <strong>last year</strong>.</li><li>The machine works more reliably in the laboratory than <strong>in ordinary homes</strong>.</li><li>The issue receives more attention during elections than <strong>at other times</strong>.</li><li>The second group responded less confidently under pressure than <strong>during practice</strong>.</li></ul></div>
+<h3 id="amount-after-than">A number, amount, age, or limit</h3>
+<p>After <em>more than</em> or <em>less than</em>, a number creates a boundary: above it or below it. The phrase may be a neutral limit or may carry the speaker’s reaction, depending on words such as <em>no</em> and the surrounding context.</p>
+<div class="example-panel"><div class="example-panel__header">Examples</div><ul class="example-list"><li>More than <strong>300 students</strong> applied.</li><li>The journey took less than <strong>three hours</strong>.</li><li>Applicants must be older than <strong>18</strong>.</li><li>The summary should contain not more than <strong>100 words</strong>.</li></ul></div>
+<h3 id="comparative-ambiguity">Do not shorten a comparison into ambiguity</h3>
+<div class="callout callout--saffron"><div class="editorial-label">Ambiguity warning</div><p><strong>She likes Ali more than Reza</strong> can mean either “more than she likes Reza” or “more than Reza likes Ali.” Write the missing structure when two readings are possible: <strong>She likes Ali more than she likes Reza</strong> or <strong>She likes Ali more than Reza does</strong>.</p></div>
+</section><aside aria-labelledby="mid-cta-heading" class="mid-cta">
+<div class="editorial-label">Keep building</div>
+<h2 id="mid-cta-heading">Build a larger bank of natural comparison sentences</h2>
+<p>More TOEFL lessons, examples, and practice material are available in the <a href="https://t.me/KooshkyTOEFL" rel="noopener noreferrer" target="_blank">Kooshky TOEFL Telegram channel</a>.</p>
+</aside><section aria-labelledby="ellipsis-heading">
+<div class="chapter-marker">Chapter 09</div>
+<h2 id="ellipsis-heading">Avoid repetition with ellipsis and substitution</h2>
+<p>Natural comparisons rarely repeat every word on both sides. English either replaces the repeated material—<a class="grammar-term" href="#term-substitution">substitution</a>—or leaves predictable words unstated—<a class="grammar-term" href="#term-ellipsis">ellipsis</a>.</p>
+<h3 id="one-ones-than">Replace a repeated countable noun with <em>one/ones</em></h3><p data-revision-note="1"><strong>One</strong> replaces a repeated singular countable noun; <strong>ones</strong> replaces a repeated plural countable noun. Keep any adjective that distinguishes the substitute—<em>the old one</em>, <em>the rural ones</em>. Do not normally use <em>one</em> for an uncountable noun such as <em>evidence</em>.</p>
+<div class="example-panel"><div class="example-panel__header">Examples</div><ul class="example-list"><li>The new proposal is more practical than the old <strong>one</strong>.</li><li>The final questions were harder than the earlier <strong>ones</strong>.</li><li>The debate became more a discussion about responsibility than <strong>one about technical ability</strong>.</li><li>Urban schools often have more resources than rural <strong>ones</strong>.</li></ul></div>
+<h3 id="that-those-than">Use <em>that/those</em> in formal comparisons</h3><p data-revision-note="1">In formal comparisons, <strong>that</strong> can replace a singular or uncountable noun phrase and <strong>those</strong> can replace a plural one. They are especially common before <em>of</em>, a reduced description, or <em>who</em>: <em>that of the earlier study</em>, <em>those reported last year</em>, <em>those who practiced</em>.</p>
+<div class="example-panel"><div class="example-panel__header">Examples</div><ul class="example-list"><li>The population of the capital is larger than <strong>that of any other city</strong> in the country.</li><li>The results were more reliable than <strong>those of the earlier study</strong>.</li><li>The environmental cost may be greater than <strong>that created by the original policy</strong>.</li><li>Students who practiced regularly performed better than <strong>those who did not</strong>.</li></ul></div>
+<h3 id="possessive-than">Use a possessive replacement</h3><p data-revision-note="1">A possessive form such as <em>mine, ours, hers</em>, or <em>the department’s</em> includes the missing noun, so repeating that noun is unnecessary. The intended noun must be obvious from the first side.</p>
+<div class="example-panel"><div class="example-panel__header">Examples</div><ul class="example-list"><li>Her conclusion is more cautious than <strong>mine</strong>.</li><li>Their evidence was stronger than <strong>ours</strong>.</li><li>The university’s response was less detailed than <strong>the department’s</strong>.</li></ul></div>
+<h3 id="helper-substitution-than">Let the helper verb carry the repeated action</h3>
+<div class="compare-panel">
+<div class="compare-row"><p class="compare-row__label">Heavy repetition</p><p>Students improved more rapidly than we thought they <strong>would improve</strong>.</p></div>
+<div class="compare-row"><p class="compare-row__label">Natural substitution</p><p>Students improved more rapidly than we thought they <strong>would</strong>.</p></div>
+</div>
+<h3 id="omit-shared-material">Leave out a shared description, preposition, or noun</h3>
+<div class="example-panel"><div class="example-panel__header">Examples</div><ul class="example-list"><li>The policy is more useful <strong>for large institutions than for small businesses</strong>.</li><li>Students were more interested <strong>in the examples than in the theory</strong>.</li><li>The problem affects rural communities more severely <strong>than urban ones</strong>.</li><li>The change created more confusion <strong>than clarity</strong>.</li></ul></div>
+<h3 id="comparative-deletion">Recognize comparative deletion</h3>
+<p>English automatically removes the repeated comparative quality from the second side:</p>
+<div class="example-panel"><div class="example-panel__header">Hidden repeated material</div><ul class="example-list"><li>She is taller than I am <strong>[tall]</strong>.</li><li>We collected more evidence than they did <strong>[collect evidence]</strong>.</li><li>The course contains fewer assignments than the previous one contained <strong>[assignments]</strong>.</li></ul></div>
+</section>
+<section aria-labelledby="changing-comparisons-heading">
+<div class="chapter-marker">Chapter 10</div>
+<h2 id="changing-comparisons-heading">Describe change: gradual growth, decline, and linked effects</h2>
+<h3 id="comparative-and-comparative">Repeat the comparative to show continuing change</h3>
+<div class="example-panel"><div class="example-panel__header">Examples</div><ul class="example-list"><li>The problem became <strong>more and more difficult</strong> to ignore.</li><li>Students grew <strong>less and less dependent</strong> on printed materials.</li><li>The instructions became <strong>clearer and clearer</strong> with each revision.</li><li>Housing is becoming <strong>increasingly expensive</strong> in major cities.</li></ul></div>
+<p><em>Increasingly</em> is a useful formal alternative to <em>more and more</em>. For decline, English often prefers <em>increasingly less</em>, <em>progressively less</em>, or a clearer negative adjective.</p>
+<h3 id="the-more-the-more">Link two changing situations with <em>the more …, the more/less …</em></h3>
+<div class="pattern-box"><span class="pattern">the + comparative idea, the + comparative result</span></div>
+<div class="example-panel"><div class="example-panel__header">Examples</div><ul class="example-list"><li><strong>The more carefully students analyze the question, the more relevant their answers become.</strong></li><li><strong>The less time writers spend planning, the more likely they are to repeat themselves.</strong></li><li><strong>The more examples a response includes, the less space remains for explanation.</strong></li><li><strong>The earlier a problem is identified, the easier it is to solve.</strong></li></ul></div>
+<p>The first <em>the</em> does not mean “the specific one.” In this structure, both occurrences mean roughly <strong>to that degree</strong>.</p>
+<h3 id="short-correlative-forms">Short fixed forms</h3>
+<div class="example-panel"><div class="example-panel__header">Examples</div><ul class="example-list"><li><strong>The sooner, the better.</strong></li><li><strong>The more, the merrier.</strong></li><li><strong>The less said, the better.</strong></li><li><strong>The bigger the sample, the more reliable the result.</strong></li></ul></div>
+<h3 id="all-the-more">Use <em>all the more/less</em> to strengthen a reason</h3>
+<div class="example-panel"><div class="example-panel__header">Examples</div><ul class="example-list"><li>The policy is <strong>all the more important because</strong> it protects vulnerable groups.</li><li>Her achievement is <strong>all the more impressive given</strong> the limited time available.</li><li>The proposal is <strong>all the less convincing because</strong> its evidence cannot be verified.</li><li>The delay made the final success <strong>all the more satisfying</strong>.</li></ul></div>
+</section>
+<section aria-labelledby="special-more-less-heading">
+<div class="chapter-marker">Chapter 11</div>
+<h2 id="special-more-less-heading">Special meanings of <em>more</em>, <em>less</em>, and <em>no</em></h2>
+<p>In this chapter, several expressions look like ordinary comparisons but perform a different job: they limit, emphasize, dismiss, praise, or soften a judgment. Learn the meaning of the whole pattern rather than translating each word separately.</p>
+<h3 id="more-than-not-merely"><em>More than</em> can mean “not merely”</h3>
+<p>Here <em>more than</em> does not compare two measured amounts. It says that the first label is incomplete: the subject includes that thing but also has a wider, deeper, or more important role.</p>
+<div class="example-panel"><div class="example-panel__header">Examples and meanings</div><ul class="example-list"><li>Grammar is <strong>more than a collection of rules</strong>.<span class="example-note">Rules are part of grammar, but grammar also expresses relationships and meaning.</span></li><li>The task requires <strong>more than simply mentioning an example</strong>.<span class="example-note">An example must also be explained and connected to the argument.</span></li><li>Education is <strong>more than preparation for employment</strong>; it also shapes judgment and citizenship.<span class="example-note">Job preparation is only one of education’s functions.</span></li></ul></div>
+<h3 id="more-than-intensifier"><em>More than</em> can intensify an adjective</h3>
+<p>Before certain adjectives, <em>more than</em> means “very,” “fully,” or “certainly.” There is usually no stated comparison point. This pattern is especially common with <em>happy, willing, capable, sufficient, likely</em>, and <em>ready</em>.</p>
+<div class="example-panel"><div class="example-panel__header">Examples and meanings</div><ul class="example-list"><li>I would be <strong>more than happy</strong> to discuss the issue.<span class="example-note">I would be very happy and completely willing.</span></li><li>The team is <strong>more than capable</strong> of completing the project.<span class="example-note">The team clearly has all the necessary ability.</span></li><li>The available evidence is <strong>more than sufficient</strong> to justify further investigation.<span class="example-note">The evidence is fully sufficient, perhaps beyond the minimum required.</span></li><li>A delay is <strong>more than likely</strong> if the funding is not approved.<span class="example-note">A delay is very likely.</span></li></ul></div>
+<h3 id="less-than-euphemism"><em>Less than + adjective</em> often gives a controlled negative judgment</h3>
+<p>This pattern says that something fails to reach the named positive standard. It can sound restrained and diplomatic, but context can make it sharply critical: <em>less than honest</em> strongly suggests dishonesty.</p>
+<div class="example-panel"><div class="example-panel__header">Examples and meanings</div><ul class="example-list"><li>The result was <strong>less than ideal</strong>.<span class="example-note">The result had noticeable weaknesses, expressed politely.</span></li><li>His explanation was <strong>less than convincing</strong>.<span class="example-note">The explanation did not persuade the speaker.</span></li><li>The company was <strong>less than honest</strong> about the risks.<span class="example-note">This restrained wording strongly implies that the company was dishonest.</span></li><li>The instructions were <strong>less than clear</strong>.<span class="example-note">The instructions were confusing or insufficiently clear.</span></li></ul></div>
+<h3 id="no-not-more-less">Distinguish <em>no</em> from <em>not</em> before quantities</h3>
+<p>Both forms can describe the same numerical boundary, but they often present it differently. <strong>Not more/less than</strong> is especially useful for a neutral rule or mathematical limit. <strong>No more/less than</strong> can also state a boundary, but in ordinary prose it often adds the speaker’s reaction: “only” or “as many/much as.” Context remains important; these are tendencies, not unbreakable laws.</p>
+<div class="compare-panel">
+<div class="compare-row"><p class="compare-row__label"><em>no more than 50</em></p><p><strong>Common evaluative meaning:</strong> only 50—the speaker presents 50 as a small or disappointing amount. <em>No more than fifty students attended, although the hall held five hundred.</em><br/><strong>Possible limit meaning:</strong> it may also mean “at most 50,” especially in instructions: <em>Use no more than fifty words.</em></p></div>
+<div class="compare-row"><p class="compare-row__label"><em>not more than 50</em></p><p><strong>Neutral ceiling:</strong> 50 is the maximum; 49 or fewer is acceptable. This is common in formal rules, specifications, and careful numerical statements: <em>The response must contain not more than fifty words.</em></p></div>
+<div class="compare-row"><p class="compare-row__label"><em>no less than 50</em></p><p><strong>Common evaluative meaning:</strong> as many/much as 50—the speaker presents 50 as impressively or surprisingly large. <em>No less than fifty researchers signed the letter.</em><br/><strong>Possible minimum meaning:</strong> it can also mean “at least 50.”</p></div>
+<div class="compare-row"><p class="compare-row__label"><em>not less than 50</em></p><p><strong>Neutral floor:</strong> 50 is the minimum; 50 or more is required. This is common in formal requirements: <em>The sample must include not less than fifty participants.</em></p></div>
+</div>
+<div class="callout callout--teal"><div class="editorial-label">Quick contrast</div><p><strong>Only twenty attended:</strong> <em>No more than twenty students attended.</em>   <strong>Maximum allowed:</strong> <em>Not more than twenty students may enter.</em><br/><strong>An impressive two hundred attended:</strong> <em>No less than two hundred students attended.</em>   <strong>Minimum required:</strong> <em>Not less than two hundred responses are required.</em></p></div>
+<h3 id="nothing-more-less-than"><em>Nothing more than</em>, <em>little more than</em>, and <em>nothing less than</em></h3>
+<p><strong>Be nothing more than + noun</strong> means “be merely that and have no greater value or status.” It often dismisses or minimizes. <strong>Be little more than + noun</strong> is slightly less absolute: the thing has developed only a little beyond that stage. <strong>Be nothing less than + adjective/noun</strong> means “be completely or truly that,” and strongly emphasizes praise or criticism.</p>
+<div class="example-panel"><div class="example-panel__header">Examples and meanings</div><ul class="example-list"><li>The claim is <strong>nothing more than speculation</strong>.<span class="example-note">The speaker dismisses it as mere speculation, not reliable evidence.</span></li><li>The first version was <strong>little more than a rough outline</strong>.<span class="example-note">It had developed only slightly beyond an outline.</span></li><li>Her recovery was <strong>nothing less than remarkable</strong>.<span class="example-note">Her recovery was truly remarkable; weaker praise would be insufficient.</span></li><li>Ignoring the evidence would be <strong>nothing less than irresponsible</strong>.<span class="example-note">Ignoring it would be completely irresponsible.</span></li></ul></div>
+<div class="callout callout--saffron"><div class="editorial-label">A different meaning with wants and wishes</div><p><strong>I want nothing more than to go home</strong> does <em>not</em> dismiss going home as unimportant. It means “going home is my greatest or only wish; I want nothing beyond it.” The verb and context determine the meaning.</p></div>
+<h3 id="no-more-x-than-y"><em>No more X than Y</em>: deny the same label on both sides</h3>
+<p>In <strong>A is no more X than B is</strong>, B is chosen as something that clearly is not X. The sentence says A is not X either. This is a logical analogy, not a small difference in degree.</p>
+<div class="example-panel"><div class="example-panel__header">Examples and meanings</div><ul class="example-list"><li>A whale is <strong>no more a fish than a horse is</strong>.<span class="example-note">A horse is clearly not a fish, and neither is a whale.</span></li><li>Memorizing an answer is <strong>no more evidence of understanding than copying a definition is</strong>.<span class="example-note">Neither action proves genuine understanding.</span></li></ul></div>
+<div class="callout callout--teal"><div class="editorial-label">Do not confuse it with <em>no less</em></div><p><strong>The second method is no less effective than the first</strong> means that the second is at least equally effective. It does not deny effectiveness.</p></div>
+<h3 id="no-better-worse-than"><em>No better/worse/different than</em></h3>
+<p>Here <em>no</em> means “by zero degree in that direction.” <strong>No better than</strong> means not better and often implies equally poor; <strong>no worse than</strong> means not worse and may reassure; <strong>no different from</strong> means effectively the same.</p>
+<div class="example-panel"><div class="example-panel__header">Examples and meanings</div><ul class="example-list"><li>The copied explanation is <strong>no better than</strong> the inaccurate original.<span class="example-note">The copy offers no improvement and is probably equally poor.</span></li><li>The revised system is <strong>no worse than</strong> the one it replaced.<span class="example-note">At minimum, the revised system has not become worse.</span></li><li>His new proposal is <strong>no different from</strong> the old one.<span class="example-note">There is no meaningful difference.</span></li><li>The second group performed <strong>no less effectively than</strong> the first.<span class="example-note">Its performance was at least equally effective.</span></li></ul></div>
+<h3 id="so-much-the-better"><em>So much the better/worse</em></h3>
+<p>These fixed responses evaluate an additional fact. <strong>So much the better</strong> means the new fact makes the situation even better; <strong>so much the worse</strong> means it makes the situation even worse.</p>
+<div class="example-panel"><div class="example-panel__header">Examples</div><ul class="example-list"><li>If the simpler method is also cheaper, <strong>so much the better</strong>.</li><li>If the evidence cannot be checked independently, <strong>so much the worse</strong> for the argument.</li></ul></div>
+<h3 id="more-or-less"><em>More or less</em> and <em>more often than not</em></h3>
+<p>These are separate fixed expressions. <strong>More or less</strong> means “approximately” or “almost completely.” <strong>More often than not</strong> means “usually”—on more occasions than not.</p>
+<div class="example-panel"><div class="example-panel__header">Examples and meanings</div><ul class="example-list"><li>The work is <strong>more or less complete</strong>.<span class="example-note">It is approximately or almost complete.</span></li><li><strong>More often than not</strong>, students lose points because their ideas are underdeveloped rather than grammatically incorrect.<span class="example-note">This is usually the reason.</span></li><li>The two versions are <strong>more or less the same</strong> in content.<span class="example-note">Their content is approximately the same, though small differences may exist.</span></li></ul></div>
+</section>
+<section aria-labelledby="rather-than-heading">
+<div class="chapter-marker">Chapter 12</div>
+<h2 id="rather-than-heading">Choose, correct, and express preference with <em>rather than</em></h2>
+<h3 id="rather-than-basic"><em>Rather than</em> contrasts two choices or explanations</h3><p data-revision-note="1"><strong>Rather than</strong> presents one choice, cause, or description as preferable or more accurate than another. It usually contrasts alternatives; it does not measure a simple difference in degree.</p>
+<div class="example-panel"><div class="example-panel__header">Examples</div><ul class="example-list"><li>Students should develop one idea fully <strong>rather than list several undeveloped points</strong>.</li><li>The problem resulted from poor planning <strong>rather than a lack of funding</strong>.</li><li>The response should sound thoughtful <strong>rather than memorized</strong>.</li><li>The policy protects established companies <strong>rather than small new businesses</strong>.</li></ul></div>
+<h3 id="rather-than-parallelism">Keep the two sides parallel</h3>
+<div class="compare-panel">
+<div class="compare-row"><p class="compare-row__label">Two nouns</p><p>discussion <strong>rather than confrontation</strong></p></div>
+<div class="compare-row"><p class="compare-row__label">Two adjectives</p><p>practical <strong>rather than theoretical</strong></p></div>
+<div class="compare-row"><p class="compare-row__label">Two base verbs</p><p>explain <strong>rather than repeat</strong></p></div>
+<div class="compare-row"><p class="compare-row__label">Two <em>-ing</em> forms</p><p>by explaining <strong>rather than repeating</strong></p></div>
+<div class="compare-row"><p class="compare-row__label">Two infinitives</p><p>to explain <strong>rather than to repeat</strong></p></div>
+</div>
+<p>The second <em>to</em> may be omitted—<em>to explain rather than repeat</em>—when the structure remains clear.</p>
+<h3 id="rather-than-front"><em>Rather than</em> can introduce the rejected choice first</h3><p data-revision-note="1">Placing <em>rather than</em> first gives the rejected option special attention before the sentence presents the preferred action. A comma normally separates the opening phrase from the main statement.</p>
+<div class="example-panel"><div class="example-panel__header">Examples</div><ul class="example-list"><li><strong>Rather than criticize the proposal immediately,</strong> the committee requested additional evidence.</li><li><strong>Rather than being a weakness,</strong> the small sample may be appropriate for an exploratory study.</li><li><strong>Rather than asking students to memorize a fixed answer,</strong> teachers should train them to adapt ideas to the question.</li></ul></div>
+<h3 id="would-rather"><em>Would rather … than …</em></h3>
+<div class="example-panel"><div class="example-panel__header">Examples</div><ul class="example-list"><li>I would <strong>rather revise the report than submit an unclear version</strong>.</li><li>Most students would <strong>rather receive detailed feedback than a score alone</strong>.</li><li>She would <strong>rather work independently than depend on an unreliable partner</strong>.</li></ul></div>
+<p>After <em>would rather</em>, use the base verb without <em>to</em>: <strong>would rather wait</strong>, not <s>would rather to wait</s>.</p>
+<h3 id="would-sooner"><em>Would sooner … than …</em></h3>
+<p>This is a less common and somewhat stronger or more formal alternative to <em>would rather</em>.</p>
+<div class="example-panel"><div class="example-panel__header">Examples</div><ul class="example-list"><li>She would <strong>sooner postpone the project than approve it without reliable evidence</strong>.</li><li>I would <strong>sooner admit that I am uncertain than present a claim I cannot support</strong>.</li></ul></div>
+<h3 id="rather-versus-instead"><em>Rather than</em> and <em>instead of</em></h3>
+<p>Both can reject one choice in favor of another. <em>Rather than</em> is especially useful for balanced contrasts and recommendations; <em>instead of</em> often presents a direct replacement.</p>
+<div class="example-panel"><div class="example-panel__header">Examples</div><ul class="example-list"><li>Students should explain the example <strong>rather than merely mention it</strong>.</li><li>The instructor used a diagram <strong>instead of a long verbal description</strong>.</li></ul></div>
+<h3 id="would-rather-person"><em>Would rather + person + past form</em></h3><p data-revision-note="1">When the preferred action belongs to another person, use <strong>would rather + person + past form</strong>. The past form creates distance and expresses a present or future preference; it is not ordinary past time.</p>
+<div class="example-panel"><div class="example-panel__header">Examples</div><ul class="example-list"><li>I would rather <strong>you emailed me</strong> before changing the schedule.</li><li>The professor would rather <strong>students developed their own examples</strong> than memorized model answers.</li></ul></div>
+<p>The past form here expresses a present or future preference; it does not necessarily describe past time.</p>
+</section>
+<section aria-labelledby="other-than-heading">
+<div class="chapter-marker">Chapter 13</div>
+<h2 id="other-than-heading">Use <em>other than</em> and choose comparators that do not take <em>than</em></h2>
+<h3 id="other-than-except"><em>Other than</em> meaning “except”</h3><p data-revision-note="1">Here <strong>other than</strong> means “except for.” It commonly follows negatives and broad words such as <em>no, nothing, anyone, anything</em>, and <em>everywhere</em>, where it identifies the only exception.</p>
+<div class="example-panel"><div class="example-panel__header">Examples</div><ul class="example-list"><li>The university offered no explanation <strong>other than a brief administrative notice</strong>.</li><li>Students may choose any topic <strong>other than the ones already discussed</strong>.</li><li>No one <strong>other than the project manager</strong> could authorize the change.</li><li>The room was empty <strong>other than for two chairs near the window</strong>.</li></ul></div>
+<h3 id="other-than-different"><em>Other than</em> meaning “different from”</h3><p data-revision-note="1">Here <strong>other than</strong> means “different from” or “not the expected thing.” This use is formal and less common than <em>different from</em>, but it is useful in phrases such as <em>anything other than</em> and <em>other than that</em>.</p>
+<div class="example-panel"><div class="example-panel__header">Examples</div><ul class="example-list"><li>The outcome was completely <strong>other than what we had expected</strong>.</li><li>Anything <strong>other than a full explanation</strong> would be inadequate.</li><li><strong>Other than that</strong>, the proposal is well designed.</li></ul></div>
+<h3 id="none-other-than"><em>None other than</em> for a surprising identity</h3><p data-revision-note="1"><strong>None other than</strong> is a fixed emphatic phrase used to reveal a notable or surprising identity. It does not mean “except”; it means “the person was, surprisingly, exactly …”.</p>
+<div class="example-panel"><div class="example-panel__header">Examples</div><ul class="example-list"><li>The guest speaker was <strong>none other than the university president</strong>.</li></ul></div>
+<h3 id="different-similar-same">Different, similar, and the same</h3>
+<div class="comparison-grid">
+<article class="comparison-card"><h3><em>different from</em></h3><p>The safest general form: <em>This result is different from the earlier one.</em></p></article>
+<article class="comparison-card"><h3><em>different than</em></h3><p>Common before a complete idea, especially in American English: <em>The process was different than we expected.</em> <em>Different from what we expected</em> is also standard.</p></article>
+<article class="comparison-card"><h3><em>similar to</em></h3><p>Use <em>to</em>, not <em>than</em>: <em>The two systems are similar to each other.</em></p></article>
+<article class="comparison-card"><h3><em>the same as</em></h3><p>Use <em>as</em>: <em>The final result was the same as before.</em></p></article>
+</div>
+<h3 id="compare-with-to"><em>Compare with</em> and <em>compare to</em></h3>
+<p>Modern English often allows both. <strong>Compare with</strong> is especially natural when carefully examining similarities and differences; <strong>compare to</strong> is especially natural when saying that one thing resembles another. The distinction is useful, but it is not absolute.</p>
+<div class="example-panel"><div class="example-panel__header">Examples</div><ul class="example-list"><li>The study <strong>compares online classes with face-to-face classes</strong> in cost, participation, and learning outcomes.</li><li>The professor <strong>compared the spread of misinformation to a virus</strong> that moves rapidly through a population.</li><li><strong>Compared with</strong> the earlier version, the new system is easier to navigate.</li><li><strong>In comparison with</strong> large universities, small colleges may offer more personal support.</li></ul></div>
+<h3 id="unlike-whereas">Contrast without a comparative adjective</h3>
+<div class="example-panel"><div class="example-panel__header">Examples</div><ul class="example-list"><li><strong>Unlike</strong> the first proposal, the second explains how the program will be funded.</li><li>The first group focused on speed, <strong>whereas</strong> the second emphasized accuracy.</li><li>Online courses offer flexibility, <strong>while</strong> classroom courses provide more immediate social interaction.</li><li><strong>In contrast to</strong> the earlier policy, the revised rule includes an appeal process.</li></ul></div>
+<h3 id="comparators-with-to">Important comparative words that take <em>to</em></h3>
+<div class="example-panel"><div class="example-panel__header">Examples</div><ul class="example-list"><li>This method is <strong>superior to</strong> the previous one.</li><li>The second material is <strong>inferior to</strong> the first in durability.</li><li>Online submission is <strong>preferable to</strong> sending printed copies.</li><li>Mina is <strong>senior to</strong> me in the organization.</li><li>The safety review is <strong>prior to</strong> final approval.</li></ul></div>
+<h3 id="prefer-to">Use <em>prefer X to Y</em>, not <em>prefer X than Y</em></h3><p data-revision-note="1">With nouns or <em>-ing</em> activities, use <strong>prefer X to Y</strong>. When comparing two intended actions with infinitives, English often uses <strong>would prefer to X rather than Y</strong>.</p>
+<div class="example-panel"><div class="example-panel__header">Examples</div><ul class="example-list"><li>Many students <strong>prefer examples to abstract explanations</strong>.</li><li>I <strong>prefer working in the morning to studying late at night</strong>.</li><li>I would <strong>prefer to discuss the issue privately rather than raise it during the meeting</strong>.</li></ul></div>
+</section>
+<section aria-labelledby="special-than-heading">
+<div class="chapter-marker">Chapter 14</div>
+<h2 id="special-than-heading">Master special <em>than</em> patterns and logical comparisons</h2>
+<h3 id="no-sooner-than"><em>No sooner … than …</em></h3>
+<p>This formal structure means that the second event happened immediately after the first. When <em>no sooner</em> begins the sentence, use <a class="grammar-term" href="#term-inversion">inversion</a>.</p>
+<div class="example-panel"><div class="example-panel__header">Examples</div><ul class="example-list"><li><strong>No sooner had the meeting begun than</strong> the fire alarm sounded.</li><li><strong>No sooner had the policy been announced than</strong> critics began questioning its cost.</li><li>The meeting had <strong>no sooner begun than</strong> the connection failed.</li></ul></div>
+<h3 id="sooner-rather-than-later"><em>Sooner rather than later</em></h3>
+<div class="example-panel"><div class="example-panel__header">Examples</div><ul class="example-list"><li>The university should address the housing shortage <strong>sooner rather than later</strong>.</li><li>Students benefit when feedback is provided <strong>sooner rather than later</strong>.</li></ul></div>
+<h3 id="than-any-other">Compare a member with the rest of its own group logically</h3>
+<div class="callout callout--saffron"><div class="editorial-label">Logical comparison</div><p>Write <strong>Tokyo is larger than any other city in Japan</strong>, not <s>larger than any city in Japan</s>, because Tokyo itself is a city in Japan. Other useful forms are <strong>larger than all other cities</strong> and <strong>larger than most cities</strong>.</p></div>
+<h3 id="better-to-than-to"><em>Better/easier/more useful to X than (to) Y</em></h3>
+<div class="example-panel"><div class="example-panel__header">Examples</div><ul class="example-list"><li>It is <strong>better to admit uncertainty than to invent evidence</strong>.</li><li>It may be <strong>easier to introduce a rule than enforce it consistently</strong>.</li><li>For a short response, it is <strong>more useful to develop one reason fully than to mention several reasons briefly</strong>.</li></ul></div>
+<h3 id="than-ever-before-usual">Short comparison points</h3>
+<div class="example-panel"><div class="example-panel__header">Examples</div><ul class="example-list"><li>Students have access to more information <strong>than ever before</strong>.</li><li>The need for reliable sources is greater <strong>than ever</strong>.</li><li>The process took longer <strong>than usual</strong>.</li><li>The final answer was shorter <strong>than necessary</strong> but clearer <strong>than before</strong>.</li></ul></div>
+</section>
+<section aria-labelledby="production-heading">
+<div class="chapter-marker">Chapter 15</div>
+<h2 id="production-heading">Turn comparative structures into TOEFL language</h2>
+<h3 id="academic-frames">Academic Discussion frames</h3>
+<div class="frame-grid">
+<article class="frame-card"><h3>Weigh two explanations</h3><p class="sentence-frame">The problem is more about ___ than about ___ because ___.</p><p>Use this when two causes exist but one is more important.</p></article>
+<article class="frame-card"><h3>Correct a label</h3><p class="sentence-frame">This is not so much a ___ as a ___.</p><p>Use this to replace a weak description with a more accurate one.</p></article>
+<article class="frame-card"><h3>Show linked effects</h3><p class="sentence-frame">The more ___, the more/less ___.</p><p>Use this for cause-and-effect relationships that change by degree.</p></article>
+<article class="frame-card"><h3>Reject an inferior choice</h3><p class="sentence-frame">Students should ___ rather than ___.</p><p>Use this for recommendations and priorities.</p></article>
+</div>
+<h3 id="email-frames">Email frames</h3>
+<div class="frame-grid">
+<article class="frame-card"><h3>Polite preference</h3><p class="sentence-frame">I would prefer to ___ rather than ___.</p><p>Useful when suggesting an alternative without sounding aggressive.</p></article>
+<article class="frame-card"><h3>Explain an unexpected difficulty</h3><p class="sentence-frame">The process has taken considerably longer than I was originally told it would.</p><p>Useful when reporting a delay precisely.</p></article>
+<article class="frame-card"><h3>Ask for a clearer solution</h3><p class="sentence-frame">A written explanation would be more useful than a brief verbal response.</p><p>Useful when comparing possible forms of support.</p></article>
+<article class="frame-card"><h3>Limit a request</h3><p class="sentence-frame">I am requesting no more than ___.</p><p>Use this to show that your request is modest.</p></article>
+</div>
+<h3 id="speaking-frames">Speaking frames</h3>
+<div class="example-panel"><div class="example-panel__header">Reusable speaking frames</div><ul class="example-list"><li><strong>I find X more useful than Y because …</strong></li><li><strong>The main issue is less about X than about Y.</strong></li><li><strong>I would rather X than Y, mainly because …</strong></li><li><strong>The more people X, the easier/harder it becomes to Y.</strong></li><li><strong>X is more than just Y; it also …</strong></li></ul></div>
+<h3 id="production-method">A practical five-step method</h3>
+<ol>
+<li>Identify the two sides you want to compare.</li>
+<li>Decide whether you are comparing a quality, an action, a number, an amount, a label, or a choice.</li>
+<li>Choose the correct marker: <em>-er</em>, <em>more</em>, <em>less</em>, <em>fewer</em>, <em>rather than</em>, or another comparator.</li>
+<li>Make the two sides grammatically parallel.</li>
+<li>Remove repetition only when the shortened sentence remains completely clear.</li>
+</ol>
+</section>
+<section aria-labelledby="common-errors-heading">
+<div class="chapter-marker">Chapter 16</div>
+<h2 id="common-errors-heading">Common errors worth eliminating</h2>
+<div class="error-line"><span class="error-mark">✗</span><p>This method is <strong>more easier than</strong> the old one.</p></div>
+<div class="error-line"><span class="correct-mark">✓</span><p>This method is <strong>easier than</strong> the old one.</p></div>
+<div class="error-line"><span class="error-mark">✗</span><p>The second essay has <strong>less mistakes than</strong> the first.</p></div>
+<div class="error-line"><span class="correct-mark">✓</span><p>The second essay has <strong>fewer mistakes than</strong> the first.</p></div>
+<div class="error-line"><span class="error-mark">✗</span><p>I <strong>prefer examples than explanations</strong>.</p></div>
+<div class="error-line"><span class="correct-mark">✓</span><p>I <strong>prefer examples to explanations</strong>.</p></div>
+<div class="error-line"><span class="error-mark">✗</span><p>The new system is <strong>superior than</strong> the old one.</p></div>
+<div class="error-line"><span class="correct-mark">✓</span><p>The new system is <strong>superior to</strong> the old one.</p></div>
+<div class="error-line"><span class="error-mark">✗</span><p>Students should plan carefully <strong>rather than writing immediately</strong>.</p></div>
+<div class="error-line"><span class="correct-mark">✓</span><p>Students should <strong>plan carefully rather than write immediately</strong>.</p></div>
+<div class="error-line"><span class="error-mark">✗</span><p>Tokyo is larger than <strong>any city in Japan</strong>.</p></div>
+<div class="error-line"><span class="correct-mark">✓</span><p>Tokyo is larger than <strong>any other city in Japan</strong>.</p></div>
+<div class="error-line"><span class="error-mark">✗</span><p>She likes Ali more than Reza. <em>(unclear)</em></p></div>
+<div class="error-line"><span class="correct-mark">✓</span><p>She likes Ali more than <strong>she likes Reza</strong>. / She likes Ali more than <strong>Reza does</strong>.</p></div>
+<div class="error-line"><span class="error-mark">✗</span><p>There were <strong>less than twenty students</strong> in the room.</p></div>
+<div class="error-line"><span class="correct-mark">✓</span><p>There were <strong>fewer than twenty students</strong> in the room.</p></div>
+<div class="callout callout--teal"><div class="editorial-label">Editing strategy</div><p>Underline the two sides of every long comparison. Check that they express the same type of thing: noun with noun, action with action, reason with reason, or complete idea with complete idea.</p></div>
+</section>
+<section aria-labelledby="practice-heading"><div class="chapter-marker">Chapter 17</div><h2 id="practice-heading">Practice: build comparisons from clear facts</h2><p>Each item supplies the factual relationship you need. Combine the information into one natural sentence using the comparison system taught in this guide. The answer key gives one strong model; another sentence may also be correct if it preserves the same meaning and sounds natural.</p><div class="callout callout--teal"><div class="editorial-label">Working method</div><p>First decide what the two sides really are: qualities, actions, amounts, labels, causes, limits, or choices. Then choose the most economical structure that keeps those two sides clear and parallel.</p></div><h3 id="practice-level-1">Level 1 · Build ordinary comparisons</h3><div class="practice-panel"><ol start="1"><li><p>The first room is 30 square metres. The second room is 42 square metres.</p></li><li><p>Both policies are practical, but the revised policy can be applied in more situations and with fewer difficulties.</p></li><li><p>Nadia sounded confident throughout her answer. Amir hesitated repeatedly and sounded uncertain.</p></li><li><p>The old system uses 60 units of energy. The new system uses 40.</p></li><li><p>The first essay contains twelve errors. The final essay contains six.</p></li><li><p>The first solution works well. The second produces more accurate and stable results.</p></li><li><p>We expected the task to be fairly easy. In reality, it was quite difficult.</p></li><li><p>The journey takes two hours and forty minutes. Three hours is the upper boundary being discussed.</p></li><li><p>Mina is 26 years old. Her brother is 23.</p></li><li><p>The old figure was 100. The new figure is 120.</p></li><li><p>The first explanation is clear. After revision, the second explanation is unexpectedly clearer still.</p></li><li><p>The response is 380 words long. About 250 words would have communicated the idea fully.</p></li></ol></div><h3 id="practice-level-13">Level 2 · Compare descriptions, actions, and quantities</h3><div class="practice-panel"><ol start="13"><li><p>Students are strongly worried about housing costs. They are worried about tuition fees too, but to a lower degree.</p></li><li><p>Installing the software takes five minutes. Maintaining it requires specialist knowledge and regular work.</p></li><li><p>The policy causes serious difficulties for small businesses. Large corporations experience much milder effects.</p></li><li><p>The first report states its position directly and supports it with strong evidence. The second is indirect and weakly supported.</p></li><li><p>The old course gave students eight speaking tasks. The new course gives them twelve.</p></li><li><p>The original survey contained 40 questions and took about 20 minutes. The new survey contains 25 questions and takes about 12 minutes.</p></li><li><p>The complaint is not isolated: three students have now complained about the schedule.</p></li><li><p>The first essay scored 24. The second scored 27.</p></li><li><p>The original cost estimate was €10,000. The final cost was €8,000.</p></li><li><p>The pilot system uses 30 kilowatt-hours. The full system uses 90.</p></li><li><p>The article presents the issue as simple. The real issue contains many interacting causes and consequences.</p></li><li><p>The first result is 51.0. The second is 51.2, a difference too small to be practically important.</p></li></ol></div><h3 id="practice-level-25">Level 3 · Classify accurately and avoid repetition</h3><div class="practice-panel"><ol start="25"><li><p>She did feel some anger, but disappointment was clearly her main emotion.</p></li><li><p>The proposal aims to transform the entire system, but it gives little attention to cost or implementation.</p></li><li><p>The meeting was designed to impress voters and contained very little genuine exchange of ideas.</p></li><li><p>The book mainly reflects on memory and identity; only secondarily does it record historical events.</p></li><li><p>Students expected the course to dominate their week. It required effort, but it was much more manageable than they feared.</p></li><li><p>People often call the problem financial. Money matters, but weak administration is the main source of difficulty.</p></li><li><p>The answer contains a few factual mistakes, but its central weakness is that it does not address the question.</p></li><li><p>The policy design had weaknesses, but the policy mainly failed because officials implemented it poorly.</p></li><li><p>Evidence is discussed in the debate, but disagreements about values are much more central.</p></li><li><p>The revised proposal is practical. The earlier proposal is much less practical.</p></li><li><p>The current study produced highly reliable results. The earlier study produced less reliable results.</p></li><li><p>Her evidence is strong. The evidence collected by our team is weaker.</p></li><li><p>Over the same twelve-week period, students improved by 18 percent. Researchers had predicted an improvement of only 5 percent.</p></li><li><p>Sara consistently works 45 hours a week. Reza works 35.</p></li><li><p>Researchers predicted modest gains. The actual results were substantially stronger.</p></li><li><p>Leila likes Ali a great deal. She likes Reza less; the comparison concerns Leila’s feelings toward the two men, not Reza’s feelings.</p></li></ol></div><h3 id="practice-level-41">Level 4 · Interpret limits and special meanings</h3><div class="practice-panel"><ol start="41"><li><p>Grammar includes rules, but it also enables speakers to express relationships, emphasis, attitude, and meaning.</p></li><li><p>The team has all the skills, experience, and resources required to complete the work.</p></li><li><p>The result can be used, but it falls clearly below the ideal standard and has several weaknesses.</p></li><li><p>The hall could hold 500 people, but only 20 attended, a surprisingly disappointing number.</p></li><li><p>The official rule sets 50 words as the maximum. It makes no judgment about whether 50 is a large or small number.</p></li><li><p>Organizers expected about 50 students, but 200 attended, an unexpectedly large number.</p></li><li><p>A valid sample must contain at least 50 participants. The requirement is a neutral technical minimum.</p></li><li><p>The claim has no supporting data or verified source. It is merely speculation.</p></li><li><p>The first draft contains headings and a few notes but almost no developed content.</p></li><li><p>Her recovery exceeded every medical expectation and deserves the strongest praise.</p></li><li><p>After years abroad, his greatest wish was simply to return home; he wanted no additional reward.</p></li><li><p>Each revision improved the explanation, and the improvement continued through several versions.</p></li><li><p>As students devote more care to planning, the relevance of their answers increases at the same time.</p></li><li><p>As writers reduce the time they spend planning, their likelihood of repeating themselves increases.</p></li><li><p>The policy is important already. The fact that it protects vulnerable groups makes its importance even greater.</p></li><li><p>In most cases, students need stronger idea development; complicated vocabulary is usually not the real need.</p></li></ol></div><h3 id="practice-level-57">Level 5 · Build advanced TOEFL-ready comparisons</h3><div class="practice-panel"><ol start="57"><li><p>Students should develop one relevant reason fully. Listing several weak reasons is the less effective choice.</p></li><li><p>The committee chose to request additional evidence. It deliberately avoided criticizing the proposal immediately.</p></li><li><p>I prefer revising the report. Submitting the unclear version is unacceptable to me.</p></li><li><p>My preference is that you email me before you make any change to the schedule.</p></li><li><p>The university provided a brief administrative notice and absolutely no other explanation.</p></li><li><p>We expected the figure to rise. Instead, it fell significantly.</p></li><li><p>The new method exceeds the old method in both accuracy and speed.</p></li><li><p>When given a choice, students consistently choose concrete examples instead of abstract explanations.</p></li><li><p>The meeting began. Immediately afterward, the internet connection failed.</p></li><li><p>Tokyo is a city in Japan, and every other Japanese city has a smaller population.</p></li><li><p>For a short response, fully developing one reason produces more value than briefly listing several reasons.</p></li><li><p>The current article presents weak evidence. The earlier study presented much stronger evidence, and the comparison is specifically between the evidence in the two sources.</p></li></ol></div><details class="answer-key"><summary>Open the complete answer key and explanations</summary><div class="practice-panel"><ol><li><p>The second room is <strong>larger than</strong> the first.</p><p class="answer-note">The measurements establish a straightforward size comparison.</p></li><li><p>The revised policy is <strong>more practical than</strong> the original.</p><p class="answer-note">A longer adjective uses <em>more</em>.</p></li><li><p>Nadia spoke <strong>more confidently than</strong> Amir.</p><p class="answer-note">The comparison describes how they spoke, so an adverb is natural.</p></li><li><p>The new system uses <strong>less energy than</strong> the old one.</p><p class="answer-note"><em>Energy</em> is uncountable, so use <em>less</em>.</p></li><li><p>The final essay contains <strong>fewer errors than</strong> the first.</p><p class="answer-note"><em>Errors</em> are plural countable items.</p></li><li><p>The second solution is <strong>better than</strong> the first.</p><p class="answer-note"><em>Good</em> and <em>well</em> both have the irregular comparative <em>better</em>.</p></li><li><p>The task was <strong>more difficult than expected</strong>.</p><p class="answer-note">The reduced ending stands for a longer expectation idea.</p></li><li><p>The journey takes <strong>less than three hours</strong>.</p><p class="answer-note">The time is treated as one measurement.</p></li><li><p>Mina is <strong>three years older than</strong> her brother.</p><p class="answer-note">The exact difference comes before the comparative adjective.</p></li><li><p>The new figure is <strong>20 percent higher than</strong> the old figure.</p><p class="answer-note">The increase from 100 to 120 is 20 percent.</p></li><li><p>The second explanation is <strong>even clearer than</strong> the first.</p><p class="answer-note"><em>Even</em> emphasizes an additional or surprising difference.</p></li><li><p>The response is <strong>much longer than necessary</strong>.</p><p class="answer-note"><em>Necessary</em> names the appropriate limit.</p></li><li><p>Students are <strong>more concerned about housing costs than about tuition fees</strong>.</p><p class="answer-note">The two <em>about</em>-phrases remain parallel.</p></li><li><p>The software is <strong>easier to install than to maintain</strong>.</p><p class="answer-note">The two actions use matching <em>to</em>-phrases.</p></li><li><p>The policy is <strong>more harmful to small businesses than to large corporations</strong>.</p><p class="answer-note">The comparison keeps the preposition <em>to</em> with both groups.</p></li><li><p>The first report is <strong>more direct and better supported than</strong> the second.</p><p class="answer-note">Two qualities can be compared together.</p></li><li><p>The new course gives students <strong>more opportunities to speak than</strong> the old course did.</p><p class="answer-note"><em>Did</em> avoids repeating the full verb phrase.</p></li><li><p>The new survey contains <strong>fewer questions than</strong> the original and requires <strong>less time than</strong> before.</p><p class="answer-note">Use <em>fewer</em> for countable questions and <em>less</em> for uncountable time.</p></li><li><p><strong>More than one student has complained</strong> about the schedule.</p><p class="answer-note">The standard verb after <em>more than one</em> is singular.</p></li><li><p>The second essay scored <strong>three points higher than</strong> the first.</p><p class="answer-note">The exact difference is placed before <em>higher</em>.</p></li><li><p>The final cost was <strong>€2,000 lower than</strong> the original estimate.</p><p class="answer-note">The sentence states both direction and exact amount.</p></li><li><p>The pilot uses <strong>one-third as much energy as</strong> the full system.</p><p class="answer-note">An exact fraction is clearer with the <em>as … as</em> structure than with an ambiguous <em>times less</em> phrase.</p></li><li><p>The issue is <strong>far more complex than</strong> the article suggests.</p><p class="answer-note"><em>Far</em> marks a large difference.</p></li><li><p>The second result is <strong>marginally higher than</strong> the first.</p><p class="answer-note"><em>Marginally</em> marks a very small difference.</p></li><li><p>She was <strong>more disappointed than angry</strong>.</p><p class="answer-note">The sentence chooses the stronger emotional description.</p></li><li><p>The proposal is <strong>more ambitious than practical</strong>.</p><p class="answer-note">Ambition fits more strongly than practicality.</p></li><li><p>The meeting was <strong>more of a political performance than a serious discussion</strong>.</p><p class="answer-note">The ordinary noun-classification form identifies the better label.</p></li><li><p>The book is <strong>more a meditation than a history</strong>.</p><p class="answer-note">The compressed form is natural with two clear category labels; <em>more of a meditation</em> is also possible.</p></li><li><p>The course was <strong>less of a burden than</strong> students had expected.</p><p class="answer-note">The noun label <em>burden</em> applies less strongly than expected.</p></li><li><p>The problem is <strong>not so much financial as administrative</strong>.</p><p class="answer-note">The structure redirects attention from a partly true label to the better one.</p></li><li><p>The answer is <strong>not so inaccurate as irrelevant</strong>.</p><p class="answer-note">This is the shorter, formal corrective pattern; <em>not so much inaccurate as irrelevant</em> is clearer and more common.</p></li><li><p>The policy failed <strong>more because it was poorly implemented than because it was badly designed</strong>.</p><p class="answer-note">The two cause ideas remain parallel.</p></li><li><p>The debate is <strong>more about values than about evidence</strong>.</p><p class="answer-note">The repeated <em>about</em> keeps the contrast transparent.</p></li><li><p>The revised proposal is <strong>more practical than the earlier one</strong>.</p><p class="answer-note"><em>One</em> replaces the repeated singular countable noun.</p></li><li><p>The current study’s results are <strong>more reliable than those of the earlier study</strong>.</p><p class="answer-note"><em>Those of</em> is a formal substitute for the repeated plural noun phrase.</p></li><li><p>Her evidence is <strong>stronger than ours</strong>.</p><p class="answer-note"><em>Ours</em> includes the omitted noun <em>evidence</em>.</p></li><li><p>Students improved <strong>more rapidly than the researchers thought they would</strong>.</p><p class="answer-note"><em>Would</em> carries the omitted future-in-the-past action.</p></li><li><p>Sara works <strong>harder than Reza does</strong>.</p><p class="answer-note"><em>Does</em> replaces the repeated verb <em>works</em>.</p></li><li><p>The results were <strong>better than expected</strong>.</p><p class="answer-note">The predictable passive idea is reduced.</p></li><li><p>Leila likes Ali <strong>more than she likes Reza</strong>.</p><p class="answer-note">The full repeated structure removes the ambiguity.</p></li><li><p>Grammar is <strong>more than a collection of rules</strong>.</p><p class="answer-note">The label is true but incomplete: grammar has a wider role.</p></li><li><p>The team is <strong>more than capable of completing the work</strong>.</p><p class="answer-note">Here <em>more than</em> intensifies <em>capable</em>.</p></li><li><p>The result is <strong>less than ideal</strong>.</p><p class="answer-note">The phrase gives a restrained negative judgment.</p></li><li><p><strong>No more than twenty people</strong> attended.</p><p class="answer-note">The form presents the amount as surprisingly small.</p></li><li><p>The response must contain <strong>not more than fifty words</strong>.</p><p class="answer-note">The form states a neutral ceiling.</p></li><li><p><strong>No less than two hundred students</strong> attended.</p><p class="answer-note">The form presents the amount as surprisingly large.</p></li><li><p>The sample must contain <strong>not less than fifty participants</strong>.</p><p class="answer-note">The form states a neutral floor.</p></li><li><p>The claim is <strong>nothing more than speculation</strong>.</p><p class="answer-note">The expression dismisses the claim as having no higher status.</p></li><li><p>The first draft is <strong>little more than a rough outline</strong>.</p><p class="answer-note">It has developed only slightly beyond an outline.</p></li><li><p>Her recovery was <strong>nothing less than remarkable</strong>.</p><p class="answer-note">The expression strongly emphasizes the description.</p></li><li><p>He wanted <strong>nothing more than to return home</strong>.</p><p class="answer-note">With a verb of desire, the phrase means this was his greatest or only wish, not that returning home was unimportant.</p></li><li><p>The explanation became <strong>clearer and clearer</strong> with each revision.</p><p class="answer-note">A repeated comparative shows continuing change.</p></li><li><p><strong>The more carefully students plan, the more relevant their answers become.</strong></p><p class="answer-note">The two degrees change together.</p></li><li><p><strong>The less time writers spend planning, the more likely they are to repeat themselves.</strong></p><p class="answer-note">One degree falls while the other rises.</p></li><li><p>The policy is <strong>all the more important because</strong> it protects vulnerable groups.</p><p class="answer-note">The reason strengthens the evaluation.</p></li><li><p><strong>More often than not</strong>, students need better development <strong>rather than more complicated vocabulary</strong>.</p><p class="answer-note">The first phrase means <em>usually</em>; the second identifies the preferred priority.</p></li><li><p>Students should <strong>develop one relevant reason fully rather than list several weak reasons</strong>.</p><p class="answer-note">The two alternative actions use parallel base verbs.</p></li><li><p><strong>Rather than criticize the proposal immediately,</strong> the committee requested additional evidence.</p><p class="answer-note">The rejected action is placed first.</p></li><li><p>I would <strong>rather revise the report than submit the unclear version</strong>.</p><p class="answer-note">Both preferred and rejected actions use base verbs.</p></li><li><p>I would rather <strong>you emailed me before changing the schedule</strong>.</p><p class="answer-note">The past form expresses a present or future preference about another person.</p></li><li><p>The university offered <strong>no explanation other than a brief administrative notice</strong>.</p><p class="answer-note"><em>Other than</em> identifies the sole exception.</p></li><li><p>The result was <strong>different from what we had expected</strong>.</p><p class="answer-note">A complete expectation idea follows <em>different from</em>.</p></li><li><p>The new method is <strong>superior to</strong> the old one.</p><p class="answer-note"><em>Superior</em> takes <em>to</em>, not <em>than</em>.</p></li><li><p>Students <strong>prefer concrete examples to abstract explanations</strong>.</p><p class="answer-note">With nouns, <em>prefer</em> takes <em>to</em>.</p></li><li><p><strong>No sooner had the meeting begun than</strong> the internet connection failed.</p><p class="answer-note">Sentence-initial <em>no sooner</em> requires inversion and shows immediate sequence.</p></li><li><p>Tokyo is <strong>larger than any other city in Japan</strong>.</p><p class="answer-note"><em>Other</em> removes Tokyo itself from the comparison group.</p></li><li><p>For a short response, it is <strong>more useful to develop one reason fully than to list several reasons briefly</strong>.</p><p class="answer-note">The two action phrases are parallel.</p></li><li><p>The evidence in the current article is <strong>far less convincing than that presented in the earlier study</strong>.</p><p class="answer-note"><em>That</em> formally replaces <em>the evidence</em>, while <em>presented in the earlier study</em> identifies the substituted evidence.</p></li></ol></div></details></section>
+<section aria-labelledby="model-bank-heading">
+<div class="chapter-marker">Chapter 18</div>
+<h2 id="model-bank-heading">Advanced sentence bank: 64 long, natural models</h2>
+<p>The models below are deliberately long. Read them for rhythm, structure, and the way comparison grammar supports a larger argument. Each note identifies the main device.</p><details class="model-bank"><summary>Open the 64 advanced model sentences</summary><div class="details-content model-bank__content"><section class="model-group"><h3 class="model-group__title">Expanded descriptions</h3><article class="model-item"><div class="model-item__number">01</div><div><p class="model-item__sentence">The revised admission policy is <strong>far more responsive to the financial pressures facing first-generation students than</strong> the older system, which treated every applicant as though access to family support were equally available.</p><p class="model-item__note">The comparison contains a long adjective description and a complete clause after <em>than</em>.</p></div></article><article class="model-item"><div class="model-item__number">02</div><div><p class="model-item__sentence">Although the online platform is <strong>easier for inexperienced users to navigate than</strong> the previous version, its advanced settings remain difficult to locate without detailed guidance.</p><p class="model-item__note">The words <em>for inexperienced users to navigate</em> remain inside the comparative description.</p></div></article><article class="model-item"><div class="model-item__number">03</div><div><p class="model-item__sentence">The final report was <strong>more carefully organized and substantially better supported than</strong> the draft submitted at the beginning of the semester, yet its conclusion was still too broad for the evidence.</p><p class="model-item__note">Two coordinated comparative descriptions share one comparison point.</p></div></article><article class="model-item"><div class="model-item__number">04</div><div><p class="model-item__sentence">For students with limited preparation time, it is <strong>more useful to develop one flexible argument thoroughly than to memorize several complicated answers</strong> that may not fit the actual question.</p><p class="model-item__note">Two infinitive phrases are compared in a practical recommendation.</p></div></article><article class="model-item"><div class="model-item__number">05</div><div><p class="model-item__sentence">The policy is <strong>less harmful to large corporations than to small family-owned businesses</strong>, which often lack the savings needed to survive a sudden rise in operating costs.</p><p class="model-item__note">The adjective’s two <em>to</em> phrases are kept parallel.</p></div></article><article class="model-item"><div class="model-item__number">06</div><div><p class="model-item__sentence">The second explanation is <strong>more scientifically cautious than rhetorically impressive</strong>, but that restraint makes it more trustworthy rather than less valuable.</p><p class="model-item__note">The sentence compares two ways of describing the explanation.</p></div></article><article class="model-item"><div class="model-item__number">07</div><div><p class="model-item__sentence">What initially appeared to be a minor scheduling difficulty became <strong>a much more serious administrative problem than</strong> anyone in the department had expected.</p><p class="model-item__note">This uses the normal noun order: <em>a more serious problem than</em>.</p></div></article><article class="model-item"><div class="model-item__number">08</div><div><p class="model-item__sentence">The discovery created <strong>more difficult a methodological problem than</strong> the research team was prepared to solve within the original timetable.</p><p class="model-item__note">The formal reversed noun order is used for recognition; the ordinary order would usually be preferable.</p></div></article></section><section class="model-group"><h3 class="model-group__title">Quantity and exact difference</h3><article class="model-item"><div class="model-item__number">09</div><div><p class="model-item__sentence">The revised survey collected <strong>nearly twice as many usable responses as</strong> the pilot study while requiring <strong>considerably less time than</strong> the researchers had originally budgeted.</p><p class="model-item__note">The sentence combines an exact multiplier with a <em>less … than</em> comparison.</p></div></article><article class="model-item"><div class="model-item__number">10</div><div><p class="model-item__sentence">Because the new system contains <strong>fewer unnecessary steps than</strong> the old one, employees can complete routine requests in <strong>less than half the time</strong>.</p><p class="model-item__note">The first comparison concerns countable steps; the second treats time as an amount.</p></div></article><article class="model-item"><div class="model-item__number">11</div><div><p class="model-item__sentence">The final sample was <strong>three hundred participants larger than</strong> the preliminary sample, but it still included fewer rural residents than the researchers had hoped to recruit.</p><p class="model-item__note">An exact numerical difference is placed before <em>larger</em>.</p></div></article><article class="model-item"><div class="model-item__number">12</div><div><p class="model-item__sentence">Housing costs rose <strong>18 percent faster than</strong> average wages, making the city substantially less affordable for young workers than it had been a decade earlier.</p><p class="model-item__note">The sentence compares rates and then a change across time.</p></div></article><article class="model-item"><div class="model-item__number">13</div><div><p class="model-item__sentence">More than one committee member <strong>has questioned</strong> whether a project costing no less than five million euros can be justified by benefits that remain largely theoretical.</p><p class="model-item__note">The singular verb after <em>more than one</em> appears beside the emphatic quantity <em>no less than</em>.</p></div></article><article class="model-item"><div class="model-item__number">14</div><div><p class="model-item__sentence">The second group produced <strong>more original ideas than</strong> the first but offered <strong>less evidence than</strong> was necessary to make those ideas convincing.</p><p class="model-item__note">Plural ideas use <em>more</em>; uncountable evidence uses <em>less</em>.</p></div></article><article class="model-item"><div class="model-item__number">15</div><div><p class="model-item__sentence">The final examination contained <strong>fewer than forty questions</strong>, yet it demanded more sustained reasoning than the much longer practice tests.</p><p class="model-item__note">A countable total takes <em>fewer than</em>.</p></div></article><article class="model-item"><div class="model-item__number">16</div><div><p class="model-item__sentence">The repair cost <strong>€1,200 less than</strong> the company had estimated, although the work took considerably longer than the customer had been promised it would.</p><p class="model-item__note">The first comparison states an exact monetary difference; the second uses helper-verb substitution.</p></div></article></section><section class="model-group"><h3 class="model-group__title">Classification and correction</h3><article class="model-item"><div class="model-item__number">17</div><div><p class="model-item__sentence">The public debate over artificial intelligence is <strong>more about human responsibility than about technological ability</strong>, since tools do not independently decide how institutions choose to use them.</p><p class="model-item__note">The comparison weighs two topics and repeats <em>about</em> for clarity.</p></div></article><article class="model-item"><div class="model-item__number">18</div><div><p class="model-item__sentence">The disagreement was <strong>less a dispute over facts than a conflict between different ideas of fairness</strong>, which explains why additional statistics failed to resolve it.</p><p class="model-item__note">Two noun descriptions are contrasted with the compressed <em>less a … than …</em> pattern.</p></div></article><article class="model-item"><div class="model-item__number">19</div><div><p class="model-item__sentence">What the company presented as a minor delay was actually <strong>more of a structural failure than a temporary technical problem</strong>.</p><p class="model-item__note">The ordinary <em>more of a noun than</em> pattern decides which label fits better.</p></div></article><article class="model-item"><div class="model-item__number">20</div><div><p class="model-item__sentence">The book is <strong>more a sustained meditation on memory than a conventional historical account</strong>, even though it draws heavily on archival evidence.</p><p class="model-item__note">The <em>of</em> is omitted in a formal contrast between two category labels.</p></div></article><article class="model-item"><div class="model-item__number">21</div><div><p class="model-item__sentence">The revised assignment proved <strong>less of a burden than</strong> students had feared because each stage was explained separately and supported with a model.</p><p class="model-item__note">The phrase measures the degree to which <em>burden</em> applies.</p></div></article><article class="model-item"><div class="model-item__number">22</div><div><p class="model-item__sentence">The course tests <strong>not so much whether students know advanced vocabulary as whether they can use ordinary language to develop a relevant idea</strong>.</p><p class="model-item__note">The structure replaces an inaccurate description with a better one.</p></div></article><article class="model-item"><div class="model-item__number">23</div><div><p class="model-item__sentence">The project failed <strong>more because managers ignored early warnings than because the original plan was fundamentally unrealistic</strong>.</p><p class="model-item__note">Two complete reason clauses are kept parallel.</p></div></article><article class="model-item"><div class="model-item__number">24</div><div><p class="model-item__sentence">Her response was <strong>less incorrect than dangerously incomplete</strong>, because it mentioned the central fact while omitting the limitation that changed its meaning.</p><p class="model-item__note">The second adjective gives the more accurate criticism.</p></div></article></section><section class="model-group"><h3 class="model-group__title">Degree, limits, and special meanings</h3><article class="model-item"><div class="model-item__number">25</div><div><p class="model-item__sentence">The evidence was <strong>nowhere near as conclusive as</strong> the article suggested and <strong>far less reliable than</strong> the data presented in the original report.</p><p class="model-item__note">Two strong degree expressions show that both comparisons involve large differences.</p></div></article><article class="model-item"><div class="model-item__number">26</div><div><p class="model-item__sentence">The revised conclusion is <strong>slightly more cautious than</strong> the original, but it is still considerably broader than the available evidence allows.</p><p class="model-item__note">A small difference and a large excess are contrasted.</p></div></article><article class="model-item"><div class="model-item__number">27</div><div><p class="model-item__sentence">The problem is <strong>more serious than ever</strong> because cities now depend on systems that were designed for a much smaller population.</p><p class="model-item__note">The short comparison point <em>than ever</em> connects the present with all earlier times.</p></div></article><article class="model-item"><div class="model-item__number">28</div><div><p class="model-item__sentence">The committee requested <strong>no more than three additional pages</strong>, yet the author submitted a revision that was longer than the entire original report.</p><p class="model-item__note"><em>No more than</em> presents a modest maximum.</p></div></article><article class="model-item"><div class="model-item__number">29</div><div><p class="model-item__sentence">No less than two hundred residents attended the meeting, which was <strong>far more participation than</strong> local officials had expected.</p><p class="model-item__note">The first expression emphasizes a large number; the second compares an amount with an expectation.</p></div></article><article class="model-item"><div class="model-item__number">30</div><div><p class="model-item__sentence">The initial proposal was <strong>little more than a list of attractive goals</strong>, whereas the final version explained how each goal would be financed and measured.</p><p class="model-item__note"><em>Little more than</em> means almost only.</p></div></article><article class="model-item"><div class="model-item__number">31</div><div><p class="model-item__sentence">Describing the missing evidence as a minor detail is <strong>nothing less than misleading</strong>, because that evidence is central to the conclusion.</p><p class="model-item__note"><em>Nothing less than</em> strongly emphasizes the judgment.</p></div></article><article class="model-item"><div class="model-item__number">32</div><div><p class="model-item__sentence">The department is <strong>more than willing</strong> to revise the schedule, provided that the alternative creates fewer conflicts than the current arrangement.</p><p class="model-item__note"><em>More than willing</em> intensifies willingness; the second part is an ordinary quantity comparison.</p></div></article></section><section class="model-group"><h3 class="model-group__title">Ellipsis and substitution</h3><article class="model-item"><div class="model-item__number">33</div><div><p class="model-item__sentence">The final proposal was more realistic than the earlier <strong>one</strong>, but its financial estimates were less detailed than <strong>those of</strong> the independent review.</p><p class="model-item__note"><em>One</em> replaces a singular noun; <em>those</em> replaces a plural noun phrase formally.</p></div></article><article class="model-item"><div class="model-item__number">34</div><div><p class="model-item__sentence">Her interpretation is more cautious than <strong>mine</strong>, although both are less pessimistic than the interpretation the committee published last month.</p><p class="model-item__note">The possessive pronoun replaces <em>my interpretation</em>.</p></div></article><article class="model-item"><div class="model-item__number">35</div><div><p class="model-item__sentence">Students developed their examples more fully than we thought they <strong>would</strong>, but they organized their conclusions less effectively than they <strong>did</strong> during practice.</p><p class="model-item__note">Two helper verbs carry omitted verb phrases.</p></div></article><article class="model-item"><div class="model-item__number">36</div><div><p class="model-item__sentence">The population of the capital is larger than <strong>that of any other city</strong> in the country, but its public transport system is less extensive than <strong>those of several smaller cities</strong>.</p><p class="model-item__note"><em>That</em> and <em>those</em> create formal, logical comparisons.</p></div></article><article class="model-item"><div class="model-item__number">37</div><div><p class="model-item__sentence">The policy is more beneficial <strong>to established companies than to new businesses</strong> and more attractive <strong>in theory than in practice</strong>.</p><p class="model-item__note">Repeated adjectives are omitted while the parallel preposition phrases remain.</p></div></article><article class="model-item"><div class="model-item__number">38</div><div><p class="model-item__sentence">The project took longer than <strong>originally planned</strong>, cost more than <strong>initially estimated</strong>, and produced fewer reliable findings than <strong>expected</strong>.</p><p class="model-item__note">Three reduced academic endings avoid long passive clauses.</p></div></article><article class="model-item"><div class="model-item__number">39</div><div><p class="model-item__sentence">She likes independent study more than <strong>her classmates do</strong>, not more than <strong>she likes group discussion</strong>, so the full endings are necessary to prevent ambiguity.</p><p class="model-item__note">Two complete endings make the intended meanings explicit.</p></div></article><article class="model-item"><div class="model-item__number">40</div><div><p class="model-item__sentence">The second course contains more lectures than the first <strong>does</strong> but fewer opportunities for students to apply the ideas they have learned.</p><p class="model-item__note">The helper verb replaces <em>contains lectures</em>.</p></div></article></section><section class="model-group"><h3 class="model-group__title">Changing comparisons</h3><article class="model-item"><div class="model-item__number">41</div><div><p class="model-item__sentence">As the semester progressed, students became <strong>more and more willing</strong> to challenge weak arguments and <strong>less and less dependent</strong> on memorized phrases.</p><p class="model-item__note">Repeated comparative forms show two gradual changes in opposite directions.</p></div></article><article class="model-item"><div class="model-item__number">42</div><div><p class="model-item__sentence"><strong>The more carefully a writer defines the comparison point, the less likely the sentence is to become ambiguous</strong>, especially when several people or actions are mentioned.</p><p class="model-item__note">The two changing degrees are linked directly.</p></div></article><article class="model-item"><div class="model-item__number">43</div><div><p class="model-item__sentence"><strong>The fewer examples students try to include, the more space they have to explain the examples they actually use</strong>.</p><p class="model-item__note">A decreasing count produces an increasing opportunity.</p></div></article><article class="model-item"><div class="model-item__number">44</div><div><p class="model-item__sentence"><strong>The earlier a misunderstanding is corrected, the easier it is to prevent that misunderstanding from shaping the rest of the discussion</strong>.</p><p class="model-item__note">Two <em>-er</em> comparatives form a cause-and-effect relationship.</p></div></article><article class="model-item"><div class="model-item__number">45</div><div><p class="model-item__sentence">The pressure to verify online information is <strong>all the greater because</strong> misleading claims now spread faster than corrections do.</p><p class="model-item__note"><em>All the greater because</em> says the reason strengthens the need.</p></div></article><article class="model-item"><div class="model-item__number">46</div><div><p class="model-item__sentence">Her success was <strong>all the more impressive given</strong> that she completed the research with fewer resources than any other team received.</p><p class="model-item__note">A circumstance strengthens the evaluation, followed by a logical group comparison.</p></div></article><article class="model-item"><div class="model-item__number">47</div><div><p class="model-item__sentence">The more complicated the scoring system becomes, the less transparent it appears, and <strong>the less transparent it appears, the more difficult it becomes to trust</strong>.</p><p class="model-item__note">Two linked correlative comparisons form a chain of effects.</p></div></article><article class="model-item"><div class="model-item__number">48</div><div><p class="model-item__sentence">Because every unnecessary sentence gives the reader more information to process, <strong>the shorter and more focused the response, the better</strong>.</p><p class="model-item__note">A compact fixed-style correlative gives a practical writing principle.</p></div></article></section><section class="model-group"><h3 class="model-group__title">Rather than and other than</h3><article class="model-item"><div class="model-item__number">49</div><div><p class="model-item__sentence">Students should adapt a flexible idea to the exact question <strong>rather than force a memorized answer into a discussion where it does not belong</strong>.</p><p class="model-item__note">Two base-verb phrases are contrasted after <em>should</em>.</p></div></article><article class="model-item"><div class="model-item__number">50</div><div><p class="model-item__sentence"><strong>Rather than dismiss the surprising result as an error</strong>, the researchers repeated the experiment under stricter conditions.</p><p class="model-item__note">The rejected action appears first, followed by the preferred action.</p></div></article><article class="model-item"><div class="model-item__number">51</div><div><p class="model-item__sentence">I would <strong>rather receive a direct explanation than continue guessing</strong> why the application has not been processed.</p><p class="model-item__note"><em>Would rather</em> is followed by parallel base verbs.</p></div></article><article class="model-item"><div class="model-item__number">52</div><div><p class="model-item__sentence">The instructor would rather <strong>students used a simple relevant example than repeated an impressive but unrelated one</strong>.</p><p class="model-item__note">Past forms express the instructor’s present preference about other people’s behavior.</p></div></article><article class="model-item"><div class="model-item__number">53</div><div><p class="model-item__sentence">The university offered no evidence <strong>other than a short internal report</strong> whose methods had never been independently reviewed.</p><p class="model-item__note"><em>Other than</em> means <em>except</em>.</p></div></article><article class="model-item"><div class="model-item__number">54</div><div><p class="model-item__sentence">Anything <strong>other than a complete correction</strong> would leave students with the same misunderstanding that caused the original error.</p><p class="model-item__note"><em>Anything other than</em> rejects all alternatives except the named one.</p></div></article><article class="model-item"><div class="model-item__number">55</div><div><p class="model-item__sentence">The keynote speaker was <strong>none other than the researcher whose work had inspired the entire project</strong>.</p><p class="model-item__note"><em>None other than</em> introduces a surprising identity.</p></div></article><article class="model-item"><div class="model-item__number">56</div><div><p class="model-item__sentence">Other than the lack of a detailed timetable, the proposal is <strong>more or less ready</strong> for approval.</p><p class="model-item__note"><em>Other than</em> marks an exception; <em>more or less</em> means approximately.</p></div></article></section><section class="model-group"><h3 class="model-group__title">Comparators with to/from/as and special than patterns</h3><article class="model-item"><div class="model-item__number">57</div><div><p class="model-item__sentence">Although the new procedure is <strong>superior to</strong> the old one in speed, it is inferior to it in transparency and therefore not clearly preferable overall.</p><p class="model-item__note">Several comparative adjectives correctly take <em>to</em>, not <em>than</em>.</p></div></article><article class="model-item"><div class="model-item__number">58</div><div><p class="model-item__sentence">Most students <strong>prefer a short explanation with a clear example to a long definition without context</strong>.</p><p class="model-item__note"><em>Prefer X to Y</em> directly compares two choices.</p></div></article><article class="model-item"><div class="model-item__number">59</div><div><p class="model-item__sentence">The final outcome was <strong>different from what the committee had predicted</strong> but remarkably similar to what independent researchers had reported.</p><p class="model-item__note"><em>Different from</em> and <em>similar to</em> take different connectors.</p></div></article><article class="model-item"><div class="model-item__number">60</div><div><p class="model-item__sentence">The revised figures are <strong>the same as those published last month</strong>, although the explanation accompanying them is considerably clearer than before.</p><p class="model-item__note"><em>The same as</em> combines with formal substitution and a reduced time comparison.</p></div></article><article class="model-item"><div class="model-item__number">61</div><div><p class="model-item__sentence"><strong>No sooner had the university announced the new rule than</strong> students began asking whether it would apply to courses already in progress.</p><p class="model-item__note">Sentence-initial <em>no sooner</em> triggers inversion.</p></div></article><article class="model-item"><div class="model-item__number">62</div><div><p class="model-item__sentence">Because the safety issue affects thousands of commuters every day, the city should resolve it <strong>sooner rather than later</strong>.</p><p class="model-item__note">The fixed phrase urges prompt action.</p></div></article><article class="model-item"><div class="model-item__number">63</div><div><p class="model-item__sentence">The capital has a larger population than <strong>any other city in the country</strong>, but several smaller cities provide more reliable public services than it does.</p><p class="model-item__note"><em>Other</em> prevents an illogical self-comparison; <em>does</em> avoids repetition.</p></div></article><article class="model-item"><div class="model-item__number">64</div><div><p class="model-item__sentence">It is <strong>better to acknowledge a limitation than to hide it</strong>, because a cautious argument is usually more credible than an unrealistically certain one.</p><p class="model-item__note">Parallel infinitives are followed by a second comparison using <em>one</em>.</p></div></article></section></div></details>
+</section>
+<section aria-labelledby="grammar-toolbox-heading">
+<div class="chapter-marker">Chapter 19</div>
+<h2 id="grammar-toolbox-heading">A plain-English grammar toolbox</h2>
+<p>These definitions explain the grammar words used throughout the guide. They are written for learners rather than grammar specialists.</p><dl class="glossary-stack"><div class="glossary-item" id="term-comparative"><dt>Comparative form</dt><dd>A form that presents one person, thing, action, amount, or idea as higher, lower, larger, smaller, better, worse, or otherwise different in degree: <em>taller, more useful, less carefully, fewer mistakes</em>.</dd></div><div class="glossary-item" id="term-comparison-point"><dt>Comparison point</dt><dd>The person, thing, action, time, number, expectation, or complete idea introduced by <em>than</em>: <em>than Sara</em>, <em>than before</em>, <em>than expected</em>, or <em>than we thought it would</em>.</dd></div><div class="glossary-item" id="term-adjective"><dt>Adjective</dt><dd>A word or group of words that describes a person or thing: <em>large, useful, difficult to explain, concerned about costs</em>. Comparative adjectives include <em>larger, more useful, less difficult</em>.</dd></div><div class="glossary-item" id="term-adverb"><dt>Adverb</dt><dd>A word or group of words that describes how an action happens: <em>carefully, rapidly, with confidence</em>. Comparative adverbs include <em>more carefully, faster, less confidently</em>.</dd></div><div class="glossary-item" id="term-noun"><dt>Noun</dt><dd>A word for a person, thing, place, idea, event, or substance: <em>student, proposal, city, fairness, meeting, evidence</em>.</dd></div><div class="glossary-item" id="term-countable"><dt>Countable noun</dt><dd>A noun you can count separately: <em>one student, two students; one error, five errors</em>. Use <em>fewer</em> for a lower number and <em>one/ones</em> as replacements.</dd></div><div class="glossary-item" id="term-uncountable"><dt>Uncountable noun</dt><dd>A noun normally treated as an amount rather than separate items: <em>information, evidence, traffic, time</em>. Use <em>less</em> for a lower amount.</dd></div><div class="glossary-item" id="term-measurement"><dt>Measurement</dt><dd>A total of time, money, distance, weight, or another measured quantity. English normally uses <em>less than</em> with the total: <em>less than three hours; less than €50</em>.</dd></div><div class="glossary-item" id="term-modifier"><dt>Modifier</dt><dd>A word or phrase that changes the strength or detail of another expression. Comparative modifiers include <em>far, much, slightly, considerably, even, still</em>: <em>far more useful; slightly better</em>.</dd></div><div class="glossary-item" id="term-complement"><dt>Complement</dt><dd>Words that complete the meaning of another word. In <em>concerned about costs</em>, the phrase <em>about costs</em> completes <em>concerned</em>. Keep it inside the comparison when necessary.</dd></div><div class="glossary-item" id="term-preposition"><dt>Preposition</dt><dd>A short linking word such as <em>about, for, to, in, with, from</em>. Long comparisons often compare parallel preposition phrases: <em>more useful for teachers than for students</em>.</dd></div><div class="glossary-item" id="term-infinitive"><dt>Infinitive</dt><dd>The form <em>to + base verb</em>: <em>to explain, to apply, to maintain</em>. Comparative sentences often place two infinitives in parallel: <em>easier to understand than to use</em>.</dd></div><div class="glossary-item" id="term-gerund"><dt>Gerund or -ing form used as a noun</dt><dd>An <em>-ing</em> form that names an activity: <em>reading, planning, working independently</em>. Keep two activities parallel: <em>prefer reading to watching</em>; <em>by explaining rather than repeating</em>.</dd></div><div class="glossary-item" id="term-parallelism"><dt>Parallelism</dt><dd>Using matching grammatical shapes for ideas that perform the same job. Compare noun with noun, adjective with adjective, reason with reason, or action with action.</dd></div><div class="glossary-item" id="term-clause"><dt>Clause or complete idea</dt><dd>A group of words built around a subject and a verb: <em>I am</em>, <em>experts predicted</em>, <em>the article suggests</em>, <em>we thought it would</em>. It may be a whole sentence or part of one.</dd></div><div class="glossary-item" id="term-helper-verb"><dt>Helper verb</dt><dd>A short verb such as <em>do, has, can, will, would</em> that carries tense or replaces a repeated action: <em>She works harder than I do</em>; <em>It cost more than we thought it would</em>.</dd></div><div class="glossary-item" id="term-ellipsis"><dt>Ellipsis</dt><dd>Leaving out words that the reader can recover easily: <em>more useful for teachers than for students</em> leaves out the repeated words <em>it is useful</em>.</dd></div><div class="glossary-item" id="term-substitution"><dt>Substitution</dt><dd>Replacing repeated material with a shorter form such as <em>one/ones, that/those, mine/ours</em>, or a helper verb.</dd></div><div class="glossary-item" id="term-one-ones"><dt><em>One</em> and <em>ones</em></dt><dd>Replacement words for singular and plural countable nouns: <em>the old proposal → the old one</em>; <em>the earlier questions → the earlier ones</em>.</dd></div><div class="glossary-item" id="term-that-those"><dt><em>That</em> and <em>those</em> as replacements</dt><dd>Formal replacements common in academic comparison: <em>the impact of X → that of X</em>; <em>the results of X → those of X</em>.</dd></div><div class="glossary-item" id="term-possessive"><dt>Possessive replacement</dt><dd>A form such as <em>mine, yours, hers, ours, theirs</em>, or a noun with <em>’s</em>, that replaces an owned noun: <em>Her argument is stronger than mine</em>.</dd></div><div class="glossary-item" id="term-reduced-ending"><dt>Reduced ending</dt><dd>A short ending such as <em>than expected, than originally planned, than before</em>, where the missing words are obvious from context.</dd></div><div class="glossary-item" id="term-comparative-deletion"><dt>Comparative deletion</dt><dd>The automatic omission of repeated comparative material after <em>than</em>: <em>She is taller than I am [tall]</em>. English does not repeat the adjective on the second side.</dd></div><div class="glossary-item" id="term-partitive"><dt>Partitive phrase</dt><dd>A phrase that refers to part of a larger whole: <em>more of the money, less of the problem</em>. This is different from the classification pattern <em>more of a problem than a solution</em>.</dd></div><div class="glossary-item" id="term-inversion"><dt>Inversion</dt><dd>A formal word-order change in which a helper verb comes before the subject: <em>No sooner had the meeting begun than …</em>. The order resembles a question, but the sentence is a statement.</dd></div><div class="glossary-item" id="term-register"><dt>Register</dt><dd>The level of formality and style. <em>More of a problem than</em> is widely natural; <em>more a problem than</em> is more compressed and formal.</dd></div><div class="glossary-item" id="term-ambiguity"><dt>Ambiguity</dt><dd>A sentence has ambiguity when it allows two meanings. <em>She likes Ali more than Reza</em> is ambiguous until the missing verb relationship is stated.</dd></div><div class="glossary-item" id="term-correlation"><dt>Correlative comparison</dt><dd>A paired structure showing that two degrees change together: <em>The more carefully you plan, the clearer your answer becomes</em>.</dd></div></dl>
+<div class="callout callout--teal"><div class="editorial-label">Final reminder</div><p>Every complex comparison becomes easier when you ask three questions: <strong>What two things am I comparing? What exact difference or preference am I expressing? Have I made the two sides clear and parallel?</strong></p></div>
+</section></main>
+</div>
+<footer class="footer">
+<div class="footer__inner">
+<div>Kooshky’s TOEFL Guides · Collected and compiled by Amir Kooshky</div>
+<nav aria-label="Kooshky TOEFL links" class="footer__links">
+<a href="https://t.me/KooshkyTOEFL" rel="noopener noreferrer" target="_blank">Telegram channel</a>
+<a href="https://instagram.com/kooshkytoefl" rel="noopener noreferrer" target="_blank">Instagram</a>
+<a href="https://t.me/kooshkyTOEFL_pv" rel="noopener noreferrer" target="_blank">Telegram DM</a>
+</nav>
+</div>
+</footer>
+<button aria-label="Go to the top of the page" class="go-top" id="goTop" type="button">↑</button>
+<div aria-hidden="true" class="mobile-backdrop" id="mobileBackdrop"></div>
+<nav aria-hidden="true" aria-label="Mobile guide contents" class="mobile-nav" id="mobileNav">
+<div class="mobile-nav__header">
+<h2 class="mobile-nav__title">Contents</h2>
+<button aria-label="Close contents menu" class="control-button" id="closeMenuButton" type="button">×</button>
+</div>
+<ol class="toc-list" id="mobileToc"></ol>
+</nav>
+<div aria-hidden="true" class="modal-backdrop" id="telegramBackdrop"></div>
+<section aria-describedby="telegramDialogText" aria-hidden="true" aria-labelledby="telegramDialogTitle" aria-modal="true" class="telegram-dialog" id="telegramDialog" role="dialog">
+<button aria-label="Close Telegram invitation" class="telegram-dialog__close" id="telegramClose" type="button">×</button>
+<div class="editorial-label">More TOEFL material</div>
+<h2 id="telegramDialogTitle">Continue learning with Kooshky TOEFL</h2>
+<p id="telegramDialogText">The Telegram channel includes more grammar guides, TOEFL examples, practice material, and updates for learners.</p>
+<div class="telegram-dialog__actions">
+<a class="button-link" href="https://t.me/KooshkyTOEFL" id="telegramVisit" rel="noopener noreferrer" target="_blank">Visit the Telegram channel</a>
+<button class="button-link button-link--secondary" id="telegramLater" type="button">Continue reading</button>
+</div>
+</section>
+<aside aria-label="Dictionary lookup options" class="selection-menu" id="selectionMenu">
+<p class="selection-menu__title" id="selectionTitle">Look up selected text</p>
+<div class="selection-menu__links">
+<a data-dictionary="cambridge" href="#" rel="noopener noreferrer" target="_blank">Cambridge</a>
+<a data-dictionary="oxford" href="#" rel="noopener noreferrer" target="_blank">Oxford Learner’s</a>
+<a data-dictionary="merriam" href="#" rel="noopener noreferrer" target="_blank">Merriam-Webster</a>
+<a data-dictionary="google" href="#" rel="noopener noreferrer" target="_blank">Google meaning</a>
+</div>
+</aside>
+<script>
+    (function () {
+      'use strict';
+
+      var storage = {
+        get: function (key) {
+          try { return localStorage.getItem(key); } catch (error) { return null; }
+        },
+        set: function (key, value) {
+          try { localStorage.setItem(key, value); } catch (error) { /* Storage may be unavailable. */ }
+        }
+      };
+
+      var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+      var themeKey = 'kooshky-guides:theme:v1';
+      var telegramKey = 'kooshky-guides:beyond-more-than:telegram-invite:v1';
+      var mainArticle = document.querySelector('.article');
+      var themeButton = document.getElementById('themeButton');
+      var themeIcon = document.getElementById('themeIcon');
+      var themeLabel = document.getElementById('themeLabel');
+      var menuButton = document.getElementById('menuButton');
+      var closeMenuButton = document.getElementById('closeMenuButton');
+      var mobileNav = document.getElementById('mobileNav');
+      var mobileBackdrop = document.getElementById('mobileBackdrop');
+      var goTop = document.getElementById('goTop');
+      var telegramDialog = document.getElementById('telegramDialog');
+      var telegramBackdrop = document.getElementById('telegramBackdrop');
+      var telegramClose = document.getElementById('telegramClose');
+      var telegramLater = document.getElementById('telegramLater');
+      var telegramVisit = document.getElementById('telegramVisit');
+      var selectionMenu = document.getElementById('selectionMenu');
+      var selectionTitle = document.getElementById('selectionTitle');
+      var previousFocus = null;
+      var selectionTimer = null;
+
+      function slugify(text) {
+        return text
+          .toLowerCase()
+          .trim()
+          .replace(/[“”‘’'".,!?():;\/\\]/g, '')
+          .replace(/&/g, 'and')
+          .replace(/[^a-z0-9]+/g, '-')
+          .replace(/^-+|-+$/g, '') || 'section';
+      }
+
+      function assignStableHeadingIds() {
+        var used = new Set();
+        document.querySelectorAll('.article > section > h2, .article > section > h3, .article > section > h4, .article > aside:not(.mid-cta) > h2, .article > aside:not(.mid-cta) > h3, .article > aside:not(.mid-cta) > h4').forEach(function (heading) {
+          var base = heading.id || slugify(heading.textContent);
+          var candidate = base;
+          var number = 2;
+          while (used.has(candidate) || (document.getElementById(candidate) && document.getElementById(candidate) !== heading)) {
+            candidate = base + '-' + number;
+            number += 1;
+          }
+          heading.id = candidate;
+          used.add(candidate);
+        });
+      }
+
+      function getTocHeadings() {
+        return Array.from(document.querySelectorAll('.article > section > h2, .article > section > h3, .article > section > h4, .article > aside:not(.mid-cta) > h2, .article > aside:not(.mid-cta) > h3, .article > aside:not(.mid-cta) > h4'));
+      }
+
+      function headingLevel(heading) {
+        return Number(heading.tagName.slice(1));
+      }
+
+      function buildTocBranch(headings, startIndex, level, targetPrefix) {
+        var list = document.createElement('ol');
+        list.className = level === 2 ? 'toc-list' : 'toc-children';
+        var index = startIndex;
+
+        while (index < headings.length) {
+          var heading = headings[index];
+          var currentLevel = headingLevel(heading);
+          if (currentLevel < level) { break; }
+          if (currentLevel > level) { index += 1; continue; }
+
+          var item = document.createElement('li');
+          item.className = 'toc-node toc-level-' + level;
+          var row = document.createElement('div');
+          row.className = 'toc-row';
+          var link = document.createElement('a');
+          link.href = '#' + heading.id;
+          link.textContent = heading.textContent;
+          link.dataset.targetId = heading.id;
+          row.appendChild(link);
+          item.appendChild(row);
+          index += 1;
+
+          if (index < headings.length && headingLevel(headings[index]) > level) {
+            var childLevel = headingLevel(headings[index]);
+            var childResult = buildTocBranch(headings, index, childLevel, targetPrefix);
+            var childList = childResult.list;
+            index = childResult.index;
+            var childId = targetPrefix + '-children-' + heading.id;
+            childList.id = childId;
+            childList.hidden = true;
+
+            var toggle = document.createElement('button');
+            toggle.type = 'button';
+            toggle.className = 'toc-toggle';
+            toggle.setAttribute('aria-expanded', 'false');
+            toggle.setAttribute('aria-controls', childId);
+            toggle.setAttribute('aria-label', 'Expand subsections of ' + heading.textContent);
+            toggle.innerHTML = '<span class="toc-toggle__icon" aria-hidden="true">›</span>';
+            toggle.addEventListener('click', function (event) {
+              var button = event.currentTarget;
+              var controlled = document.getElementById(button.getAttribute('aria-controls'));
+              var expanded = button.getAttribute('aria-expanded') === 'true';
+              button.setAttribute('aria-expanded', String(!expanded));
+              button.setAttribute('aria-label', (expanded ? 'Expand' : 'Collapse') + ' subsections of ' + button.previousElementSibling.textContent);
+              controlled.hidden = expanded;
+            });
+            row.appendChild(toggle);
+            item.appendChild(childList);
+          }
+
+          list.appendChild(item);
+        }
+        return { list: list, index: index };
+      }
+
+      function buildToc(target) {
+        var headings = getTocHeadings();
+        if (!headings.length) { return; }
+        var result = buildTocBranch(headings, 0, headingLevel(headings[0]), target.id);
+        target.replaceChildren.apply(target, Array.from(result.list.childNodes));
+      }
+
+      function markTocPath(link) {
+        var node = link.closest('.toc-node');
+        while (node) {
+          var pathLink = node.querySelector(':scope > .toc-row > a');
+          if (pathLink) { pathLink.setAttribute('aria-current', 'true'); }
+          var parentList = node.parentElement;
+          node = parentList ? parentList.closest('.toc-node') : null;
+        }
+      }
+
+      function initializeToc() {
+        assignStableHeadingIds();
+        buildToc(document.getElementById('desktopToc'));
+        buildToc(document.getElementById('mobileToc'));
+
+        document.querySelectorAll('.toc-list a').forEach(function (link) {
+          link.addEventListener('click', function () {
+            closeMobileNav();
+          });
+        });
+
+        if (!('IntersectionObserver' in window)) { return; }
+        var linksById = new Map();
+        document.querySelectorAll('.toc-list a').forEach(function (link) {
+          var id = link.dataset.targetId;
+          if (!linksById.has(id)) { linksById.set(id, []); }
+          linksById.get(id).push(link);
+        });
+
+        var observer = new IntersectionObserver(function (entries) {
+          var visible = entries
+            .filter(function (entry) { return entry.isIntersecting; })
+            .sort(function (a, b) { return a.boundingClientRect.top - b.boundingClientRect.top; });
+          if (!visible.length) { return; }
+          var activeId = visible[0].target.id;
+          document.querySelectorAll('.toc-list a[aria-current="true"]').forEach(function (link) {
+            link.removeAttribute('aria-current');
+          });
+          (linksById.get(activeId) || []).forEach(function (link) {
+            link.setAttribute('aria-current', 'true');
+            markTocPath(link);
+          });
+        }, { rootMargin: '-18% 0px -72% 0px', threshold: [0, 1] });
+
+        getTocHeadings().forEach(function (heading) { observer.observe(heading); });
+      }
+
+      function currentTheme() {
+        return document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+      }
+
+      function updateThemeControl(theme) {
+        var dark = theme === 'dark';
+        themeButton.setAttribute('aria-pressed', String(dark));
+        themeButton.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme');
+        themeIcon.textContent = dark ? '☀' : '◐';
+        themeLabel.textContent = dark ? 'Light' : 'Dark';
+      }
+
+      function setTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+        storage.set(themeKey, theme);
+        updateThemeControl(theme);
+      }
+
+      function initializeTheme() {
+        updateThemeControl(currentTheme());
+        themeButton.addEventListener('click', function () {
+          setTheme(currentTheme() === 'dark' ? 'light' : 'dark');
+        });
+      }
+
+      function openMobileNav() {
+        previousFocus = document.activeElement;
+        document.body.classList.add('nav-open');
+        mobileNav.classList.add('is-open');
+        mobileBackdrop.classList.add('is-open');
+        mobileNav.setAttribute('aria-hidden', 'false');
+        mobileBackdrop.setAttribute('aria-hidden', 'false');
+        menuButton.setAttribute('aria-expanded', 'true');
+        closeMenuButton.focus();
+      }
+
+      function closeMobileNav() {
+        if (!mobileNav.classList.contains('is-open')) { return; }
+        document.body.classList.remove('nav-open');
+        mobileNav.classList.remove('is-open');
+        mobileBackdrop.classList.remove('is-open');
+        mobileNav.setAttribute('aria-hidden', 'true');
+        mobileBackdrop.setAttribute('aria-hidden', 'true');
+        menuButton.setAttribute('aria-expanded', 'false');
+        if (previousFocus && typeof previousFocus.focus === 'function') { previousFocus.focus(); }
+      }
+
+      function initializeMobileNav() {
+        menuButton.addEventListener('click', openMobileNav);
+        closeMenuButton.addEventListener('click', closeMobileNav);
+        mobileBackdrop.addEventListener('click', closeMobileNav);
+      }
+
+      function initializeGoTop() {
+        function updateVisibility() {
+          goTop.classList.toggle('is-visible', window.scrollY > 700);
+        }
+        window.addEventListener('scroll', updateVisibility, { passive: true });
+        updateVisibility();
+        goTop.addEventListener('click', function () {
+          window.scrollTo({ top: 0, behavior: prefersReducedMotion.matches ? 'auto' : 'smooth' });
+        });
+      }
+
+      function telegramDismissed() {
+        return storage.get(telegramKey) === 'done';
+      }
+
+      function markTelegramDone() {
+        storage.set(telegramKey, 'done');
+      }
+
+      function openTelegramDialog() {
+        if (telegramDismissed() || telegramDialog.classList.contains('is-open')) { return; }
+        previousFocus = document.activeElement;
+        document.body.classList.add('modal-open');
+        telegramDialog.classList.add('is-open');
+        telegramBackdrop.classList.add('is-open');
+        telegramDialog.setAttribute('aria-hidden', 'false');
+        telegramBackdrop.setAttribute('aria-hidden', 'false');
+        telegramClose.focus();
+      }
+
+      function closeTelegramDialog(recordDismissal) {
+        if (!telegramDialog.classList.contains('is-open')) { return; }
+        if (recordDismissal !== false) { markTelegramDone(); }
+        document.body.classList.remove('modal-open');
+        telegramDialog.classList.remove('is-open');
+        telegramBackdrop.classList.remove('is-open');
+        telegramDialog.setAttribute('aria-hidden', 'true');
+        telegramBackdrop.setAttribute('aria-hidden', 'true');
+        if (previousFocus && typeof previousFocus.focus === 'function') { previousFocus.focus(); }
+      }
+
+      function initializeTelegramInvite() {
+        if (telegramDismissed()) { return; }
+        var triggered = false;
+        function maybeShowInvite() {
+          if (triggered || telegramDismissed()) { return; }
+          var documentHeight = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
+          var progress = (window.scrollY + window.innerHeight) / documentHeight;
+          if (progress >= 0.48) {
+            triggered = true;
+            openTelegramDialog();
+            window.removeEventListener('scroll', maybeShowInvite);
+          }
+        }
+        window.addEventListener('scroll', maybeShowInvite, { passive: true });
+        maybeShowInvite();
+        telegramClose.addEventListener('click', function () { closeTelegramDialog(true); });
+        telegramLater.addEventListener('click', function () { closeTelegramDialog(true); });
+        telegramBackdrop.addEventListener('click', function () { closeTelegramDialog(true); });
+        telegramVisit.addEventListener('click', function () {
+          markTelegramDone();
+          closeTelegramDialog(false);
+        });
+      }
+
+      function isSensibleSelection(text) {
+        if (!text) { return false; }
+        var cleaned = text.replace(/\s+/g, ' ').trim();
+        if (cleaned.length < 1 || cleaned.length > 80) { return false; }
+        if (!/[A-Za-z]/.test(cleaned)) { return false; }
+        if (cleaned.split(' ').length > 10) { return false; }
+        return true;
+      }
+
+      function selectionInsideIgnoredElement(selection) {
+        if (!selection || !selection.anchorNode) { return true; }
+        var element = selection.anchorNode.nodeType === Node.ELEMENT_NODE
+          ? selection.anchorNode
+          : selection.anchorNode.parentElement;
+        return Boolean(element && element.closest('button, a, input, textarea, select, nav, .selection-menu, .telegram-dialog'));
+      }
+
+      function hideSelectionMenu() {
+        selectionMenu.classList.remove('is-open');
+      }
+
+      function setDictionaryLinks(text) {
+        var encoded = encodeURIComponent(text);
+        var links = {
+          cambridge: 'https://dictionary.cambridge.org/dictionary/english/' + encoded,
+          oxford: 'https://www.oxfordlearnersdictionaries.com/definition/english/' + encoded + '?q=' + encoded,
+          merriam: 'https://www.merriam-webster.com/dictionary/' + encoded,
+          google: 'https://www.google.com/search?q=meaning+of+' + encoded
+        };
+        selectionMenu.querySelectorAll('[data-dictionary]').forEach(function (link) {
+          link.href = links[link.dataset.dictionary];
+        });
+      }
+
+      function positionSelectionMenu(rect) {
+        var menuWidth = Math.min(288, window.innerWidth - 16);
+        var estimatedHeight = 154;
+        var left = rect.left + (rect.width / 2) - (menuWidth / 2);
+        left = Math.max(8, Math.min(left, window.innerWidth - menuWidth - 8));
+
+        var top = rect.top - estimatedHeight - 12;
+        if (top < 8) { top = rect.bottom + 18; }
+        top = Math.max(8, Math.min(top, window.innerHeight - estimatedHeight - 8));
+
+        selectionMenu.style.left = left + 'px';
+        selectionMenu.style.top = top + 'px';
+      }
+
+      function showSelectionMenu() {
+        var selection = window.getSelection();
+        if (!selection || selection.rangeCount === 0 || selection.isCollapsed || selectionInsideIgnoredElement(selection)) {
+          hideSelectionMenu();
+          return;
+        }
+        var text = selection.toString().replace(/\s+/g, ' ').trim();
+        if (!isSensibleSelection(text)) {
+          hideSelectionMenu();
+          return;
+        }
+
+        var range = selection.getRangeAt(0);
+        var rect = range.getBoundingClientRect();
+        if (!rect || (!rect.width && !rect.height)) {
+          rect = { left: window.innerWidth / 2, width: 0, top: window.innerHeight / 2, bottom: window.innerHeight / 2 };
+        }
+
+        selectionTitle.textContent = 'Look up: “' + text + '”';
+        setDictionaryLinks(text);
+        selectionMenu.style.width = 'min(18rem, calc(100vw - 1rem))';
+        selectionMenu.classList.add('is-open');
+        requestAnimationFrame(function () { positionSelectionMenu(rect); });
+      }
+
+      function scheduleSelectionMenu(delay) {
+        window.clearTimeout(selectionTimer);
+        selectionTimer = window.setTimeout(showSelectionMenu, delay);
+      }
+
+      function initializeSelectionLookup() {
+        document.addEventListener('selectionchange', function () { scheduleSelectionMenu(180); });
+        document.addEventListener('pointerup', function () { scheduleSelectionMenu(70); });
+        document.addEventListener('touchend', function () { scheduleSelectionMenu(240); }, { passive: true });
+        document.addEventListener('pointerdown', function (event) {
+          if (!selectionMenu.contains(event.target)) { hideSelectionMenu(); }
+        });
+        window.addEventListener('scroll', hideSelectionMenu, { passive: true });
+        window.addEventListener('resize', hideSelectionMenu);
+        document.addEventListener('focusin', function (event) {
+          if (!selectionMenu.contains(event.target)) { hideSelectionMenu(); }
+        });
+      }
+
+      function trapFocus(event, container) {
+        var focusable = Array.from(container.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'));
+        if (!focusable.length) { return; }
+        var first = focusable[0];
+        var last = focusable[focusable.length - 1];
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault();
+          last.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault();
+          first.focus();
+        }
+      }
+
+      function initializeKeyboardControls() {
+        document.addEventListener('keydown', function (event) {
+          if (event.key === 'Escape') {
+            hideSelectionMenu();
+            closeMobileNav();
+            closeTelegramDialog(true);
+          }
+          if (event.key === 'Tab') {
+            if (telegramDialog.classList.contains('is-open')) { trapFocus(event, telegramDialog); }
+            else if (mobileNav.classList.contains('is-open')) { trapFocus(event, mobileNav); }
+          }
+        });
+      }
+
+      function initialize() {
+        try { initializeTheme(); } catch (error) { /* Continue with other features. */ }
+        try { initializeToc(); } catch (error) { /* Continue with other features. */ }
+        try { initializeMobileNav(); } catch (error) { /* Continue with other features. */ }
+        try { initializeGoTop(); } catch (error) { /* Continue with other features. */ }
+        try { initializeTelegramInvite(); } catch (error) { /* Continue with other features. */ }
+        try { initializeSelectionLookup(); } catch (error) { /* Continue with other features. */ }
+        try { initializeKeyboardControls(); } catch (error) { /* Continue with other features. */ }
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initialize);
+      } else {
+        initialize();
+      }
+    }());
+  </script>
+</body>
+</html>
