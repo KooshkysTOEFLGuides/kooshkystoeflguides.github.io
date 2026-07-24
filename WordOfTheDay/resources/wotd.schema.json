@@ -1,0 +1,680 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kooshkytoefl.example/schemas/wotd.schema.json",
+  "title": "Kooshky TOEFL Word of the Day data",
+  "description": "Accuracy-first plain-text content contract for the Kooshky TOEFL Word of the Day workflow with deterministic local pronunciation audio. Only core lexical fields are mandatory; optional sections should be omitted when reliable, useful content is unavailable.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "document_type",
+    "schema_version",
+    "slug",
+    "word",
+    "date",
+    "pronunciation",
+    "meanings"
+  ],
+  "properties": {
+    "document_type": {
+      "const": "kooshky_toefl_word_of_the_day"
+    },
+    "schema_version": {
+      "const": "1.3"
+    },
+    "slug": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Lowercase filename-safe form, such as underlie or take-for-granted.",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "word": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Headword in its normal dictionary form."
+    },
+    "date": {
+      "type": "string",
+      "minLength": 6,
+      "description": "Publication date, for example July 12th, 2026."
+    },
+    "pronunciation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "primary_ipa"
+      ],
+      "properties": {
+        "primary_ipa": {
+          "type": "string",
+          "minLength": 3,
+          "description": "Primary American English IPA."
+        },
+        "audio_phrase": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80,
+          "description": "Optional short text for Edge-TTS. For an ordinary word, omit this and the generator uses the headword. For a heteronym, the generator can derive the primary phrase from the first meaning."
+        }
+      }
+    },
+    "hero": {
+      "type": "object",
+      "additionalProperties": false,
+      "minProperties": 1,
+      "properties": {
+        "part_of_speech_summary": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Compact part-of-speech summary. If omitted, the generator derives it."
+        },
+        "short_meanings": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 4,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "description": "Short labels for the opening area. If omitted, the generator uses sense titles."
+        },
+        "one_line_summary": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Optional concise sentence connecting the major meanings."
+        },
+        "memorable_example": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Optional natural opening example. If omitted, the generator uses the first example."
+        }
+      }
+    },
+    "meanings": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 8,
+      "items": {
+        "$ref": "#/$defs/meaning"
+      }
+    },
+    "word_family": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 12,
+      "items": {
+        "$ref": "#/$defs/familyMember"
+      },
+      "description": "Omit the key if there are no useful common family members."
+    },
+    "collocations": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 18,
+      "items": {
+        "$ref": "#/$defs/collocation"
+      },
+      "description": "Include only established, useful collocations; omit the key if none are confidently supported."
+    },
+    "synonyms": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 12,
+      "items": {
+        "$ref": "#/$defs/synonym"
+      },
+      "description": "Omit if no close, pedagogically useful synonyms exist."
+    },
+    "antonyms": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 12,
+      "items": {
+        "$ref": "#/$defs/antonym"
+      },
+      "description": "Omit rather than forcing an opposite."
+    },
+    "confusables": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 10,
+      "items": {
+        "$ref": "#/$defs/confusable"
+      },
+      "description": "Omit unless learners genuinely confuse the words."
+    },
+    "etymology": {
+      "type": "object",
+      "additionalProperties": false,
+      "minProperties": 1,
+      "properties": {
+        "origin": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_form": {
+          "type": "string",
+          "minLength": 1
+        },
+        "early_meaning": {
+          "type": "string",
+          "minLength": 1
+        },
+        "development": {
+          "type": "string",
+          "minLength": 1
+        },
+        "memory_link": {
+          "type": "string",
+          "minLength": 1
+        },
+        "accuracy_note": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "description": "Entirely optional. Include only documented, confidently known details; individual subfields may be omitted."
+    },
+    "exercises": {
+      "type": "object",
+      "additionalProperties": false,
+      "minProperties": 1,
+      "properties": {
+        "word_family_choice": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 5,
+          "items": {
+            "$ref": "#/$defs/familyExercise"
+          }
+        },
+        "correct_or_incorrect": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 5,
+          "items": {
+            "$ref": "#/$defs/correctionExercise"
+          }
+        },
+        "collocation_practice": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 5,
+          "items": {
+            "$ref": "#/$defs/collocationExercise"
+          }
+        }
+      },
+      "description": "Optional practice. Include only exercise types supported by the supplied lexical content."
+    }
+  },
+  "$defs": {
+    "pattern": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "pattern",
+        "example"
+      ],
+      "properties": {
+        "pattern": {
+          "type": "string",
+          "minLength": 1,
+          "description": "A clear surface pattern such as prone to + noun or prone to + -ing form; do not use unexplained grammar terminology."
+        },
+        "use": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Optional plain-language explanation of when the pattern is used."
+        },
+        "example": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "error": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "wrong",
+        "correct"
+      ],
+      "properties": {
+        "wrong": {
+          "type": "string",
+          "minLength": 1
+        },
+        "correct": {
+          "type": "string",
+          "minLength": 1
+        },
+        "explanation": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "meaning": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sense_title",
+        "part_of_speech",
+        "ipa",
+        "definition",
+        "examples"
+      ],
+      "properties": {
+        "sense_title": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Short semantic label, not a full definition."
+        },
+        "part_of_speech": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Use a precise label such as transitive verb or countable noun where relevant."
+        },
+        "ipa": {
+          "type": "string",
+          "minLength": 3
+        },
+        "definition": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Clear B1 to mid-B2 definition."
+        },
+        "examples": {
+          "type": "array",
+          "minItems": 5,
+          "maxItems": 10,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "description": "Five accurate, varied, well-contexted examples are core content."
+        },
+        "plain_english_equivalent": {
+          "type": "string",
+          "minLength": 1
+        },
+        "typical_pattern": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Optional learner-friendly pattern such as prone to + noun or -ing form. Avoid unexplained grammar jargon."
+        },
+        "register": {
+          "type": "string",
+          "minLength": 1
+        },
+        "nuance": {
+          "type": "object",
+          "additionalProperties": false,
+          "minProperties": 1,
+          "properties": {
+            "central_nuance": {
+              "type": "string",
+              "minLength": 1
+            },
+            "usual_implication": {
+              "type": "string",
+              "minLength": 1
+            },
+            "contrast_term": {
+              "type": "string",
+              "minLength": 1
+            },
+            "contrast_explanation": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "dependentRequired": {
+            "contrast_term": [
+              "contrast_explanation"
+            ],
+            "contrast_explanation": [
+              "contrast_term"
+            ]
+          }
+        },
+        "grammar": {
+          "type": "object",
+          "additionalProperties": false,
+          "minProperties": 1,
+          "description": "Optional learner-friendly usage notes. Use ordinary language and concrete examples; avoid unexplained technical labels.",
+          "properties": {
+            "how_to_use": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Explain simply how the word fits into a sentence."
+            },
+            "what_can_follow": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Explain in plain language what kinds of words or structures commonly come after it."
+            },
+            "preposition_note": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Explain a required or common preposition in simple language, with an example when useful."
+            },
+            "noun_use": {
+              "type": "string",
+              "minLength": 1,
+              "description": "For noun senses only, explain simply whether learners normally say a/an, use a plural, or use the noun without a number."
+            },
+            "position_note": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Explain simply where the word usually appears in a sentence when this is useful."
+            }
+          }
+        },
+        "patterns": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 7,
+          "items": {
+            "$ref": "#/$defs/pattern"
+          }
+        },
+        "errors": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 6,
+          "items": {
+            "$ref": "#/$defs/error"
+          }
+        },
+        "audio_phrase": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80,
+          "description": "A short natural phrase containing the headword that makes this pronunciation clear, such as a record or to record. Required by semantic validation only when the word has multiple IPA pronunciations."
+        }
+      }
+    },
+    "familyMember": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "word",
+        "part_of_speech",
+        "definition",
+        "examples"
+      ],
+      "properties": {
+        "word": {
+          "type": "string",
+          "minLength": 1
+        },
+        "part_of_speech": {
+          "type": "string",
+          "minLength": 1
+        },
+        "definition": {
+          "type": "string",
+          "minLength": 1
+        },
+        "examples": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 4,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "ipa": {
+          "type": "string",
+          "minLength": 3
+        },
+        "relationship_to_headword": {
+          "type": "string",
+          "minLength": 1
+        },
+        "grammar_pattern": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Optional simple pattern written for learners, not a technical grammar analysis."
+        },
+        "usage_note": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "collocation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "collocation",
+        "example"
+      ],
+      "properties": {
+        "collocation": {
+          "type": "string",
+          "minLength": 1
+        },
+        "example": {
+          "type": "string",
+          "minLength": 1
+        },
+        "applies_to_sense": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Exact sense title or all senses."
+        },
+        "meaning": {
+          "type": "string",
+          "minLength": 1
+        },
+        "grammar_pattern": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Optional simple surface pattern, not a technical grammar analysis."
+        },
+        "usage_note": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "synonym": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "word",
+        "part_of_speech",
+        "applies_to_sense",
+        "difference",
+        "example"
+      ],
+      "properties": {
+        "word": {
+          "type": "string",
+          "minLength": 1
+        },
+        "part_of_speech": {
+          "type": "string",
+          "minLength": 1
+        },
+        "applies_to_sense": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Exact sense title or all senses."
+        },
+        "shared_meaning": {
+          "type": "string",
+          "minLength": 1
+        },
+        "difference": {
+          "type": "string",
+          "minLength": 1
+        },
+        "example": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "antonym": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "word",
+        "part_of_speech",
+        "applies_to_sense",
+        "opposition",
+        "example"
+      ],
+      "properties": {
+        "word": {
+          "type": "string",
+          "minLength": 1
+        },
+        "part_of_speech": {
+          "type": "string",
+          "minLength": 1
+        },
+        "applies_to_sense": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Exact sense title or all senses."
+        },
+        "opposition": {
+          "type": "string",
+          "minLength": 1
+        },
+        "usage_note": {
+          "type": "string",
+          "minLength": 1
+        },
+        "example": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "confusable": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "word",
+        "key_difference",
+        "headword_example",
+        "confusable_example"
+      ],
+      "properties": {
+        "word": {
+          "type": "string",
+          "minLength": 1
+        },
+        "key_difference": {
+          "type": "string",
+          "minLength": 1
+        },
+        "headword_example": {
+          "type": "string",
+          "minLength": 1
+        },
+        "confusable_example": {
+          "type": "string",
+          "minLength": 1
+        },
+        "part_of_speech": {
+          "type": "string",
+          "minLength": 1
+        },
+        "why_confused": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "familyExercise": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "prompt_sentence",
+        "answer",
+        "completed_sentence"
+      ],
+      "properties": {
+        "prompt_sentence": {
+          "type": "string",
+          "minLength": 1
+        },
+        "answer": {
+          "type": "string",
+          "minLength": 1
+        },
+        "completed_sentence": {
+          "type": "string",
+          "minLength": 1
+        },
+        "explanation": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "correctionExercise": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sentence",
+        "verdict"
+      ],
+      "properties": {
+        "sentence": {
+          "type": "string",
+          "minLength": 1
+        },
+        "verdict": {
+          "type": "string",
+          "enum": [
+            "Correct",
+            "Incorrect"
+          ]
+        },
+        "corrected_sentence": {
+          "type": "string",
+          "minLength": 1
+        },
+        "explanation": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "collocationExercise": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "prompt_sentence",
+        "answer",
+        "completed_sentence"
+      ],
+      "properties": {
+        "prompt_sentence": {
+          "type": "string",
+          "minLength": 1
+        },
+        "answer": {
+          "type": "string",
+          "minLength": 1
+        },
+        "completed_sentence": {
+          "type": "string",
+          "minLength": 1
+        },
+        "explanation": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}

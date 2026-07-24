@@ -1,0 +1,137 @@
+{
+  "pronunciation": {
+    "audio_phrase": "OPTIONAL SHORT TTS PHRASE CONTAINING THE HEADWORD; USUALLY OMIT FOR ORDINARY WORDS"
+  },
+  "hero": {
+    "part_of_speech_summary": "[compact summary]",
+    "short_meanings": [
+      "[short meaning label]"
+    ],
+    "one_line_summary": "[optional sentence connecting major uses]",
+    "memorable_example": "[optional opening example]"
+  },
+  "meanings": [
+    {
+      "plain_english_equivalent": "[short everyday paraphrase]",
+      "typical_pattern": "[plain pattern such as prone to + noun or prone to + -ing form]",
+      "register": "[register for this sense]",
+      "nuance": {
+        "central_nuance": "[what the sense adds beyond the definition]",
+        "usual_implication": "[what it often suggests]",
+        "contrast_term": "[useful comparison word]",
+        "contrast_explanation": "[precise difference]"
+      },
+      "grammar": {
+        "how_to_use": "[simple explanation of how the word fits into a sentence]",
+        "what_can_follow": "[plain explanation of what can come after the word]",
+        "preposition_note": "[simple preposition guidance with an example if useful]",
+        "noun_use": "[for nouns, explain simply whether a/an, a plural, or no number is usual]",
+        "position_note": "[simple note about where the word usually appears]"
+      },
+      "patterns": [
+        {
+          "pattern": "[clear surface pattern, not a technical label]",
+          "use": "[optional plain-language explanation]",
+          "example": "[complete example]"
+        }
+      ],
+      "errors": [
+        {
+          "wrong": "[incorrect sentence]",
+          "correct": "[corrected sentence]",
+          "explanation": "[optional clear explanation]"
+        }
+      ],
+      "audio_phrase": "REQUIRED ONLY WHEN DIFFERENT SENSES HAVE DIFFERENT IPA; USE A SHORT CONTEXT SUCH AS a record OR to record"
+    }
+  ],
+  "word_family": [
+    {
+      "word": "[family member]",
+      "part_of_speech": "[part of speech]",
+      "definition": "[definition]",
+      "examples": [
+        "[example 1]",
+        "[example 2]"
+      ],
+      "ipa": "/[IPA]/",
+      "relationship_to_headword": "[relationship]",
+      "grammar_pattern": "[simple learner-friendly pattern]",
+      "usage_note": "[restriction or register note]"
+    }
+  ],
+  "collocations": [
+    {
+      "collocation": "[established collocation]",
+      "example": "[natural example]",
+      "applies_to_sense": "[exact sense_title or all senses]",
+      "meaning": "[plain meaning]",
+      "grammar_pattern": "[simple learner-friendly pattern]",
+      "usage_note": "[restriction or register note]"
+    }
+  ],
+  "synonyms": [
+    {
+      "word": "[close synonym]",
+      "part_of_speech": "[part of speech]",
+      "applies_to_sense": "[exact sense_title or all senses]",
+      "difference": "[limit on interchangeability]",
+      "example": "[natural example with the synonym]",
+      "shared_meaning": "[optional overlap explanation]"
+    }
+  ],
+  "antonyms": [
+    {
+      "word": "[genuine antonym]",
+      "part_of_speech": "[part of speech]",
+      "applies_to_sense": "[exact sense_title or all senses]",
+      "opposition": "[how it opposes the headword]",
+      "example": "[natural example]",
+      "usage_note": "[optional limit or context]"
+    }
+  ],
+  "confusables": [
+    {
+      "word": "[commonly confused word]",
+      "key_difference": "[clear distinction]",
+      "headword_example": "[example with the headword]",
+      "confusable_example": "[example with the confusable]",
+      "part_of_speech": "[optional part of speech]",
+      "why_confused": "[optional reason for confusion]"
+    }
+  ],
+  "etymology": {
+    "origin": "[documented origin]",
+    "source_form": "[documented historical form]",
+    "early_meaning": "[documented early meaning]",
+    "development": "[documented development toward modern use]",
+    "memory_link": "[accurate memory connection]",
+    "accuracy_note": "[useful caution about uncertainty or simplification]"
+  },
+  "exercises": {
+    "word_family_choice": [
+      {
+        "prompt_sentence": "[sentence containing _____]",
+        "answer": "[answer]",
+        "completed_sentence": "[complete correct sentence]",
+        "explanation": "[optional explanation]"
+      }
+    ],
+    "correct_or_incorrect": [
+      {
+        "sentence": "[test sentence]",
+        "verdict": "Correct",
+        "corrected_sentence": "[required only when verdict is Incorrect]",
+        "explanation": "[optional explanation]"
+      }
+    ],
+    "collocation_practice": [
+      {
+        "prompt_sentence": "[sentence containing _____]",
+        "answer": "[answer]",
+        "completed_sentence": "[complete correct sentence]",
+        "explanation": "[optional explanation]"
+      }
+    ]
+  }
+}

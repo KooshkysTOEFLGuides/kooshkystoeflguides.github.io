@@ -1,0 +1,21 @@
+📚✨ TOEFL Word of the Day ✨📚
+📆 {{ date }}
+#wordoftheday
+
+🔹 Word: {{ word }}
+🔊 Primary pronunciation: {{ pronunciation.primary_ipa }}
+{% for item in meanings %}
+
+🧠 Meaning {{ loop.index }}
+Part of speech: {{ item.part_of_speech }}
+Pronunciation: {{ item.ipa }}
+Definition: {{ item.definition }}
+
+Examples:
+
+1. {{ item.examples[0] }}
+2. {{ item.examples[1] }}
+3. {{ item.examples[2] }}
+{% endfor %}
+
+📚 @KooshkyTOEFL

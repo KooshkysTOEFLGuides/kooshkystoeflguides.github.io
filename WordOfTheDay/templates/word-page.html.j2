@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="A complete TOEFL learner guide to {{ word }}, created by Amir Kooshky.">
+  <title>{{ word }} | Kooshky TOEFL Word of the Day</title>
+  <style>
+{{ inline_css | safe }}
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to the guide</a>
+
+  <header class="masthead">
+    <div class="masthead-inner">
+      <a class="brand" href="/">
+        <strong>Kooshky TOEFL</strong>
+        <span>Word of the Day</span>
+      </a>
+      <div class="utility-actions" aria-label="Page tools">
+        <button class="utility-button" type="button" data-theme-toggle>Dark mode</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="page" id="main-content">
+    <section class="hero" aria-labelledby="headword">
+      <p class="kicker">TOEFL Word of the Day</p>
+      <h1 id="headword">{{ word }}</h1>
+      <p class="hero-pronunciation">{{ pronunciation.primary_ipa }}</p>
+      <div class="pronunciation-tools" aria-label="Pronunciation audio">
+        <a class="pronunciation-button primary"
+           href="{{ pronunciation.primary_audio_file }}"
+           data-pronunciation-button
+           data-pronunciation-phrase="{{ pronunciation.primary_audio_phrase }}"
+           data-audio-src="{{ pronunciation.primary_audio_file }}"
+           aria-label="Hear the pronunciation of {{ word }}">
+          <span aria-hidden="true">🔊</span>
+          <span>Hear pronunciation</span>
+        </a>
+        <span class="audio-status" data-audio-status aria-live="polite"></span>
+      </div>
+      <p class="audio-note">Uses the local audio file <code>{{ pronunciation.primary_audio_file }}</code>. If it is unavailable, the browser voice is used automatically.</p>
+
+      {% if pronunciation_changes %}
+      <aside class="pronunciation-change-panel" aria-labelledby="pronunciation-change-title">
+        <p class="pronunciation-change-kicker">Important pronunciation change</p>
+        <h2 id="pronunciation-change-title">The pronunciation changes across meanings.</h2>
+        <p>Use the labeled buttons below. Each recording contains a short contextual phrase so the intended pronunciation is clear.</p>
+        <div class="pronunciation-variant-grid">
+          {% for variant in pronunciation_variants %}
+          <article class="pronunciation-variant">
+            <p class="variant-label">{{ variant.part_of_speech_summary }}</p>
+            <p class="variant-ipa">{{ variant.ipa }}</p>
+            <p class="variant-senses">{{ variant.sense_summary }}</p>
+            <a class="pronunciation-button compact"
+               href="{{ variant.audio_file }}"
+               data-pronunciation-button
+               data-pronunciation-phrase="{{ variant.audio_phrase }}"
+               data-audio-src="{{ variant.audio_file }}"
+               aria-label="Hear {{ variant.audio_phrase }}">
+              <span aria-hidden="true">🔊</span>
+              <span>Hear “{{ variant.audio_phrase }}”</span>
+            </a>
+          </article>
+          {% endfor %}
+        </div>
+      </aside>
+      {% endif %}
+      <p class="hero-pos">{{ hero.part_of_speech_summary }}</p>
+      <div class="short-meaning-row" aria-label="Meanings at a glance">
+        {% for item in hero.short_meanings %}<span class="short-meaning">{{ item }}</span>{% endfor %}
+      </div>
+      {% if hero.one_line_summary %}<p class="hero-summary">{{ hero.one_line_summary }}</p>{% endif %}
+      {% if hero.memorable_example %}<blockquote class="hero-example">“{{ hero.memorable_example }}”</blockquote>{% endif %}
+      <div class="meta-strip">
+        <div class="meta-item"><span class="meta-label">Date</span><span class="meta-value">{{ date }}</span></div>
+        <div class="meta-item"><span class="meta-label">Level</span><span class="meta-value">B1–mid-B2 TOEFL</span></div>
+        <div class="meta-item"><span class="meta-label">Created by</span><span class="meta-value">Amir Kooshky</span></div>
+      </div>
+    </section>
+
+    <nav class="toc" aria-label="Study sections">
+      <p class="toc-title">In this guide</p>
+      <div class="toc-links">
+        <a href="#meanings">Meanings</a>
+        {% if word_family %}<a href="#family">Word family</a>{% endif %}
+        {% if collocations %}<a href="#collocations">Collocations</a>{% endif %}
+        {% if has_relations %}<a href="#relations">Synonyms & antonyms</a>{% endif %}
+        {% if confusables %}<a href="#confusables">Often confused</a>{% endif %}
+        {% if has_etymology %}<a href="#etymology">Etymology</a>{% endif %}
+        {% if has_exercises %}<a href="#exercises">Exercises</a>{% endif %}
+      </div>
+    </nav>
+
+
+    <section class="section" id="meanings">
+      <div class="section-head">
+        <p class="section-kicker">Dictionary guide</p>
+        <h2>Meanings and usage</h2>
+        <p class="section-intro">The core definition and examples are always included. Additional notes appear only when they are accurate and useful.</p>
+      </div>
+
+      {% for sense in meanings %}
+      <article class="sense-card" id="meaning-{{ loop.index }}">
+        <header class="sense-head">
+          <span class="sense-number">Meaning {{ loop.index }}</span>
+          <h3>{{ sense.sense_title }}</h3>
+          <div class="badge-row">
+            <span class="badge">{{ sense.part_of_speech }}</span>
+            <span class="badge">{{ sense.ipa }}</span>
+            {% if sense.register %}<span class="badge">{{ sense.register }}</span>{% endif %}
+          </div>
+          <div class="sense-pronunciation-row">
+            <a class="pronunciation-button sense"
+               href="{{ sense.audio_file }}"
+               data-pronunciation-button
+               data-pronunciation-phrase="{{ sense.audio_phrase }}"
+               data-audio-src="{{ sense.audio_file }}"
+               aria-label="Hear the {{ sense.part_of_speech }} pronunciation">
+              <span aria-hidden="true">🔊</span>
+              <span>Hear {{ sense.part_of_speech }} pronunciation</span>
+            </a>
+            {% if pronunciation_changes %}
+            <p class="sense-pronunciation-change"><strong>Pronunciation:</strong> {{ sense.ipa }} in the phrase “{{ sense.audio_phrase }}.” This word has another pronunciation in at least one other meaning.</p>
+            {% endif %}
+          </div>
+        </header>
+        <div class="sense-body">
+          <p class="definition">{{ sense.definition }}</p>
+          {% if sense.plain_english_equivalent %}<p class="plain-equivalent"><strong>In simpler words:</strong> {{ sense.plain_english_equivalent }}</p>{% endif %}
+          {% if sense.typical_pattern %}<div class="pattern-banner"><strong>Typical pattern:</strong> {{ sense.typical_pattern }}</div>{% endif %}
+
+
+          <p class="subsection-title">Natural examples</p>
+          <ol class="example-list">
+            {% for example in sense.examples %}<li>{{ example }}</li>{% endfor %}
+          </ol>
+
+          {% if sense.has_nuance or sense.has_grammar %}
+          <div class="info-grid">
+            {% if sense.has_nuance %}
+            <section class="info-card good">
+              <h4>Nuance and implication</h4>
+              {% if sense.nuance.central_nuance is defined %}<p><strong>Central nuance:</strong> {{ sense.nuance.central_nuance }}</p>{% endif %}
+              {% if sense.nuance.usual_implication is defined %}<p><strong>Usual implication:</strong> {{ sense.nuance.usual_implication }}</p>{% endif %}
+              {% if sense.nuance.contrast_term is defined %}<p><strong>Compared with “{{ sense.nuance.contrast_term }}”:</strong> {{ sense.nuance.contrast_explanation }}</p>{% endif %}
+            </section>
+            {% endif %}
+
+            {% if sense.has_grammar %}
+            <section class="info-card">
+              <h4>Grammar notes</h4>
+              <dl class="grammar-list">
+                {% if sense.grammar.how_to_use is defined %}<div class="grammar-item"><dt>How to use it</dt><dd>{{ sense.grammar.how_to_use }}</dd></div>{% endif %}
+                {% if sense.grammar.what_can_follow is defined %}<div class="grammar-item"><dt>What can follow it</dt><dd>{{ sense.grammar.what_can_follow }}</dd></div>{% endif %}
+                {% if sense.grammar.preposition_note is defined %}<div class="grammar-item"><dt>Common preposition</dt><dd>{{ sense.grammar.preposition_note }}</dd></div>{% endif %}
+                {% if sense.grammar.noun_use is defined %}<div class="grammar-item"><dt>Noun use</dt><dd>{{ sense.grammar.noun_use }}</dd></div>{% endif %}
+                {% if sense.grammar.position_note is defined %}<div class="grammar-item"><dt>Position in a sentence</dt><dd>{{ sense.grammar.position_note }}</dd></div>{% endif %}
+              </dl>
+            </section>
+            {% endif %}
+          </div>
+          {% endif %}
+
+          {% if sense.patterns %}
+          <p class="subsection-title">Useful patterns</p>
+          <div class="pattern-list">
+            {% for item in sense.patterns %}
+            <article class="pattern-card">
+              <code class="pattern-code">{{ item.pattern }}</code>
+              {% if item.use is defined %}<p class="pattern-use">{{ item.use }}</p>{% endif %}
+              <p><strong>Example:</strong> {{ item.example }}</p>
+            </article>
+            {% endfor %}
+          </div>
+          {% endif %}
+
+          {% if sense.errors %}
+          <p class="subsection-title">Common wrong usage</p>
+          <div class="error-list">
+            {% for item in sense.errors %}
+            <article class="error-card">
+              <p class="error-wrong"><strong>Wrong:</strong> {{ item.wrong }}</p>
+              <p class="error-correct"><strong>Correct:</strong> {{ item.correct }}</p>
+              {% if item.explanation is defined %}<p class="error-explanation">{{ item.explanation }}</p>{% endif %}
+            </article>
+            {% endfor %}
+          </div>
+          {% endif %}
+
+        </div>
+      </article>
+      {% endfor %}
+    </section>
+
+    {% if word_family %}
+    <section class="section" id="family">
+      <div class="section-head">
+        <p class="section-kicker">Morphology</p>
+        <h2>Word family</h2>
+        <p class="section-intro">Only common and educationally useful family members are included.</p>
+      </div>
+      <div class="card-grid three">
+        {% for item in word_family %}
+        <article class="family-card">
+          <p class="eyebrow">{{ item.part_of_speech }}</p>
+          <h3>{{ item.word }}</h3>
+          {% if item.ipa %}<p class="ipa">{{ item.ipa }}</p>{% endif %}
+          <p>{{ item.definition }}</p>
+          {% if item.relationship_to_headword or item.grammar_pattern or item.usage_note %}
+          <div class="mini-facts">
+            {% if item.relationship_to_headword %}<p class="mini-fact"><strong>Relationship:</strong> {{ item.relationship_to_headword }}</p>{% endif %}
+            {% if item.grammar_pattern %}<p class="mini-fact"><strong>Pattern:</strong> {{ item.grammar_pattern }}</p>{% endif %}
+            {% if item.usage_note %}<p class="mini-fact"><strong>Usage note:</strong> {{ item.usage_note }}</p>{% endif %}
+          </div>
+          {% endif %}
+          <ol class="example-list">{% for example in item.examples %}<li>{{ example }}</li>{% endfor %}</ol>
+        </article>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+
+    {% if collocations %}
+    <section class="section" id="collocations">
+      <div class="section-head">
+        <p class="section-kicker">Natural combinations</p>
+        <h2>Common collocations</h2>
+        <p class="section-intro">These are established combinations, not merely grammatically possible phrases.</p>
+      </div>
+      <div class="card-grid three">
+        {% for item in collocations %}
+        <article class="collocation-card">
+          {% if item.applies_to_sense %}<p class="eyebrow">{{ item.applies_to_sense }}</p>{% endif %}
+          <h3>{{ item.collocation }}</h3>
+          {% if item.meaning %}<p>{{ item.meaning }}</p>{% endif %}
+          <div class="mini-facts">
+            {% if item.grammar_pattern %}<p class="mini-fact"><strong>Pattern:</strong> {{ item.grammar_pattern }}</p>{% endif %}
+            <p class="mini-fact"><strong>Example:</strong> {{ item.example }}</p>
+            {% if item.usage_note %}<p class="mini-fact"><strong>Usage note:</strong> {{ item.usage_note }}</p>{% endif %}
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+
+    {% if has_relations %}
+    <section class="section" id="relations">
+      <div class="section-head">
+        <p class="section-kicker">Meaning relations</p>
+        <h2>Synonyms and antonyms</h2>
+        <p class="section-intro">Only clear and useful relationships are included.</p>
+      </div>
+      {% if synonyms %}
+      <h3>Close synonyms</h3>
+      <div class="compare-grid">
+        {% for item in synonyms %}
+        <article class="compare-card">
+          <span class="word-pill">{{ item.word }}</span>
+          <p class="meta">{{ item.part_of_speech }} · {{ item.applies_to_sense }}</p>
+          {% if item.shared_meaning %}<p><strong>Shared meaning:</strong> {{ item.shared_meaning }}</p>{% endif %}
+          <p><strong>Difference:</strong> {{ item.difference }}</p>
+          <p><strong>Example:</strong> {{ item.example }}</p>
+        </article>
+        {% endfor %}
+      </div>
+      {% endif %}
+
+      {% if antonyms %}
+      <h3 style="margin-top: 2rem;">Direct or useful antonyms</h3>
+      <div class="compare-grid">
+        {% for item in antonyms %}
+        <article class="compare-card">
+          <span class="word-pill">{{ item.word }}</span>
+          <p class="meta">{{ item.part_of_speech }} · {{ item.applies_to_sense }}</p>
+          <p><strong>Opposition:</strong> {{ item.opposition }}</p>
+          {% if item.usage_note %}<p><strong>Usage note:</strong> {{ item.usage_note }}</p>{% endif %}
+          <p><strong>Example:</strong> {{ item.example }}</p>
+        </article>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </section>
+    {% endif %}
+
+    {% if confusables %}
+    <section class="section" id="confusables">
+      <div class="section-head">
+        <p class="section-kicker">Precision</p>
+        <h2>Words learners may confuse</h2>
+      </div>
+      <div class="compare-grid">
+        {% for item in confusables %}
+        <article class="compare-card">
+          <span class="word-pill">{{ item.word }}</span>
+          {% if item.part_of_speech %}<p class="meta">{{ item.part_of_speech }}</p>{% endif %}
+          {% if item.why_confused %}<p><strong>Why it is confusing:</strong> {{ item.why_confused }}</p>{% endif %}
+          <p><strong>Key difference:</strong> {{ item.key_difference }}</p>
+          <p><strong>{{ word }}:</strong> {{ item.headword_example }}</p>
+          <p><strong>{{ item.word }}:</strong> {{ item.confusable_example }}</p>
+        </article>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+
+    {% if has_etymology %}
+    <section class="section" id="etymology">
+      <div class="section-head">
+        <p class="section-kicker">Word history</p>
+        <h2>Etymology</h2>
+        <p class="section-intro">Only confidently documented details are shown.</p>
+      </div>
+      <div class="etymology-flow">
+        {% if etymology.origin is defined %}<article class="etymology-step"><h3>Origin</h3><p>{{ etymology.origin }}</p></article>{% endif %}
+        {% if etymology.source_form is defined %}<article class="etymology-step"><h3>Historical form</h3><p>{{ etymology.source_form }}</p></article>{% endif %}
+        {% if etymology.early_meaning is defined %}<article class="etymology-step"><h3>Early meaning</h3><p>{{ etymology.early_meaning }}</p></article>{% endif %}
+        {% if etymology.development is defined %}<article class="etymology-step"><h3>Development</h3><p>{{ etymology.development }}</p></article>{% endif %}
+        {% if etymology.memory_link is defined %}<article class="etymology-step"><h3>Memory link</h3><p>{{ etymology.memory_link }}</p></article>{% endif %}
+        {% if etymology.accuracy_note is defined %}<article class="etymology-step"><h3>Accuracy note</h3><p>{{ etymology.accuracy_note }}</p></article>{% endif %}
+      </div>
+    </section>
+    {% endif %}
+
+    {% if has_exercises %}
+    <section class="section" id="exercises">
+      <div class="section-head">
+        <p class="section-kicker">Active practice</p>
+        <h2>Practice exercises</h2>
+      </div>
+      <div class="exercise-grid">
+        {% if exercises.word_family_choice %}
+        <article class="exercise-card">
+          <h3>Word family choice</h3>
+          <p class="exercise-instruction">Choose the best member of the word family for each blank.</p>
+          <ol class="clean-list">{% for item in exercises.word_family_choice %}<li>{{ item.prompt_sentence }}</li>{% endfor %}</ol>
+        </article>
+        {% endif %}
+        {% if exercises.correct_or_incorrect %}
+        <article class="exercise-card">
+          <h3>Correct or incorrect?</h3>
+          <p class="exercise-instruction">Decide whether each sentence is correct. Correct the inaccurate ones.</p>
+          <ol class="clean-list">{% for item in exercises.correct_or_incorrect %}<li>{{ item.sentence }}</li>{% endfor %}</ol>
+        </article>
+        {% endif %}
+        {% if exercises.collocation_practice %}
+        <article class="exercise-card">
+          <h3>Collocation practice</h3>
+          <p class="exercise-instruction">Complete each sentence with a natural collocation.</p>
+          <ol class="clean-list">{% for item in exercises.collocation_practice %}<li>{{ item.prompt_sentence }}</li>{% endfor %}</ol>
+        </article>
+        {% endif %}
+      </div>
+
+      <details class="answer-key">
+        <summary>Open the complete answer key</summary>
+        <div class="answer-content">
+          {% if exercises.word_family_choice %}
+          <section class="answer-group">
+            <h3>Word family choice</h3>
+            {% for item in exercises.word_family_choice %}
+            <p class="answer-item"><strong>{{ loop.index }}. {{ item.answer }}</strong><br>{{ item.completed_sentence }}{% if item.explanation %}<br><em>{{ item.explanation }}</em>{% endif %}</p>
+            {% endfor %}
+          </section>
+          {% endif %}
+          {% if exercises.correct_or_incorrect %}
+          <section class="answer-group">
+            <h3>Correct or incorrect?</h3>
+            {% for item in exercises.correct_or_incorrect %}
+            <p class="answer-item"><strong>{{ loop.index }}. {{ item.verdict }}</strong>{% if item.corrected_sentence %}<br>{{ item.corrected_sentence }}{% endif %}{% if item.explanation %}<br><em>{{ item.explanation }}</em>{% endif %}</p>
+            {% endfor %}
+          </section>
+          {% endif %}
+          {% if exercises.collocation_practice %}
+          <section class="answer-group">
+            <h3>Collocation practice</h3>
+            {% for item in exercises.collocation_practice %}
+            <p class="answer-item"><strong>{{ loop.index }}. {{ item.answer }}</strong><br>{{ item.completed_sentence }}{% if item.explanation %}<br><em>{{ item.explanation }}</em>{% endif %}</p>
+            {% endfor %}
+          </section>
+          {% endif %}
+        </div>
+      </details>
+    </section>
+    {% endif %}
+
+    <footer class="footer">
+      <div class="footer-row">
+        <span>Created and compiled by <strong>Amir Kooshky</strong></span>
+        <nav class="footer-links" aria-label="Creator links">
+          <a href="https://t.me/KooshkyTOEFL" target="_blank" rel="noopener">Telegram channel</a>
+          <a href="https://www.instagram.com/kooshkytoefl" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://t.me/KooshkyTOEFL_pv" target="_blank" rel="noopener">Personal Telegram</a>
+        </nav>
+      </div>
+    </footer>
+  </main>
+
+  <button class="back-to-top no-js-hidden" type="button" data-back-to-top aria-label="Go to the top">↑</button>
+  <script>
+{{ inline_js | safe }}
+  </script>
+</body>
+</html>

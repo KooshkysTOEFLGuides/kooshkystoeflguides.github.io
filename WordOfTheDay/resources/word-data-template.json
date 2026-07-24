@@ -1,0 +1,25 @@
+{
+  "document_type": "kooshky_toefl_word_of_the_day",
+  "schema_version": "1.3",
+  "slug": "insert-word",
+  "word": "INSERT WORD",
+  "date": "INSERT DATE",
+  "pronunciation": {
+    "primary_ipa": "/INSERT PRIMARY AMERICAN IPA/"
+  },
+  "meanings": [
+    {
+      "sense_title": "INSERT SHORT MEANING LABEL",
+      "part_of_speech": "INSERT PRECISE PART OF SPEECH",
+      "ipa": "/INSERT IPA FOR THIS MEANING/",
+      "definition": "INSERT CLEAR B1 TO MID-B2 DEFINITION",
+      "examples": [
+        "INSERT NATURAL EXAMPLE 1",
+        "INSERT NATURAL EXAMPLE 2",
+        "INSERT NATURAL EXAMPLE 3",
+        "INSERT NATURAL EXAMPLE 4",
+        "INSERT NATURAL EXAMPLE 5"
+      ]
+    }
+  ]
+}

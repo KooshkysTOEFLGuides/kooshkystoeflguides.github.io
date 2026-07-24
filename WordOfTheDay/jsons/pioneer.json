@@ -1,0 +1,328 @@
+{
+    "document_type": "kooshky_toefl_word_of_the_day",
+    "schema_version": "1.3",
+    "slug": "pioneer",
+    "word": "pioneer",
+    "date": "July 26th 2026",
+    "pronunciation": {
+      "primary_ipa": "/ˌpaɪəˈnɪr/"
+    },
+    "hero": {
+      "part_of_speech_summary": "countable noun and transitive verb",
+      "short_meanings": [
+        "an early innovator",
+        "an early explorer or settler",
+        "to develop something first"
+      ],
+      "one_line_summary": "A pioneer is among the first to enter a place or develop an important idea, method, or field.",
+      "memorable_example": "The scientist was a pioneer in the study of human memory."
+    },
+    "meanings": [
+      {
+        "sense_title": "Early innovator",
+        "part_of_speech": "countable noun",
+        "ipa": "/ˌpaɪəˈnɪr/",
+        "definition": "a person who is among the first to develop a new idea, method, technology, or area of study",
+        "examples": [
+          "The scientist was a pioneer in the study of human memory.",
+          "She is widely regarded as a pioneer of modern environmental economics.",
+          "Early pioneers in computer science created many of the basic ideas used today.",
+          "The medical pioneer introduced a safer way to perform the operation.",
+          "As a pioneer in online education, the university began offering digital courses decades ago.",
+          "The exhibition honors pioneers whose inventions transformed communication."
+        ],
+        "plain_english_equivalent": "one of the first people to develop something important",
+        "typical_pattern": "a pioneer in + field or a pioneer of + development",
+        "register": "neutral to formal; common in academic, historical, and professional contexts",
+        "nuance": {
+          "central_nuance": "The word emphasizes being early and helping open a new path for later people.",
+          "usual_implication": "It often suggests originality, influence, courage, or major contribution.",
+          "contrast_term": "founder",
+          "contrast_explanation": "A founder creates an organization or institution, while a pioneer is among the first to develop or advance an idea, method, or field. One person can be both."
+        },
+        "grammar": {
+          "how_to_use": "Use a pioneer for one person and pioneers for more than one.",
+          "what_can_follow": "It is often followed by in and the name of a field, or by of and the development that the person helped begin.",
+          "preposition_note": "Use pioneer in for an area of activity, as in a pioneer in genetics. Use pioneer of for a movement, method, or development, as in a pioneer of modern surgery.",
+          "noun_use": "This is a countable noun, so use a, an, or the with the singular form."
+        },
+        "patterns": [
+          {
+            "pattern": "a pioneer in + field",
+            "use": "Use this to identify the area in which someone was among the first.",
+            "example": "She became a pioneer in renewable-energy research."
+          },
+          {
+            "pattern": "a pioneer of + method, movement, or development",
+            "use": "Use this to name the specific thing that someone helped introduce.",
+            "example": "He was a pioneer of evidence-based teaching."
+          },
+          {
+            "pattern": "one of the pioneers of + development",
+            "use": "Use this when several people helped begin or advance something.",
+            "example": "The engineer was one of the pioneers of satellite communication."
+          }
+        ],
+        "errors": [
+          {
+            "wrong": "She is pioneer in robotics.",
+            "correct": "She is a pioneer in robotics.",
+            "explanation": "The singular countable noun normally needs a, an, or the."
+          },
+          {
+            "wrong": "He was a pioneer on artificial intelligence.",
+            "correct": "He was a pioneer in artificial intelligence.",
+            "explanation": "Use in before a field or area of activity."
+          }
+        ]
+      },
+      {
+        "sense_title": "Early explorer or settler",
+        "part_of_speech": "countable noun",
+        "ipa": "/ˌpaɪəˈnɪr/",
+        "definition": "one of the first people to explore, travel to, or settle in a particular area",
+        "examples": [
+          "The pioneers crossed the mountains in search of new farmland.",
+          "Life was difficult for the early pioneers who settled the region.",
+          "The museum displays tools used by pioneers during the westward expansion.",
+          "Many pioneers traveled long distances without reliable maps.",
+          "The valley's first pioneers built homes near the river.",
+          "Historians study how pioneers interacted with the Indigenous communities already living there."
+        ],
+        "plain_english_equivalent": "an early explorer or settler",
+        "typical_pattern": "early pioneers or pioneers who settled + place",
+        "register": "neutral; especially common in historical writing",
+        "nuance": {
+          "central_nuance": "This sense refers to people who entered or settled an area early from the viewpoint of the group being discussed.",
+          "usual_implication": "Historical use may describe hardship and exploration, but it should not suggest that the land was empty or uninhabited."
+        },
+        "grammar": {
+          "how_to_use": "Use a pioneer for one person and pioneers for a group.",
+          "what_can_follow": "A place, route, or historical period is often added later in the sentence to show where or when the pioneers traveled or settled.",
+          "noun_use": "This is a countable noun. The plural pioneers is especially common when discussing a historical group."
+        },
+        "patterns": [
+          {
+            "pattern": "early pioneers",
+            "use": "Use this for people who were among the first members of a group to enter or settle an area.",
+            "example": "Early pioneers established farms along the coast."
+          },
+          {
+            "pattern": "pioneers who settled + place",
+            "use": "Use this to identify a group by the place where they settled.",
+            "example": "The book follows pioneers who settled the northern plains."
+          }
+        ],
+        "errors": [
+          {
+            "wrong": "The pioneer people crossed the desert.",
+            "correct": "The pioneers crossed the desert.",
+            "explanation": "Use pioneers as the noun. Pioneer people is not the usual expression."
+          }
+        ]
+      },
+      {
+        "sense_title": "Develop or introduce first",
+        "part_of_speech": "transitive verb",
+        "ipa": "/ˌpaɪəˈnɪr/",
+        "definition": "to be among the first to develop, introduce, or use a new idea, method, technology, or activity",
+        "examples": [
+          "The research team pioneered a new method for detecting the disease.",
+          "The company pioneered the use of recycled materials in its products.",
+          "These educators pioneered an approach that later spread worldwide.",
+          "The laboratory pioneered several techniques for studying ancient DNA.",
+          "Local farmers pioneered water-saving methods during a severe drought.",
+          "The organization helped pioneer community-based health care in rural areas."
+        ],
+        "plain_english_equivalent": "to develop or use something before most others",
+        "typical_pattern": "pioneer + method, technology, approach, or the use of something",
+        "register": "neutral to formal; frequent in academic, scientific, historical, and business writing",
+        "nuance": {
+          "central_nuance": "The verb stresses that a person or group opened a new path by creating or using something early.",
+          "usual_implication": "It usually suggests that the innovation influenced later work."
+        },
+        "grammar": {
+          "how_to_use": "This verb normally needs the new thing after it.",
+          "what_can_follow": "It is commonly followed by words such as method, technique, approach, technology, process, or the use of something.",
+          "position_note": "The person, team, or organization that did the early work normally comes before the verb."
+        },
+        "patterns": [
+          {
+            "pattern": "pioneer + a method, technique, or approach",
+            "use": "Use this when someone develops a new way of doing something.",
+            "example": "The clinic pioneered a technique for repairing damaged tissue."
+          },
+          {
+            "pattern": "pioneer the use of + noun",
+            "use": "Use this when someone is among the first to use a particular material, tool, or practice.",
+            "example": "The architects pioneered the use of natural ventilation in large buildings."
+          },
+          {
+            "pattern": "help pioneer + noun",
+            "use": "Use this when someone contributed to early development but did not work alone.",
+            "example": "The professor helped pioneer a new model of language instruction."
+          }
+        ],
+        "errors": [
+          {
+            "wrong": "The scientists pioneered in a new treatment.",
+            "correct": "The scientists pioneered a new treatment.",
+            "explanation": "In this meaning, pioneer normally takes the new idea, method, or technology directly after it."
+          },
+          {
+            "wrong": "The company pioneered to use electric vehicles.",
+            "correct": "The company pioneered the use of electric vehicles.",
+            "explanation": "Use pioneer the use of something, not pioneer to use something."
+          }
+        ]
+      }
+    ],
+    "word_family": [
+      {
+        "word": "pioneering",
+        "part_of_speech": "adjective",
+        "definition": "introducing new ideas, methods, or technologies before most others",
+        "examples": [
+          "Her pioneering research changed the treatment of infectious diseases.",
+          "The award recognized the team's pioneering work in solar engineering."
+        ],
+        "ipa": "/ˌpaɪəˈnɪrɪŋ/",
+        "relationship_to_headword": "This adjective describes work or people that pioneer something.",
+        "grammar_pattern": "pioneering + work, research, study, method, or technology",
+        "usage_note": "It is usually positive and emphasizes originality and early influence."
+      }
+    ],
+    "collocations": [
+      {
+        "collocation": "a pioneer in the field of",
+        "example": "She was a pioneer in the field of developmental psychology.",
+        "applies_to_sense": "Early innovator",
+        "meaning": "one of the first important people working in a particular field",
+        "grammar_pattern": "a pioneer in the field of + subject"
+      },
+      {
+        "collocation": "a pioneer of modern",
+        "example": "The architect is considered a pioneer of modern urban planning.",
+        "applies_to_sense": "Early innovator",
+        "meaning": "a person who helped begin or shape a modern development",
+        "grammar_pattern": "a pioneer of modern + field or practice"
+      },
+      {
+        "collocation": "early pioneer",
+        "example": "She was an early pioneer of educational television.",
+        "applies_to_sense": "Early innovator",
+        "meaning": "a person involved at a very early stage"
+      },
+      {
+        "collocation": "pioneer a new method",
+        "example": "The researchers pioneered a new method of analyzing climate data.",
+        "applies_to_sense": "Develop or introduce first",
+        "meaning": "develop a method before most others",
+        "grammar_pattern": "pioneer + a new method"
+      },
+      {
+        "collocation": "pioneer the use of",
+        "example": "The hospital pioneered the use of robots in delicate operations.",
+        "applies_to_sense": "Develop or introduce first",
+        "meaning": "be among the first to use something",
+        "grammar_pattern": "pioneer the use of + noun"
+      },
+      {
+        "collocation": "pioneering research",
+        "example": "Her pioneering research provided the foundation for later discoveries.",
+        "applies_to_sense": "Develop or introduce first",
+        "meaning": "highly original research that opens a new area",
+        "usage_note": "Pioneering is an adjective in this collocation."
+      },
+      {
+        "collocation": "pioneering work",
+        "example": "Their pioneering work made low-cost water purification possible.",
+        "applies_to_sense": "Develop or introduce first",
+        "meaning": "original early work that strongly influences later developments",
+        "usage_note": "Pioneering is an adjective in this collocation."
+      }
+    ],
+    "synonyms": [
+      {
+        "word": "innovator",
+        "part_of_speech": "countable noun",
+        "applies_to_sense": "Early innovator",
+        "difference": "An innovator introduces new ideas or methods. A pioneer also emphasizes being among the earliest people to open a new area or path.",
+        "example": "The award honors innovators who create practical solutions to environmental problems.",
+        "shared_meaning": "Both words can describe a person who develops something new."
+      },
+      {
+        "word": "trailblazer",
+        "part_of_speech": "countable noun",
+        "applies_to_sense": "Early innovator",
+        "difference": "Trailblazer is more vivid and often more informal. It strongly suggests creating a path that others later follow.",
+        "example": "She was a trailblazer for women in aerospace engineering.",
+        "shared_meaning": "Both words describe an influential person who enters or develops an area early."
+      },
+      {
+        "word": "settler",
+        "part_of_speech": "countable noun",
+        "applies_to_sense": "Early explorer or settler",
+        "difference": "A settler is anyone who moves to live permanently in a place. A pioneer is specifically among the earliest members of the group to do so.",
+        "example": "The settlers built permanent homes near the harbor.",
+        "shared_meaning": "Both can refer to people who establish homes in a new place."
+      },
+      {
+        "word": "develop",
+        "part_of_speech": "transitive verb",
+        "applies_to_sense": "Develop or introduce first",
+        "difference": "Develop means to create or improve something. Pioneer adds the idea of doing so before most other people.",
+        "example": "The team developed a more accurate forecasting model.",
+        "shared_meaning": "Both can describe creating a new method, technology, or approach."
+      }
+    ],
+    "exercises": {
+      "word_family_choice": [
+        {
+          "prompt_sentence": "The scientist received an international award for her _____ research on gene therapy.",
+          "answer": "pioneering",
+          "completed_sentence": "The scientist received an international award for her pioneering research on gene therapy.",
+          "explanation": "Use the adjective pioneering before the noun research."
+        },
+        {
+          "prompt_sentence": "The engineer was a _____ in the development of low-cost solar cells.",
+          "answer": "pioneer",
+          "completed_sentence": "The engineer was a pioneer in the development of low-cost solar cells.",
+          "explanation": "Use the countable noun pioneer after a."
+        }
+      ],
+      "correct_or_incorrect": [
+        {
+          "sentence": "The laboratory pioneered a rapid test for the infection.",
+          "verdict": "Correct",
+          "explanation": "The verb is correctly followed directly by the new thing that the laboratory developed."
+        },
+        {
+          "sentence": "She was pioneer of modern nursing.",
+          "verdict": "Incorrect",
+          "corrected_sentence": "She was a pioneer of modern nursing.",
+          "explanation": "The singular countable noun needs a."
+        },
+        {
+          "sentence": "The company pioneered to use biodegradable packaging.",
+          "verdict": "Incorrect",
+          "corrected_sentence": "The company pioneered the use of biodegradable packaging.",
+          "explanation": "Use pioneer the use of something."
+        }
+      ],
+      "collocation_practice": [
+        {
+          "prompt_sentence": "The institute helped _____ the use of satellite images in agricultural research.",
+          "answer": "pioneer",
+          "completed_sentence": "The institute helped pioneer the use of satellite images in agricultural research.",
+          "explanation": "Help pioneer the use of is a natural pattern for contributing to an early innovation."
+        },
+        {
+          "prompt_sentence": "Her _____ work in public health influenced policies around the world.",
+          "answer": "pioneering",
+          "completed_sentence": "Her pioneering work in public health influenced policies around the world.",
+          "explanation": "Pioneering work is a common collocation for original, influential early work."
+        }
+      ]
+    }
+  }

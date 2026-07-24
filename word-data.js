@@ -170,6 +170,11 @@ window.KOOSHKY_WORDS = [
     word: "Immerse",
     date: "2026-07-25",
     href: "WordOfTheDay/immerse-extended.html",
+  },
+  {
+    word: "Pioneer",
+    date: "2026-07-26",
+    href: "WordOfTheDay/generated/pioneer-extended.html",
   }
   /*
   {
