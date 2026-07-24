@@ -1,0 +1,444 @@
+{
+    "document_type": "kooshky_toefl_word_of_the_day",
+    "schema_version": "1.3",
+    "slug": "delegate",
+    "word": "delegate",
+    "date": "August 5th 2026",
+    "pronunciation": {
+      "primary_ipa": "/ˈdɛləɡət/",
+      "audio_phrase": "a delegate"
+    },
+    "hero": {
+      "part_of_speech_summary": "countable noun and transitive verb",
+      "short_meanings": [
+        "a chosen representative",
+        "give someone a task",
+        "transfer authority"
+      ],
+      "one_line_summary": "A delegate represents other people, while the verb delegate means giving another person a task or some authority.",
+      "memorable_example": "Effective managers know when to delegate routine tasks to other team members."
+    },
+    "meanings": [
+      {
+        "sense_title": "Chosen representative",
+        "part_of_speech": "countable noun",
+        "ipa": "/ˈdɛləɡət/",
+        "definition": "a person chosen or elected to represent a group at a meeting, conference, or organization",
+        "examples": [
+          "Each country sent several delegates to the international conference.",
+          "The union delegates voted in favor of the proposed agreement.",
+          "She attended the convention as a delegate from her university.",
+          "Delegates from more than fifty nations participated in the climate summit.",
+          "The committee elected two student delegates to present its concerns.",
+          "Conference delegates received copies of the final report.",
+          "The delegate spoke on behalf of workers in the manufacturing sector."
+        ],
+        "plain_english_equivalent": "a person who represents a group",
+        "typical_pattern": "a delegate to + event or a delegate from + group or place",
+        "register": "neutral to formal; common in politics, conferences, unions, institutions, and international organizations",
+        "nuance": {
+          "central_nuance": "A delegate does not attend only as a private individual; the person represents the interests or views of a larger group.",
+          "usual_implication": "The delegate may be expected to speak, negotiate, or vote on behalf of the group."
+        },
+        "grammar": {
+          "how_to_use": "Use a delegate for one representative and delegates for more than one.",
+          "what_can_follow": "Use to before the meeting or organization attended, and from before the place or group represented.",
+          "preposition_note": "Say a delegate to the conference but a delegate from the university.",
+          "noun_use": "This is a countable noun, so the singular normally needs a, an, or the."
+        },
+        "patterns": [
+          {
+            "pattern": "a delegate to + conference or meeting",
+            "use": "Use this to identify the event or organization that the person attends as a representative.",
+            "example": "He was selected as a delegate to the national convention."
+          },
+          {
+            "pattern": "a delegate from + country, institution, or group",
+            "use": "Use this to identify the people or place that the delegate represents.",
+            "example": "A delegate from the teachers' union addressed the committee."
+          },
+          {
+            "pattern": "send or elect a delegate",
+            "use": "Use this when a group chooses someone to represent it.",
+            "example": "Each department elected a delegate to the university council."
+          },
+          {
+            "pattern": "conference delegates",
+            "use": "Use this for the people officially attending a conference as representatives.",
+            "example": "Conference delegates discussed several proposals on the final day."
+          }
+        ],
+        "errors": [
+          {
+            "wrong": "She attended the meeting as delegate.",
+            "correct": "She attended the meeting as a delegate.",
+            "explanation": "The singular countable noun normally needs a."
+          },
+          {
+            "wrong": "He was a delegate of the international conference.",
+            "correct": "He was a delegate to the international conference.",
+            "explanation": "Use delegate to for the event attended."
+          },
+          {
+            "wrong": "She was a delegate to her university.",
+            "correct": "She was a delegate from her university.",
+            "explanation": "Use delegate from for the group or institution represented."
+          }
+        ],
+        "audio_phrase": "a delegate"
+      },
+      {
+        "sense_title": "Give someone a task",
+        "part_of_speech": "transitive verb",
+        "ipa": "/ˈdɛləˌɡeɪt/",
+        "definition": "to give a task or responsibility to another person so that they do it on your behalf",
+        "examples": [
+          "Effective managers know when to delegate routine tasks to other team members.",
+          "The professor delegated responsibility for collecting the data to two research assistants.",
+          "She delegated the preparation of the monthly report to her deputy.",
+          "The team leader delegated each stage of the project to a different specialist.",
+          "You should delegate some of your work instead of trying to do everything yourself.",
+          "The director was reluctant to delegate important responsibilities.",
+          "By delegating administrative tasks, doctors can spend more time with patients."
+        ],
+        "plain_english_equivalent": "give part of your work to someone else",
+        "typical_pattern": "delegate + task or responsibility + to + person",
+        "register": "neutral to formal; common in business, management, education, and professional contexts",
+        "nuance": {
+          "central_nuance": "Delegating means assigning work to another person while usually remaining responsible for the overall result.",
+          "usual_implication": "Good delegation involves choosing a suitable person and giving them enough information or authority to complete the task.",
+          "contrast_term": "assign",
+          "contrast_explanation": "Assign is a general word for giving someone a task. Delegate often suggests that the task originally belonged to a person with greater responsibility or authority."
+        },
+        "grammar": {
+          "how_to_use": "This verb normally needs the task or responsibility after it.",
+          "what_can_follow": "It is often followed by task, duty, responsibility, work, decision, or the name of an activity.",
+          "preposition_note": "Use to before the person receiving the task, as in delegate the work to an assistant.",
+          "position_note": "The task normally comes before to and the person: delegate a task to someone."
+        },
+        "patterns": [
+          {
+            "pattern": "delegate + task or duty + to + person",
+            "use": "Use this when giving a particular piece of work to someone else.",
+            "example": "The manager delegated the task to an experienced employee."
+          },
+          {
+            "pattern": "delegate responsibility for + noun or -ing form + to + person",
+            "use": "Use this when another person becomes responsible for a particular activity.",
+            "example": "She delegated responsibility for organizing the event to her assistant."
+          },
+          {
+            "pattern": "delegate the preparation or management of + noun",
+            "use": "Use this for formal descriptions of work given to another person.",
+            "example": "The director delegated the management of the project to a senior engineer."
+          },
+          {
+            "pattern": "learn or be willing to delegate",
+            "use": "Use this without an object when the type of work is already clear.",
+            "example": "Successful leaders must learn to delegate."
+          }
+        ],
+        "errors": [
+          {
+            "wrong": "The manager delegated to Sara the report.",
+            "correct": "The manager delegated the report to Sara.",
+            "explanation": "The usual order is delegate the task to the person."
+          },
+          {
+            "wrong": "She delegated her assistant to prepare the report.",
+            "correct": "She delegated the preparation of the report to her assistant.",
+            "explanation": "It is usually more natural to delegate a task or responsibility to someone."
+          },
+          {
+            "wrong": "He delegated about organizing the conference.",
+            "correct": "He delegated responsibility for organizing the conference.",
+            "explanation": "Do not use about after delegate. Name the task or responsibility directly."
+          }
+        ],
+        "audio_phrase": "delegate tasks"
+      },
+      {
+        "sense_title": "Transfer authority",
+        "part_of_speech": "transitive verb",
+        "ipa": "/ˈdɛləˌɡeɪt/",
+        "definition": "to officially give part of your authority or decision-making power to another person or organization",
+        "examples": [
+          "The director delegated authority to approve small purchases to department managers.",
+          "National governments sometimes delegate certain powers to regional authorities.",
+          "The law allows the agency to delegate some of its responsibilities to local councils.",
+          "Senior officials may delegate decision-making authority to local administrators.",
+          "The board delegated control of daily operations to the executive director.",
+          "Parliament can delegate limited regulatory powers to government agencies.",
+          "The president delegated responsibility for the negotiations to the foreign minister."
+        ],
+        "plain_english_equivalent": "officially give someone part of your power",
+        "typical_pattern": "delegate + authority, power, control, or responsibility + to + person or organization",
+        "register": "formal; common in law, government, administration, and organizational management",
+        "nuance": {
+          "central_nuance": "This meaning concerns official power rather than merely the performance of a task.",
+          "usual_implication": "The original authority often keeps overall responsibility and may place limits on the power being transferred.",
+          "contrast_term": "surrender",
+          "contrast_explanation": "To surrender authority is to give it up, often completely. To delegate authority is usually to transfer only part of it while keeping overall control or responsibility."
+        },
+        "grammar": {
+          "how_to_use": "This verb normally needs the authority, power, control, or responsibility being transferred after it.",
+          "what_can_follow": "Common objects include authority, power, control, responsibility, decision-making, and functions.",
+          "preposition_note": "Use to before the person, department, or organization receiving the authority.",
+          "position_note": "The usual order is delegate authority to someone."
+        },
+        "patterns": [
+          {
+            "pattern": "delegate authority to + person or organization",
+            "use": "Use this when someone officially gives another party the power to make certain decisions.",
+            "example": "The minister delegated authority to regional officials."
+          },
+          {
+            "pattern": "delegate power over + area + to + body",
+            "use": "Use this to identify both the area of authority and the organization receiving it.",
+            "example": "The law delegates power over local transportation to municipal governments."
+          },
+          {
+            "pattern": "delegate decision-making responsibility",
+            "use": "Use this when another person or group is allowed to make particular choices.",
+            "example": "The company delegated decision-making responsibility to local branches."
+          },
+          {
+            "pattern": "be delegated to + person or organization",
+            "use": "Use the passive form when the transferred authority is the main focus.",
+            "example": "Certain administrative powers were delegated to the committee."
+          }
+        ],
+        "errors": [
+          {
+            "wrong": "The board delegated authority on the manager.",
+            "correct": "The board delegated authority to the manager.",
+            "explanation": "Use to for the person or organization receiving authority."
+          },
+          {
+            "wrong": "The government delegated the local council with new powers.",
+            "correct": "The government delegated new powers to the local council.",
+            "explanation": "The usual pattern is delegate something to someone."
+          },
+          {
+            "wrong": "The director delegated all responsibility and was no longer accountable.",
+            "correct": "The director delegated several responsibilities but remained accountable for the final results.",
+            "explanation": "Delegating work or authority does not necessarily remove the original person's overall responsibility."
+          }
+        ],
+        "audio_phrase": "delegate authority"
+      }
+    ],
+    "word_family": [
+      {
+        "word": "delegation",
+        "part_of_speech": "countable or uncountable noun",
+        "definition": "a group of people chosen to represent others, or the act of giving tasks or authority to another person",
+        "examples": [
+          "A delegation of scientists met with government officials.",
+          "Effective delegation allows managers to focus on their most important responsibilities.",
+          "The international delegation visited several research institutions.",
+          "Poor delegation can leave employees confused about their responsibilities."
+        ],
+        "ipa": "/ˌdɛləˈɡeɪʃən/",
+        "relationship_to_headword": "This noun can refer either to a group of delegates or to the process of delegating work or authority.",
+        "grammar_pattern": "a delegation from + place, a delegation of + representatives, or the delegation of + task or authority",
+        "usage_note": "Use a delegation for a representative group. Delegation is often uncountable when it means the management process."
+      }
+    ],
+    "collocations": [
+      {
+        "collocation": "conference delegate",
+        "example": "Each conference delegate received a copy of the research summary.",
+        "applies_to_sense": "Chosen representative",
+        "meaning": "a person officially attending a conference as a representative"
+      },
+      {
+        "collocation": "delegate to a conference",
+        "example": "She was selected as a delegate to an international education conference.",
+        "applies_to_sense": "Chosen representative",
+        "meaning": "a representative chosen to attend a conference",
+        "grammar_pattern": "a delegate to + meeting, conference, or convention"
+      },
+      {
+        "collocation": "delegate from a country",
+        "example": "A delegate from Brazil presented the proposal.",
+        "applies_to_sense": "Chosen representative",
+        "meaning": "a representative of a particular country or group",
+        "grammar_pattern": "a delegate from + country, institution, or organization"
+      },
+      {
+        "collocation": "delegate a task",
+        "example": "The supervisor delegated the task to a junior researcher.",
+        "applies_to_sense": "Give someone a task",
+        "meaning": "give a piece of work to another person",
+        "grammar_pattern": "delegate a task to + person"
+      },
+      {
+        "collocation": "delegate responsibility",
+        "example": "Managers should delegate responsibility without losing oversight.",
+        "applies_to_sense": "Give someone a task",
+        "meaning": "make another person responsible for completing particular work",
+        "grammar_pattern": "delegate responsibility for + noun or -ing form + to + person"
+      },
+      {
+        "collocation": "delegate effectively",
+        "example": "Leaders who delegate effectively can use their time more efficiently.",
+        "applies_to_sense": "Give someone a task",
+        "meaning": "give tasks to suitable people in a clear and useful way"
+      },
+      {
+        "collocation": "delegate authority",
+        "example": "The chief executive delegated authority to several regional managers.",
+        "applies_to_sense": "Transfer authority",
+        "meaning": "officially transfer some decision-making power",
+        "grammar_pattern": "delegate authority to + person or organization"
+      },
+      {
+        "collocation": "delegate power",
+        "example": "The constitution permits the national government to delegate limited powers to local authorities.",
+        "applies_to_sense": "Transfer authority",
+        "meaning": "officially give another person or organization certain powers",
+        "grammar_pattern": "delegate power to + person or organization"
+      },
+      {
+        "collocation": "delegated authority",
+        "example": "The officer acted within the limits of her delegated authority.",
+        "applies_to_sense": "Transfer authority",
+        "meaning": "authority officially transferred from a higher authority",
+        "usage_note": "Delegated is an adjective in this expression."
+      },
+      {
+        "collocation": "a delegation of officials",
+        "example": "A delegation of officials traveled to the neighboring country.",
+        "applies_to_sense": "Chosen representative",
+        "meaning": "a representative group of officials",
+        "grammar_pattern": "a delegation of + representatives"
+      },
+      {
+        "collocation": "effective delegation",
+        "example": "Effective delegation improves both productivity and staff development.",
+        "applies_to_sense": "Give someone a task",
+        "meaning": "the successful assignment of work and responsibility to other people",
+        "usage_note": "Delegation is the noun form."
+      }
+    ],
+    "synonyms": [
+      {
+        "word": "representative",
+        "part_of_speech": "countable noun",
+        "applies_to_sense": "Chosen representative",
+        "difference": "Representative is a broad term for anyone who acts or speaks for others. Delegate often refers specifically to someone formally chosen to attend a meeting, conference, or organization.",
+        "example": "Each organization sent a representative to the meeting.",
+        "shared_meaning": "Both words describe someone who acts on behalf of a larger group."
+      },
+      {
+        "word": "assign",
+        "part_of_speech": "transitive verb",
+        "applies_to_sense": "Give someone a task",
+        "difference": "Assign simply means give someone a task. Delegate often suggests that a person passes on work that originally belonged to them while keeping overall responsibility.",
+        "example": "The professor assigned each student a separate research topic.",
+        "shared_meaning": "Both verbs can mean giving work to another person."
+      },
+      {
+        "word": "entrust",
+        "part_of_speech": "transitive verb",
+        "applies_to_sense": "Give someone a task",
+        "difference": "Entrust emphasizes confidence that someone will take care of an important task, object, or person. Delegate focuses on transferring responsibility for work.",
+        "example": "The director entrusted her assistant with the confidential documents.",
+        "shared_meaning": "Both verbs can describe giving another person responsibility."
+      },
+      {
+        "word": "authorize",
+        "part_of_speech": "transitive verb",
+        "applies_to_sense": "Transfer authority",
+        "difference": "Authorize means officially give permission to do something. Delegate means transfer some of your own authority or responsibility to another party.",
+        "example": "The committee authorized the director to sign the agreement.",
+        "shared_meaning": "Both verbs can involve officially giving someone power to act."
+      }
+    ],
+    "confusables": [
+      {
+        "word": "designate",
+        "key_difference": "Delegate means give someone a task or authority. Designate usually means officially choose, name, or identify someone or something for a role or purpose.",
+        "headword_example": "The director delegated responsibility for the project to Maria.",
+        "confusable_example": "The director designated Maria as the project leader.",
+        "part_of_speech": "transitive verb",
+        "why_confused": "Both formal verbs can involve giving someone a role, but they describe different actions."
+      }
+    ],
+    "etymology": {
+      "origin": "Delegate comes from Latin delegare, meaning to send as a representative or assign responsibility."
+    },
+    "exercises": {
+      "word_family_choice": [
+        {
+          "prompt_sentence": "A _____ of university officials attended the international meeting.",
+          "answer": "delegation",
+          "completed_sentence": "A delegation of university officials attended the international meeting.",
+          "explanation": "Use delegation for a representative group."
+        },
+        {
+          "prompt_sentence": "Effective _____ can prevent managers from becoming overwhelmed.",
+          "answer": "delegation",
+          "completed_sentence": "Effective delegation can prevent managers from becoming overwhelmed.",
+          "explanation": "Use delegation for the process of giving work to other people."
+        },
+        {
+          "prompt_sentence": "Each department selected a _____ to attend the council meeting.",
+          "answer": "delegate",
+          "completed_sentence": "Each department selected a delegate to attend the council meeting.",
+          "explanation": "Use delegate for the chosen representative."
+        }
+      ],
+      "correct_or_incorrect": [
+        {
+          "sentence": "The manager delegated the task to an experienced employee.",
+          "verdict": "Correct",
+          "explanation": "Delegate a task to someone is the standard pattern."
+        },
+        {
+          "sentence": "She attended the conference as delegate from her university.",
+          "verdict": "Incorrect",
+          "corrected_sentence": "She attended the conference as a delegate from her university.",
+          "explanation": "The singular countable noun requires a."
+        },
+        {
+          "sentence": "The board delegated authority on the regional director.",
+          "verdict": "Incorrect",
+          "corrected_sentence": "The board delegated authority to the regional director.",
+          "explanation": "Use to before the person receiving the authority."
+        },
+        {
+          "sentence": "Good leaders are willing to delegate.",
+          "verdict": "Correct",
+          "explanation": "Delegate can appear without an object when the type of work is clear from the context."
+        }
+      ],
+      "collocation_practice": [
+        {
+          "prompt_sentence": "The supervisor decided to delegate the task _____ a more experienced employee.",
+          "answer": "to",
+          "completed_sentence": "The supervisor decided to delegate the task to a more experienced employee.",
+          "explanation": "Use delegate something to someone."
+        },
+        {
+          "prompt_sentence": "The two departments each elected a _____ to the university council.",
+          "answer": "delegate",
+          "completed_sentence": "The two departments each elected a delegate to the university council.",
+          "explanation": "A delegate to a council is a person chosen to attend it as a representative."
+        },
+        {
+          "prompt_sentence": "The law allows the ministry to delegate _____ to local agencies.",
+          "answer": "authority",
+          "completed_sentence": "The law allows the ministry to delegate authority to local agencies.",
+          "explanation": "Delegate authority means officially transfer some decision-making power."
+        },
+        {
+          "prompt_sentence": "Effective _____ requires clear instructions and appropriate supervision.",
+          "answer": "delegation",
+          "completed_sentence": "Effective delegation requires clear instructions and appropriate supervision.",
+          "explanation": "Effective delegation is the successful assignment of work to others."
+        }
+      ]
+    }
+  }

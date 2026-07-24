@@ -1,0 +1,330 @@
+{
+    "document_type": "kooshky_toefl_word_of_the_day",
+    "schema_version": "1.3",
+    "slug": "complacent",
+    "word": "complacent",
+    "date": "August 6th 2026",
+    "pronunciation": {
+      "primary_ipa": "/kəmˈpleɪsənt/"
+    },
+    "hero": {
+      "part_of_speech_summary": "adjective",
+      "short_meanings": [
+        "too satisfied to notice risks or improve"
+      ],
+      "one_line_summary": "A complacent person feels so satisfied or secure that they stop paying attention to problems, risks, or the need for improvement.",
+      "memorable_example": "After several successful years, the company became complacent and stopped investing in innovation."
+    },
+    "meanings": [
+      {
+        "sense_title": "Too satisfied to notice risks",
+        "part_of_speech": "adjective",
+        "ipa": "/kəmˈpleɪsənt/",
+        "definition": "too satisfied with a situation or with your own abilities, so that you do not notice problems, make improvements, or prepare for possible danger",
+        "examples": [
+          "After several successful years, the company became complacent and stopped investing in innovation.",
+          "Public health officials warned people not to become complacent about the disease.",
+          "The team grew complacent after taking an early lead and eventually lost the game.",
+          "Students should not become complacent simply because they performed well on one examination.",
+          "The report argues that economic growth made policymakers complacent about rising inequality.",
+          "Strong sales may create a complacent attitude toward changes in consumer behavior.",
+          "The absence of recent accidents should not make workers complacent about safety.",
+          "Competitors quickly gained ground while the market leader remained complacent."
+        ],
+        "plain_english_equivalent": "too comfortable and no longer careful",
+        "typical_pattern": "become or grow complacent about + problem, risk, or situation",
+        "register": "neutral to formal; common in academic, professional, political, health, and safety discussions",
+        "nuance": {
+          "central_nuance": "Complacent does not simply mean calm, comfortable, or satisfied. It means that satisfaction has become excessive and has reduced attention, effort, or caution.",
+          "usual_implication": "The word is negative and usually suggests that the person or group may fail, fall behind, or face preventable problems.",
+          "contrast_term": "content",
+          "contrast_explanation": "Content means peacefully satisfied and is usually positive or neutral. Complacent means too satisfied to recognize risks or continue improving and is negative."
+        },
+        "grammar": {
+          "how_to_use": "Use it after a linking verb such as be, become, grow, seem, or remain, or before a noun such as attitude or leadership.",
+          "what_can_follow": "It is often followed by about and then a problem, risk, achievement, or situation.",
+          "preposition_note": "Use complacent about something, as in complacent about safety. Do not normally use complacent of or complacent with.",
+          "position_note": "It commonly appears after become or grow when describing a change in attitude."
+        },
+        "patterns": [
+          {
+            "pattern": "become or grow complacent",
+            "use": "Use this when someone gradually becomes less careful or ambitious because they feel too secure.",
+            "example": "The organization grew complacent after years without serious competition."
+          },
+          {
+            "pattern": "be complacent about + noun",
+            "use": "Use this to identify the problem, risk, or situation that someone is not taking seriously enough.",
+            "example": "We cannot afford to be complacent about cybersecurity."
+          },
+          {
+            "pattern": "be complacent about + -ing form",
+            "use": "Use this when describing an activity or development that someone is treating with too little concern.",
+            "example": "Officials were complacent about allowing the infrastructure to deteriorate."
+          },
+          {
+            "pattern": "a complacent attitude",
+            "use": "Use this for a way of thinking that ignores danger or the need for improvement.",
+            "example": "A complacent attitude toward workplace safety can have serious consequences."
+          },
+          {
+            "pattern": "remain complacent despite + noun",
+            "use": "Use this when someone continues to feel too secure even though warning signs exist.",
+            "example": "The company remained complacent despite a steady decline in customer satisfaction."
+          }
+        ],
+        "errors": [
+          {
+            "wrong": "The students were complacent with the coming examination.",
+            "correct": "The students were complacent about the coming examination.",
+            "explanation": "Use complacent about to identify the matter that someone is not taking seriously enough."
+          },
+          {
+            "wrong": "She felt complacent because she had completed a difficult project and deserved to relax.",
+            "correct": "She felt satisfied because she had completed a difficult project and deserved to relax.",
+            "explanation": "Complacent is negative and suggests a harmful lack of effort or caution. Use satisfied when the feeling is reasonable."
+          },
+          {
+            "wrong": "The manager complacented after the company became successful.",
+            "correct": "The manager became complacent after the company became successful.",
+            "explanation": "Complacent is an adjective, not a verb. Use become complacent."
+          },
+          {
+            "wrong": "The government should not be complacent of the growing risk.",
+            "correct": "The government should not be complacent about the growing risk.",
+            "explanation": "Use about, not of, after complacent."
+          }
+        ]
+      }
+    ],
+    "word_family": [
+      {
+        "word": "complacency",
+        "part_of_speech": "uncountable noun",
+        "definition": "a feeling of excessive satisfaction that causes someone to ignore problems, risks, or the need for improvement",
+        "examples": [
+          "The recent improvement should not lead to complacency.",
+          "Officials warned that public complacency could allow the disease to spread again.",
+          "The company's decline was partly caused by years of managerial complacency."
+        ],
+        "ipa": "/kəmˈpleɪsənsi/",
+        "relationship_to_headword": "This noun names the harmful attitude or state described by complacent.",
+        "grammar_pattern": "complacency about + issue or a sense of complacency",
+        "usage_note": "It is normally uncountable, so do not usually use a or an before it."
+      },
+      {
+        "word": "complacently",
+        "part_of_speech": "adverb",
+        "definition": "in a way that shows excessive satisfaction and too little awareness of problems or risks",
+        "examples": [
+          "The company complacently assumed that customers would remain loyal.",
+          "Officials watched complacently as the warning signs became more serious."
+        ],
+        "ipa": "/kəmˈpleɪsəntli/",
+        "relationship_to_headword": "This adverb describes an action performed with a complacent attitude.",
+        "grammar_pattern": "complacently + assume, believe, ignore, or observe",
+        "usage_note": "It is less common than complacent and complacency."
+      }
+    ],
+    "collocations": [
+      {
+        "collocation": "become complacent",
+        "example": "Successful organizations can fail if they become complacent.",
+        "applies_to_sense": "Too satisfied to notice risks",
+        "meaning": "begin to feel so secure that effort or caution decreases",
+        "grammar_pattern": "become complacent about + issue"
+      },
+      {
+        "collocation": "grow complacent",
+        "example": "The team grew complacent after winning several easy matches.",
+        "applies_to_sense": "Too satisfied to notice risks",
+        "meaning": "gradually become too satisfied and less careful"
+      },
+      {
+        "collocation": "complacent about",
+        "example": "Consumers should not be complacent about online privacy.",
+        "applies_to_sense": "Too satisfied to notice risks",
+        "meaning": "not sufficiently concerned or careful about something",
+        "grammar_pattern": "be complacent about + noun or -ing form"
+      },
+      {
+        "collocation": "a complacent attitude",
+        "example": "A complacent attitude toward maintenance increased the risk of equipment failure.",
+        "applies_to_sense": "Too satisfied to notice risks",
+        "meaning": "a way of thinking that ignores danger or the need for improvement"
+      },
+      {
+        "collocation": "complacent leadership",
+        "example": "Complacent leadership prevented the organization from responding quickly to change.",
+        "applies_to_sense": "Too satisfied to notice risks",
+        "meaning": "leaders who are too satisfied with current conditions to recognize problems"
+      },
+      {
+        "collocation": "a sense of complacency",
+        "example": "The long period of stability created a false sense of complacency.",
+        "applies_to_sense": "Too satisfied to notice risks",
+        "meaning": "a feeling that there is no need to worry or make further effort",
+        "usage_note": "Complacency is the noun form."
+      },
+      {
+        "collocation": "lead to complacency",
+        "example": "Early success can lead to complacency if progress is not carefully monitored.",
+        "applies_to_sense": "Too satisfied to notice risks",
+        "meaning": "cause people to become excessively satisfied and less careful",
+        "grammar_pattern": "success, improvement, or stability + lead to complacency"
+      },
+      {
+        "collocation": "guard against complacency",
+        "example": "Regular safety training helps workers guard against complacency.",
+        "applies_to_sense": "Too satisfied to notice risks",
+        "meaning": "take action to prevent excessive confidence or lack of caution",
+        "grammar_pattern": "guard against complacency"
+      },
+      {
+        "collocation": "room for complacency",
+        "example": "Although infection rates have fallen, there is no room for complacency.",
+        "applies_to_sense": "Too satisfied to notice risks",
+        "meaning": "an acceptable reason or opportunity to become less careful",
+        "grammar_pattern": "there is no room for complacency"
+      },
+      {
+        "collocation": "avoid complacency",
+        "example": "The industry must continue to innovate to avoid complacency.",
+        "applies_to_sense": "Too satisfied to notice risks",
+        "meaning": "prevent an attitude of excessive satisfaction"
+      }
+    ],
+    "synonyms": [
+      {
+        "word": "self-satisfied",
+        "part_of_speech": "adjective",
+        "applies_to_sense": "Too satisfied to notice risks",
+        "difference": "Self-satisfied emphasizes excessive satisfaction with yourself or your achievements. Complacent also emphasizes the resulting failure to notice risks or continue improving.",
+        "example": "His self-satisfied expression annoyed the other members of the team.",
+        "shared_meaning": "Both describe an excessive and usually negative form of satisfaction."
+      },
+      {
+        "word": "smug",
+        "part_of_speech": "adjective",
+        "applies_to_sense": "Too satisfied to notice risks",
+        "difference": "Smug strongly suggests that someone feels superior and often shows it in an irritating way. Complacent focuses more on reduced caution, effort, or awareness.",
+        "example": "She sounded smug after her prediction proved correct.",
+        "shared_meaning": "Both can describe someone who is excessively pleased with themselves."
+      },
+      {
+        "word": "overconfident",
+        "part_of_speech": "adjective",
+        "applies_to_sense": "Too satisfied to notice risks",
+        "difference": "Overconfident means having more confidence than the situation justifies. Complacent means feeling so satisfied or secure that you stop noticing problems or making an effort.",
+        "example": "The candidate became overconfident and failed to prepare for the final interview.",
+        "shared_meaning": "Both attitudes can cause someone to underestimate difficulties or risks."
+      }
+    ],
+    "antonyms": [
+      {
+        "word": "vigilant",
+        "part_of_speech": "adjective",
+        "applies_to_sense": "Too satisfied to notice risks",
+        "opposition": "A vigilant person remains watchful for possible problems or danger, while a complacent person fails to give them enough attention.",
+        "example": "Health officials remained vigilant for signs of another outbreak."
+      },
+      {
+        "word": "diligent",
+        "part_of_speech": "adjective",
+        "applies_to_sense": "Too satisfied to notice risks",
+        "opposition": "A diligent person continues to work carefully and consistently, while a complacent person may reduce their effort because they feel too secure.",
+        "example": "The research team was diligent in checking every stage of the experiment.",
+        "usage_note": "This is an opposite mainly when complacent refers to a lack of continued effort."
+      }
+    ],
+    "confusables": [
+      {
+        "word": "complaisant",
+        "key_difference": "Complacent means too satisfied and therefore insufficiently careful. Complaisant means willing to please other people or agree with them.",
+        "headword_example": "The company became complacent after dominating the market for years.",
+        "confusable_example": "The complaisant assistant agreed to every request.",
+        "part_of_speech": "adjective",
+        "why_confused": "The two words have similar spellings and pronunciations but different meanings."
+      },
+      {
+        "word": "compliant",
+        "key_difference": "Complacent describes excessive satisfaction and lack of caution. Compliant describes someone or something that follows rules, requests, or standards.",
+        "headword_example": "Managers became complacent about the growing security threat.",
+        "confusable_example": "The new equipment is fully compliant with safety regulations.",
+        "part_of_speech": "adjective",
+        "why_confused": "Both words begin with compl- and may occur in formal professional contexts."
+      }
+    ],
+    "exercises": {
+      "word_family_choice": [
+        {
+          "prompt_sentence": "The recent decline in accidents must not create a sense of _____.",
+          "answer": "complacency",
+          "completed_sentence": "The recent decline in accidents must not create a sense of complacency.",
+          "explanation": "Use the noun complacency after a sense of."
+        },
+        {
+          "prompt_sentence": "The organization became _____ after several years of rapid growth.",
+          "answer": "complacent",
+          "completed_sentence": "The organization became complacent after several years of rapid growth.",
+          "explanation": "Use the adjective complacent after became."
+        },
+        {
+          "prompt_sentence": "Executives _____ assumed that no competitor could challenge the company.",
+          "answer": "complacently",
+          "completed_sentence": "Executives complacently assumed that no competitor could challenge the company.",
+          "explanation": "Use the adverb complacently to describe how they assumed something."
+        }
+      ],
+      "correct_or_incorrect": [
+        {
+          "sentence": "We should not become complacent about workplace safety.",
+          "verdict": "Correct",
+          "explanation": "Become complacent about is the standard pattern."
+        },
+        {
+          "sentence": "The company was complacent with changes in consumer demand.",
+          "verdict": "Incorrect",
+          "corrected_sentence": "The company was complacent about changes in consumer demand.",
+          "explanation": "Use complacent about, not complacent with."
+        },
+        {
+          "sentence": "She was complacent because she was reasonably pleased with her progress.",
+          "verdict": "Incorrect",
+          "corrected_sentence": "She was satisfied because she was reasonably pleased with her progress.",
+          "explanation": "Complacent is negative and suggests harmful overconfidence or lack of effort."
+        },
+        {
+          "sentence": "The absence of immediate danger led to complacency.",
+          "verdict": "Correct",
+          "explanation": "Lead to complacency is a natural expression for causing excessive confidence or reduced caution."
+        }
+      ],
+      "collocation_practice": [
+        {
+          "prompt_sentence": "A long period without accidents can lead to _____.",
+          "answer": "complacency",
+          "completed_sentence": "A long period without accidents can lead to complacency.",
+          "explanation": "Lead to complacency means cause people to become less careful because they feel secure."
+        },
+        {
+          "prompt_sentence": "The public must not become complacent _____ the risk of flooding.",
+          "answer": "about",
+          "completed_sentence": "The public must not become complacent about the risk of flooding.",
+          "explanation": "Use complacent about something."
+        },
+        {
+          "prompt_sentence": "Regular inspections help guard _____ complacency.",
+          "answer": "against",
+          "completed_sentence": "Regular inspections help guard against complacency.",
+          "explanation": "Guard against complacency means take action to prevent it."
+        },
+        {
+          "prompt_sentence": "Despite recent improvements, there is no room for _____.",
+          "answer": "complacency",
+          "completed_sentence": "Despite recent improvements, there is no room for complacency.",
+          "explanation": "There is no room for complacency means people must remain careful and continue making an effort."
+        }
+      ]
+    }
+  }

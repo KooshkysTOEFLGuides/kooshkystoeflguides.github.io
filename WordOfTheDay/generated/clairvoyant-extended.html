@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="A complete TOEFL learner guide to clairvoyant, created by Amir Kooshky.">
+  <title>clairvoyant | Kooshky TOEFL Word of the Day</title>
+  <style>
+/*
+  Kooshky TOEFL Word of the Day
+  Original dictionary-editorial visual system for Amir Kooshky.
+  Mobile-first, print-aware, local-file friendly, and fully usable without JavaScript.
+*/
+:root {
+  color-scheme: light;
+  --paper: #f4f0e7;
+  --surface: #fffdf8;
+  --surface-2: #eee8dc;
+  --ink: #1c1a18;
+  --muted: #69635d;
+  --rule: #d6cdbf;
+  --rule-strong: #a99f92;
+  --accent: #a51f2d;
+  --accent-deep: #72131e;
+  --accent-soft: #f4e3e5;
+  --good: #315f4c;
+  --good-soft: #e5efe9;
+  --warn: #8a5719;
+  --warn-soft: #f8ebd8;
+  --info: #315f76;
+  --info-soft: #e4eef3;
+  --shadow: 0 18px 46px rgba(47, 37, 27, .09);
+  --serif: Georgia, "Times New Roman", Times, serif;
+  --sans: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  --radius: .95rem;
+  --radius-sm: .55rem;
+  --content: 75rem;
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #171614;
+  --surface: #211f1c;
+  --surface-2: #2a2723;
+  --ink: #f3eee5;
+  --muted: #b9b0a5;
+  --rule: #443f39;
+  --rule-strong: #675e56;
+  --accent: #e35d68;
+  --accent-deep: #ff7f88;
+  --accent-soft: #3a2225;
+  --good: #95c8ad;
+  --good-soft: #20342a;
+  --warn: #dfb06e;
+  --warn-soft: #3a2c1d;
+  --info: #91c2d8;
+  --info-soft: #21343e;
+  --shadow: 0 18px 46px rgba(0, 0, 0, .34);
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #171614;
+    --surface: #211f1c;
+    --surface-2: #2a2723;
+    --ink: #f3eee5;
+    --muted: #b9b0a5;
+    --rule: #443f39;
+    --rule-strong: #675e56;
+    --accent: #e35d68;
+    --accent-deep: #ff7f88;
+    --accent-soft: #3a2225;
+    --good: #95c8ad;
+    --good-soft: #20342a;
+    --warn: #dfb06e;
+    --warn-soft: #3a2c1d;
+    --info: #91c2d8;
+    --info-soft: #21343e;
+    --shadow: 0 18px 46px rgba(0, 0, 0, .34);
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 1rem;
+  line-height: 1.72;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--accent-deep); text-underline-offset: .18em; text-decoration-thickness: .075em; }
+a:hover { color: var(--accent); }
+a.pronunciation-button:hover { color: var(--accent-soft); }
+button { font: inherit; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+::selection { background: var(--accent); color: white; }
+
+.skip-link {
+  position: fixed;
+  left: .75rem;
+  top: .75rem;
+  z-index: 1000;
+  transform: translateY(-180%);
+  padding: .62rem .82rem;
+  border-radius: var(--radius-sm);
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--sans);
+  font-weight: 800;
+  text-decoration: none;
+}
+.skip-link:focus { transform: translateY(0); }
+
+.no-js-hidden { display: none !important; }
+html.js .no-js-hidden { display: inline-flex !important; }
+
+.masthead {
+  border-bottom: 1px solid var(--rule);
+  background: color-mix(in srgb, var(--surface) 94%, transparent);
+}
+.masthead-inner {
+  width: min(calc(100% - 1.4rem), var(--content));
+  min-height: 4.4rem;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .9rem;
+}
+.brand { color: inherit; text-decoration: none; line-height: 1.05; }
+.brand strong { display: block; font-size: 1.04rem; letter-spacing: -.02em; }
+.brand span {
+  display: block;
+  margin-top: .18rem;
+  color: var(--accent);
+  font-family: var(--sans);
+  font-size: .65rem;
+  font-weight: 850;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+.utility-actions { display: none; gap: .42rem; align-items: center; }
+html.js .utility-actions { display: flex; }
+.utility-button {
+  min-height: 2.35rem;
+  padding: .42rem .7rem;
+  border: 1px solid var(--rule-strong);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: .74rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+.utility-button:hover { border-color: var(--accent); color: var(--accent); }
+
+.page {
+  width: min(calc(100% - 1.4rem), var(--content));
+  margin-inline: auto;
+  padding: 1.2rem 0 4rem;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(2rem, 10vw, 5.5rem) 0 clamp(2.4rem, 8vw, 4.5rem);
+  border-bottom: 1px solid var(--rule);
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  right: -7rem;
+  top: -9rem;
+  width: 19rem;
+  aspect-ratio: 1;
+  border: 1px solid color-mix(in srgb, var(--accent) 22%, transparent);
+  border-radius: 50%;
+  box-shadow: 0 0 0 2.4rem color-mix(in srgb, var(--accent) 4%, transparent), 0 0 0 5rem color-mix(in srgb, var(--accent) 3%, transparent);
+  pointer-events: none;
+}
+.kicker, .section-kicker, .eyebrow {
+  margin: 0;
+  color: var(--accent);
+  font-family: var(--sans);
+  font-size: .7rem;
+  font-weight: 900;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+.hero h1 {
+  position: relative;
+  z-index: 1;
+  max-width: 13ch;
+  margin: .45rem 0 0;
+  font-size: clamp(3.2rem, 17vw, 8.7rem);
+  line-height: .88;
+  letter-spacing: -.065em;
+  overflow-wrap: anywhere;
+}
+.hero-pronunciation {
+  margin: 1.25rem 0 .15rem;
+  color: var(--accent-deep);
+  font-family: var(--sans);
+  font-size: clamp(1.05rem, 4vw, 1.45rem);
+  font-weight: 750;
+}
+.pronunciation-tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .65rem;
+  max-width: 42rem;
+  margin: .75rem 0 .25rem;
+}
+.pronunciation-audio {
+  width: min(100%, 22rem);
+  height: 2.5rem;
+}
+.listen-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.35rem;
+  padding: .45rem .72rem;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  color: var(--accent);
+  font-family: var(--sans);
+  font-size: .78rem;
+  font-weight: 820;
+  text-decoration: none;
+}
+.listen-link:hover { background: var(--accent); color: var(--accent-ink); }
+.listen-link.secondary { border-color: var(--rule-strong); color: var(--ink); }
+.listen-link.secondary:hover { border-color: var(--accent); background: var(--surface-strong); color: var(--accent); }
+.audio-note { margin: 0 0 .35rem; color: var(--muted); font-family: var(--sans); font-size: .72rem; }
+.hero-pos { margin: 0; color: var(--muted); font-family: var(--sans); font-weight: 720; }
+.hero-summary { max-width: 50rem; margin: 1rem 0 0; font-size: clamp(1.08rem, 3.2vw, 1.34rem); line-height: 1.55; }
+.short-meaning-row { display: flex; flex-wrap: wrap; gap: .45rem; margin-top: 1.2rem; }
+.short-meaning {
+  padding: .36rem .62rem;
+  border: 1px solid var(--rule-strong);
+  border-radius: 999px;
+  background: var(--surface);
+  font-family: var(--sans);
+  font-size: .78rem;
+  font-weight: 760;
+}
+.hero-example {
+  max-width: 53rem;
+  margin: 1.6rem 0 0;
+  padding: 1rem 1.1rem 1rem 1.25rem;
+  border-left: 3px solid var(--accent);
+  background: color-mix(in srgb, var(--surface) 80%, transparent);
+  font-size: clamp(1.05rem, 3vw, 1.3rem);
+  font-style: italic;
+}
+.meta-strip {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: .65rem;
+  margin-top: 1.5rem;
+}
+.meta-item { padding: .75rem .85rem; border: 1px solid var(--rule); border-radius: var(--radius-sm); background: var(--surface); }
+.meta-label { display: block; color: var(--muted); font-family: var(--sans); font-size: .66rem; font-weight: 850; letter-spacing: .12em; text-transform: uppercase; }
+.meta-value { display: block; margin-top: .12rem; font-family: var(--sans); font-weight: 800; }
+
+.toc {
+  margin: 1rem 0 0;
+  padding: .95rem;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+.toc-title { margin: 0 0 .55rem; font-family: var(--sans); font-size: .78rem; font-weight: 900; text-transform: uppercase; letter-spacing: .12em; }
+.toc-links { display: flex; flex-wrap: wrap; gap: .45rem .8rem; }
+.toc a { font-family: var(--sans); font-size: .82rem; font-weight: 760; }
+
+.section { padding: clamp(2.5rem, 8vw, 5rem) 0 0; }
+.section-head { max-width: 48rem; margin-bottom: 1.25rem; }
+.section h2 {
+  margin: .22rem 0 .4rem;
+  font-size: clamp(2rem, 7vw, 3.35rem);
+  line-height: 1.02;
+  letter-spacing: -.035em;
+}
+.section-intro { margin: 0; color: var(--muted); font-size: 1.03rem; }
+
+.overview-grid, .card-grid, .compare-grid, .exercise-grid, .info-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: .85rem;
+}
+.card, .overview-card, .family-card, .collocation-card, .compare-card, .exercise-card {
+  min-width: 0;
+  padding: 1rem;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: 0 7px 20px rgba(40, 30, 20, .035);
+}
+.card h3, .card h4, .overview-card h3, .family-card h3, .collocation-card h3, .compare-card h3, .exercise-card h3 { margin: 0 0 .45rem; line-height: 1.25; }
+.card p:last-child, .overview-card p:last-child, .family-card p:last-child, .collocation-card p:last-child, .compare-card p:last-child, .exercise-card p:last-child { margin-bottom: 0; }
+.label {
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: .69rem;
+  font-weight: 850;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.value { font-weight: 700; }
+
+.sense-card {
+  overflow: hidden;
+  margin-top: 1.1rem;
+  border: 1px solid var(--rule);
+  border-radius: calc(var(--radius) + .15rem);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+.sense-head {
+  padding: 1rem;
+  border-top: 4px solid var(--accent);
+  border-bottom: 1px solid var(--rule);
+  background: color-mix(in srgb, var(--surface-2) 42%, var(--surface));
+}
+.sense-number { color: var(--accent); font-family: var(--sans); font-size: .7rem; font-weight: 900; letter-spacing: .13em; text-transform: uppercase; }
+.sense-head h3 { margin: .2rem 0 .55rem; font-size: clamp(1.55rem, 5vw, 2.2rem); line-height: 1.1; }
+.badge-row { display: flex; flex-wrap: wrap; gap: .38rem; }
+.badge { padding: .27rem .5rem; border: 1px solid var(--rule-strong); border-radius: 999px; font-family: var(--sans); font-size: .72rem; font-weight: 780; }
+.sense-body { padding: 1rem; }
+.definition { margin: 0; font-size: clamp(1.08rem, 3.5vw, 1.28rem); font-weight: 700; }
+.plain-equivalent { margin: .65rem 0 0; color: var(--muted); }
+.pattern-banner {
+  margin: 1rem 0;
+  padding: .8rem .9rem;
+  border-left: 3px solid var(--accent);
+  background: var(--accent-soft);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+.pattern-banner strong { font-family: var(--sans); }
+.context-row { display: flex; flex-wrap: wrap; gap: .38rem; margin-top: .55rem; }
+.context-pill { padding: .25rem .48rem; border-radius: 999px; background: var(--surface-2); font-family: var(--sans); font-size: .73rem; font-weight: 740; }
+.subsection-title { margin: 1.35rem 0 .55rem; font-family: var(--sans); font-size: .82rem; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
+.example-list, .clean-list { margin: .5rem 0 0; padding-left: 1.35rem; }
+.example-list li, .clean-list li { padding-left: .25rem; margin: .42rem 0; }
+.info-card { padding: .9rem; border: 1px solid var(--rule); border-radius: var(--radius-sm); background: var(--surface); }
+.info-card h4 { margin: 0 0 .35rem; font-family: var(--sans); font-size: .9rem; }
+.info-card p { margin: .3rem 0 0; }
+.info-card.good { border-color: color-mix(in srgb, var(--good) 54%, var(--rule)); background: var(--good-soft); }
+.info-card.warning { border-color: color-mix(in srgb, var(--warn) 54%, var(--rule)); background: var(--warn-soft); }
+.info-card.tip { border-color: color-mix(in srgb, var(--info) 54%, var(--rule)); background: var(--info-soft); }
+.grammar-list { display: grid; gap: .55rem; margin: 0; }
+.grammar-item { padding-bottom: .55rem; border-bottom: 1px solid var(--rule); }
+.grammar-item:last-child { padding-bottom: 0; border-bottom: 0; }
+.grammar-item dt { font-family: var(--sans); font-size: .74rem; font-weight: 900; letter-spacing: .07em; text-transform: uppercase; }
+.grammar-item dd { margin: .12rem 0 0; }
+.pattern-list, .error-list { display: grid; gap: .7rem; }
+.pattern-card, .error-card { padding: .82rem; border: 1px solid var(--rule); border-radius: var(--radius-sm); background: color-mix(in srgb, var(--surface-2) 25%, var(--surface)); }
+.pattern-code { display: block; font-family: var(--mono); font-size: .84rem; font-weight: 800; overflow-wrap: anywhere; }
+.pattern-use { margin: .3rem 0; color: var(--muted); }
+.error-wrong, .error-correct { margin: .25rem 0; }
+.error-wrong { color: var(--warn); }
+.error-correct { color: var(--good); }
+.error-explanation { margin: .35rem 0 0; font-size: .93rem; }
+
+.family-card .ipa, .compare-card .meta { color: var(--muted); font-family: var(--sans); font-size: .8rem; }
+.collocation-card h3 { color: var(--accent-deep); }
+.mini-facts { display: grid; gap: .42rem; margin-top: .6rem; }
+.mini-fact { padding-top: .42rem; border-top: 1px solid var(--rule); }
+.mini-fact strong { font-family: var(--sans); font-size: .78rem; }
+.word-pill { display: inline-block; padding: .24rem .5rem; border: 1px solid var(--accent); border-radius: 999px; color: var(--accent-deep); font-family: var(--sans); font-size: .75rem; font-weight: 850; }
+
+.etymology-flow { display: grid; gap: .7rem; }
+.etymology-step { position: relative; padding: .9rem 1rem .9rem 1.15rem; border-left: 3px solid var(--accent); background: var(--surface); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; }
+.etymology-step h3 { margin: 0 0 .25rem; font-family: var(--sans); font-size: .83rem; text-transform: uppercase; letter-spacing: .08em; }
+
+.exercise-card { counter-increment: exercise; }
+.exercise-card h3 { font-family: var(--sans); }
+.exercise-instruction { color: var(--muted); }
+details.answer-key { margin-top: 1rem; border: 1px solid var(--rule-strong); border-radius: var(--radius); background: var(--surface); }
+details.answer-key summary { padding: 1rem; font-family: var(--sans); font-weight: 900; cursor: pointer; }
+.answer-content { padding: 0 1rem 1rem; }
+.answer-group + .answer-group { margin-top: 1.3rem; padding-top: 1rem; border-top: 1px solid var(--rule); }
+.answer-group h3 { margin: 0 0 .5rem; font-family: var(--sans); }
+.answer-item { margin: .65rem 0; }
+.answer-item strong { font-family: var(--sans); }
+
+.footer {
+  margin-top: 4.5rem;
+  padding: 1.5rem 0 0;
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: .82rem;
+}
+.footer-row { display: flex; flex-direction: column; gap: .55rem; }
+.footer-links { display: flex; flex-wrap: wrap; gap: .4rem .8rem; }
+
+.back-to-top {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 100;
+  width: 2.8rem;
+  height: 2.8rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--rule-strong);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(.7rem);
+  pointer-events: none;
+  transition: opacity .2s ease, transform .2s ease;
+}
+.back-to-top.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+
+@media (min-width: 38rem) {
+  .meta-strip { grid-template-columns: repeat(3, 1fr); }
+  .overview-grid, .info-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .card-grid, .compare-grid, .exercise-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .sense-head, .sense-body { padding: 1.25rem; }
+  .footer-row { flex-direction: row; justify-content: space-between; align-items: center; }
+}
+
+@media (min-width: 62rem) {
+  .page, .masthead-inner { width: min(calc(100% - 3rem), var(--content)); }
+  .toc { position: sticky; top: .7rem; z-index: 20; }
+  .overview-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .card-grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .compare-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .exercise-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .sense-head, .sense-body { padding: 1.5rem; }
+  .sense-body > .info-grid { grid-template-columns: 1.05fr .95fr; }
+}
+
+.pronunciation-tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .65rem;
+  margin-top: .8rem;
+}
+.pronunciation-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .45rem;
+  min-height: 2.7rem;
+  padding: .62rem .9rem;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--sans);
+  font-size: .82rem;
+  font-weight: 850;
+  line-height: 1.2;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform .15s ease, box-shadow .15s ease, opacity .15s ease;
+}
+.pronunciation-button:hover { transform: translateY(-1px); box-shadow: 0 7px 18px rgba(91, 20, 31, .18); }
+.pronunciation-button:focus-visible { outline: 3px solid color-mix(in srgb, var(--accent) 35%, transparent); outline-offset: 3px; }
+.pronunciation-button.is-playing { opacity: .78; }
+.pronunciation-button.compact,
+.pronunciation-button.sense { min-height: 2.35rem; padding: .48rem .72rem; font-size: .75rem; }
+.audio-status { min-height: 1.2em; color: var(--muted); font-family: var(--sans); font-size: .76rem; }
+.audio-note { margin: .55rem 0 0; color: var(--muted); font-size: .82rem; }
+.audio-note code { font-family: var(--mono); overflow-wrap: anywhere; }
+.pronunciation-change-panel {
+  margin-top: 1.25rem;
+  padding: 1rem;
+  border: 2px solid var(--accent);
+  border-radius: var(--radius);
+  background: var(--accent-soft);
+}
+.pronunciation-change-kicker {
+  margin: 0;
+  color: var(--accent-deep);
+  font-family: var(--sans);
+  font-size: .7rem;
+  font-weight: 900;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.pronunciation-change-panel h2 { margin: .25rem 0 .35rem; font-size: clamp(1.25rem, 4vw, 1.7rem); }
+.pronunciation-change-panel > p:last-of-type { margin-bottom: .8rem; }
+.pronunciation-variant-grid { display: grid; grid-template-columns: 1fr; gap: .7rem; }
+.pronunciation-variant {
+  padding: .8rem;
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+}
+.variant-label { margin: 0; font-family: var(--sans); font-size: .76rem; font-weight: 900; text-transform: uppercase; letter-spacing: .07em; }
+.variant-ipa { margin: .18rem 0; color: var(--accent-deep); font-size: 1.12rem; font-weight: 800; }
+.variant-senses { margin: 0 0 .6rem; color: var(--muted); font-size: .84rem; }
+.sense-pronunciation-row { display: grid; gap: .55rem; margin-top: .75rem; }
+.sense-pronunciation-row .pronunciation-button { justify-self: start; }
+.sense-pronunciation-change {
+  margin: 0;
+  padding: .65rem .75rem;
+  border-left: 3px solid var(--accent);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  background: var(--accent-soft);
+  font-size: .88rem;
+}
+
+@media (min-width: 38rem) {
+  .pronunciation-variant-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .sense-pronunciation-row { grid-template-columns: auto minmax(0, 1fr); align-items: center; }
+}
+
+
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to the guide</a>
+
+  <header class="masthead">
+    <div class="masthead-inner">
+      <a class="brand" href="/">
+        <strong>Kooshky TOEFL</strong>
+        <span>Word of the Day</span>
+      </a>
+      <div class="utility-actions" aria-label="Page tools">
+        <button class="utility-button" type="button" data-theme-toggle>Dark mode</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="page" id="main-content">
+    <section class="hero" aria-labelledby="headword">
+      <p class="kicker">TOEFL Word of the Day</p>
+      <h1 id="headword">clairvoyant</h1>
+      <p class="hero-pronunciation">/klɛrˈvɔɪənt/</p>
+      <div class="pronunciation-tools" aria-label="Pronunciation audio">
+        <a class="pronunciation-button primary"
+           href="audios/clairvoyant.mp3"
+           data-pronunciation-button
+           data-pronunciation-phrase="clairvoyant"
+           data-audio-src="audios/clairvoyant.mp3"
+           aria-label="Hear the pronunciation of clairvoyant">
+          <span aria-hidden="true">🔊</span>
+          <span>Hear pronunciation</span>
+        </a>
+        <span class="audio-status" data-audio-status aria-live="polite"></span>
+      </div>
+      <p class="audio-note">Uses the local audio file <code>audios/clairvoyant.mp3</code>. If it is unavailable, the browser voice is used automatically.</p>
+
+      <p class="hero-pos">adjective and countable noun</p>
+      <div class="short-meaning-row" aria-label="Meanings at a glance">
+<span class="short-meaning">said to perceive hidden or future events</span><span class="short-meaning">showing unusually accurate foresight</span><span class="short-meaning">a person said to have such abilities</span>      </div>
+<p class="hero-summary">Clairvoyant can describe a supposed supernatural ability, an unusually accurate prediction, or a person believed to possess that ability.</p><blockquote class="hero-example">“His warning about the economic crisis now seems almost clairvoyant.”</blockquote>      <div class="meta-strip">
+        <div class="meta-item"><span class="meta-label">Date</span><span class="meta-value">July 30th 2026</span></div>
+        <div class="meta-item"><span class="meta-label">Level</span><span class="meta-value">B1–mid-B2 TOEFL</span></div>
+        <div class="meta-item"><span class="meta-label">Created by</span><span class="meta-value">Amir Kooshky</span></div>
+      </div>
+    </section>
+
+    <nav class="toc" aria-label="Study sections">
+      <p class="toc-title">In this guide</p>
+      <div class="toc-links">
+        <a href="#meanings">Meanings</a>
+<a href="#family">Word family</a><a href="#collocations">Collocations</a><a href="#relations">Synonyms & antonyms</a><a href="#confusables">Often confused</a><a href="#etymology">Etymology</a><a href="#exercises">Exercises</a>      </div>
+    </nav>
+
+
+    <section class="section" id="meanings">
+      <div class="section-head">
+        <p class="section-kicker">Dictionary guide</p>
+        <h2>Meanings and usage</h2>
+        <p class="section-intro">The core definition and examples are always included. Additional notes appear only when they are accurate and useful.</p>
+      </div>
+
+      <article class="sense-card" id="meaning-1">
+        <header class="sense-head">
+          <span class="sense-number">Meaning 1</span>
+          <h3>Able to perceive hidden or future events</h3>
+          <div class="badge-row">
+            <span class="badge">adjective</span>
+            <span class="badge">/klɛrˈvɔɪənt/</span>
+<span class="badge">neutral to formal; often used in discussions of supernatural beliefs, fiction, and psychological research</span>          </div>
+          <div class="sense-pronunciation-row">
+            <a class="pronunciation-button sense"
+               href="audios/clairvoyant.mp3"
+               data-pronunciation-button
+               data-pronunciation-phrase="clairvoyant"
+               data-audio-src="audios/clairvoyant.mp3"
+               aria-label="Hear the adjective pronunciation">
+              <span aria-hidden="true">🔊</span>
+              <span>Hear adjective pronunciation</span>
+            </a>
+          </div>
+        </header>
+        <div class="sense-body">
+          <p class="definition">believed to be able to know about future, distant, or hidden events without receiving information through the ordinary senses</p>
+<p class="plain-equivalent"><strong>In simpler words:</strong> supposedly able to know hidden things or see the future</p><div class="pattern-banner"><strong>Typical pattern:</strong> be clairvoyant or have clairvoyant abilities</div>
+
+          <p class="subsection-title">Natural examples</p>
+          <ol class="example-list">
+<li>She claimed to be clairvoyant and able to predict major events.</li><li>The story features a clairvoyant woman who sees visions of the future.</li><li>I am not clairvoyant, so you need to tell me what you are thinking.</li><li>The researchers tested participants who said they had clairvoyant abilities.</li><li>According to the legend, the priest was clairvoyant and could see events occurring in distant lands.</li><li>He jokingly asked whether she was clairvoyant after her prediction came true.</li><li>The novel&#39;s main character becomes clairvoyant after a mysterious accident.</li>          </ol>
+
+          <div class="info-grid">
+            <section class="info-card good">
+              <h4>Nuance and implication</h4>
+<p><strong>Central nuance:</strong> The word refers to knowledge supposedly gained without normal observation, communication, or reasoning.</p><p><strong>Usual implication:</strong> Writers often use claimed, believed, or supposedly because clairvoyant ability has not been scientifically established.</p><p><strong>Compared with “observant”:</strong> An observant person notices information through the ordinary senses. A clairvoyant person is claimed to receive information without those normal sources.</p>            </section>
+
+            <section class="info-card">
+              <h4>Grammar notes</h4>
+              <dl class="grammar-list">
+<div class="grammar-item"><dt>How to use it</dt><dd>Use it after a linking verb such as be or seem, or before a noun such as ability, vision, or character.</dd></div><div class="grammar-item"><dt>What can follow it</dt><dd>It may be followed by enough context to explain the supposed ability, as in clairvoyant about future events, although this pattern is less common than have clairvoyant abilities.</dd></div><div class="grammar-item"><dt>Position in a sentence</dt><dd>The expression I am not clairvoyant is often used humorously to mean that someone cannot know unspoken information or predict what will happen.</dd></div>              </dl>
+            </section>
+          </div>
+
+          <p class="subsection-title">Useful patterns</p>
+          <div class="pattern-list">
+            <article class="pattern-card">
+              <code class="pattern-code">be clairvoyant</code>
+<p class="pattern-use">Use this to describe someone who is believed or claimed to have the ability.</p>              <p><strong>Example:</strong> The fortune-teller claimed to be clairvoyant.</p>
+            </article>
+            <article class="pattern-card">
+              <code class="pattern-code">clairvoyant ability</code>
+<p class="pattern-use">Use this to name the supposed power to perceive hidden or future events.</p>              <p><strong>Example:</strong> The study found no reliable evidence of clairvoyant ability.</p>
+            </article>
+            <article class="pattern-card">
+              <code class="pattern-code">I am not clairvoyant</code>
+<p class="pattern-use">Use this, often humorously, when someone expects you to know something they have not told you.</p>              <p><strong>Example:</strong> I am not clairvoyant; please explain what you need.</p>
+            </article>
+          </div>
+
+          <p class="subsection-title">Common wrong usage</p>
+          <div class="error-list">
+            <article class="error-card">
+              <p class="error-wrong"><strong>Wrong:</strong> She is a clairvoyant person who can clairvoyance the future.</p>
+              <p class="error-correct"><strong>Correct:</strong> She is a clairvoyant person who claims to see the future.</p>
+<p class="error-explanation">Clairvoyance is a noun, not a verb.</p>            </article>
+            <article class="error-card">
+              <p class="error-wrong"><strong>Wrong:</strong> I am not a clairvoyant, so tell me what you want.</p>
+              <p class="error-correct"><strong>Correct:</strong> I am not clairvoyant, so tell me what you want.</p>
+<p class="error-explanation">Use the adjective without a when describing an ability. I am not a clairvoyant is possible only when clairvoyant means a person who practices professionally.</p>            </article>
+          </div>
+
+        </div>
+      </article>
+      <article class="sense-card" id="meaning-2">
+        <header class="sense-head">
+          <span class="sense-number">Meaning 2</span>
+          <h3>Showing accurate foresight</h3>
+          <div class="badge-row">
+            <span class="badge">adjective</span>
+            <span class="badge">/klɛrˈvɔɪənt/</span>
+<span class="badge">formal and often figurative; common in commentary, reviews, and historical analysis</span>          </div>
+          <div class="sense-pronunciation-row">
+            <a class="pronunciation-button sense"
+               href="audios/clairvoyant.mp3"
+               data-pronunciation-button
+               data-pronunciation-phrase="clairvoyant"
+               data-audio-src="audios/clairvoyant.mp3"
+               aria-label="Hear the adjective pronunciation">
+              <span aria-hidden="true">🔊</span>
+              <span>Hear adjective pronunciation</span>
+            </a>
+          </div>
+        </header>
+        <div class="sense-body">
+          <p class="definition">showing an unusually accurate understanding of what will happen or of something that is not yet obvious</p>
+<p class="plain-equivalent"><strong>In simpler words:</strong> extremely accurate about what would happen</p><div class="pattern-banner"><strong>Typical pattern:</strong> seem, appear, or prove clairvoyant</div>
+
+          <p class="subsection-title">Natural examples</p>
+          <ol class="example-list">
+<li>His warning about the economic crisis now seems almost clairvoyant.</li><li>The author&#39;s clairvoyant analysis anticipated many later technological changes.</li><li>Her prediction that remote work would become widespread appeared remarkably clairvoyant.</li><li>In retrospect, the committee&#39;s concerns about water shortages seem clairvoyant.</li><li>The novel offered a nearly clairvoyant picture of life in a highly connected society.</li><li>His clairvoyant assessment of the market allowed the company to prepare early.</li><li>What once sounded unrealistic now appears to have been a clairvoyant observation.</li>          </ol>
+
+          <div class="info-grid">
+            <section class="info-card good">
+              <h4>Nuance and implication</h4>
+<p><strong>Central nuance:</strong> This use does not necessarily suggest a real supernatural power. It emphasizes that an earlier prediction or judgment was surprisingly accurate.</p><p><strong>Usual implication:</strong> The accuracy often becomes clear only later, after the predicted development has occurred.</p><p><strong>Compared with “prescient”:</strong> Prescient also means accurately anticipating future events and is usually the more precise formal choice. Clairvoyant is more vivid and may suggest that the accuracy seemed almost supernatural.</p>            </section>
+
+            <section class="info-card">
+              <h4>Grammar notes</h4>
+              <dl class="grammar-list">
+<div class="grammar-item"><dt>How to use it</dt><dd>Use it after seem, appear, or prove, or before nouns such as prediction, warning, analysis, or observation.</dd></div><div class="grammar-item"><dt>What can follow it</dt><dd>The sentence usually explains the later event that made the earlier prediction appear accurate.</dd></div><div class="grammar-item"><dt>Position in a sentence</dt><dd>Modifiers such as almost, nearly, remarkably, and surprisingly are common because this use is usually figurative.</dd></div>              </dl>
+            </section>
+          </div>
+
+          <p class="subsection-title">Useful patterns</p>
+          <div class="pattern-list">
+            <article class="pattern-card">
+              <code class="pattern-code">seem or appear clairvoyant</code>
+<p class="pattern-use">Use this when an earlier judgment looks unusually accurate after later events.</p>              <p><strong>Example:</strong> Her comments from a decade ago now seem clairvoyant.</p>
+            </article>
+            <article class="pattern-card">
+              <code class="pattern-code">an almost clairvoyant prediction</code>
+<p class="pattern-use">Use this for a prediction that was so accurate that it seems supernatural.</p>              <p><strong>Example:</strong> The report contained an almost clairvoyant prediction of the energy crisis.</p>
+            </article>
+            <article class="pattern-card">
+              <code class="pattern-code">a clairvoyant analysis or warning</code>
+<p class="pattern-use">Use this for an analysis or warning that correctly anticipated later developments.</p>              <p><strong>Example:</strong> His clairvoyant warning was ignored by policymakers at the time.</p>
+            </article>
+          </div>
+
+          <p class="subsection-title">Common wrong usage</p>
+          <div class="error-list">
+            <article class="error-card">
+              <p class="error-wrong"><strong>Wrong:</strong> The prediction was clairvoyance.</p>
+              <p class="error-correct"><strong>Correct:</strong> The prediction was clairvoyant.</p>
+<p class="error-explanation">Use the adjective clairvoyant after was. Clairvoyance is a noun.</p>            </article>
+            <article class="error-card">
+              <p class="error-wrong"><strong>Wrong:</strong> Her analysis clairvoyantly the future.</p>
+              <p class="error-correct"><strong>Correct:</strong> Her analysis predicted the future with remarkable accuracy.</p>
+<p class="error-explanation">Clairvoyantly is an adverb and cannot function as the main verb.</p>            </article>
+          </div>
+
+        </div>
+      </article>
+      <article class="sense-card" id="meaning-3">
+        <header class="sense-head">
+          <span class="sense-number">Meaning 3</span>
+          <h3>Person believed to have supernatural perception</h3>
+          <div class="badge-row">
+            <span class="badge">countable noun</span>
+            <span class="badge">/klɛrˈvɔɪənt/</span>
+<span class="badge">neutral; common in fiction, popular culture, and discussions of supernatural claims</span>          </div>
+          <div class="sense-pronunciation-row">
+            <a class="pronunciation-button sense"
+               href="audios/clairvoyant.mp3"
+               data-pronunciation-button
+               data-pronunciation-phrase="clairvoyant"
+               data-audio-src="audios/clairvoyant.mp3"
+               aria-label="Hear the countable noun pronunciation">
+              <span aria-hidden="true">🔊</span>
+              <span>Hear countable noun pronunciation</span>
+            </a>
+          </div>
+        </header>
+        <div class="sense-body">
+          <p class="definition">a person who claims or is believed to know about future, distant, or hidden events through a supernatural ability</p>
+<p class="plain-equivalent"><strong>In simpler words:</strong> a person said to see hidden things or the future</p><div class="pattern-banner"><strong>Typical pattern:</strong> a clairvoyant who claims to + verb</div>
+
+          <p class="subsection-title">Natural examples</p>
+          <ol class="example-list">
+<li>The clairvoyant claimed that she could describe events occurring far away.</li><li>He visited a clairvoyant who offered to predict his future.</li><li>The experiment tested whether self-described clairvoyants could identify hidden objects.</li><li>In the novel, a young clairvoyant warns the village about an approaching disaster.</li><li>The documentary interviewed several people who worked professionally as clairvoyants.</li><li>The police rejected the clairvoyant&#39;s offer to help locate the missing property.</li><li>Skeptics argued that the clairvoyant had obtained the information through ordinary questioning.</li>          </ol>
+
+          <div class="info-grid">
+            <section class="info-card good">
+              <h4>Nuance and implication</h4>
+<p><strong>Central nuance:</strong> The noun identifies a person associated specifically with perceiving distant, hidden, or future events.</p><p><strong>Usual implication:</strong> The word itself does not prove that the person&#39;s claims are true, so careful writing often includes claimed, alleged, or self-described.</p><p><strong>Compared with “fortune-teller”:</strong> A fortune-teller predicts a person&#39;s future, often as a profession. A clairvoyant is believed to perceive hidden, distant, or future information and may claim a broader type of supernatural perception.</p>            </section>
+
+            <section class="info-card">
+              <h4>Grammar notes</h4>
+              <dl class="grammar-list">
+<div class="grammar-item"><dt>How to use it</dt><dd>Use a clairvoyant for one person and clairvoyants for more than one.</dd></div><div class="grammar-item"><dt>What can follow it</dt><dd>It is often followed by a clause beginning with who to explain what the person claims to perceive.</dd></div><div class="grammar-item"><dt>Noun use</dt><dd>This is a countable noun, so the singular normally needs a, an, or the.</dd></div>              </dl>
+            </section>
+          </div>
+
+          <p class="subsection-title">Useful patterns</p>
+          <div class="pattern-list">
+            <article class="pattern-card">
+              <code class="pattern-code">a clairvoyant who claims to + verb</code>
+<p class="pattern-use">Use this to report the person&#39;s claim without presenting it as an established fact.</p>              <p><strong>Example:</strong> The program featured a clairvoyant who claimed to communicate with distant people.</p>
+            </article>
+            <article class="pattern-card">
+              <code class="pattern-code">a self-described clairvoyant</code>
+<p class="pattern-use">Use this for someone who identifies themselves as having such abilities.</p>              <p><strong>Example:</strong> A self-described clairvoyant agreed to participate in the controlled experiment.</p>
+            </article>
+            <article class="pattern-card">
+              <code class="pattern-code">consult or visit a clairvoyant</code>
+<p class="pattern-use">Use this when someone seeks advice or predictions from such a person.</p>              <p><strong>Example:</strong> The character visits a clairvoyant before beginning her journey.</p>
+            </article>
+          </div>
+
+          <p class="subsection-title">Common wrong usage</p>
+          <div class="error-list">
+            <article class="error-card">
+              <p class="error-wrong"><strong>Wrong:</strong> She works as clairvoyant.</p>
+              <p class="error-correct"><strong>Correct:</strong> She works as a clairvoyant.</p>
+<p class="error-explanation">The singular countable noun needs a.</p>            </article>
+            <article class="error-card">
+              <p class="error-wrong"><strong>Wrong:</strong> The clairvoyance predicted a major change.</p>
+              <p class="error-correct"><strong>Correct:</strong> The clairvoyant predicted a major change.</p>
+<p class="error-explanation">Clairvoyant refers to the person. Clairvoyance refers to the supposed ability.</p>            </article>
+          </div>
+
+        </div>
+      </article>
+    </section>
+
+    <section class="section" id="family">
+      <div class="section-head">
+        <p class="section-kicker">Morphology</p>
+        <h2>Word family</h2>
+        <p class="section-intro">Only common and educationally useful family members are included.</p>
+      </div>
+      <div class="card-grid three">
+        <article class="family-card">
+          <p class="eyebrow">uncountable noun</p>
+          <h3>clairvoyance</h3>
+<p class="ipa">/klɛrˈvɔɪəns/</p>          <p>the supposed ability to know about future, distant, or hidden events without using the ordinary senses</p>
+          <div class="mini-facts">
+<p class="mini-fact"><strong>Relationship:</strong> This noun names the supposed ability associated with a clairvoyant person.</p><p class="mini-fact"><strong>Pattern:</strong> evidence of clairvoyance or claim to possess clairvoyance</p><p class="mini-fact"><strong>Usage note:</strong> It is normally used without a or an.</p>          </div>
+          <ol class="example-list"><li>The researchers found no convincing evidence of clairvoyance.</li><li>Clairvoyance plays an important role in the novel&#39;s plot.</li></ol>
+        </article>
+        <article class="family-card">
+          <p class="eyebrow">adverb</p>
+          <h3>clairvoyantly</h3>
+<p class="ipa">/klɛrˈvɔɪəntli/</p>          <p>in a way that seems to show knowledge of future or hidden events</p>
+          <div class="mini-facts">
+<p class="mini-fact"><strong>Relationship:</strong> This adverb describes an action that appears unusually accurate about future or hidden events.</p><p class="mini-fact"><strong>Usage note:</strong> It is uncommon. A phrase such as with remarkable foresight is often more natural.</p>          </div>
+          <ol class="example-list"><li>The author almost clairvoyantly anticipated the rise of digital surveillance.</li><li>She seemed to predict the change clairvoyantly.</li></ol>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="collocations">
+      <div class="section-head">
+        <p class="section-kicker">Natural combinations</p>
+        <h2>Common collocations</h2>
+        <p class="section-intro">These are established combinations, not merely grammatically possible phrases.</p>
+      </div>
+      <div class="card-grid three">
+        <article class="collocation-card">
+<p class="eyebrow">Able to perceive hidden or future events</p>          <h3>clairvoyant ability</h3>
+<p>the supposed power to perceive future, distant, or hidden events</p>          <div class="mini-facts">
+<p class="mini-fact"><strong>Pattern:</strong> claim, possess, or demonstrate clairvoyant ability</p>            <p class="mini-fact"><strong>Example:</strong> The experiment was designed to test claims of clairvoyant ability.</p>
+          </div>
+        </article>
+        <article class="collocation-card">
+<p class="eyebrow">Able to perceive hidden or future events</p>          <h3>clairvoyant powers</h3>
+<p>supposed supernatural abilities involving hidden or future knowledge</p>          <div class="mini-facts">
+            <p class="mini-fact"><strong>Example:</strong> The character believes that she has clairvoyant powers.</p>
+<p class="mini-fact"><strong>Usage note:</strong> The plural powers is common in fictional and popular descriptions.</p>          </div>
+        </article>
+        <article class="collocation-card">
+<p class="eyebrow">Able to perceive hidden or future events</p>          <h3>clairvoyant vision</h3>
+<p>a supposed mental image of a hidden or future event</p>          <div class="mini-facts">
+            <p class="mini-fact"><strong>Example:</strong> In the story, a clairvoyant vision warns him of approaching danger.</p>
+          </div>
+        </article>
+        <article class="collocation-card">
+<p class="eyebrow">Showing accurate foresight</p>          <h3>almost clairvoyant</h3>
+<p>so accurate about the future that it seems nearly supernatural</p>          <div class="mini-facts">
+<p class="mini-fact"><strong>Pattern:</strong> seem or appear almost clairvoyant</p>            <p class="mini-fact"><strong>Example:</strong> Her forecast of the industry&#39;s development was almost clairvoyant.</p>
+          </div>
+        </article>
+        <article class="collocation-card">
+<p class="eyebrow">Showing accurate foresight</p>          <h3>clairvoyant prediction</h3>
+<p>a prediction that proves surprisingly accurate</p>          <div class="mini-facts">
+            <p class="mini-fact"><strong>Example:</strong> The essay contained a seemingly clairvoyant prediction about social media.</p>
+          </div>
+        </article>
+        <article class="collocation-card">
+<p class="eyebrow">Showing accurate foresight</p>          <h3>clairvoyant insight</h3>
+<p>an unusually accurate understanding of a future development</p>          <div class="mini-facts">
+            <p class="mini-fact"><strong>Example:</strong> The economist&#39;s clairvoyant insight helped explain changes that occurred years later.</p>
+          </div>
+        </article>
+        <article class="collocation-card">
+<p class="eyebrow">Person believed to have supernatural perception</p>          <h3>self-described clairvoyant</h3>
+<p>a person who describes themselves as having clairvoyant abilities</p>          <div class="mini-facts">
+            <p class="mini-fact"><strong>Example:</strong> The study recruited a self-described clairvoyant for a controlled test.</p>
+          </div>
+        </article>
+        <article class="collocation-card">
+<p class="eyebrow">Person believed to have supernatural perception</p>          <h3>consult a clairvoyant</h3>
+<p>seek advice or information from a person believed to have supernatural perception</p>          <div class="mini-facts">
+            <p class="mini-fact"><strong>Example:</strong> In the play, the king consults a clairvoyant before the battle.</p>
+          </div>
+        </article>
+        <article class="collocation-card">
+<p class="eyebrow">Able to perceive hidden or future events</p>          <h3>evidence of clairvoyance</h3>
+<p>information supporting the existence of the supposed ability</p>          <div class="mini-facts">
+            <p class="mini-fact"><strong>Example:</strong> The researchers reported that they had found no reliable evidence of clairvoyance.</p>
+<p class="mini-fact"><strong>Usage note:</strong> Clairvoyance is the noun form.</p>          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="relations">
+      <div class="section-head">
+        <p class="section-kicker">Meaning relations</p>
+        <h2>Synonyms and antonyms</h2>
+        <p class="section-intro">Only clear and useful relationships are included.</p>
+      </div>
+      <h3>Close synonyms</h3>
+      <div class="compare-grid">
+        <article class="compare-card">
+          <span class="word-pill">psychic</span>
+          <p class="meta">adjective · Able to perceive hidden or future events</p>
+<p><strong>Shared meaning:</strong> Both words can describe a person believed to receive information through supernatural means.</p>          <p><strong>Difference:</strong> Psychic is broader and can refer to several supposed supernatural mental abilities. Clairvoyant refers more specifically to perceiving distant, hidden, or future events.</p>
+          <p><strong>Example:</strong> She claimed to possess psychic abilities.</p>
+        </article>
+        <article class="compare-card">
+          <span class="word-pill">prescient</span>
+          <p class="meta">adjective · Showing accurate foresight</p>
+<p><strong>Shared meaning:</strong> Both words can describe a prediction or judgment that accurately anticipates later events.</p>          <p><strong>Difference:</strong> Prescient means showing accurate knowledge of what will happen and does not usually suggest supernatural powers. Clairvoyant is more vivid and may imply that the accuracy seemed almost supernatural.</p>
+          <p><strong>Example:</strong> The report&#39;s prescient warning was largely ignored at the time.</p>
+        </article>
+        <article class="compare-card">
+          <span class="word-pill">prophetic</span>
+          <p class="meta">adjective · Showing accurate foresight</p>
+<p><strong>Shared meaning:</strong> Both can describe words or predictions that later appear unusually accurate.</p>          <p><strong>Difference:</strong> Prophetic often refers to a statement that correctly predicts the future and may have a religious or solemn association. Clairvoyant emphasizes apparently seeing what was hidden or still to come.</p>
+          <p><strong>Example:</strong> Her comments about the environmental crisis proved prophetic.</p>
+        </article>
+        <article class="compare-card">
+          <span class="word-pill">fortune-teller</span>
+          <p class="meta">countable noun · Person believed to have supernatural perception</p>
+<p><strong>Shared meaning:</strong> Both words can refer to someone who claims to predict future events.</p>          <p><strong>Difference:</strong> A fortune-teller specifically predicts people&#39;s futures, often as a service. A clairvoyant may claim to perceive a wider range of hidden, distant, or future events.</p>
+          <p><strong>Example:</strong> The fortune-teller offered to read his cards.</p>
+        </article>
+        <article class="compare-card">
+          <span class="word-pill">medium</span>
+          <p class="meta">countable noun · Person believed to have supernatural perception</p>
+<p><strong>Shared meaning:</strong> Both words refer to people associated with claimed supernatural abilities.</p>          <p><strong>Difference:</strong> A medium claims to communicate with the spirits of dead people. A clairvoyant claims to perceive hidden, distant, or future information.</p>
+          <p><strong>Example:</strong> The medium claimed to deliver messages from the dead.</p>
+        </article>
+      </div>
+
+    </section>
+
+    <section class="section" id="confusables">
+      <div class="section-head">
+        <p class="section-kicker">Precision</p>
+        <h2>Words learners may confuse</h2>
+      </div>
+      <div class="compare-grid">
+        <article class="compare-card">
+          <span class="word-pill">clairvoyance</span>
+<p class="meta">adjective or countable noun versus uncountable noun</p><p><strong>Why it is confusing:</strong> The words have closely related meanings and very similar forms.</p>          <p><strong>Key difference:</strong> Clairvoyant is an adjective or a noun referring to a person, while clairvoyance is the uncountable noun for the supposed ability.</p>
+          <p><strong>clairvoyant:</strong> The novel describes a clairvoyant child.</p>
+          <p><strong>clairvoyance:</strong> The novel explores the idea of clairvoyance.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="etymology">
+      <div class="section-head">
+        <p class="section-kicker">Word history</p>
+        <h2>Etymology</h2>
+        <p class="section-intro">Only confidently documented details are shown.</p>
+      </div>
+      <div class="etymology-flow">
+<article class="etymology-step"><h3>Origin</h3><p>The word comes from French clairvoyant, formed from words meaning clear and seeing.</p></article><article class="etymology-step"><h3>Early meaning</h3><p>Its basic historical sense was clear-sighted or able to see clearly.</p></article><article class="etymology-step"><h3>Development</h3><p>It later became associated specifically with the supposed supernatural perception of distant, hidden, or future events.</p></article>      </div>
+    </section>
+
+    <section class="section" id="exercises">
+      <div class="section-head">
+        <p class="section-kicker">Active practice</p>
+        <h2>Practice exercises</h2>
+      </div>
+      <div class="exercise-grid">
+        <article class="exercise-card">
+          <h3>Word family choice</h3>
+          <p class="exercise-instruction">Choose the best member of the word family for each blank.</p>
+          <ol class="clean-list"><li>The researchers found no scientific evidence supporting the existence of _____.</li><li>The novel&#39;s main character is a _____ who claims to see future events.</li><li>His remarkably _____ warning anticipated the crisis by several years.</li></ol>
+        </article>
+        <article class="exercise-card">
+          <h3>Correct or incorrect?</h3>
+          <p class="exercise-instruction">Decide whether each sentence is correct. Correct the inaccurate ones.</p>
+          <ol class="clean-list"><li>She claims to possess clairvoyant abilities.</li><li>The clairvoyance predicted that the city would expand.</li><li>His prediction now seems almost clairvoyant.</li><li>She works as clairvoyant in the city center.</li></ol>
+        </article>
+        <article class="exercise-card">
+          <h3>Collocation practice</h3>
+          <p class="exercise-instruction">Complete each sentence with a natural collocation.</p>
+          <ol class="clean-list"><li>The researchers tested her claim of _____ ability under controlled conditions.</li><li>The author&#39;s prediction about digital communication now seems almost _____.</li><li>The skeptical journalist decided to _____ a clairvoyant for the article.</li></ol>
+        </article>
+      </div>
+
+      <details class="answer-key">
+        <summary>Open the complete answer key</summary>
+        <div class="answer-content">
+          <section class="answer-group">
+            <h3>Word family choice</h3>
+            <p class="answer-item"><strong>1. clairvoyance</strong><br>The researchers found no scientific evidence supporting the existence of clairvoyance.<br><em>Use the noun clairvoyance for the supposed ability.</em></p>
+            <p class="answer-item"><strong>2. clairvoyant</strong><br>The novel&#39;s main character is a clairvoyant who claims to see future events.<br><em>Use the countable noun clairvoyant for the person.</em></p>
+            <p class="answer-item"><strong>3. clairvoyant</strong><br>His remarkably clairvoyant warning anticipated the crisis by several years.<br><em>Use the adjective clairvoyant before warning.</em></p>
+          </section>
+          <section class="answer-group">
+            <h3>Correct or incorrect?</h3>
+            <p class="answer-item"><strong>1. Correct</strong><br><em>Clairvoyant abilities is a natural expression for the supposed supernatural power.</em></p>
+            <p class="answer-item"><strong>2. Incorrect</strong><br>The clairvoyant predicted that the city would expand.<br><em>Use clairvoyant for the person making the prediction.</em></p>
+            <p class="answer-item"><strong>3. Correct</strong><br><em>This is a natural figurative use for a prediction that proved unusually accurate.</em></p>
+            <p class="answer-item"><strong>4. Incorrect</strong><br>She works as a clairvoyant in the city center.<br><em>The singular countable noun requires a.</em></p>
+          </section>
+          <section class="answer-group">
+            <h3>Collocation practice</h3>
+            <p class="answer-item"><strong>1. clairvoyant</strong><br>The researchers tested her claim of clairvoyant ability under controlled conditions.<br><em>Clairvoyant ability is an established phrase for the supposed power.</em></p>
+            <p class="answer-item"><strong>2. clairvoyant</strong><br>The author&#39;s prediction about digital communication now seems almost clairvoyant.<br><em>Almost clairvoyant describes a prediction that proved surprisingly accurate.</em></p>
+            <p class="answer-item"><strong>3. consult</strong><br>The skeptical journalist decided to consult a clairvoyant for the article.<br><em>Consult a clairvoyant means seek information or advice from such a person.</em></p>
+          </section>
+        </div>
+      </details>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-row">
+        <span>Created and compiled by <strong>Amir Kooshky</strong></span>
+        <nav class="footer-links" aria-label="Creator links">
+          <a href="https://t.me/KooshkyTOEFL" target="_blank" rel="noopener">Telegram channel</a>
+          <a href="https://www.instagram.com/kooshkytoefl" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://t.me/KooshkyTOEFL_pv" target="_blank" rel="noopener">Personal Telegram</a>
+        </nav>
+      </div>
+    </footer>
+  </main>
+
+  <button class="back-to-top no-js-hidden" type="button" data-back-to-top aria-label="Go to the top">↑</button>
+  <script>
+(() => {
+  "use strict";
+
+  const root = document.documentElement;
+  root.classList.add("js");
+
+  const storageKey = "kooshky-wotd-theme";
+  const themeButton = document.querySelector("[data-theme-toggle]");
+  const topButton = document.querySelector("[data-back-to-top]");
+  const audioButtons = document.querySelectorAll("[data-pronunciation-button]");
+  const statusNode = document.querySelector("[data-audio-status]");
+
+  const applyTheme = (theme) => {
+    if (theme === "light" || theme === "dark") root.dataset.theme = theme;
+    else delete root.dataset.theme;
+
+    if (themeButton) {
+      const active = root.dataset.theme || "system";
+      themeButton.textContent = active === "dark" ? "Light mode" : "Dark mode";
+      themeButton.setAttribute("aria-label", `Switch from ${active} theme`);
+    }
+  };
+
+  let savedTheme = null;
+  try { savedTheme = localStorage.getItem(storageKey); } catch (_) { /* nonessential */ }
+  applyTheme(savedTheme);
+
+  themeButton?.addEventListener("click", () => {
+    const systemDark = window.matchMedia?.("(prefers-color-scheme: dark)").matches;
+    const current = root.dataset.theme || (systemDark ? "dark" : "light");
+    const next = current === "dark" ? "light" : "dark";
+    applyTheme(next);
+    try { localStorage.setItem(storageKey, next); } catch (_) { /* local files may block storage */ }
+  });
+
+  const speakWithBrowser = (phrase, button) => {
+    if (!("speechSynthesis" in window) || typeof SpeechSynthesisUtterance === "undefined") {
+      if (statusNode) statusNode.textContent = "The audio file is unavailable and this browser has no speech fallback.";
+      window.location.href = button.href;
+      return;
+    }
+
+    window.speechSynthesis.cancel();
+    const utterance = new SpeechSynthesisUtterance(phrase);
+    utterance.lang = "en-US";
+    utterance.rate = 0.88;
+    utterance.onstart = () => {
+      button.classList.add("is-playing");
+      if (statusNode) statusNode.textContent = "Using the browser voice because the local MP3 was unavailable.";
+    };
+    utterance.onend = utterance.onerror = () => button.classList.remove("is-playing");
+    window.speechSynthesis.speak(utterance);
+  };
+
+  audioButtons.forEach((button) => {
+    button.addEventListener("click", (event) => {
+      event.preventDefault();
+      const phrase = button.dataset.pronunciationPhrase || "";
+      const src = button.dataset.audioSrc || button.getAttribute("href") || "";
+      let fallbackStarted = false;
+
+      const fallback = () => {
+        if (fallbackStarted) return;
+        fallbackStarted = true;
+        speakWithBrowser(phrase, button);
+      };
+
+      const audio = new Audio();
+      audio.preload = "auto";
+      audio.src = src;
+      audio.addEventListener("play", () => {
+        button.classList.add("is-playing");
+        if (statusNode) statusNode.textContent = `Playing local pronunciation: “${phrase}”.`;
+      }, { once: true });
+      audio.addEventListener("ended", () => button.classList.remove("is-playing"), { once: true });
+      audio.addEventListener("error", fallback, { once: true });
+
+      const playResult = audio.play();
+      if (playResult && typeof playResult.catch === "function") playResult.catch(fallback);
+    });
+  });
+
+  if (topButton) {
+    const updateTopButton = () => topButton.classList.toggle("visible", window.scrollY > 700);
+    window.addEventListener("scroll", updateTopButton, { passive: true });
+    updateTopButton();
+    topButton.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+  }
+})();
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,406 @@
+{
+    "document_type": "kooshky_toefl_word_of_the_day",
+    "schema_version": "1.3",
+    "slug": "clairvoyant",
+    "word": "clairvoyant",
+    "date": "July 30th 2026",
+    "pronunciation": {
+      "primary_ipa": "/klɛrˈvɔɪənt/"
+    },
+    "hero": {
+      "part_of_speech_summary": "adjective and countable noun",
+      "short_meanings": [
+        "said to perceive hidden or future events",
+        "showing unusually accurate foresight",
+        "a person said to have such abilities"
+      ],
+      "one_line_summary": "Clairvoyant can describe a supposed supernatural ability, an unusually accurate prediction, or a person believed to possess that ability.",
+      "memorable_example": "His warning about the economic crisis now seems almost clairvoyant."
+    },
+    "meanings": [
+      {
+        "sense_title": "Able to perceive hidden or future events",
+        "part_of_speech": "adjective",
+        "ipa": "/klɛrˈvɔɪənt/",
+        "definition": "believed to be able to know about future, distant, or hidden events without receiving information through the ordinary senses",
+        "examples": [
+          "She claimed to be clairvoyant and able to predict major events.",
+          "The story features a clairvoyant woman who sees visions of the future.",
+          "I am not clairvoyant, so you need to tell me what you are thinking.",
+          "The researchers tested participants who said they had clairvoyant abilities.",
+          "According to the legend, the priest was clairvoyant and could see events occurring in distant lands.",
+          "He jokingly asked whether she was clairvoyant after her prediction came true.",
+          "The novel's main character becomes clairvoyant after a mysterious accident."
+        ],
+        "plain_english_equivalent": "supposedly able to know hidden things or see the future",
+        "typical_pattern": "be clairvoyant or have clairvoyant abilities",
+        "register": "neutral to formal; often used in discussions of supernatural beliefs, fiction, and psychological research",
+        "nuance": {
+          "central_nuance": "The word refers to knowledge supposedly gained without normal observation, communication, or reasoning.",
+          "usual_implication": "Writers often use claimed, believed, or supposedly because clairvoyant ability has not been scientifically established.",
+          "contrast_term": "observant",
+          "contrast_explanation": "An observant person notices information through the ordinary senses. A clairvoyant person is claimed to receive information without those normal sources."
+        },
+        "grammar": {
+          "how_to_use": "Use it after a linking verb such as be or seem, or before a noun such as ability, vision, or character.",
+          "what_can_follow": "It may be followed by enough context to explain the supposed ability, as in clairvoyant about future events, although this pattern is less common than have clairvoyant abilities.",
+          "position_note": "The expression I am not clairvoyant is often used humorously to mean that someone cannot know unspoken information or predict what will happen."
+        },
+        "patterns": [
+          {
+            "pattern": "be clairvoyant",
+            "use": "Use this to describe someone who is believed or claimed to have the ability.",
+            "example": "The fortune-teller claimed to be clairvoyant."
+          },
+          {
+            "pattern": "clairvoyant ability",
+            "use": "Use this to name the supposed power to perceive hidden or future events.",
+            "example": "The study found no reliable evidence of clairvoyant ability."
+          },
+          {
+            "pattern": "I am not clairvoyant",
+            "use": "Use this, often humorously, when someone expects you to know something they have not told you.",
+            "example": "I am not clairvoyant; please explain what you need."
+          }
+        ],
+        "errors": [
+          {
+            "wrong": "She is a clairvoyant person who can clairvoyance the future.",
+            "correct": "She is a clairvoyant person who claims to see the future.",
+            "explanation": "Clairvoyance is a noun, not a verb."
+          },
+          {
+            "wrong": "I am not a clairvoyant, so tell me what you want.",
+            "correct": "I am not clairvoyant, so tell me what you want.",
+            "explanation": "Use the adjective without a when describing an ability. I am not a clairvoyant is possible only when clairvoyant means a person who practices professionally."
+          }
+        ]
+      },
+      {
+        "sense_title": "Showing accurate foresight",
+        "part_of_speech": "adjective",
+        "ipa": "/klɛrˈvɔɪənt/",
+        "definition": "showing an unusually accurate understanding of what will happen or of something that is not yet obvious",
+        "examples": [
+          "His warning about the economic crisis now seems almost clairvoyant.",
+          "The author's clairvoyant analysis anticipated many later technological changes.",
+          "Her prediction that remote work would become widespread appeared remarkably clairvoyant.",
+          "In retrospect, the committee's concerns about water shortages seem clairvoyant.",
+          "The novel offered a nearly clairvoyant picture of life in a highly connected society.",
+          "His clairvoyant assessment of the market allowed the company to prepare early.",
+          "What once sounded unrealistic now appears to have been a clairvoyant observation."
+        ],
+        "plain_english_equivalent": "extremely accurate about what would happen",
+        "typical_pattern": "seem, appear, or prove clairvoyant",
+        "register": "formal and often figurative; common in commentary, reviews, and historical analysis",
+        "nuance": {
+          "central_nuance": "This use does not necessarily suggest a real supernatural power. It emphasizes that an earlier prediction or judgment was surprisingly accurate.",
+          "usual_implication": "The accuracy often becomes clear only later, after the predicted development has occurred.",
+          "contrast_term": "prescient",
+          "contrast_explanation": "Prescient also means accurately anticipating future events and is usually the more precise formal choice. Clairvoyant is more vivid and may suggest that the accuracy seemed almost supernatural."
+        },
+        "grammar": {
+          "how_to_use": "Use it after seem, appear, or prove, or before nouns such as prediction, warning, analysis, or observation.",
+          "what_can_follow": "The sentence usually explains the later event that made the earlier prediction appear accurate.",
+          "position_note": "Modifiers such as almost, nearly, remarkably, and surprisingly are common because this use is usually figurative."
+        },
+        "patterns": [
+          {
+            "pattern": "seem or appear clairvoyant",
+            "use": "Use this when an earlier judgment looks unusually accurate after later events.",
+            "example": "Her comments from a decade ago now seem clairvoyant."
+          },
+          {
+            "pattern": "an almost clairvoyant prediction",
+            "use": "Use this for a prediction that was so accurate that it seems supernatural.",
+            "example": "The report contained an almost clairvoyant prediction of the energy crisis."
+          },
+          {
+            "pattern": "a clairvoyant analysis or warning",
+            "use": "Use this for an analysis or warning that correctly anticipated later developments.",
+            "example": "His clairvoyant warning was ignored by policymakers at the time."
+          }
+        ],
+        "errors": [
+          {
+            "wrong": "The prediction was clairvoyance.",
+            "correct": "The prediction was clairvoyant.",
+            "explanation": "Use the adjective clairvoyant after was. Clairvoyance is a noun."
+          },
+          {
+            "wrong": "Her analysis clairvoyantly the future.",
+            "correct": "Her analysis predicted the future with remarkable accuracy.",
+            "explanation": "Clairvoyantly is an adverb and cannot function as the main verb."
+          }
+        ]
+      },
+      {
+        "sense_title": "Person believed to have supernatural perception",
+        "part_of_speech": "countable noun",
+        "ipa": "/klɛrˈvɔɪənt/",
+        "definition": "a person who claims or is believed to know about future, distant, or hidden events through a supernatural ability",
+        "examples": [
+          "The clairvoyant claimed that she could describe events occurring far away.",
+          "He visited a clairvoyant who offered to predict his future.",
+          "The experiment tested whether self-described clairvoyants could identify hidden objects.",
+          "In the novel, a young clairvoyant warns the village about an approaching disaster.",
+          "The documentary interviewed several people who worked professionally as clairvoyants.",
+          "The police rejected the clairvoyant's offer to help locate the missing property.",
+          "Skeptics argued that the clairvoyant had obtained the information through ordinary questioning."
+        ],
+        "plain_english_equivalent": "a person said to see hidden things or the future",
+        "typical_pattern": "a clairvoyant who claims to + verb",
+        "register": "neutral; common in fiction, popular culture, and discussions of supernatural claims",
+        "nuance": {
+          "central_nuance": "The noun identifies a person associated specifically with perceiving distant, hidden, or future events.",
+          "usual_implication": "The word itself does not prove that the person's claims are true, so careful writing often includes claimed, alleged, or self-described.",
+          "contrast_term": "fortune-teller",
+          "contrast_explanation": "A fortune-teller predicts a person's future, often as a profession. A clairvoyant is believed to perceive hidden, distant, or future information and may claim a broader type of supernatural perception."
+        },
+        "grammar": {
+          "how_to_use": "Use a clairvoyant for one person and clairvoyants for more than one.",
+          "what_can_follow": "It is often followed by a clause beginning with who to explain what the person claims to perceive.",
+          "noun_use": "This is a countable noun, so the singular normally needs a, an, or the."
+        },
+        "patterns": [
+          {
+            "pattern": "a clairvoyant who claims to + verb",
+            "use": "Use this to report the person's claim without presenting it as an established fact.",
+            "example": "The program featured a clairvoyant who claimed to communicate with distant people."
+          },
+          {
+            "pattern": "a self-described clairvoyant",
+            "use": "Use this for someone who identifies themselves as having such abilities.",
+            "example": "A self-described clairvoyant agreed to participate in the controlled experiment."
+          },
+          {
+            "pattern": "consult or visit a clairvoyant",
+            "use": "Use this when someone seeks advice or predictions from such a person.",
+            "example": "The character visits a clairvoyant before beginning her journey."
+          }
+        ],
+        "errors": [
+          {
+            "wrong": "She works as clairvoyant.",
+            "correct": "She works as a clairvoyant.",
+            "explanation": "The singular countable noun needs a."
+          },
+          {
+            "wrong": "The clairvoyance predicted a major change.",
+            "correct": "The clairvoyant predicted a major change.",
+            "explanation": "Clairvoyant refers to the person. Clairvoyance refers to the supposed ability."
+          }
+        ]
+      }
+    ],
+    "word_family": [
+      {
+        "word": "clairvoyance",
+        "part_of_speech": "uncountable noun",
+        "definition": "the supposed ability to know about future, distant, or hidden events without using the ordinary senses",
+        "examples": [
+          "The researchers found no convincing evidence of clairvoyance.",
+          "Clairvoyance plays an important role in the novel's plot."
+        ],
+        "ipa": "/klɛrˈvɔɪəns/",
+        "relationship_to_headword": "This noun names the supposed ability associated with a clairvoyant person.",
+        "grammar_pattern": "evidence of clairvoyance or claim to possess clairvoyance",
+        "usage_note": "It is normally used without a or an."
+      },
+      {
+        "word": "clairvoyantly",
+        "part_of_speech": "adverb",
+        "definition": "in a way that seems to show knowledge of future or hidden events",
+        "examples": [
+          "The author almost clairvoyantly anticipated the rise of digital surveillance.",
+          "She seemed to predict the change clairvoyantly."
+        ],
+        "ipa": "/klɛrˈvɔɪəntli/",
+        "relationship_to_headword": "This adverb describes an action that appears unusually accurate about future or hidden events.",
+        "usage_note": "It is uncommon. A phrase such as with remarkable foresight is often more natural."
+      }
+    ],
+    "collocations": [
+      {
+        "collocation": "clairvoyant ability",
+        "example": "The experiment was designed to test claims of clairvoyant ability.",
+        "applies_to_sense": "Able to perceive hidden or future events",
+        "meaning": "the supposed power to perceive future, distant, or hidden events",
+        "grammar_pattern": "claim, possess, or demonstrate clairvoyant ability"
+      },
+      {
+        "collocation": "clairvoyant powers",
+        "example": "The character believes that she has clairvoyant powers.",
+        "applies_to_sense": "Able to perceive hidden or future events",
+        "meaning": "supposed supernatural abilities involving hidden or future knowledge",
+        "usage_note": "The plural powers is common in fictional and popular descriptions."
+      },
+      {
+        "collocation": "clairvoyant vision",
+        "example": "In the story, a clairvoyant vision warns him of approaching danger.",
+        "applies_to_sense": "Able to perceive hidden or future events",
+        "meaning": "a supposed mental image of a hidden or future event"
+      },
+      {
+        "collocation": "almost clairvoyant",
+        "example": "Her forecast of the industry's development was almost clairvoyant.",
+        "applies_to_sense": "Showing accurate foresight",
+        "meaning": "so accurate about the future that it seems nearly supernatural",
+        "grammar_pattern": "seem or appear almost clairvoyant"
+      },
+      {
+        "collocation": "clairvoyant prediction",
+        "example": "The essay contained a seemingly clairvoyant prediction about social media.",
+        "applies_to_sense": "Showing accurate foresight",
+        "meaning": "a prediction that proves surprisingly accurate"
+      },
+      {
+        "collocation": "clairvoyant insight",
+        "example": "The economist's clairvoyant insight helped explain changes that occurred years later.",
+        "applies_to_sense": "Showing accurate foresight",
+        "meaning": "an unusually accurate understanding of a future development"
+      },
+      {
+        "collocation": "self-described clairvoyant",
+        "example": "The study recruited a self-described clairvoyant for a controlled test.",
+        "applies_to_sense": "Person believed to have supernatural perception",
+        "meaning": "a person who describes themselves as having clairvoyant abilities"
+      },
+      {
+        "collocation": "consult a clairvoyant",
+        "example": "In the play, the king consults a clairvoyant before the battle.",
+        "applies_to_sense": "Person believed to have supernatural perception",
+        "meaning": "seek advice or information from a person believed to have supernatural perception"
+      },
+      {
+        "collocation": "evidence of clairvoyance",
+        "example": "The researchers reported that they had found no reliable evidence of clairvoyance.",
+        "applies_to_sense": "Able to perceive hidden or future events",
+        "meaning": "information supporting the existence of the supposed ability",
+        "usage_note": "Clairvoyance is the noun form."
+      }
+    ],
+    "synonyms": [
+      {
+        "word": "psychic",
+        "part_of_speech": "adjective",
+        "applies_to_sense": "Able to perceive hidden or future events",
+        "difference": "Psychic is broader and can refer to several supposed supernatural mental abilities. Clairvoyant refers more specifically to perceiving distant, hidden, or future events.",
+        "example": "She claimed to possess psychic abilities.",
+        "shared_meaning": "Both words can describe a person believed to receive information through supernatural means."
+      },
+      {
+        "word": "prescient",
+        "part_of_speech": "adjective",
+        "applies_to_sense": "Showing accurate foresight",
+        "difference": "Prescient means showing accurate knowledge of what will happen and does not usually suggest supernatural powers. Clairvoyant is more vivid and may imply that the accuracy seemed almost supernatural.",
+        "example": "The report's prescient warning was largely ignored at the time.",
+        "shared_meaning": "Both words can describe a prediction or judgment that accurately anticipates later events."
+      },
+      {
+        "word": "prophetic",
+        "part_of_speech": "adjective",
+        "applies_to_sense": "Showing accurate foresight",
+        "difference": "Prophetic often refers to a statement that correctly predicts the future and may have a religious or solemn association. Clairvoyant emphasizes apparently seeing what was hidden or still to come.",
+        "example": "Her comments about the environmental crisis proved prophetic.",
+        "shared_meaning": "Both can describe words or predictions that later appear unusually accurate."
+      },
+      {
+        "word": "fortune-teller",
+        "part_of_speech": "countable noun",
+        "applies_to_sense": "Person believed to have supernatural perception",
+        "difference": "A fortune-teller specifically predicts people's futures, often as a service. A clairvoyant may claim to perceive a wider range of hidden, distant, or future events.",
+        "example": "The fortune-teller offered to read his cards.",
+        "shared_meaning": "Both words can refer to someone who claims to predict future events."
+      },
+      {
+        "word": "medium",
+        "part_of_speech": "countable noun",
+        "applies_to_sense": "Person believed to have supernatural perception",
+        "difference": "A medium claims to communicate with the spirits of dead people. A clairvoyant claims to perceive hidden, distant, or future information.",
+        "example": "The medium claimed to deliver messages from the dead.",
+        "shared_meaning": "Both words refer to people associated with claimed supernatural abilities."
+      }
+    ],
+    "confusables": [
+      {
+        "word": "clairvoyance",
+        "key_difference": "Clairvoyant is an adjective or a noun referring to a person, while clairvoyance is the uncountable noun for the supposed ability.",
+        "headword_example": "The novel describes a clairvoyant child.",
+        "confusable_example": "The novel explores the idea of clairvoyance.",
+        "part_of_speech": "adjective or countable noun versus uncountable noun",
+        "why_confused": "The words have closely related meanings and very similar forms."
+      }
+    ],
+    "etymology": {
+      "origin": "The word comes from French clairvoyant, formed from words meaning clear and seeing.",
+      "early_meaning": "Its basic historical sense was clear-sighted or able to see clearly.",
+      "development": "It later became associated specifically with the supposed supernatural perception of distant, hidden, or future events."
+    },
+    "exercises": {
+      "word_family_choice": [
+        {
+          "prompt_sentence": "The researchers found no scientific evidence supporting the existence of _____.",
+          "answer": "clairvoyance",
+          "completed_sentence": "The researchers found no scientific evidence supporting the existence of clairvoyance.",
+          "explanation": "Use the noun clairvoyance for the supposed ability."
+        },
+        {
+          "prompt_sentence": "The novel's main character is a _____ who claims to see future events.",
+          "answer": "clairvoyant",
+          "completed_sentence": "The novel's main character is a clairvoyant who claims to see future events.",
+          "explanation": "Use the countable noun clairvoyant for the person."
+        },
+        {
+          "prompt_sentence": "His remarkably _____ warning anticipated the crisis by several years.",
+          "answer": "clairvoyant",
+          "completed_sentence": "His remarkably clairvoyant warning anticipated the crisis by several years.",
+          "explanation": "Use the adjective clairvoyant before warning."
+        }
+      ],
+      "correct_or_incorrect": [
+        {
+          "sentence": "She claims to possess clairvoyant abilities.",
+          "verdict": "Correct",
+          "explanation": "Clairvoyant abilities is a natural expression for the supposed supernatural power."
+        },
+        {
+          "sentence": "The clairvoyance predicted that the city would expand.",
+          "verdict": "Incorrect",
+          "corrected_sentence": "The clairvoyant predicted that the city would expand.",
+          "explanation": "Use clairvoyant for the person making the prediction."
+        },
+        {
+          "sentence": "His prediction now seems almost clairvoyant.",
+          "verdict": "Correct",
+          "explanation": "This is a natural figurative use for a prediction that proved unusually accurate."
+        },
+        {
+          "sentence": "She works as clairvoyant in the city center.",
+          "verdict": "Incorrect",
+          "corrected_sentence": "She works as a clairvoyant in the city center.",
+          "explanation": "The singular countable noun requires a."
+        }
+      ],
+      "collocation_practice": [
+        {
+          "prompt_sentence": "The researchers tested her claim of _____ ability under controlled conditions.",
+          "answer": "clairvoyant",
+          "completed_sentence": "The researchers tested her claim of clairvoyant ability under controlled conditions.",
+          "explanation": "Clairvoyant ability is an established phrase for the supposed power."
+        },
+        {
+          "prompt_sentence": "The author's prediction about digital communication now seems almost _____.",
+          "answer": "clairvoyant",
+          "completed_sentence": "The author's prediction about digital communication now seems almost clairvoyant.",
+          "explanation": "Almost clairvoyant describes a prediction that proved surprisingly accurate."
+        },
+        {
+          "prompt_sentence": "The skeptical journalist decided to _____ a clairvoyant for the article.",
+          "answer": "consult",
+          "completed_sentence": "The skeptical journalist decided to consult a clairvoyant for the article.",
+          "explanation": "Consult a clairvoyant means seek information or advice from such a person."
+        }
+      ]
+    }
+  }

@@ -2,27 +2,25 @@
 """Batch-generate Kooshky TOEFL Word of the Day files from strict JSON.
 
 Default behavior:
-- Find every *.json file beside this script.
+- Find every compatible *.json file beside this script.
 - Validate each file against resources/wotd.schema.json.
-- Render a standalone HTML file with CSS and JS inlined.
-- Render a simple, dependable LaTeX source directly from the same JSON.
-- Compile the LaTeX source to PDF with latexmk + XeLaTeX, or XeLaTeX directly.
+- Render a standalone HTML file with CSS and JavaScript inlined.
+- Render a simple LaTeX source file from the same JSON.
 - Render a Telegram text file from the same JSON.
 
-The HTML and Telegram templates are resolved relative to this script. LaTeX is
-produced directly in Python so the PDF path has no elaborate template or custom
-box system to break.
+Pronunciation MP3s are generated separately by generate_pronunciation_audio.py.
+This script never searches for audio online and never creates PDF files.
 """
 from __future__ import annotations
 
 import argparse
 import json
 import re
-import shutil
-import subprocess
 import sys
 from pathlib import Path
 from typing import Any, Iterable
+
+from wotd_audio import audio_relative_path, normalize_phrase
 
 try:
     from jinja2 import Environment, FileSystemLoader, StrictUndefined, select_autoescape
@@ -32,35 +30,37 @@ except ImportError as exc:  # pragma: no cover
         "Missing Python dependencies. Run: python -m pip install -r requirements.txt"
     ) from exc
 
-APP_VERSION = "1.2.0"
+APP_VERSION = "1.3.3"
 DOCUMENT_TYPE = "kooshky_toefl_word_of_the_day"
 HTML_TAG_RE = re.compile(r"<\s*/?\s*[A-Za-z][^>]*>")
 MARKDOWN_FENCE_RE = re.compile(r"```|~~~")
-AUX_EXTENSIONS = {
-    ".aux", ".fdb_latexmk", ".fls", ".log", ".out", ".toc", ".xdv", ".synctex.gz"
-}
 
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Generate standalone HTML, simple LaTeX/PDF, and Telegram files from WOTD JSON."
+        description="Generate standalone HTML, simple LaTeX, and Telegram files from WOTD JSON."
     )
     parser.add_argument(
         "--input",
         action="append",
-        type=Path,
-        help="Process this JSON file. Repeat for multiple files. Default: all JSON files beside the script.",
+        nargs="+",
+        metavar="PATH",
+        help=(
+            "JSON file(s), a directory containing JSON files, or a glob pattern. "
+            "Examples: --input jsons, --input jsons/*.json, or "
+            "--input first.json second.json. May be repeated. "
+            "Default: all JSON files beside the script."
+        ),
     )
     parser.add_argument(
         "--output-dir",
         type=Path,
         help="Output directory. Default: generated/ beside the script.",
     )
-    parser.add_argument("--no-pdf", action="store_true", help="Render HTML, TeX, and Telegram only.")
     parser.add_argument(
-        "--keep-build-files",
+        "--force",
         action="store_true",
-        help="Keep LaTeX auxiliary files such as .aux, .log, and .toc.",
+        help="Regenerate a word even when its HTML output already exists.",
     )
     parser.add_argument("--version", action="version", version=APP_VERSION)
     return parser.parse_args()
@@ -148,15 +148,44 @@ def validate_semantics(data: dict[str, Any]) -> None:
                 f"exercises.correct_or_incorrect[{index}].corrected_sentence is required when verdict is Incorrect"
             )
 
+    distinct_ipas = {normalize_phrase(item["ipa"]).casefold() for item in meanings}
+    pronunciation_changes = len(distinct_ipas) > 1
+    word_key = normalize_phrase(data["word"]).casefold()
+
+    top_phrase = data.get("pronunciation", {}).get("audio_phrase")
+    if top_phrase and word_key not in normalize_phrase(top_phrase).casefold():
+        errors.append("pronunciation.audio_phrase must contain the headword itself")
+
+    if pronunciation_changes:
+        filenames_by_ipa: dict[str, str] = {}
+        for index, sense in enumerate(meanings):
+            phrase = sense.get("audio_phrase")
+            if not phrase:
+                errors.append(
+                    f"meanings[{index}].audio_phrase is required because the word has more than one pronunciation"
+                )
+                continue
+            if word_key not in normalize_phrase(phrase).casefold():
+                errors.append(
+                    f"meanings[{index}].audio_phrase must contain the headword itself"
+                )
+            ipa_key = normalize_phrase(sense["ipa"]).casefold()
+            audio_file = audio_relative_path(phrase)
+            previous_ipa = filenames_by_ipa.get(audio_file)
+            if previous_ipa and previous_ipa != ipa_key:
+                errors.append(
+                    f"meanings[{index}].audio_phrase creates the same audio filename as a different IPA; use clearer contextual phrases"
+                )
+            filenames_by_ipa[audio_file] = ipa_key
+
     if errors:
         raise ValueError("Semantic validation failed:\n  - " + "\n  - ".join(errors))
 
 
 def prepare_render_data(data: dict[str, Any]) -> dict[str, Any]:
-    """Add safe display defaults without weakening the source JSON contract."""
+    """Add display defaults and deterministic local-audio metadata."""
     prepared = json.loads(json.dumps(data))
 
-    prepared.setdefault("usage_overview", {})
     prepared.setdefault("word_family", [])
     prepared.setdefault("collocations", [])
     prepared.setdefault("synonyms", [])
@@ -165,20 +194,56 @@ def prepare_render_data(data: dict[str, Any]) -> dict[str, Any]:
     prepared.setdefault("etymology", {})
     prepared.setdefault("exercises", {})
 
-    pronunciation = prepared["pronunciation"]
-    pronunciation.setdefault("variants", [])
-    pronunciation.setdefault("pronunciation_tip", "")
+    distinct_ipas = {normalize_phrase(item["ipa"]).casefold() for item in prepared["meanings"]}
+    pronunciation_changes = len(distinct_ipas) > 1
 
     for sense in prepared["meanings"]:
         sense.setdefault("plain_english_equivalent", "")
         sense.setdefault("typical_pattern", "")
         sense.setdefault("register", "")
-        sense.setdefault("common_contexts", [])
         sense.setdefault("nuance", {})
         sense.setdefault("grammar", {})
         sense.setdefault("patterns", [])
         sense.setdefault("errors", [])
-        sense.setdefault("toefl", {})
+
+        phrase = normalize_phrase(sense.get("audio_phrase", ""))
+        if not phrase:
+            phrase = normalize_phrase(prepared["pronunciation"].get("audio_phrase", "")) or prepared["word"]
+        sense["audio_phrase"] = phrase
+        sense["audio_file"] = audio_relative_path(phrase)
+
+    pronunciation = prepared["pronunciation"]
+    primary_phrase = normalize_phrase(pronunciation.get("audio_phrase", ""))
+    if not primary_phrase:
+        primary_phrase = prepared["meanings"][0]["audio_phrase"] if pronunciation_changes else prepared["word"]
+    pronunciation["primary_audio_phrase"] = primary_phrase
+    pronunciation["primary_audio_file"] = audio_relative_path(primary_phrase)
+
+    variants_by_ipa: dict[str, dict[str, Any]] = {}
+    for sense in prepared["meanings"]:
+        key = normalize_phrase(sense["ipa"]).casefold()
+        variant = variants_by_ipa.get(key)
+        if variant is None:
+            variant = {
+                "ipa": sense["ipa"],
+                "audio_phrase": sense["audio_phrase"],
+                "audio_file": sense["audio_file"],
+                "parts_of_speech": [],
+                "senses": [],
+            }
+            variants_by_ipa[key] = variant
+        if sense["part_of_speech"] not in variant["parts_of_speech"]:
+            variant["parts_of_speech"].append(sense["part_of_speech"])
+        if sense["sense_title"] not in variant["senses"]:
+            variant["senses"].append(sense["sense_title"])
+
+    pronunciation_variants = []
+    for variant in variants_by_ipa.values():
+        variant["part_of_speech_summary"] = " · ".join(variant.pop("parts_of_speech"))
+        variant["sense_summary"] = "Meanings: " + "; ".join(variant.pop("senses"))
+        pronunciation_variants.append(variant)
+    prepared["pronunciation_changes"] = pronunciation_changes
+    prepared["pronunciation_variants"] = pronunciation_variants
 
     for item in prepared["word_family"]:
         item.setdefault("ipa", "")
@@ -225,15 +290,12 @@ def prepare_render_data(data: dict[str, Any]) -> dict[str, Any]:
     if not hero.get("memorable_example"):
         hero["memorable_example"] = prepared["meanings"][0]["examples"][0]
 
-    prepared["has_overview"] = any(prepared["usage_overview"].values())
-    prepared["has_pronunciation_details"] = bool(pronunciation["variants"] or pronunciation["pronunciation_tip"])
     prepared["has_relations"] = bool(prepared["synonyms"] or prepared["antonyms"])
     prepared["has_etymology"] = any(prepared["etymology"].values())
     prepared["has_exercises"] = any(exercises.values())
     for sense in prepared["meanings"]:
         sense["has_nuance"] = any(sense["nuance"].values())
         sense["has_grammar"] = any(sense["grammar"].values())
-        sense["has_toefl"] = any(sense["toefl"].values())
 
     return prepared
 
@@ -296,7 +358,7 @@ def render_simple_latex(data: dict[str, Any]) -> str:
     add(r"\usepackage{parskip}")
     add(r"\definecolor{Accent}{HTML}{971D32}")
     add(r"\definecolor{Muted}{HTML}{666666}")
-    add(r"\hypersetup{colorlinks=true,urlcolor=Accent,linkcolor=Accent,pdftitle={" + tex(data["word"]) + r" | Kooshky TOEFL Word of the Day},pdfauthor={Amir Kooshky}}")
+    add(r"\hypersetup{colorlinks=true,urlcolor=Accent,linkcolor=Accent}")
     add(r"\setlist{leftmargin=1.6em,itemsep=0.3em,topsep=0.35em}")
     add(r"\setcounter{tocdepth}{2}")
     add(r"\renewcommand{\contentsname}{Contents}")
@@ -311,6 +373,15 @@ def render_simple_latex(data: dict[str, Any]) -> str:
     add(r"{\fontsize{42}{48}\selectfont\bfseries " + tex(data["word"]) + r"\par}")
     add(r"\vspace{2mm}")
     add(r"{\Large\sffamily\color{Accent} " + tex(data["pronunciation"]["primary_ipa"]) + r"\par}")
+    add(r"\vspace{2mm}")
+    add(r"{\small\sffamily Local audio phrase: " + tex(data["pronunciation"]["primary_audio_phrase"]) + r"\par}")
+    add(r"{\small\sffamily Audio file: " + tex(data["pronunciation"]["primary_audio_file"]) + r"\par}")
+    if data["pronunciation_changes"]:
+        add(r"\vspace{3mm}")
+        add(r"{\bfseries\color{Accent} Pronunciation changes across meanings.\par}")
+        for variant in data["pronunciation_variants"]:
+            add(tex(variant["part_of_speech_summary"]) + r": " + tex(variant["ipa"]) + r" --- “" + tex(variant["audio_phrase"]) + r"”\par")
+    add(r"\vspace{2mm}")
     add(r"{\large\sffamily\color{Muted} " + tex(data["hero"]["part_of_speech_summary"]) + r"\par}")
     add(r"\vspace{5mm}")
     if data["hero"]["short_meanings"]:
@@ -322,7 +393,7 @@ def render_simple_latex(data: dict[str, Any]) -> str:
         add(r"\vspace{6mm}")
         add(r"\begin{minipage}{0.84\textwidth}")
         add(r"\itshape “" + tex(data["hero"]["memorable_example"]) + r"”")
-        add(r"\end{minipage}")
+        add(r"\end{minipage}\par")
     add(r"\vspace{10mm}")
     add(r"\textbf{Date:} " + tex(data["date"]) + r"\quad\textbullet\quad \textbf{Level:} B1--mid-B2 TOEFL")
     add(r"\vfill")
@@ -337,32 +408,6 @@ def render_simple_latex(data: dict[str, Any]) -> str:
     add(r"\newpage")
     add("")
 
-    # Usage overview
-    if data["has_overview"]:
-        add(r"\section{Usage overview}")
-        add(r"\sectionrule")
-        labels = {
-            "core_idea": "Core idea",
-            "register": "Register",
-            "frequency_and_context": "Frequency and context",
-            "toefl_value": "TOEFL value",
-        }
-        for key, label in labels.items():
-            if data["usage_overview"].get(key):
-                labeled(label, data["usage_overview"][key])
-
-    # Pronunciation
-    if data["has_pronunciation_details"]:
-        add(r"\section{Pronunciation}")
-        add(r"\sectionrule")
-        for item in data["pronunciation"]["variants"]:
-            add(r"\subsection{" + tex(item["label"]) + "}")
-            labeled("IPA", item["ipa"])
-            if item.get("note"):
-                paragraph(item["note"])
-        if data["pronunciation"]["pronunciation_tip"]:
-            labeled("Learner tip", data["pronunciation"]["pronunciation_tip"])
-
     # Meanings
     add(r"\section{Meanings and usage}")
     add(r"\sectionrule")
@@ -370,6 +415,8 @@ def render_simple_latex(data: dict[str, Any]) -> str:
         add(r"\subsection{Meaning " + str(index) + ": " + tex(sense["sense_title"]) + "}")
         labeled("Part of speech", sense["part_of_speech"])
         labeled("IPA", sense["ipa"])
+        labeled("Pronunciation phrase", sense["audio_phrase"])
+        labeled("Local audio file", sense["audio_file"])
         if sense["register"]:
             labeled("Register", sense["register"])
         labeled("Definition", sense["definition"])
@@ -377,9 +424,6 @@ def render_simple_latex(data: dict[str, Any]) -> str:
             labeled("In simpler words", sense["plain_english_equivalent"])
         if sense["typical_pattern"]:
             labeled("Typical pattern", sense["typical_pattern"])
-        if sense["common_contexts"]:
-            labeled("Common contexts", "; ".join(sense["common_contexts"]))
-
         add(r"\subsubsection{Natural examples}")
         enumerate_items(sense["examples"])
 
@@ -401,11 +445,11 @@ def render_simple_latex(data: dict[str, Any]) -> str:
         if sense["has_grammar"]:
             add(r"\subsubsection{Grammar notes}")
             grammar_labels = {
-                "countability": "Countability",
-                "transitivity": "Transitivity",
-                "complementation": "Complements and objects",
-                "prepositions": "Prepositions",
-                "form_and_position": "Form and position",
+                "how_to_use": "How to use it",
+                "what_can_follow": "What can follow it",
+                "preposition_note": "Common preposition",
+                "noun_use": "Noun use",
+                "position_note": "Position in a sentence",
             }
             for key, label in grammar_labels.items():
                 if sense["grammar"].get(key):
@@ -428,16 +472,6 @@ def render_simple_latex(data: dict[str, Any]) -> str:
                 if item.get("explanation"):
                     labeled("Why", item["explanation"])
 
-        if sense["has_toefl"]:
-            add(r"\subsubsection{TOEFL use}")
-            toefl_labels = {
-                "reading_listening": "Reading and listening",
-                "writing_speaking": "Writing and speaking",
-                "paraphrase_tip": "Paraphrase tip",
-            }
-            for key, label in toefl_labels.items():
-                if sense["toefl"].get(key):
-                    labeled(label, sense["toefl"][key])
 
     # Word family
     if data["word_family"]:
@@ -635,7 +669,6 @@ def render_files(
     paths = {
         "html": output_dir / f"{slug}-extended.html",
         "tex": output_dir / f"{slug}-extended.tex",
-        "pdf": output_dir / f"{slug}-extended.pdf",
         "telegram": output_dir / f"{slug}-telegram.txt",
     }
     paths["html"].write_text(html.rstrip() + "\n", encoding="utf-8")
@@ -644,67 +677,56 @@ def render_files(
     return paths
 
 
-def compile_pdf(tex_path: Path, keep_build_files: bool) -> tuple[bool, str]:
-    output_dir = tex_path.parent
-    latexmk = shutil.which("latexmk")
-    xelatex = shutil.which("xelatex")
+def discover_inputs(base_dir: Path, explicit: list[list[str]] | None) -> list[Path]:
+    """Resolve files supplied directly, through shell-expanded globs, or as directories."""
+    if not explicit:
+        return sorted(path.resolve() for path in base_dir.glob("*.json") if path.is_file())
 
-    if latexmk:
-        command = [
-            latexmk,
-            "-xelatex",
-            "-interaction=nonstopmode",
-            "-halt-on-error",
-            "-file-line-error",
-            tex_path.name,
-        ]
-        runs = [command]
-    elif xelatex:
-        command = [
-            xelatex,
-            "-interaction=nonstopmode",
-            "-halt-on-error",
-            "-file-line-error",
-            tex_path.name,
-        ]
-        runs = [command, command]
-    else:
-        return False, "Neither latexmk nor xelatex is installed; HTML and TeX were still generated."
+    import glob
 
-    for command in runs:
-        completed = subprocess.run(
-            command,
-            cwd=output_dir,
-            text=True,
-            stdout=subprocess.PIPE,
-            stderr=subprocess.STDOUT,
-            check=False,
-        )
-        if completed.returncode != 0:
-            log_tail = "\n".join(completed.stdout.splitlines()[-35:])
-            return False, f"PDF compilation failed. Last compiler lines:\n{log_tail}"
+    discovered: list[Path] = []
+    seen: set[Path] = set()
 
-    pdf_path = tex_path.with_suffix(".pdf")
-    if not pdf_path.exists() or pdf_path.stat().st_size == 0:
-        return False, "The LaTeX command reported success but no nonempty PDF was produced."
+    # argparse returns one list per --input occurrence because nargs="+" and
+    # action="append" are used together. Flatten those groups here.
+    raw_values = [value for group in explicit for value in group]
 
-    if not keep_build_files:
-        stem = tex_path.stem
-        for candidate in output_dir.glob(stem + ".*"):
-            if candidate.suffix in AUX_EXTENSIONS or candidate.name.endswith(".synctex.gz"):
-                candidate.unlink(missing_ok=True)
+    for raw in raw_values:
+        expanded_matches: list[Path]
+        if any(char in raw for char in "*?["):
+            expanded_matches = [Path(match) for match in glob.glob(raw, recursive=True)]
+        else:
+            expanded_matches = [Path(raw)]
 
-    return True, "PDF compiled successfully."
+        for candidate in expanded_matches:
+            resolved = candidate if candidate.is_absolute() else (Path.cwd() / candidate)
+            resolved = resolved.resolve()
+
+            if resolved.is_dir():
+                candidates = sorted(path.resolve() for path in resolved.glob("*.json") if path.is_file())
+            elif resolved.is_file() and resolved.suffix.casefold() == ".json":
+                candidates = [resolved]
+            else:
+                candidates = []
+
+            for path in candidates:
+                if path not in seen:
+                    seen.add(path)
+                    discovered.append(path)
+
+    return sorted(discovered)
 
 
-def discover_inputs(base_dir: Path, explicit: list[Path] | None) -> list[Path]:
-    if explicit:
-        paths = []
-        for path in explicit:
-            resolved = path if path.is_absolute() else (Path.cwd() / path)
-            paths.append(resolved.resolve())
-        return paths
-    return sorted(path for path in base_dir.glob("*.json") if path.is_file())
+def existing_html_output(output_dir: Path, slug: str) -> Path | None:
+    """Return an existing accepted HTML filename for this word, if present."""
+    if not slug:
+        return None
+    candidates = (
+        output_dir / f"{slug}-extended.html",
+        output_dir / f"{slug}_extended.html",
+        output_dir / f"{slug}.html",
+    )
+    return next((path for path in candidates if path.is_file()), None)
 
 
 def main() -> int:
@@ -750,20 +772,17 @@ def main() -> int:
             validate_schema(data, schema)
             validate_plain_text(data)
             validate_semantics(data)
+
+            existing_html = existing_html_output(output_dir, data["slug"])
+            if existing_html is not None and not args.force:
+                print(f"  SKIP: HTML already exists: {existing_html}")
+                continue
+
             paths = render_files(data, output_dir, template_dir, html_env, text_env)
             processed += 1
             print(f"  HTML:     {paths['html']}")
             print(f"  LaTeX:    {paths['tex']}")
             print(f"  Telegram: {paths['telegram']}")
-            if args.no_pdf:
-                print("  PDF:      skipped by --no-pdf")
-            else:
-                success, message = compile_pdf(paths["tex"], args.keep_build_files)
-                if success:
-                    print(f"  PDF:      {paths['pdf']}")
-                else:
-                    failures += 1
-                    print(f"  PDF ERROR: {message}", file=sys.stderr)
         except (OSError, ValueError) as exc:
             failures += 1
             print(f"  ERROR: {exc}", file=sys.stderr)

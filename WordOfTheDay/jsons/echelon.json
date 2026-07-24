@@ -1,0 +1,285 @@
+{
+    "document_type": "kooshky_toefl_word_of_the_day",
+    "schema_version": "1.3",
+    "slug": "echelon",
+    "word": "echelon",
+    "date": "July 28th 2026",
+    "pronunciation": {
+      "primary_ipa": "/ˈɛʃəˌlɑːn/"
+    },
+    "hero": {
+      "part_of_speech_summary": "countable noun",
+      "short_meanings": [
+        "a level of authority or status",
+        "a diagonal military formation"
+      ],
+      "one_line_summary": "An echelon is either a level within a hierarchy or a formation arranged in a series of offset positions.",
+      "memorable_example": "The proposal must be approved by the upper echelons of management."
+    },
+    "meanings": [
+      {
+        "sense_title": "Level of authority or status",
+        "part_of_speech": "countable noun",
+        "ipa": "/ˈɛʃəˌlɑːn/",
+        "definition": "a particular level of authority, importance, or status within an organization, profession, or society",
+        "examples": [
+          "The proposal must be approved by the upper echelons of management.",
+          "Women remain underrepresented in the highest echelons of the industry.",
+          "Information often moves slowly between different echelons of a large organization.",
+          "Only officials in the top echelon had access to the confidential report.",
+          "The reforms affected employees at every echelon of the institution.",
+          "He gradually rose through the echelons of the diplomatic service.",
+          "The researcher interviewed people from several social echelons."
+        ],
+        "plain_english_equivalent": "a level in a hierarchy",
+        "typical_pattern": "the upper, higher, or top echelons of + organization or field",
+        "register": "formal; common in business, politics, sociology, and institutional discussions",
+        "nuance": {
+          "central_nuance": "The word presents an organization or society as a hierarchy with several levels.",
+          "usual_implication": "It is especially common when discussing people with high authority, influence, or status.",
+          "contrast_term": "rank",
+          "contrast_explanation": "Rank usually refers to the official position of one person. Echelon refers more broadly to a whole level or group within a hierarchy."
+        },
+        "grammar": {
+          "how_to_use": "Use an echelon for one level and echelons for several levels.",
+          "what_can_follow": "It is often followed by of and the name of an organization, profession, industry, or society.",
+          "preposition_note": "Use in when describing someone within a level, as in people in the highest echelons of government.",
+          "noun_use": "This is a countable noun. The plural form is especially common in expressions such as the upper echelons and the highest echelons."
+        },
+        "patterns": [
+          {
+            "pattern": "the upper echelons of + organization or field",
+            "use": "Use this for the people at the highest and most powerful levels.",
+            "example": "The policy was debated within the upper echelons of the company."
+          },
+          {
+            "pattern": "the highest or top echelon",
+            "use": "Use this for one highest level of authority, ability, or status.",
+            "example": "Few athletes ever reach the top echelon of international competition."
+          },
+          {
+            "pattern": "at every echelon of + organization",
+            "use": "Use this when something affects or involves all levels.",
+            "example": "The new safety rules apply at every echelon of the organization."
+          },
+          {
+            "pattern": "rise through the echelons of + profession",
+            "use": "Use this when someone gradually moves to increasingly important positions.",
+            "example": "She rose through the echelons of the civil service."
+          }
+        ],
+        "errors": [
+          {
+            "wrong": "The decision was made by the high echelon of the company.",
+            "correct": "The decision was made by the upper echelons of the company.",
+            "explanation": "Upper echelons is the usual expression for the most powerful levels of an organization."
+          },
+          {
+            "wrong": "He works on the highest echelon of government.",
+            "correct": "He works in the highest echelon of government.",
+            "explanation": "Use in when referring to someone who belongs to a particular level."
+          },
+          {
+            "wrong": "The company has several different echelon levels.",
+            "correct": "The company has several different echelons.",
+            "explanation": "Echelon already means a level, so echelon level is usually unnecessary."
+          }
+        ]
+      },
+      {
+        "sense_title": "Diagonal military formation",
+        "part_of_speech": "countable noun",
+        "ipa": "/ˈɛʃəˌlɑːn/",
+        "definition": "a military formation in which each group of soldiers, vehicles, ships, or aircraft is positioned behind and to one side of the group ahead",
+        "examples": [
+          "The aircraft approached the target in an echelon formation.",
+          "The ships moved in echelon to maintain a clear view of one another.",
+          "The soldiers advanced in echelon across the open ground.",
+          "The vehicles formed a right echelon before entering the valley.",
+          "An echelon arrangement allowed each unit to support the one beside it.",
+          "The pilots practiced changing from a straight line into an echelon.",
+          "The commander ordered the troops to move forward in a left echelon."
+        ],
+        "plain_english_equivalent": "a diagonal line of military units",
+        "typical_pattern": "in echelon or an echelon formation",
+        "register": "specialized but common in military and historical descriptions",
+        "nuance": {
+          "central_nuance": "The units are not directly beside or behind one another; each is offset to the left or right.",
+          "usual_implication": "This arrangement can improve visibility, coordination, or the ability of units to support one another."
+        },
+        "grammar": {
+          "how_to_use": "Use an echelon for the formation itself. The expression in echelon describes how units are arranged or moving.",
+          "what_can_follow": "The noun is commonly used before formation, or after words such as form, move, advance, and fly.",
+          "position_note": "In the phrase echelon formation, echelon comes before the noun formation."
+        },
+        "patterns": [
+          {
+            "pattern": "an echelon formation",
+            "use": "Use this to name the diagonal arrangement.",
+            "example": "The helicopters flew in an echelon formation."
+          },
+          {
+            "pattern": "move, advance, or fly in echelon",
+            "use": "Use this to describe units traveling in the formation.",
+            "example": "The armored vehicles advanced in echelon."
+          },
+          {
+            "pattern": "a left or right echelon",
+            "use": "Use left or right to show the direction in which the formation extends.",
+            "example": "The squadron shifted into a right echelon."
+          }
+        ],
+        "errors": [
+          {
+            "wrong": "The aircraft flew with echelon.",
+            "correct": "The aircraft flew in echelon.",
+            "explanation": "Use in echelon to describe movement in this formation."
+          },
+          {
+            "wrong": "The troops formed into an echelon formation.",
+            "correct": "The troops formed an echelon.",
+            "explanation": "Form an echelon is more direct. You can also say moved into an echelon formation."
+          }
+        ]
+      }
+    ],
+    "collocations": [
+      {
+        "collocation": "the upper echelons",
+        "example": "The scandal reached the upper echelons of the administration.",
+        "applies_to_sense": "Level of authority or status",
+        "meaning": "the highest and most powerful levels",
+        "grammar_pattern": "the upper echelons of + organization or field"
+      },
+      {
+        "collocation": "the highest echelons",
+        "example": "Graduates of the program have entered the highest echelons of public service.",
+        "applies_to_sense": "Level of authority or status",
+        "meaning": "the levels with the greatest authority, influence, or status",
+        "grammar_pattern": "the highest echelons of + organization, profession, or society"
+      },
+      {
+        "collocation": "top echelon",
+        "example": "The university belongs to the top echelon of research institutions.",
+        "applies_to_sense": "Level of authority or status",
+        "meaning": "the highest level of quality, power, or status",
+        "grammar_pattern": "the top echelon of + field or group"
+      },
+      {
+        "collocation": "lower echelons",
+        "example": "The policy was unpopular among workers in the lower echelons of the organization.",
+        "applies_to_sense": "Level of authority or status",
+        "meaning": "levels with less authority or status",
+        "grammar_pattern": "the lower echelons of + organization"
+      },
+      {
+        "collocation": "every echelon of",
+        "example": "The investigation revealed problems at every echelon of the institution.",
+        "applies_to_sense": "Level of authority or status",
+        "meaning": "every level within a hierarchy",
+        "grammar_pattern": "at every echelon of + organization"
+      },
+      {
+        "collocation": "echelon formation",
+        "example": "The aircraft maintained an echelon formation during the exercise.",
+        "applies_to_sense": "Diagonal military formation",
+        "meaning": "a formation in which each unit is behind and to one side of another"
+      },
+      {
+        "collocation": "move in echelon",
+        "example": "The ships moved in echelon along the coast.",
+        "applies_to_sense": "Diagonal military formation",
+        "meaning": "travel while arranged in a diagonal formation",
+        "grammar_pattern": "move, advance, or fly in echelon"
+      },
+      {
+        "collocation": "right echelon",
+        "example": "The vehicles formed a right echelon as they approached the bridge.",
+        "applies_to_sense": "Diagonal military formation",
+        "meaning": "a formation extending diagonally toward the right"
+      }
+    ],
+    "synonyms": [
+      {
+        "word": "level",
+        "part_of_speech": "countable noun",
+        "applies_to_sense": "Level of authority or status",
+        "difference": "Level is a broad everyday word. Echelon is more formal and emphasizes a position within an organized hierarchy.",
+        "example": "The issue must be discussed at the highest level of government.",
+        "shared_meaning": "Both words can refer to a position within a hierarchy."
+      },
+      {
+        "word": "tier",
+        "part_of_speech": "countable noun",
+        "applies_to_sense": "Level of authority or status",
+        "difference": "Tier commonly describes one of several clearly separated levels in a system, service, or structure. Echelon is especially associated with authority, status, or organizational hierarchy.",
+        "example": "Customers can choose from three different service tiers.",
+        "shared_meaning": "Both words describe one level in a structure containing several levels."
+      },
+      {
+        "word": "rank",
+        "part_of_speech": "countable noun",
+        "applies_to_sense": "Level of authority or status",
+        "difference": "Rank often identifies the official position of a particular person. Echelon usually describes a broader level containing several people.",
+        "example": "She achieved the rank of senior officer.",
+        "shared_meaning": "Both can indicate a position within a hierarchy."
+      },
+      {
+        "word": "formation",
+        "part_of_speech": "countable noun",
+        "applies_to_sense": "Diagonal military formation",
+        "difference": "Formation is a general word for any organized arrangement of military units. Echelon refers to one specific diagonal arrangement.",
+        "example": "The pilots maintained a tight formation.",
+        "shared_meaning": "Both words can describe an organized arrangement of soldiers, vehicles, ships, or aircraft."
+      }
+    ],
+    "etymology": {
+      "origin": "The word entered English from French échelon, meaning a rung of a ladder or a step."
+    },
+    "exercises": {
+      "correct_or_incorrect": [
+        {
+          "sentence": "The policy was approved by officials in the upper echelons of government.",
+          "verdict": "Correct",
+          "explanation": "The upper echelons of is a natural expression for the highest levels of authority."
+        },
+        {
+          "sentence": "She works on the highest echelon of the organization.",
+          "verdict": "Incorrect",
+          "corrected_sentence": "She works in the highest echelon of the organization.",
+          "explanation": "Use in when someone belongs to a particular echelon."
+        },
+        {
+          "sentence": "The company has four separate echelon levels.",
+          "verdict": "Incorrect",
+          "corrected_sentence": "The company has four separate echelons.",
+          "explanation": "Echelon already means level, so adding levels is redundant."
+        },
+        {
+          "sentence": "The aircraft flew in echelon during the military exercise.",
+          "verdict": "Correct",
+          "explanation": "In echelon correctly describes movement in a diagonal formation."
+        }
+      ],
+      "collocation_practice": [
+        {
+          "prompt_sentence": "The investigation involved officials in the upper _____ of the ministry.",
+          "answer": "echelons",
+          "completed_sentence": "The investigation involved officials in the upper echelons of the ministry.",
+          "explanation": "The upper echelons is the standard expression for the most powerful levels."
+        },
+        {
+          "prompt_sentence": "Very few musicians reach the top _____ of the profession.",
+          "answer": "echelon",
+          "completed_sentence": "Very few musicians reach the top echelon of the profession.",
+          "explanation": "Top echelon means the highest level of achievement or status."
+        },
+        {
+          "prompt_sentence": "The helicopters flew in an echelon _____ during the demonstration.",
+          "answer": "formation",
+          "completed_sentence": "The helicopters flew in an echelon formation during the demonstration.",
+          "explanation": "Echelon formation is the established term for this diagonal arrangement."
+        }
+      ]
+    }
+  }

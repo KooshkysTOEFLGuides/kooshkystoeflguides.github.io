@@ -1,0 +1,382 @@
+{
+    "document_type": "kooshky_toefl_word_of_the_day",
+    "schema_version": "1.3",
+    "slug": "subjective",
+    "word": "subjective",
+    "date": "August 8th 2026",
+    "pronunciation": {
+      "primary_ipa": "/səbˈdʒɛktɪv/"
+    },
+    "hero": {
+      "part_of_speech_summary": "adjective",
+      "short_meanings": [
+        "based on personal judgment",
+        "existing in personal experience"
+      ],
+      "one_line_summary": "Subjective describes judgments or experiences shaped by an individual's feelings, opinions, or personal perception.",
+      "memorable_example": "Judgments about artistic quality are often highly subjective."
+    },
+    "meanings": [
+      {
+        "sense_title": "Based on personal judgment",
+        "part_of_speech": "adjective",
+        "ipa": "/səbˈdʒɛktɪv/",
+        "definition": "based on a person's opinions, feelings, or preferences rather than only on facts that can be measured or proved",
+        "examples": [
+          "Judgments about artistic quality are often highly subjective.",
+          "The interview process was criticized because the final decisions seemed too subjective.",
+          "Whether a building is beautiful is partly a subjective question.",
+          "The researcher tried to separate subjective impressions from measurable evidence.",
+          "Teachers should use clear criteria to make essay grading less subjective.",
+          "Her review provides a subjective interpretation of the film rather than a neutral summary.",
+          "Ideas about the ideal work environment are subjective and may vary considerably from person to person."
+        ],
+        "plain_english_equivalent": "based on personal opinion",
+        "typical_pattern": "subjective + judgment, opinion, assessment, interpretation, or criterion",
+        "register": "neutral to formal; common in academic, professional, artistic, and everyday discussions",
+        "nuance": {
+          "central_nuance": "The word emphasizes that a judgment is influenced by the person making it.",
+          "usual_implication": "A subjective judgment is not automatically unreasonable or wrong, but different people may reach different conclusions.",
+          "contrast_term": "objective",
+          "contrast_explanation": "Subjective judgments depend on personal views or feelings. Objective judgments are based as much as possible on observable facts and agreed standards."
+        },
+        "grammar": {
+          "how_to_use": "Use it before a noun, as in a subjective assessment, or after a linking verb, as in The assessment is subjective.",
+          "what_can_follow": "It commonly appears before nouns such as judgment, opinion, view, assessment, interpretation, impression, and criterion.",
+          "position_note": "Words such as highly, largely, partly, inherently, and necessarily often come before subjective."
+        },
+        "patterns": [
+          {
+            "pattern": "a subjective judgment or assessment",
+            "use": "Use this for a decision influenced by the evaluator's personal views.",
+            "example": "The selection process depends partly on a subjective assessment of leadership potential."
+          },
+          {
+            "pattern": "be highly or largely subjective",
+            "use": "Use this when personal opinion strongly affects a judgment.",
+            "example": "The choice of the best design is highly subjective."
+          },
+          {
+            "pattern": "a subjective interpretation of + noun",
+            "use": "Use this for an explanation shaped by one person's perspective.",
+            "example": "The article offers a subjective interpretation of the historical evidence."
+          },
+          {
+            "pattern": "make something less subjective",
+            "use": "Use this when rules or measurements reduce the influence of personal opinion.",
+            "example": "A detailed scoring guide can make the evaluation less subjective."
+          }
+        ],
+        "errors": [
+          {
+            "wrong": "The decision was subjective from the manager's personal opinion.",
+            "correct": "The decision was based on the manager's subjective opinion.",
+            "explanation": "Use subjective directly before the noun it describes, or say that something is based on a subjective judgment or opinion."
+          },
+          {
+            "wrong": "Subjective always means unfair or incorrect.",
+            "correct": "Subjective means influenced by personal opinion or feeling, but it does not always mean unfair or incorrect.",
+            "explanation": "A judgment can be subjective without being dishonest or unreasonable."
+          },
+          {
+            "wrong": "The results were very subjectively.",
+            "correct": "The results were very subjective.",
+            "explanation": "Use the adjective subjective after were. Subjectively is an adverb."
+          }
+        ]
+      },
+      {
+        "sense_title": "Existing in personal experience",
+        "part_of_speech": "adjective",
+        "ipa": "/səbˈdʒɛktɪv/",
+        "definition": "experienced, perceived, or understood within an individual person's mind and therefore not fully observable or measurable by others",
+        "examples": [
+          "Pain is a subjective experience that can be difficult to measure precisely.",
+          "The survey asked participants to report their subjective sense of well-being.",
+          "People may give different descriptions of the same event because perception is subjective.",
+          "The study combined biological measurements with patients' subjective reports of fatigue.",
+          "Time can feel slower or faster depending on a person's subjective experience.",
+          "The taste of the medicine was evaluated through subjective ratings provided by volunteers.",
+          "Researchers distinguished objective sleep duration from subjective sleep quality."
+        ],
+        "plain_english_equivalent": "personally experienced or perceived",
+        "typical_pattern": "subjective + experience, perception, feeling, report, rating, or well-being",
+        "register": "formal; common in psychology, medicine, sociology, philosophy, and research writing",
+        "nuance": {
+          "central_nuance": "This sense focuses on what a person experiences internally, such as pain, satisfaction, taste, or perceived quality.",
+          "usual_implication": "The experience may be real and important even when another person cannot directly observe or measure it.",
+          "contrast_term": "objective",
+          "contrast_explanation": "A subjective measure records a person's own experience or report. An objective measure records something observable or measurable independently, such as temperature, distance, or heart rate."
+        },
+        "grammar": {
+          "how_to_use": "Use it before a noun naming an internal experience, perception, or self-reported measure.",
+          "what_can_follow": "Common nouns include experience, perception, feeling, report, rating, well-being, awareness, and quality.",
+          "position_note": "In research writing, subjective is often contrasted directly with objective."
+        },
+        "patterns": [
+          {
+            "pattern": "subjective experience of + noun",
+            "use": "Use this for how an event or condition feels to an individual.",
+            "example": "The interviews explored each patient's subjective experience of recovery."
+          },
+          {
+            "pattern": "subjective report or rating",
+            "use": "Use this for information supplied by a person about their own experience.",
+            "example": "The researchers collected subjective ratings of stress after each task."
+          },
+          {
+            "pattern": "subjective sense of + noun",
+            "use": "Use this for a personally felt state or impression.",
+            "example": "Regular social contact improved participants' subjective sense of belonging."
+          },
+          {
+            "pattern": "subjective and objective measures",
+            "use": "Use this when comparing self-reported experience with independently observable data.",
+            "example": "The study used both subjective and objective measures of sleep quality."
+          }
+        ],
+        "errors": [
+          {
+            "wrong": "Because pain is subjective, it is not real.",
+            "correct": "Pain is subjective because it is experienced personally, but it is still real.",
+            "explanation": "Subjective means internally experienced, not imaginary or unimportant."
+          },
+          {
+            "wrong": "The study measured subjectively well-being.",
+            "correct": "The study measured subjective well-being.",
+            "explanation": "Use the adjective subjective before the noun well-being."
+          },
+          {
+            "wrong": "The patient's subjective was recorded in the survey.",
+            "correct": "The patient's subjective experience was recorded in the survey.",
+            "explanation": "Subjective is an adjective and normally needs a noun after it in this position."
+          }
+        ]
+      }
+    ],
+    "word_family": [
+      {
+        "word": "subjectivity",
+        "part_of_speech": "uncountable noun",
+        "definition": "the influence of personal opinions, feelings, or experiences on judgment or perception",
+        "examples": [
+          "The scoring system was designed to reduce subjectivity.",
+          "The article discusses the role of subjectivity in historical interpretation."
+        ],
+        "ipa": "/ˌsʌbdʒɛkˈtɪvəti/",
+        "relationship_to_headword": "This noun names the quality or condition of being subjective.",
+        "grammar_pattern": "subjectivity in + judgment, assessment, interpretation, or experience",
+        "usage_note": "It is normally used without a or an."
+      },
+      {
+        "word": "subjectively",
+        "part_of_speech": "adverb",
+        "definition": "according to personal opinion, feeling, or experience rather than only observable facts",
+        "examples": [
+          "Participants rated the difficulty of the task subjectively.",
+          "The two paintings may be judged subjectively in different ways."
+        ],
+        "ipa": "/səbˈdʒɛktɪvli/",
+        "relationship_to_headword": "This adverb describes a judgment or experience shaped by a person's own perspective.",
+        "grammar_pattern": "judge, evaluate, experience, or interpret + subjectively"
+      }
+    ],
+    "collocations": [
+      {
+        "collocation": "highly subjective",
+        "example": "Deciding which novel is the most influential is highly subjective.",
+        "applies_to_sense": "Based on personal judgment",
+        "meaning": "strongly dependent on personal opinion or preference",
+        "grammar_pattern": "be highly subjective"
+      },
+      {
+        "collocation": "subjective judgment",
+        "example": "The final score still involves some subjective judgment.",
+        "applies_to_sense": "Based on personal judgment",
+        "meaning": "a decision influenced by the evaluator's personal views"
+      },
+      {
+        "collocation": "subjective assessment",
+        "example": "The diagnosis should not rely entirely on a subjective assessment.",
+        "applies_to_sense": "Based on personal judgment",
+        "meaning": "an evaluation partly based on personal interpretation"
+      },
+      {
+        "collocation": "subjective interpretation",
+        "example": "Different historians may offer subjective interpretations of the same event.",
+        "applies_to_sense": "Based on personal judgment",
+        "meaning": "an explanation influenced by one person's perspective",
+        "grammar_pattern": "a subjective interpretation of + text, event, or evidence"
+      },
+      {
+        "collocation": "subjective opinion",
+        "example": "Whether the new design is attractive is ultimately a subjective opinion.",
+        "applies_to_sense": "Based on personal judgment",
+        "meaning": "an opinion based on personal taste or perspective",
+        "usage_note": "The phrase is common, although opinion is already usually personal."
+      },
+      {
+        "collocation": "subjective experience",
+        "example": "The study focused on the subjective experience of chronic pain.",
+        "applies_to_sense": "Existing in personal experience",
+        "meaning": "an event or condition as it is personally felt or perceived",
+        "grammar_pattern": "the subjective experience of + noun"
+      },
+      {
+        "collocation": "subjective perception",
+        "example": "Subjective perception of risk may differ from statistical evidence.",
+        "applies_to_sense": "Existing in personal experience",
+        "meaning": "the way an individual personally understands or senses something"
+      },
+      {
+        "collocation": "subjective well-being",
+        "example": "The survey measured participants' subjective well-being.",
+        "applies_to_sense": "Existing in personal experience",
+        "meaning": "a person's own evaluation of happiness and life satisfaction"
+      },
+      {
+        "collocation": "subjective report",
+        "example": "The physician compared the patient's subjective report with the test results.",
+        "applies_to_sense": "Existing in personal experience",
+        "meaning": "a person's description of their own experience"
+      },
+      {
+        "collocation": "subjective and objective measures",
+        "example": "The researchers used subjective and objective measures of fatigue.",
+        "applies_to_sense": "Existing in personal experience",
+        "meaning": "self-reported information combined with independently observable data"
+      },
+      {
+        "collocation": "reduce subjectivity",
+        "example": "Detailed grading criteria can reduce subjectivity in assessment.",
+        "applies_to_sense": "Based on personal judgment",
+        "meaning": "decrease the influence of personal opinion",
+        "usage_note": "Subjectivity is the noun form."
+      }
+    ],
+    "synonyms": [
+      {
+        "word": "personal",
+        "part_of_speech": "adjective",
+        "applies_to_sense": "all senses",
+        "difference": "Personal is broader and simply means belonging or relating to an individual. Subjective specifically emphasizes that a judgment or experience depends on that individual's perspective.",
+        "example": "Her response reflected her personal preferences.",
+        "shared_meaning": "Both can refer to an individual's own views or experience."
+      },
+      {
+        "word": "interpretive",
+        "part_of_speech": "adjective",
+        "applies_to_sense": "Based on personal judgment",
+        "difference": "Interpretive describes an explanation based on how evidence or meaning is understood. Subjective more broadly emphasizes personal opinion or feeling.",
+        "example": "The exhibition includes an interpretive essay about the artist's work.",
+        "shared_meaning": "Both can describe conclusions shaped by a person's understanding."
+      },
+      {
+        "word": "self-reported",
+        "part_of_speech": "adjective",
+        "applies_to_sense": "Existing in personal experience",
+        "difference": "Self-reported specifically means supplied by the person being studied. Subjective is broader and describes the personal nature of the experience or judgment itself.",
+        "example": "The study compared self-reported exercise with data from activity monitors.",
+        "shared_meaning": "Both may refer to information based on a person's own account."
+      }
+    ],
+    "antonyms": [
+      {
+        "word": "objective",
+        "part_of_speech": "adjective",
+        "applies_to_sense": "all senses",
+        "opposition": "Objective judgments and measurements rely on observable facts or agreed standards, while subjective ones depend on personal opinion, perception, or experience.",
+        "example": "The researchers used objective measurements of blood pressure.",
+        "usage_note": "In many real situations, an evaluation can contain both subjective and objective elements."
+      }
+    ],
+    "confusables": [
+      {
+        "word": "biased",
+        "key_difference": "Subjective means influenced by personal perspective. Biased means unfairly favoring or opposing a person, group, or idea. A judgment can be subjective without being biased.",
+        "headword_example": "The rating is subjective because it depends on personal taste.",
+        "confusable_example": "The report was biased because it ignored evidence that opposed the author's position.",
+        "part_of_speech": "adjective",
+        "why_confused": "Both words may describe judgments that are not completely neutral."
+      },
+      {
+        "word": "subject to",
+        "key_difference": "Subjective is an adjective meaning based on personal opinion or experience. Subject to is a separate expression meaning affected by, dependent on, or required to follow something.",
+        "headword_example": "The choice of the best painting is subjective.",
+        "confusable_example": "The schedule is subject to change.",
+        "part_of_speech": "adjective versus adjective phrase",
+        "why_confused": "The forms begin with the same letters but have unrelated uses."
+      }
+    ],
+    "exercises": {
+      "word_family_choice": [
+        {
+          "prompt_sentence": "The detailed scoring guide was introduced to reduce _____ in essay grading.",
+          "answer": "subjectivity",
+          "completed_sentence": "The detailed scoring guide was introduced to reduce subjectivity in essay grading.",
+          "explanation": "Use the noun subjectivity after reduce."
+        },
+        {
+          "prompt_sentence": "Participants evaluated the taste of each product _____.",
+          "answer": "subjectively",
+          "completed_sentence": "Participants evaluated the taste of each product subjectively.",
+          "explanation": "Use the adverb subjectively to describe how the products were evaluated."
+        },
+        {
+          "prompt_sentence": "The survey included both objective data and _____ reports.",
+          "answer": "subjective",
+          "completed_sentence": "The survey included both objective data and subjective reports.",
+          "explanation": "Use the adjective subjective before reports."
+        }
+      ],
+      "correct_or_incorrect": [
+        {
+          "sentence": "Opinions about beauty are often highly subjective.",
+          "verdict": "Correct",
+          "explanation": "Highly subjective correctly describes judgments strongly influenced by personal taste."
+        },
+        {
+          "sentence": "Because pain is subjective, it is imaginary.",
+          "verdict": "Incorrect",
+          "corrected_sentence": "Pain is subjective because it is personally experienced, but it is not imaginary.",
+          "explanation": "Subjective does not mean unreal."
+        },
+        {
+          "sentence": "The researchers used objective measurements to reduce subjectivity.",
+          "verdict": "Correct",
+          "explanation": "Reduce subjectivity is a natural expression for limiting the influence of personal judgment."
+        },
+        {
+          "sentence": "The final results were reported very subjectively.",
+          "verdict": "Correct",
+          "explanation": "Subjectively is correctly used as an adverb describing how the results were reported, although the sentence suggests the reporting was influenced by personal perspective."
+        }
+      ],
+      "collocation_practice": [
+        {
+          "prompt_sentence": "The choice of the most attractive design is highly _____.",
+          "answer": "subjective",
+          "completed_sentence": "The choice of the most attractive design is highly subjective.",
+          "explanation": "Highly subjective means strongly dependent on personal taste."
+        },
+        {
+          "prompt_sentence": "The study compared patients' subjective reports _____ laboratory measurements.",
+          "answer": "with",
+          "completed_sentence": "The study compared patients' subjective reports with laboratory measurements.",
+          "explanation": "Subjective reports are often compared with objective measurements."
+        },
+        {
+          "prompt_sentence": "Clear evaluation criteria can help reduce _____ in hiring decisions.",
+          "answer": "subjectivity",
+          "completed_sentence": "Clear evaluation criteria can help reduce subjectivity in hiring decisions.",
+          "explanation": "Reduce subjectivity means decrease the influence of personal opinion."
+        },
+        {
+          "prompt_sentence": "The interviews explored each participant's subjective _____ of the event.",
+          "answer": "experience",
+          "completed_sentence": "The interviews explored each participant's subjective experience of the event.",
+          "explanation": "Subjective experience refers to how an event is personally felt or perceived."
+        }
+      ]
+    }
+  }

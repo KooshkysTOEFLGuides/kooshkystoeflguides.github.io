@@ -1,0 +1,331 @@
+{
+    "document_type": "kooshky_toefl_word_of_the_day",
+    "schema_version": "1.3",
+    "slug": "democratize",
+    "word": "democratize",
+    "date": "July 27th 2026",
+    "pronunciation": {
+      "primary_ipa": "/dɪˈmɑːkrəˌtaɪz/"
+    },
+    "hero": {
+      "part_of_speech_summary": "transitive verb",
+      "short_meanings": [
+        "make a system more democratic",
+        "make something accessible to more people"
+      ],
+      "one_line_summary": "To democratize something is to spread power, participation, or access beyond a small group.",
+      "memorable_example": "Online libraries can democratize access to academic research."
+    },
+    "meanings": [
+      {
+        "sense_title": "Make more democratic",
+        "part_of_speech": "transitive verb",
+        "ipa": "/dɪˈmɑːkrəˌtaɪz/",
+        "definition": "to make a country, organization, or system more democratic by giving people more power or a greater role in decisions",
+        "examples": [
+          "The reforms were intended to democratize the country's political system.",
+          "Student representatives argued that the university should democratize its decision-making process.",
+          "The new constitution helped democratize several public institutions.",
+          "Local councils were created to democratize the management of community resources.",
+          "The movement sought to democratize the workplace by giving employees a stronger voice.",
+          "Critics questioned whether the changes would truly democratize the organization."
+        ],
+        "plain_english_equivalent": "give more people a real voice in decisions",
+        "typical_pattern": "democratize + country, institution, system, or decision-making",
+        "register": "formal; common in politics, history, sociology, and discussions of organizations",
+        "nuance": {
+          "central_nuance": "The word suggests moving power or decision-making away from a small group and toward wider participation.",
+          "usual_implication": "It often describes a process rather than a single immediate change.",
+          "contrast_term": "liberalize",
+          "contrast_explanation": "To liberalize is to reduce restrictions or government control. To democratize is specifically to increase democratic participation, representation, or accountability."
+        },
+        "grammar": {
+          "how_to_use": "This verb normally needs the country, organization, system, or process that is being changed after it.",
+          "what_can_follow": "It is often followed by words such as government, society, institution, system, workplace, decision-making, or governance.",
+          "position_note": "It is also common in the passive form, as in The institution was gradually democratized."
+        },
+        "patterns": [
+          {
+            "pattern": "democratize + institution or system",
+            "use": "Use this when reforms give more people influence over how an organization or system operates.",
+            "example": "The proposal aims to democratize the national education system."
+          },
+          {
+            "pattern": "democratize decision-making",
+            "use": "Use this when a wider group is given a meaningful role in making choices.",
+            "example": "The committee introduced open meetings to democratize decision-making."
+          },
+          {
+            "pattern": "be democratized",
+            "use": "Use the passive form when the change itself is more important than the person or group causing it.",
+            "example": "The organization was gradually democratized through a series of internal reforms."
+          }
+        ],
+        "errors": [
+          {
+            "wrong": "The reform democratized people to make decisions.",
+            "correct": "The reform democratized the decision-making process.",
+            "explanation": "Democratize is normally followed by the system or process that becomes more democratic, not by people plus to."
+          },
+          {
+            "wrong": "The government wants to democratize in the public institutions.",
+            "correct": "The government wants to democratize the public institutions.",
+            "explanation": "In this meaning, the verb normally takes its object directly, without in."
+          }
+        ]
+      },
+      {
+        "sense_title": "Widen access",
+        "part_of_speech": "transitive verb",
+        "ipa": "/dɪˈmɑːkrəˌtaɪz/",
+        "definition": "to make information, education, technology, or another useful resource available to many more people instead of only a small or powerful group",
+        "examples": [
+          "Online libraries can democratize access to academic research.",
+          "Low-cost smartphones have helped democratize access to digital services.",
+          "The museum hopes to democratize art by offering free virtual exhibitions.",
+          "Open-source software can democratize advanced technology for small organizations.",
+          "Public data projects aim to democratize information that was once difficult to obtain.",
+          "Some educators believe artificial intelligence could democratize personalized learning."
+        ],
+        "plain_english_equivalent": "make something available to far more people",
+        "typical_pattern": "democratize access to + resource or democratize + knowledge, education, technology, or opportunity",
+        "register": "formal and increasingly common in education, technology, business, and public policy",
+        "nuance": {
+          "central_nuance": "This use is not necessarily about elections or government. It describes removing barriers that kept a valuable resource within a limited group.",
+          "usual_implication": "The barriers may involve cost, location, technical knowledge, social position, or institutional control.",
+          "contrast_term": "popularize",
+          "contrast_explanation": "To popularize something is to make it widely known or liked. To democratize it is to make access or participation more widely available."
+        },
+        "grammar": {
+          "how_to_use": "This verb normally needs the resource, opportunity, or type of access that is being made more widely available after it.",
+          "what_can_follow": "Common objects include access, education, knowledge, information, technology, finance, culture, and opportunity.",
+          "preposition_note": "A very common pattern is democratize access to something, as in democratize access to higher education.",
+          "position_note": "The phrase help democratize is common when one development contributes to wider access but is not the only cause."
+        },
+        "patterns": [
+          {
+            "pattern": "democratize access to + noun",
+            "use": "Use this when more people are given a realistic chance to obtain or use something.",
+            "example": "Digital courses may democratize access to professional training."
+          },
+          {
+            "pattern": "democratize + knowledge, technology, or education",
+            "use": "Use this when the resource itself becomes less limited to experts, wealthy users, or major institutions.",
+            "example": "The platform was designed to democratize financial knowledge."
+          },
+          {
+            "pattern": "help democratize + noun",
+            "use": "Use this when something contributes to broader access.",
+            "example": "Affordable equipment could help democratize scientific research."
+          }
+        ],
+        "errors": [
+          {
+            "wrong": "The website democratizes the access to legal information.",
+            "correct": "The website democratizes access to legal information.",
+            "explanation": "Access is normally used without the in this pattern."
+          },
+          {
+            "wrong": "The program democratized education to rural students.",
+            "correct": "The program democratized access to education for rural students.",
+            "explanation": "Use access to for the resource and for to identify the people who benefit."
+          }
+        ]
+      }
+    ],
+    "word_family": [
+      {
+        "word": "democratization",
+        "part_of_speech": "uncountable noun",
+        "definition": "the process of making a country, organization, system, or resource more democratic or more widely accessible",
+        "examples": [
+          "The report examines the democratization of local government.",
+          "Digital tools have contributed to the democratization of knowledge."
+        ],
+        "ipa": "/dɪˌmɑːkrətəˈzeɪʃən/",
+        "relationship_to_headword": "This noun names the process or result of democratizing something.",
+        "grammar_pattern": "the democratization of + country, institution, system, knowledge, or access",
+        "usage_note": "It is usually used without a or an."
+      },
+      {
+        "word": "democratic",
+        "part_of_speech": "adjective",
+        "definition": "based on democracy or giving people a fair and meaningful role in decisions",
+        "examples": [
+          "The country held its first democratic election in decades.",
+          "Employees called for a more democratic workplace."
+        ],
+        "ipa": "/ˌdɛməˈkrætɪk/",
+        "relationship_to_headword": "This adjective describes a system, process, or organization that has democratic qualities.",
+        "grammar_pattern": "democratic + government, election, institution, process, or society"
+      },
+      {
+        "word": "democracy",
+        "part_of_speech": "countable or uncountable noun",
+        "definition": "a system of government in which people choose their leaders and can take part in political decisions",
+        "examples": [
+          "Free elections are an important part of democracy.",
+          "The transition to a stable democracy took many years."
+        ],
+        "ipa": "/dɪˈmɑːkrəsi/",
+        "relationship_to_headword": "Democratize originally refers to making something more like a democracy.",
+        "grammar_pattern": "democracy or a democracy",
+        "usage_note": "Use democracy without a number for the general idea and a democracy for a country or political system."
+      }
+    ],
+    "collocations": [
+      {
+        "collocation": "democratize access to education",
+        "example": "Scholarship programs can help democratize access to education.",
+        "applies_to_sense": "Widen access",
+        "meaning": "make education realistically available to a wider group",
+        "grammar_pattern": "democratize access to + education or training"
+      },
+      {
+        "collocation": "democratize access to information",
+        "example": "Public databases have democratized access to scientific information.",
+        "applies_to_sense": "Widen access",
+        "meaning": "allow far more people to obtain information",
+        "grammar_pattern": "democratize access to + information or data"
+      },
+      {
+        "collocation": "democratize technology",
+        "example": "Affordable tools can democratize technology that was once limited to large companies.",
+        "applies_to_sense": "Widen access",
+        "meaning": "make technology usable or affordable for a wider population"
+      },
+      {
+        "collocation": "democratize knowledge",
+        "example": "The project aims to democratize knowledge by publishing its courses for free.",
+        "applies_to_sense": "Widen access",
+        "meaning": "make knowledge available beyond a small expert or privileged group"
+      },
+      {
+        "collocation": "democratize decision-making",
+        "example": "The reform was designed to democratize decision-making within the organization.",
+        "applies_to_sense": "Make more democratic",
+        "meaning": "give a wider group a meaningful role in making decisions"
+      },
+      {
+        "collocation": "democratize an institution",
+        "example": "Members voted for reforms intended to democratize the institution.",
+        "applies_to_sense": "Make more democratic",
+        "meaning": "change an institution so that power and participation are more widely shared"
+      },
+      {
+        "collocation": "democratize a political system",
+        "example": "The constitution introduced measures to democratize the political system.",
+        "applies_to_sense": "Make more democratic",
+        "meaning": "make a political system more representative and accountable"
+      },
+      {
+        "collocation": "the democratization of knowledge",
+        "example": "The internet has contributed to the democratization of knowledge.",
+        "applies_to_sense": "Widen access",
+        "meaning": "the process of making knowledge available to more people",
+        "usage_note": "Democratization is the noun form."
+      },
+      {
+        "collocation": "the democratization of society",
+        "example": "The study traces the gradual democratization of society after the conflict.",
+        "applies_to_sense": "Make more democratic",
+        "meaning": "the process through which social and political power becomes more widely shared",
+        "usage_note": "Democratization is the noun form."
+      }
+    ],
+    "synonyms": [
+      {
+        "word": "liberalize",
+        "part_of_speech": "transitive verb",
+        "applies_to_sense": "Make more democratic",
+        "difference": "Liberalize means to reduce restrictions or controls. Such reforms may support democratization, but they do not necessarily give people more political power.",
+        "example": "The government liberalized restrictions on the press.",
+        "shared_meaning": "Both words can describe reforms that make a system more open."
+      },
+      {
+        "word": "broaden access to",
+        "part_of_speech": "verb phrase",
+        "applies_to_sense": "Widen access",
+        "difference": "Broaden access to is a more direct and neutral phrase. Democratize often adds the idea that access was previously controlled by a privileged or powerful group.",
+        "example": "The program broadened access to university courses.",
+        "shared_meaning": "Both expressions mean making a resource available to more people."
+      },
+      {
+        "word": "popularize",
+        "part_of_speech": "transitive verb",
+        "applies_to_sense": "Widen access",
+        "difference": "Popularize means to make something widely known, understood, or liked. Democratize focuses on removing barriers to access or participation.",
+        "example": "The television series popularized astronomy among young viewers.",
+        "shared_meaning": "Both can describe something reaching a much wider audience."
+      }
+    ],
+    "etymology": {
+      "origin": "Formed from democrat and the verb-forming suffix -ize, with the basic meaning of making something democratic."
+    },
+    "exercises": {
+      "word_family_choice": [
+        {
+          "prompt_sentence": "The report describes the gradual _____ of the country's political institutions.",
+          "answer": "democratization",
+          "completed_sentence": "The report describes the gradual democratization of the country's political institutions.",
+          "explanation": "Use the noun democratization after the."
+        },
+        {
+          "prompt_sentence": "The reform created a more _____ system of local government.",
+          "answer": "democratic",
+          "completed_sentence": "The reform created a more democratic system of local government.",
+          "explanation": "Use the adjective democratic before the noun system."
+        },
+        {
+          "prompt_sentence": "Free elections alone do not always create a stable _____.",
+          "answer": "democracy",
+          "completed_sentence": "Free elections alone do not always create a stable democracy.",
+          "explanation": "Use the countable noun democracy for a particular political system or country."
+        }
+      ],
+      "correct_or_incorrect": [
+        {
+          "sentence": "The platform aims to democratize access to legal advice.",
+          "verdict": "Correct",
+          "explanation": "Democratize access to is a natural pattern for making a resource available to more people."
+        },
+        {
+          "sentence": "The reforms democratized in the national parliament.",
+          "verdict": "Incorrect",
+          "corrected_sentence": "The reforms democratized the national parliament.",
+          "explanation": "The verb normally takes the institution or system directly as its object."
+        },
+        {
+          "sentence": "The website democratized the access to historical documents.",
+          "verdict": "Incorrect",
+          "corrected_sentence": "The website democratized access to historical documents.",
+          "explanation": "Access is normally used without the in this expression."
+        },
+        {
+          "sentence": "The new voting rules were introduced to democratize decision-making.",
+          "verdict": "Correct",
+          "explanation": "Democratize decision-making correctly means giving more people a real role in decisions."
+        }
+      ],
+      "collocation_practice": [
+        {
+          "prompt_sentence": "Free online courses may help democratize _____ to higher education.",
+          "answer": "access",
+          "completed_sentence": "Free online courses may help democratize access to higher education.",
+          "explanation": "Democratize access to is an established pattern."
+        },
+        {
+          "prompt_sentence": "The council introduced public meetings to democratize _____.",
+          "answer": "decision-making",
+          "completed_sentence": "The council introduced public meetings to democratize decision-making.",
+          "explanation": "Democratize decision-making means giving a wider group influence over choices."
+        },
+        {
+          "prompt_sentence": "The project seeks to democratize _____ by making research articles freely available.",
+          "answer": "knowledge",
+          "completed_sentence": "The project seeks to democratize knowledge by making research articles freely available.",
+          "explanation": "Democratize knowledge means making knowledge available beyond a limited group."
+        }
+      ]
+    }
+  }

@@ -1,0 +1,388 @@
+{
+    "document_type": "kooshky_toefl_word_of_the_day",
+    "schema_version": "1.3",
+    "slug": "concurrent",
+    "word": "concurrent",
+    "date": "July 31st 2026",
+    "pronunciation": {
+      "primary_ipa": "/kənˈkɝːənt/"
+    },
+    "hero": {
+      "part_of_speech_summary": "adjective",
+      "short_meanings": [
+        "happening at the same time",
+        "shared by multiple authorities"
+      ],
+      "one_line_summary": "Concurrent describes events that happen together or powers and responsibilities held by more than one authority at the same time.",
+      "memorable_example": "The university scheduled three concurrent workshops, so students had to choose one."
+    },
+    "meanings": [
+      {
+        "sense_title": "Happening at the same time",
+        "part_of_speech": "adjective",
+        "ipa": "/kənˈkɝːənt/",
+        "definition": "happening, existing, or being done at the same time as something else",
+        "examples": [
+          "The university scheduled three concurrent workshops, so students had to choose one.",
+          "The patient was treated for two concurrent infections.",
+          "The software can perform several concurrent tasks without slowing down.",
+          "The researchers monitored concurrent changes in temperature and humidity.",
+          "Two concurrent construction projects caused severe traffic delays.",
+          "She completed a degree while receiving concurrent professional training.",
+          "The conference offered concurrent sessions on language learning and educational technology."
+        ],
+        "plain_english_equivalent": "happening at the same time",
+        "typical_pattern": "concurrent with + event or concurrent + events, processes, or activities",
+        "register": "formal; common in academic, medical, technological, legal, and professional contexts",
+        "nuance": {
+          "central_nuance": "The word emphasizes that two or more things occur during the same period rather than one after another.",
+          "usual_implication": "The events may begin and end at different moments, but at least part of their duration overlaps.",
+          "contrast_term": "consecutive",
+          "contrast_explanation": "Concurrent events happen at the same time, while consecutive events follow one another without occurring together."
+        },
+        "grammar": {
+          "how_to_use": "Use it before a noun, as in concurrent events, or after a linking verb, as in The projects were concurrent.",
+          "what_can_follow": "It commonly appears before words such as event, session, process, task, illness, treatment, sentence, and program.",
+          "preposition_note": "Use concurrent with when comparing one event or condition with another, as in The training was concurrent with her university studies.",
+          "position_note": "Concurrent usually appears directly before the noun it describes."
+        },
+        "patterns": [
+          {
+            "pattern": "concurrent + events, sessions, or processes",
+            "use": "Use this for activities or developments occurring during the same period.",
+            "example": "Delegates could choose between four concurrent sessions."
+          },
+          {
+            "pattern": "be concurrent with + noun",
+            "use": "Use this to state that one event happens during the same period as another.",
+            "example": "The population decline was concurrent with a prolonged drought."
+          },
+          {
+            "pattern": "run or occur concurrently",
+            "use": "Use the adverb concurrently when describing how two or more activities happen.",
+            "example": "The two experiments were conducted concurrently."
+          },
+          {
+            "pattern": "concurrent sentences",
+            "use": "In law, this describes prison sentences that are served at the same time rather than one after another.",
+            "example": "The judge ordered the two prison sentences to run concurrently."
+          }
+        ],
+        "errors": [
+          {
+            "wrong": "The two courses are concurrent to each other.",
+            "correct": "The two courses are concurrent with each other.",
+            "explanation": "Use concurrent with, not concurrent to."
+          },
+          {
+            "wrong": "The first lecture ended, and then a concurrent lecture began.",
+            "correct": "The first lecture ended, and then a consecutive lecture began.",
+            "explanation": "Concurrent means happening at the same time. Use consecutive when one event follows another."
+          },
+          {
+            "wrong": "The meetings happened concurrent.",
+            "correct": "The meetings happened concurrently.",
+            "explanation": "Use the adverb concurrently to describe how something happened."
+          }
+        ]
+      },
+      {
+        "sense_title": "Shared by multiple authorities",
+        "part_of_speech": "adjective",
+        "ipa": "/kənˈkɝːənt/",
+        "definition": "held or exercised at the same time by two or more authorities, organizations, or people",
+        "examples": [
+          "Federal and state courts may have concurrent jurisdiction over certain cases.",
+          "The constitution gives the national and regional governments some concurrent powers.",
+          "Both departments have concurrent responsibility for protecting the site.",
+          "The agencies exercise concurrent authority over environmental regulation.",
+          "The agreement established concurrent control of the shared research facility.",
+          "Several institutions have concurrent roles in managing the public health system.",
+          "The two committees were given concurrent responsibility for reviewing the proposal."
+        ],
+        "plain_english_equivalent": "belonging to more than one authority at once",
+        "typical_pattern": "concurrent jurisdiction, powers, authority, control, or responsibility",
+        "register": "formal and specialized; especially common in law, government, and administration",
+        "nuance": {
+          "central_nuance": "The word indicates that the same type of power, control, or responsibility exists in more than one place at the same time.",
+          "usual_implication": "The authorities may act separately within the same area rather than always acting as a single combined group.",
+          "contrast_term": "exclusive",
+          "contrast_explanation": "Concurrent authority is held by more than one body, while exclusive authority belongs to only one body."
+        },
+        "grammar": {
+          "how_to_use": "Use it before a noun naming the shared power, legal right, or responsibility.",
+          "what_can_follow": "Common nouns after it include jurisdiction, authority, power, control, responsibility, and role.",
+          "preposition_note": "Jurisdiction and authority are often followed by over, as in concurrent jurisdiction over the dispute.",
+          "position_note": "In this meaning, concurrent normally appears directly before the noun it describes."
+        },
+        "patterns": [
+          {
+            "pattern": "concurrent jurisdiction over + matter",
+            "use": "Use this when two or more courts or governments have legal power over the same type of case.",
+            "example": "The two courts have concurrent jurisdiction over the dispute."
+          },
+          {
+            "pattern": "concurrent powers",
+            "use": "Use this for powers that more than one level of government may exercise.",
+            "example": "Collecting taxes is a concurrent power in some federal systems."
+          },
+          {
+            "pattern": "concurrent responsibility for + noun or -ing form",
+            "use": "Use this when two or more groups share responsibility for something.",
+            "example": "The ministries have concurrent responsibility for managing the program."
+          },
+          {
+            "pattern": "concurrent authority over + area",
+            "use": "Use this when several bodies possess authority in the same area.",
+            "example": "The agencies exercise concurrent authority over workplace safety."
+          }
+        ],
+        "errors": [
+          {
+            "wrong": "The courts have a concurrent jurisdiction over the case.",
+            "correct": "The courts have concurrent jurisdiction over the case.",
+            "explanation": "Jurisdiction is normally used without a in this expression."
+          },
+          {
+            "wrong": "Both agencies have concurrent authorities over the industry.",
+            "correct": "Both agencies have concurrent authority over the industry.",
+            "explanation": "Authority is normally uncountable when it means official power."
+          },
+          {
+            "wrong": "Only one department has concurrent control of the system.",
+            "correct": "Two departments have concurrent control of the system.",
+            "explanation": "Concurrent control requires control to be held by more than one party."
+          }
+        ]
+      }
+    ],
+    "word_family": [
+      {
+        "word": "concurrently",
+        "part_of_speech": "adverb",
+        "definition": "at the same time",
+        "examples": [
+          "The two studies were conducted concurrently.",
+          "Students may enroll in both programs concurrently."
+        ],
+        "ipa": "/kənˈkɝːəntli/",
+        "relationship_to_headword": "This adverb describes events or actions that happen at the same time.",
+        "grammar_pattern": "occur, run, operate, study, or work concurrently"
+      },
+      {
+        "word": "concurrency",
+        "part_of_speech": "uncountable noun",
+        "definition": "the state of two or more events, processes, or tasks happening during the same period",
+        "examples": [
+          "The system was designed to support a high level of concurrency.",
+          "Concurrency allows several computing tasks to make progress during the same period."
+        ],
+        "ipa": "/kənˈkɝːənsi/",
+        "relationship_to_headword": "This noun names the condition of being concurrent.",
+        "grammar_pattern": "support, manage, or increase concurrency",
+        "usage_note": "It is especially common in computing and other technical fields."
+      }
+    ],
+    "collocations": [
+      {
+        "collocation": "concurrent events",
+        "example": "The study examined the effects of several concurrent events.",
+        "applies_to_sense": "Happening at the same time",
+        "meaning": "events occurring during the same period"
+      },
+      {
+        "collocation": "concurrent sessions",
+        "example": "The conference offered six concurrent sessions in the afternoon.",
+        "applies_to_sense": "Happening at the same time",
+        "meaning": "sessions scheduled for the same time"
+      },
+      {
+        "collocation": "concurrent processes",
+        "example": "The computer manages multiple concurrent processes efficiently.",
+        "applies_to_sense": "Happening at the same time",
+        "meaning": "processes operating during the same period"
+      },
+      {
+        "collocation": "concurrent treatment",
+        "example": "The patient received concurrent treatment for anxiety and chronic pain.",
+        "applies_to_sense": "Happening at the same time",
+        "meaning": "two or more treatments provided during the same period"
+      },
+      {
+        "collocation": "concurrent enrollment",
+        "example": "Concurrent enrollment allows high school students to take university courses.",
+        "applies_to_sense": "Happening at the same time",
+        "meaning": "being enrolled in two educational programs or institutions during the same period"
+      },
+      {
+        "collocation": "run concurrently",
+        "example": "The training courses will run concurrently for six weeks.",
+        "applies_to_sense": "Happening at the same time",
+        "meaning": "continue or operate at the same time",
+        "grammar_pattern": "two or more activities run concurrently"
+      },
+      {
+        "collocation": "concurrent jurisdiction",
+        "example": "The federal and regional courts have concurrent jurisdiction over the matter.",
+        "applies_to_sense": "Shared by multiple authorities",
+        "meaning": "legal authority held by more than one court or government",
+        "grammar_pattern": "concurrent jurisdiction over + case or subject"
+      },
+      {
+        "collocation": "concurrent powers",
+        "example": "The constitution identifies several concurrent powers shared by different levels of government.",
+        "applies_to_sense": "Shared by multiple authorities",
+        "meaning": "powers that may be exercised by more than one authority"
+      },
+      {
+        "collocation": "concurrent responsibility",
+        "example": "The two agencies have concurrent responsibility for monitoring water quality.",
+        "applies_to_sense": "Shared by multiple authorities",
+        "meaning": "responsibility held by more than one person or organization",
+        "grammar_pattern": "concurrent responsibility for + noun or -ing form"
+      },
+      {
+        "collocation": "concurrent authority",
+        "example": "Local and national officials exercise concurrent authority over the protected area.",
+        "applies_to_sense": "Shared by multiple authorities",
+        "meaning": "official power held by more than one body",
+        "grammar_pattern": "concurrent authority over + area"
+      }
+    ],
+    "synonyms": [
+      {
+        "word": "simultaneous",
+        "part_of_speech": "adjective",
+        "applies_to_sense": "Happening at the same time",
+        "difference": "Simultaneous often emphasizes that events occur at exactly the same moment. Concurrent can describe events that overlap during the same general period, even if their starting and ending times differ.",
+        "example": "The two explosions were almost simultaneous.",
+        "shared_meaning": "Both words describe events occurring at the same time."
+      },
+      {
+        "word": "overlapping",
+        "part_of_speech": "adjective",
+        "applies_to_sense": "Happening at the same time",
+        "difference": "Overlapping emphasizes that only part of the time period is shared. Concurrent more generally means occurring during the same period.",
+        "example": "The students had two overlapping classes on Monday.",
+        "shared_meaning": "Both can describe events whose time periods occur together."
+      },
+      {
+        "word": "parallel",
+        "part_of_speech": "adjective",
+        "applies_to_sense": "Happening at the same time",
+        "difference": "Parallel processes develop or operate beside each other and may be similar or connected. Concurrent only requires them to occur during the same period.",
+        "example": "The researchers conducted parallel investigations in three countries.",
+        "shared_meaning": "Both can describe activities proceeding at the same time."
+      },
+      {
+        "word": "shared",
+        "part_of_speech": "adjective",
+        "applies_to_sense": "Shared by multiple authorities",
+        "difference": "Shared is a broad everyday term. Concurrent is more formal and often means that each authority independently possesses the same power or responsibility.",
+        "example": "The two departments have shared responsibility for the project.",
+        "shared_meaning": "Both can describe power or responsibility belonging to more than one party."
+      }
+    ],
+    "antonyms": [
+      {
+        "word": "consecutive",
+        "part_of_speech": "adjective",
+        "applies_to_sense": "Happening at the same time",
+        "opposition": "Consecutive events occur one after another, while concurrent events occur during the same period.",
+        "example": "The interviews were held on three consecutive days."
+      },
+      {
+        "word": "sequential",
+        "part_of_speech": "adjective",
+        "applies_to_sense": "Happening at the same time",
+        "opposition": "Sequential processes follow a particular order, while concurrent processes operate during the same period.",
+        "example": "The stages must be completed in sequential order."
+      },
+      {
+        "word": "exclusive",
+        "part_of_speech": "adjective",
+        "applies_to_sense": "Shared by multiple authorities",
+        "opposition": "Exclusive authority belongs to only one party, while concurrent authority is held by more than one.",
+        "example": "The national court has exclusive jurisdiction over these cases."
+      }
+    ],
+    "confusables": [
+      {
+        "word": "consecutive",
+        "key_difference": "Concurrent means happening at the same time, while consecutive means happening one after another.",
+        "headword_example": "The festival held several concurrent performances.",
+        "confusable_example": "The theater presented performances on five consecutive evenings.",
+        "part_of_speech": "adjective",
+        "why_confused": "Both words are formal adjectives often used to describe the timing or order of events."
+      }
+    ],
+    "etymology": {
+      "origin": "Concurrent ultimately comes from Latin concurrere, meaning to run together."
+    },
+    "exercises": {
+      "word_family_choice": [
+        {
+          "prompt_sentence": "The two research teams worked _____ on different parts of the project.",
+          "answer": "concurrently",
+          "completed_sentence": "The two research teams worked concurrently on different parts of the project.",
+          "explanation": "Use the adverb concurrently to describe how the teams worked."
+        },
+        {
+          "prompt_sentence": "The software supports _____, allowing several tasks to make progress during the same period.",
+          "answer": "concurrency",
+          "completed_sentence": "The software supports concurrency, allowing several tasks to make progress during the same period.",
+          "explanation": "Use the noun concurrency after supports."
+        },
+        {
+          "prompt_sentence": "The conference included several _____ workshops.",
+          "answer": "concurrent",
+          "completed_sentence": "The conference included several concurrent workshops.",
+          "explanation": "Use the adjective concurrent before workshops."
+        }
+      ],
+      "correct_or_incorrect": [
+        {
+          "sentence": "The two courses run concurrently, so students cannot attend both.",
+          "verdict": "Correct",
+          "explanation": "Run concurrently correctly means that the courses take place during the same period."
+        },
+        {
+          "sentence": "The second stage began concurrently after the first stage ended.",
+          "verdict": "Incorrect",
+          "corrected_sentence": "The second stage began immediately after the first stage ended.",
+          "explanation": "Concurrent activities overlap in time; they do not occur one after another."
+        },
+        {
+          "sentence": "The regional and national courts have concurrent jurisdiction over the case.",
+          "verdict": "Correct",
+          "explanation": "Concurrent jurisdiction means that both courts possess legal authority over the case."
+        },
+        {
+          "sentence": "The training program was concurrent to her university studies.",
+          "verdict": "Incorrect",
+          "corrected_sentence": "The training program was concurrent with her university studies.",
+          "explanation": "Use concurrent with, not concurrent to."
+        }
+      ],
+      "collocation_practice": [
+        {
+          "prompt_sentence": "The conference offered five _____ sessions, each covering a different subject.",
+          "answer": "concurrent",
+          "completed_sentence": "The conference offered five concurrent sessions, each covering a different subject.",
+          "explanation": "Concurrent sessions take place at the same time."
+        },
+        {
+          "prompt_sentence": "The two experiments were designed to run _____.",
+          "answer": "concurrently",
+          "completed_sentence": "The two experiments were designed to run concurrently.",
+          "explanation": "Run concurrently is a common expression for activities operating at the same time."
+        },
+        {
+          "prompt_sentence": "Both courts have concurrent _____ over disputes involving this law.",
+          "answer": "jurisdiction",
+          "completed_sentence": "Both courts have concurrent jurisdiction over disputes involving this law.",
+          "explanation": "Concurrent jurisdiction is legal authority held by more than one court."
+        }
+      ]
+    }
+  }

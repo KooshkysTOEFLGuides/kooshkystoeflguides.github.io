@@ -1,0 +1,41 @@
+📚✨ TOEFL Word of the Day ✨📚
+📆 July 29th 2026
+#wordoftheday
+
+🔹 Word: residual
+🔊 Primary pronunciation: /rɪˈzɪdʒuəl/
+
+🧠 Meaning 1
+Part of speech: adjective
+Pronunciation: /rɪˈzɪdʒuəl/
+Definition: remaining after most of something has disappeared, been removed, or ended
+
+Examples:
+
+1. The treatment reduced the infection, but some residual symptoms remained.
+2. Residual heat from the machinery continued to warm the room.
+3. The soil contained residual chemicals from earlier farming practices.
+
+🧠 Meaning 2
+Part of speech: countable noun
+Pronunciation: /rɪˈzɪdʒuəl/
+Definition: an amount that remains after other amounts have been removed, used, or calculated
+
+Examples:
+
+1. The researchers examined the residuals left after the chemical reaction.
+2. Any residual from the manufacturing process must be disposed of safely.
+3. The company receives the residual after all operating expenses have been paid.
+
+🧠 Meaning 3
+Part of speech: countable noun
+Pronunciation: /rɪˈzɪdʒuəl/
+Definition: in statistics, the difference between an observed value and the value predicted by a model
+
+Examples:
+
+1. A large residual may indicate that the model does not explain the observation well.
+2. The students calculated a residual for each data point.
+3. The residuals were plotted to check whether the statistical model was appropriate.
+
+📚 @KooshkyTOEFL

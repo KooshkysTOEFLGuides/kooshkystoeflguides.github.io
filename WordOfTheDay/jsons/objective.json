@@ -1,0 +1,517 @@
+{
+    "document_type": "kooshky_toefl_word_of_the_day",
+    "schema_version": "1.3",
+    "slug": "objective",
+    "word": "objective",
+    "date": "August 9th 2026",
+    "pronunciation": {
+      "primary_ipa": "/əbˈdʒɛktɪv/"
+    },
+    "hero": {
+      "part_of_speech_summary": "adjective and countable noun",
+      "short_meanings": [
+        "based on facts rather than opinions",
+        "independently observable or measurable",
+        "a result to be achieved"
+      ],
+      "one_line_summary": "Objective can describe fact-based judgment or independently measurable reality, and as a noun it means a specific goal.",
+      "memorable_example": "The committee used objective criteria to evaluate every application."
+    },
+    "meanings": [
+      {
+        "sense_title": "Based on facts rather than opinions",
+        "part_of_speech": "adjective",
+        "ipa": "/əbˈdʒɛktɪv/",
+        "definition": "based on observable facts and evidence rather than personal opinions, feelings, or preferences",
+        "examples": [
+          "Researchers should remain objective when interpreting their results.",
+          "The committee used objective criteria to evaluate every application.",
+          "Journalists are expected to provide objective accounts of important events.",
+          "The report offers an objective assessment of the policy's strengths and weaknesses.",
+          "It is difficult to be completely objective when judging your own work.",
+          "The selection process should be based on objective standards rather than personal connections.",
+          "The judge must consider the evidence in an objective manner.",
+          "Clear scoring rules can make essay evaluation more objective."
+        ],
+        "plain_english_equivalent": "fair and based on facts",
+        "typical_pattern": "objective + assessment, evidence, criterion, analysis, or judgment",
+        "register": "neutral to formal; common in academic, scientific, legal, journalistic, and professional contexts",
+        "nuance": {
+          "central_nuance": "The word emphasizes reducing the influence of personal preference, emotion, or prejudice.",
+          "usual_implication": "Complete objectivity may be difficult, but methods, evidence, and clear standards can make a judgment more objective.",
+          "contrast_term": "subjective",
+          "contrast_explanation": "Objective judgments rely mainly on observable evidence and agreed standards. Subjective judgments are influenced by personal opinions, feelings, or experiences."
+        },
+        "grammar": {
+          "how_to_use": "Use it before a noun, as in objective evidence, or after a linking verb, as in The evaluation was objective.",
+          "what_can_follow": "It commonly appears before nouns such as assessment, analysis, evidence, criterion, standard, judgment, account, and evaluation.",
+          "position_note": "It is often used after remain, seem, appear, or be when describing a person's judgment or approach."
+        },
+        "patterns": [
+          {
+            "pattern": "objective + assessment, analysis, or evaluation",
+            "use": "Use this for an examination based mainly on evidence rather than personal preference.",
+            "example": "The review provides an objective evaluation of the new teaching method."
+          },
+          {
+            "pattern": "objective criteria or standards",
+            "use": "Use this for clear rules that can be applied consistently to different people or cases.",
+            "example": "Applicants were selected according to objective criteria."
+          },
+          {
+            "pattern": "remain or try to be objective",
+            "use": "Use this when someone attempts not to let personal feelings affect a judgment.",
+            "example": "The researcher tried to remain objective despite disagreeing with the theory."
+          },
+          {
+            "pattern": "make something more objective",
+            "use": "Use this when evidence or clear rules reduce the influence of personal opinion.",
+            "example": "Anonymous grading may make the assessment process more objective."
+          }
+        ],
+        "errors": [
+          {
+            "wrong": "The interviewer made an objective based on her personal preferences.",
+            "correct": "The interviewer made a subjective judgment based on her personal preferences.",
+            "explanation": "A judgment based on personal preferences is subjective, not objective."
+          },
+          {
+            "wrong": "The researcher answered the question objective.",
+            "correct": "The researcher answered the question objectively.",
+            "explanation": "Use the adverb objectively to describe how someone performs an action."
+          },
+          {
+            "wrong": "An objective report must contain no interpretation at all.",
+            "correct": "An objective report may include interpretation, but it should base that interpretation on evidence rather than personal preference.",
+            "explanation": "Objective does not mean that analysis or interpretation is impossible."
+          }
+        ]
+      },
+      {
+        "sense_title": "Independently observable or measurable",
+        "part_of_speech": "adjective",
+        "ipa": "/əbˈdʒɛktɪv/",
+        "definition": "existing outside a person's mind or able to be observed and measured independently",
+        "examples": [
+          "The study combined patients' personal reports with objective measurements of sleep.",
+          "Scientists searched for objective evidence that the treatment was effective.",
+          "Income provides an objective measure of economic status, although it does not show every aspect of well-being.",
+          "The physician found no objective signs of physical injury.",
+          "Researchers compared subjective feelings of stress with objective changes in heart rate.",
+          "Temperature is an objective property that can be measured with an instrument.",
+          "The investigation focused on objective conditions rather than individual perceptions.",
+          "The theory assumes that an objective reality exists independently of human observation."
+        ],
+        "plain_english_equivalent": "real or measurable outside personal experience",
+        "typical_pattern": "objective + evidence, measurement, condition, sign, reality, or indicator",
+        "register": "formal; common in science, medicine, psychology, philosophy, economics, and research writing",
+        "nuance": {
+          "central_nuance": "This sense contrasts external or independently measurable facts with internal feelings and personal perceptions.",
+          "usual_implication": "Something objective can normally be checked by other people using observation, records, or measurement.",
+          "contrast_term": "subjective",
+          "contrast_explanation": "Objective information can be independently observed or measured. Subjective information describes a person's private experience, opinion, or perception."
+        },
+        "grammar": {
+          "how_to_use": "Use it before a noun naming evidence, data, a measurement, a condition, or something believed to exist independently.",
+          "what_can_follow": "Common nouns include evidence, data, measure, measurement, indicator, sign, condition, fact, and reality.",
+          "position_note": "In research writing, objective is often directly contrasted with subjective."
+        },
+        "patterns": [
+          {
+            "pattern": "objective evidence of + noun",
+            "use": "Use this for observable information supporting a conclusion.",
+            "example": "The study found objective evidence of improvement."
+          },
+          {
+            "pattern": "objective measure of + noun",
+            "use": "Use this for a measurement that does not depend mainly on personal judgment.",
+            "example": "Attendance provides an objective measure of student participation."
+          },
+          {
+            "pattern": "objective signs of + condition",
+            "use": "Use this for symptoms or features that other people can observe or measure.",
+            "example": "The examination revealed no objective signs of infection."
+          },
+          {
+            "pattern": "subjective and objective data",
+            "use": "Use this when comparing personal reports with independently measurable information.",
+            "example": "The researchers collected both subjective and objective data on fatigue."
+          },
+          {
+            "pattern": "objective reality",
+            "use": "Use this for reality considered to exist independently of individual thought or perception.",
+            "example": "The philosophers disagreed about whether humans can fully understand objective reality."
+          }
+        ],
+        "errors": [
+          {
+            "wrong": "The patient's personal opinion was an objective measurement.",
+            "correct": "The patient's personal opinion was a subjective report.",
+            "explanation": "A personal opinion is subjective rather than independently measurable."
+          },
+          {
+            "wrong": "The researchers measured the results objective.",
+            "correct": "The researchers measured the results objectively.",
+            "explanation": "Use the adverb objectively to describe how something was measured."
+          },
+          {
+            "wrong": "Objective evidence means evidence that proves a claim with complete certainty.",
+            "correct": "Objective evidence is independently observable evidence, but it may still be incomplete or open to interpretation.",
+            "explanation": "Objective does not necessarily mean final or perfectly certain."
+          }
+        ]
+      },
+      {
+        "sense_title": "Result to be achieved",
+        "part_of_speech": "countable noun",
+        "ipa": "/əbˈdʒɛktɪv/",
+        "definition": "a specific result that a person or organization intends to achieve",
+        "examples": [
+          "The primary objective of the program is to improve access to higher education.",
+          "The research team achieved its main objective ahead of schedule.",
+          "Before beginning the project, the students established several clear objectives.",
+          "The policy failed to meet its stated objectives.",
+          "Reducing energy consumption is one of the organization's long-term objectives.",
+          "Each lesson begins with a clearly defined learning objective.",
+          "The committee reviewed whether the original objectives were still realistic.",
+          "The campaign has two major objectives: increasing awareness and changing public behavior."
+        ],
+        "plain_english_equivalent": "a specific goal",
+        "typical_pattern": "the objective of + project or an objective is to + verb",
+        "register": "neutral to formal; very common in academic, business, educational, governmental, and professional contexts",
+        "nuance": {
+          "central_nuance": "An objective is usually a clearly stated and practical result rather than a vague hope.",
+          "usual_implication": "Objectives are often used to guide planning and to measure whether a project, policy, or activity has succeeded.",
+          "contrast_term": "aim",
+          "contrast_explanation": "Aim and objective are often close in meaning. Objective usually sounds more specific, formal, and measurable, while aim can be broader and less precisely defined."
+        },
+        "grammar": {
+          "how_to_use": "Use an objective for one intended result and objectives for several.",
+          "what_can_follow": "It is often followed by of and the project or organization, or by a form of be and to plus a verb.",
+          "preposition_note": "Say the objective of the study, not the objective for the study, when identifying its main purpose. Use objective for when identifying the intended beneficiary, as in an objective for the next year.",
+          "noun_use": "This is a countable noun, so the singular normally needs a, an, or the."
+        },
+        "patterns": [
+          {
+            "pattern": "the main or primary objective",
+            "use": "Use this for the most important result that someone wants to achieve.",
+            "example": "The primary objective is to reduce preventable illness."
+          },
+          {
+            "pattern": "the objective of + project, study, or policy",
+            "use": "Use this to identify the intended result of an organized activity.",
+            "example": "The objective of the study was to examine changes in migration patterns."
+          },
+          {
+            "pattern": "an objective is to + verb",
+            "use": "Use this to state a goal as an action.",
+            "example": "One objective is to increase cooperation between departments."
+          },
+          {
+            "pattern": "achieve, meet, or accomplish an objective",
+            "use": "Use this when someone successfully reaches an intended result.",
+            "example": "The project achieved all of its original objectives."
+          },
+          {
+            "pattern": "set or establish objectives",
+            "use": "Use this when deciding what a project or organization should achieve.",
+            "example": "The team established clear objectives before beginning the experiment."
+          }
+        ],
+        "errors": [
+          {
+            "wrong": "The objective of the program is improving access to education.",
+            "correct": "The objective of the program is to improve access to education.",
+            "explanation": "After the objective is, the most common pattern is to followed by the base form of a verb."
+          },
+          {
+            "wrong": "The team achieved to its main objective.",
+            "correct": "The team achieved its main objective.",
+            "explanation": "Achieve takes the objective directly and is not followed by to."
+          },
+          {
+            "wrong": "The project has an objective to reducing waste.",
+            "correct": "The project has an objective of reducing waste.",
+            "explanation": "Use an objective of followed by an -ing form, or say the objective is to reduce waste."
+          }
+        ]
+      }
+    ],
+    "word_family": [
+      {
+        "word": "objectively",
+        "part_of_speech": "adverb",
+        "definition": "in a way that is based on observable facts rather than personal opinions or feelings",
+        "examples": [
+          "The applications should be evaluated objectively.",
+          "It is difficult to judge your own performance completely objectively."
+        ],
+        "ipa": "/əbˈdʒɛktɪvli/",
+        "relationship_to_headword": "This adverb describes evaluating, reporting, or examining something in an objective way.",
+        "grammar_pattern": "evaluate, assess, examine, report, or judge + objectively"
+      },
+      {
+        "word": "objectivity",
+        "part_of_speech": "uncountable noun",
+        "definition": "the quality of basing judgments on facts and evidence rather than personal opinions or feelings",
+        "examples": [
+          "The newspaper's objectivity was questioned during the election.",
+          "Anonymous review can help improve objectivity in the selection process."
+        ],
+        "ipa": "/ˌɑːbdʒɛkˈtɪvəti/",
+        "relationship_to_headword": "This noun names the quality of being objective.",
+        "grammar_pattern": "maintain, improve, ensure, or question + objectivity",
+        "usage_note": "It is normally used without a or an."
+      }
+    ],
+    "collocations": [
+      {
+        "collocation": "objective evidence",
+        "example": "The investigators found no objective evidence of dishonest behavior.",
+        "applies_to_sense": "Independently observable or measurable",
+        "meaning": "evidence that can be observed or checked independently"
+      },
+      {
+        "collocation": "objective assessment",
+        "example": "The report provides an objective assessment of the project's performance.",
+        "applies_to_sense": "Based on facts rather than opinions",
+        "meaning": "an evaluation based mainly on evidence and clear standards"
+      },
+      {
+        "collocation": "objective criteria",
+        "example": "Scholarships should be awarded according to objective criteria.",
+        "applies_to_sense": "Based on facts rather than opinions",
+        "meaning": "clear standards that can be applied consistently"
+      },
+      {
+        "collocation": "objective analysis",
+        "example": "An objective analysis must consider evidence supporting both sides.",
+        "applies_to_sense": "Based on facts rather than opinions",
+        "meaning": "an examination that attempts to avoid personal bias"
+      },
+      {
+        "collocation": "remain objective",
+        "example": "Reviewers must remain objective when evaluating competing proposals.",
+        "applies_to_sense": "Based on facts rather than opinions",
+        "meaning": "continue to base judgments on evidence rather than personal preference"
+      },
+      {
+        "collocation": "objective measure",
+        "example": "Test scores provide one objective measure of academic performance.",
+        "applies_to_sense": "Independently observable or measurable",
+        "meaning": "a measurement that can be checked independently",
+        "grammar_pattern": "an objective measure of + quality or condition"
+      },
+      {
+        "collocation": "objective data",
+        "example": "The researchers compared the interviews with objective data from medical records.",
+        "applies_to_sense": "Independently observable or measurable",
+        "meaning": "information based on observation, measurement, or records"
+      },
+      {
+        "collocation": "objective reality",
+        "example": "The theory questions whether people perceive objective reality directly.",
+        "applies_to_sense": "Independently observable or measurable",
+        "meaning": "reality considered to exist independently of individual perception"
+      },
+      {
+        "collocation": "primary objective",
+        "example": "The primary objective of the reform is to improve public safety.",
+        "applies_to_sense": "Result to be achieved",
+        "meaning": "the most important intended result",
+        "grammar_pattern": "the primary objective of + project or policy"
+      },
+      {
+        "collocation": "achieve an objective",
+        "example": "The organization achieved its objective of reducing water use.",
+        "applies_to_sense": "Result to be achieved",
+        "meaning": "successfully produce an intended result",
+        "grammar_pattern": "achieve an objective of + -ing form"
+      },
+      {
+        "collocation": "meet an objective",
+        "example": "The project met its main objective within the available budget.",
+        "applies_to_sense": "Result to be achieved",
+        "meaning": "successfully reach a stated goal"
+      },
+      {
+        "collocation": "set clear objectives",
+        "example": "Managers should set clear objectives for each stage of the project.",
+        "applies_to_sense": "Result to be achieved",
+        "meaning": "establish specific results that should be achieved"
+      },
+      {
+        "collocation": "learning objective",
+        "example": "Each activity is connected to a specific learning objective.",
+        "applies_to_sense": "Result to be achieved",
+        "meaning": "a particular skill or piece of knowledge that students should gain"
+      },
+      {
+        "collocation": "maintain objectivity",
+        "example": "Researchers must maintain objectivity throughout the investigation.",
+        "applies_to_sense": "Based on facts rather than opinions",
+        "meaning": "continue to judge according to evidence rather than personal feelings",
+        "usage_note": "Objectivity is the noun form."
+      }
+    ],
+    "synonyms": [
+      {
+        "word": "impartial",
+        "part_of_speech": "adjective",
+        "applies_to_sense": "Based on facts rather than opinions",
+        "difference": "Impartial emphasizes treating different people or sides fairly without favoring one. Objective more broadly emphasizes relying on facts rather than personal feelings.",
+        "example": "The dispute was examined by an impartial committee.",
+        "shared_meaning": "Both words can describe fair judgment that is not controlled by personal preference."
+      },
+      {
+        "word": "unbiased",
+        "part_of_speech": "adjective",
+        "applies_to_sense": "Based on facts rather than opinions",
+        "difference": "Unbiased specifically means not unfairly favoring one side. Objective also emphasizes the use of observable evidence and clear standards.",
+        "example": "The researchers attempted to select an unbiased sample.",
+        "shared_meaning": "Both words describe judgment that avoids unfair personal influence."
+      },
+      {
+        "word": "measurable",
+        "part_of_speech": "adjective",
+        "applies_to_sense": "Independently observable or measurable",
+        "difference": "Measurable means capable of being measured. Objective is broader and may describe any fact or condition that can be independently observed or verified.",
+        "example": "The policy produced measurable improvements in air quality.",
+        "shared_meaning": "Both can describe information that does not depend only on personal opinion."
+      },
+      {
+        "word": "goal",
+        "part_of_speech": "countable noun",
+        "applies_to_sense": "Result to be achieved",
+        "difference": "Goal is the common everyday term. Objective is more formal and often refers to a specific, planned, or measurable result.",
+        "example": "The team's long-term goal is to develop a low-cost vaccine.",
+        "shared_meaning": "Both words refer to something that a person or organization wants to achieve."
+      },
+      {
+        "word": "aim",
+        "part_of_speech": "countable noun",
+        "applies_to_sense": "Result to be achieved",
+        "difference": "Aim can be broad or general. Objective often suggests a more clearly defined result that can be used to evaluate success.",
+        "example": "The main aim of the course is to develop critical thinking.",
+        "shared_meaning": "Both words can name the intended result of an activity."
+      }
+    ],
+    "antonyms": [
+      {
+        "word": "subjective",
+        "part_of_speech": "adjective",
+        "applies_to_sense": "Based on facts rather than opinions",
+        "opposition": "Subjective judgments depend on personal opinions, feelings, or preferences, while objective judgments rely mainly on observable facts and agreed standards.",
+        "example": "Judgments about beauty are often subjective."
+      },
+      {
+        "word": "subjective",
+        "part_of_speech": "adjective",
+        "applies_to_sense": "Independently observable or measurable",
+        "opposition": "Subjective information describes personal experience or perception, while objective information can be independently observed or measured.",
+        "example": "Pain intensity is partly subjective because each patient experiences it differently."
+      }
+    ],
+    "confusables": [
+      {
+        "word": "subjective",
+        "key_difference": "Objective means based on independently observable facts or measurements. Subjective means influenced by personal opinion, feeling, or experience.",
+        "headword_example": "The researchers used objective measurements of physical activity.",
+        "confusable_example": "Participants also provided subjective reports of how tired they felt.",
+        "part_of_speech": "adjective",
+        "why_confused": "The words are commonly contrasted in academic and research contexts."
+      },
+      {
+        "word": "objection",
+        "key_difference": "An objective is a goal. An objection is a reason for opposing or disagreeing with something.",
+        "headword_example": "The project's main objective is to reduce pollution.",
+        "confusable_example": "Residents raised an objection to the proposed factory.",
+        "part_of_speech": "countable noun",
+        "why_confused": "The words share the same beginning and are both common in formal writing."
+      }
+    ],
+    "exercises": {
+      "word_family_choice": [
+        {
+          "prompt_sentence": "The applications must be evaluated _____.",
+          "answer": "objectively",
+          "completed_sentence": "The applications must be evaluated objectively.",
+          "explanation": "Use the adverb objectively to describe how the applications should be evaluated."
+        },
+        {
+          "prompt_sentence": "Anonymous grading may improve _____ in the assessment process.",
+          "answer": "objectivity",
+          "completed_sentence": "Anonymous grading may improve objectivity in the assessment process.",
+          "explanation": "Use the noun objectivity after improve."
+        },
+        {
+          "prompt_sentence": "The committee established three clear _____ for the new program.",
+          "answer": "objectives",
+          "completed_sentence": "The committee established three clear objectives for the new program.",
+          "explanation": "Use the plural noun objectives for several intended results."
+        }
+      ],
+      "correct_or_incorrect": [
+        {
+          "sentence": "The selection committee used objective criteria.",
+          "verdict": "Correct",
+          "explanation": "Objective criteria are clear standards that can be applied consistently."
+        },
+        {
+          "sentence": "Her personal preference was completely objective.",
+          "verdict": "Incorrect",
+          "corrected_sentence": "Her personal preference was subjective.",
+          "explanation": "A personal preference depends on individual taste and is therefore subjective."
+        },
+        {
+          "sentence": "The main objective of the study is to identify the cause of the decline.",
+          "verdict": "Correct",
+          "explanation": "The objective of something is to do something is a standard pattern."
+        },
+        {
+          "sentence": "The project achieved to its primary objective.",
+          "verdict": "Incorrect",
+          "corrected_sentence": "The project achieved its primary objective.",
+          "explanation": "Achieve takes the objective directly without to."
+        },
+        {
+          "sentence": "Objective evidence is always complete and impossible to question.",
+          "verdict": "Incorrect",
+          "corrected_sentence": "Objective evidence can be independently observed or verified, but it may still be incomplete or open to interpretation.",
+          "explanation": "Objective does not mean perfectly complete or absolutely certain."
+        }
+      ],
+      "collocation_practice": [
+        {
+          "prompt_sentence": "The committee used objective _____ to compare the candidates.",
+          "answer": "criteria",
+          "completed_sentence": "The committee used objective criteria to compare the candidates.",
+          "explanation": "Objective criteria are standards based on clear and consistently applied information."
+        },
+        {
+          "prompt_sentence": "The primary _____ of the campaign is to increase vaccination rates.",
+          "answer": "objective",
+          "completed_sentence": "The primary objective of the campaign is to increase vaccination rates.",
+          "explanation": "Primary objective means the most important intended result."
+        },
+        {
+          "prompt_sentence": "The researchers found no objective _____ that the substance caused harm.",
+          "answer": "evidence",
+          "completed_sentence": "The researchers found no objective evidence that the substance caused harm.",
+          "explanation": "Objective evidence is independently observable or verifiable information."
+        },
+        {
+          "prompt_sentence": "The organization achieved its main _____ ahead of schedule.",
+          "answer": "objective",
+          "completed_sentence": "The organization achieved its main objective ahead of schedule.",
+          "explanation": "Achieve an objective means successfully reach an intended result."
+        },
+        {
+          "prompt_sentence": "Reviewers must remain _____ when assessing competing proposals.",
+          "answer": "objective",
+          "completed_sentence": "Reviewers must remain objective when assessing competing proposals.",
+          "explanation": "Remain objective means continue to rely on evidence rather than personal preference."
+        }
+      ]
+    }
+  }

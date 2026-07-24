@@ -1,0 +1,407 @@
+{
+    "document_type": "kooshky_toefl_word_of_the_day",
+    "schema_version": "1.3",
+    "slug": "residual",
+    "word": "residual",
+    "date": "July 29th 2026",
+    "pronunciation": {
+      "primary_ipa": "/rɪˈzɪdʒuəl/"
+    },
+    "hero": {
+      "part_of_speech_summary": "adjective and countable noun",
+      "short_meanings": [
+        "remaining after something ends",
+        "an amount left over",
+        "difference from a predicted value"
+      ],
+      "one_line_summary": "Residual describes or names something that remains after the main part has been removed, used, explained, or completed.",
+      "memorable_example": "The treatment reduced the infection, but some residual symptoms remained."
+    },
+    "meanings": [
+      {
+        "sense_title": "Remaining after a process",
+        "part_of_speech": "adjective",
+        "ipa": "/rɪˈzɪdʒuəl/",
+        "definition": "remaining after most of something has disappeared, been removed, or ended",
+        "examples": [
+          "The treatment reduced the infection, but some residual symptoms remained.",
+          "Residual heat from the machinery continued to warm the room.",
+          "The soil contained residual chemicals from earlier farming practices.",
+          "Researchers found residual traces of the substance in the water.",
+          "The conflict left residual tension between the two communities.",
+          "Residual moisture can damage the equipment if it is not removed.",
+          "The economic crisis had residual effects that continued for several years."
+        ],
+        "plain_english_equivalent": "left over after most is gone",
+        "typical_pattern": "residual + effect, amount, heat, moisture, chemical, symptom, or risk",
+        "register": "formal; common in science, medicine, economics, engineering, and academic writing",
+        "nuance": {
+          "central_nuance": "The word emphasizes that the main part has gone or been dealt with, but a smaller part still remains.",
+          "usual_implication": "The remaining part may continue to have an effect even though it is relatively small.",
+          "contrast_term": "remaining",
+          "contrast_explanation": "Remaining is a general word for anything left. Residual is more formal and often suggests that something is left after a specific process, treatment, calculation, or event."
+        },
+        "grammar": {
+          "how_to_use": "Use it before a noun to describe something that remains after a process or event.",
+          "what_can_follow": "It commonly comes before nouns such as effect, amount, heat, moisture, chemical, symptom, damage, risk, and value.",
+          "position_note": "It is most often used before a noun, as in residual damage. Use remaining rather than residual in many ordinary everyday situations."
+        },
+        "patterns": [
+          {
+            "pattern": "residual + effect or impact",
+            "use": "Use this for an effect that continues after its main cause or event has ended.",
+            "example": "The policy had residual effects on employment in the region."
+          },
+          {
+            "pattern": "residual + substance or material",
+            "use": "Use this for a small amount of material left after cleaning, processing, or use.",
+            "example": "Residual oil was found inside the pipe."
+          },
+          {
+            "pattern": "residual + symptom or damage",
+            "use": "Use this for a problem that remains after recovery or repair.",
+            "example": "Most patients recovered fully, although a few experienced residual pain."
+          },
+          {
+            "pattern": "residual + value",
+            "use": "Use this for the estimated value that an asset still has after use or depreciation.",
+            "example": "The vehicle is expected to have a high residual value after three years."
+          }
+        ],
+        "errors": [
+          {
+            "wrong": "There was a residual of tension after the meeting.",
+            "correct": "There was residual tension after the meeting.",
+            "explanation": "When residual describes a noun, place it directly before that noun."
+          },
+          {
+            "wrong": "The medicine caused some remained effects.",
+            "correct": "The medicine caused some residual effects.",
+            "explanation": "Use residual, not remained, as an adjective before a noun."
+          },
+          {
+            "wrong": "I ate the residual pizza for lunch.",
+            "correct": "I ate the leftover pizza for lunch.",
+            "explanation": "Residual is generally too formal and technical for ordinary food left after a meal. Leftover is more natural."
+          }
+        ]
+      },
+      {
+        "sense_title": "Amount left over",
+        "part_of_speech": "countable noun",
+        "ipa": "/rɪˈzɪdʒuəl/",
+        "definition": "an amount that remains after other amounts have been removed, used, or calculated",
+        "examples": [
+          "The researchers examined the residuals left after the chemical reaction.",
+          "Any residual from the manufacturing process must be disposed of safely.",
+          "The company receives the residual after all operating expenses have been paid.",
+          "The filtering system removes most particles, but a small residual may remain.",
+          "The accountant calculated the residual after subtracting the fixed costs.",
+          "Scientists analyzed the residuals to identify materials that had not broken down.",
+          "The residual was too small to affect the final result."
+        ],
+        "plain_english_equivalent": "an amount left after the rest is removed",
+        "typical_pattern": "a residual from + process or the residual after + calculation",
+        "register": "formal and technical; used mainly in science, finance, mathematics, and manufacturing",
+        "nuance": {
+          "central_nuance": "As a noun, residual refers to the actual amount or quantity that is left, not merely its quality of remaining.",
+          "usual_implication": "The amount is often determined after subtraction, processing, filtering, or distribution."
+        },
+        "grammar": {
+          "how_to_use": "Use a residual for one remaining amount and residuals for several separate remaining amounts.",
+          "what_can_follow": "It may be followed by from to identify the process that produced it, or after to identify the calculation or deduction.",
+          "preposition_note": "Say a residual from the process or the residual after expenses were paid.",
+          "noun_use": "This is countable in technical use. However, residue is often more natural when referring to physical material left on a surface."
+        },
+        "patterns": [
+          {
+            "pattern": "a residual from + process",
+            "use": "Use this for an amount left as a result of a process.",
+            "example": "The laboratory tested a residual from the purification process."
+          },
+          {
+            "pattern": "the residual after + deduction or payment",
+            "use": "Use this for the amount remaining after costs or other amounts have been subtracted.",
+            "example": "Investors receive the residual after all debts have been paid."
+          },
+          {
+            "pattern": "calculate the residual",
+            "use": "Use this when the remaining amount is found mathematically.",
+            "example": "The analyst calculated the residual by subtracting total costs from revenue."
+          }
+        ],
+        "errors": [
+          {
+            "wrong": "The workers cleaned the residual from the table.",
+            "correct": "The workers cleaned the residue from the table.",
+            "explanation": "Residue is normally used for physical material left on a surface. Residual as a noun is more technical and often refers to a calculated or measured amount."
+          },
+          {
+            "wrong": "The company kept residual after paying its debts.",
+            "correct": "The company kept the residual after paying its debts.",
+            "explanation": "A singular countable use normally needs a, an, or the."
+          }
+        ]
+      },
+      {
+        "sense_title": "Difference from a prediction",
+        "part_of_speech": "countable noun",
+        "ipa": "/rɪˈzɪdʒuəl/",
+        "definition": "in statistics, the difference between an observed value and the value predicted by a model",
+        "examples": [
+          "A large residual may indicate that the model does not explain the observation well.",
+          "The students calculated a residual for each data point.",
+          "The residuals were plotted to check whether the statistical model was appropriate.",
+          "A positive residual means that the observed value is higher than the predicted value.",
+          "Several unusually large residuals suggested that the data contained outliers.",
+          "The model was revised to reduce the size of the residuals.",
+          "Randomly distributed residuals generally provide evidence that the model fits the data reasonably well."
+        ],
+        "plain_english_equivalent": "the gap between an actual and predicted value",
+        "typical_pattern": "observed value minus predicted value equals residual",
+        "register": "technical; common in statistics, data analysis, economics, and scientific research",
+        "nuance": {
+          "central_nuance": "A residual measures how far one observation is from the value that a statistical model predicts.",
+          "usual_implication": "Small and randomly distributed residuals often suggest a better-fitting model, while large or patterned residuals may reveal problems."
+        },
+        "grammar": {
+          "how_to_use": "Use a residual for the difference associated with one observation and residuals for the differences across a data set.",
+          "what_can_follow": "It often appears with verbs such as calculate, examine, analyze, plot, minimize, and reduce.",
+          "noun_use": "This is a countable technical noun. The plural residuals is especially common when discussing an entire data set."
+        },
+        "patterns": [
+          {
+            "pattern": "calculate a residual",
+            "use": "Use this for finding the difference between one observed value and its predicted value.",
+            "example": "Calculate a residual for each point in the data set."
+          },
+          {
+            "pattern": "analyze or plot the residuals",
+            "use": "Use this when examining whether a statistical model fits the data well.",
+            "example": "The researchers plotted the residuals before accepting the model."
+          },
+          {
+            "pattern": "a positive or negative residual",
+            "use": "Use positive when the observation is above the prediction and negative when it is below.",
+            "example": "The final observation produced a large negative residual."
+          }
+        ],
+        "errors": [
+          {
+            "wrong": "The residual is the predicted value itself.",
+            "correct": "The residual is the difference between the observed value and the predicted value.",
+            "explanation": "A residual is a difference, not the predicted value."
+          },
+          {
+            "wrong": "The researcher calculated the residuals between the two groups.",
+            "correct": "The researcher calculated the residuals for the observations.",
+            "explanation": "Statistical residuals are normally calculated for observations by comparing observed and predicted values."
+          }
+        ]
+      }
+    ],
+    "word_family": [
+      {
+        "word": "residue",
+        "part_of_speech": "countable or uncountable noun",
+        "definition": "a substance or small amount of material that remains after a process such as burning, evaporation, or cleaning",
+        "examples": [
+          "The cleaner left a sticky residue on the glass.",
+          "Scientists tested the soil for pesticide residues."
+        ],
+        "ipa": "/ˈrɛzəˌduː/",
+        "relationship_to_headword": "Residue names material that remains, while residual commonly describes something that remains.",
+        "grammar_pattern": "residue on + surface or residue from + process",
+        "usage_note": "Use residue without a number for material in general and residues for separate types or deposits."
+      },
+      {
+        "word": "residually",
+        "part_of_speech": "adverb",
+        "definition": "in a way that remains after the main part has been removed, completed, or explained",
+        "examples": [
+          "The substance was residually present in the soil.",
+          "The remaining funds were residually allocated among the partners."
+        ],
+        "ipa": "/rɪˈzɪdʒuəli/",
+        "relationship_to_headword": "This adverb describes something occurring or existing as a residual.",
+        "usage_note": "It is uncommon and mainly appears in specialized academic or technical writing."
+      }
+    ],
+    "collocations": [
+      {
+        "collocation": "residual effect",
+        "example": "The medication may have residual effects for several hours.",
+        "applies_to_sense": "Remaining after a process",
+        "meaning": "an effect that continues after the main action or event has ended",
+        "grammar_pattern": "residual effect of + event, treatment, or substance"
+      },
+      {
+        "collocation": "residual impact",
+        "example": "The recession had a residual impact on household spending.",
+        "applies_to_sense": "Remaining after a process",
+        "meaning": "an influence that continues after the main event"
+      },
+      {
+        "collocation": "residual risk",
+        "example": "Even after the repairs, a small residual risk remained.",
+        "applies_to_sense": "Remaining after a process",
+        "meaning": "risk that remains after efforts have been made to reduce it"
+      },
+      {
+        "collocation": "residual heat",
+        "example": "The system uses residual heat to warm nearby buildings.",
+        "applies_to_sense": "Remaining after a process",
+        "meaning": "heat that remains after a machine or process has stopped"
+      },
+      {
+        "collocation": "residual moisture",
+        "example": "Residual moisture inside the container encouraged mold growth.",
+        "applies_to_sense": "Remaining after a process",
+        "meaning": "a small amount of water that remains after drying"
+      },
+      {
+        "collocation": "residual value",
+        "example": "The machine's residual value was estimated at ten thousand dollars.",
+        "applies_to_sense": "Remaining after a process",
+        "meaning": "the value an asset is expected to retain after use or depreciation",
+        "grammar_pattern": "the residual value of + asset"
+      },
+      {
+        "collocation": "residual income",
+        "example": "Residual income is calculated after required expenses and returns have been deducted.",
+        "applies_to_sense": "Amount left over",
+        "meaning": "income remaining after specified costs or required returns are subtracted"
+      },
+      {
+        "collocation": "calculate the residual",
+        "example": "The accountant calculated the residual after deducting all liabilities.",
+        "applies_to_sense": "Amount left over",
+        "meaning": "determine the amount that remains after subtraction"
+      },
+      {
+        "collocation": "large residual",
+        "example": "A large residual showed that the prediction was far from the observed value.",
+        "applies_to_sense": "Difference from a prediction",
+        "meaning": "a large gap between an observed and predicted value"
+      },
+      {
+        "collocation": "residual analysis",
+        "example": "The researchers used residual analysis to evaluate the model.",
+        "applies_to_sense": "Difference from a prediction",
+        "meaning": "the examination of residuals to judge how well a statistical model fits"
+      },
+      {
+        "collocation": "plot the residuals",
+        "example": "The students plotted the residuals to identify patterns in the model's errors.",
+        "applies_to_sense": "Difference from a prediction",
+        "meaning": "display residual values on a graph",
+        "grammar_pattern": "plot the residuals against + variable"
+      }
+    ],
+    "synonyms": [
+      {
+        "word": "remaining",
+        "part_of_speech": "adjective",
+        "applies_to_sense": "Remaining after a process",
+        "difference": "Remaining is more general and common in everyday language. Residual is more formal and often refers to something left after a particular process or event.",
+        "example": "The remaining funds will be used for maintenance.",
+        "shared_meaning": "Both words describe something that is still left."
+      },
+      {
+        "word": "leftover",
+        "part_of_speech": "adjective",
+        "applies_to_sense": "Remaining after a process",
+        "difference": "Leftover is more informal and is especially common for food, materials, or unused items. Residual is more technical and academic.",
+        "example": "The leftover materials were stored for future use.",
+        "shared_meaning": "Both can describe something that remains after the main part has been used."
+      },
+      {
+        "word": "remainder",
+        "part_of_speech": "countable noun",
+        "applies_to_sense": "Amount left over",
+        "difference": "Remainder is a common general word for what is left. Residual is more formal and often refers to an amount produced by a calculation or technical process.",
+        "example": "The remainder of the budget was transferred to the next year.",
+        "shared_meaning": "Both words can refer to an amount left after subtraction or use."
+      },
+      {
+        "word": "error",
+        "part_of_speech": "countable noun",
+        "applies_to_sense": "Difference from a prediction",
+        "difference": "In statistics, error may refer to the difference between an observed value and the true underlying value, which may be unknown. A residual is the observable difference between an observed value and a model's predicted value.",
+        "example": "Measurement error can reduce the accuracy of an experiment.",
+        "shared_meaning": "Both can describe a difference between a value and a reference point."
+      }
+    ],
+    "confusables": [
+      {
+        "word": "residue",
+        "key_difference": "Residual is usually an adjective meaning remaining, while residue is usually a noun referring to physical material left after a process.",
+        "headword_example": "The laboratory detected residual chemicals in the water.",
+        "confusable_example": "A white residue remained at the bottom of the container.",
+        "part_of_speech": "adjective versus noun",
+        "why_confused": "The words share the same root and both involve the idea of something being left behind."
+      }
+    ],
+    "etymology": {
+      "origin": "Residual ultimately comes from Latin residuum, meaning something left behind or remaining."
+    },
+    "exercises": {
+      "word_family_choice": [
+        {
+          "prompt_sentence": "The cleaning product left a thin _____ on the surface.",
+          "answer": "residue",
+          "completed_sentence": "The cleaning product left a thin residue on the surface.",
+          "explanation": "Use the noun residue for physical material left on a surface."
+        },
+        {
+          "prompt_sentence": "The patient experienced some _____ discomfort after the treatment.",
+          "answer": "residual",
+          "completed_sentence": "The patient experienced some residual discomfort after the treatment.",
+          "explanation": "Use the adjective residual before the noun discomfort."
+        }
+      ],
+      "correct_or_incorrect": [
+        {
+          "sentence": "The fire produced enough residual heat to warm the building.",
+          "verdict": "Correct",
+          "explanation": "Residual heat is an established expression for heat that remains after a process."
+        },
+        {
+          "sentence": "A sticky residual covered the surface.",
+          "verdict": "Incorrect",
+          "corrected_sentence": "A sticky residue covered the surface.",
+          "explanation": "Use residue for physical material left on a surface."
+        },
+        {
+          "sentence": "The residual is the difference between the observed and predicted values.",
+          "verdict": "Correct",
+          "explanation": "This is the standard statistical meaning of residual."
+        },
+        {
+          "sentence": "The company hopes to eliminate every residual risk completely.",
+          "verdict": "Correct",
+          "explanation": "Residual risk naturally refers to risk that remains after preventive measures."
+        }
+      ],
+      "collocation_practice": [
+        {
+          "prompt_sentence": "The medicine may cause _____ effects even after treatment ends.",
+          "answer": "residual",
+          "completed_sentence": "The medicine may cause residual effects even after treatment ends.",
+          "explanation": "Residual effects are effects that continue after the main action has ended."
+        },
+        {
+          "prompt_sentence": "The engineer measured the _____ moisture inside the storage tank.",
+          "answer": "residual",
+          "completed_sentence": "The engineer measured the residual moisture inside the storage tank.",
+          "explanation": "Residual moisture is water that remains after drying or removal."
+        },
+        {
+          "prompt_sentence": "The analyst plotted the _____ to evaluate the statistical model.",
+          "answer": "residuals",
+          "completed_sentence": "The analyst plotted the residuals to evaluate the statistical model.",
+          "explanation": "Plot the residuals is a standard expression in statistical analysis."
+        }
+      ]
+    }
+  }

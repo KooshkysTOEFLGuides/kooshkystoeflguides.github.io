@@ -1,3 +1,9 @@
+short form: put the json in jsons/ then
+$ python wotd_generator.py --input jsons --output-dir generated
+$ python generate_pronunciation_audio.py --directory generated
+
+
+
 # Kooshky TOEFL Word of the Day: JSON + Local Audio Pipeline
 
 This package separates lexical content, page generation, and pronunciation-audio generation.

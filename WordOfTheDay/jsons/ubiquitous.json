@@ -1,0 +1,274 @@
+{
+    "document_type": "kooshky_toefl_word_of_the_day",
+    "schema_version": "1.3",
+    "slug": "ubiquitous",
+    "word": "ubiquitous",
+    "date": "July 28th 2026",
+    "pronunciation": {
+      "primary_ipa": "/juːˈbɪkwətəs/"
+    },
+    "hero": {
+      "part_of_speech_summary": "adjective",
+      "short_meanings": [
+        "present almost everywhere"
+      ],
+      "one_line_summary": "Something ubiquitous can be seen, found, or experienced almost everywhere.",
+      "memorable_example": "Smartphones have become ubiquitous in modern society."
+    },
+    "meanings": [
+      {
+        "sense_title": "Present almost everywhere",
+        "part_of_speech": "adjective",
+        "ipa": "/juːˈbɪkwətəs/",
+        "definition": "present, found, or appearing almost everywhere, especially within a particular place, society, or situation",
+        "examples": [
+          "Smartphones have become ubiquitous in modern society.",
+          "Plastic is now ubiquitous in the world's oceans.",
+          "Coffee shops are ubiquitous throughout the city.",
+          "The researchers found that the bacteria were ubiquitous in the local environment.",
+          "Advertising has become ubiquitous on social media platforms.",
+          "Security cameras are increasingly ubiquitous in public spaces.",
+          "The plant is ubiquitous across the region because it can survive in many different climates."
+        ],
+        "plain_english_equivalent": "almost everywhere",
+        "typical_pattern": "ubiquitous in, across, or throughout + place or area",
+        "register": "neutral to formal; common in academic, scientific, technological, and social discussions",
+        "nuance": {
+          "central_nuance": "The word does not usually mean literally present in every possible place. It emphasizes that something is extremely widespread and difficult to avoid or overlook.",
+          "usual_implication": "It often suggests that something has become a normal or noticeable part of an environment or society.",
+          "contrast_term": "widespread",
+          "contrast_explanation": "Widespread means existing in many places or affecting many people. Ubiquitous is stronger and suggests that something seems to be almost everywhere."
+        },
+        "grammar": {
+          "how_to_use": "Use it before a noun or after a linking verb such as be, become, or seem.",
+          "what_can_follow": "When it comes after a linking verb, it is often followed by in, across, or throughout and then a place, field, or situation.",
+          "preposition_note": "Use ubiquitous in for an environment or area, as in ubiquitous in modern life. Across and throughout are also common when emphasizing geographical spread.",
+          "position_note": "You can say ubiquitous technology before a noun, or Technology has become ubiquitous after a linking verb."
+        },
+        "patterns": [
+          {
+            "pattern": "ubiquitous + noun",
+            "use": "Use this before a noun to describe something that is present almost everywhere.",
+            "example": "The study examines the effects of ubiquitous digital technology."
+          },
+          {
+            "pattern": "be or become ubiquitous",
+            "use": "Use this when something is or becomes extremely common in many places.",
+            "example": "Wireless internet has become ubiquitous on university campuses."
+          },
+          {
+            "pattern": "ubiquitous in + place or situation",
+            "use": "Use this to identify the environment in which something is found almost everywhere.",
+            "example": "These symbols are ubiquitous in religious art."
+          },
+          {
+            "pattern": "ubiquitous across or throughout + area",
+            "use": "Use this to emphasize that something is widely present over a large area.",
+            "example": "The species is ubiquitous throughout the coastal region."
+          }
+        ],
+        "errors": [
+          {
+            "wrong": "Mobile phones are ubiquitous everywhere.",
+            "correct": "Mobile phones are ubiquitous.",
+            "explanation": "Ubiquitous already means almost everywhere, so everywhere is usually unnecessary."
+          },
+          {
+            "wrong": "This technology is an ubiquitous feature of modern life.",
+            "correct": "This technology is a ubiquitous feature of modern life.",
+            "explanation": "Use a because ubiquitous begins with the consonant sound /j/, like the first sound in university."
+          },
+          {
+            "wrong": "Online advertising has ubiquitous in modern life.",
+            "correct": "Online advertising has become ubiquitous in modern life.",
+            "explanation": "Ubiquitous is an adjective, so use a linking verb such as become before it."
+          }
+        ]
+      }
+    ],
+    "word_family": [
+      {
+        "word": "ubiquity",
+        "part_of_speech": "uncountable noun",
+        "definition": "the state of being present or found almost everywhere",
+        "examples": [
+          "The ubiquity of smartphones has changed how people communicate.",
+          "Researchers are concerned about the ubiquity of plastic waste in marine environments."
+        ],
+        "ipa": "/juːˈbɪkwəti/",
+        "relationship_to_headword": "This noun names the state or quality described by ubiquitous.",
+        "grammar_pattern": "the ubiquity of + noun",
+        "usage_note": "It is formal and is usually used in the expression the ubiquity of something."
+      },
+      {
+        "word": "ubiquitously",
+        "part_of_speech": "adverb",
+        "definition": "in a way that is present or occurs almost everywhere",
+        "examples": [
+          "The software is now used ubiquitously across the industry.",
+          "The symbol appears ubiquitously in the artist's later work."
+        ],
+        "ipa": "/juːˈbɪkwətəsli/",
+        "relationship_to_headword": "This adverb describes how widely something exists or occurs.",
+        "usage_note": "It is much less common than ubiquitous and is mainly used in formal writing."
+      }
+    ],
+    "collocations": [
+      {
+        "collocation": "become ubiquitous",
+        "example": "Digital payment systems have become ubiquitous in many cities.",
+        "applies_to_sense": "Present almost everywhere",
+        "meaning": "become extremely common or widely present",
+        "grammar_pattern": "become ubiquitous in + place or field"
+      },
+      {
+        "collocation": "increasingly ubiquitous",
+        "example": "Artificial intelligence is increasingly ubiquitous in everyday products.",
+        "applies_to_sense": "Present almost everywhere",
+        "meaning": "becoming present in more and more places",
+        "grammar_pattern": "increasingly ubiquitous in + area"
+      },
+      {
+        "collocation": "nearly ubiquitous",
+        "example": "Internet access is nearly ubiquitous among university students.",
+        "applies_to_sense": "Present almost everywhere",
+        "meaning": "present in almost every relevant place or case"
+      },
+      {
+        "collocation": "ubiquitous presence",
+        "example": "The ubiquitous presence of advertising influences consumer behavior.",
+        "applies_to_sense": "Present almost everywhere",
+        "meaning": "the noticeable existence of something almost everywhere",
+        "grammar_pattern": "the ubiquitous presence of + noun"
+      },
+      {
+        "collocation": "ubiquitous technology",
+        "example": "Ubiquitous technology has transformed the modern workplace.",
+        "applies_to_sense": "Present almost everywhere",
+        "meaning": "technology that is widely available and commonly encountered"
+      },
+      {
+        "collocation": "ubiquitous feature",
+        "example": "Online reviews are now a ubiquitous feature of electronic commerce.",
+        "applies_to_sense": "Present almost everywhere",
+        "meaning": "a feature that appears in almost every relevant example or setting"
+      },
+      {
+        "collocation": "ubiquitous in modern life",
+        "example": "Digital screens have become ubiquitous in modern life.",
+        "applies_to_sense": "Present almost everywhere",
+        "meaning": "extremely common in contemporary society"
+      },
+      {
+        "collocation": "the ubiquity of",
+        "example": "The ubiquity of mobile devices has created new privacy concerns.",
+        "applies_to_sense": "Present almost everywhere",
+        "meaning": "the state of being present almost everywhere",
+        "grammar_pattern": "the ubiquity of + noun",
+        "usage_note": "Ubiquity is the noun form."
+      }
+    ],
+    "synonyms": [
+      {
+        "word": "widespread",
+        "part_of_speech": "adjective",
+        "applies_to_sense": "Present almost everywhere",
+        "difference": "Widespread means existing in many places or affecting many people. Ubiquitous is stronger and suggests that something seems to be almost everywhere.",
+        "example": "The new policy received widespread public support.",
+        "shared_meaning": "Both words describe something that exists across a large area or among many people."
+      },
+      {
+        "word": "pervasive",
+        "part_of_speech": "adjective",
+        "applies_to_sense": "Present almost everywhere",
+        "difference": "Pervasive often suggests that something spreads through and influences every part of a place, system, or situation. It is frequently used for problems, attitudes, smells, or influences. Ubiquitous focuses more simply on being found almost everywhere.",
+        "example": "The report identified a pervasive culture of secrecy within the organization.",
+        "shared_meaning": "Both words can describe something present throughout an environment."
+      },
+      {
+        "word": "omnipresent",
+        "part_of_speech": "adjective",
+        "applies_to_sense": "Present almost everywhere",
+        "difference": "Omnipresent literally suggests being present everywhere and is often used for a god, authority, influence, or something that feels impossible to escape. Ubiquitous is more common in academic descriptions of widely present objects or phenomena.",
+        "example": "The ruler's image was omnipresent throughout the capital.",
+        "shared_meaning": "Both words express the idea of being present everywhere or almost everywhere."
+      },
+      {
+        "word": "common",
+        "part_of_speech": "adjective",
+        "applies_to_sense": "Present almost everywhere",
+        "difference": "Common means frequently found or occurring. Ubiquitous is much stronger and emphasizes extremely wide presence.",
+        "example": "This bird is common in urban parks.",
+        "shared_meaning": "Both words can describe something frequently encountered."
+      }
+    ],
+    "etymology": {
+      "origin": "The word comes from Latin ubique, meaning everywhere."
+    },
+    "exercises": {
+      "word_family_choice": [
+        {
+          "prompt_sentence": "The _____ of digital devices has changed how students obtain information.",
+          "answer": "ubiquity",
+          "completed_sentence": "The ubiquity of digital devices has changed how students obtain information.",
+          "explanation": "Use the noun ubiquity after the and before of."
+        },
+        {
+          "prompt_sentence": "Wireless networks are now _____ in many public buildings.",
+          "answer": "ubiquitous",
+          "completed_sentence": "Wireless networks are now ubiquitous in many public buildings.",
+          "explanation": "Use the adjective ubiquitous after are."
+        },
+        {
+          "prompt_sentence": "The technology is used _____ across the healthcare industry.",
+          "answer": "ubiquitously",
+          "completed_sentence": "The technology is used ubiquitously across the healthcare industry.",
+          "explanation": "Use the adverb ubiquitously to describe how the technology is used."
+        }
+      ],
+      "correct_or_incorrect": [
+        {
+          "sentence": "Smartphones have become ubiquitous among young adults.",
+          "verdict": "Correct",
+          "explanation": "Become ubiquitous is a natural pattern for something that has become extremely common."
+        },
+        {
+          "sentence": "The internet is ubiquitous everywhere in modern society.",
+          "verdict": "Incorrect",
+          "corrected_sentence": "The internet is ubiquitous in modern society.",
+          "explanation": "Everywhere is unnecessary because ubiquitous already contains that meaning."
+        },
+        {
+          "sentence": "It is an ubiquitous problem in large cities.",
+          "verdict": "Incorrect",
+          "corrected_sentence": "It is a ubiquitous problem in large cities.",
+          "explanation": "Use a because ubiquitous begins with the consonant sound /j/."
+        },
+        {
+          "sentence": "Security cameras are increasingly ubiquitous in public spaces.",
+          "verdict": "Correct",
+          "explanation": "Increasingly ubiquitous correctly describes something appearing in more and more places."
+        }
+      ],
+      "collocation_practice": [
+        {
+          "prompt_sentence": "Online shopping has _____ ubiquitous in many countries.",
+          "answer": "become",
+          "completed_sentence": "Online shopping has become ubiquitous in many countries.",
+          "explanation": "Become ubiquitous is a common collocation."
+        },
+        {
+          "prompt_sentence": "Researchers examined the ubiquitous _____ of microplastics in the environment.",
+          "answer": "presence",
+          "completed_sentence": "Researchers examined the ubiquitous presence of microplastics in the environment.",
+          "explanation": "Ubiquitous presence describes something that can be found almost everywhere."
+        },
+        {
+          "prompt_sentence": "The _____ of social media has affected political communication.",
+          "answer": "ubiquity",
+          "completed_sentence": "The ubiquity of social media has affected political communication.",
+          "explanation": "The ubiquity of is a common formal expression."
+        }
+      ]
+    }
+  }

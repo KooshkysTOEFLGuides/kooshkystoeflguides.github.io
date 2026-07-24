@@ -1,0 +1,287 @@
+{
+    "document_type": "kooshky_toefl_word_of_the_day",
+    "schema_version": "1.3",
+    "slug": "complaisant",
+    "word": "complaisant",
+    "date": "August 7th 2026",
+    "pronunciation": {
+      "primary_ipa": "/kəmˈpleɪzənt/"
+    },
+    "hero": {
+      "part_of_speech_summary": "adjective",
+      "short_meanings": [
+        "very willing to please or agree"
+      ],
+      "one_line_summary": "A complaisant person readily agrees with or accommodates others, sometimes to an excessive degree.",
+      "memorable_example": "The complaisant assistant agreed to every request without questioning whether it was reasonable."
+    },
+    "meanings": [
+      {
+        "sense_title": "Very willing to please or agree",
+        "part_of_speech": "adjective",
+        "ipa": "/kəmˈpleɪzənt/",
+        "definition": "very willing to agree with, help, or please other people, sometimes more readily than is wise or sincere",
+        "examples": [
+          "The complaisant assistant agreed to every request without questioning whether it was reasonable.",
+          "He was so complaisant toward senior officials that he rarely expressed his own opinion.",
+          "The committee needed an independent adviser, not someone who would remain complaisant in the face of pressure.",
+          "Her complaisant manner made difficult customers feel that all their demands would be accepted.",
+          "The manager initially appeared helpful, but his complaisant promises were impossible to fulfill.",
+          "Critics accused the newspaper of being too complaisant toward the government.",
+          "A complaisant negotiator may make unnecessary concessions merely to avoid conflict.",
+          "The host was unfailingly complaisant and adjusted the schedule to satisfy every guest."
+        ],
+        "plain_english_equivalent": "very eager to please or agree",
+        "typical_pattern": "be complaisant toward + person or group",
+        "register": "formal and relatively uncommon; often disapproving when the willingness to please seems excessive",
+        "nuance": {
+          "central_nuance": "The word describes a strong willingness to accommodate other people's wishes or opinions.",
+          "usual_implication": "It may suggest kindness and cooperation, but it often implies weak judgment, insincerity, or an excessive desire to avoid disagreement.",
+          "contrast_term": "accommodating",
+          "contrast_explanation": "Accommodating usually describes a helpful willingness to adjust and is generally positive. Complaisant is more formal and often suggests that someone is too willing to please or agree."
+        },
+        "grammar": {
+          "how_to_use": "Use it before a noun, as in a complaisant employee, or after a linking verb, as in The employee was complaisant.",
+          "what_can_follow": "It can be followed by toward and then the person or group whose wishes are being accepted.",
+          "preposition_note": "Use complaisant toward someone when identifying the person or group being pleased, as in complaisant toward powerful clients.",
+          "position_note": "Modifiers such as too, overly, excessively, and remarkably often appear before complaisant."
+        },
+        "patterns": [
+          {
+            "pattern": "be complaisant toward + person or group",
+            "use": "Use this to identify the people whose wishes someone readily accepts.",
+            "example": "The regulator was accused of being complaisant toward large corporations."
+          },
+          {
+            "pattern": "a complaisant + person, manner, attitude, or response",
+            "use": "Use this before a noun to describe excessive willingness to please or agree.",
+            "example": "His complaisant response failed to address the serious concerns raised by employees."
+          },
+          {
+            "pattern": "too or overly complaisant",
+            "use": "Use this when someone's willingness to please may cause problems.",
+            "example": "Leaders who are overly complaisant may avoid making necessary but unpopular decisions."
+          },
+          {
+            "pattern": "remain complaisant in the face of + pressure or demands",
+            "use": "Use this when someone continues to accept what others want despite difficult circumstances.",
+            "example": "The board remained complaisant in the face of growing political pressure."
+          }
+        ],
+        "errors": [
+          {
+            "wrong": "The company became complaisant after years of success and stopped innovating.",
+            "correct": "The company became complacent after years of success and stopped innovating.",
+            "explanation": "Complacent means too satisfied and no longer careful. Complaisant means excessively willing to please or agree with other people."
+          },
+          {
+            "wrong": "The employee was complaisant about the safety risk.",
+            "correct": "The employee was complacent about the safety risk.",
+            "explanation": "Use complacent about a risk or problem. Complaisant normally describes behavior toward other people."
+          },
+          {
+            "wrong": "She complaisanted with every request.",
+            "correct": "She was complaisant and agreed to every request.",
+            "explanation": "Complaisant is an adjective, not a verb."
+          },
+          {
+            "wrong": "He was complaisant for his demanding clients.",
+            "correct": "He was complaisant toward his demanding clients.",
+            "explanation": "Use toward to identify the person or group whose wishes someone readily accepts."
+          }
+        ]
+      }
+    ],
+    "word_family": [
+      {
+        "word": "complaisance",
+        "part_of_speech": "uncountable noun",
+        "definition": "a strong willingness to please or agree with other people, especially when it is excessive",
+        "examples": [
+          "The official's complaisance toward powerful businesses raised concerns about his independence.",
+          "Her apparent complaisance concealed considerable disagreement with the proposal."
+        ],
+        "ipa": "/kəmˈpleɪzəns/",
+        "relationship_to_headword": "This noun names the attitude or behavior described by complaisant.",
+        "grammar_pattern": "complaisance toward + person or group",
+        "usage_note": "It is formal and uncommon, and it is normally used without a or an."
+      },
+      {
+        "word": "complaisantly",
+        "part_of_speech": "adverb",
+        "definition": "in a way that shows great or excessive willingness to please or agree",
+        "examples": [
+          "The assistant complaisantly accepted every change to the schedule.",
+          "He smiled complaisantly and assured the clients that all their demands would be met."
+        ],
+        "ipa": "/kəmˈpleɪzəntli/",
+        "relationship_to_headword": "This adverb describes an action performed in a complaisant manner.",
+        "grammar_pattern": "complaisantly + agree, accept, smile, or respond",
+        "usage_note": "It is uncommon and mainly appears in formal or literary writing."
+      }
+    ],
+    "collocations": [
+      {
+        "collocation": "complaisant attitude",
+        "example": "The agency's complaisant attitude toward safety violations attracted public criticism.",
+        "applies_to_sense": "Very willing to please or agree",
+        "meaning": "an attitude that is excessively willing to accept what others want"
+      },
+      {
+        "collocation": "complaisant manner",
+        "example": "His complaisant manner made him popular with demanding customers.",
+        "applies_to_sense": "Very willing to please or agree",
+        "meaning": "a polite and highly accommodating way of behaving"
+      },
+      {
+        "collocation": "complaisant response",
+        "example": "The minister gave a complaisant response instead of challenging the inaccurate claim.",
+        "applies_to_sense": "Very willing to please or agree",
+        "meaning": "a response that readily accepts or supports another person's wishes"
+      },
+      {
+        "collocation": "too complaisant",
+        "example": "The board had been too complaisant toward the chief executive.",
+        "applies_to_sense": "Very willing to please or agree",
+        "meaning": "more willing to please or agree than is appropriate",
+        "grammar_pattern": "be too complaisant toward + person or group"
+      },
+      {
+        "collocation": "overly complaisant",
+        "example": "An overly complaisant adviser may fail to provide honest criticism.",
+        "applies_to_sense": "Very willing to please or agree",
+        "meaning": "excessively willing to satisfy other people"
+      },
+      {
+        "collocation": "complaisant toward",
+        "example": "The institution was criticized for being complaisant toward wealthy donors.",
+        "applies_to_sense": "Very willing to please or agree",
+        "meaning": "very ready to accept the wishes or demands of a particular person or group",
+        "grammar_pattern": "be complaisant toward + person or group"
+      },
+      {
+        "collocation": "remain complaisant",
+        "example": "The representatives remained complaisant despite increasing demands from industry leaders.",
+        "applies_to_sense": "Very willing to please or agree",
+        "meaning": "continue to accept or accommodate what others want"
+      }
+    ],
+    "synonyms": [
+      {
+        "word": "accommodating",
+        "part_of_speech": "adjective",
+        "applies_to_sense": "Very willing to please or agree",
+        "difference": "Accommodating normally praises someone for being helpful and flexible. Complaisant is more formal and may criticize someone for being too willing to please.",
+        "example": "The hotel staff were extremely accommodating when our plans changed.",
+        "shared_meaning": "Both words describe a willingness to adjust to other people's wishes."
+      },
+      {
+        "word": "obliging",
+        "part_of_speech": "adjective",
+        "applies_to_sense": "Very willing to please or agree",
+        "difference": "Obliging usually means pleasantly willing to help and is positive. Complaisant may imply that the willingness is excessive, weak, or insincere.",
+        "example": "An obliging neighbor offered to collect our mail.",
+        "shared_meaning": "Both words can describe someone who readily helps or pleases others."
+      },
+      {
+        "word": "agreeable",
+        "part_of_speech": "adjective",
+        "applies_to_sense": "Very willing to please or agree",
+        "difference": "Agreeable can mean pleasant or willing to accept a suggestion. Complaisant places greater emphasis on a general readiness to satisfy other people.",
+        "example": "The committee members were agreeable to changing the meeting time.",
+        "shared_meaning": "Both can describe willingness to cooperate with others."
+      },
+      {
+        "word": "submissive",
+        "part_of_speech": "adjective",
+        "applies_to_sense": "Very willing to please or agree",
+        "difference": "Submissive emphasizes accepting another person's authority or control. Complaisant emphasizes the desire to please or avoid disagreement.",
+        "example": "Employees were expected to remain submissive and never question management.",
+        "shared_meaning": "Both may describe someone who does not strongly resist other people's demands."
+      }
+    ],
+    "confusables": [
+      {
+        "word": "complacent",
+        "key_difference": "Complaisant means very or excessively willing to please and agree with others. Complacent means too satisfied with yourself or a situation to notice risks or make improvements.",
+        "headword_example": "The complaisant adviser agreed with every proposal made by the director.",
+        "confusable_example": "The successful company became complacent and stopped preparing for new competitors.",
+        "part_of_speech": "adjective",
+        "why_confused": "The words have very similar spellings and pronunciations, but their meanings are different."
+      },
+      {
+        "word": "compliant",
+        "key_difference": "Complaisant describes a willingness to please people. Compliant means following a rule, request, command, or required standard.",
+        "headword_example": "The complaisant employee accepted every demand made by the client.",
+        "confusable_example": "The equipment is compliant with international safety standards.",
+        "part_of_speech": "adjective",
+        "why_confused": "Both words can describe cooperation, but compliant focuses on obeying rules or requirements."
+      }
+    ],
+    "exercises": {
+      "word_family_choice": [
+        {
+          "prompt_sentence": "The official's excessive _____ toward powerful companies raised questions about his independence.",
+          "answer": "complaisance",
+          "completed_sentence": "The official's excessive complaisance toward powerful companies raised questions about his independence.",
+          "explanation": "Use the noun complaisance after excessive."
+        },
+        {
+          "prompt_sentence": "The assistant _____ accepted every last-minute change.",
+          "answer": "complaisantly",
+          "completed_sentence": "The assistant complaisantly accepted every last-minute change.",
+          "explanation": "Use the adverb complaisantly to describe how the assistant accepted the changes."
+        },
+        {
+          "prompt_sentence": "An adviser should be cooperative without becoming overly _____.",
+          "answer": "complaisant",
+          "completed_sentence": "An adviser should be cooperative without becoming overly complaisant.",
+          "explanation": "Use the adjective complaisant after becoming."
+        }
+      ],
+      "correct_or_incorrect": [
+        {
+          "sentence": "The complaisant employee agreed to every request made by the customer.",
+          "verdict": "Correct",
+          "explanation": "Complaisant correctly describes someone who is highly willing to please or agree."
+        },
+        {
+          "sentence": "The company became complaisant after dominating the market for ten years.",
+          "verdict": "Incorrect",
+          "corrected_sentence": "The company became complacent after dominating the market for ten years.",
+          "explanation": "Use complacent for excessive satisfaction that reduces effort or caution."
+        },
+        {
+          "sentence": "The adviser was too complaisant toward senior officials.",
+          "verdict": "Correct",
+          "explanation": "Complaisant toward correctly identifies the people whose wishes the adviser accepted too readily."
+        },
+        {
+          "sentence": "Managers should not be complaisant about cybersecurity risks.",
+          "verdict": "Incorrect",
+          "corrected_sentence": "Managers should not be complacent about cybersecurity risks.",
+          "explanation": "Use complacent about a risk or problem."
+        }
+      ],
+      "collocation_practice": [
+        {
+          "prompt_sentence": "The regulator was criticized for being too complaisant _____ large corporations.",
+          "answer": "toward",
+          "completed_sentence": "The regulator was criticized for being too complaisant toward large corporations.",
+          "explanation": "Use complaisant toward the person or group whose wishes are readily accepted."
+        },
+        {
+          "prompt_sentence": "His complaisant _____ prevented him from questioning unreasonable demands.",
+          "answer": "attitude",
+          "completed_sentence": "His complaisant attitude prevented him from questioning unreasonable demands.",
+          "explanation": "A complaisant attitude is an excessively accommodating way of thinking."
+        },
+        {
+          "prompt_sentence": "An overly _____ adviser may tell leaders only what they want to hear.",
+          "answer": "complaisant",
+          "completed_sentence": "An overly complaisant adviser may tell leaders only what they want to hear.",
+          "explanation": "Overly complaisant means excessively willing to please or agree."
+        }
+      ]
+    }
+  }

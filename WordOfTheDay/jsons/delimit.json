@@ -1,0 +1,377 @@
+{
+    "document_type": "kooshky_toefl_word_of_the_day",
+    "schema_version": "1.3",
+    "slug": "delimit",
+    "word": "delimit",
+    "date": "August 2nd 2026",
+    "pronunciation": {
+      "primary_ipa": "/diːˈlɪmɪt/"
+    },
+    "hero": {
+      "part_of_speech_summary": "transitive verb",
+      "short_meanings": [
+        "mark physical boundaries",
+        "define the scope or limits"
+      ],
+      "one_line_summary": "To delimit something is to establish where it begins and ends, either physically or conceptually.",
+      "memorable_example": "The researchers carefully delimited the scope of their investigation."
+    },
+    "meanings": [
+      {
+        "sense_title": "Mark physical boundaries",
+        "part_of_speech": "transitive verb",
+        "ipa": "/diːˈlɪmɪt/",
+        "definition": "to mark or establish the physical boundaries of an area",
+        "examples": [
+          "A stone wall delimits the northern edge of the property.",
+          "The river helps delimit the border between the two regions.",
+          "Archaeologists used wooden posts to delimit the excavation site.",
+          "A line of trees delimits the park from the surrounding farmland.",
+          "The surveyors placed markers to delimit each section of the land.",
+          "Natural features once delimited the territory occupied by the community.",
+          "The protected zone is delimited by a fence and several warning signs."
+        ],
+        "plain_english_equivalent": "show exactly where an area begins and ends",
+        "typical_pattern": "delimit + area, territory, site, zone, border, or boundary",
+        "register": "formal; common in geography, archaeology, law, planning, and academic descriptions",
+        "nuance": {
+          "central_nuance": "The verb emphasizes identifying or establishing a precise boundary rather than merely describing the general location of an area.",
+          "usual_implication": "The boundary may be marked by a natural feature, a physical object, a legal decision, or an official measurement.",
+          "contrast_term": "divide",
+          "contrast_explanation": "To divide an area is to separate it into parts. To delimit an area is to establish the outer boundary or exact limits of that area."
+        },
+        "grammar": {
+          "how_to_use": "This verb normally needs the area, territory, site, or boundary after it.",
+          "what_can_follow": "It is commonly followed by nouns such as area, region, territory, zone, site, property, and boundary.",
+          "preposition_note": "In the passive form, use by to identify the feature that marks the boundary, as in The field is delimited by a stone wall.",
+          "position_note": "The person, object, or feature that establishes the boundary usually comes before the verb."
+        },
+        "patterns": [
+          {
+            "pattern": "delimit + area, site, or territory",
+            "use": "Use this when someone establishes the exact physical limits of a place.",
+            "example": "The research team delimited the study area before collecting samples."
+          },
+          {
+            "pattern": "be delimited by + physical feature",
+            "use": "Use this when a wall, river, road, fence, or other feature forms the boundary.",
+            "example": "The district is delimited by the river to the east and the highway to the west."
+          },
+          {
+            "pattern": "delimit the boundary between + places",
+            "use": "Use this to identify the line separating two areas.",
+            "example": "The agreement helped delimit the boundary between the two provinces."
+          }
+        ],
+        "errors": [
+          {
+            "wrong": "The fence delimits between the two properties.",
+            "correct": "The fence delimits the boundary between the two properties.",
+            "explanation": "Delimit normally needs a direct object such as boundary, area, or property."
+          },
+          {
+            "wrong": "The site is delimited with a river.",
+            "correct": "The site is delimited by a river.",
+            "explanation": "Use by to identify the feature that marks the boundary."
+          },
+          {
+            "wrong": "The wall delimits the land into two equal sections.",
+            "correct": "The wall divides the land into two equal sections.",
+            "explanation": "Use divide when emphasizing separation into parts. Delimit emphasizes establishing boundaries."
+          }
+        ]
+      },
+      {
+        "sense_title": "Define scope or limits",
+        "part_of_speech": "transitive verb",
+        "ipa": "/diːˈlɪmɪt/",
+        "definition": "to clearly define the scope, range, or limits of an idea, subject, study, or activity",
+        "examples": [
+          "The researchers carefully delimited the scope of their investigation.",
+          "The introduction delimits the period covered by the historical analysis.",
+          "Clear eligibility rules delimit the group of people included in the study.",
+          "The author delimits the discussion to changes that occurred after 1950.",
+          "Researchers must delimit their topic before gathering large amounts of data.",
+          "The legal definition delimits the authority of the regulatory agency.",
+          "The research question helps delimit what evidence should be examined."
+        ],
+        "plain_english_equivalent": "clearly decide what is included and excluded",
+        "typical_pattern": "delimit + scope, subject, period, authority, category, or field of study",
+        "register": "formal and academic; common in research, law, philosophy, linguistics, and policy writing",
+        "nuance": {
+          "central_nuance": "The verb emphasizes drawing a clear conceptual line around a subject so that its coverage is precise and manageable.",
+          "usual_implication": "Delimiting a topic or study involves deciding both what will be included and what will remain outside it.",
+          "contrast_term": "limit",
+          "contrast_explanation": "To limit something is often to reduce or restrict its amount, size, or freedom. To delimit something is to define its exact boundaries or scope."
+        },
+        "grammar": {
+          "how_to_use": "This verb normally needs the subject, scope, period, authority, or category whose limits are being defined.",
+          "what_can_follow": "Common objects include scope, topic, subject, field, period, authority, responsibility, category, and research question.",
+          "preposition_note": "The passive form may be followed by by and the rule or condition that defines the limits, as in The sample was delimited by strict eligibility criteria.",
+          "position_note": "It is often used in formal writing when explaining the design or boundaries of a study."
+        },
+        "patterns": [
+          {
+            "pattern": "delimit the scope of + study or discussion",
+            "use": "Use this when defining exactly what a study or discussion will cover.",
+            "example": "The first chapter delimits the scope of the investigation."
+          },
+          {
+            "pattern": "delimit + topic or subject",
+            "use": "Use this when making a broad subject narrower and more precise.",
+            "example": "Students should delimit their topics before beginning their research."
+          },
+          {
+            "pattern": "be delimited by + rule or criterion",
+            "use": "Use this when a rule, definition, or condition determines what is included.",
+            "example": "The participant group was delimited by age and place of residence."
+          },
+          {
+            "pattern": "delimit something to + period or category",
+            "use": "Use this when restricting the defined scope to a particular period or category.",
+            "example": "The analysis delimits its attention to policies introduced after 2010."
+          }
+        ],
+        "errors": [
+          {
+            "wrong": "The researcher delimited about the topic.",
+            "correct": "The researcher delimited the topic.",
+            "explanation": "Delimit normally takes its object directly, without about."
+          },
+          {
+            "wrong": "The study delimits on environmental policy.",
+            "correct": "The study focuses on environmental policy.",
+            "explanation": "Delimit means define the boundaries of something. It does not normally mean focus on a subject."
+          },
+          {
+            "wrong": "The introduction delimits what the essay will discuss about.",
+            "correct": "The introduction delimits what the essay will discuss.",
+            "explanation": "Do not add about after discuss when it already has a direct object."
+          }
+        ]
+      }
+    ],
+    "word_family": [
+      {
+        "word": "delimitation",
+        "part_of_speech": "countable or uncountable noun",
+        "definition": "the process or result of establishing the boundaries or limits of something",
+        "examples": [
+          "The treaty established a procedure for the delimitation of the maritime boundary.",
+          "Careful delimitation of the research topic made the project more manageable."
+        ],
+        "ipa": "/diːˌlɪməˈteɪʃən/",
+        "relationship_to_headword": "This noun names the process or result of delimiting something.",
+        "grammar_pattern": "the delimitation of + area, boundary, scope, or topic",
+        "usage_note": "It is formal and especially common in legal, geographical, and academic writing."
+      },
+      {
+        "word": "delimiter",
+        "part_of_speech": "countable noun",
+        "definition": "a character or symbol used to separate pieces of information, especially in computing",
+        "examples": [
+          "The program uses a comma as a delimiter between values.",
+          "Choose a delimiter that does not appear inside the data itself."
+        ],
+        "ipa": "/diːˈlɪmɪtər/",
+        "relationship_to_headword": "A delimiter marks where one unit of data ends and another begins.",
+        "grammar_pattern": "use + symbol + as a delimiter",
+        "usage_note": "This word is mainly used in computing and data processing."
+      }
+    ],
+    "collocations": [
+      {
+        "collocation": "delimit an area",
+        "example": "Surveyors used temporary markers to delimit the area.",
+        "applies_to_sense": "Mark physical boundaries",
+        "meaning": "establish the exact physical limits of an area"
+      },
+      {
+        "collocation": "delimit a boundary",
+        "example": "The two governments appointed a commission to delimit the boundary.",
+        "applies_to_sense": "Mark physical boundaries",
+        "meaning": "officially determine where a boundary lies"
+      },
+      {
+        "collocation": "clearly delimit",
+        "example": "The fence clearly delimits the protected zone.",
+        "applies_to_sense": "Mark physical boundaries",
+        "meaning": "mark a boundary in an obvious and precise way"
+      },
+      {
+        "collocation": "be delimited by",
+        "example": "The historical district is delimited by the river and the old city walls.",
+        "applies_to_sense": "Mark physical boundaries",
+        "meaning": "have boundaries formed or identified by something",
+        "grammar_pattern": "be delimited by + feature, rule, or criterion"
+      },
+      {
+        "collocation": "delimit the scope",
+        "example": "The researchers delimited the scope of the project to three urban communities.",
+        "applies_to_sense": "Define scope or limits",
+        "meaning": "clearly establish what a project or discussion will cover",
+        "grammar_pattern": "delimit the scope of + study, inquiry, or discussion"
+      },
+      {
+        "collocation": "delimit a research topic",
+        "example": "A precise research question can help delimit a research topic.",
+        "applies_to_sense": "Define scope or limits",
+        "meaning": "make a research topic narrower and more clearly defined"
+      },
+      {
+        "collocation": "delimit the field of inquiry",
+        "example": "The theoretical framework delimits the field of inquiry.",
+        "applies_to_sense": "Define scope or limits",
+        "meaning": "define the area that an investigation will examine"
+      },
+      {
+        "collocation": "delimit authority",
+        "example": "The law delimits the authority of local government.",
+        "applies_to_sense": "Define scope or limits",
+        "meaning": "define the exact extent of someone's official power"
+      },
+      {
+        "collocation": "boundary delimitation",
+        "example": "The countries resumed negotiations on boundary delimitation.",
+        "applies_to_sense": "Mark physical boundaries",
+        "meaning": "the official process of determining a boundary",
+        "usage_note": "Delimitation is the noun form."
+      },
+      {
+        "collocation": "delimitation of the scope",
+        "example": "The proposal begins with a clear delimitation of the scope of the study.",
+        "applies_to_sense": "Define scope or limits",
+        "meaning": "a clear statement of what will and will not be included",
+        "grammar_pattern": "the delimitation of the scope of + study",
+        "usage_note": "Delimitation is the noun form."
+      }
+    ],
+    "synonyms": [
+      {
+        "word": "demarcate",
+        "part_of_speech": "transitive verb",
+        "applies_to_sense": "Mark physical boundaries",
+        "difference": "Demarcate often emphasizes physically marking a boundary with signs, lines, fences, or other visible features. Delimit can mean either physically marking or formally determining the boundary.",
+        "example": "Posts were installed to demarcate the protected area.",
+        "shared_meaning": "Both words can mean establishing the boundary of an area."
+      },
+      {
+        "word": "define",
+        "part_of_speech": "transitive verb",
+        "applies_to_sense": "Define scope or limits",
+        "difference": "Define is broader and can mean explaining the meaning or nature of something. Delimit specifically means establishing its boundaries or scope.",
+        "example": "The policy clearly defines the responsibilities of each department.",
+        "shared_meaning": "Both can involve making the limits of something clear."
+      },
+      {
+        "word": "delineate",
+        "part_of_speech": "transitive verb",
+        "applies_to_sense": "all senses",
+        "difference": "Delineate can mean marking boundaries, but it also commonly means describing something precisely and in detail. Delimit focuses more narrowly on establishing limits.",
+        "example": "The report delineates the responsibilities of each agency.",
+        "shared_meaning": "Both can involve making boundaries or distinctions clear."
+      },
+      {
+        "word": "circumscribe",
+        "part_of_speech": "transitive verb",
+        "applies_to_sense": "Define scope or limits",
+        "difference": "Circumscribe often suggests restricting something within narrow limits. Delimit is more neutral and simply means defining where the limits are.",
+        "example": "Strict regulations circumscribed the committee's authority.",
+        "shared_meaning": "Both can refer to establishing limits around an activity or power."
+      }
+    ],
+    "confusables": [
+      {
+        "word": "limit",
+        "key_difference": "Limit often means reduce, restrict, or prevent something from exceeding a certain amount. Delimit means establish exactly where its boundaries or scope lie.",
+        "headword_example": "The researchers delimited the study to adults between 18 and 30.",
+        "confusable_example": "The researchers limited the number of participants to fifty.",
+        "part_of_speech": "transitive verb",
+        "why_confused": "Both words involve limits, but they describe different actions."
+      },
+      {
+        "word": "delineate",
+        "key_difference": "Delimit means establish boundaries or scope. Delineate may also mean describe the details or characteristics of something clearly.",
+        "headword_example": "The introduction delimits the period examined in the study.",
+        "confusable_example": "The report delineates the causes of the conflict.",
+        "part_of_speech": "transitive verb",
+        "why_confused": "The words are similar in form and can both refer to making boundaries clear."
+      }
+    ],
+    "etymology": {
+      "origin": "Delimit comes from Latin elements meaning from or completely and limit or boundary.",
+      "development": "Its modern meaning developed around the idea of determining or marking the limits of something."
+    },
+    "exercises": {
+      "word_family_choice": [
+        {
+          "prompt_sentence": "The treaty established rules for the _____ of the maritime boundary.",
+          "answer": "delimitation",
+          "completed_sentence": "The treaty established rules for the delimitation of the maritime boundary.",
+          "explanation": "Use the noun delimitation after the."
+        },
+        {
+          "prompt_sentence": "The software uses a semicolon as a _____ between separate commands.",
+          "answer": "delimiter",
+          "completed_sentence": "The software uses a semicolon as a delimiter between separate commands.",
+          "explanation": "Use delimiter for a symbol that separates units of data."
+        },
+        {
+          "prompt_sentence": "The researcher must clearly _____ the scope of the investigation.",
+          "answer": "delimit",
+          "completed_sentence": "The researcher must clearly delimit the scope of the investigation.",
+          "explanation": "Use the base verb delimit after must."
+        }
+      ],
+      "correct_or_incorrect": [
+        {
+          "sentence": "A narrow river delimits the western edge of the region.",
+          "verdict": "Correct",
+          "explanation": "Delimit correctly means establish or mark the physical boundary."
+        },
+        {
+          "sentence": "The researchers delimited about the scope of the study.",
+          "verdict": "Incorrect",
+          "corrected_sentence": "The researchers delimited the scope of the study.",
+          "explanation": "Delimit takes its object directly and does not require about."
+        },
+        {
+          "sentence": "The property is delimited by a wooden fence.",
+          "verdict": "Correct",
+          "explanation": "Be delimited by is a natural passive pattern."
+        },
+        {
+          "sentence": "The new policy delimits employees from using social media.",
+          "verdict": "Incorrect",
+          "corrected_sentence": "The new policy limits employees' use of social media.",
+          "explanation": "Use limit when the meaning is restrict an activity. Delimit means define boundaries or scope."
+        }
+      ],
+      "collocation_practice": [
+        {
+          "prompt_sentence": "The introduction clearly delimits the _____ of the discussion.",
+          "answer": "scope",
+          "completed_sentence": "The introduction clearly delimits the scope of the discussion.",
+          "explanation": "Delimit the scope means define exactly what will be covered."
+        },
+        {
+          "prompt_sentence": "The reserve is delimited _____ a river on one side and a highway on the other.",
+          "answer": "by",
+          "completed_sentence": "The reserve is delimited by a river on one side and a highway on the other.",
+          "explanation": "Use by to identify the features that form the boundaries."
+        },
+        {
+          "prompt_sentence": "The commission was created to delimit the _____ between the two provinces.",
+          "answer": "boundary",
+          "completed_sentence": "The commission was created to delimit the boundary between the two provinces.",
+          "explanation": "Delimit the boundary means determine exactly where the dividing line lies."
+        },
+        {
+          "prompt_sentence": "A clear research question helps delimit the field of _____.",
+          "answer": "inquiry",
+          "completed_sentence": "A clear research question helps delimit the field of inquiry.",
+          "explanation": "Delimit the field of inquiry means define the area that a study will examine."
+        }
+      ]
+    }
+  }

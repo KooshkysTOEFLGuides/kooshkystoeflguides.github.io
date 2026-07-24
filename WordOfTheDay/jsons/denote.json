@@ -1,0 +1,355 @@
+{
+    "document_type": "kooshky_toefl_word_of_the_day",
+    "schema_version": "1.3",
+    "slug": "denote",
+    "word": "denote",
+    "date": "August 3rd 2026",
+    "pronunciation": {
+      "primary_ipa": "/dɪˈnoʊt/"
+    },
+    "hero": {
+      "part_of_speech_summary": "transitive verb",
+      "short_meanings": [
+        "mean or represent",
+        "show or indicate"
+      ],
+      "one_line_summary": "To denote something is to represent a meaning or to show that a particular condition exists.",
+      "memorable_example": "Different colors on the map denote different types of land use."
+    },
+    "meanings": [
+      {
+        "sense_title": "Mean or represent",
+        "part_of_speech": "transitive verb",
+        "ipa": "/dɪˈnoʊt/",
+        "definition": "to have a particular meaning or to represent a particular idea, object, or category",
+        "examples": [
+          "In mathematics, the symbol π denotes the ratio of a circle's circumference to its diameter.",
+          "The term renewable energy denotes energy obtained from sources that can naturally be replaced.",
+          "Different colors on the map denote different types of land use.",
+          "In the diagram, dotted lines denote proposed transportation routes.",
+          "The letter N is used to denote the total number of participants.",
+          "In this article, the word community denotes a group of people who share a common location or identity.",
+          "Each code denotes a different category of archaeological evidence."
+        ],
+        "plain_english_equivalent": "mean or stand for",
+        "typical_pattern": "word, symbol, sign, or label + denotes + meaning or category",
+        "register": "formal; common in academic, mathematical, scientific, linguistic, and technical writing",
+        "nuance": {
+          "central_nuance": "The word describes a direct or established connection between a sign, term, symbol, or label and what it represents.",
+          "usual_implication": "The meaning is often defined by a system, convention, author, or field of study rather than guessed from context.",
+          "contrast_term": "connote",
+          "contrast_explanation": "Denote refers to the direct or basic meaning of a word or sign. Connote refers to the additional ideas, feelings, or associations that it suggests."
+        },
+        "grammar": {
+          "how_to_use": "This verb normally needs the meaning, object, or category being represented after it.",
+          "what_can_follow": "It is often followed by a noun or noun phrase that explains what a word, symbol, color, number, or sign represents.",
+          "position_note": "The word, symbol, sign, or label usually comes before denote, and its meaning usually comes after it."
+        },
+        "patterns": [
+          {
+            "pattern": "symbol, letter, or number + denotes + meaning",
+            "use": "Use this when explaining what a symbol represents.",
+            "example": "The letter V denotes velocity in this equation."
+          },
+          {
+            "pattern": "term or word + denotes + concept",
+            "use": "Use this when defining how a word is used in a particular text or field.",
+            "example": "In economics, the term capital denotes resources used to produce goods and services."
+          },
+          {
+            "pattern": "be denoted by + symbol or label",
+            "use": "Use the passive form when the represented idea is the main focus.",
+            "example": "Temperature is denoted by the letter T in the formula."
+          },
+          {
+            "pattern": "use + symbol + to denote + noun",
+            "use": "Use this when explaining the purpose of a symbol or label.",
+            "example": "The researchers used circles to denote urban locations."
+          }
+        ],
+        "errors": [
+          {
+            "wrong": "The symbol denotes to the total population.",
+            "correct": "The symbol denotes the total population.",
+            "explanation": "Denote takes its object directly and is not followed by to."
+          },
+          {
+            "wrong": "The letter is denoted the average value.",
+            "correct": "The average value is denoted by the letter.",
+            "explanation": "In the passive form, use be denoted by to identify the symbol."
+          },
+          {
+            "wrong": "The word denotes about social change.",
+            "correct": "The word denotes social change.",
+            "explanation": "Do not use about after denote."
+          }
+        ]
+      },
+      {
+        "sense_title": "Show or indicate",
+        "part_of_speech": "transitive verb",
+        "ipa": "/dɪˈnoʊt/",
+        "definition": "to show or indicate that a particular condition, quality, or situation exists",
+        "examples": [
+          "A sudden drop in temperature may denote an approaching storm.",
+          "In this grading system, a score above 90 denotes excellent performance.",
+          "The presence of these chemicals may denote contamination of the water supply.",
+          "Dark areas in the image denote regions of lower temperature.",
+          "Frequent interruptions may denote a lack of preparation.",
+          "An increase in plant diversity often denotes a healthier ecosystem.",
+          "The change in color denotes that the chemical reaction is complete."
+        ],
+        "plain_english_equivalent": "show that something is present or true",
+        "typical_pattern": "feature, result, behavior, or measurement + denotes + condition or quality",
+        "register": "formal; common in academic, scientific, medical, and analytical writing",
+        "nuance": {
+          "central_nuance": "The word presents one observable fact as a sign of another condition or quality.",
+          "usual_implication": "The connection is often based on an accepted rule, classification system, or interpretation of evidence.",
+          "contrast_term": "cause",
+          "contrast_explanation": "If one thing denotes another, it shows or represents it. This does not necessarily mean that it causes it."
+        },
+        "grammar": {
+          "how_to_use": "This verb normally needs the condition, quality, or situation being indicated after it.",
+          "what_can_follow": "It is commonly followed by nouns such as change, difference, category, status, quality, presence, absence, success, or danger.",
+          "position_note": "The observable sign, measurement, behavior, or feature normally comes before the verb."
+        },
+        "patterns": [
+          {
+            "pattern": "feature or result + denotes + condition",
+            "use": "Use this when an observable feature indicates a particular condition.",
+            "example": "A high concentration of salt may denote severe water loss."
+          },
+          {
+            "pattern": "color or symbol + denotes + category or status",
+            "use": "Use this when a visual feature identifies a category or condition.",
+            "example": "A red label denotes a high level of risk."
+          },
+          {
+            "pattern": "be used to denote + condition or category",
+            "use": "Use this when a sign has been assigned a particular meaning.",
+            "example": "A flashing light is used to denote an emergency."
+          },
+          {
+            "pattern": "may denote + condition",
+            "use": "Use may when the sign suggests a condition but does not prove it with certainty.",
+            "example": "Persistent fatigue may denote an underlying health problem."
+          }
+        ],
+        "errors": [
+          {
+            "wrong": "The red light denotes that of danger.",
+            "correct": "The red light denotes danger.",
+            "explanation": "Denote can be followed directly by the condition being indicated."
+          },
+          {
+            "wrong": "The result denotes us that the theory is incorrect.",
+            "correct": "The result denotes that the theory is incorrect.",
+            "explanation": "Do not place a person between denote and a clause beginning with that."
+          },
+          {
+            "wrong": "The symptom denotes from a serious illness.",
+            "correct": "The symptom may denote a serious illness.",
+            "explanation": "Denote takes its object directly and is not followed by from."
+          }
+        ]
+      }
+    ],
+    "word_family": [
+      {
+        "word": "denotation",
+        "part_of_speech": "countable or uncountable noun",
+        "definition": "the direct or basic meaning of a word, sign, or symbol",
+        "examples": [
+          "The denotation of the word home is the place where someone lives.",
+          "Words with similar denotations may have very different emotional associations."
+        ],
+        "ipa": "/ˌdiːnoʊˈteɪʃən/",
+        "relationship_to_headword": "This noun refers to the direct meaning that a word or sign denotes.",
+        "grammar_pattern": "the denotation of + word, sign, or symbol",
+        "usage_note": "It is especially common in linguistics, literary analysis, and discussions of meaning."
+      }
+    ],
+    "collocations": [
+      {
+        "collocation": "denote a difference",
+        "example": "The two line styles denote a difference in ownership.",
+        "applies_to_sense": "Show or indicate",
+        "meaning": "show that two things belong to different groups or have different qualities"
+      },
+      {
+        "collocation": "denote a change",
+        "example": "A shift in color may denote a change in acidity.",
+        "applies_to_sense": "Show or indicate",
+        "meaning": "indicate that a condition has changed"
+      },
+      {
+        "collocation": "denote a category",
+        "example": "Each number denotes a separate category of response.",
+        "applies_to_sense": "Mean or represent",
+        "meaning": "represent one particular group in a classification system"
+      },
+      {
+        "collocation": "denote the presence of",
+        "example": "Cloudy water may denote the presence of suspended particles.",
+        "applies_to_sense": "Show or indicate",
+        "meaning": "show that something exists in a place or sample",
+        "grammar_pattern": "denote the presence of + substance or condition"
+      },
+      {
+        "collocation": "denote the absence of",
+        "example": "A blank field denotes the absence of available data.",
+        "applies_to_sense": "Show or indicate",
+        "meaning": "show that something is not present",
+        "grammar_pattern": "denote the absence of + noun"
+      },
+      {
+        "collocation": "be denoted by",
+        "example": "The control group is denoted by a square in the graph.",
+        "applies_to_sense": "all senses",
+        "meaning": "be represented or indicated by a particular symbol, sign, or feature",
+        "grammar_pattern": "noun + be denoted by + symbol, sign, or label"
+      },
+      {
+        "collocation": "use something to denote",
+        "example": "The map uses blue shading to denote areas at risk of flooding.",
+        "applies_to_sense": "all senses",
+        "meaning": "give a symbol, color, or sign a particular meaning",
+        "grammar_pattern": "use + symbol or feature + to denote + meaning"
+      },
+      {
+        "collocation": "the term denotes",
+        "example": "In biology, the term adaptation denotes a characteristic that improves survival or reproduction.",
+        "applies_to_sense": "Mean or represent",
+        "meaning": "the term has a particular defined meaning",
+        "grammar_pattern": "the term + denotes + concept"
+      },
+      {
+        "collocation": "the symbol denotes",
+        "example": "In the equation, the symbol R denotes resistance.",
+        "applies_to_sense": "Mean or represent",
+        "meaning": "the symbol represents a particular quantity or idea",
+        "grammar_pattern": "the symbol + denotes + quantity or concept"
+      }
+    ],
+    "synonyms": [
+      {
+        "word": "represent",
+        "part_of_speech": "transitive verb",
+        "applies_to_sense": "Mean or represent",
+        "difference": "Represent is broader and can describe pictures, people, organizations, or symbols standing for something. Denote is more formal and focuses on a specific established meaning.",
+        "example": "The dove represents peace in many cultures.",
+        "shared_meaning": "Both words can describe one thing standing for another."
+      },
+      {
+        "word": "signify",
+        "part_of_speech": "transitive verb",
+        "applies_to_sense": "all senses",
+        "difference": "Signify is very close to denote but may place slightly more emphasis on importance or interpretation. Denote often sounds more precise and technical.",
+        "example": "The bell signifies the end of the examination.",
+        "shared_meaning": "Both words can mean represent, mean, or indicate."
+      },
+      {
+        "word": "indicate",
+        "part_of_speech": "transitive verb",
+        "applies_to_sense": "Show or indicate",
+        "difference": "Indicate is more common and can mean point toward, suggest, or provide evidence of something. Denote often suggests a clearer or more established connection.",
+        "example": "The results indicate that the treatment was effective.",
+        "shared_meaning": "Both words can mean show that a condition or fact exists."
+      },
+      {
+        "word": "refer to",
+        "part_of_speech": "verb phrase",
+        "applies_to_sense": "Mean or represent",
+        "difference": "Refer to identifies the person, thing, or idea being discussed. Denote emphasizes the meaning assigned to a word, symbol, or sign.",
+        "example": "In this chapter, the term youth refers to people between the ages of 15 and 24.",
+        "shared_meaning": "Both expressions can connect a term with the thing or concept it identifies."
+      }
+    ],
+    "confusables": [
+      {
+        "word": "connote",
+        "key_difference": "Denote means have a direct or basic meaning. Connote means suggest additional feelings, ideas, or associations beyond that basic meaning.",
+        "headword_example": "The word snake denotes a long, legless reptile.",
+        "confusable_example": "The word snake may connote danger or dishonesty.",
+        "part_of_speech": "transitive verb",
+        "why_confused": "Both words describe meaning and are frequently contrasted in language and literature courses."
+      },
+      {
+        "word": "designate",
+        "key_difference": "Denote means represent or indicate something. Designate usually means officially choose, name, or assign something for a particular purpose.",
+        "headword_example": "A green circle denotes an open station.",
+        "confusable_example": "The city designated the building as a protected historical site.",
+        "part_of_speech": "transitive verb",
+        "why_confused": "The words are formal, have similar forms, and can both involve labels or categories."
+      }
+    ],
+    "etymology": {
+      "origin": "Denote comes from Latin denotare, meaning to mark out or point out."
+    },
+    "exercises": {
+      "word_family_choice": [
+        {
+          "prompt_sentence": "The literal _____ of the word rose is a type of flowering plant.",
+          "answer": "denotation",
+          "completed_sentence": "The literal denotation of the word rose is a type of flowering plant.",
+          "explanation": "Use the noun denotation for the direct or basic meaning of a word."
+        },
+        {
+          "prompt_sentence": "In this formula, the letter M is used to _____ mass.",
+          "answer": "denote",
+          "completed_sentence": "In this formula, the letter M is used to denote mass.",
+          "explanation": "Use the base verb denote after to."
+        }
+      ],
+      "correct_or_incorrect": [
+        {
+          "sentence": "The symbol denotes the total amount of energy produced.",
+          "verdict": "Correct",
+          "explanation": "Denote correctly takes the represented quantity directly as its object."
+        },
+        {
+          "sentence": "The red line denotes to the national border.",
+          "verdict": "Incorrect",
+          "corrected_sentence": "The red line denotes the national border.",
+          "explanation": "Do not use to after denote."
+        },
+        {
+          "sentence": "A high reading may denote the presence of pollution.",
+          "verdict": "Correct",
+          "explanation": "Denote the presence of is a natural formal expression."
+        },
+        {
+          "sentence": "The word inexpensive denotes feelings of poor quality.",
+          "verdict": "Incorrect",
+          "corrected_sentence": "The word inexpensive may connote poor quality.",
+          "explanation": "Use connote for an additional association rather than a direct dictionary meaning."
+        }
+      ],
+      "collocation_practice": [
+        {
+          "prompt_sentence": "On this map, a red triangle is used to _____ an active volcano.",
+          "answer": "denote",
+          "completed_sentence": "On this map, a red triangle is used to denote an active volcano.",
+          "explanation": "Use something to denote means give a sign or symbol a particular meaning."
+        },
+        {
+          "prompt_sentence": "The experimental group is denoted _____ a solid black line.",
+          "answer": "by",
+          "completed_sentence": "The experimental group is denoted by a solid black line.",
+          "explanation": "Use be denoted by to identify the sign or symbol representing something."
+        },
+        {
+          "prompt_sentence": "A sudden increase in pressure may denote the _____ of a blockage.",
+          "answer": "presence",
+          "completed_sentence": "A sudden increase in pressure may denote the presence of a blockage.",
+          "explanation": "Denote the presence of means show that something exists."
+        },
+        {
+          "prompt_sentence": "In the table, different letters denote separate _____.",
+          "answer": "categories",
+          "completed_sentence": "In the table, different letters denote separate categories.",
+          "explanation": "Denote a category means represent a particular group in a classification system."
+        }
+      ]
+    }
+  }

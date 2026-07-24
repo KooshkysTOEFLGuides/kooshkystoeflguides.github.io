@@ -1,0 +1,486 @@
+{
+    "document_type": "kooshky_toefl_word_of_the_day",
+    "schema_version": "1.3",
+    "slug": "attribute",
+    "word": "attribute",
+    "date": "August 10th 2026",
+    "pronunciation": {
+      "primary_ipa": "/ˈætrəˌbjuːt/",
+      "audio_phrase": "an attribute"
+    },
+    "hero": {
+      "part_of_speech_summary": "countable noun and transitive verb",
+      "short_meanings": [
+        "an important quality or feature",
+        "regard something as caused by",
+        "regard something as created by"
+      ],
+      "one_line_summary": "An attribute is a quality or feature, while the verb attribute connects a result, work, or statement with its believed cause or creator.",
+      "memorable_example": "Scientists attribute the decline in the bird population to habitat loss."
+    },
+    "meanings": [
+      {
+        "sense_title": "Quality or feature",
+        "part_of_speech": "countable noun",
+        "ipa": "/ˈætrəˌbjuːt/",
+        "definition": "a quality or feature that is considered a typical or important part of a person, thing, or system",
+        "examples": [
+          "Patience is an important attribute of an effective teacher.",
+          "Flexibility is one of the material's most useful attributes.",
+          "The researchers examined several attributes of successful organizations.",
+          "Physical strength was once regarded as an essential attribute of military leadership.",
+          "The ability to adapt is a valuable attribute in a rapidly changing workplace.",
+          "Each plant species has attributes that help it survive in a particular environment.",
+          "Accuracy and clarity are desirable attributes in academic writing.",
+          "The software allows users to search for products according to specific attributes."
+        ],
+        "plain_english_equivalent": "an important quality or feature",
+        "typical_pattern": "an attribute of + person, object, or system",
+        "register": "neutral to formal; common in academic, professional, scientific, and technical writing",
+        "nuance": {
+          "central_nuance": "An attribute is a quality that belongs to or helps describe a person, object, system, or category.",
+          "usual_implication": "The quality is often considered characteristic, important, or useful for identifying or evaluating something.",
+          "contrast_term": "possession",
+          "contrast_explanation": "A possession is something that a person or organization owns. An attribute is a quality or feature that something has."
+        },
+        "grammar": {
+          "how_to_use": "Use an attribute for one quality and attributes for several qualities.",
+          "what_can_follow": "It is often followed by of and the person, object, or system that has the quality.",
+          "preposition_note": "Use an attribute of something, as in an important attribute of good leadership.",
+          "noun_use": "This is a countable noun, so the singular normally needs a, an, or the."
+        },
+        "patterns": [
+          {
+            "pattern": "an attribute of + person, thing, or system",
+            "use": "Use this to identify something that possesses a particular quality.",
+            "example": "Reliability is a central attribute of a well-designed transportation system."
+          },
+          {
+            "pattern": "a desirable or valuable attribute",
+            "use": "Use this for a quality that is considered useful or positive.",
+            "example": "Curiosity is a valuable attribute in scientific research."
+          },
+          {
+            "pattern": "a defining attribute",
+            "use": "Use this for a quality that strongly distinguishes something from other things.",
+            "example": "The ability to regulate body temperature is a defining attribute of mammals."
+          },
+          {
+            "pattern": "possess or have an attribute",
+            "use": "Use this when stating that a person or thing has a particular quality.",
+            "example": "The material possesses several attributes that make it suitable for construction."
+          }
+        ],
+        "errors": [
+          {
+            "wrong": "Patience is an attribute for a good teacher.",
+            "correct": "Patience is an attribute of a good teacher.",
+            "explanation": "Use an attribute of someone or something."
+          },
+          {
+            "wrong": "Honesty is important attribute in a leader.",
+            "correct": "Honesty is an important attribute in a leader.",
+            "explanation": "The singular countable noun attribute needs an article."
+          },
+          {
+            "wrong": "The machine has many useful attributions.",
+            "correct": "The machine has many useful attributes.",
+            "explanation": "Attributes are qualities or features. Attributions are explanations of causes or statements about who created something."
+          }
+        ],
+        "audio_phrase": "an attribute"
+      },
+      {
+        "sense_title": "Regard as caused by",
+        "part_of_speech": "transitive verb",
+        "ipa": "/əˈtrɪbjuːt/",
+        "definition": "to believe that an event, condition, or result was caused by a particular person, thing, or factor",
+        "examples": [
+          "Scientists attribute the decline in the bird population to habitat loss.",
+          "She attributed her success to careful preparation and support from her colleagues.",
+          "The improvement cannot be attributed entirely to the new policy.",
+          "Researchers attributed the difference between the groups to variations in diet.",
+          "Some historians attribute the collapse of the society to a prolonged drought.",
+          "The company attributed the delay to unexpected technical problems.",
+          "Doctors initially attributed his symptoms to stress.",
+          "Analysts attribute much of the recent economic growth to increased consumer spending."
+        ],
+        "plain_english_equivalent": "believe that something caused a result",
+        "typical_pattern": "attribute + result or condition + to + cause",
+        "register": "formal; very common in academic, scientific, historical, medical, and professional writing",
+        "nuance": {
+          "central_nuance": "The verb identifies what someone believes to be the cause or explanation of a result.",
+          "usual_implication": "The connection may be supported by evidence, but attribute does not necessarily mean that the cause has been proved with complete certainty.",
+          "contrast_term": "prove",
+          "contrast_explanation": "To attribute a result to something is to identify it as the believed cause. To prove that it caused the result requires stronger and more conclusive evidence."
+        },
+        "grammar": {
+          "how_to_use": "Place the result, event, or condition directly after attribute.",
+          "what_can_follow": "After the result, use to and then the believed cause.",
+          "preposition_note": "Use attribute something to something, as in attribute the decline to pollution.",
+          "position_note": "The passive form is very common: The decline was attributed to pollution."
+        },
+        "patterns": [
+          {
+            "pattern": "attribute + result + to + cause",
+            "use": "Use this when identifying the believed cause of an event or condition.",
+            "example": "Researchers attributed the increase in crop production to improved irrigation."
+          },
+          {
+            "pattern": "be attributed to + cause",
+            "use": "Use the passive form when the result is more important than the person explaining it.",
+            "example": "The population decline was attributed to disease and food shortages."
+          },
+          {
+            "pattern": "attribute success or failure to + factor",
+            "use": "Use this when explaining why a person, project, or organization succeeded or failed.",
+            "example": "The team attributed its success to careful planning."
+          },
+          {
+            "pattern": "largely, partly, or mainly attribute something to + cause",
+            "use": "Use these words to show how much of the result is explained by a particular factor.",
+            "example": "Economists largely attribute the recovery to increased investment."
+          }
+        ],
+        "errors": [
+          {
+            "wrong": "Researchers attribute the decline from climate change.",
+            "correct": "Researchers attribute the decline to climate change.",
+            "explanation": "Use attribute something to a cause."
+          },
+          {
+            "wrong": "The company attributed to poor planning the failure.",
+            "correct": "The company attributed the failure to poor planning.",
+            "explanation": "The usual order is attribute the result to the cause."
+          },
+          {
+            "wrong": "The improvement was attributed by the new treatment.",
+            "correct": "The improvement was attributed to the new treatment.",
+            "explanation": "Use to before the believed cause. By would identify the person making the attribution."
+          },
+          {
+            "wrong": "Scientists attributed that pollution caused the decline.",
+            "correct": "Scientists attributed the decline to pollution.",
+            "explanation": "Use attribute a result to a cause rather than attribute that followed by a clause."
+          }
+        ],
+        "audio_phrase": "attribute the change"
+      },
+      {
+        "sense_title": "Regard as created or said by",
+        "part_of_speech": "transitive verb",
+        "ipa": "/əˈtrɪbjuːt/",
+        "definition": "to believe or state that a work, statement, idea, or achievement was created, said, or accomplished by a particular person or group",
+        "examples": [
+          "The painting was originally attributed to a famous Italian artist.",
+          "This quotation is often attributed to Einstein, although he may never have said it.",
+          "Historians attribute the invention to several different researchers.",
+          "The poem was wrongly attributed to a writer who lived a century later.",
+          "Scholars have attributed the ancient manuscript to an unknown religious community.",
+          "The discovery is generally attributed to a team of French scientists.",
+          "Several architectural innovations are attributed to the Roman engineer.",
+          "The theory was once attributed to Darwin but was actually proposed by an earlier scholar."
+        ],
+        "plain_english_equivalent": "believe that someone created or said something",
+        "typical_pattern": "attribute + work, quotation, discovery, or idea + to + person or group",
+        "register": "formal; common in history, art, literature, science, and academic writing",
+        "nuance": {
+          "central_nuance": "The verb connects a work, statement, idea, or achievement with the person believed to be responsible for it.",
+          "usual_implication": "The identification may be accepted, uncertain, disputed, or later shown to be incorrect.",
+          "contrast_term": "credit",
+          "contrast_explanation": "To credit someone with something usually emphasizes recognizing their contribution or achievement. To attribute something to someone focuses on identifying them as its source, creator, or author."
+        },
+        "grammar": {
+          "how_to_use": "Place the work, statement, idea, or achievement directly after attribute.",
+          "what_can_follow": "Use to and then the person, group, culture, or period believed to be responsible.",
+          "preposition_note": "Use attribute something to someone, as in attribute the poem to an unknown writer.",
+          "position_note": "The passive form is especially common: The quotation is attributed to Mark Twain."
+        },
+        "patterns": [
+          {
+            "pattern": "attribute + work or statement + to + person",
+            "use": "Use this when identifying the believed author, speaker, or creator.",
+            "example": "Experts attributed the sculpture to a local artist."
+          },
+          {
+            "pattern": "be attributed to + person or group",
+            "use": "Use the passive form when the work or achievement is the main focus.",
+            "example": "The discovery is usually attributed to two independent research teams."
+          },
+          {
+            "pattern": "wrongly or mistakenly attribute something to + person",
+            "use": "Use this when the accepted source or creator is incorrect.",
+            "example": "The quotation is frequently misattributed to Abraham Lincoln."
+          },
+          {
+            "pattern": "generally or traditionally attribute something to + person",
+            "use": "Use this when an attribution is widely accepted but may not be completely certain.",
+            "example": "The epic poem is traditionally attributed to Homer."
+          }
+        ],
+        "errors": [
+          {
+            "wrong": "The quotation is attributed from a famous scientist.",
+            "correct": "The quotation is attributed to a famous scientist.",
+            "explanation": "Use attribute something to a person."
+          },
+          {
+            "wrong": "Historians attribute the scientist for the discovery.",
+            "correct": "Historians attribute the discovery to the scientist.",
+            "explanation": "Place the discovery after attribute and the person after to."
+          },
+          {
+            "wrong": "The painting was attributed as Leonardo da Vinci.",
+            "correct": "The painting was attributed to Leonardo da Vinci.",
+            "explanation": "Use to, not as, before the believed creator."
+          }
+        ],
+        "audio_phrase": "attribute the painting"
+      }
+    ],
+    "word_family": [
+      {
+        "word": "attribution",
+        "part_of_speech": "countable or uncountable noun",
+        "definition": "the act of explaining something as the result of a particular cause, or of identifying someone as the creator of a work or idea",
+        "examples": [
+          "The attribution of the decline to climate change remains controversial.",
+          "Experts questioned the painting's attribution to the famous artist.",
+          "Accurate attribution is essential when using another person's ideas."
+        ],
+        "ipa": "/ˌætrəˈbjuːʃən/",
+        "relationship_to_headword": "This noun names the act or result of attributing a cause, work, statement, or achievement.",
+        "grammar_pattern": "the attribution of + result + to + cause or the attribution of + work + to + creator",
+        "usage_note": "It can be countable when referring to a particular explanation or identification and uncountable when referring to the general practice."
+      },
+      {
+        "word": "attributable",
+        "part_of_speech": "adjective",
+        "definition": "considered to have been caused by a particular person, thing, or factor",
+        "examples": [
+          "Most of the improvement was attributable to better medical care.",
+          "The damage attributable to the storm was less severe than expected."
+        ],
+        "ipa": "/əˈtrɪbjətəbəl/",
+        "relationship_to_headword": "This adjective describes a result that can be attributed to a particular cause.",
+        "grammar_pattern": "be attributable to + cause",
+        "usage_note": "It is formal and especially common in academic, legal, scientific, and financial writing."
+      }
+    ],
+    "collocations": [
+      {
+        "collocation": "important attribute",
+        "example": "The ability to cooperate is an important attribute of effective leadership.",
+        "applies_to_sense": "Quality or feature",
+        "meaning": "a quality that has considerable value or significance",
+        "grammar_pattern": "an important attribute of + person, object, or system"
+      },
+      {
+        "collocation": "key attribute",
+        "example": "Durability is a key attribute of the new material.",
+        "applies_to_sense": "Quality or feature",
+        "meaning": "one of the most important qualities of something"
+      },
+      {
+        "collocation": "defining attribute",
+        "example": "Complex language is often considered a defining attribute of human societies.",
+        "applies_to_sense": "Quality or feature",
+        "meaning": "a quality that strongly identifies or distinguishes something"
+      },
+      {
+        "collocation": "personal attribute",
+        "example": "Employers often value personal attributes such as reliability and adaptability.",
+        "applies_to_sense": "Quality or feature",
+        "meaning": "a quality belonging to an individual person"
+      },
+      {
+        "collocation": "attribute a change to",
+        "example": "Researchers attributed the change in behavior to increased social contact.",
+        "applies_to_sense": "Regard as caused by",
+        "meaning": "identify a particular factor as the cause of a change",
+        "grammar_pattern": "attribute a change to + cause"
+      },
+      {
+        "collocation": "attribute success to",
+        "example": "She attributes her success to persistence and careful planning.",
+        "applies_to_sense": "Regard as caused by",
+        "meaning": "identify the factors believed to have produced success",
+        "grammar_pattern": "attribute success to + factor"
+      },
+      {
+        "collocation": "largely attributable to",
+        "example": "The reduction in mortality was largely attributable to improved sanitation.",
+        "applies_to_sense": "Regard as caused by",
+        "meaning": "mainly considered to have been caused by something",
+        "grammar_pattern": "be largely attributable to + cause",
+        "usage_note": "Attributable is the adjective form."
+      },
+      {
+        "collocation": "directly attributable to",
+        "example": "Only a small part of the damage was directly attributable to the new policy.",
+        "applies_to_sense": "Regard as caused by",
+        "meaning": "considered to be a direct result of something",
+        "grammar_pattern": "be directly attributable to + cause",
+        "usage_note": "Attributable is the adjective form."
+      },
+      {
+        "collocation": "attribute a quotation to",
+        "example": "Many websites attribute the quotation to a writer who never used those exact words.",
+        "applies_to_sense": "Regard as created or said by",
+        "meaning": "identify someone as the believed speaker or writer of a quotation",
+        "grammar_pattern": "attribute a quotation to + person"
+      },
+      {
+        "collocation": "attribute a work to",
+        "example": "Art historians attributed the work to one of the master's students.",
+        "applies_to_sense": "Regard as created or said by",
+        "meaning": "identify someone as the believed creator of a work",
+        "grammar_pattern": "attribute a work to + creator"
+      },
+      {
+        "collocation": "widely attributed to",
+        "example": "The invention is widely attributed to a nineteenth-century engineer.",
+        "applies_to_sense": "Regard as created or said by",
+        "meaning": "generally believed to have been created or accomplished by someone"
+      },
+      {
+        "collocation": "mistakenly attributed to",
+        "example": "The statement is often mistakenly attributed to the former president.",
+        "applies_to_sense": "Regard as created or said by",
+        "meaning": "incorrectly identified as the work or statement of someone"
+      }
+    ],
+    "synonyms": [
+      {
+        "word": "characteristic",
+        "part_of_speech": "countable noun",
+        "applies_to_sense": "Quality or feature",
+        "difference": "Characteristic is a common general word for a typical quality. Attribute is slightly more formal and may refer to any important or identifiable quality, whether or not it is typical.",
+        "example": "Thick fur is a characteristic of many animals that live in cold climates.",
+        "shared_meaning": "Both words can name a quality or feature of a person or thing."
+      },
+      {
+        "word": "trait",
+        "part_of_speech": "countable noun",
+        "applies_to_sense": "Quality or feature",
+        "difference": "Trait is especially common for qualities of a person's character or inherited features of an organism. Attribute can describe people, objects, systems, and abstract concepts.",
+        "example": "Curiosity is a valuable personality trait.",
+        "shared_meaning": "Both words can refer to a quality that helps describe someone or something."
+      },
+      {
+        "word": "ascribe",
+        "part_of_speech": "transitive verb",
+        "applies_to_sense": "all senses",
+        "difference": "Ascribe is a close formal synonym of the verb attribute. Attribute is more common, especially in academic and scientific writing.",
+        "example": "The researchers ascribed the improvement to changes in diet.",
+        "shared_meaning": "Both verbs can connect a result with a cause or a work with its believed creator."
+      },
+      {
+        "word": "credit",
+        "part_of_speech": "transitive verb",
+        "applies_to_sense": "Regard as created or said by",
+        "difference": "Credit often emphasizes giving recognition or praise for an achievement. Attribute focuses more neutrally on identifying the believed source or creator.",
+        "example": "The team credited its coach with developing the successful strategy.",
+        "shared_meaning": "Both verbs can identify someone as responsible for an achievement or idea."
+      }
+    ],
+    "confusables": [
+      {
+        "word": "contribute",
+        "key_difference": "Attribute means connect a result with its believed cause. Contribute means help cause a result or give something toward a shared effort.",
+        "headword_example": "Researchers attribute the decline to habitat destruction.",
+        "confusable_example": "Habitat destruction contributed to the decline.",
+        "part_of_speech": "transitive verb versus intransitive or transitive verb",
+        "why_confused": "Both words frequently appear in explanations of causes, but the direction of the relationship is different."
+      },
+      {
+        "word": "attribution",
+        "key_difference": "Attribute can be a noun meaning a quality or a verb meaning connect something with a cause or creator. Attribution is the noun for the act or result of making that connection.",
+        "headword_example": "Flexibility is a useful attribute of the material.",
+        "confusable_example": "The attribution of the painting to that artist remains uncertain.",
+        "part_of_speech": "noun or verb versus noun",
+        "why_confused": "The words share the same root but perform different grammatical jobs."
+      }
+    ],
+    "etymology": {
+      "origin": "Attribute ultimately comes from Latin attribuere, meaning to assign or give to."
+    },
+    "exercises": {
+      "word_family_choice": [
+        {
+          "prompt_sentence": "The decline was largely _____ to the destruction of natural habitats.",
+          "answer": "attributable",
+          "completed_sentence": "The decline was largely attributable to the destruction of natural habitats.",
+          "explanation": "Use the adjective attributable after was and before to."
+        },
+        {
+          "prompt_sentence": "Experts questioned the _____ of the painting to the famous artist.",
+          "answer": "attribution",
+          "completed_sentence": "Experts questioned the attribution of the painting to the famous artist.",
+          "explanation": "Use the noun attribution for the identification of the painting's believed creator."
+        },
+        {
+          "prompt_sentence": "Adaptability is a valuable _____ in a rapidly changing workplace.",
+          "answer": "attribute",
+          "completed_sentence": "Adaptability is a valuable attribute in a rapidly changing workplace.",
+          "explanation": "Use the noun attribute for a quality or feature."
+        }
+      ],
+      "correct_or_incorrect": [
+        {
+          "sentence": "Researchers attributed the increase in crop production to improved irrigation.",
+          "verdict": "Correct",
+          "explanation": "Attribute a result to a cause is the standard pattern."
+        },
+        {
+          "sentence": "Patience is an important attribute for an effective teacher.",
+          "verdict": "Incorrect",
+          "corrected_sentence": "Patience is an important attribute of an effective teacher.",
+          "explanation": "Use an attribute of a person or thing."
+        },
+        {
+          "sentence": "The quotation is often attributed from a famous scientist.",
+          "verdict": "Incorrect",
+          "corrected_sentence": "The quotation is often attributed to a famous scientist.",
+          "explanation": "Use attribute something to someone."
+        },
+        {
+          "sentence": "The improvement was partly attributable to better training.",
+          "verdict": "Correct",
+          "explanation": "Be attributable to correctly means be considered partly caused by something."
+        },
+        {
+          "sentence": "The researchers attributed that the treatment caused the improvement.",
+          "verdict": "Incorrect",
+          "corrected_sentence": "The researchers attributed the improvement to the treatment.",
+          "explanation": "Use attribute the result to the cause."
+        }
+      ],
+      "collocation_practice": [
+        {
+          "prompt_sentence": "The researchers attribute the decline _____ changes in the local climate.",
+          "answer": "to",
+          "completed_sentence": "The researchers attribute the decline to changes in the local climate.",
+          "explanation": "Use attribute something to a cause."
+        },
+        {
+          "prompt_sentence": "Honesty is a key _____ of effective leadership.",
+          "answer": "attribute",
+          "completed_sentence": "Honesty is a key attribute of effective leadership.",
+          "explanation": "A key attribute is an important quality or feature."
+        },
+        {
+          "prompt_sentence": "The ancient text is traditionally attributed _____ an unknown poet.",
+          "answer": "to",
+          "completed_sentence": "The ancient text is traditionally attributed to an unknown poet.",
+          "explanation": "Use be attributed to when identifying the believed creator."
+        },
+        {
+          "prompt_sentence": "The rapid improvement was largely _____ to increased investment.",
+          "answer": "attributable",
+          "completed_sentence": "The rapid improvement was largely attributable to increased investment.",
+          "explanation": "Largely attributable to means mainly considered to have been caused by something."
+        }
+      ]
+    }
+  }

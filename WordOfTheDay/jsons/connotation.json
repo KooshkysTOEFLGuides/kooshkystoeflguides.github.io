@@ -1,0 +1,380 @@
+{
+    "document_type": "kooshky_toefl_word_of_the_day",
+    "schema_version": "1.3",
+    "slug": "connotation",
+    "word": "connotation",
+    "date": "August 4th 2026",
+    "pronunciation": {
+      "primary_ipa": "/ˌkɑːnəˈteɪʃən/"
+    },
+    "hero": {
+      "part_of_speech_summary": "countable noun",
+      "short_meanings": [
+        "an additional association of a word",
+        "an implied idea or attitude"
+      ],
+      "one_line_summary": "A connotation is an additional idea, feeling, or attitude suggested by a word, object, action, or situation.",
+      "memorable_example": "Although slim and skinny have similar meanings, skinny often has a more negative connotation."
+    },
+    "meanings": [
+      {
+        "sense_title": "Additional association of a word",
+        "part_of_speech": "countable noun",
+        "ipa": "/ˌkɑːnəˈteɪʃən/",
+        "definition": "an idea or feeling that a word suggests in addition to its direct meaning",
+        "examples": [
+          "The word home often has connotations of comfort, safety, and belonging.",
+          "Although slim and skinny have similar meanings, skinny often has a more negative connotation.",
+          "In many cultures, the color white has connotations of purity and peace.",
+          "The term reform usually has a positive connotation because it suggests improvement.",
+          "The word childish has a more negative connotation than childlike.",
+          "Translators must consider both the meaning and the connotations of a word.",
+          "The expression carries emotional connotations that are difficult to reproduce in another language."
+        ],
+        "plain_english_equivalent": "an extra feeling or idea connected to a word",
+        "typical_pattern": "a positive, negative, or emotional connotation",
+        "register": "neutral to formal; common in linguistics, literature, communication, cultural studies, and academic writing",
+        "nuance": {
+          "central_nuance": "A connotation is not usually part of a word's basic dictionary definition. It is an additional association that people connect with the word.",
+          "usual_implication": "Connotations may be positive, negative, neutral, emotional, social, or cultural, and they can vary between groups and contexts.",
+          "contrast_term": "denotation",
+          "contrast_explanation": "Denotation is the direct or basic meaning of a word. Connotation is an additional idea, feeling, or association suggested by that word."
+        },
+        "grammar": {
+          "how_to_use": "Use a connotation for one particular association and connotations for several associations.",
+          "what_can_follow": "It is often followed by of and an idea or feeling, as in connotations of wealth and power.",
+          "preposition_note": "Use the connotation of a word when discussing the word's association. Use connotations of something to name the ideas it suggests.",
+          "noun_use": "This is usually a countable noun. The plural connotations is very common because a word may suggest several different ideas or feelings."
+        },
+        "patterns": [
+          {
+            "pattern": "have a positive or negative connotation",
+            "use": "Use this to describe whether the feeling associated with a word is favorable or unfavorable.",
+            "example": "The word ambitious usually has a positive connotation in professional contexts."
+          },
+          {
+            "pattern": "carry a connotation of + noun",
+            "use": "Use this to identify an additional idea or feeling suggested by a word or expression.",
+            "example": "The phrase carries a connotation of social superiority."
+          },
+          {
+            "pattern": "the connotations of + word or expression",
+            "use": "Use this when discussing the associations connected with a particular term.",
+            "example": "The article examines the political connotations of the word freedom."
+          },
+          {
+            "pattern": "connotations of + idea or feeling",
+            "use": "Use this to name the particular associations suggested.",
+            "example": "The image has connotations of isolation and loss."
+          }
+        ],
+        "errors": [
+          {
+            "wrong": "The word inexpensive has a good connotation than cheap.",
+            "correct": "The word inexpensive has a more positive connotation than cheap.",
+            "explanation": "Use more positive or more negative when comparing connotations."
+          },
+          {
+            "wrong": "The connotation of snake is a long, legless reptile.",
+            "correct": "The denotation of snake is a long, legless reptile.",
+            "explanation": "A direct dictionary meaning is a denotation. A connotation would be an associated idea such as danger or dishonesty."
+          },
+          {
+            "wrong": "This word connotates danger.",
+            "correct": "This word connotes danger.",
+            "explanation": "The verb is connote, not connotate."
+          }
+        ]
+      },
+      {
+        "sense_title": "Implied idea or attitude",
+        "part_of_speech": "countable noun",
+        "ipa": "/ˌkɑːnəˈteɪʃən/",
+        "definition": "an additional idea, attitude, or implication associated with an object, action, situation, or form of behavior",
+        "examples": [
+          "For some employees, working from home has connotations of freedom and flexibility.",
+          "The building's grand design carries connotations of power and authority.",
+          "Refusing the invitation might have unintended social connotations.",
+          "The uniform has strong military connotations.",
+          "The decision to close the meeting had political connotations that were not immediately obvious.",
+          "In that society, owning land had connotations of wealth and social status.",
+          "The gesture has religious connotations in some communities."
+        ],
+        "plain_english_equivalent": "an extra idea or message suggested by something",
+        "typical_pattern": "have or carry social, political, cultural, or religious connotations",
+        "register": "neutral to formal; common in social, political, historical, artistic, and cultural analysis",
+        "nuance": {
+          "central_nuance": "In this broader use, the association comes from more than a word. An action, object, image, style, or situation can also suggest an additional message.",
+          "usual_implication": "The association may not have been intended, but people can still interpret or respond to it.",
+          "contrast_term": "consequence",
+          "contrast_explanation": "A consequence is a result that happens because of an action or event. A connotation is an idea or attitude that the action or event suggests."
+        },
+        "grammar": {
+          "how_to_use": "Use it to describe the additional ideas or attitudes associated with an action, object, image, or situation.",
+          "what_can_follow": "It often follows adjectives such as social, political, cultural, emotional, historical, religious, or sexual.",
+          "preposition_note": "Use connotations of to name the ideas suggested, as in connotations of authority. Use for when identifying the group that makes the association, as in negative connotations for local residents.",
+          "noun_use": "The plural connotations is especially common in this broader meaning because something may suggest several related ideas."
+        },
+        "patterns": [
+          {
+            "pattern": "have social, political, or cultural connotations",
+            "use": "Use this when something suggests ideas connected with society, politics, or culture.",
+            "example": "The clothing style has political connotations in that region."
+          },
+          {
+            "pattern": "carry connotations of + noun",
+            "use": "Use this to name the additional ideas communicated by an object, action, or design.",
+            "example": "The ceremony carries connotations of unity and national identity."
+          },
+          {
+            "pattern": "unintended connotations",
+            "use": "Use this when something suggests an idea that the speaker, writer, or designer did not mean to communicate.",
+            "example": "The advertisement had unintended connotations of social exclusion."
+          },
+          {
+            "pattern": "be free of negative connotations",
+            "use": "Use this when something does not carry unfavorable associations.",
+            "example": "The researchers wanted a neutral label that was free of negative connotations."
+          }
+        ],
+        "errors": [
+          {
+            "wrong": "The gesture has a political consequence of protest.",
+            "correct": "The gesture has political connotations of protest.",
+            "explanation": "Use connotation for an idea suggested by the gesture. Consequence refers to an actual result."
+          },
+          {
+            "wrong": "The design is connotation with wealth.",
+            "correct": "The design has connotations of wealth.",
+            "explanation": "Use have connotations of, not be connotation with."
+          },
+          {
+            "wrong": "His clothing carried a connotation about authority.",
+            "correct": "His clothing carried a connotation of authority.",
+            "explanation": "Use a connotation of something."
+          }
+        ]
+      }
+    ],
+    "word_family": [
+      {
+        "word": "connote",
+        "part_of_speech": "transitive verb",
+        "definition": "to suggest an additional idea, feeling, or association beyond a direct meaning",
+        "examples": [
+          "The word luxury often connotes wealth and exclusivity.",
+          "In some contexts, silence may connote agreement."
+        ],
+        "ipa": "/kəˈnoʊt/",
+        "relationship_to_headword": "This verb describes suggesting the additional association called a connotation.",
+        "grammar_pattern": "word, image, action, or object + connotes + idea or feeling",
+        "usage_note": "Do not confuse connote with denote, which refers to direct meaning or representation."
+      },
+      {
+        "word": "connotative",
+        "part_of_speech": "adjective",
+        "definition": "relating to the additional ideas or feelings suggested by a word or sign",
+        "examples": [
+          "The lesson compared the literal and connotative meanings of several words.",
+          "Poetry often depends heavily on connotative language."
+        ],
+        "ipa": "/kəˈnoʊtətɪv/",
+        "relationship_to_headword": "This adjective describes meaning or language based on connotations.",
+        "grammar_pattern": "connotative + meaning, language, association, or use",
+        "usage_note": "It is mainly used in linguistics, language teaching, and literary analysis."
+      }
+    ],
+    "collocations": [
+      {
+        "collocation": "positive connotation",
+        "example": "The word innovative usually has a positive connotation.",
+        "applies_to_sense": "Additional association of a word",
+        "meaning": "a favorable idea or feeling associated with a word",
+        "grammar_pattern": "have a positive connotation"
+      },
+      {
+        "collocation": "negative connotation",
+        "example": "The term propaganda often has a negative connotation.",
+        "applies_to_sense": "Additional association of a word",
+        "meaning": "an unfavorable idea or feeling associated with a word",
+        "grammar_pattern": "have a negative connotation"
+      },
+      {
+        "collocation": "emotional connotation",
+        "example": "The word childhood has a strong emotional connotation for many people.",
+        "applies_to_sense": "Additional association of a word",
+        "meaning": "a feeling suggested by a word in addition to its direct meaning"
+      },
+      {
+        "collocation": "cultural connotations",
+        "example": "Colors may have different cultural connotations in different societies.",
+        "applies_to_sense": "all senses",
+        "meaning": "associations created by the beliefs and traditions of a culture"
+      },
+      {
+        "collocation": "political connotations",
+        "example": "The symbol acquired political connotations during the protest movement.",
+        "applies_to_sense": "Implied idea or attitude",
+        "meaning": "associations connected with political ideas, groups, or conflicts"
+      },
+      {
+        "collocation": "social connotations",
+        "example": "The choice of clothing may carry social connotations related to class or profession.",
+        "applies_to_sense": "Implied idea or attitude",
+        "meaning": "associations connected with social identity, status, or behavior"
+      },
+      {
+        "collocation": "religious connotations",
+        "example": "The image has religious connotations in several cultures.",
+        "applies_to_sense": "Implied idea or attitude",
+        "meaning": "associations connected with religious beliefs or practices"
+      },
+      {
+        "collocation": "carry connotations of",
+        "example": "The phrase carries connotations of authority and control.",
+        "applies_to_sense": "all senses",
+        "meaning": "suggest additional ideas or feelings",
+        "grammar_pattern": "carry connotations of + idea or feeling"
+      },
+      {
+        "collocation": "have a connotation of",
+        "example": "The term has a connotation of unnecessary complexity.",
+        "applies_to_sense": "all senses",
+        "meaning": "be associated with an additional idea or feeling",
+        "grammar_pattern": "have a connotation of + noun"
+      },
+      {
+        "collocation": "unintended connotations",
+        "example": "The slogan had unintended connotations that offended some readers.",
+        "applies_to_sense": "Implied idea or attitude",
+        "meaning": "associations that were not deliberately communicated"
+      },
+      {
+        "collocation": "the connotations of a word",
+        "example": "Language learners should study the connotations of a word before using it in formal writing.",
+        "applies_to_sense": "Additional association of a word",
+        "meaning": "the additional ideas and feelings associated with a word",
+        "grammar_pattern": "the connotations of + word or expression"
+      }
+    ],
+    "synonyms": [
+      {
+        "word": "association",
+        "part_of_speech": "countable noun",
+        "applies_to_sense": "all senses",
+        "difference": "Association is a broad word for any mental connection between things. Connotation specifically refers to an additional idea or feeling suggested by a word, sign, object, or action.",
+        "example": "The smell of the ocean has strong associations with childhood for her.",
+        "shared_meaning": "Both words can describe an idea or feeling mentally connected with something."
+      },
+      {
+        "word": "implication",
+        "part_of_speech": "countable noun",
+        "applies_to_sense": "Implied idea or attitude",
+        "difference": "An implication is a meaning or conclusion suggested without being stated directly. A connotation is an association or feeling connected with a word, object, or action.",
+        "example": "His refusal had the implication that he did not support the proposal.",
+        "shared_meaning": "Both can refer to an additional message that is not expressed directly."
+      },
+      {
+        "word": "undertone",
+        "part_of_speech": "countable noun",
+        "applies_to_sense": "Implied idea or attitude",
+        "difference": "An undertone is a subtle attitude or quality beneath the main message, often in speech, writing, or behavior. A connotation is a more general association attached to a word or other sign.",
+        "example": "Her remarks contained an undertone of criticism.",
+        "shared_meaning": "Both can describe an indirect attitude or feeling."
+      }
+    ],
+    "confusables": [
+      {
+        "word": "denotation",
+        "key_difference": "Denotation is the direct or basic meaning of a word. Connotation is an additional idea, emotion, or association suggested by the word.",
+        "headword_example": "The word rose may have connotations of love and romance.",
+        "confusable_example": "The denotation of rose is a type of flowering plant.",
+        "part_of_speech": "countable or uncountable noun",
+        "why_confused": "The two terms are commonly taught together because they describe different aspects of meaning."
+      },
+      {
+        "word": "implication",
+        "key_difference": "A connotation is an established or common association connected with a word or sign. An implication is a conclusion or message suggested by a particular statement, action, or situation.",
+        "headword_example": "The word cheap often has a negative connotation.",
+        "confusable_example": "His sudden resignation had the implication that serious problems existed.",
+        "part_of_speech": "countable noun",
+        "why_confused": "Both words describe ideas communicated indirectly."
+      }
+    ],
+    "etymology": {
+      "origin": "Connotation comes from Latin connotare, meaning to mark or note in addition.",
+      "development": "The word developed the sense of an additional meaning or association attached to a word beyond its direct meaning."
+    },
+    "exercises": {
+      "word_family_choice": [
+        {
+          "prompt_sentence": "The word elegant often _____ beauty, style, and good taste.",
+          "answer": "connotes",
+          "completed_sentence": "The word elegant often connotes beauty, style, and good taste.",
+          "explanation": "Use the verb connote because the word suggests these additional ideas."
+        },
+        {
+          "prompt_sentence": "Poets often choose words for both their direct and _____ meanings.",
+          "answer": "connotative",
+          "completed_sentence": "Poets often choose words for both their direct and connotative meanings.",
+          "explanation": "Use the adjective connotative before meanings."
+        },
+        {
+          "prompt_sentence": "The term has a negative _____ in many professional settings.",
+          "answer": "connotation",
+          "completed_sentence": "The term has a negative connotation in many professional settings.",
+          "explanation": "Use the noun connotation after a negative."
+        }
+      ],
+      "correct_or_incorrect": [
+        {
+          "sentence": "The word confident usually has a more positive connotation than arrogant.",
+          "verdict": "Correct",
+          "explanation": "The sentence correctly compares the associations of two words."
+        },
+        {
+          "sentence": "The connotation of the word tree is a tall plant with a wooden trunk.",
+          "verdict": "Incorrect",
+          "corrected_sentence": "The denotation of the word tree is a tall plant with a wooden trunk.",
+          "explanation": "A direct dictionary meaning is a denotation, not a connotation."
+        },
+        {
+          "sentence": "The image carries cultural connotations of renewal and hope.",
+          "verdict": "Correct",
+          "explanation": "Carry connotations of is a natural pattern for additional associations."
+        },
+        {
+          "sentence": "The word connotates social status.",
+          "verdict": "Incorrect",
+          "corrected_sentence": "The word connotes social status.",
+          "explanation": "The correct verb is connote."
+        }
+      ],
+      "collocation_practice": [
+        {
+          "prompt_sentence": "The word stubborn often has a negative _____.",
+          "answer": "connotation",
+          "completed_sentence": "The word stubborn often has a negative connotation.",
+          "explanation": "A negative connotation is an unfavorable association."
+        },
+        {
+          "prompt_sentence": "The color gold carries connotations _____ wealth and success.",
+          "answer": "of",
+          "completed_sentence": "The color gold carries connotations of wealth and success.",
+          "explanation": "Use carry connotations of something."
+        },
+        {
+          "prompt_sentence": "The symbol has strong political _____ in the region.",
+          "answer": "connotations",
+          "completed_sentence": "The symbol has strong political connotations in the region.",
+          "explanation": "Political connotations are associations connected with political ideas or groups."
+        },
+        {
+          "prompt_sentence": "Before using the expression, consider whether it has any unintended _____.",
+          "answer": "connotations",
+          "completed_sentence": "Before using the expression, consider whether it has any unintended connotations.",
+          "explanation": "Unintended connotations are associations that the speaker did not mean to communicate."
+        }
+      ]
+    }
+  }
